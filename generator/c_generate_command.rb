@@ -1,16 +1,4 @@
-require 'rexml/document'
-require_relative 'c_aux_typemap'
-
-GLCommandMapEntry = Struct.new( :api_name, :ret_name, :type_names, :var_names )
-
-# type = :command | :enum, required/removed = version string
-# ex.) glFogCoordf (Introduced at OpenGL 1.4, and removed from core profile at OpenGL 3.2)
-# "glFogCoordf"=>
-#  #<struct Struct::FeatureInfo
-#   type=:command,
-#   required="GL_VERSION_1_4",
-#   removed="GL_VERSION_3_2">,
-FeatureInfo = Struct.new("FeatureInfo", :type, :required, :required_number, :removed, :removed_number)
+require_relative 'c_generate_common'
 
 def generate_command( out )
 
@@ -63,10 +51,6 @@ def generate_command( out )
     end
   end
 
-  # require 'pp'
-  # pp features
-  # exit
-
   # Collect all command
   gl_all_cmd_map = {}
   REXML::XPath.each(doc,'registry/commands/command') do |cmd_tag|
@@ -78,7 +62,7 @@ def generate_command( out )
 
     proto_tag = cmd_tag.get_elements('proto').first
 
-    # Patterns of contents insice '<proto>...</proto>'
+    # Patterns of contents inside '<proto>...</proto>'
     # * void <name>glBegin</name>
     # * <ptype>GLboolean</ptype> <name>glIsEnabled</name>
     # * const <ptype>GLubyte</ptype> *<name>glGetStringi</name>
@@ -163,6 +147,14 @@ def generate_command( out )
   end
 
   # Output
+out.puts <<-PROLOGUE
+/* opengl-bindings
+ * * http://rubygems.org/gems/opengl-bindings
+ * * http://github.com/vaiorabbit/ruby-opengl
+ *
+ * [NOTICE] This is an automatically generated file.
+ */
+PROLOGUE
   generate_entry_point(out, gl_std_cmd_map)
   generate_function_call(out, gl_std_cmd_map, gl_std_enum_map)
 
@@ -170,18 +162,6 @@ end
 
 
 def generate_entry_point(out, gl_std_cmd_map)
-  out.puts <<-ROGL_HEADER
-/* opengl-bindings
- * * http://rubygems.org/gems/opengl-bindings
- * * http://github.com/vaiorabbit/ruby-opengl
- *
- * [NOTICE] This is an automatically generated file.
- */
-#include <stddef.h>
-#include <ruby.h>
-#include \"rogl_proc_address.h\"
-
-ROGL_HEADER
 
   # Typedef
   gl_std_cmd_map.each_pair do |api, map_entry|
@@ -226,77 +206,7 @@ ROGL_HEADER
 end
 
 
-def get_value_to_ctype_converter(type)
-  case type
-  when "void"; ""
-  when "void*"; "val2ptr"
-  when "unsigned char"; "NUM2UINT"
-  when "char"; "NUM2INT"
-  when "unsigned short"; "NUM2UINT"
-  when "short"; "NUM2INT"
-  when "unsigned int"; "NUM2UINT"
-  when "int"; "NUM2INT"
-  when "unsigned long"; "NUM2ULONG"
-  when "long"; "NUM2LONG"
-  when "unsigned long long"; "NUM2ULL"
-  when "long long"; "NUM2LL"
-  when "float"; "NUM2DBL"
-  when "double"; "NUM2DBL"
-  end
-end
-
-def get_ctype_to_value_converter(type)
-  case type
-  when "void"; ""
-  when "void*"; "CPOINTER_AS_VALUE"
-  when "unsigned char"; "UINT2NUM"
-  when "char"; "INT2NUM"
-  when "unsigned short"; "UINT2NUM"
-  when "short"; "INT2NUM"
-  when "unsigned int"; "UINT2NUM"
-  when "int"; "INT2NUM"
-  when "unsigned long"; "ULONG2NUM"
-  when "long"; "LONG2NUM"
-  when "unsigned long long"; "ULL2NUM"
-  when "long long"; "LL2NUM"
-  when "float"; "DBL2NUM"
-  when "double"; "DBL2NUM"
-  end
-end
-
 def generate_function_call(out, gl_std_cmd_map, gl_std_enum_map)
-  # Prologue
-  out.puts <<-ROGL_CPOINTER_CONVERTER
-
-#if SIZEOF_VOIDP == SIZEOF_LONG_LONG
-#define CPOINTER_AS_VALUE(ptr) (ULL2NUM((unsigned long long)(ptr)))
-#define VALUE_AS_CPOINTER(obj) ((void*)(NUM2ULL(obj)))
-#else
-#define CPOINTER_AS_VALUE(ptr) (ULONG2NUM((unsigned long)(ptr)))
-#define VALUE_AS_CPOINTER(obj) ((void*)(NUM2ULONG(obj)))
-#endif
-
-static void* val2ptr(VALUE obj)
-{
-    /* Ref.:
-       Ruby Strings vs. C strings
-         http://stackoverflow.com/questions/7050800/ruby-c-extensions-api-questions
-     */
-    if (NIL_P(obj))
-    {
-        return NULL;
-    }
-    else if (RB_TYPE_P(obj, T_STRING))
-    {
-        return RSTRING_PTR(obj);
-    }
-    else
-    {
-        return VALUE_AS_CPOINTER(obj);
-    }
-}
-
-ROGL_CPOINTER_CONVERTER
 
   # Function call
   gl_std_cmd_map.each_pair do |api, map_entry|
@@ -371,39 +281,6 @@ ROGL_CPOINTER_CONVERTER
 
   out.puts ""
 
-  # Command Name <=> Function Pointer mapping
-=begin
-  out.puts "typedef struct {"
-  out.puts "    const char* name;"
-  out.puts "    void* rb_fptr;"
-  out.puts "    void* c_fptr;"
-  out.puts "    int c_argc;"
-  out.puts "} CommandInfo_t;"
-  out.puts "static CommandInfo_t rogl_CommandInfo[] = {"
-  gl_std_cmd_map.each_pair do |api, map_entry|
-    out.puts "    {\"#{api}\", &rogl_#{api}, &rogl_pfn_#{api}, #{map_entry.type_names.length}},"
-  end
-  out.puts "};"
-  out.puts ""
-
-  out.puts "static const unsigned int rogl_CmdToFPCount = sizeof(rogl_CommandInfo)/sizeof(rogl_CommandInfo[0]); /* #{gl_std_cmd_map.length} */"
-  out.puts ""
-
-  out.puts "static CommandInfo_t* rogl_GetFunctionPointer(const char* name)"
-  out.puts "{"
-  out.puts "    for (unsigned int i = 0; i < rogl_CmdToFPCount; ++i)"
-  out.puts "    {"
-  out.puts "        if (strncmp(rogl_CommandInfo[i].name, name, strlen(rogl_CommandInfo[i].name)) == 0)"
-  out.puts "        {"
-  out.puts "            return &rogl_CommandInfo[i];"
-  out.puts "        }"
-  out.puts "    }"
-  out.puts ""
-  out.puts "    return NULL;"
-  out.puts "}"
-  out.puts ""
-=end
-
   # Command/Enum initializer
   # Command
   out.puts "static void rogl_InitRubyCommand( VALUE* pmROGL )"
@@ -429,78 +306,7 @@ ROGL_CPOINTER_CONVERTER
     out.puts "    rogl_pfn_#{api} = rogl_GetProcAddress(\"#{api}\");"
   end
   out.puts "}"
-  out.puts ""
 
-  # Epilogue
-  # Module initializer
-
-  out.puts <<-ROGL_MODULE_INITIALIZER_CODE
-
-static VALUE rogl_method_InitSystem( VALUE self, VALUE lib )
-{
-    int retval = rogl_InitProcAddressSystem(NIL_P(lib) ? NULL : RSTRING_PTR(lib));
-    return retval == 1 ? Qtrue : Qfalse;
-}
-
-static VALUE rogl_method_TermSystem( VALUE self )
-{
-    rogl_TermProcAddressSystem();
-    return Qnil;
-}
-
-static VALUE rogl_method_LoadLib(int argc, VALUE argv[], VALUE self)
-{
-    VALUE retval = Qnil;
-    VALUE lib_name, lib_path;
-    int n = rb_scan_args(argc, argv, "02", &lib_name, &lib_path);
-
-    switch (n)
-    {
-    case 0:
-    {
-        retval = rogl_method_InitSystem(self, Qnil);
-        break;
-    }
-    case 1:
-    {
-        retval = rogl_method_InitSystem(self, NIL_P(lib_name) ? lib_path : lib_name);
-    }
-    break;
-
-    case 2:
-    {
-        VALUE lib_path_sl = rb_str_append(lib_path, rb_str_new2("/"));
-        retval = rogl_method_InitSystem(self, rb_str_append(lib_path_sl, lib_name));
-    }
-    break;
-    }
-
-    if (retval == Qfalse)
-    {
-        return Qfalse;
-    }
-
-    /* TODO handle core/compatible */
-    rogl_SetupFeature(0);
-
-    /* TODO call rogl_TermProcAddressSystem at exit? */
-
-    return Qtrue;
-}
-
-void Init_opengl_c()
-{
-    VALUE mROGL = rb_define_module("OpenGL");
-
-    rb_define_singleton_method( mROGL, "load_lib", rogl_method_LoadLib, -1 );
-
-    rb_define_singleton_method( mROGL, "init_system", rogl_method_InitSystem, 1 );
-    rb_define_singleton_method( mROGL, "term_system", rogl_method_TermSystem, 0 );
-
-    rogl_InitRubyCommand( &mROGL );
-    rogl_InitRubyEnum( &mROGL );
-}
-ROGL_MODULE_INITIALIZER_CODE
 end
 
 

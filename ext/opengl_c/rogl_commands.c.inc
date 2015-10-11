@@ -4,10 +4,6 @@
  *
  * [NOTICE] This is an automatically generated file.
  */
-#include <stddef.h>
-#include <ruby.h>
-#include "rogl_proc_address.h"
-
 typedef void (* ROGL_PFNGLCULLFACEPROC) (unsigned int mode);
 typedef void (* ROGL_PFNGLFRONTFACEPROC) (unsigned int mode);
 typedef void (* ROGL_PFNGLHINTPROC) (unsigned int target, unsigned int mode);
@@ -2097,35 +2093,6 @@ static ROGL_PFNGLGETNSEPARABLEFILTERPROC rogl_pfn_glGetnSeparableFilter = NULL;
 static ROGL_PFNGLGETNHISTOGRAMPROC rogl_pfn_glGetnHistogram = NULL;
 static ROGL_PFNGLGETNMINMAXPROC rogl_pfn_glGetnMinmax = NULL;
 static ROGL_PFNGLTEXTUREBARRIERPROC rogl_pfn_glTextureBarrier = NULL;
-
-#if SIZEOF_VOIDP == SIZEOF_LONG_LONG
-#define CPOINTER_AS_VALUE(ptr) (ULL2NUM((unsigned long long)(ptr)))
-#define VALUE_AS_CPOINTER(obj) ((void*)(NUM2ULL(obj)))
-#else
-#define CPOINTER_AS_VALUE(ptr) (ULONG2NUM((unsigned long)(ptr)))
-#define VALUE_AS_CPOINTER(obj) ((void*)(NUM2ULONG(obj)))
-#endif
-
-static void* val2ptr(VALUE obj)
-{
-    /* Ref.:
-       Ruby Strings vs. C strings
-         http://stackoverflow.com/questions/7050800/ruby-c-extensions-api-questions
-     */
-    if (NIL_P(obj))
-    {
-        return NULL;
-    }
-    else if (RB_TYPE_P(obj, T_STRING))
-    {
-        return RSTRING_PTR(obj);
-    }
-    else
-    {
-        return VALUE_AS_CPOINTER(obj);
-    }
-}
-
 static VALUE rogl_glCullFace(VALUE obj, VALUE arg1)
 {
     unsigned int mode = (unsigned int)NUM2UINT(arg1);
@@ -17522,70 +17489,4 @@ static void rogl_SetupFeature( int load_core )
     rogl_pfn_glGetnHistogram = rogl_GetProcAddress("glGetnHistogram");
     rogl_pfn_glGetnMinmax = rogl_GetProcAddress("glGetnMinmax");
     rogl_pfn_glTextureBarrier = rogl_GetProcAddress("glTextureBarrier");
-}
-
-
-static VALUE rogl_method_InitSystem( VALUE self, VALUE lib )
-{
-    int retval = rogl_InitProcAddressSystem(NIL_P(lib) ? NULL : RSTRING_PTR(lib));
-    return retval == 1 ? Qtrue : Qfalse;
-}
-
-static VALUE rogl_method_TermSystem( VALUE self )
-{
-    rogl_TermProcAddressSystem();
-    return Qnil;
-}
-
-static VALUE rogl_method_LoadLib(int argc, VALUE argv[], VALUE self)
-{
-    VALUE retval = Qnil;
-    VALUE lib_name, lib_path;
-    int n = rb_scan_args(argc, argv, "02", &lib_name, &lib_path);
-
-    switch (n)
-    {
-    case 0:
-    {
-        retval = rogl_method_InitSystem(self, Qnil);
-        break;
-    }
-    case 1:
-    {
-        retval = rogl_method_InitSystem(self, NIL_P(lib_name) ? lib_path : lib_name);
-    }
-    break;
-
-    case 2:
-    {
-        VALUE lib_path_sl = rb_str_append(lib_path, rb_str_new2("/"));
-        retval = rogl_method_InitSystem(self, rb_str_append(lib_path_sl, lib_name));
-    }
-    break;
-    }
-
-    if (retval == Qfalse)
-    {
-        return Qfalse;
-    }
-
-    /* TODO handle core/compatible */
-    rogl_SetupFeature(0);
-
-    /* TODO call rogl_TermProcAddressSystem at exit? */
-
-    return Qtrue;
-}
-
-void Init_opengl_c()
-{
-    VALUE mROGL = rb_define_module("OpenGL");
-
-    rb_define_singleton_method( mROGL, "load_lib", rogl_method_LoadLib, -1 );
-
-    rb_define_singleton_method( mROGL, "init_system", rogl_method_InitSystem, 1 );
-    rb_define_singleton_method( mROGL, "term_system", rogl_method_TermSystem, 0 );
-
-    rogl_InitRubyCommand( &mROGL );
-    rogl_InitRubyEnum( &mROGL );
 }
