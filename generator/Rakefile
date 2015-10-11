@@ -2,7 +2,7 @@ require 'rake/clean'
 
 require_relative 'c_generate_command'
 
-CLEAN.include( FileList['../ext/opengl_c/rogl_opengl_command.c',
+CLEAN.include( FileList['../ext/opengl_c/rogl_commands.c',
                ] )
 
 
@@ -10,10 +10,10 @@ task 'default' => 'wrapper'
 
 task 'wrapper' => ['command']
 
-task 'command' => '../ext/opengl_c/rogl_opengl_command.c'
+task 'command' => '../ext/opengl_c/rogl_commands.c'
 
-file '../ext/opengl_c/rogl_opengl_command.c' => './gl.xml' do |t|
-  open('../ext/opengl_c/rogl_opengl_command.c', 'wb') do |file|
+file '../ext/opengl_c/rogl_commands.c' => './gl.xml' do |t|
+  open('../ext/opengl_c/rogl_commands.c', 'wb') do |file|
     generate_command(file)
   end
 end
