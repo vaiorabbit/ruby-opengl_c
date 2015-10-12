@@ -208,6 +208,8 @@ end
 
 def generate_function_call(out, gl_std_cmd_map, gl_std_enum_map)
 
+  out.puts ""
+
   # Function call
   gl_std_cmd_map.each_pair do |api, map_entry|
     signature_line = "static VALUE "
@@ -226,11 +228,11 @@ def generate_function_call(out, gl_std_cmd_map, gl_std_enum_map)
 
 
     # Signature
-    signature_line += "rogl_#{api}(VALUE obj"
+    signature_line += "rogl_#{api}(VALUE _obj_"
     # Arguments
     if arg_names.length > 0
       arg_names.each_with_index do |a, i|
-        signature_line += ", VALUE arg#{i+1}"
+        signature_line += ", VALUE _arg#{i+1}_"
       end
     end
     signature_line += ")"
@@ -242,7 +244,7 @@ def generate_function_call(out, gl_std_cmd_map, gl_std_enum_map)
     if arg_names.length > 0
       arg_names.each_with_index do |a, i|
         arg_conv = get_value_to_ctype_converter(a)
-        arg_cast = "(#{a})#{arg_conv}(arg#{i+1})"
+        arg_cast = "(#{a})#{arg_conv}(_arg#{i+1}_)"
         out.puts "    #{a} #{map_entry.var_names[i]} = #{arg_cast};"
       end
       out.puts ""

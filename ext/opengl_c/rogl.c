@@ -79,6 +79,7 @@ static VALUE rogl_method_LoadLib(int argc, VALUE argv[], VALUE self)
 
     /* TODO handle core/compatible */
     rogl_SetupFeature(0);
+    rogl_SetupExtFeature(0);
 
     /* TODO call rogl_TermProcAddressSystem at exit? */
 

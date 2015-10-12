@@ -113,6 +113,21 @@ def generate_ext_command( out )
   end
 
   # Extract standard command
+  gl_std_cmd_map = {}
+  REXML::XPath.each(doc, 'registry/feature') do |feature_tag|
+    if "gl" == feature_tag.attribute('api').value
+
+      # OpenGL Standard enums
+      REXML::XPath.each(feature_tag, 'require/command') do |tag|
+        gl_std_cmd_map[tag.attribute('name').value] = gl_all_cmd_map[tag.attribute('name').value]
+      end
+
+    end
+  end
+
+  # Extract extension command
+  gl_ext_all_command_names = []
+  gl_ext_shared_command_names = []
   gl_ext_name_to_commands_map = {}
   REXML::XPath.each(doc, 'registry/extensions/extension') do |extension_tag|
     if extension_tag.attribute('supported').value.split('|').include?( 'gl' ) # ignoring "gles1", "glcore", etc.
@@ -123,12 +138,39 @@ def generate_ext_command( out )
       # Extension commands (glGenFencesNV, etc.)
       ext_command_map = {}
       REXML::XPath.each(extension_tag, 'require/command') do |tag|
-        ext_command_map[tag.attribute('name').value] = gl_all_cmd_map[tag.attribute('name').value]
+        command_name = tag.attribute('name').value
+        if gl_ext_all_command_names.include? command_name
+          gl_ext_shared_command_names << command_name
+        else
+          ext_command_map[command_name] = gl_all_cmd_map[command_name]
+          gl_ext_all_command_names << command_name
+        end
       end
 
       # Create mapping table ("GL_NV_fence" => {"glGenFencesNV" => ...}, etc.)
       gl_ext_name_to_commands_map[ext_name] = ext_command_map
     end
+  end
+
+  # Remove reused tokens (e.g. OpenGL 4.3 reuses ARB_compute_shader (glDispatchCompute, etc.).)
+  gl_ext_name_to_commands_map.each_pair do |ext_name, ext_commands|
+    next if ext_commands.length == 0
+    reused_tokens = []
+    ext_commands.each_pair do |api, map_entry|
+      reused_tokens << api if gl_std_cmd_map.has_key? api
+    end
+    ext_commands.delete_if { |key, value| reused_tokens.include? key }
+  end
+
+  # Remove shared tokens (e.g. Tokens of ARB_vertex_program are shared GL_ARB_fragment_program.)
+  gl_ext_name_to_commands_map.each_pair do |ext_name, ext_commands|
+    next if ext_commands.length == 0
+    shared_tokens = []
+    ext_commands.each_pair do |api, map_entry|
+      shared_tokens << api if gl_ext_shared_command_names.include? api
+    end
+    ext_commands.delete_if { |key, value| shared_tokens.include? key }
+    gl_ext_shared_command_names.delete_if { |item| shared_tokens.include? item }
   end
 
   # Collect all enum
@@ -141,7 +183,7 @@ def generate_ext_command( out )
     gl_all_enum_map[enum_tag.attribute('name').value] = enum_tag.attribute('value').value
   end
 
-  # Extract enum
+  # Extract extension enum
   gl_ext_name_to_enums_map = {}
   REXML::XPath.each(doc, 'registry/extensions/extension') do |extension_tag|
     if extension_tag.attribute('supported').value.split('|').include?( 'gl' ) # ignoring "gles1", "glcore", etc.
@@ -230,6 +272,8 @@ end
 
 def ext_generate_function_call(out, gl_ext_name_to_commands_map, gl_ext_name_to_enums_map)
 
+  out.puts ""
+
   # Function call
   gl_ext_name_to_commands_map.each_pair do |ext_name, ext_commands|
     next if ext_commands.length == 0
@@ -250,11 +294,11 @@ def ext_generate_function_call(out, gl_ext_name_to_commands_map, gl_ext_name_to_
 
 
       # Signature
-      signature_line += "rogl_#{api}(VALUE obj"
+      signature_line += "rogl_#{api}(VALUE _obj_"
       # Arguments
       if arg_names.length > 0
         arg_names.each_with_index do |a, i|
-          signature_line += ", VALUE arg#{i+1}"
+          signature_line += ", VALUE _arg#{i+1}_"
         end
       end
       signature_line += ")"
@@ -266,7 +310,7 @@ def ext_generate_function_call(out, gl_ext_name_to_commands_map, gl_ext_name_to_
       if arg_names.length > 0
         arg_names.each_with_index do |a, i|
           arg_conv = get_value_to_ctype_converter(a)
-          arg_cast = "(#{a})#{arg_conv}(arg#{i+1})"
+          arg_cast = "(#{a})#{arg_conv}(_arg#{i+1}_)"
           out.puts "    #{a} #{map_entry.var_names[i]} = #{arg_cast};"
         end
         out.puts ""
