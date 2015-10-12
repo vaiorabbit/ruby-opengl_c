@@ -1,3 +1,8 @@
+2015-10-12  vaiorabbit  <http://twitter.com/vaiorabbit>
+
+	* c_generate_ext_command.rb: Supports extension entry points.
+	* opengl_c_impl.{dll/so/bundle} is renamed into opengl_c_impl.{dll/so/bundle}
+
 2015-10-11  vaiorabbit  <http://twitter.com/vaiorabbit>
 
 	* (Announce) First release.

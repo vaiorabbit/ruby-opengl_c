@@ -86,7 +86,7 @@ static VALUE rogl_method_LoadLib(int argc, VALUE argv[], VALUE self)
     return Qtrue;
 }
 
-void Init_opengl_c()
+void Init_opengl_c_impl()
 {
     VALUE mROGL = rb_define_module("OpenGL");
 

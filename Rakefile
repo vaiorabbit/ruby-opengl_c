@@ -32,9 +32,9 @@ task :test => "lib/#{DIRNAME}/#{DLNAME}.#{DLEXT}"
 
 # use 'rake clean' and 'rake clobber' to
 # easily delete generated files
-CLEAN.include('ext/**/*{.o,.log,.#{DLEXT}}')
-CLEAN.include('ext/**/Makefile')
-CLOBBER.include('lib/**/*.#{DLEXT}')
+CLEAN.include("ext/**/*{.o,.log,.#{DLEXT}}")
+CLEAN.include("ext/**/Makefile")
+CLOBBER.include("lib/**/*.#{DLEXT}")
 
 # the same as before
 Rake::TestTask.new do |t|

@@ -51,6 +51,10 @@ def generate_ext_command( out )
     end
   end
 
+  #
+  # Commands
+  #
+
   # Collect all command
   gl_all_cmd_map = {}
   REXML::XPath.each(doc,'registry/commands/command') do |cmd_tag|
@@ -173,6 +177,11 @@ def generate_ext_command( out )
     gl_ext_shared_command_names.delete_if { |item| shared_tokens.include? item }
   end
 
+
+  #
+  # Enums
+  #
+
   # Collect all enum
   gl_all_enum_map = {}
   REXML::XPath.each(doc, 'registry/enums/enum') do |enum_tag|
@@ -183,7 +192,22 @@ def generate_ext_command( out )
     gl_all_enum_map[enum_tag.attribute('name').value] = enum_tag.attribute('value').value
   end
 
+  # Extract standard enum
+  gl_std_enum_map = {}
+  REXML::XPath.each(doc, 'registry/feature') do |feature_tag|
+    if "gl" == feature_tag.attribute('api').value
+
+      # OpenGL Standard enums
+      REXML::XPath.each(feature_tag, 'require/enum') do |tag|
+        gl_std_enum_map[tag.attribute('name').value] = gl_all_enum_map[tag.attribute('name').value]
+      end
+
+    end
+  end
+
   # Extract extension enum
+  gl_ext_all_enum_names = []
+  gl_ext_shared_enum_names = []
   gl_ext_name_to_enums_map = {}
   REXML::XPath.each(doc, 'registry/extensions/extension') do |extension_tag|
     if extension_tag.attribute('supported').value.split('|').include?( 'gl' ) # ignoring "gles1", "glcore", etc.
@@ -194,13 +218,40 @@ def generate_ext_command( out )
       # Extension enums (GL_FENCE_STATUS_NV, etc.)
       ext_enum_map = {}
       REXML::XPath.each(extension_tag, 'require/enum') do |tag|
-        ext_enum_map[tag.attribute('name').value] = gl_all_enum_map[tag.attribute('name').value]
+        enum_name = tag.attribute('name').value
+        if gl_ext_all_enum_names.include? enum_name
+          gl_ext_shared_enum_names << enum_name
+        else
+          ext_enum_map[enum_name] = gl_all_enum_map[enum_name]
+          gl_ext_all_enum_names << enum_name
+        end
       end
 
       # Create mapping table ("GL_NV_fence" => {"GL_FENCE_STATUS_NV" => 0x84F3}, etc.)
       gl_ext_name_to_enums_map[ext_name] = ext_enum_map
 
     end
+  end
+
+  # Remove reused tokens (e.g. OpenGL 4.3 reuses ARB_compute_shader (glDispatchCompute, etc.).)
+  gl_ext_name_to_enums_map.each_pair do |ext_name, ext_enums|
+    next if ext_enums.length == 0
+    reused_tokens = []
+    ext_enums.each do |enums|
+      reused_tokens << enums[0] if gl_std_enum_map.has_key? enums[0]
+    end
+    ext_enums.delete_if { |item| reused_tokens.include? item }
+  end
+
+  # Remove shared tokens (e.g. Tokens of ARB_vertex_program are shared GL_ARB_fragment_program.)
+  gl_ext_name_to_enums_map.each_pair do |ext_name, ext_enums|
+    next if ext_enums.length == 0
+    shared_tokens = []
+    ext_enums.each do |enums|
+      shared_tokens << enums[0] if gl_ext_shared_enum_names.include? enums[0]
+    end
+    ext_enums.delete_if { |item| shared_tokens.include? item }
+    gl_ext_shared_enum_names.delete_if { |item| shared_tokens.include? item }
   end
 
   # Output
