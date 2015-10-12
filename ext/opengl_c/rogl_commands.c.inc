@@ -1,6 +1,6 @@
 /* opengl-bindings
- * * http://rubygems.org/gems/opengl-bindings
- * * http://github.com/vaiorabbit/ruby-opengl
+ * * http://rubygems.org/gems/opengl-bindings_c
+ * * http://github.com/vaiorabbit/ruby-opengl_c
  *
  * [NOTICE] This is an automatically generated file.
  */

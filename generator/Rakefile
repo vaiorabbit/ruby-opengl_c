@@ -17,12 +17,12 @@ task 'ext_command' => '../ext/opengl_c/rogl_ext_commands.c.inc'
 
 file '../ext/opengl_c/rogl_commands.c.inc' => './gl.xml' do |t|
   open('../ext/opengl_c/rogl_commands.c.inc', 'wb') do |file|
-    generate_command(file)
+    GLCodeGenerator.generate_command(file)
   end
 end
 
 file '../ext/opengl_c/rogl_ext_commands.c.inc' => './gl.xml' do |t|
   open('../ext/opengl_c/rogl_ext_commands.c.inc', 'wb') do |file|
-    generate_ext_command(file)
+    GLExtCodeGenerator.generate_command(file)
   end
 end
