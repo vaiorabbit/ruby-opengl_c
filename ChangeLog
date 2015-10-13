@@ -1,6 +1,11 @@
+2015-10-13  vaiorabbit  <http://twitter.com/vaiorabbit>
+
+	* generate_ext_command_list.rb, generate_ext_enum_list.rb: Added.
+	* gl.xml: Updated.
+
 2015-10-12  vaiorabbit  <http://twitter.com/vaiorabbit>
 
-	* c_generate_ext_command.rb: Supports extension entry points.
+	* c_generate_ext_command.rb: Supports extension entry points.4
 	* opengl_c_impl.{dll/so/bundle} is renamed into opengl_c_impl.{dll/so/bundle}
 
 2015-10-11  vaiorabbit  <http://twitter.com/vaiorabbit>
