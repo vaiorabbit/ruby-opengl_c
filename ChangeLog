@@ -1,3 +1,7 @@
+2015-10-15  vaiorabbit  <http://twitter.com/vaiorabbit>
+
+	* sample: Ported some samples from original opengl-bindings.
+
 2015-10-14  vaiorabbit  <http://twitter.com/vaiorabbit>
 
 	* opengl-bindings_c.gemspec: Added.
