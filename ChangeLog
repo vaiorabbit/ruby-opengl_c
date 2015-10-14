@@ -1,3 +1,7 @@
+2015-10-14  vaiorabbit  <http://twitter.com/vaiorabbit>
+
+	* opengl-bindings_c.gemspec: Added.
+
 2015-10-13  vaiorabbit  <http://twitter.com/vaiorabbit>
 
 	* generate_ext_command_list.rb, generate_ext_enum_list.rb: Added.
