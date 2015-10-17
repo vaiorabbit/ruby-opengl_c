@@ -28,6 +28,7 @@ def get_value_to_ctype_converter(type)
   when "long long"; "NUM2LL"
   when "float"; "NUM2DBL"
   when "double"; "NUM2DBL"
+  when "ptrdiff_t"; "NUM2UINT"
   end
 end
 
@@ -47,6 +48,7 @@ def get_ctype_to_value_converter(type)
   when "long long"; "LL2NUM"
   when "float"; "DBL2NUM"
   when "double"; "DBL2NUM"
+  when "ptrdiff_t"; "UINT2NUM"
   end
 end
 

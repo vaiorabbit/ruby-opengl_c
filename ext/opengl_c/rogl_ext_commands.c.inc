@@ -3930,8 +3930,8 @@ static VALUE rogl_glBufferParameteriAPPLE(VALUE _obj_, VALUE _arg1_, VALUE _arg2
 static VALUE rogl_glFlushMappedBufferRangeAPPLE(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg2_);
-    ptrdiff_t size = (ptrdiff_t)(_arg3_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg2_);
+    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg3_);
 
     rogl_pfn_glFlushMappedBufferRangeAPPLE(target, offset, size);
 
@@ -5366,8 +5366,8 @@ static VALUE rogl_glResetMinmax(VALUE _obj_, VALUE _arg1_)
 static VALUE rogl_glMultiDrawArraysIndirectCountARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
     unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t indirect = (ptrdiff_t)(_arg2_);
-    ptrdiff_t drawcount = (ptrdiff_t)(_arg3_);
+    ptrdiff_t indirect = (ptrdiff_t)NUM2UINT(_arg2_);
+    ptrdiff_t drawcount = (ptrdiff_t)NUM2UINT(_arg3_);
     int maxdrawcount = (int)NUM2INT(_arg4_);
     int stride = (int)NUM2INT(_arg5_);
 
@@ -5380,8 +5380,8 @@ static VALUE rogl_glMultiDrawElementsIndirectCountARB(VALUE _obj_, VALUE _arg1_,
 {
     unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
     unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    ptrdiff_t indirect = (ptrdiff_t)(_arg3_);
-    ptrdiff_t drawcount = (ptrdiff_t)(_arg4_);
+    ptrdiff_t indirect = (ptrdiff_t)NUM2UINT(_arg3_);
+    ptrdiff_t drawcount = (ptrdiff_t)NUM2UINT(_arg4_);
     int maxdrawcount = (int)NUM2INT(_arg5_);
     int stride = (int)NUM2INT(_arg6_);
 
@@ -6715,8 +6715,8 @@ static VALUE rogl_glGetNamedStringivARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
 static VALUE rogl_glBufferPageCommitmentARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg2_);
-    ptrdiff_t size = (ptrdiff_t)(_arg3_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg2_);
+    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg3_);
     unsigned char commit = (unsigned char)NUM2UINT(_arg4_);
 
     rogl_pfn_glBufferPageCommitmentARB(target, offset, size, commit);
@@ -6727,8 +6727,8 @@ static VALUE rogl_glBufferPageCommitmentARB(VALUE _obj_, VALUE _arg1_, VALUE _ar
 static VALUE rogl_glNamedBufferPageCommitmentEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
     unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg2_);
-    ptrdiff_t size = (ptrdiff_t)(_arg3_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg2_);
+    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg3_);
     unsigned char commit = (unsigned char)NUM2UINT(_arg4_);
 
     rogl_pfn_glNamedBufferPageCommitmentEXT(buffer, offset, size, commit);
@@ -6739,8 +6739,8 @@ static VALUE rogl_glNamedBufferPageCommitmentEXT(VALUE _obj_, VALUE _arg1_, VALU
 static VALUE rogl_glNamedBufferPageCommitmentARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
     unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg2_);
-    ptrdiff_t size = (ptrdiff_t)(_arg3_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg2_);
+    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg3_);
     unsigned char commit = (unsigned char)NUM2UINT(_arg4_);
 
     rogl_pfn_glNamedBufferPageCommitmentARB(buffer, offset, size, commit);
@@ -7065,7 +7065,7 @@ static VALUE rogl_glIsBufferARB(VALUE _obj_, VALUE _arg1_)
 static VALUE rogl_glBufferDataARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t size = (ptrdiff_t)(_arg2_);
+    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg2_);
     void* data = (void*)val2ptr(_arg3_);
     unsigned int usage = (unsigned int)NUM2UINT(_arg4_);
 
@@ -7077,8 +7077,8 @@ static VALUE rogl_glBufferDataARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
 static VALUE rogl_glBufferSubDataARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg2_);
-    ptrdiff_t size = (ptrdiff_t)(_arg3_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg2_);
+    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg3_);
     void* data = (void*)val2ptr(_arg4_);
 
     rogl_pfn_glBufferSubDataARB(target, offset, size, data);
@@ -7089,8 +7089,8 @@ static VALUE rogl_glBufferSubDataARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
 static VALUE rogl_glGetBufferSubDataARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg2_);
-    ptrdiff_t size = (ptrdiff_t)(_arg3_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg2_);
+    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg3_);
     void* data = (void*)val2ptr(_arg4_);
 
     rogl_pfn_glGetBufferSubDataARB(target, offset, size, data);
@@ -8336,7 +8336,7 @@ static VALUE rogl_glGetUniformOffsetEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 
     ptrdiff_t retval = rogl_pfn_glGetUniformOffsetEXT(program, location);
 
-    return (retval);
+    return UINT2NUM(retval);
 }
 
 static VALUE rogl_glBlendColorEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
@@ -10301,7 +10301,7 @@ static VALUE rogl_glMatrixMultTransposedEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
 static VALUE rogl_glNamedBufferDataEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
     unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t size = (ptrdiff_t)(_arg2_);
+    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg2_);
     void* data = (void*)val2ptr(_arg3_);
     unsigned int usage = (unsigned int)NUM2UINT(_arg4_);
 
@@ -10313,8 +10313,8 @@ static VALUE rogl_glNamedBufferDataEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
 static VALUE rogl_glNamedBufferSubDataEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
     unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg2_);
-    ptrdiff_t size = (ptrdiff_t)(_arg3_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg2_);
+    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg3_);
     void* data = (void*)val2ptr(_arg4_);
 
     rogl_pfn_glNamedBufferSubDataEXT(buffer, offset, size, data);
@@ -10366,8 +10366,8 @@ static VALUE rogl_glGetNamedBufferPointervEXT(VALUE _obj_, VALUE _arg1_, VALUE _
 static VALUE rogl_glGetNamedBufferSubDataEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
     unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg2_);
-    ptrdiff_t size = (ptrdiff_t)(_arg3_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg2_);
+    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg3_);
     void* data = (void*)val2ptr(_arg4_);
 
     rogl_pfn_glGetNamedBufferSubDataEXT(buffer, offset, size, data);
@@ -10970,9 +10970,9 @@ static VALUE rogl_glNamedCopyBufferSubDataEXT(VALUE _obj_, VALUE _arg1_, VALUE _
 {
     unsigned int readBuffer = (unsigned int)NUM2UINT(_arg1_);
     unsigned int writeBuffer = (unsigned int)NUM2UINT(_arg2_);
-    ptrdiff_t readOffset = (ptrdiff_t)(_arg3_);
-    ptrdiff_t writeOffset = (ptrdiff_t)(_arg4_);
-    ptrdiff_t size = (ptrdiff_t)(_arg5_);
+    ptrdiff_t readOffset = (ptrdiff_t)NUM2UINT(_arg3_);
+    ptrdiff_t writeOffset = (ptrdiff_t)NUM2UINT(_arg4_);
+    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg5_);
 
     rogl_pfn_glNamedCopyBufferSubDataEXT(readBuffer, writeBuffer, readOffset, writeOffset, size);
 
@@ -11046,7 +11046,7 @@ static VALUE rogl_glVertexArrayVertexOffsetEXT(VALUE _obj_, VALUE _arg1_, VALUE 
     int size = (int)NUM2INT(_arg3_);
     unsigned int type = (unsigned int)NUM2UINT(_arg4_);
     int stride = (int)NUM2INT(_arg5_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg6_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg6_);
 
     rogl_pfn_glVertexArrayVertexOffsetEXT(vaobj, buffer, size, type, stride, offset);
 
@@ -11060,7 +11060,7 @@ static VALUE rogl_glVertexArrayColorOffsetEXT(VALUE _obj_, VALUE _arg1_, VALUE _
     int size = (int)NUM2INT(_arg3_);
     unsigned int type = (unsigned int)NUM2UINT(_arg4_);
     int stride = (int)NUM2INT(_arg5_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg6_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg6_);
 
     rogl_pfn_glVertexArrayColorOffsetEXT(vaobj, buffer, size, type, stride, offset);
 
@@ -11072,7 +11072,7 @@ static VALUE rogl_glVertexArrayEdgeFlagOffsetEXT(VALUE _obj_, VALUE _arg1_, VALU
     unsigned int vaobj = (unsigned int)NUM2UINT(_arg1_);
     unsigned int buffer = (unsigned int)NUM2UINT(_arg2_);
     int stride = (int)NUM2INT(_arg3_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg4_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg4_);
 
     rogl_pfn_glVertexArrayEdgeFlagOffsetEXT(vaobj, buffer, stride, offset);
 
@@ -11085,7 +11085,7 @@ static VALUE rogl_glVertexArrayIndexOffsetEXT(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int buffer = (unsigned int)NUM2UINT(_arg2_);
     unsigned int type = (unsigned int)NUM2UINT(_arg3_);
     int stride = (int)NUM2INT(_arg4_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg5_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg5_);
 
     rogl_pfn_glVertexArrayIndexOffsetEXT(vaobj, buffer, type, stride, offset);
 
@@ -11098,7 +11098,7 @@ static VALUE rogl_glVertexArrayNormalOffsetEXT(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int buffer = (unsigned int)NUM2UINT(_arg2_);
     unsigned int type = (unsigned int)NUM2UINT(_arg3_);
     int stride = (int)NUM2INT(_arg4_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg5_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg5_);
 
     rogl_pfn_glVertexArrayNormalOffsetEXT(vaobj, buffer, type, stride, offset);
 
@@ -11112,7 +11112,7 @@ static VALUE rogl_glVertexArrayTexCoordOffsetEXT(VALUE _obj_, VALUE _arg1_, VALU
     int size = (int)NUM2INT(_arg3_);
     unsigned int type = (unsigned int)NUM2UINT(_arg4_);
     int stride = (int)NUM2INT(_arg5_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg6_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg6_);
 
     rogl_pfn_glVertexArrayTexCoordOffsetEXT(vaobj, buffer, size, type, stride, offset);
 
@@ -11127,7 +11127,7 @@ static VALUE rogl_glVertexArrayMultiTexCoordOffsetEXT(VALUE _obj_, VALUE _arg1_,
     int size = (int)NUM2INT(_arg4_);
     unsigned int type = (unsigned int)NUM2UINT(_arg5_);
     int stride = (int)NUM2INT(_arg6_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg7_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg7_);
 
     rogl_pfn_glVertexArrayMultiTexCoordOffsetEXT(vaobj, buffer, texunit, size, type, stride, offset);
 
@@ -11140,7 +11140,7 @@ static VALUE rogl_glVertexArrayFogCoordOffsetEXT(VALUE _obj_, VALUE _arg1_, VALU
     unsigned int buffer = (unsigned int)NUM2UINT(_arg2_);
     unsigned int type = (unsigned int)NUM2UINT(_arg3_);
     int stride = (int)NUM2INT(_arg4_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg5_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg5_);
 
     rogl_pfn_glVertexArrayFogCoordOffsetEXT(vaobj, buffer, type, stride, offset);
 
@@ -11154,7 +11154,7 @@ static VALUE rogl_glVertexArraySecondaryColorOffsetEXT(VALUE _obj_, VALUE _arg1_
     int size = (int)NUM2INT(_arg3_);
     unsigned int type = (unsigned int)NUM2UINT(_arg4_);
     int stride = (int)NUM2INT(_arg5_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg6_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg6_);
 
     rogl_pfn_glVertexArraySecondaryColorOffsetEXT(vaobj, buffer, size, type, stride, offset);
 
@@ -11170,7 +11170,7 @@ static VALUE rogl_glVertexArrayVertexAttribOffsetEXT(VALUE _obj_, VALUE _arg1_, 
     unsigned int type = (unsigned int)NUM2UINT(_arg5_);
     unsigned char normalized = (unsigned char)NUM2UINT(_arg6_);
     int stride = (int)NUM2INT(_arg7_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg8_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg8_);
 
     rogl_pfn_glVertexArrayVertexAttribOffsetEXT(vaobj, buffer, index, size, type, normalized, stride, offset);
 
@@ -11185,7 +11185,7 @@ static VALUE rogl_glVertexArrayVertexAttribIOffsetEXT(VALUE _obj_, VALUE _arg1_,
     int size = (int)NUM2INT(_arg4_);
     unsigned int type = (unsigned int)NUM2UINT(_arg5_);
     int stride = (int)NUM2INT(_arg6_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg7_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg7_);
 
     rogl_pfn_glVertexArrayVertexAttribIOffsetEXT(vaobj, buffer, index, size, type, stride, offset);
 
@@ -11281,8 +11281,8 @@ static VALUE rogl_glGetVertexArrayPointeri_vEXT(VALUE _obj_, VALUE _arg1_, VALUE
 static VALUE rogl_glMapNamedBufferRangeEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
     unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg2_);
-    ptrdiff_t length = (ptrdiff_t)(_arg3_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg2_);
+    ptrdiff_t length = (ptrdiff_t)NUM2UINT(_arg3_);
     unsigned int access = (unsigned int)NUM2UINT(_arg4_);
 
     void* retval = rogl_pfn_glMapNamedBufferRangeEXT(buffer, offset, length, access);
@@ -11293,8 +11293,8 @@ static VALUE rogl_glMapNamedBufferRangeEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
 static VALUE rogl_glFlushMappedNamedBufferRangeEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
     unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg2_);
-    ptrdiff_t length = (ptrdiff_t)(_arg3_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg2_);
+    ptrdiff_t length = (ptrdiff_t)NUM2UINT(_arg3_);
 
     rogl_pfn_glFlushMappedNamedBufferRangeEXT(buffer, offset, length);
 
@@ -11304,7 +11304,7 @@ static VALUE rogl_glFlushMappedNamedBufferRangeEXT(VALUE _obj_, VALUE _arg1_, VA
 static VALUE rogl_glNamedBufferStorageEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
     unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t size = (ptrdiff_t)(_arg2_);
+    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg2_);
     void* data = (void*)val2ptr(_arg3_);
     unsigned int flags = (unsigned int)NUM2UINT(_arg4_);
 
@@ -11330,8 +11330,8 @@ static VALUE rogl_glClearNamedBufferSubDataEXT(VALUE _obj_, VALUE _arg1_, VALUE 
 {
     unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
     unsigned int internalformat = (unsigned int)NUM2UINT(_arg2_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg3_);
-    ptrdiff_t size = (ptrdiff_t)(_arg4_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg3_);
+    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg4_);
     unsigned int format = (unsigned int)NUM2UINT(_arg5_);
     unsigned int type = (unsigned int)NUM2UINT(_arg6_);
     void* data = (void*)val2ptr(_arg7_);
@@ -11584,8 +11584,8 @@ static VALUE rogl_glTextureBufferRangeEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int target = (unsigned int)NUM2UINT(_arg2_);
     unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
     unsigned int buffer = (unsigned int)NUM2UINT(_arg4_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg5_);
-    ptrdiff_t size = (ptrdiff_t)(_arg6_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg5_);
+    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg6_);
 
     rogl_pfn_glTextureBufferRangeEXT(texture, target, internalformat, buffer, offset, size);
 
@@ -11670,7 +11670,7 @@ static VALUE rogl_glVertexArrayBindVertexBufferEXT(VALUE _obj_, VALUE _arg1_, VA
     unsigned int vaobj = (unsigned int)NUM2UINT(_arg1_);
     unsigned int bindingindex = (unsigned int)NUM2UINT(_arg2_);
     unsigned int buffer = (unsigned int)NUM2UINT(_arg3_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg4_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg4_);
     int stride = (int)NUM2INT(_arg5_);
 
     rogl_pfn_glVertexArrayBindVertexBufferEXT(vaobj, bindingindex, buffer, offset, stride);
@@ -11748,7 +11748,7 @@ static VALUE rogl_glVertexArrayVertexAttribLOffsetEXT(VALUE _obj_, VALUE _arg1_,
     int size = (int)NUM2INT(_arg4_);
     unsigned int type = (unsigned int)NUM2UINT(_arg5_);
     int stride = (int)NUM2INT(_arg6_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg7_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg7_);
 
     rogl_pfn_glVertexArrayVertexAttribLOffsetEXT(vaobj, buffer, index, size, type, stride, offset);
 
@@ -13216,8 +13216,8 @@ static VALUE rogl_glBindBufferRangeEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     unsigned int buffer = (unsigned int)NUM2UINT(_arg3_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg4_);
-    ptrdiff_t size = (ptrdiff_t)(_arg5_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg4_);
+    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg5_);
 
     rogl_pfn_glBindBufferRangeEXT(target, index, buffer, offset, size);
 
@@ -13229,7 +13229,7 @@ static VALUE rogl_glBindBufferOffsetEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     unsigned int buffer = (unsigned int)NUM2UINT(_arg3_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg4_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg4_);
 
     rogl_pfn_glBindBufferOffsetEXT(target, index, buffer, offset);
 
@@ -13962,7 +13962,7 @@ static VALUE rogl_glVertexWeightPointerEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
 static VALUE rogl_glImportSyncEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
     unsigned int external_sync_type = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t external_sync = (ptrdiff_t)(_arg2_);
+    ptrdiff_t external_sync = (ptrdiff_t)NUM2UINT(_arg2_);
     unsigned int flags = (unsigned int)NUM2UINT(_arg3_);
 
     void* retval = rogl_pfn_glImportSyncEXT(external_sync_type, external_sync, flags);
@@ -17192,7 +17192,7 @@ static VALUE rogl_glPathMemoryGlyphIndexArrayNV(VALUE _obj_, VALUE _arg1_, VALUE
 {
     unsigned int firstPathName = (unsigned int)NUM2UINT(_arg1_);
     unsigned int fontTarget = (unsigned int)NUM2UINT(_arg2_);
-    ptrdiff_t fontSize = (ptrdiff_t)(_arg3_);
+    ptrdiff_t fontSize = (ptrdiff_t)NUM2UINT(_arg3_);
     void* fontData = (void*)val2ptr(_arg4_);
     int faceIndex = (int)NUM2INT(_arg5_);
     unsigned int firstGlyphIndex = (unsigned int)NUM2UINT(_arg6_);
@@ -17926,8 +17926,8 @@ static VALUE rogl_glBindBufferRangeNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     unsigned int buffer = (unsigned int)NUM2UINT(_arg3_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg4_);
-    ptrdiff_t size = (ptrdiff_t)(_arg5_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg4_);
+    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg5_);
 
     rogl_pfn_glBindBufferRangeNV(target, index, buffer, offset, size);
 
@@ -17939,7 +17939,7 @@ static VALUE rogl_glBindBufferOffsetNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     unsigned int buffer = (unsigned int)NUM2UINT(_arg3_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg4_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg4_);
 
     rogl_pfn_glBindBufferOffsetNV(target, index, buffer, offset);
 
@@ -18117,7 +18117,7 @@ static VALUE rogl_glVDPAURegisterVideoSurfaceNV(VALUE _obj_, VALUE _arg1_, VALUE
 
     ptrdiff_t retval = rogl_pfn_glVDPAURegisterVideoSurfaceNV(vdpSurface, target, numTextureNames, textureNames);
 
-    return (retval);
+    return UINT2NUM(retval);
 }
 
 static VALUE rogl_glVDPAURegisterOutputSurfaceNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
@@ -18129,12 +18129,12 @@ static VALUE rogl_glVDPAURegisterOutputSurfaceNV(VALUE _obj_, VALUE _arg1_, VALU
 
     ptrdiff_t retval = rogl_pfn_glVDPAURegisterOutputSurfaceNV(vdpSurface, target, numTextureNames, textureNames);
 
-    return (retval);
+    return UINT2NUM(retval);
 }
 
 static VALUE rogl_glVDPAUIsSurfaceNV(VALUE _obj_, VALUE _arg1_)
 {
-    ptrdiff_t surface = (ptrdiff_t)(_arg1_);
+    ptrdiff_t surface = (ptrdiff_t)NUM2UINT(_arg1_);
 
     unsigned char retval = rogl_pfn_glVDPAUIsSurfaceNV(surface);
 
@@ -18143,7 +18143,7 @@ static VALUE rogl_glVDPAUIsSurfaceNV(VALUE _obj_, VALUE _arg1_)
 
 static VALUE rogl_glVDPAUUnregisterSurfaceNV(VALUE _obj_, VALUE _arg1_)
 {
-    ptrdiff_t surface = (ptrdiff_t)(_arg1_);
+    ptrdiff_t surface = (ptrdiff_t)NUM2UINT(_arg1_);
 
     rogl_pfn_glVDPAUUnregisterSurfaceNV(surface);
 
@@ -18152,7 +18152,7 @@ static VALUE rogl_glVDPAUUnregisterSurfaceNV(VALUE _obj_, VALUE _arg1_)
 
 static VALUE rogl_glVDPAUGetSurfaceivNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    ptrdiff_t surface = (ptrdiff_t)(_arg1_);
+    ptrdiff_t surface = (ptrdiff_t)NUM2UINT(_arg1_);
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     int bufSize = (int)NUM2INT(_arg3_);
     void* length = (void*)val2ptr(_arg4_);
@@ -18165,7 +18165,7 @@ static VALUE rogl_glVDPAUGetSurfaceivNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
 
 static VALUE rogl_glVDPAUSurfaceAccessNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    ptrdiff_t surface = (ptrdiff_t)(_arg1_);
+    ptrdiff_t surface = (ptrdiff_t)NUM2UINT(_arg1_);
     unsigned int access = (unsigned int)NUM2UINT(_arg2_);
 
     rogl_pfn_glVDPAUSurfaceAccessNV(surface, access);
@@ -18421,7 +18421,7 @@ static VALUE rogl_glBufferAddressRangeNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     unsigned long long address = (unsigned long long)NUM2ULL(_arg3_);
-    ptrdiff_t length = (ptrdiff_t)(_arg4_);
+    ptrdiff_t length = (ptrdiff_t)NUM2UINT(_arg4_);
 
     rogl_pfn_glBufferAddressRangeNV(pname, index, address, length);
 
@@ -19516,7 +19516,7 @@ static VALUE rogl_glBindVideoCaptureStreamBufferNV(VALUE _obj_, VALUE _arg1_, VA
     unsigned int video_capture_slot = (unsigned int)NUM2UINT(_arg1_);
     unsigned int stream = (unsigned int)NUM2UINT(_arg2_);
     unsigned int frame_region = (unsigned int)NUM2UINT(_arg3_);
-    ptrdiff_t offset = (ptrdiff_t)(_arg4_);
+    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg4_);
 
     rogl_pfn_glBindVideoCaptureStreamBufferNV(video_capture_slot, stream, frame_region, offset);
 

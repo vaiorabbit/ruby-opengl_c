@@ -1,3 +1,7 @@
+2015-10-17  vaiorabbit  <http://twitter.com/vaiorabbit>
+
+	* generator/c_generate_common.rb: ptrdiff_t
+
 2015-10-15  vaiorabbit  <http://twitter.com/vaiorabbit>
 
 	* sample: Ported some samples from original opengl-bindings.
