@@ -23,24 +23,24 @@ task 'ext_command_list' => '../lib/opengl_ext_command.rb'
 
 file '../ext/opengl_c/rogl_commands.c.inc' => './gl.xml' do |t|
   open('../ext/opengl_c/rogl_commands.c.inc', 'wb') do |file|
-    GLCodeGenerator.generate_command(file)
+    GLCCommandCodeGenerator.generate_command(file)
   end
 end
 
 file '../ext/opengl_c/rogl_ext_commands.c.inc' => './gl.xml' do |t|
   open('../ext/opengl_c/rogl_ext_commands.c.inc', 'wb') do |file|
-    GLExtCodeGenerator.generate_command(file)
+    GLExtCCommandCodeGenerator.generate_command(file)
   end
 end
 
 file '../lib/opengl_ext_command.rb' => './gl.xml' do |t|
   open('../lib/opengl_ext_command.rb', 'wb') do |file|
-    generate_ext_command(file)
+    GLExtRubyCommandCodeGenerator.generate_ext_command(file)
   end
 end
 
 file '../lib/opengl_ext_enum.rb' => './gl.xml' do |t|
   open('../lib/opengl_ext_enum.rb', 'wb') do |file|
-    generate_ext_enum(file)
+    GLExtRubyEnumCodeGenerator.generate_ext_enum(file)
   end
 end

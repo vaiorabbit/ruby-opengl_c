@@ -1,6 +1,6 @@
 require_relative 'c_generate_common'
 
-module GLExtCodeGenerator
+module GLExtCCommandCodeGenerator
 
   def self.generate_command( out )
 
@@ -10,14 +10,7 @@ module GLExtCodeGenerator
     gl_ext_name_to_enums_map = build_name_to_enums_map(doc)
 
     # Output
-    out.puts <<-PROLOGUE
-/* opengl-bindings
- * * http://rubygems.org/gems/opengl-bindings_c
- * * http://github.com/vaiorabbit/ruby-opengl_c
- *
- * [NOTICE] This is an automatically generated file.
- */
-PROLOGUE
+    out.puts GLCodeGeneratorCommon::HeaderCommentC
     generate_entry_point(out, gl_ext_name_to_commands_map)
     generate_function_call(out, gl_ext_name_to_commands_map, gl_ext_name_to_enums_map)
 
@@ -398,5 +391,5 @@ PROLOGUE
 end
 
 if $0 == __FILE__
-  GLExtCodeGenerator.generate_ext_command( $stdout )
+  GLExtCCommandCodeGenerator.generate_ext_command( $stdout )
 end

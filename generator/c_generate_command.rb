@@ -1,130 +1,18 @@
 require_relative 'c_generate_common'
 
-module GLCodeGenerator
+module GLCCommandCodeGenerator
 
   def self.generate_command( out )
 
     doc = REXML::Document.new(open("./gl.xml"))
 
-    gl_std_cmd_map  = build_std_commands_map(doc)
-    gl_std_enum_map = build_std_enums_map(doc)
+    gl_std_cmd_map  = GLCodeGeneratorCommon.build_commands_map(doc, extract_api: "gl")
+    gl_std_enum_map = GLCodeGeneratorCommon.build_enums_map(doc, extract_api: "gl")
 
     # Output
-    out.puts <<-PROLOGUE
-/* opengl-bindings
- * * http://rubygems.org/gems/opengl-bindings_c
- * * http://github.com/vaiorabbit/ruby-opengl_c
- *
- * [NOTICE] This is an automatically generated file.
- */
-PROLOGUE
+    out.puts GLCodeGeneratorCommon::HeaderCommentC
     generate_entry_point(out, gl_std_cmd_map)
     generate_function_call(out, gl_std_cmd_map, gl_std_enum_map)
-
-  end
-
-  def self.build_std_commands_map(doc)
-    # Collect all command
-    gl_all_cmd_map = {}
-    REXML::XPath.each(doc,'registry/commands/command') do |cmd_tag|
-      # check alias
-      alias_tag = cmd_tag.get_elements('alias')
-      next if alias_tag.length != 0 # skips glActiveTextureARB (alias of glActiveTexture), etc.
-
-      map_entry = GLCommandMapEntry.new
-
-      proto_tag = cmd_tag.get_elements('proto').first
-
-      # Patterns of contents inside '<proto>...</proto>'
-      # * void <name>glBegin</name>
-      # * <ptype>GLboolean</ptype> <name>glIsEnabled</name>
-      # * const <ptype>GLubyte</ptype> *<name>glGetStringi</name>
-
-      map_entry.api_name = proto_tag.get_elements('name').first.text
-      proto_ptype = proto_tag.get_elements('ptype').first
-      proto_residue = proto_tag.texts.join(" ")
-      if proto_residue =~ /const/
-        proto_residue.slice!("const")
-        proto_residue.strip!
-      end
-      map_entry.ret_name = if proto_ptype != nil
-                             proto_ptype.text.strip
-                           else
-                             proto_tag.text.strip
-                           end
-      map_entry.ret_name << ' *' if proto_residue =~ /\*/
-
-      # Patterns of contents inside '<param>...</param>':
-      # * <ptype>GLenum</ptype> <name>mode</name> (glBegin)
-      # * <ptype>GLuint</ptype> <name>baseAndCount</name>[2] (glPathGlyphIndexRangeNV)
-      # * <ptype>GLfloat</ptype> *<name>data</name> (glGetFloatv) : param_tag.texts == [" *"]
-      # * const <ptype>GLfloat</ptype> *<name>params</name> (glMaterialfv) : param_tag.texts == ["const ", " *"]
-      # * const void *<name>data</name> (glBufferData) : param_tag.texts == ["const void *"]
-      map_entry.type_names = []
-      map_entry.var_names = []
-      REXML::XPath.each(cmd_tag, 'param') do |param_tag|
-        var_name = param_tag.get_elements('name').first.text.strip
-        param_ptype = param_tag.get_elements('ptype').first
-        param_residue = param_tag.texts.join(" ")
-        if param_residue =~ /const/
-          param_residue.slice!("const")
-          param_residue.strip!
-        end
-        type_name = if param_ptype != nil
-                      param_ptype.text.strip
-                    else
-                      param_tag.text.strip
-                    end
-        type_name << ' *' if param_residue =~ /\*/ || param_residue =~/\[.+\]/
-        map_entry.type_names << type_name
-        map_entry.var_names << var_name
-      end
-
-      gl_all_cmd_map[map_entry.api_name] = map_entry
-    end
-
-    # Extract standard command
-    gl_std_cmd_map = {}
-    REXML::XPath.each(doc, 'registry/feature') do |feature_tag|
-      if "gl" == feature_tag.attribute('api').value
-
-        # OpenGL Standard enums
-        REXML::XPath.each(feature_tag, 'require/command') do |tag|
-          gl_std_cmd_map[tag.attribute('name').value] = gl_all_cmd_map[tag.attribute('name').value]
-        end
-
-      end
-    end
-
-    return gl_std_cmd_map
-
-  end
-
-  def self.build_std_enums_map(doc)
-    # Collect all enum
-    gl_all_enum_map = {}
-    REXML::XPath.each(doc, 'registry/enums/enum') do |enum_tag|
-      # # check alias
-      # alias_attr = enum_tag['alias']
-      # next if alias_attr != nil
-
-      gl_all_enum_map[enum_tag.attribute('name').value] = enum_tag.attribute('value').value
-    end
-
-    # Extract standard enum
-    gl_std_enum_map = {}
-    REXML::XPath.each(doc, 'registry/feature') do |feature_tag|
-      if "gl" == feature_tag.attribute('api').value
-
-        # OpenGL Standard enums
-        REXML::XPath.each(feature_tag, 'require/enum') do |tag|
-          gl_std_enum_map[tag.attribute('name').value] = gl_all_enum_map[tag.attribute('name').value]
-        end
-
-      end
-    end
-
-    return gl_std_enum_map
 
   end
 
@@ -281,5 +169,5 @@ PROLOGUE
 end
 
 if $0 == __FILE__
-  GLCodeGenerator.generate_command( $stdout )
+  GLCCommandCodeGenerator.generate_command( $stdout )
 end
