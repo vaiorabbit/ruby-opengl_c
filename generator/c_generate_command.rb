@@ -127,7 +127,11 @@ module GLCCommandCodeGenerator
       out.puts ""
 
       # Return value
-      ret_conv = get_ctype_to_value_converter(function_rettype)
+      ret_conv = if api == "glGetString" || api == "glGetStringi"
+                   "rb_str_new2"
+                 else
+                   get_ctype_to_value_converter(function_rettype)
+                 end
       ret_cast = "#{ret_conv}(retval)"
       out.puts "    return #{function_rettype == 'void' ? 'Qnil' : ret_cast};"
 

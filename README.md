@@ -3,7 +3,7 @@
 # Ruby OpenGL Bindings (C Edition) #
 
 *   Created : 2015-10-11
-*   Last modified : 2015-10-17
+*   Last modified : 2015-10-20
 
 ## License ##
 

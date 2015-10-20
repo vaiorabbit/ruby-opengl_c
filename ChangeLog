@@ -1,3 +1,7 @@
+2015-10-20  vaiorabbit  <http://twitter.com/vaiorabbit>
+
+	* generator/c_generate_command.rb: glGetString and glGetStringi now return ruby's string.
+
 2015-10-17  vaiorabbit  <http://twitter.com/vaiorabbit>
 
 	* generator/c_generate_common.rb: ptrdiff_t

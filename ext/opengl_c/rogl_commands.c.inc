@@ -2496,7 +2496,7 @@ static VALUE rogl_glGetString(VALUE _obj_, VALUE _arg1_)
 
     void* retval = rogl_pfn_glGetString(name);
 
-    return CPOINTER_AS_VALUE(retval);
+    return rb_str_new2(retval);
 }
 
 static VALUE rogl_glGetTexImage(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
@@ -8507,7 +8507,7 @@ static VALUE rogl_glGetStringi(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 
     void* retval = rogl_pfn_glGetStringi(name, index);
 
-    return CPOINTER_AS_VALUE(retval);
+    return rb_str_new2(retval);
 }
 
 static VALUE rogl_glIsRenderbuffer(VALUE _obj_, VALUE _arg1_)
