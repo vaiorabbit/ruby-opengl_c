@@ -2,6 +2,7 @@
 
 	* ext/opengl_c/rogl.c (rogl_method_SetFiddlePointerModule): A trick to use Fiddle::Pointer.
 	* sample: Ported samples from original ruby edition.
+	* opengl-bindings_c.gemspec: Added dependency (opengl-bindings-1.5.0 or higher)
 
 2015-10-20  vaiorabbit  <http://twitter.com/vaiorabbit>
 

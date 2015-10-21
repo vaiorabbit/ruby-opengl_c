@@ -21,6 +21,8 @@ Ruby bindings for OpenGL - 4.5, OpenGL ES - 3.2 and all extensions using Fiddle 
 
   gem.required_ruby_version = '>= 2.0.0'
 
+  gem.add_runtime_dependency 'opengl-bindings', '~> 1.5', '>= 1.5.0'
+
   gem.files = Dir.glob("lib/*.rb") +
               Dir.glob("ext/opengl_c/*.{c,h,inc,rb}") +
               ["README.md", "LICENSE.txt", "ChangeLog"] +
