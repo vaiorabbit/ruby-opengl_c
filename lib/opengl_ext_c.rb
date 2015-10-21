@@ -1,5 +1,4 @@
 require_relative 'opengl_c'
-require_relative 'opengl_ext_c_impl'
 require_relative 'opengl_ext_command'
 require_relative 'opengl_ext_enum'
 

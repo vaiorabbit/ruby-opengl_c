@@ -3,12 +3,14 @@
 #include "rogl_proc_address.h"
 
 #if SIZEOF_VOIDP == SIZEOF_LONG_LONG
-#define CPOINTER_AS_VALUE(ptr) (ULL2NUM((unsigned long long)(ptr)))
 #define VALUE_AS_CPOINTER(obj) ((void*)(NUM2ULL(obj)))
+#define CPOINTER_AS_VALUE(ptr) rb_funcall(s_mFiddlePointer, rb_intern("new"), 1, (ULL2NUM((unsigned long long)(ptr))))
 #else
-#define CPOINTER_AS_VALUE(ptr) (ULONG2NUM((unsigned long)(ptr)))
 #define VALUE_AS_CPOINTER(obj) ((void*)(NUM2ULONG(obj)))
+#define CPOINTER_AS_VALUE(ptr) rb_funcall(s_mFiddlePointer, rb_intern("new"), 1, (ULONG2NUM((unsigned long)(ptr))))
 #endif
+
+static VALUE s_mFiddlePointer;
 
 static void* val2ptr(VALUE obj)
 {
@@ -42,6 +44,13 @@ static VALUE rogl_method_InitSystem( VALUE self, VALUE lib )
 static VALUE rogl_method_TermSystem( VALUE self )
 {
     rogl_TermProcAddressSystem();
+    return Qnil;
+}
+
+static VALUE rogl_method_SetFiddlePointerModule( VALUE self, VALUE mFiddlePointer )
+{
+    s_mFiddlePointer = mFiddlePointer;
+
     return Qnil;
 }
 
@@ -94,6 +103,8 @@ void Init_opengl_c_impl()
 
     rb_define_singleton_method( mROGL, "init_system", rogl_method_InitSystem, 1 );
     rb_define_singleton_method( mROGL, "term_system", rogl_method_TermSystem, 0 );
+
+    rb_define_singleton_method( mROGL, "set_fiddle_pointer_module", rogl_method_SetFiddlePointerModule, 1 );
 
     rogl_InitRubyCommand( &mROGL );
     rogl_InitRubyExtCommand( &mROGL );

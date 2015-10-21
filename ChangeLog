@@ -1,3 +1,7 @@
+2015-10-21  vaiorabbit  <http://twitter.com/vaiorabbit>
+
+	* ext/opengl_c/rogl.c (rogl_method_SetFiddlePointerModule): A trick to use Fiddle::Pointer.
+
 2015-10-20  vaiorabbit  <http://twitter.com/vaiorabbit>
 
 	* generator/c_generate_command.rb: glGetString and glGetStringi now return ruby's string.
