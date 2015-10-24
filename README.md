@@ -2,8 +2,47 @@
 
 # Ruby OpenGL Bindings (C Edition) #
 
+Replaces pure-ruby OpenGL API calls in opengl-bindings ( https://github.com/vaiorabbit/ruby-opengl ) with native C function calls.
+
 *   Created : 2015-10-11
 *   Last modified : 2015-10-24
+
+## Features ##
+
+*   An extension library for MRI
+	*   More faster and memory efficient
+*   Provides same interface
+	*   (In theory) You don't have to rewrite your code.
+
+
+## Usage ##
+
+1.  $ gem install opengl-bindings_c
+2.  require 'opengl'
+    *   opengl-bindings (v1.5.1 and later) tries to load opengl_c first.
+
+## Notice ##
+
+*   There's no need to use this gem if you don't suffer performance/memory matter.
+
+*   glGetString and glGetStringi return String instance.
+*   APIs listed below return Fiddle::Pointer instance.
+    *   glMapBuffer
+    *   glMapBufferRange
+    *   glFenceSync
+    *   glMapNamedBuffer
+    *   glMapNamedBufferRange
+    *   glCreateSyncFromCLeventARB
+    *   glGetHandleARB
+    *   glCreateShaderObjectARB
+    *   glCreateProgramObjectARB
+    *   glMapBufferARB
+    *   glMapObjectBufferATI
+    *   glMapNamedBufferEXT
+    *   glMapNamedBufferRangeEXT
+    *   glImportSyncEXT
+    *   glMapTexture2DINTEL
+
 
 ## License ##
 

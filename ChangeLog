@@ -2,6 +2,7 @@
 
 	* Updated using latest gl.xml.
 	* sample/NamaspaceMigration: Added.
+	* Version: 0.5.1.pre (use with opengl-bindings 1.5.1)
 
 2015-10-21  vaiorabbit  <http://twitter.com/vaiorabbit>
 

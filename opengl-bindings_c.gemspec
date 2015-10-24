@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name          = "opengl-bindings_c"
-  gem.version       = "0.5.0"
+  gem.version       = "0.5.1.pre"
   gem.authors       = ["vaiorabbit"]
   gem.email         = ["vaiorabbit@gmail.com"]
   gem.summary       = %q{Ruby OpenGL Bindings (C Edition)}
@@ -16,15 +16,15 @@ Gem::Specification.new do |gem|
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
 
   gem.description   = <<-DESC
-Ruby bindings for OpenGL - 4.5, OpenGL ES - 3.2 and all extensions using Fiddle (For MRI >= 2.0.0). GLFW/GLUT/GLU bindings are also available.
+Replaces pure-ruby OpenGL API calls in opengl-bindings ( https://github.com/vaiorabbit/ruby-opengl ) with native C function calls.
+Notice: This library provides native extension. You must setup development environment (or DevKit) before installation.
   DESC
 
-  gem.required_ruby_version = '>= 2.0.0'
+  gem.required_ruby_version = '>= 2.2.0'
 
-  gem.add_runtime_dependency 'opengl-bindings', '~> 1.5', '>= 1.5.0'
+  gem.add_runtime_dependency 'opengl-bindings', '~> 1.5', '>= 1.5.1'
 
   gem.files = Dir.glob("lib/*.rb") +
               Dir.glob("ext/opengl_c/*.{c,h,inc,rb}") +
-              ["README.md", "LICENSE.txt", "ChangeLog"] +
-              ["sample/simple.rb"]
+              ["README.md", "LICENSE.txt", "ChangeLog"]
 end
