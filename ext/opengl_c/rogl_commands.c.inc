@@ -961,7 +961,7 @@ typedef void (* ROGL_PFNGLINVALIDATENAMEDFRAMEBUFFERSUBDATAPROC) (unsigned int f
 typedef void (* ROGL_PFNGLCLEARNAMEDFRAMEBUFFERIVPROC) (unsigned int framebuffer, unsigned int buffer, int drawbuffer, void* value);
 typedef void (* ROGL_PFNGLCLEARNAMEDFRAMEBUFFERUIVPROC) (unsigned int framebuffer, unsigned int buffer, int drawbuffer, void* value);
 typedef void (* ROGL_PFNGLCLEARNAMEDFRAMEBUFFERFVPROC) (unsigned int framebuffer, unsigned int buffer, int drawbuffer, void* value);
-typedef void (* ROGL_PFNGLCLEARNAMEDFRAMEBUFFERFIPROC) (unsigned int framebuffer, unsigned int buffer, float depth, int stencil);
+typedef void (* ROGL_PFNGLCLEARNAMEDFRAMEBUFFERFIPROC) (unsigned int framebuffer, unsigned int buffer, int drawbuffer, float depth, int stencil);
 typedef void (* ROGL_PFNGLBLITNAMEDFRAMEBUFFERPROC) (unsigned int readFramebuffer, unsigned int drawFramebuffer, int srcX0, int srcY0, int srcX1, int srcY1, int dstX0, int dstY0, int dstX1, int dstY1, unsigned int mask, unsigned int filter);
 typedef unsigned int (* ROGL_PFNGLCHECKNAMEDFRAMEBUFFERSTATUSPROC) (unsigned int framebuffer, unsigned int target);
 typedef void (* ROGL_PFNGLGETNAMEDFRAMEBUFFERPARAMETERIVPROC) (unsigned int framebuffer, unsigned int pname, void* param);
@@ -12534,14 +12534,15 @@ static VALUE rogl_glClearNamedFramebufferfv(VALUE _obj_, VALUE _arg1_, VALUE _ar
     return Qnil;
 }
 
-static VALUE rogl_glClearNamedFramebufferfi(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
+static VALUE rogl_glClearNamedFramebufferfi(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
     unsigned int framebuffer = (unsigned int)NUM2UINT(_arg1_);
     unsigned int buffer = (unsigned int)NUM2UINT(_arg2_);
-    float depth = (float)NUM2DBL(_arg3_);
-    int stencil = (int)NUM2INT(_arg4_);
+    int drawbuffer = (int)NUM2INT(_arg3_);
+    float depth = (float)NUM2DBL(_arg4_);
+    int stencil = (int)NUM2INT(_arg5_);
 
-    rogl_pfn_glClearNamedFramebufferfi(framebuffer, buffer, depth, stencil);
+    rogl_pfn_glClearNamedFramebufferfi(framebuffer, buffer, drawbuffer, depth, stencil);
 
     return Qnil;
 }
@@ -14579,7 +14580,7 @@ static void rogl_InitRubyCommand( VALUE* pmROGL )
     rb_define_method(*pmROGL, "glClearNamedFramebufferiv", rogl_glClearNamedFramebufferiv, 4);
     rb_define_method(*pmROGL, "glClearNamedFramebufferuiv", rogl_glClearNamedFramebufferuiv, 4);
     rb_define_method(*pmROGL, "glClearNamedFramebufferfv", rogl_glClearNamedFramebufferfv, 4);
-    rb_define_method(*pmROGL, "glClearNamedFramebufferfi", rogl_glClearNamedFramebufferfi, 4);
+    rb_define_method(*pmROGL, "glClearNamedFramebufferfi", rogl_glClearNamedFramebufferfi, 5);
     rb_define_method(*pmROGL, "glBlitNamedFramebuffer", rogl_glBlitNamedFramebuffer, 12);
     rb_define_method(*pmROGL, "glCheckNamedFramebufferStatus", rogl_glCheckNamedFramebufferStatus, 2);
     rb_define_method(*pmROGL, "glGetNamedFramebufferParameteriv", rogl_glGetNamedFramebufferParameteriv, 3);

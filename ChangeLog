@@ -1,3 +1,7 @@
+2015-10-24  vaiorabbit  <http://twitter.com/vaiorabbit>
+
+	* Updated using latest gl.xml.
+
 2015-10-21  vaiorabbit  <http://twitter.com/vaiorabbit>
 
 	* ext/opengl_c/rogl.c (rogl_method_SetFiddlePointerModule): A trick to use Fiddle::Pointer.

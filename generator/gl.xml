@@ -7894,7 +7894,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x9136" name="GL_TEXTURE_SAMPLES_IMG"/>
         <enum value="0x9137" name="GL_COMPRESSED_RGBA_PVRTC_2BPPV2_IMG"/>
         <enum value="0x9138" name="GL_COMPRESSED_RGBA_PVRTC_4BPPV2_IMG"/>
-            <unused start="0x9139" end="0x913F" vendor="IMG"/>
+        <enum value="0x9139" name="GL_CUBIC_IMG"/>
+        <enum value="0x913A" name="GL_CUBIC_MIPMAP_NEAREST_IMG"/>
+        <enum value="0x913B" name="GL_CUBIC_MIPMAP_LINEAR_IMG"/>
+            <unused start="0x913C" end="0x913F" vendor="IMG"/>
     </enums>
 
     <enums namespace="GL" start="0x9140" end="0x923F" vendor="AMD" comment="Khronos bugs 5899, 6004">
@@ -8477,6 +8480,10 @@ typedef unsigned int GLhandleARB;
             <unused start="0x9642" end="0x964F" vendor="Mediatek"/>
     </enums>
 
+    <enums namespace="GL" start="0x9650" end="0x968F" vendor="IMG" comment="Khronos bug 14977">
+            <unused start="0x9650" end="0x968F" vendor="IMG"/>
+    </enums>
+
 <!-- Enums reservable for future use. To reserve a new range, allocate one
      or more multiples of 16 starting at the lowest available point in this
      block and note it in a new <enums> block immediately above.
@@ -8486,8 +8493,8 @@ typedef unsigned int GLhandleARB;
      file) File requests in the Khronos Bugzilla, OpenGL project, Registry
      component. -->
 
-    <enums namespace="GL" start="0x9650" end="99999" vendor="ARB" comment="RESERVED FOR FUTURE ALLOCATIONS BY KHRONOS">
-        <unused start="0x9650" end="99999" comment="RESERVED"/>
+    <enums namespace="GL" start="0x9690" end="99999" vendor="ARB" comment="RESERVED FOR FUTURE ALLOCATIONS BY KHRONOS">
+        <unused start="0x9690" end="99999" comment="RESERVED"/>
     </enums>
 
 <!-- Historical large block allocations, all unused except (in older days) by IBM -->
@@ -9835,7 +9842,8 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glClearNamedFramebufferfi</name></proto>
             <param><ptype>GLuint</ptype> <name>framebuffer</name></param>
             <param><ptype>GLenum</ptype> <name>buffer</name></param>
-            <param>const <ptype>GLfloat</ptype> <name>depth</name></param>
+            <param><ptype>GLint</ptype> <name>drawbuffer</name></param>
+            <param><ptype>GLfloat</ptype> <name>depth</name></param>
             <param><ptype>GLint</ptype> <name>stencil</name></param>
         </command>
         <command>
@@ -42259,6 +42267,13 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_FRAGMENT_ALPHA_MODULATE_IMG"/>
                 <enum name="GL_ADD_BLEND_IMG"/>
                 <enum name="GL_DOT3_RGBA_IMG"/>
+            </require>
+        </extension>
+        <extension name="GL_IMG_texture_filter_cubic" supported="gles2">
+            <require>
+                <enum name="GL_CUBIC_IMG"/>
+                <enum name="GL_CUBIC_MIPMAP_NEAREST_IMG"/>
+                <enum name="GL_CUBIC_MIPMAP_LINEAR_IMG"/>
             </require>
         </extension>
         <extension name="GL_IMG_user_clip_plane" supported="gles1">
