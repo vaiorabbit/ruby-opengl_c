@@ -4,6 +4,8 @@
 	preceding/trailing underscores (Variable names 'near/far' are unusable
 	on mingw platform).
 
+	* ext/opengl_c/extconf.rb: '-lopengl32' for wglGetProcAddress.
+
 2015-10-24  vaiorabbit  <http://twitter.com/vaiorabbit>
 
 	* Updated using latest gl.xml.
