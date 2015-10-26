@@ -1,3 +1,9 @@
+2015-10-26  vaiorabbit  <http://twitter.com/vaiorabbit>
+
+	* generator/c_generate_command.rb: All arguments now have
+	preceding/trailing underscores (Variable names 'near/far' are unusable
+	on mingw platform).
+
 2015-10-24  vaiorabbit  <http://twitter.com/vaiorabbit>
 
 	* Updated using latest gl.xml.

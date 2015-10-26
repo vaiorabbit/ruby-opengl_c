@@ -100,7 +100,7 @@ module GLCCommandCodeGenerator
         arg_names.each_with_index do |a, i|
           arg_conv = get_value_to_ctype_converter(a)
           arg_cast = "(#{a})#{arg_conv}(_arg#{i+1}_)"
-          out.puts "    #{a} #{map_entry.var_names[i]} = #{arg_cast};"
+          out.puts "    #{a} _#{map_entry.var_names[i]}_ = #{arg_cast};"
         end
         out.puts ""
       end
@@ -119,7 +119,7 @@ module GLCCommandCodeGenerator
       function_call_line += "    #{function_retstr}rogl_pfn_#{api}("
       if arg_names.length > 0
         arg_names.each_with_index do |a, i|
-          function_call_line += "#{map_entry.var_names[i]}%s"%[(i < arg_names.length-1 ? ", " : "")]
+          function_call_line += "_#{map_entry.var_names[i]}_%s"%[(i < arg_names.length-1 ? ", " : "")]
         end
       end
       function_call_line += ");"

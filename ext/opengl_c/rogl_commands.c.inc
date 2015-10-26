@@ -2096,241 +2096,241 @@ static ROGL_PFNGLTEXTUREBARRIERPROC rogl_pfn_glTextureBarrier = NULL;
 
 static VALUE rogl_glCullFace(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glCullFace(mode);
+    rogl_pfn_glCullFace(_mode_);
 
     return Qnil;
 }
 
 static VALUE rogl_glFrontFace(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glFrontFace(mode);
+    rogl_pfn_glFrontFace(_mode_);
 
     return Qnil;
 }
 
 static VALUE rogl_glHint(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int mode = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glHint(target, mode);
+    rogl_pfn_glHint(_target_, _mode_);
 
     return Qnil;
 }
 
 static VALUE rogl_glLineWidth(VALUE _obj_, VALUE _arg1_)
 {
-    float width = (float)NUM2DBL(_arg1_);
+    float _width_ = (float)NUM2DBL(_arg1_);
 
-    rogl_pfn_glLineWidth(width);
+    rogl_pfn_glLineWidth(_width_);
 
     return Qnil;
 }
 
 static VALUE rogl_glPointSize(VALUE _obj_, VALUE _arg1_)
 {
-    float size = (float)NUM2DBL(_arg1_);
+    float _size_ = (float)NUM2DBL(_arg1_);
 
-    rogl_pfn_glPointSize(size);
+    rogl_pfn_glPointSize(_size_);
 
     return Qnil;
 }
 
 static VALUE rogl_glPolygonMode(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int face = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int mode = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _face_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glPolygonMode(face, mode);
+    rogl_pfn_glPolygonMode(_face_, _mode_);
 
     return Qnil;
 }
 
 static VALUE rogl_glScissor(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int x = (int)NUM2INT(_arg1_);
-    int y = (int)NUM2INT(_arg2_);
-    int width = (int)NUM2INT(_arg3_);
-    int height = (int)NUM2INT(_arg4_);
+    int _x_ = (int)NUM2INT(_arg1_);
+    int _y_ = (int)NUM2INT(_arg2_);
+    int _width_ = (int)NUM2INT(_arg3_);
+    int _height_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glScissor(x, y, width, height);
+    rogl_pfn_glScissor(_x_, _y_, _width_, _height_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexParameterf(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    float param = (float)NUM2DBL(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    float _param_ = (float)NUM2DBL(_arg3_);
 
-    rogl_pfn_glTexParameterf(target, pname, param);
+    rogl_pfn_glTexParameterf(_target_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexParameterfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glTexParameterfv(target, pname, params);
+    rogl_pfn_glTexParameterfv(_target_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexParameteri(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    int param = (int)NUM2INT(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    int _param_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glTexParameteri(target, pname, param);
+    rogl_pfn_glTexParameteri(_target_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexParameteriv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glTexParameteriv(target, pname, params);
+    rogl_pfn_glTexParameteriv(_target_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexImage1D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int internalformat = (int)NUM2INT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
-    int border = (int)NUM2INT(_arg5_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg6_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg7_);
-    void* pixels = (void*)val2ptr(_arg8_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _internalformat_ = (int)NUM2INT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
+    int _border_ = (int)NUM2INT(_arg5_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg6_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg7_);
+    void* _pixels_ = (void*)val2ptr(_arg8_);
 
-    rogl_pfn_glTexImage1D(target, level, internalformat, width, border, format, type, pixels);
+    rogl_pfn_glTexImage1D(_target_, _level_, _internalformat_, _width_, _border_, _format_, _type_, _pixels_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexImage2D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_, VALUE _arg9_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int internalformat = (int)NUM2INT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
-    int height = (int)NUM2INT(_arg5_);
-    int border = (int)NUM2INT(_arg6_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg7_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg8_);
-    void* pixels = (void*)val2ptr(_arg9_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _internalformat_ = (int)NUM2INT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
+    int _height_ = (int)NUM2INT(_arg5_);
+    int _border_ = (int)NUM2INT(_arg6_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg7_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg8_);
+    void* _pixels_ = (void*)val2ptr(_arg9_);
 
-    rogl_pfn_glTexImage2D(target, level, internalformat, width, height, border, format, type, pixels);
+    rogl_pfn_glTexImage2D(_target_, _level_, _internalformat_, _width_, _height_, _border_, _format_, _type_, _pixels_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDrawBuffer(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int buf = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _buf_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glDrawBuffer(buf);
+    rogl_pfn_glDrawBuffer(_buf_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClear(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int mask = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _mask_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glClear(mask);
+    rogl_pfn_glClear(_mask_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClearColor(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    float red = (float)NUM2DBL(_arg1_);
-    float green = (float)NUM2DBL(_arg2_);
-    float blue = (float)NUM2DBL(_arg3_);
-    float alpha = (float)NUM2DBL(_arg4_);
+    float _red_ = (float)NUM2DBL(_arg1_);
+    float _green_ = (float)NUM2DBL(_arg2_);
+    float _blue_ = (float)NUM2DBL(_arg3_);
+    float _alpha_ = (float)NUM2DBL(_arg4_);
 
-    rogl_pfn_glClearColor(red, green, blue, alpha);
+    rogl_pfn_glClearColor(_red_, _green_, _blue_, _alpha_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClearStencil(VALUE _obj_, VALUE _arg1_)
 {
-    int s = (int)NUM2INT(_arg1_);
+    int _s_ = (int)NUM2INT(_arg1_);
 
-    rogl_pfn_glClearStencil(s);
+    rogl_pfn_glClearStencil(_s_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClearDepth(VALUE _obj_, VALUE _arg1_)
 {
-    double depth = (double)NUM2DBL(_arg1_);
+    double _depth_ = (double)NUM2DBL(_arg1_);
 
-    rogl_pfn_glClearDepth(depth);
+    rogl_pfn_glClearDepth(_depth_);
 
     return Qnil;
 }
 
 static VALUE rogl_glStencilMask(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int mask = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _mask_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glStencilMask(mask);
+    rogl_pfn_glStencilMask(_mask_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColorMask(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned char red = (unsigned char)NUM2UINT(_arg1_);
-    unsigned char green = (unsigned char)NUM2UINT(_arg2_);
-    unsigned char blue = (unsigned char)NUM2UINT(_arg3_);
-    unsigned char alpha = (unsigned char)NUM2UINT(_arg4_);
+    unsigned char _red_ = (unsigned char)NUM2UINT(_arg1_);
+    unsigned char _green_ = (unsigned char)NUM2UINT(_arg2_);
+    unsigned char _blue_ = (unsigned char)NUM2UINT(_arg3_);
+    unsigned char _alpha_ = (unsigned char)NUM2UINT(_arg4_);
 
-    rogl_pfn_glColorMask(red, green, blue, alpha);
+    rogl_pfn_glColorMask(_red_, _green_, _blue_, _alpha_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDepthMask(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned char flag = (unsigned char)NUM2UINT(_arg1_);
+    unsigned char _flag_ = (unsigned char)NUM2UINT(_arg1_);
 
-    rogl_pfn_glDepthMask(flag);
+    rogl_pfn_glDepthMask(_flag_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDisable(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int cap = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _cap_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glDisable(cap);
+    rogl_pfn_glDisable(_cap_);
 
     return Qnil;
 }
 
 static VALUE rogl_glEnable(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int cap = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _cap_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glEnable(cap);
+    rogl_pfn_glEnable(_cap_);
 
     return Qnil;
 }
@@ -2351,114 +2351,114 @@ static VALUE rogl_glFlush(VALUE _obj_)
 
 static VALUE rogl_glBlendFunc(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int sfactor = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int dfactor = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _sfactor_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _dfactor_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glBlendFunc(sfactor, dfactor);
+    rogl_pfn_glBlendFunc(_sfactor_, _dfactor_);
 
     return Qnil;
 }
 
 static VALUE rogl_glLogicOp(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int opcode = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _opcode_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glLogicOp(opcode);
+    rogl_pfn_glLogicOp(_opcode_);
 
     return Qnil;
 }
 
 static VALUE rogl_glStencilFunc(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int func = (unsigned int)NUM2UINT(_arg1_);
-    int ref = (int)NUM2INT(_arg2_);
-    unsigned int mask = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _func_ = (unsigned int)NUM2UINT(_arg1_);
+    int _ref_ = (int)NUM2INT(_arg2_);
+    unsigned int _mask_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glStencilFunc(func, ref, mask);
+    rogl_pfn_glStencilFunc(_func_, _ref_, _mask_);
 
     return Qnil;
 }
 
 static VALUE rogl_glStencilOp(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int fail = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int zfail = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int zpass = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _fail_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _zfail_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _zpass_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glStencilOp(fail, zfail, zpass);
+    rogl_pfn_glStencilOp(_fail_, _zfail_, _zpass_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDepthFunc(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int func = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _func_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glDepthFunc(func);
+    rogl_pfn_glDepthFunc(_func_);
 
     return Qnil;
 }
 
 static VALUE rogl_glPixelStoref(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    float param = (float)NUM2DBL(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    float _param_ = (float)NUM2DBL(_arg2_);
 
-    rogl_pfn_glPixelStoref(pname, param);
+    rogl_pfn_glPixelStoref(_pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glPixelStorei(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    int param = (int)NUM2INT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    int _param_ = (int)NUM2INT(_arg2_);
 
-    rogl_pfn_glPixelStorei(pname, param);
+    rogl_pfn_glPixelStorei(_pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glReadBuffer(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int src = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _src_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glReadBuffer(src);
+    rogl_pfn_glReadBuffer(_src_);
 
     return Qnil;
 }
 
 static VALUE rogl_glReadPixels(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_)
 {
-    int x = (int)NUM2INT(_arg1_);
-    int y = (int)NUM2INT(_arg2_);
-    int width = (int)NUM2INT(_arg3_);
-    int height = (int)NUM2INT(_arg4_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg5_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg6_);
-    void* pixels = (void*)val2ptr(_arg7_);
+    int _x_ = (int)NUM2INT(_arg1_);
+    int _y_ = (int)NUM2INT(_arg2_);
+    int _width_ = (int)NUM2INT(_arg3_);
+    int _height_ = (int)NUM2INT(_arg4_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg5_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg6_);
+    void* _pixels_ = (void*)val2ptr(_arg7_);
 
-    rogl_pfn_glReadPixels(x, y, width, height, format, type, pixels);
+    rogl_pfn_glReadPixels(_x_, _y_, _width_, _height_, _format_, _type_, _pixels_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetBooleanv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    void* data = (void*)val2ptr(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _data_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glGetBooleanv(pname, data);
+    rogl_pfn_glGetBooleanv(_pname_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetDoublev(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    void* data = (void*)val2ptr(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _data_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glGetDoublev(pname, data);
+    rogl_pfn_glGetDoublev(_pname_, _data_);
 
     return Qnil;
 }
@@ -2472,129 +2472,129 @@ static VALUE rogl_glGetError(VALUE _obj_)
 
 static VALUE rogl_glGetFloatv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    void* data = (void*)val2ptr(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _data_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glGetFloatv(pname, data);
+    rogl_pfn_glGetFloatv(_pname_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetIntegerv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    void* data = (void*)val2ptr(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _data_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glGetIntegerv(pname, data);
+    rogl_pfn_glGetIntegerv(_pname_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetString(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int name = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _name_ = (unsigned int)NUM2UINT(_arg1_);
 
-    void* retval = rogl_pfn_glGetString(name);
+    void* retval = rogl_pfn_glGetString(_name_);
 
     return rb_str_new2(retval);
 }
 
 static VALUE rogl_glGetTexImage(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg4_);
-    void* pixels = (void*)val2ptr(_arg5_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg4_);
+    void* _pixels_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glGetTexImage(target, level, format, type, pixels);
+    rogl_pfn_glGetTexImage(_target_, _level_, _format_, _type_, _pixels_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetTexParameterfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetTexParameterfv(target, pname, params);
+    rogl_pfn_glGetTexParameterfv(_target_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetTexParameteriv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetTexParameteriv(target, pname, params);
+    rogl_pfn_glGetTexParameteriv(_target_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetTexLevelParameterfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
-    void* params = (void*)val2ptr(_arg4_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _params_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetTexLevelParameterfv(target, level, pname, params);
+    rogl_pfn_glGetTexLevelParameterfv(_target_, _level_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetTexLevelParameteriv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
-    void* params = (void*)val2ptr(_arg4_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _params_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetTexLevelParameteriv(target, level, pname, params);
+    rogl_pfn_glGetTexLevelParameteriv(_target_, _level_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glIsEnabled(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int cap = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _cap_ = (unsigned int)NUM2UINT(_arg1_);
 
-    unsigned char retval = rogl_pfn_glIsEnabled(cap);
+    unsigned char retval = rogl_pfn_glIsEnabled(_cap_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glDepthRange(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    double near = (double)NUM2DBL(_arg1_);
-    double far = (double)NUM2DBL(_arg2_);
+    double _near_ = (double)NUM2DBL(_arg1_);
+    double _far_ = (double)NUM2DBL(_arg2_);
 
-    rogl_pfn_glDepthRange(near, far);
+    rogl_pfn_glDepthRange(_near_, _far_);
 
     return Qnil;
 }
 
 static VALUE rogl_glViewport(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int x = (int)NUM2INT(_arg1_);
-    int y = (int)NUM2INT(_arg2_);
-    int width = (int)NUM2INT(_arg3_);
-    int height = (int)NUM2INT(_arg4_);
+    int _x_ = (int)NUM2INT(_arg1_);
+    int _y_ = (int)NUM2INT(_arg2_);
+    int _width_ = (int)NUM2INT(_arg3_);
+    int _height_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glViewport(x, y, width, height);
+    rogl_pfn_glViewport(_x_, _y_, _width_, _height_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNewList(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int list = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int mode = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _list_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glNewList(list, mode);
+    rogl_pfn_glNewList(_list_, _mode_);
 
     return Qnil;
 }
@@ -2608,418 +2608,418 @@ static VALUE rogl_glEndList(VALUE _obj_)
 
 static VALUE rogl_glCallList(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int list = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _list_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glCallList(list);
+    rogl_pfn_glCallList(_list_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCallLists(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    void* lists = (void*)val2ptr(_arg3_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _lists_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glCallLists(n, type, lists);
+    rogl_pfn_glCallLists(_n_, _type_, _lists_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDeleteLists(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int list = (unsigned int)NUM2UINT(_arg1_);
-    int range = (int)NUM2INT(_arg2_);
+    unsigned int _list_ = (unsigned int)NUM2UINT(_arg1_);
+    int _range_ = (int)NUM2INT(_arg2_);
 
-    rogl_pfn_glDeleteLists(list, range);
+    rogl_pfn_glDeleteLists(_list_, _range_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGenLists(VALUE _obj_, VALUE _arg1_)
 {
-    int range = (int)NUM2INT(_arg1_);
+    int _range_ = (int)NUM2INT(_arg1_);
 
-    unsigned int retval = rogl_pfn_glGenLists(range);
+    unsigned int retval = rogl_pfn_glGenLists(_range_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glListBase(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int base = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _base_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glListBase(base);
+    rogl_pfn_glListBase(_base_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBegin(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glBegin(mode);
+    rogl_pfn_glBegin(_mode_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBitmap(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_)
 {
-    int width = (int)NUM2INT(_arg1_);
-    int height = (int)NUM2INT(_arg2_);
-    float xorig = (float)NUM2DBL(_arg3_);
-    float yorig = (float)NUM2DBL(_arg4_);
-    float xmove = (float)NUM2DBL(_arg5_);
-    float ymove = (float)NUM2DBL(_arg6_);
-    void* bitmap = (void*)val2ptr(_arg7_);
+    int _width_ = (int)NUM2INT(_arg1_);
+    int _height_ = (int)NUM2INT(_arg2_);
+    float _xorig_ = (float)NUM2DBL(_arg3_);
+    float _yorig_ = (float)NUM2DBL(_arg4_);
+    float _xmove_ = (float)NUM2DBL(_arg5_);
+    float _ymove_ = (float)NUM2DBL(_arg6_);
+    void* _bitmap_ = (void*)val2ptr(_arg7_);
 
-    rogl_pfn_glBitmap(width, height, xorig, yorig, xmove, ymove, bitmap);
+    rogl_pfn_glBitmap(_width_, _height_, _xorig_, _yorig_, _xmove_, _ymove_, _bitmap_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor3b(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    char red = (char)NUM2INT(_arg1_);
-    char green = (char)NUM2INT(_arg2_);
-    char blue = (char)NUM2INT(_arg3_);
+    char _red_ = (char)NUM2INT(_arg1_);
+    char _green_ = (char)NUM2INT(_arg2_);
+    char _blue_ = (char)NUM2INT(_arg3_);
 
-    rogl_pfn_glColor3b(red, green, blue);
+    rogl_pfn_glColor3b(_red_, _green_, _blue_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor3bv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glColor3bv(v);
+    rogl_pfn_glColor3bv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor3d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    double red = (double)NUM2DBL(_arg1_);
-    double green = (double)NUM2DBL(_arg2_);
-    double blue = (double)NUM2DBL(_arg3_);
+    double _red_ = (double)NUM2DBL(_arg1_);
+    double _green_ = (double)NUM2DBL(_arg2_);
+    double _blue_ = (double)NUM2DBL(_arg3_);
 
-    rogl_pfn_glColor3d(red, green, blue);
+    rogl_pfn_glColor3d(_red_, _green_, _blue_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor3dv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glColor3dv(v);
+    rogl_pfn_glColor3dv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor3f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    float red = (float)NUM2DBL(_arg1_);
-    float green = (float)NUM2DBL(_arg2_);
-    float blue = (float)NUM2DBL(_arg3_);
+    float _red_ = (float)NUM2DBL(_arg1_);
+    float _green_ = (float)NUM2DBL(_arg2_);
+    float _blue_ = (float)NUM2DBL(_arg3_);
 
-    rogl_pfn_glColor3f(red, green, blue);
+    rogl_pfn_glColor3f(_red_, _green_, _blue_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor3fv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glColor3fv(v);
+    rogl_pfn_glColor3fv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor3i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int red = (int)NUM2INT(_arg1_);
-    int green = (int)NUM2INT(_arg2_);
-    int blue = (int)NUM2INT(_arg3_);
+    int _red_ = (int)NUM2INT(_arg1_);
+    int _green_ = (int)NUM2INT(_arg2_);
+    int _blue_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glColor3i(red, green, blue);
+    rogl_pfn_glColor3i(_red_, _green_, _blue_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor3iv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glColor3iv(v);
+    rogl_pfn_glColor3iv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor3s(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    short red = (short)NUM2INT(_arg1_);
-    short green = (short)NUM2INT(_arg2_);
-    short blue = (short)NUM2INT(_arg3_);
+    short _red_ = (short)NUM2INT(_arg1_);
+    short _green_ = (short)NUM2INT(_arg2_);
+    short _blue_ = (short)NUM2INT(_arg3_);
 
-    rogl_pfn_glColor3s(red, green, blue);
+    rogl_pfn_glColor3s(_red_, _green_, _blue_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor3sv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glColor3sv(v);
+    rogl_pfn_glColor3sv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor3ub(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned char red = (unsigned char)NUM2UINT(_arg1_);
-    unsigned char green = (unsigned char)NUM2UINT(_arg2_);
-    unsigned char blue = (unsigned char)NUM2UINT(_arg3_);
+    unsigned char _red_ = (unsigned char)NUM2UINT(_arg1_);
+    unsigned char _green_ = (unsigned char)NUM2UINT(_arg2_);
+    unsigned char _blue_ = (unsigned char)NUM2UINT(_arg3_);
 
-    rogl_pfn_glColor3ub(red, green, blue);
+    rogl_pfn_glColor3ub(_red_, _green_, _blue_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor3ubv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glColor3ubv(v);
+    rogl_pfn_glColor3ubv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor3ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int red = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int green = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int blue = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _red_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _green_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _blue_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glColor3ui(red, green, blue);
+    rogl_pfn_glColor3ui(_red_, _green_, _blue_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor3uiv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glColor3uiv(v);
+    rogl_pfn_glColor3uiv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor3us(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned short red = (unsigned short)NUM2UINT(_arg1_);
-    unsigned short green = (unsigned short)NUM2UINT(_arg2_);
-    unsigned short blue = (unsigned short)NUM2UINT(_arg3_);
+    unsigned short _red_ = (unsigned short)NUM2UINT(_arg1_);
+    unsigned short _green_ = (unsigned short)NUM2UINT(_arg2_);
+    unsigned short _blue_ = (unsigned short)NUM2UINT(_arg3_);
 
-    rogl_pfn_glColor3us(red, green, blue);
+    rogl_pfn_glColor3us(_red_, _green_, _blue_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor3usv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glColor3usv(v);
+    rogl_pfn_glColor3usv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor4b(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    char red = (char)NUM2INT(_arg1_);
-    char green = (char)NUM2INT(_arg2_);
-    char blue = (char)NUM2INT(_arg3_);
-    char alpha = (char)NUM2INT(_arg4_);
+    char _red_ = (char)NUM2INT(_arg1_);
+    char _green_ = (char)NUM2INT(_arg2_);
+    char _blue_ = (char)NUM2INT(_arg3_);
+    char _alpha_ = (char)NUM2INT(_arg4_);
 
-    rogl_pfn_glColor4b(red, green, blue, alpha);
+    rogl_pfn_glColor4b(_red_, _green_, _blue_, _alpha_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor4bv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glColor4bv(v);
+    rogl_pfn_glColor4bv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor4d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    double red = (double)NUM2DBL(_arg1_);
-    double green = (double)NUM2DBL(_arg2_);
-    double blue = (double)NUM2DBL(_arg3_);
-    double alpha = (double)NUM2DBL(_arg4_);
+    double _red_ = (double)NUM2DBL(_arg1_);
+    double _green_ = (double)NUM2DBL(_arg2_);
+    double _blue_ = (double)NUM2DBL(_arg3_);
+    double _alpha_ = (double)NUM2DBL(_arg4_);
 
-    rogl_pfn_glColor4d(red, green, blue, alpha);
+    rogl_pfn_glColor4d(_red_, _green_, _blue_, _alpha_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor4dv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glColor4dv(v);
+    rogl_pfn_glColor4dv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor4f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    float red = (float)NUM2DBL(_arg1_);
-    float green = (float)NUM2DBL(_arg2_);
-    float blue = (float)NUM2DBL(_arg3_);
-    float alpha = (float)NUM2DBL(_arg4_);
+    float _red_ = (float)NUM2DBL(_arg1_);
+    float _green_ = (float)NUM2DBL(_arg2_);
+    float _blue_ = (float)NUM2DBL(_arg3_);
+    float _alpha_ = (float)NUM2DBL(_arg4_);
 
-    rogl_pfn_glColor4f(red, green, blue, alpha);
+    rogl_pfn_glColor4f(_red_, _green_, _blue_, _alpha_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor4fv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glColor4fv(v);
+    rogl_pfn_glColor4fv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor4i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int red = (int)NUM2INT(_arg1_);
-    int green = (int)NUM2INT(_arg2_);
-    int blue = (int)NUM2INT(_arg3_);
-    int alpha = (int)NUM2INT(_arg4_);
+    int _red_ = (int)NUM2INT(_arg1_);
+    int _green_ = (int)NUM2INT(_arg2_);
+    int _blue_ = (int)NUM2INT(_arg3_);
+    int _alpha_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glColor4i(red, green, blue, alpha);
+    rogl_pfn_glColor4i(_red_, _green_, _blue_, _alpha_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor4iv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glColor4iv(v);
+    rogl_pfn_glColor4iv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor4s(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    short red = (short)NUM2INT(_arg1_);
-    short green = (short)NUM2INT(_arg2_);
-    short blue = (short)NUM2INT(_arg3_);
-    short alpha = (short)NUM2INT(_arg4_);
+    short _red_ = (short)NUM2INT(_arg1_);
+    short _green_ = (short)NUM2INT(_arg2_);
+    short _blue_ = (short)NUM2INT(_arg3_);
+    short _alpha_ = (short)NUM2INT(_arg4_);
 
-    rogl_pfn_glColor4s(red, green, blue, alpha);
+    rogl_pfn_glColor4s(_red_, _green_, _blue_, _alpha_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor4sv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glColor4sv(v);
+    rogl_pfn_glColor4sv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor4ub(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned char red = (unsigned char)NUM2UINT(_arg1_);
-    unsigned char green = (unsigned char)NUM2UINT(_arg2_);
-    unsigned char blue = (unsigned char)NUM2UINT(_arg3_);
-    unsigned char alpha = (unsigned char)NUM2UINT(_arg4_);
+    unsigned char _red_ = (unsigned char)NUM2UINT(_arg1_);
+    unsigned char _green_ = (unsigned char)NUM2UINT(_arg2_);
+    unsigned char _blue_ = (unsigned char)NUM2UINT(_arg3_);
+    unsigned char _alpha_ = (unsigned char)NUM2UINT(_arg4_);
 
-    rogl_pfn_glColor4ub(red, green, blue, alpha);
+    rogl_pfn_glColor4ub(_red_, _green_, _blue_, _alpha_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor4ubv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glColor4ubv(v);
+    rogl_pfn_glColor4ubv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor4ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int red = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int green = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int blue = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int alpha = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _red_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _green_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _blue_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _alpha_ = (unsigned int)NUM2UINT(_arg4_);
 
-    rogl_pfn_glColor4ui(red, green, blue, alpha);
+    rogl_pfn_glColor4ui(_red_, _green_, _blue_, _alpha_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor4uiv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glColor4uiv(v);
+    rogl_pfn_glColor4uiv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor4us(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned short red = (unsigned short)NUM2UINT(_arg1_);
-    unsigned short green = (unsigned short)NUM2UINT(_arg2_);
-    unsigned short blue = (unsigned short)NUM2UINT(_arg3_);
-    unsigned short alpha = (unsigned short)NUM2UINT(_arg4_);
+    unsigned short _red_ = (unsigned short)NUM2UINT(_arg1_);
+    unsigned short _green_ = (unsigned short)NUM2UINT(_arg2_);
+    unsigned short _blue_ = (unsigned short)NUM2UINT(_arg3_);
+    unsigned short _alpha_ = (unsigned short)NUM2UINT(_arg4_);
 
-    rogl_pfn_glColor4us(red, green, blue, alpha);
+    rogl_pfn_glColor4us(_red_, _green_, _blue_, _alpha_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColor4usv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glColor4usv(v);
+    rogl_pfn_glColor4usv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glEdgeFlag(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned char flag = (unsigned char)NUM2UINT(_arg1_);
+    unsigned char _flag_ = (unsigned char)NUM2UINT(_arg1_);
 
-    rogl_pfn_glEdgeFlag(flag);
+    rogl_pfn_glEdgeFlag(_flag_);
 
     return Qnil;
 }
 
 static VALUE rogl_glEdgeFlagv(VALUE _obj_, VALUE _arg1_)
 {
-    void* flag = (void*)val2ptr(_arg1_);
+    void* _flag_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glEdgeFlagv(flag);
+    rogl_pfn_glEdgeFlagv(_flag_);
 
     return Qnil;
 }
@@ -3033,1408 +3033,1408 @@ static VALUE rogl_glEnd(VALUE _obj_)
 
 static VALUE rogl_glIndexd(VALUE _obj_, VALUE _arg1_)
 {
-    double c = (double)NUM2DBL(_arg1_);
+    double _c_ = (double)NUM2DBL(_arg1_);
 
-    rogl_pfn_glIndexd(c);
+    rogl_pfn_glIndexd(_c_);
 
     return Qnil;
 }
 
 static VALUE rogl_glIndexdv(VALUE _obj_, VALUE _arg1_)
 {
-    void* c = (void*)val2ptr(_arg1_);
+    void* _c_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glIndexdv(c);
+    rogl_pfn_glIndexdv(_c_);
 
     return Qnil;
 }
 
 static VALUE rogl_glIndexf(VALUE _obj_, VALUE _arg1_)
 {
-    float c = (float)NUM2DBL(_arg1_);
+    float _c_ = (float)NUM2DBL(_arg1_);
 
-    rogl_pfn_glIndexf(c);
+    rogl_pfn_glIndexf(_c_);
 
     return Qnil;
 }
 
 static VALUE rogl_glIndexfv(VALUE _obj_, VALUE _arg1_)
 {
-    void* c = (void*)val2ptr(_arg1_);
+    void* _c_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glIndexfv(c);
+    rogl_pfn_glIndexfv(_c_);
 
     return Qnil;
 }
 
 static VALUE rogl_glIndexi(VALUE _obj_, VALUE _arg1_)
 {
-    int c = (int)NUM2INT(_arg1_);
+    int _c_ = (int)NUM2INT(_arg1_);
 
-    rogl_pfn_glIndexi(c);
+    rogl_pfn_glIndexi(_c_);
 
     return Qnil;
 }
 
 static VALUE rogl_glIndexiv(VALUE _obj_, VALUE _arg1_)
 {
-    void* c = (void*)val2ptr(_arg1_);
+    void* _c_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glIndexiv(c);
+    rogl_pfn_glIndexiv(_c_);
 
     return Qnil;
 }
 
 static VALUE rogl_glIndexs(VALUE _obj_, VALUE _arg1_)
 {
-    short c = (short)NUM2INT(_arg1_);
+    short _c_ = (short)NUM2INT(_arg1_);
 
-    rogl_pfn_glIndexs(c);
+    rogl_pfn_glIndexs(_c_);
 
     return Qnil;
 }
 
 static VALUE rogl_glIndexsv(VALUE _obj_, VALUE _arg1_)
 {
-    void* c = (void*)val2ptr(_arg1_);
+    void* _c_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glIndexsv(c);
+    rogl_pfn_glIndexsv(_c_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNormal3b(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    char nx = (char)NUM2INT(_arg1_);
-    char ny = (char)NUM2INT(_arg2_);
-    char nz = (char)NUM2INT(_arg3_);
+    char _nx_ = (char)NUM2INT(_arg1_);
+    char _ny_ = (char)NUM2INT(_arg2_);
+    char _nz_ = (char)NUM2INT(_arg3_);
 
-    rogl_pfn_glNormal3b(nx, ny, nz);
+    rogl_pfn_glNormal3b(_nx_, _ny_, _nz_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNormal3bv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glNormal3bv(v);
+    rogl_pfn_glNormal3bv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNormal3d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    double nx = (double)NUM2DBL(_arg1_);
-    double ny = (double)NUM2DBL(_arg2_);
-    double nz = (double)NUM2DBL(_arg3_);
+    double _nx_ = (double)NUM2DBL(_arg1_);
+    double _ny_ = (double)NUM2DBL(_arg2_);
+    double _nz_ = (double)NUM2DBL(_arg3_);
 
-    rogl_pfn_glNormal3d(nx, ny, nz);
+    rogl_pfn_glNormal3d(_nx_, _ny_, _nz_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNormal3dv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glNormal3dv(v);
+    rogl_pfn_glNormal3dv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNormal3f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    float nx = (float)NUM2DBL(_arg1_);
-    float ny = (float)NUM2DBL(_arg2_);
-    float nz = (float)NUM2DBL(_arg3_);
+    float _nx_ = (float)NUM2DBL(_arg1_);
+    float _ny_ = (float)NUM2DBL(_arg2_);
+    float _nz_ = (float)NUM2DBL(_arg3_);
 
-    rogl_pfn_glNormal3f(nx, ny, nz);
+    rogl_pfn_glNormal3f(_nx_, _ny_, _nz_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNormal3fv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glNormal3fv(v);
+    rogl_pfn_glNormal3fv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNormal3i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int nx = (int)NUM2INT(_arg1_);
-    int ny = (int)NUM2INT(_arg2_);
-    int nz = (int)NUM2INT(_arg3_);
+    int _nx_ = (int)NUM2INT(_arg1_);
+    int _ny_ = (int)NUM2INT(_arg2_);
+    int _nz_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glNormal3i(nx, ny, nz);
+    rogl_pfn_glNormal3i(_nx_, _ny_, _nz_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNormal3iv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glNormal3iv(v);
+    rogl_pfn_glNormal3iv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNormal3s(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    short nx = (short)NUM2INT(_arg1_);
-    short ny = (short)NUM2INT(_arg2_);
-    short nz = (short)NUM2INT(_arg3_);
+    short _nx_ = (short)NUM2INT(_arg1_);
+    short _ny_ = (short)NUM2INT(_arg2_);
+    short _nz_ = (short)NUM2INT(_arg3_);
 
-    rogl_pfn_glNormal3s(nx, ny, nz);
+    rogl_pfn_glNormal3s(_nx_, _ny_, _nz_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNormal3sv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glNormal3sv(v);
+    rogl_pfn_glNormal3sv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos2d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    double x = (double)NUM2DBL(_arg1_);
-    double y = (double)NUM2DBL(_arg2_);
+    double _x_ = (double)NUM2DBL(_arg1_);
+    double _y_ = (double)NUM2DBL(_arg2_);
 
-    rogl_pfn_glRasterPos2d(x, y);
+    rogl_pfn_glRasterPos2d(_x_, _y_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos2dv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glRasterPos2dv(v);
+    rogl_pfn_glRasterPos2dv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos2f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    float x = (float)NUM2DBL(_arg1_);
-    float y = (float)NUM2DBL(_arg2_);
+    float _x_ = (float)NUM2DBL(_arg1_);
+    float _y_ = (float)NUM2DBL(_arg2_);
 
-    rogl_pfn_glRasterPos2f(x, y);
+    rogl_pfn_glRasterPos2f(_x_, _y_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos2fv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glRasterPos2fv(v);
+    rogl_pfn_glRasterPos2fv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos2i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int x = (int)NUM2INT(_arg1_);
-    int y = (int)NUM2INT(_arg2_);
+    int _x_ = (int)NUM2INT(_arg1_);
+    int _y_ = (int)NUM2INT(_arg2_);
 
-    rogl_pfn_glRasterPos2i(x, y);
+    rogl_pfn_glRasterPos2i(_x_, _y_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos2iv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glRasterPos2iv(v);
+    rogl_pfn_glRasterPos2iv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos2s(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    short x = (short)NUM2INT(_arg1_);
-    short y = (short)NUM2INT(_arg2_);
+    short _x_ = (short)NUM2INT(_arg1_);
+    short _y_ = (short)NUM2INT(_arg2_);
 
-    rogl_pfn_glRasterPos2s(x, y);
+    rogl_pfn_glRasterPos2s(_x_, _y_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos2sv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glRasterPos2sv(v);
+    rogl_pfn_glRasterPos2sv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos3d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    double x = (double)NUM2DBL(_arg1_);
-    double y = (double)NUM2DBL(_arg2_);
-    double z = (double)NUM2DBL(_arg3_);
+    double _x_ = (double)NUM2DBL(_arg1_);
+    double _y_ = (double)NUM2DBL(_arg2_);
+    double _z_ = (double)NUM2DBL(_arg3_);
 
-    rogl_pfn_glRasterPos3d(x, y, z);
+    rogl_pfn_glRasterPos3d(_x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos3dv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glRasterPos3dv(v);
+    rogl_pfn_glRasterPos3dv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos3f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    float x = (float)NUM2DBL(_arg1_);
-    float y = (float)NUM2DBL(_arg2_);
-    float z = (float)NUM2DBL(_arg3_);
+    float _x_ = (float)NUM2DBL(_arg1_);
+    float _y_ = (float)NUM2DBL(_arg2_);
+    float _z_ = (float)NUM2DBL(_arg3_);
 
-    rogl_pfn_glRasterPos3f(x, y, z);
+    rogl_pfn_glRasterPos3f(_x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos3fv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glRasterPos3fv(v);
+    rogl_pfn_glRasterPos3fv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos3i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int x = (int)NUM2INT(_arg1_);
-    int y = (int)NUM2INT(_arg2_);
-    int z = (int)NUM2INT(_arg3_);
+    int _x_ = (int)NUM2INT(_arg1_);
+    int _y_ = (int)NUM2INT(_arg2_);
+    int _z_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glRasterPos3i(x, y, z);
+    rogl_pfn_glRasterPos3i(_x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos3iv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glRasterPos3iv(v);
+    rogl_pfn_glRasterPos3iv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos3s(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    short x = (short)NUM2INT(_arg1_);
-    short y = (short)NUM2INT(_arg2_);
-    short z = (short)NUM2INT(_arg3_);
+    short _x_ = (short)NUM2INT(_arg1_);
+    short _y_ = (short)NUM2INT(_arg2_);
+    short _z_ = (short)NUM2INT(_arg3_);
 
-    rogl_pfn_glRasterPos3s(x, y, z);
+    rogl_pfn_glRasterPos3s(_x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos3sv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glRasterPos3sv(v);
+    rogl_pfn_glRasterPos3sv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos4d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    double x = (double)NUM2DBL(_arg1_);
-    double y = (double)NUM2DBL(_arg2_);
-    double z = (double)NUM2DBL(_arg3_);
-    double w = (double)NUM2DBL(_arg4_);
+    double _x_ = (double)NUM2DBL(_arg1_);
+    double _y_ = (double)NUM2DBL(_arg2_);
+    double _z_ = (double)NUM2DBL(_arg3_);
+    double _w_ = (double)NUM2DBL(_arg4_);
 
-    rogl_pfn_glRasterPos4d(x, y, z, w);
+    rogl_pfn_glRasterPos4d(_x_, _y_, _z_, _w_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos4dv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glRasterPos4dv(v);
+    rogl_pfn_glRasterPos4dv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos4f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    float x = (float)NUM2DBL(_arg1_);
-    float y = (float)NUM2DBL(_arg2_);
-    float z = (float)NUM2DBL(_arg3_);
-    float w = (float)NUM2DBL(_arg4_);
+    float _x_ = (float)NUM2DBL(_arg1_);
+    float _y_ = (float)NUM2DBL(_arg2_);
+    float _z_ = (float)NUM2DBL(_arg3_);
+    float _w_ = (float)NUM2DBL(_arg4_);
 
-    rogl_pfn_glRasterPos4f(x, y, z, w);
+    rogl_pfn_glRasterPos4f(_x_, _y_, _z_, _w_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos4fv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glRasterPos4fv(v);
+    rogl_pfn_glRasterPos4fv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos4i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int x = (int)NUM2INT(_arg1_);
-    int y = (int)NUM2INT(_arg2_);
-    int z = (int)NUM2INT(_arg3_);
-    int w = (int)NUM2INT(_arg4_);
+    int _x_ = (int)NUM2INT(_arg1_);
+    int _y_ = (int)NUM2INT(_arg2_);
+    int _z_ = (int)NUM2INT(_arg3_);
+    int _w_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glRasterPos4i(x, y, z, w);
+    rogl_pfn_glRasterPos4i(_x_, _y_, _z_, _w_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos4iv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glRasterPos4iv(v);
+    rogl_pfn_glRasterPos4iv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos4s(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    short x = (short)NUM2INT(_arg1_);
-    short y = (short)NUM2INT(_arg2_);
-    short z = (short)NUM2INT(_arg3_);
-    short w = (short)NUM2INT(_arg4_);
+    short _x_ = (short)NUM2INT(_arg1_);
+    short _y_ = (short)NUM2INT(_arg2_);
+    short _z_ = (short)NUM2INT(_arg3_);
+    short _w_ = (short)NUM2INT(_arg4_);
 
-    rogl_pfn_glRasterPos4s(x, y, z, w);
+    rogl_pfn_glRasterPos4s(_x_, _y_, _z_, _w_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRasterPos4sv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glRasterPos4sv(v);
+    rogl_pfn_glRasterPos4sv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRectd(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    double x1 = (double)NUM2DBL(_arg1_);
-    double y1 = (double)NUM2DBL(_arg2_);
-    double x2 = (double)NUM2DBL(_arg3_);
-    double y2 = (double)NUM2DBL(_arg4_);
+    double _x1_ = (double)NUM2DBL(_arg1_);
+    double _y1_ = (double)NUM2DBL(_arg2_);
+    double _x2_ = (double)NUM2DBL(_arg3_);
+    double _y2_ = (double)NUM2DBL(_arg4_);
 
-    rogl_pfn_glRectd(x1, y1, x2, y2);
+    rogl_pfn_glRectd(_x1_, _y1_, _x2_, _y2_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRectdv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    void* v1 = (void*)val2ptr(_arg1_);
-    void* v2 = (void*)val2ptr(_arg2_);
+    void* _v1_ = (void*)val2ptr(_arg1_);
+    void* _v2_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glRectdv(v1, v2);
+    rogl_pfn_glRectdv(_v1_, _v2_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRectf(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    float x1 = (float)NUM2DBL(_arg1_);
-    float y1 = (float)NUM2DBL(_arg2_);
-    float x2 = (float)NUM2DBL(_arg3_);
-    float y2 = (float)NUM2DBL(_arg4_);
+    float _x1_ = (float)NUM2DBL(_arg1_);
+    float _y1_ = (float)NUM2DBL(_arg2_);
+    float _x2_ = (float)NUM2DBL(_arg3_);
+    float _y2_ = (float)NUM2DBL(_arg4_);
 
-    rogl_pfn_glRectf(x1, y1, x2, y2);
+    rogl_pfn_glRectf(_x1_, _y1_, _x2_, _y2_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRectfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    void* v1 = (void*)val2ptr(_arg1_);
-    void* v2 = (void*)val2ptr(_arg2_);
+    void* _v1_ = (void*)val2ptr(_arg1_);
+    void* _v2_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glRectfv(v1, v2);
+    rogl_pfn_glRectfv(_v1_, _v2_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRecti(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int x1 = (int)NUM2INT(_arg1_);
-    int y1 = (int)NUM2INT(_arg2_);
-    int x2 = (int)NUM2INT(_arg3_);
-    int y2 = (int)NUM2INT(_arg4_);
+    int _x1_ = (int)NUM2INT(_arg1_);
+    int _y1_ = (int)NUM2INT(_arg2_);
+    int _x2_ = (int)NUM2INT(_arg3_);
+    int _y2_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glRecti(x1, y1, x2, y2);
+    rogl_pfn_glRecti(_x1_, _y1_, _x2_, _y2_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRectiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    void* v1 = (void*)val2ptr(_arg1_);
-    void* v2 = (void*)val2ptr(_arg2_);
+    void* _v1_ = (void*)val2ptr(_arg1_);
+    void* _v2_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glRectiv(v1, v2);
+    rogl_pfn_glRectiv(_v1_, _v2_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRects(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    short x1 = (short)NUM2INT(_arg1_);
-    short y1 = (short)NUM2INT(_arg2_);
-    short x2 = (short)NUM2INT(_arg3_);
-    short y2 = (short)NUM2INT(_arg4_);
+    short _x1_ = (short)NUM2INT(_arg1_);
+    short _y1_ = (short)NUM2INT(_arg2_);
+    short _x2_ = (short)NUM2INT(_arg3_);
+    short _y2_ = (short)NUM2INT(_arg4_);
 
-    rogl_pfn_glRects(x1, y1, x2, y2);
+    rogl_pfn_glRects(_x1_, _y1_, _x2_, _y2_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRectsv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    void* v1 = (void*)val2ptr(_arg1_);
-    void* v2 = (void*)val2ptr(_arg2_);
+    void* _v1_ = (void*)val2ptr(_arg1_);
+    void* _v2_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glRectsv(v1, v2);
+    rogl_pfn_glRectsv(_v1_, _v2_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord1d(VALUE _obj_, VALUE _arg1_)
 {
-    double s = (double)NUM2DBL(_arg1_);
+    double _s_ = (double)NUM2DBL(_arg1_);
 
-    rogl_pfn_glTexCoord1d(s);
+    rogl_pfn_glTexCoord1d(_s_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord1dv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glTexCoord1dv(v);
+    rogl_pfn_glTexCoord1dv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord1f(VALUE _obj_, VALUE _arg1_)
 {
-    float s = (float)NUM2DBL(_arg1_);
+    float _s_ = (float)NUM2DBL(_arg1_);
 
-    rogl_pfn_glTexCoord1f(s);
+    rogl_pfn_glTexCoord1f(_s_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord1fv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glTexCoord1fv(v);
+    rogl_pfn_glTexCoord1fv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord1i(VALUE _obj_, VALUE _arg1_)
 {
-    int s = (int)NUM2INT(_arg1_);
+    int _s_ = (int)NUM2INT(_arg1_);
 
-    rogl_pfn_glTexCoord1i(s);
+    rogl_pfn_glTexCoord1i(_s_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord1iv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glTexCoord1iv(v);
+    rogl_pfn_glTexCoord1iv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord1s(VALUE _obj_, VALUE _arg1_)
 {
-    short s = (short)NUM2INT(_arg1_);
+    short _s_ = (short)NUM2INT(_arg1_);
 
-    rogl_pfn_glTexCoord1s(s);
+    rogl_pfn_glTexCoord1s(_s_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord1sv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glTexCoord1sv(v);
+    rogl_pfn_glTexCoord1sv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord2d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    double s = (double)NUM2DBL(_arg1_);
-    double t = (double)NUM2DBL(_arg2_);
+    double _s_ = (double)NUM2DBL(_arg1_);
+    double _t_ = (double)NUM2DBL(_arg2_);
 
-    rogl_pfn_glTexCoord2d(s, t);
+    rogl_pfn_glTexCoord2d(_s_, _t_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord2dv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glTexCoord2dv(v);
+    rogl_pfn_glTexCoord2dv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord2f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    float s = (float)NUM2DBL(_arg1_);
-    float t = (float)NUM2DBL(_arg2_);
+    float _s_ = (float)NUM2DBL(_arg1_);
+    float _t_ = (float)NUM2DBL(_arg2_);
 
-    rogl_pfn_glTexCoord2f(s, t);
+    rogl_pfn_glTexCoord2f(_s_, _t_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord2fv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glTexCoord2fv(v);
+    rogl_pfn_glTexCoord2fv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord2i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int s = (int)NUM2INT(_arg1_);
-    int t = (int)NUM2INT(_arg2_);
+    int _s_ = (int)NUM2INT(_arg1_);
+    int _t_ = (int)NUM2INT(_arg2_);
 
-    rogl_pfn_glTexCoord2i(s, t);
+    rogl_pfn_glTexCoord2i(_s_, _t_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord2iv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glTexCoord2iv(v);
+    rogl_pfn_glTexCoord2iv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord2s(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    short s = (short)NUM2INT(_arg1_);
-    short t = (short)NUM2INT(_arg2_);
+    short _s_ = (short)NUM2INT(_arg1_);
+    short _t_ = (short)NUM2INT(_arg2_);
 
-    rogl_pfn_glTexCoord2s(s, t);
+    rogl_pfn_glTexCoord2s(_s_, _t_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord2sv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glTexCoord2sv(v);
+    rogl_pfn_glTexCoord2sv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord3d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    double s = (double)NUM2DBL(_arg1_);
-    double t = (double)NUM2DBL(_arg2_);
-    double r = (double)NUM2DBL(_arg3_);
+    double _s_ = (double)NUM2DBL(_arg1_);
+    double _t_ = (double)NUM2DBL(_arg2_);
+    double _r_ = (double)NUM2DBL(_arg3_);
 
-    rogl_pfn_glTexCoord3d(s, t, r);
+    rogl_pfn_glTexCoord3d(_s_, _t_, _r_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord3dv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glTexCoord3dv(v);
+    rogl_pfn_glTexCoord3dv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord3f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    float s = (float)NUM2DBL(_arg1_);
-    float t = (float)NUM2DBL(_arg2_);
-    float r = (float)NUM2DBL(_arg3_);
+    float _s_ = (float)NUM2DBL(_arg1_);
+    float _t_ = (float)NUM2DBL(_arg2_);
+    float _r_ = (float)NUM2DBL(_arg3_);
 
-    rogl_pfn_glTexCoord3f(s, t, r);
+    rogl_pfn_glTexCoord3f(_s_, _t_, _r_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord3fv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glTexCoord3fv(v);
+    rogl_pfn_glTexCoord3fv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord3i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int s = (int)NUM2INT(_arg1_);
-    int t = (int)NUM2INT(_arg2_);
-    int r = (int)NUM2INT(_arg3_);
+    int _s_ = (int)NUM2INT(_arg1_);
+    int _t_ = (int)NUM2INT(_arg2_);
+    int _r_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glTexCoord3i(s, t, r);
+    rogl_pfn_glTexCoord3i(_s_, _t_, _r_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord3iv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glTexCoord3iv(v);
+    rogl_pfn_glTexCoord3iv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord3s(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    short s = (short)NUM2INT(_arg1_);
-    short t = (short)NUM2INT(_arg2_);
-    short r = (short)NUM2INT(_arg3_);
+    short _s_ = (short)NUM2INT(_arg1_);
+    short _t_ = (short)NUM2INT(_arg2_);
+    short _r_ = (short)NUM2INT(_arg3_);
 
-    rogl_pfn_glTexCoord3s(s, t, r);
+    rogl_pfn_glTexCoord3s(_s_, _t_, _r_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord3sv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glTexCoord3sv(v);
+    rogl_pfn_glTexCoord3sv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord4d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    double s = (double)NUM2DBL(_arg1_);
-    double t = (double)NUM2DBL(_arg2_);
-    double r = (double)NUM2DBL(_arg3_);
-    double q = (double)NUM2DBL(_arg4_);
+    double _s_ = (double)NUM2DBL(_arg1_);
+    double _t_ = (double)NUM2DBL(_arg2_);
+    double _r_ = (double)NUM2DBL(_arg3_);
+    double _q_ = (double)NUM2DBL(_arg4_);
 
-    rogl_pfn_glTexCoord4d(s, t, r, q);
+    rogl_pfn_glTexCoord4d(_s_, _t_, _r_, _q_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord4dv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glTexCoord4dv(v);
+    rogl_pfn_glTexCoord4dv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord4f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    float s = (float)NUM2DBL(_arg1_);
-    float t = (float)NUM2DBL(_arg2_);
-    float r = (float)NUM2DBL(_arg3_);
-    float q = (float)NUM2DBL(_arg4_);
+    float _s_ = (float)NUM2DBL(_arg1_);
+    float _t_ = (float)NUM2DBL(_arg2_);
+    float _r_ = (float)NUM2DBL(_arg3_);
+    float _q_ = (float)NUM2DBL(_arg4_);
 
-    rogl_pfn_glTexCoord4f(s, t, r, q);
+    rogl_pfn_glTexCoord4f(_s_, _t_, _r_, _q_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord4fv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glTexCoord4fv(v);
+    rogl_pfn_glTexCoord4fv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord4i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int s = (int)NUM2INT(_arg1_);
-    int t = (int)NUM2INT(_arg2_);
-    int r = (int)NUM2INT(_arg3_);
-    int q = (int)NUM2INT(_arg4_);
+    int _s_ = (int)NUM2INT(_arg1_);
+    int _t_ = (int)NUM2INT(_arg2_);
+    int _r_ = (int)NUM2INT(_arg3_);
+    int _q_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glTexCoord4i(s, t, r, q);
+    rogl_pfn_glTexCoord4i(_s_, _t_, _r_, _q_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord4iv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glTexCoord4iv(v);
+    rogl_pfn_glTexCoord4iv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord4s(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    short s = (short)NUM2INT(_arg1_);
-    short t = (short)NUM2INT(_arg2_);
-    short r = (short)NUM2INT(_arg3_);
-    short q = (short)NUM2INT(_arg4_);
+    short _s_ = (short)NUM2INT(_arg1_);
+    short _t_ = (short)NUM2INT(_arg2_);
+    short _r_ = (short)NUM2INT(_arg3_);
+    short _q_ = (short)NUM2INT(_arg4_);
 
-    rogl_pfn_glTexCoord4s(s, t, r, q);
+    rogl_pfn_glTexCoord4s(_s_, _t_, _r_, _q_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoord4sv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glTexCoord4sv(v);
+    rogl_pfn_glTexCoord4sv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex2d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    double x = (double)NUM2DBL(_arg1_);
-    double y = (double)NUM2DBL(_arg2_);
+    double _x_ = (double)NUM2DBL(_arg1_);
+    double _y_ = (double)NUM2DBL(_arg2_);
 
-    rogl_pfn_glVertex2d(x, y);
+    rogl_pfn_glVertex2d(_x_, _y_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex2dv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glVertex2dv(v);
+    rogl_pfn_glVertex2dv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex2f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    float x = (float)NUM2DBL(_arg1_);
-    float y = (float)NUM2DBL(_arg2_);
+    float _x_ = (float)NUM2DBL(_arg1_);
+    float _y_ = (float)NUM2DBL(_arg2_);
 
-    rogl_pfn_glVertex2f(x, y);
+    rogl_pfn_glVertex2f(_x_, _y_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex2fv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glVertex2fv(v);
+    rogl_pfn_glVertex2fv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex2i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int x = (int)NUM2INT(_arg1_);
-    int y = (int)NUM2INT(_arg2_);
+    int _x_ = (int)NUM2INT(_arg1_);
+    int _y_ = (int)NUM2INT(_arg2_);
 
-    rogl_pfn_glVertex2i(x, y);
+    rogl_pfn_glVertex2i(_x_, _y_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex2iv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glVertex2iv(v);
+    rogl_pfn_glVertex2iv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex2s(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    short x = (short)NUM2INT(_arg1_);
-    short y = (short)NUM2INT(_arg2_);
+    short _x_ = (short)NUM2INT(_arg1_);
+    short _y_ = (short)NUM2INT(_arg2_);
 
-    rogl_pfn_glVertex2s(x, y);
+    rogl_pfn_glVertex2s(_x_, _y_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex2sv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glVertex2sv(v);
+    rogl_pfn_glVertex2sv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex3d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    double x = (double)NUM2DBL(_arg1_);
-    double y = (double)NUM2DBL(_arg2_);
-    double z = (double)NUM2DBL(_arg3_);
+    double _x_ = (double)NUM2DBL(_arg1_);
+    double _y_ = (double)NUM2DBL(_arg2_);
+    double _z_ = (double)NUM2DBL(_arg3_);
 
-    rogl_pfn_glVertex3d(x, y, z);
+    rogl_pfn_glVertex3d(_x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex3dv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glVertex3dv(v);
+    rogl_pfn_glVertex3dv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex3f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    float x = (float)NUM2DBL(_arg1_);
-    float y = (float)NUM2DBL(_arg2_);
-    float z = (float)NUM2DBL(_arg3_);
+    float _x_ = (float)NUM2DBL(_arg1_);
+    float _y_ = (float)NUM2DBL(_arg2_);
+    float _z_ = (float)NUM2DBL(_arg3_);
 
-    rogl_pfn_glVertex3f(x, y, z);
+    rogl_pfn_glVertex3f(_x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex3fv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glVertex3fv(v);
+    rogl_pfn_glVertex3fv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex3i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int x = (int)NUM2INT(_arg1_);
-    int y = (int)NUM2INT(_arg2_);
-    int z = (int)NUM2INT(_arg3_);
+    int _x_ = (int)NUM2INT(_arg1_);
+    int _y_ = (int)NUM2INT(_arg2_);
+    int _z_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glVertex3i(x, y, z);
+    rogl_pfn_glVertex3i(_x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex3iv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glVertex3iv(v);
+    rogl_pfn_glVertex3iv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex3s(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    short x = (short)NUM2INT(_arg1_);
-    short y = (short)NUM2INT(_arg2_);
-    short z = (short)NUM2INT(_arg3_);
+    short _x_ = (short)NUM2INT(_arg1_);
+    short _y_ = (short)NUM2INT(_arg2_);
+    short _z_ = (short)NUM2INT(_arg3_);
 
-    rogl_pfn_glVertex3s(x, y, z);
+    rogl_pfn_glVertex3s(_x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex3sv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glVertex3sv(v);
+    rogl_pfn_glVertex3sv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex4d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    double x = (double)NUM2DBL(_arg1_);
-    double y = (double)NUM2DBL(_arg2_);
-    double z = (double)NUM2DBL(_arg3_);
-    double w = (double)NUM2DBL(_arg4_);
+    double _x_ = (double)NUM2DBL(_arg1_);
+    double _y_ = (double)NUM2DBL(_arg2_);
+    double _z_ = (double)NUM2DBL(_arg3_);
+    double _w_ = (double)NUM2DBL(_arg4_);
 
-    rogl_pfn_glVertex4d(x, y, z, w);
+    rogl_pfn_glVertex4d(_x_, _y_, _z_, _w_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex4dv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glVertex4dv(v);
+    rogl_pfn_glVertex4dv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex4f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    float x = (float)NUM2DBL(_arg1_);
-    float y = (float)NUM2DBL(_arg2_);
-    float z = (float)NUM2DBL(_arg3_);
-    float w = (float)NUM2DBL(_arg4_);
+    float _x_ = (float)NUM2DBL(_arg1_);
+    float _y_ = (float)NUM2DBL(_arg2_);
+    float _z_ = (float)NUM2DBL(_arg3_);
+    float _w_ = (float)NUM2DBL(_arg4_);
 
-    rogl_pfn_glVertex4f(x, y, z, w);
+    rogl_pfn_glVertex4f(_x_, _y_, _z_, _w_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex4fv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glVertex4fv(v);
+    rogl_pfn_glVertex4fv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex4i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int x = (int)NUM2INT(_arg1_);
-    int y = (int)NUM2INT(_arg2_);
-    int z = (int)NUM2INT(_arg3_);
-    int w = (int)NUM2INT(_arg4_);
+    int _x_ = (int)NUM2INT(_arg1_);
+    int _y_ = (int)NUM2INT(_arg2_);
+    int _z_ = (int)NUM2INT(_arg3_);
+    int _w_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glVertex4i(x, y, z, w);
+    rogl_pfn_glVertex4i(_x_, _y_, _z_, _w_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex4iv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glVertex4iv(v);
+    rogl_pfn_glVertex4iv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex4s(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    short x = (short)NUM2INT(_arg1_);
-    short y = (short)NUM2INT(_arg2_);
-    short z = (short)NUM2INT(_arg3_);
-    short w = (short)NUM2INT(_arg4_);
+    short _x_ = (short)NUM2INT(_arg1_);
+    short _y_ = (short)NUM2INT(_arg2_);
+    short _z_ = (short)NUM2INT(_arg3_);
+    short _w_ = (short)NUM2INT(_arg4_);
 
-    rogl_pfn_glVertex4s(x, y, z, w);
+    rogl_pfn_glVertex4s(_x_, _y_, _z_, _w_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertex4sv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glVertex4sv(v);
+    rogl_pfn_glVertex4sv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClipPlane(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int plane = (unsigned int)NUM2UINT(_arg1_);
-    void* equation = (void*)val2ptr(_arg2_);
+    unsigned int _plane_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _equation_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glClipPlane(plane, equation);
+    rogl_pfn_glClipPlane(_plane_, _equation_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColorMaterial(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int face = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int mode = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _face_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glColorMaterial(face, mode);
+    rogl_pfn_glColorMaterial(_face_, _mode_);
 
     return Qnil;
 }
 
 static VALUE rogl_glFogf(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    float param = (float)NUM2DBL(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    float _param_ = (float)NUM2DBL(_arg2_);
 
-    rogl_pfn_glFogf(pname, param);
+    rogl_pfn_glFogf(_pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glFogfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    void* params = (void*)val2ptr(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _params_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glFogfv(pname, params);
+    rogl_pfn_glFogfv(_pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glFogi(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    int param = (int)NUM2INT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    int _param_ = (int)NUM2INT(_arg2_);
 
-    rogl_pfn_glFogi(pname, param);
+    rogl_pfn_glFogi(_pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glFogiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    void* params = (void*)val2ptr(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _params_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glFogiv(pname, params);
+    rogl_pfn_glFogiv(_pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glLightf(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int light = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    float param = (float)NUM2DBL(_arg3_);
+    unsigned int _light_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    float _param_ = (float)NUM2DBL(_arg3_);
 
-    rogl_pfn_glLightf(light, pname, param);
+    rogl_pfn_glLightf(_light_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glLightfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int light = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _light_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glLightfv(light, pname, params);
+    rogl_pfn_glLightfv(_light_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glLighti(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int light = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    int param = (int)NUM2INT(_arg3_);
+    unsigned int _light_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    int _param_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glLighti(light, pname, param);
+    rogl_pfn_glLighti(_light_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glLightiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int light = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _light_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glLightiv(light, pname, params);
+    rogl_pfn_glLightiv(_light_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glLightModelf(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    float param = (float)NUM2DBL(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    float _param_ = (float)NUM2DBL(_arg2_);
 
-    rogl_pfn_glLightModelf(pname, param);
+    rogl_pfn_glLightModelf(_pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glLightModelfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    void* params = (void*)val2ptr(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _params_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glLightModelfv(pname, params);
+    rogl_pfn_glLightModelfv(_pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glLightModeli(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    int param = (int)NUM2INT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    int _param_ = (int)NUM2INT(_arg2_);
 
-    rogl_pfn_glLightModeli(pname, param);
+    rogl_pfn_glLightModeli(_pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glLightModeliv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    void* params = (void*)val2ptr(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _params_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glLightModeliv(pname, params);
+    rogl_pfn_glLightModeliv(_pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glLineStipple(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int factor = (int)NUM2INT(_arg1_);
-    unsigned short pattern = (unsigned short)NUM2UINT(_arg2_);
+    int _factor_ = (int)NUM2INT(_arg1_);
+    unsigned short _pattern_ = (unsigned short)NUM2UINT(_arg2_);
 
-    rogl_pfn_glLineStipple(factor, pattern);
+    rogl_pfn_glLineStipple(_factor_, _pattern_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMaterialf(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int face = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    float param = (float)NUM2DBL(_arg3_);
+    unsigned int _face_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    float _param_ = (float)NUM2DBL(_arg3_);
 
-    rogl_pfn_glMaterialf(face, pname, param);
+    rogl_pfn_glMaterialf(_face_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMaterialfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int face = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _face_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glMaterialfv(face, pname, params);
+    rogl_pfn_glMaterialfv(_face_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMateriali(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int face = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    int param = (int)NUM2INT(_arg3_);
+    unsigned int _face_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    int _param_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glMateriali(face, pname, param);
+    rogl_pfn_glMateriali(_face_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMaterialiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int face = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _face_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glMaterialiv(face, pname, params);
+    rogl_pfn_glMaterialiv(_face_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glPolygonStipple(VALUE _obj_, VALUE _arg1_)
 {
-    void* mask = (void*)val2ptr(_arg1_);
+    void* _mask_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glPolygonStipple(mask);
+    rogl_pfn_glPolygonStipple(_mask_);
 
     return Qnil;
 }
 
 static VALUE rogl_glShadeModel(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glShadeModel(mode);
+    rogl_pfn_glShadeModel(_mode_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexEnvf(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    float param = (float)NUM2DBL(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    float _param_ = (float)NUM2DBL(_arg3_);
 
-    rogl_pfn_glTexEnvf(target, pname, param);
+    rogl_pfn_glTexEnvf(_target_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexEnvfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glTexEnvfv(target, pname, params);
+    rogl_pfn_glTexEnvfv(_target_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexEnvi(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    int param = (int)NUM2INT(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    int _param_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glTexEnvi(target, pname, param);
+    rogl_pfn_glTexEnvi(_target_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexEnviv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glTexEnviv(target, pname, params);
+    rogl_pfn_glTexEnviv(_target_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexGend(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int coord = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    double param = (double)NUM2DBL(_arg3_);
+    unsigned int _coord_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    double _param_ = (double)NUM2DBL(_arg3_);
 
-    rogl_pfn_glTexGend(coord, pname, param);
+    rogl_pfn_glTexGend(_coord_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexGendv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int coord = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _coord_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glTexGendv(coord, pname, params);
+    rogl_pfn_glTexGendv(_coord_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexGenf(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int coord = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    float param = (float)NUM2DBL(_arg3_);
+    unsigned int _coord_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    float _param_ = (float)NUM2DBL(_arg3_);
 
-    rogl_pfn_glTexGenf(coord, pname, param);
+    rogl_pfn_glTexGenf(_coord_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexGenfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int coord = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _coord_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glTexGenfv(coord, pname, params);
+    rogl_pfn_glTexGenfv(_coord_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexGeni(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int coord = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    int param = (int)NUM2INT(_arg3_);
+    unsigned int _coord_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    int _param_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glTexGeni(coord, pname, param);
+    rogl_pfn_glTexGeni(_coord_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexGeniv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int coord = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _coord_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glTexGeniv(coord, pname, params);
+    rogl_pfn_glTexGeniv(_coord_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glFeedbackBuffer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int size = (int)NUM2INT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    void* buffer = (void*)val2ptr(_arg3_);
+    int _size_ = (int)NUM2INT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _buffer_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glFeedbackBuffer(size, type, buffer);
+    rogl_pfn_glFeedbackBuffer(_size_, _type_, _buffer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSelectBuffer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int size = (int)NUM2INT(_arg1_);
-    void* buffer = (void*)val2ptr(_arg2_);
+    int _size_ = (int)NUM2INT(_arg1_);
+    void* _buffer_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glSelectBuffer(size, buffer);
+    rogl_pfn_glSelectBuffer(_size_, _buffer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRenderMode(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
 
-    int retval = rogl_pfn_glRenderMode(mode);
+    int retval = rogl_pfn_glRenderMode(_mode_);
 
     return INT2NUM(retval);
 }
@@ -4448,18 +4448,18 @@ static VALUE rogl_glInitNames(VALUE _obj_)
 
 static VALUE rogl_glLoadName(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int name = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _name_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glLoadName(name);
+    rogl_pfn_glLoadName(_name_);
 
     return Qnil;
 }
 
 static VALUE rogl_glPassThrough(VALUE _obj_, VALUE _arg1_)
 {
-    float token = (float)NUM2DBL(_arg1_);
+    float _token_ = (float)NUM2DBL(_arg1_);
 
-    rogl_pfn_glPassThrough(token);
+    rogl_pfn_glPassThrough(_token_);
 
     return Qnil;
 }
@@ -4473,49 +4473,49 @@ static VALUE rogl_glPopName(VALUE _obj_)
 
 static VALUE rogl_glPushName(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int name = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _name_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glPushName(name);
+    rogl_pfn_glPushName(_name_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClearAccum(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    float red = (float)NUM2DBL(_arg1_);
-    float green = (float)NUM2DBL(_arg2_);
-    float blue = (float)NUM2DBL(_arg3_);
-    float alpha = (float)NUM2DBL(_arg4_);
+    float _red_ = (float)NUM2DBL(_arg1_);
+    float _green_ = (float)NUM2DBL(_arg2_);
+    float _blue_ = (float)NUM2DBL(_arg3_);
+    float _alpha_ = (float)NUM2DBL(_arg4_);
 
-    rogl_pfn_glClearAccum(red, green, blue, alpha);
+    rogl_pfn_glClearAccum(_red_, _green_, _blue_, _alpha_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClearIndex(VALUE _obj_, VALUE _arg1_)
 {
-    float c = (float)NUM2DBL(_arg1_);
+    float _c_ = (float)NUM2DBL(_arg1_);
 
-    rogl_pfn_glClearIndex(c);
+    rogl_pfn_glClearIndex(_c_);
 
     return Qnil;
 }
 
 static VALUE rogl_glIndexMask(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int mask = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _mask_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glIndexMask(mask);
+    rogl_pfn_glIndexMask(_mask_);
 
     return Qnil;
 }
 
 static VALUE rogl_glAccum(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int op = (unsigned int)NUM2UINT(_arg1_);
-    float value = (float)NUM2DBL(_arg2_);
+    unsigned int _op_ = (unsigned int)NUM2UINT(_arg1_);
+    float _value_ = (float)NUM2DBL(_arg2_);
 
-    rogl_pfn_glAccum(op, value);
+    rogl_pfn_glAccum(_op_, _value_);
 
     return Qnil;
 }
@@ -4529,543 +4529,543 @@ static VALUE rogl_glPopAttrib(VALUE _obj_)
 
 static VALUE rogl_glPushAttrib(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int mask = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _mask_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glPushAttrib(mask);
+    rogl_pfn_glPushAttrib(_mask_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMap1d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    double u1 = (double)NUM2DBL(_arg2_);
-    double u2 = (double)NUM2DBL(_arg3_);
-    int stride = (int)NUM2INT(_arg4_);
-    int order = (int)NUM2INT(_arg5_);
-    void* points = (void*)val2ptr(_arg6_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    double _u1_ = (double)NUM2DBL(_arg2_);
+    double _u2_ = (double)NUM2DBL(_arg3_);
+    int _stride_ = (int)NUM2INT(_arg4_);
+    int _order_ = (int)NUM2INT(_arg5_);
+    void* _points_ = (void*)val2ptr(_arg6_);
 
-    rogl_pfn_glMap1d(target, u1, u2, stride, order, points);
+    rogl_pfn_glMap1d(_target_, _u1_, _u2_, _stride_, _order_, _points_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMap1f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    float u1 = (float)NUM2DBL(_arg2_);
-    float u2 = (float)NUM2DBL(_arg3_);
-    int stride = (int)NUM2INT(_arg4_);
-    int order = (int)NUM2INT(_arg5_);
-    void* points = (void*)val2ptr(_arg6_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    float _u1_ = (float)NUM2DBL(_arg2_);
+    float _u2_ = (float)NUM2DBL(_arg3_);
+    int _stride_ = (int)NUM2INT(_arg4_);
+    int _order_ = (int)NUM2INT(_arg5_);
+    void* _points_ = (void*)val2ptr(_arg6_);
 
-    rogl_pfn_glMap1f(target, u1, u2, stride, order, points);
+    rogl_pfn_glMap1f(_target_, _u1_, _u2_, _stride_, _order_, _points_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMap2d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_, VALUE _arg9_, VALUE _arg10_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    double u1 = (double)NUM2DBL(_arg2_);
-    double u2 = (double)NUM2DBL(_arg3_);
-    int ustride = (int)NUM2INT(_arg4_);
-    int uorder = (int)NUM2INT(_arg5_);
-    double v1 = (double)NUM2DBL(_arg6_);
-    double v2 = (double)NUM2DBL(_arg7_);
-    int vstride = (int)NUM2INT(_arg8_);
-    int vorder = (int)NUM2INT(_arg9_);
-    void* points = (void*)val2ptr(_arg10_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    double _u1_ = (double)NUM2DBL(_arg2_);
+    double _u2_ = (double)NUM2DBL(_arg3_);
+    int _ustride_ = (int)NUM2INT(_arg4_);
+    int _uorder_ = (int)NUM2INT(_arg5_);
+    double _v1_ = (double)NUM2DBL(_arg6_);
+    double _v2_ = (double)NUM2DBL(_arg7_);
+    int _vstride_ = (int)NUM2INT(_arg8_);
+    int _vorder_ = (int)NUM2INT(_arg9_);
+    void* _points_ = (void*)val2ptr(_arg10_);
 
-    rogl_pfn_glMap2d(target, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points);
+    rogl_pfn_glMap2d(_target_, _u1_, _u2_, _ustride_, _uorder_, _v1_, _v2_, _vstride_, _vorder_, _points_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMap2f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_, VALUE _arg9_, VALUE _arg10_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    float u1 = (float)NUM2DBL(_arg2_);
-    float u2 = (float)NUM2DBL(_arg3_);
-    int ustride = (int)NUM2INT(_arg4_);
-    int uorder = (int)NUM2INT(_arg5_);
-    float v1 = (float)NUM2DBL(_arg6_);
-    float v2 = (float)NUM2DBL(_arg7_);
-    int vstride = (int)NUM2INT(_arg8_);
-    int vorder = (int)NUM2INT(_arg9_);
-    void* points = (void*)val2ptr(_arg10_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    float _u1_ = (float)NUM2DBL(_arg2_);
+    float _u2_ = (float)NUM2DBL(_arg3_);
+    int _ustride_ = (int)NUM2INT(_arg4_);
+    int _uorder_ = (int)NUM2INT(_arg5_);
+    float _v1_ = (float)NUM2DBL(_arg6_);
+    float _v2_ = (float)NUM2DBL(_arg7_);
+    int _vstride_ = (int)NUM2INT(_arg8_);
+    int _vorder_ = (int)NUM2INT(_arg9_);
+    void* _points_ = (void*)val2ptr(_arg10_);
 
-    rogl_pfn_glMap2f(target, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points);
+    rogl_pfn_glMap2f(_target_, _u1_, _u2_, _ustride_, _uorder_, _v1_, _v2_, _vstride_, _vorder_, _points_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMapGrid1d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int un = (int)NUM2INT(_arg1_);
-    double u1 = (double)NUM2DBL(_arg2_);
-    double u2 = (double)NUM2DBL(_arg3_);
+    int _un_ = (int)NUM2INT(_arg1_);
+    double _u1_ = (double)NUM2DBL(_arg2_);
+    double _u2_ = (double)NUM2DBL(_arg3_);
 
-    rogl_pfn_glMapGrid1d(un, u1, u2);
+    rogl_pfn_glMapGrid1d(_un_, _u1_, _u2_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMapGrid1f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int un = (int)NUM2INT(_arg1_);
-    float u1 = (float)NUM2DBL(_arg2_);
-    float u2 = (float)NUM2DBL(_arg3_);
+    int _un_ = (int)NUM2INT(_arg1_);
+    float _u1_ = (float)NUM2DBL(_arg2_);
+    float _u2_ = (float)NUM2DBL(_arg3_);
 
-    rogl_pfn_glMapGrid1f(un, u1, u2);
+    rogl_pfn_glMapGrid1f(_un_, _u1_, _u2_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMapGrid2d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    int un = (int)NUM2INT(_arg1_);
-    double u1 = (double)NUM2DBL(_arg2_);
-    double u2 = (double)NUM2DBL(_arg3_);
-    int vn = (int)NUM2INT(_arg4_);
-    double v1 = (double)NUM2DBL(_arg5_);
-    double v2 = (double)NUM2DBL(_arg6_);
+    int _un_ = (int)NUM2INT(_arg1_);
+    double _u1_ = (double)NUM2DBL(_arg2_);
+    double _u2_ = (double)NUM2DBL(_arg3_);
+    int _vn_ = (int)NUM2INT(_arg4_);
+    double _v1_ = (double)NUM2DBL(_arg5_);
+    double _v2_ = (double)NUM2DBL(_arg6_);
 
-    rogl_pfn_glMapGrid2d(un, u1, u2, vn, v1, v2);
+    rogl_pfn_glMapGrid2d(_un_, _u1_, _u2_, _vn_, _v1_, _v2_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMapGrid2f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    int un = (int)NUM2INT(_arg1_);
-    float u1 = (float)NUM2DBL(_arg2_);
-    float u2 = (float)NUM2DBL(_arg3_);
-    int vn = (int)NUM2INT(_arg4_);
-    float v1 = (float)NUM2DBL(_arg5_);
-    float v2 = (float)NUM2DBL(_arg6_);
+    int _un_ = (int)NUM2INT(_arg1_);
+    float _u1_ = (float)NUM2DBL(_arg2_);
+    float _u2_ = (float)NUM2DBL(_arg3_);
+    int _vn_ = (int)NUM2INT(_arg4_);
+    float _v1_ = (float)NUM2DBL(_arg5_);
+    float _v2_ = (float)NUM2DBL(_arg6_);
 
-    rogl_pfn_glMapGrid2f(un, u1, u2, vn, v1, v2);
+    rogl_pfn_glMapGrid2f(_un_, _u1_, _u2_, _vn_, _v1_, _v2_);
 
     return Qnil;
 }
 
 static VALUE rogl_glEvalCoord1d(VALUE _obj_, VALUE _arg1_)
 {
-    double u = (double)NUM2DBL(_arg1_);
+    double _u_ = (double)NUM2DBL(_arg1_);
 
-    rogl_pfn_glEvalCoord1d(u);
+    rogl_pfn_glEvalCoord1d(_u_);
 
     return Qnil;
 }
 
 static VALUE rogl_glEvalCoord1dv(VALUE _obj_, VALUE _arg1_)
 {
-    void* u = (void*)val2ptr(_arg1_);
+    void* _u_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glEvalCoord1dv(u);
+    rogl_pfn_glEvalCoord1dv(_u_);
 
     return Qnil;
 }
 
 static VALUE rogl_glEvalCoord1f(VALUE _obj_, VALUE _arg1_)
 {
-    float u = (float)NUM2DBL(_arg1_);
+    float _u_ = (float)NUM2DBL(_arg1_);
 
-    rogl_pfn_glEvalCoord1f(u);
+    rogl_pfn_glEvalCoord1f(_u_);
 
     return Qnil;
 }
 
 static VALUE rogl_glEvalCoord1fv(VALUE _obj_, VALUE _arg1_)
 {
-    void* u = (void*)val2ptr(_arg1_);
+    void* _u_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glEvalCoord1fv(u);
+    rogl_pfn_glEvalCoord1fv(_u_);
 
     return Qnil;
 }
 
 static VALUE rogl_glEvalCoord2d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    double u = (double)NUM2DBL(_arg1_);
-    double v = (double)NUM2DBL(_arg2_);
+    double _u_ = (double)NUM2DBL(_arg1_);
+    double _v_ = (double)NUM2DBL(_arg2_);
 
-    rogl_pfn_glEvalCoord2d(u, v);
+    rogl_pfn_glEvalCoord2d(_u_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glEvalCoord2dv(VALUE _obj_, VALUE _arg1_)
 {
-    void* u = (void*)val2ptr(_arg1_);
+    void* _u_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glEvalCoord2dv(u);
+    rogl_pfn_glEvalCoord2dv(_u_);
 
     return Qnil;
 }
 
 static VALUE rogl_glEvalCoord2f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    float u = (float)NUM2DBL(_arg1_);
-    float v = (float)NUM2DBL(_arg2_);
+    float _u_ = (float)NUM2DBL(_arg1_);
+    float _v_ = (float)NUM2DBL(_arg2_);
 
-    rogl_pfn_glEvalCoord2f(u, v);
+    rogl_pfn_glEvalCoord2f(_u_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glEvalCoord2fv(VALUE _obj_, VALUE _arg1_)
 {
-    void* u = (void*)val2ptr(_arg1_);
+    void* _u_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glEvalCoord2fv(u);
+    rogl_pfn_glEvalCoord2fv(_u_);
 
     return Qnil;
 }
 
 static VALUE rogl_glEvalMesh1(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    int i1 = (int)NUM2INT(_arg2_);
-    int i2 = (int)NUM2INT(_arg3_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    int _i1_ = (int)NUM2INT(_arg2_);
+    int _i2_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glEvalMesh1(mode, i1, i2);
+    rogl_pfn_glEvalMesh1(_mode_, _i1_, _i2_);
 
     return Qnil;
 }
 
 static VALUE rogl_glEvalPoint1(VALUE _obj_, VALUE _arg1_)
 {
-    int i = (int)NUM2INT(_arg1_);
+    int _i_ = (int)NUM2INT(_arg1_);
 
-    rogl_pfn_glEvalPoint1(i);
+    rogl_pfn_glEvalPoint1(_i_);
 
     return Qnil;
 }
 
 static VALUE rogl_glEvalMesh2(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    int i1 = (int)NUM2INT(_arg2_);
-    int i2 = (int)NUM2INT(_arg3_);
-    int j1 = (int)NUM2INT(_arg4_);
-    int j2 = (int)NUM2INT(_arg5_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    int _i1_ = (int)NUM2INT(_arg2_);
+    int _i2_ = (int)NUM2INT(_arg3_);
+    int _j1_ = (int)NUM2INT(_arg4_);
+    int _j2_ = (int)NUM2INT(_arg5_);
 
-    rogl_pfn_glEvalMesh2(mode, i1, i2, j1, j2);
+    rogl_pfn_glEvalMesh2(_mode_, _i1_, _i2_, _j1_, _j2_);
 
     return Qnil;
 }
 
 static VALUE rogl_glEvalPoint2(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int i = (int)NUM2INT(_arg1_);
-    int j = (int)NUM2INT(_arg2_);
+    int _i_ = (int)NUM2INT(_arg1_);
+    int _j_ = (int)NUM2INT(_arg2_);
 
-    rogl_pfn_glEvalPoint2(i, j);
+    rogl_pfn_glEvalPoint2(_i_, _j_);
 
     return Qnil;
 }
 
 static VALUE rogl_glAlphaFunc(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int func = (unsigned int)NUM2UINT(_arg1_);
-    float ref = (float)NUM2DBL(_arg2_);
+    unsigned int _func_ = (unsigned int)NUM2UINT(_arg1_);
+    float _ref_ = (float)NUM2DBL(_arg2_);
 
-    rogl_pfn_glAlphaFunc(func, ref);
+    rogl_pfn_glAlphaFunc(_func_, _ref_);
 
     return Qnil;
 }
 
 static VALUE rogl_glPixelZoom(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    float xfactor = (float)NUM2DBL(_arg1_);
-    float yfactor = (float)NUM2DBL(_arg2_);
+    float _xfactor_ = (float)NUM2DBL(_arg1_);
+    float _yfactor_ = (float)NUM2DBL(_arg2_);
 
-    rogl_pfn_glPixelZoom(xfactor, yfactor);
+    rogl_pfn_glPixelZoom(_xfactor_, _yfactor_);
 
     return Qnil;
 }
 
 static VALUE rogl_glPixelTransferf(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    float param = (float)NUM2DBL(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    float _param_ = (float)NUM2DBL(_arg2_);
 
-    rogl_pfn_glPixelTransferf(pname, param);
+    rogl_pfn_glPixelTransferf(_pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glPixelTransferi(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    int param = (int)NUM2INT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    int _param_ = (int)NUM2INT(_arg2_);
 
-    rogl_pfn_glPixelTransferi(pname, param);
+    rogl_pfn_glPixelTransferi(_pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glPixelMapfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int map = (unsigned int)NUM2UINT(_arg1_);
-    int mapsize = (int)NUM2INT(_arg2_);
-    void* values = (void*)val2ptr(_arg3_);
+    unsigned int _map_ = (unsigned int)NUM2UINT(_arg1_);
+    int _mapsize_ = (int)NUM2INT(_arg2_);
+    void* _values_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glPixelMapfv(map, mapsize, values);
+    rogl_pfn_glPixelMapfv(_map_, _mapsize_, _values_);
 
     return Qnil;
 }
 
 static VALUE rogl_glPixelMapuiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int map = (unsigned int)NUM2UINT(_arg1_);
-    int mapsize = (int)NUM2INT(_arg2_);
-    void* values = (void*)val2ptr(_arg3_);
+    unsigned int _map_ = (unsigned int)NUM2UINT(_arg1_);
+    int _mapsize_ = (int)NUM2INT(_arg2_);
+    void* _values_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glPixelMapuiv(map, mapsize, values);
+    rogl_pfn_glPixelMapuiv(_map_, _mapsize_, _values_);
 
     return Qnil;
 }
 
 static VALUE rogl_glPixelMapusv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int map = (unsigned int)NUM2UINT(_arg1_);
-    int mapsize = (int)NUM2INT(_arg2_);
-    void* values = (void*)val2ptr(_arg3_);
+    unsigned int _map_ = (unsigned int)NUM2UINT(_arg1_);
+    int _mapsize_ = (int)NUM2INT(_arg2_);
+    void* _values_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glPixelMapusv(map, mapsize, values);
+    rogl_pfn_glPixelMapusv(_map_, _mapsize_, _values_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCopyPixels(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    int x = (int)NUM2INT(_arg1_);
-    int y = (int)NUM2INT(_arg2_);
-    int width = (int)NUM2INT(_arg3_);
-    int height = (int)NUM2INT(_arg4_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg5_);
+    int _x_ = (int)NUM2INT(_arg1_);
+    int _y_ = (int)NUM2INT(_arg2_);
+    int _width_ = (int)NUM2INT(_arg3_);
+    int _height_ = (int)NUM2INT(_arg4_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg5_);
 
-    rogl_pfn_glCopyPixels(x, y, width, height, type);
+    rogl_pfn_glCopyPixels(_x_, _y_, _width_, _height_, _type_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDrawPixels(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    int width = (int)NUM2INT(_arg1_);
-    int height = (int)NUM2INT(_arg2_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg4_);
-    void* pixels = (void*)val2ptr(_arg5_);
+    int _width_ = (int)NUM2INT(_arg1_);
+    int _height_ = (int)NUM2INT(_arg2_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg4_);
+    void* _pixels_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glDrawPixels(width, height, format, type, pixels);
+    rogl_pfn_glDrawPixels(_width_, _height_, _format_, _type_, _pixels_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetClipPlane(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int plane = (unsigned int)NUM2UINT(_arg1_);
-    void* equation = (void*)val2ptr(_arg2_);
+    unsigned int _plane_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _equation_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glGetClipPlane(plane, equation);
+    rogl_pfn_glGetClipPlane(_plane_, _equation_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetLightfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int light = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _light_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetLightfv(light, pname, params);
+    rogl_pfn_glGetLightfv(_light_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetLightiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int light = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _light_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetLightiv(light, pname, params);
+    rogl_pfn_glGetLightiv(_light_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetMapdv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int query = (unsigned int)NUM2UINT(_arg2_);
-    void* v = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _query_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _v_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetMapdv(target, query, v);
+    rogl_pfn_glGetMapdv(_target_, _query_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetMapfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int query = (unsigned int)NUM2UINT(_arg2_);
-    void* v = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _query_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _v_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetMapfv(target, query, v);
+    rogl_pfn_glGetMapfv(_target_, _query_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetMapiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int query = (unsigned int)NUM2UINT(_arg2_);
-    void* v = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _query_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _v_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetMapiv(target, query, v);
+    rogl_pfn_glGetMapiv(_target_, _query_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetMaterialfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int face = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _face_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetMaterialfv(face, pname, params);
+    rogl_pfn_glGetMaterialfv(_face_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetMaterialiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int face = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _face_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetMaterialiv(face, pname, params);
+    rogl_pfn_glGetMaterialiv(_face_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetPixelMapfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int map = (unsigned int)NUM2UINT(_arg1_);
-    void* values = (void*)val2ptr(_arg2_);
+    unsigned int _map_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _values_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glGetPixelMapfv(map, values);
+    rogl_pfn_glGetPixelMapfv(_map_, _values_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetPixelMapuiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int map = (unsigned int)NUM2UINT(_arg1_);
-    void* values = (void*)val2ptr(_arg2_);
+    unsigned int _map_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _values_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glGetPixelMapuiv(map, values);
+    rogl_pfn_glGetPixelMapuiv(_map_, _values_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetPixelMapusv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int map = (unsigned int)NUM2UINT(_arg1_);
-    void* values = (void*)val2ptr(_arg2_);
+    unsigned int _map_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _values_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glGetPixelMapusv(map, values);
+    rogl_pfn_glGetPixelMapusv(_map_, _values_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetPolygonStipple(VALUE _obj_, VALUE _arg1_)
 {
-    void* mask = (void*)val2ptr(_arg1_);
+    void* _mask_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glGetPolygonStipple(mask);
+    rogl_pfn_glGetPolygonStipple(_mask_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetTexEnvfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetTexEnvfv(target, pname, params);
+    rogl_pfn_glGetTexEnvfv(_target_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetTexEnviv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetTexEnviv(target, pname, params);
+    rogl_pfn_glGetTexEnviv(_target_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetTexGendv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int coord = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _coord_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetTexGendv(coord, pname, params);
+    rogl_pfn_glGetTexGendv(_coord_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetTexGenfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int coord = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _coord_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetTexGenfv(coord, pname, params);
+    rogl_pfn_glGetTexGenfv(_coord_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetTexGeniv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int coord = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _coord_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetTexGeniv(coord, pname, params);
+    rogl_pfn_glGetTexGeniv(_coord_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glIsList(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int list = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _list_ = (unsigned int)NUM2UINT(_arg1_);
 
-    unsigned char retval = rogl_pfn_glIsList(list);
+    unsigned char retval = rogl_pfn_glIsList(_list_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glFrustum(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    double left = (double)NUM2DBL(_arg1_);
-    double right = (double)NUM2DBL(_arg2_);
-    double bottom = (double)NUM2DBL(_arg3_);
-    double top = (double)NUM2DBL(_arg4_);
-    double zNear = (double)NUM2DBL(_arg5_);
-    double zFar = (double)NUM2DBL(_arg6_);
+    double _left_ = (double)NUM2DBL(_arg1_);
+    double _right_ = (double)NUM2DBL(_arg2_);
+    double _bottom_ = (double)NUM2DBL(_arg3_);
+    double _top_ = (double)NUM2DBL(_arg4_);
+    double _zNear_ = (double)NUM2DBL(_arg5_);
+    double _zFar_ = (double)NUM2DBL(_arg6_);
 
-    rogl_pfn_glFrustum(left, right, bottom, top, zNear, zFar);
+    rogl_pfn_glFrustum(_left_, _right_, _bottom_, _top_, _zNear_, _zFar_);
 
     return Qnil;
 }
@@ -5079,59 +5079,59 @@ static VALUE rogl_glLoadIdentity(VALUE _obj_)
 
 static VALUE rogl_glLoadMatrixf(VALUE _obj_, VALUE _arg1_)
 {
-    void* m = (void*)val2ptr(_arg1_);
+    void* _m_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glLoadMatrixf(m);
+    rogl_pfn_glLoadMatrixf(_m_);
 
     return Qnil;
 }
 
 static VALUE rogl_glLoadMatrixd(VALUE _obj_, VALUE _arg1_)
 {
-    void* m = (void*)val2ptr(_arg1_);
+    void* _m_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glLoadMatrixd(m);
+    rogl_pfn_glLoadMatrixd(_m_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMatrixMode(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glMatrixMode(mode);
+    rogl_pfn_glMatrixMode(_mode_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultMatrixf(VALUE _obj_, VALUE _arg1_)
 {
-    void* m = (void*)val2ptr(_arg1_);
+    void* _m_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glMultMatrixf(m);
+    rogl_pfn_glMultMatrixf(_m_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultMatrixd(VALUE _obj_, VALUE _arg1_)
 {
-    void* m = (void*)val2ptr(_arg1_);
+    void* _m_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glMultMatrixd(m);
+    rogl_pfn_glMultMatrixd(_m_);
 
     return Qnil;
 }
 
 static VALUE rogl_glOrtho(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    double left = (double)NUM2DBL(_arg1_);
-    double right = (double)NUM2DBL(_arg2_);
-    double bottom = (double)NUM2DBL(_arg3_);
-    double top = (double)NUM2DBL(_arg4_);
-    double zNear = (double)NUM2DBL(_arg5_);
-    double zFar = (double)NUM2DBL(_arg6_);
+    double _left_ = (double)NUM2DBL(_arg1_);
+    double _right_ = (double)NUM2DBL(_arg2_);
+    double _bottom_ = (double)NUM2DBL(_arg3_);
+    double _top_ = (double)NUM2DBL(_arg4_);
+    double _zNear_ = (double)NUM2DBL(_arg5_);
+    double _zFar_ = (double)NUM2DBL(_arg6_);
 
-    rogl_pfn_glOrtho(left, right, bottom, top, zNear, zFar);
+    rogl_pfn_glOrtho(_left_, _right_, _bottom_, _top_, _zNear_, _zFar_);
 
     return Qnil;
 }
@@ -5152,389 +5152,389 @@ static VALUE rogl_glPushMatrix(VALUE _obj_)
 
 static VALUE rogl_glRotated(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    double angle = (double)NUM2DBL(_arg1_);
-    double x = (double)NUM2DBL(_arg2_);
-    double y = (double)NUM2DBL(_arg3_);
-    double z = (double)NUM2DBL(_arg4_);
+    double _angle_ = (double)NUM2DBL(_arg1_);
+    double _x_ = (double)NUM2DBL(_arg2_);
+    double _y_ = (double)NUM2DBL(_arg3_);
+    double _z_ = (double)NUM2DBL(_arg4_);
 
-    rogl_pfn_glRotated(angle, x, y, z);
+    rogl_pfn_glRotated(_angle_, _x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRotatef(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    float angle = (float)NUM2DBL(_arg1_);
-    float x = (float)NUM2DBL(_arg2_);
-    float y = (float)NUM2DBL(_arg3_);
-    float z = (float)NUM2DBL(_arg4_);
+    float _angle_ = (float)NUM2DBL(_arg1_);
+    float _x_ = (float)NUM2DBL(_arg2_);
+    float _y_ = (float)NUM2DBL(_arg3_);
+    float _z_ = (float)NUM2DBL(_arg4_);
 
-    rogl_pfn_glRotatef(angle, x, y, z);
+    rogl_pfn_glRotatef(_angle_, _x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glScaled(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    double x = (double)NUM2DBL(_arg1_);
-    double y = (double)NUM2DBL(_arg2_);
-    double z = (double)NUM2DBL(_arg3_);
+    double _x_ = (double)NUM2DBL(_arg1_);
+    double _y_ = (double)NUM2DBL(_arg2_);
+    double _z_ = (double)NUM2DBL(_arg3_);
 
-    rogl_pfn_glScaled(x, y, z);
+    rogl_pfn_glScaled(_x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glScalef(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    float x = (float)NUM2DBL(_arg1_);
-    float y = (float)NUM2DBL(_arg2_);
-    float z = (float)NUM2DBL(_arg3_);
+    float _x_ = (float)NUM2DBL(_arg1_);
+    float _y_ = (float)NUM2DBL(_arg2_);
+    float _z_ = (float)NUM2DBL(_arg3_);
 
-    rogl_pfn_glScalef(x, y, z);
+    rogl_pfn_glScalef(_x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTranslated(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    double x = (double)NUM2DBL(_arg1_);
-    double y = (double)NUM2DBL(_arg2_);
-    double z = (double)NUM2DBL(_arg3_);
+    double _x_ = (double)NUM2DBL(_arg1_);
+    double _y_ = (double)NUM2DBL(_arg2_);
+    double _z_ = (double)NUM2DBL(_arg3_);
 
-    rogl_pfn_glTranslated(x, y, z);
+    rogl_pfn_glTranslated(_x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTranslatef(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    float x = (float)NUM2DBL(_arg1_);
-    float y = (float)NUM2DBL(_arg2_);
-    float z = (float)NUM2DBL(_arg3_);
+    float _x_ = (float)NUM2DBL(_arg1_);
+    float _y_ = (float)NUM2DBL(_arg2_);
+    float _z_ = (float)NUM2DBL(_arg3_);
 
-    rogl_pfn_glTranslatef(x, y, z);
+    rogl_pfn_glTranslatef(_x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDrawArrays(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    int first = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    int _first_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glDrawArrays(mode, first, count);
+    rogl_pfn_glDrawArrays(_mode_, _first_, _count_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDrawElements(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg3_);
-    void* indices = (void*)val2ptr(_arg4_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _indices_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glDrawElements(mode, count, type, indices);
+    rogl_pfn_glDrawElements(_mode_, _count_, _type_, _indices_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetPointerv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    void* params = (void*)val2ptr(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _params_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glGetPointerv(pname, params);
+    rogl_pfn_glGetPointerv(_pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glPolygonOffset(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    float factor = (float)NUM2DBL(_arg1_);
-    float units = (float)NUM2DBL(_arg2_);
+    float _factor_ = (float)NUM2DBL(_arg1_);
+    float _units_ = (float)NUM2DBL(_arg2_);
 
-    rogl_pfn_glPolygonOffset(factor, units);
+    rogl_pfn_glPolygonOffset(_factor_, _units_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCopyTexImage1D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
-    int x = (int)NUM2INT(_arg4_);
-    int y = (int)NUM2INT(_arg5_);
-    int width = (int)NUM2INT(_arg6_);
-    int border = (int)NUM2INT(_arg7_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg3_);
+    int _x_ = (int)NUM2INT(_arg4_);
+    int _y_ = (int)NUM2INT(_arg5_);
+    int _width_ = (int)NUM2INT(_arg6_);
+    int _border_ = (int)NUM2INT(_arg7_);
 
-    rogl_pfn_glCopyTexImage1D(target, level, internalformat, x, y, width, border);
+    rogl_pfn_glCopyTexImage1D(_target_, _level_, _internalformat_, _x_, _y_, _width_, _border_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCopyTexImage2D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
-    int x = (int)NUM2INT(_arg4_);
-    int y = (int)NUM2INT(_arg5_);
-    int width = (int)NUM2INT(_arg6_);
-    int height = (int)NUM2INT(_arg7_);
-    int border = (int)NUM2INT(_arg8_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg3_);
+    int _x_ = (int)NUM2INT(_arg4_);
+    int _y_ = (int)NUM2INT(_arg5_);
+    int _width_ = (int)NUM2INT(_arg6_);
+    int _height_ = (int)NUM2INT(_arg7_);
+    int _border_ = (int)NUM2INT(_arg8_);
 
-    rogl_pfn_glCopyTexImage2D(target, level, internalformat, x, y, width, height, border);
+    rogl_pfn_glCopyTexImage2D(_target_, _level_, _internalformat_, _x_, _y_, _width_, _height_, _border_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCopyTexSubImage1D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int xoffset = (int)NUM2INT(_arg3_);
-    int x = (int)NUM2INT(_arg4_);
-    int y = (int)NUM2INT(_arg5_);
-    int width = (int)NUM2INT(_arg6_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _xoffset_ = (int)NUM2INT(_arg3_);
+    int _x_ = (int)NUM2INT(_arg4_);
+    int _y_ = (int)NUM2INT(_arg5_);
+    int _width_ = (int)NUM2INT(_arg6_);
 
-    rogl_pfn_glCopyTexSubImage1D(target, level, xoffset, x, y, width);
+    rogl_pfn_glCopyTexSubImage1D(_target_, _level_, _xoffset_, _x_, _y_, _width_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCopyTexSubImage2D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int xoffset = (int)NUM2INT(_arg3_);
-    int yoffset = (int)NUM2INT(_arg4_);
-    int x = (int)NUM2INT(_arg5_);
-    int y = (int)NUM2INT(_arg6_);
-    int width = (int)NUM2INT(_arg7_);
-    int height = (int)NUM2INT(_arg8_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _xoffset_ = (int)NUM2INT(_arg3_);
+    int _yoffset_ = (int)NUM2INT(_arg4_);
+    int _x_ = (int)NUM2INT(_arg5_);
+    int _y_ = (int)NUM2INT(_arg6_);
+    int _width_ = (int)NUM2INT(_arg7_);
+    int _height_ = (int)NUM2INT(_arg8_);
 
-    rogl_pfn_glCopyTexSubImage2D(target, level, xoffset, yoffset, x, y, width, height);
+    rogl_pfn_glCopyTexSubImage2D(_target_, _level_, _xoffset_, _yoffset_, _x_, _y_, _width_, _height_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexSubImage1D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int xoffset = (int)NUM2INT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg5_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg6_);
-    void* pixels = (void*)val2ptr(_arg7_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _xoffset_ = (int)NUM2INT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg5_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg6_);
+    void* _pixels_ = (void*)val2ptr(_arg7_);
 
-    rogl_pfn_glTexSubImage1D(target, level, xoffset, width, format, type, pixels);
+    rogl_pfn_glTexSubImage1D(_target_, _level_, _xoffset_, _width_, _format_, _type_, _pixels_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexSubImage2D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_, VALUE _arg9_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int xoffset = (int)NUM2INT(_arg3_);
-    int yoffset = (int)NUM2INT(_arg4_);
-    int width = (int)NUM2INT(_arg5_);
-    int height = (int)NUM2INT(_arg6_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg7_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg8_);
-    void* pixels = (void*)val2ptr(_arg9_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _xoffset_ = (int)NUM2INT(_arg3_);
+    int _yoffset_ = (int)NUM2INT(_arg4_);
+    int _width_ = (int)NUM2INT(_arg5_);
+    int _height_ = (int)NUM2INT(_arg6_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg7_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg8_);
+    void* _pixels_ = (void*)val2ptr(_arg9_);
 
-    rogl_pfn_glTexSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels);
+    rogl_pfn_glTexSubImage2D(_target_, _level_, _xoffset_, _yoffset_, _width_, _height_, _format_, _type_, _pixels_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBindTexture(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int texture = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glBindTexture(target, texture);
+    rogl_pfn_glBindTexture(_target_, _texture_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDeleteTextures(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* textures = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _textures_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glDeleteTextures(n, textures);
+    rogl_pfn_glDeleteTextures(_n_, _textures_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGenTextures(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* textures = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _textures_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glGenTextures(n, textures);
+    rogl_pfn_glGenTextures(_n_, _textures_);
 
     return Qnil;
 }
 
 static VALUE rogl_glIsTexture(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
 
-    unsigned char retval = rogl_pfn_glIsTexture(texture);
+    unsigned char retval = rogl_pfn_glIsTexture(_texture_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glArrayElement(VALUE _obj_, VALUE _arg1_)
 {
-    int i = (int)NUM2INT(_arg1_);
+    int _i_ = (int)NUM2INT(_arg1_);
 
-    rogl_pfn_glArrayElement(i);
+    rogl_pfn_glArrayElement(_i_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColorPointer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int size = (int)NUM2INT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    int stride = (int)NUM2INT(_arg3_);
-    void* pointer = (void*)val2ptr(_arg4_);
+    int _size_ = (int)NUM2INT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    int _stride_ = (int)NUM2INT(_arg3_);
+    void* _pointer_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glColorPointer(size, type, stride, pointer);
+    rogl_pfn_glColorPointer(_size_, _type_, _stride_, _pointer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDisableClientState(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int array = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _array_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glDisableClientState(array);
+    rogl_pfn_glDisableClientState(_array_);
 
     return Qnil;
 }
 
 static VALUE rogl_glEdgeFlagPointer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int stride = (int)NUM2INT(_arg1_);
-    void* pointer = (void*)val2ptr(_arg2_);
+    int _stride_ = (int)NUM2INT(_arg1_);
+    void* _pointer_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glEdgeFlagPointer(stride, pointer);
+    rogl_pfn_glEdgeFlagPointer(_stride_, _pointer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glEnableClientState(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int array = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _array_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glEnableClientState(array);
+    rogl_pfn_glEnableClientState(_array_);
 
     return Qnil;
 }
 
 static VALUE rogl_glIndexPointer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    int stride = (int)NUM2INT(_arg2_);
-    void* pointer = (void*)val2ptr(_arg3_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    int _stride_ = (int)NUM2INT(_arg2_);
+    void* _pointer_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glIndexPointer(type, stride, pointer);
+    rogl_pfn_glIndexPointer(_type_, _stride_, _pointer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glInterleavedArrays(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int format = (unsigned int)NUM2UINT(_arg1_);
-    int stride = (int)NUM2INT(_arg2_);
-    void* pointer = (void*)val2ptr(_arg3_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg1_);
+    int _stride_ = (int)NUM2INT(_arg2_);
+    void* _pointer_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glInterleavedArrays(format, stride, pointer);
+    rogl_pfn_glInterleavedArrays(_format_, _stride_, _pointer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNormalPointer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    int stride = (int)NUM2INT(_arg2_);
-    void* pointer = (void*)val2ptr(_arg3_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    int _stride_ = (int)NUM2INT(_arg2_);
+    void* _pointer_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glNormalPointer(type, stride, pointer);
+    rogl_pfn_glNormalPointer(_type_, _stride_, _pointer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoordPointer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int size = (int)NUM2INT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    int stride = (int)NUM2INT(_arg3_);
-    void* pointer = (void*)val2ptr(_arg4_);
+    int _size_ = (int)NUM2INT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    int _stride_ = (int)NUM2INT(_arg3_);
+    void* _pointer_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glTexCoordPointer(size, type, stride, pointer);
+    rogl_pfn_glTexCoordPointer(_size_, _type_, _stride_, _pointer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexPointer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int size = (int)NUM2INT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    int stride = (int)NUM2INT(_arg3_);
-    void* pointer = (void*)val2ptr(_arg4_);
+    int _size_ = (int)NUM2INT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    int _stride_ = (int)NUM2INT(_arg3_);
+    void* _pointer_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glVertexPointer(size, type, stride, pointer);
+    rogl_pfn_glVertexPointer(_size_, _type_, _stride_, _pointer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glAreTexturesResident(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* textures = (void*)val2ptr(_arg2_);
-    void* residences = (void*)val2ptr(_arg3_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _textures_ = (void*)val2ptr(_arg2_);
+    void* _residences_ = (void*)val2ptr(_arg3_);
 
-    unsigned char retval = rogl_pfn_glAreTexturesResident(n, textures, residences);
+    unsigned char retval = rogl_pfn_glAreTexturesResident(_n_, _textures_, _residences_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glPrioritizeTextures(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* textures = (void*)val2ptr(_arg2_);
-    void* priorities = (void*)val2ptr(_arg3_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _textures_ = (void*)val2ptr(_arg2_);
+    void* _priorities_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glPrioritizeTextures(n, textures, priorities);
+    rogl_pfn_glPrioritizeTextures(_n_, _textures_, _priorities_);
 
     return Qnil;
 }
 
 static VALUE rogl_glIndexub(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned char c = (unsigned char)NUM2UINT(_arg1_);
+    unsigned char _c_ = (unsigned char)NUM2UINT(_arg1_);
 
-    rogl_pfn_glIndexub(c);
+    rogl_pfn_glIndexub(_c_);
 
     return Qnil;
 }
 
 static VALUE rogl_glIndexubv(VALUE _obj_, VALUE _arg1_)
 {
-    void* c = (void*)val2ptr(_arg1_);
+    void* _c_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glIndexubv(c);
+    rogl_pfn_glIndexubv(_c_);
 
     return Qnil;
 }
@@ -5548,1349 +5548,1349 @@ static VALUE rogl_glPopClientAttrib(VALUE _obj_)
 
 static VALUE rogl_glPushClientAttrib(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int mask = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _mask_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glPushClientAttrib(mask);
+    rogl_pfn_glPushClientAttrib(_mask_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDrawRangeElements(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int start = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int end = (unsigned int)NUM2UINT(_arg3_);
-    int count = (int)NUM2INT(_arg4_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg5_);
-    void* indices = (void*)val2ptr(_arg6_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _start_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _end_ = (unsigned int)NUM2UINT(_arg3_);
+    int _count_ = (int)NUM2INT(_arg4_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg5_);
+    void* _indices_ = (void*)val2ptr(_arg6_);
 
-    rogl_pfn_glDrawRangeElements(mode, start, end, count, type, indices);
+    rogl_pfn_glDrawRangeElements(_mode_, _start_, _end_, _count_, _type_, _indices_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexImage3D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_, VALUE _arg9_, VALUE _arg10_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int internalformat = (int)NUM2INT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
-    int height = (int)NUM2INT(_arg5_);
-    int depth = (int)NUM2INT(_arg6_);
-    int border = (int)NUM2INT(_arg7_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg8_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg9_);
-    void* pixels = (void*)val2ptr(_arg10_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _internalformat_ = (int)NUM2INT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
+    int _height_ = (int)NUM2INT(_arg5_);
+    int _depth_ = (int)NUM2INT(_arg6_);
+    int _border_ = (int)NUM2INT(_arg7_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg8_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg9_);
+    void* _pixels_ = (void*)val2ptr(_arg10_);
 
-    rogl_pfn_glTexImage3D(target, level, internalformat, width, height, depth, border, format, type, pixels);
+    rogl_pfn_glTexImage3D(_target_, _level_, _internalformat_, _width_, _height_, _depth_, _border_, _format_, _type_, _pixels_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexSubImage3D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_, VALUE _arg9_, VALUE _arg10_, VALUE _arg11_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int xoffset = (int)NUM2INT(_arg3_);
-    int yoffset = (int)NUM2INT(_arg4_);
-    int zoffset = (int)NUM2INT(_arg5_);
-    int width = (int)NUM2INT(_arg6_);
-    int height = (int)NUM2INT(_arg7_);
-    int depth = (int)NUM2INT(_arg8_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg9_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg10_);
-    void* pixels = (void*)val2ptr(_arg11_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _xoffset_ = (int)NUM2INT(_arg3_);
+    int _yoffset_ = (int)NUM2INT(_arg4_);
+    int _zoffset_ = (int)NUM2INT(_arg5_);
+    int _width_ = (int)NUM2INT(_arg6_);
+    int _height_ = (int)NUM2INT(_arg7_);
+    int _depth_ = (int)NUM2INT(_arg8_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg9_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg10_);
+    void* _pixels_ = (void*)val2ptr(_arg11_);
 
-    rogl_pfn_glTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels);
+    rogl_pfn_glTexSubImage3D(_target_, _level_, _xoffset_, _yoffset_, _zoffset_, _width_, _height_, _depth_, _format_, _type_, _pixels_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCopyTexSubImage3D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_, VALUE _arg9_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int xoffset = (int)NUM2INT(_arg3_);
-    int yoffset = (int)NUM2INT(_arg4_);
-    int zoffset = (int)NUM2INT(_arg5_);
-    int x = (int)NUM2INT(_arg6_);
-    int y = (int)NUM2INT(_arg7_);
-    int width = (int)NUM2INT(_arg8_);
-    int height = (int)NUM2INT(_arg9_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _xoffset_ = (int)NUM2INT(_arg3_);
+    int _yoffset_ = (int)NUM2INT(_arg4_);
+    int _zoffset_ = (int)NUM2INT(_arg5_);
+    int _x_ = (int)NUM2INT(_arg6_);
+    int _y_ = (int)NUM2INT(_arg7_);
+    int _width_ = (int)NUM2INT(_arg8_);
+    int _height_ = (int)NUM2INT(_arg9_);
 
-    rogl_pfn_glCopyTexSubImage3D(target, level, xoffset, yoffset, zoffset, x, y, width, height);
+    rogl_pfn_glCopyTexSubImage3D(_target_, _level_, _xoffset_, _yoffset_, _zoffset_, _x_, _y_, _width_, _height_);
 
     return Qnil;
 }
 
 static VALUE rogl_glActiveTexture(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glActiveTexture(texture);
+    rogl_pfn_glActiveTexture(_texture_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSampleCoverage(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    float value = (float)NUM2DBL(_arg1_);
-    unsigned char invert = (unsigned char)NUM2UINT(_arg2_);
+    float _value_ = (float)NUM2DBL(_arg1_);
+    unsigned char _invert_ = (unsigned char)NUM2UINT(_arg2_);
 
-    rogl_pfn_glSampleCoverage(value, invert);
+    rogl_pfn_glSampleCoverage(_value_, _invert_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCompressedTexImage3D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_, VALUE _arg9_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
-    int height = (int)NUM2INT(_arg5_);
-    int depth = (int)NUM2INT(_arg6_);
-    int border = (int)NUM2INT(_arg7_);
-    int imageSize = (int)NUM2INT(_arg8_);
-    void* data = (void*)val2ptr(_arg9_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
+    int _height_ = (int)NUM2INT(_arg5_);
+    int _depth_ = (int)NUM2INT(_arg6_);
+    int _border_ = (int)NUM2INT(_arg7_);
+    int _imageSize_ = (int)NUM2INT(_arg8_);
+    void* _data_ = (void*)val2ptr(_arg9_);
 
-    rogl_pfn_glCompressedTexImage3D(target, level, internalformat, width, height, depth, border, imageSize, data);
+    rogl_pfn_glCompressedTexImage3D(_target_, _level_, _internalformat_, _width_, _height_, _depth_, _border_, _imageSize_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCompressedTexImage2D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
-    int height = (int)NUM2INT(_arg5_);
-    int border = (int)NUM2INT(_arg6_);
-    int imageSize = (int)NUM2INT(_arg7_);
-    void* data = (void*)val2ptr(_arg8_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
+    int _height_ = (int)NUM2INT(_arg5_);
+    int _border_ = (int)NUM2INT(_arg6_);
+    int _imageSize_ = (int)NUM2INT(_arg7_);
+    void* _data_ = (void*)val2ptr(_arg8_);
 
-    rogl_pfn_glCompressedTexImage2D(target, level, internalformat, width, height, border, imageSize, data);
+    rogl_pfn_glCompressedTexImage2D(_target_, _level_, _internalformat_, _width_, _height_, _border_, _imageSize_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCompressedTexImage1D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
-    int border = (int)NUM2INT(_arg5_);
-    int imageSize = (int)NUM2INT(_arg6_);
-    void* data = (void*)val2ptr(_arg7_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
+    int _border_ = (int)NUM2INT(_arg5_);
+    int _imageSize_ = (int)NUM2INT(_arg6_);
+    void* _data_ = (void*)val2ptr(_arg7_);
 
-    rogl_pfn_glCompressedTexImage1D(target, level, internalformat, width, border, imageSize, data);
+    rogl_pfn_glCompressedTexImage1D(_target_, _level_, _internalformat_, _width_, _border_, _imageSize_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCompressedTexSubImage3D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_, VALUE _arg9_, VALUE _arg10_, VALUE _arg11_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int xoffset = (int)NUM2INT(_arg3_);
-    int yoffset = (int)NUM2INT(_arg4_);
-    int zoffset = (int)NUM2INT(_arg5_);
-    int width = (int)NUM2INT(_arg6_);
-    int height = (int)NUM2INT(_arg7_);
-    int depth = (int)NUM2INT(_arg8_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg9_);
-    int imageSize = (int)NUM2INT(_arg10_);
-    void* data = (void*)val2ptr(_arg11_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _xoffset_ = (int)NUM2INT(_arg3_);
+    int _yoffset_ = (int)NUM2INT(_arg4_);
+    int _zoffset_ = (int)NUM2INT(_arg5_);
+    int _width_ = (int)NUM2INT(_arg6_);
+    int _height_ = (int)NUM2INT(_arg7_);
+    int _depth_ = (int)NUM2INT(_arg8_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg9_);
+    int _imageSize_ = (int)NUM2INT(_arg10_);
+    void* _data_ = (void*)val2ptr(_arg11_);
 
-    rogl_pfn_glCompressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, data);
+    rogl_pfn_glCompressedTexSubImage3D(_target_, _level_, _xoffset_, _yoffset_, _zoffset_, _width_, _height_, _depth_, _format_, _imageSize_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCompressedTexSubImage2D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_, VALUE _arg9_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int xoffset = (int)NUM2INT(_arg3_);
-    int yoffset = (int)NUM2INT(_arg4_);
-    int width = (int)NUM2INT(_arg5_);
-    int height = (int)NUM2INT(_arg6_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg7_);
-    int imageSize = (int)NUM2INT(_arg8_);
-    void* data = (void*)val2ptr(_arg9_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _xoffset_ = (int)NUM2INT(_arg3_);
+    int _yoffset_ = (int)NUM2INT(_arg4_);
+    int _width_ = (int)NUM2INT(_arg5_);
+    int _height_ = (int)NUM2INT(_arg6_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg7_);
+    int _imageSize_ = (int)NUM2INT(_arg8_);
+    void* _data_ = (void*)val2ptr(_arg9_);
 
-    rogl_pfn_glCompressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, imageSize, data);
+    rogl_pfn_glCompressedTexSubImage2D(_target_, _level_, _xoffset_, _yoffset_, _width_, _height_, _format_, _imageSize_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCompressedTexSubImage1D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int xoffset = (int)NUM2INT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg5_);
-    int imageSize = (int)NUM2INT(_arg6_);
-    void* data = (void*)val2ptr(_arg7_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _xoffset_ = (int)NUM2INT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg5_);
+    int _imageSize_ = (int)NUM2INT(_arg6_);
+    void* _data_ = (void*)val2ptr(_arg7_);
 
-    rogl_pfn_glCompressedTexSubImage1D(target, level, xoffset, width, format, imageSize, data);
+    rogl_pfn_glCompressedTexSubImage1D(_target_, _level_, _xoffset_, _width_, _format_, _imageSize_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetCompressedTexImage(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    void* img = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    void* _img_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetCompressedTexImage(target, level, img);
+    rogl_pfn_glGetCompressedTexImage(_target_, _level_, _img_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClientActiveTexture(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glClientActiveTexture(texture);
+    rogl_pfn_glClientActiveTexture(_texture_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord1d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    double s = (double)NUM2DBL(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    double _s_ = (double)NUM2DBL(_arg2_);
 
-    rogl_pfn_glMultiTexCoord1d(target, s);
+    rogl_pfn_glMultiTexCoord1d(_target_, _s_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord1dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glMultiTexCoord1dv(target, v);
+    rogl_pfn_glMultiTexCoord1dv(_target_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord1f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    float s = (float)NUM2DBL(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    float _s_ = (float)NUM2DBL(_arg2_);
 
-    rogl_pfn_glMultiTexCoord1f(target, s);
+    rogl_pfn_glMultiTexCoord1f(_target_, _s_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord1fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glMultiTexCoord1fv(target, v);
+    rogl_pfn_glMultiTexCoord1fv(_target_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord1i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int s = (int)NUM2INT(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _s_ = (int)NUM2INT(_arg2_);
 
-    rogl_pfn_glMultiTexCoord1i(target, s);
+    rogl_pfn_glMultiTexCoord1i(_target_, _s_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord1iv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glMultiTexCoord1iv(target, v);
+    rogl_pfn_glMultiTexCoord1iv(_target_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord1s(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    short s = (short)NUM2INT(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    short _s_ = (short)NUM2INT(_arg2_);
 
-    rogl_pfn_glMultiTexCoord1s(target, s);
+    rogl_pfn_glMultiTexCoord1s(_target_, _s_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord1sv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glMultiTexCoord1sv(target, v);
+    rogl_pfn_glMultiTexCoord1sv(_target_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord2d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    double s = (double)NUM2DBL(_arg2_);
-    double t = (double)NUM2DBL(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    double _s_ = (double)NUM2DBL(_arg2_);
+    double _t_ = (double)NUM2DBL(_arg3_);
 
-    rogl_pfn_glMultiTexCoord2d(target, s, t);
+    rogl_pfn_glMultiTexCoord2d(_target_, _s_, _t_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord2dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glMultiTexCoord2dv(target, v);
+    rogl_pfn_glMultiTexCoord2dv(_target_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord2f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    float s = (float)NUM2DBL(_arg2_);
-    float t = (float)NUM2DBL(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    float _s_ = (float)NUM2DBL(_arg2_);
+    float _t_ = (float)NUM2DBL(_arg3_);
 
-    rogl_pfn_glMultiTexCoord2f(target, s, t);
+    rogl_pfn_glMultiTexCoord2f(_target_, _s_, _t_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord2fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glMultiTexCoord2fv(target, v);
+    rogl_pfn_glMultiTexCoord2fv(_target_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord2i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int s = (int)NUM2INT(_arg2_);
-    int t = (int)NUM2INT(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _s_ = (int)NUM2INT(_arg2_);
+    int _t_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glMultiTexCoord2i(target, s, t);
+    rogl_pfn_glMultiTexCoord2i(_target_, _s_, _t_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord2iv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glMultiTexCoord2iv(target, v);
+    rogl_pfn_glMultiTexCoord2iv(_target_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord2s(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    short s = (short)NUM2INT(_arg2_);
-    short t = (short)NUM2INT(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    short _s_ = (short)NUM2INT(_arg2_);
+    short _t_ = (short)NUM2INT(_arg3_);
 
-    rogl_pfn_glMultiTexCoord2s(target, s, t);
+    rogl_pfn_glMultiTexCoord2s(_target_, _s_, _t_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord2sv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glMultiTexCoord2sv(target, v);
+    rogl_pfn_glMultiTexCoord2sv(_target_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord3d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    double s = (double)NUM2DBL(_arg2_);
-    double t = (double)NUM2DBL(_arg3_);
-    double r = (double)NUM2DBL(_arg4_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    double _s_ = (double)NUM2DBL(_arg2_);
+    double _t_ = (double)NUM2DBL(_arg3_);
+    double _r_ = (double)NUM2DBL(_arg4_);
 
-    rogl_pfn_glMultiTexCoord3d(target, s, t, r);
+    rogl_pfn_glMultiTexCoord3d(_target_, _s_, _t_, _r_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord3dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glMultiTexCoord3dv(target, v);
+    rogl_pfn_glMultiTexCoord3dv(_target_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord3f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    float s = (float)NUM2DBL(_arg2_);
-    float t = (float)NUM2DBL(_arg3_);
-    float r = (float)NUM2DBL(_arg4_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    float _s_ = (float)NUM2DBL(_arg2_);
+    float _t_ = (float)NUM2DBL(_arg3_);
+    float _r_ = (float)NUM2DBL(_arg4_);
 
-    rogl_pfn_glMultiTexCoord3f(target, s, t, r);
+    rogl_pfn_glMultiTexCoord3f(_target_, _s_, _t_, _r_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord3fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glMultiTexCoord3fv(target, v);
+    rogl_pfn_glMultiTexCoord3fv(_target_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord3i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int s = (int)NUM2INT(_arg2_);
-    int t = (int)NUM2INT(_arg3_);
-    int r = (int)NUM2INT(_arg4_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _s_ = (int)NUM2INT(_arg2_);
+    int _t_ = (int)NUM2INT(_arg3_);
+    int _r_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glMultiTexCoord3i(target, s, t, r);
+    rogl_pfn_glMultiTexCoord3i(_target_, _s_, _t_, _r_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord3iv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glMultiTexCoord3iv(target, v);
+    rogl_pfn_glMultiTexCoord3iv(_target_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord3s(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    short s = (short)NUM2INT(_arg2_);
-    short t = (short)NUM2INT(_arg3_);
-    short r = (short)NUM2INT(_arg4_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    short _s_ = (short)NUM2INT(_arg2_);
+    short _t_ = (short)NUM2INT(_arg3_);
+    short _r_ = (short)NUM2INT(_arg4_);
 
-    rogl_pfn_glMultiTexCoord3s(target, s, t, r);
+    rogl_pfn_glMultiTexCoord3s(_target_, _s_, _t_, _r_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord3sv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glMultiTexCoord3sv(target, v);
+    rogl_pfn_glMultiTexCoord3sv(_target_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord4d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    double s = (double)NUM2DBL(_arg2_);
-    double t = (double)NUM2DBL(_arg3_);
-    double r = (double)NUM2DBL(_arg4_);
-    double q = (double)NUM2DBL(_arg5_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    double _s_ = (double)NUM2DBL(_arg2_);
+    double _t_ = (double)NUM2DBL(_arg3_);
+    double _r_ = (double)NUM2DBL(_arg4_);
+    double _q_ = (double)NUM2DBL(_arg5_);
 
-    rogl_pfn_glMultiTexCoord4d(target, s, t, r, q);
+    rogl_pfn_glMultiTexCoord4d(_target_, _s_, _t_, _r_, _q_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord4dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glMultiTexCoord4dv(target, v);
+    rogl_pfn_glMultiTexCoord4dv(_target_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord4f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    float s = (float)NUM2DBL(_arg2_);
-    float t = (float)NUM2DBL(_arg3_);
-    float r = (float)NUM2DBL(_arg4_);
-    float q = (float)NUM2DBL(_arg5_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    float _s_ = (float)NUM2DBL(_arg2_);
+    float _t_ = (float)NUM2DBL(_arg3_);
+    float _r_ = (float)NUM2DBL(_arg4_);
+    float _q_ = (float)NUM2DBL(_arg5_);
 
-    rogl_pfn_glMultiTexCoord4f(target, s, t, r, q);
+    rogl_pfn_glMultiTexCoord4f(_target_, _s_, _t_, _r_, _q_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord4fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glMultiTexCoord4fv(target, v);
+    rogl_pfn_glMultiTexCoord4fv(_target_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord4i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int s = (int)NUM2INT(_arg2_);
-    int t = (int)NUM2INT(_arg3_);
-    int r = (int)NUM2INT(_arg4_);
-    int q = (int)NUM2INT(_arg5_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _s_ = (int)NUM2INT(_arg2_);
+    int _t_ = (int)NUM2INT(_arg3_);
+    int _r_ = (int)NUM2INT(_arg4_);
+    int _q_ = (int)NUM2INT(_arg5_);
 
-    rogl_pfn_glMultiTexCoord4i(target, s, t, r, q);
+    rogl_pfn_glMultiTexCoord4i(_target_, _s_, _t_, _r_, _q_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord4iv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glMultiTexCoord4iv(target, v);
+    rogl_pfn_glMultiTexCoord4iv(_target_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord4s(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    short s = (short)NUM2INT(_arg2_);
-    short t = (short)NUM2INT(_arg3_);
-    short r = (short)NUM2INT(_arg4_);
-    short q = (short)NUM2INT(_arg5_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    short _s_ = (short)NUM2INT(_arg2_);
+    short _t_ = (short)NUM2INT(_arg3_);
+    short _r_ = (short)NUM2INT(_arg4_);
+    short _q_ = (short)NUM2INT(_arg5_);
 
-    rogl_pfn_glMultiTexCoord4s(target, s, t, r, q);
+    rogl_pfn_glMultiTexCoord4s(_target_, _s_, _t_, _r_, _q_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoord4sv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glMultiTexCoord4sv(target, v);
+    rogl_pfn_glMultiTexCoord4sv(_target_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glLoadTransposeMatrixf(VALUE _obj_, VALUE _arg1_)
 {
-    void* m = (void*)val2ptr(_arg1_);
+    void* _m_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glLoadTransposeMatrixf(m);
+    rogl_pfn_glLoadTransposeMatrixf(_m_);
 
     return Qnil;
 }
 
 static VALUE rogl_glLoadTransposeMatrixd(VALUE _obj_, VALUE _arg1_)
 {
-    void* m = (void*)val2ptr(_arg1_);
+    void* _m_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glLoadTransposeMatrixd(m);
+    rogl_pfn_glLoadTransposeMatrixd(_m_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultTransposeMatrixf(VALUE _obj_, VALUE _arg1_)
 {
-    void* m = (void*)val2ptr(_arg1_);
+    void* _m_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glMultTransposeMatrixf(m);
+    rogl_pfn_glMultTransposeMatrixf(_m_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultTransposeMatrixd(VALUE _obj_, VALUE _arg1_)
 {
-    void* m = (void*)val2ptr(_arg1_);
+    void* _m_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glMultTransposeMatrixd(m);
+    rogl_pfn_glMultTransposeMatrixd(_m_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBlendFuncSeparate(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int sfactorRGB = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int dfactorRGB = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int sfactorAlpha = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int dfactorAlpha = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _sfactorRGB_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _dfactorRGB_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _sfactorAlpha_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _dfactorAlpha_ = (unsigned int)NUM2UINT(_arg4_);
 
-    rogl_pfn_glBlendFuncSeparate(sfactorRGB, dfactorRGB, sfactorAlpha, dfactorAlpha);
+    rogl_pfn_glBlendFuncSeparate(_sfactorRGB_, _dfactorRGB_, _sfactorAlpha_, _dfactorAlpha_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiDrawArrays(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    void* first = (void*)val2ptr(_arg2_);
-    void* count = (void*)val2ptr(_arg3_);
-    int drawcount = (int)NUM2INT(_arg4_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _first_ = (void*)val2ptr(_arg2_);
+    void* _count_ = (void*)val2ptr(_arg3_);
+    int _drawcount_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glMultiDrawArrays(mode, first, count, drawcount);
+    rogl_pfn_glMultiDrawArrays(_mode_, _first_, _count_, _drawcount_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiDrawElements(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    void* count = (void*)val2ptr(_arg2_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg3_);
-    void* indices = (void*)val2ptr(_arg4_);
-    int drawcount = (int)NUM2INT(_arg5_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _count_ = (void*)val2ptr(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _indices_ = (void*)val2ptr(_arg4_);
+    int _drawcount_ = (int)NUM2INT(_arg5_);
 
-    rogl_pfn_glMultiDrawElements(mode, count, type, indices, drawcount);
+    rogl_pfn_glMultiDrawElements(_mode_, _count_, _type_, _indices_, _drawcount_);
 
     return Qnil;
 }
 
 static VALUE rogl_glPointParameterf(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    float param = (float)NUM2DBL(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    float _param_ = (float)NUM2DBL(_arg2_);
 
-    rogl_pfn_glPointParameterf(pname, param);
+    rogl_pfn_glPointParameterf(_pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glPointParameterfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    void* params = (void*)val2ptr(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _params_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glPointParameterfv(pname, params);
+    rogl_pfn_glPointParameterfv(_pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glPointParameteri(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    int param = (int)NUM2INT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    int _param_ = (int)NUM2INT(_arg2_);
 
-    rogl_pfn_glPointParameteri(pname, param);
+    rogl_pfn_glPointParameteri(_pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glPointParameteriv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    void* params = (void*)val2ptr(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _params_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glPointParameteriv(pname, params);
+    rogl_pfn_glPointParameteriv(_pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glFogCoordf(VALUE _obj_, VALUE _arg1_)
 {
-    float coord = (float)NUM2DBL(_arg1_);
+    float _coord_ = (float)NUM2DBL(_arg1_);
 
-    rogl_pfn_glFogCoordf(coord);
+    rogl_pfn_glFogCoordf(_coord_);
 
     return Qnil;
 }
 
 static VALUE rogl_glFogCoordfv(VALUE _obj_, VALUE _arg1_)
 {
-    void* coord = (void*)val2ptr(_arg1_);
+    void* _coord_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glFogCoordfv(coord);
+    rogl_pfn_glFogCoordfv(_coord_);
 
     return Qnil;
 }
 
 static VALUE rogl_glFogCoordd(VALUE _obj_, VALUE _arg1_)
 {
-    double coord = (double)NUM2DBL(_arg1_);
+    double _coord_ = (double)NUM2DBL(_arg1_);
 
-    rogl_pfn_glFogCoordd(coord);
+    rogl_pfn_glFogCoordd(_coord_);
 
     return Qnil;
 }
 
 static VALUE rogl_glFogCoorddv(VALUE _obj_, VALUE _arg1_)
 {
-    void* coord = (void*)val2ptr(_arg1_);
+    void* _coord_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glFogCoorddv(coord);
+    rogl_pfn_glFogCoorddv(_coord_);
 
     return Qnil;
 }
 
 static VALUE rogl_glFogCoordPointer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    int stride = (int)NUM2INT(_arg2_);
-    void* pointer = (void*)val2ptr(_arg3_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    int _stride_ = (int)NUM2INT(_arg2_);
+    void* _pointer_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glFogCoordPointer(type, stride, pointer);
+    rogl_pfn_glFogCoordPointer(_type_, _stride_, _pointer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSecondaryColor3b(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    char red = (char)NUM2INT(_arg1_);
-    char green = (char)NUM2INT(_arg2_);
-    char blue = (char)NUM2INT(_arg3_);
+    char _red_ = (char)NUM2INT(_arg1_);
+    char _green_ = (char)NUM2INT(_arg2_);
+    char _blue_ = (char)NUM2INT(_arg3_);
 
-    rogl_pfn_glSecondaryColor3b(red, green, blue);
+    rogl_pfn_glSecondaryColor3b(_red_, _green_, _blue_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSecondaryColor3bv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glSecondaryColor3bv(v);
+    rogl_pfn_glSecondaryColor3bv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSecondaryColor3d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    double red = (double)NUM2DBL(_arg1_);
-    double green = (double)NUM2DBL(_arg2_);
-    double blue = (double)NUM2DBL(_arg3_);
+    double _red_ = (double)NUM2DBL(_arg1_);
+    double _green_ = (double)NUM2DBL(_arg2_);
+    double _blue_ = (double)NUM2DBL(_arg3_);
 
-    rogl_pfn_glSecondaryColor3d(red, green, blue);
+    rogl_pfn_glSecondaryColor3d(_red_, _green_, _blue_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSecondaryColor3dv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glSecondaryColor3dv(v);
+    rogl_pfn_glSecondaryColor3dv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSecondaryColor3f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    float red = (float)NUM2DBL(_arg1_);
-    float green = (float)NUM2DBL(_arg2_);
-    float blue = (float)NUM2DBL(_arg3_);
+    float _red_ = (float)NUM2DBL(_arg1_);
+    float _green_ = (float)NUM2DBL(_arg2_);
+    float _blue_ = (float)NUM2DBL(_arg3_);
 
-    rogl_pfn_glSecondaryColor3f(red, green, blue);
+    rogl_pfn_glSecondaryColor3f(_red_, _green_, _blue_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSecondaryColor3fv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glSecondaryColor3fv(v);
+    rogl_pfn_glSecondaryColor3fv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSecondaryColor3i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int red = (int)NUM2INT(_arg1_);
-    int green = (int)NUM2INT(_arg2_);
-    int blue = (int)NUM2INT(_arg3_);
+    int _red_ = (int)NUM2INT(_arg1_);
+    int _green_ = (int)NUM2INT(_arg2_);
+    int _blue_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glSecondaryColor3i(red, green, blue);
+    rogl_pfn_glSecondaryColor3i(_red_, _green_, _blue_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSecondaryColor3iv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glSecondaryColor3iv(v);
+    rogl_pfn_glSecondaryColor3iv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSecondaryColor3s(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    short red = (short)NUM2INT(_arg1_);
-    short green = (short)NUM2INT(_arg2_);
-    short blue = (short)NUM2INT(_arg3_);
+    short _red_ = (short)NUM2INT(_arg1_);
+    short _green_ = (short)NUM2INT(_arg2_);
+    short _blue_ = (short)NUM2INT(_arg3_);
 
-    rogl_pfn_glSecondaryColor3s(red, green, blue);
+    rogl_pfn_glSecondaryColor3s(_red_, _green_, _blue_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSecondaryColor3sv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glSecondaryColor3sv(v);
+    rogl_pfn_glSecondaryColor3sv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSecondaryColor3ub(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned char red = (unsigned char)NUM2UINT(_arg1_);
-    unsigned char green = (unsigned char)NUM2UINT(_arg2_);
-    unsigned char blue = (unsigned char)NUM2UINT(_arg3_);
+    unsigned char _red_ = (unsigned char)NUM2UINT(_arg1_);
+    unsigned char _green_ = (unsigned char)NUM2UINT(_arg2_);
+    unsigned char _blue_ = (unsigned char)NUM2UINT(_arg3_);
 
-    rogl_pfn_glSecondaryColor3ub(red, green, blue);
+    rogl_pfn_glSecondaryColor3ub(_red_, _green_, _blue_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSecondaryColor3ubv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glSecondaryColor3ubv(v);
+    rogl_pfn_glSecondaryColor3ubv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSecondaryColor3ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int red = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int green = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int blue = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _red_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _green_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _blue_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glSecondaryColor3ui(red, green, blue);
+    rogl_pfn_glSecondaryColor3ui(_red_, _green_, _blue_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSecondaryColor3uiv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glSecondaryColor3uiv(v);
+    rogl_pfn_glSecondaryColor3uiv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSecondaryColor3us(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned short red = (unsigned short)NUM2UINT(_arg1_);
-    unsigned short green = (unsigned short)NUM2UINT(_arg2_);
-    unsigned short blue = (unsigned short)NUM2UINT(_arg3_);
+    unsigned short _red_ = (unsigned short)NUM2UINT(_arg1_);
+    unsigned short _green_ = (unsigned short)NUM2UINT(_arg2_);
+    unsigned short _blue_ = (unsigned short)NUM2UINT(_arg3_);
 
-    rogl_pfn_glSecondaryColor3us(red, green, blue);
+    rogl_pfn_glSecondaryColor3us(_red_, _green_, _blue_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSecondaryColor3usv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glSecondaryColor3usv(v);
+    rogl_pfn_glSecondaryColor3usv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSecondaryColorPointer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int size = (int)NUM2INT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    int stride = (int)NUM2INT(_arg3_);
-    void* pointer = (void*)val2ptr(_arg4_);
+    int _size_ = (int)NUM2INT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    int _stride_ = (int)NUM2INT(_arg3_);
+    void* _pointer_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glSecondaryColorPointer(size, type, stride, pointer);
+    rogl_pfn_glSecondaryColorPointer(_size_, _type_, _stride_, _pointer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glWindowPos2d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    double x = (double)NUM2DBL(_arg1_);
-    double y = (double)NUM2DBL(_arg2_);
+    double _x_ = (double)NUM2DBL(_arg1_);
+    double _y_ = (double)NUM2DBL(_arg2_);
 
-    rogl_pfn_glWindowPos2d(x, y);
+    rogl_pfn_glWindowPos2d(_x_, _y_);
 
     return Qnil;
 }
 
 static VALUE rogl_glWindowPos2dv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glWindowPos2dv(v);
+    rogl_pfn_glWindowPos2dv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glWindowPos2f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    float x = (float)NUM2DBL(_arg1_);
-    float y = (float)NUM2DBL(_arg2_);
+    float _x_ = (float)NUM2DBL(_arg1_);
+    float _y_ = (float)NUM2DBL(_arg2_);
 
-    rogl_pfn_glWindowPos2f(x, y);
+    rogl_pfn_glWindowPos2f(_x_, _y_);
 
     return Qnil;
 }
 
 static VALUE rogl_glWindowPos2fv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glWindowPos2fv(v);
+    rogl_pfn_glWindowPos2fv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glWindowPos2i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int x = (int)NUM2INT(_arg1_);
-    int y = (int)NUM2INT(_arg2_);
+    int _x_ = (int)NUM2INT(_arg1_);
+    int _y_ = (int)NUM2INT(_arg2_);
 
-    rogl_pfn_glWindowPos2i(x, y);
+    rogl_pfn_glWindowPos2i(_x_, _y_);
 
     return Qnil;
 }
 
 static VALUE rogl_glWindowPos2iv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glWindowPos2iv(v);
+    rogl_pfn_glWindowPos2iv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glWindowPos2s(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    short x = (short)NUM2INT(_arg1_);
-    short y = (short)NUM2INT(_arg2_);
+    short _x_ = (short)NUM2INT(_arg1_);
+    short _y_ = (short)NUM2INT(_arg2_);
 
-    rogl_pfn_glWindowPos2s(x, y);
+    rogl_pfn_glWindowPos2s(_x_, _y_);
 
     return Qnil;
 }
 
 static VALUE rogl_glWindowPos2sv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glWindowPos2sv(v);
+    rogl_pfn_glWindowPos2sv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glWindowPos3d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    double x = (double)NUM2DBL(_arg1_);
-    double y = (double)NUM2DBL(_arg2_);
-    double z = (double)NUM2DBL(_arg3_);
+    double _x_ = (double)NUM2DBL(_arg1_);
+    double _y_ = (double)NUM2DBL(_arg2_);
+    double _z_ = (double)NUM2DBL(_arg3_);
 
-    rogl_pfn_glWindowPos3d(x, y, z);
+    rogl_pfn_glWindowPos3d(_x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glWindowPos3dv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glWindowPos3dv(v);
+    rogl_pfn_glWindowPos3dv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glWindowPos3f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    float x = (float)NUM2DBL(_arg1_);
-    float y = (float)NUM2DBL(_arg2_);
-    float z = (float)NUM2DBL(_arg3_);
+    float _x_ = (float)NUM2DBL(_arg1_);
+    float _y_ = (float)NUM2DBL(_arg2_);
+    float _z_ = (float)NUM2DBL(_arg3_);
 
-    rogl_pfn_glWindowPos3f(x, y, z);
+    rogl_pfn_glWindowPos3f(_x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glWindowPos3fv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glWindowPos3fv(v);
+    rogl_pfn_glWindowPos3fv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glWindowPos3i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int x = (int)NUM2INT(_arg1_);
-    int y = (int)NUM2INT(_arg2_);
-    int z = (int)NUM2INT(_arg3_);
+    int _x_ = (int)NUM2INT(_arg1_);
+    int _y_ = (int)NUM2INT(_arg2_);
+    int _z_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glWindowPos3i(x, y, z);
+    rogl_pfn_glWindowPos3i(_x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glWindowPos3iv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glWindowPos3iv(v);
+    rogl_pfn_glWindowPos3iv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glWindowPos3s(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    short x = (short)NUM2INT(_arg1_);
-    short y = (short)NUM2INT(_arg2_);
-    short z = (short)NUM2INT(_arg3_);
+    short _x_ = (short)NUM2INT(_arg1_);
+    short _y_ = (short)NUM2INT(_arg2_);
+    short _z_ = (short)NUM2INT(_arg3_);
 
-    rogl_pfn_glWindowPos3s(x, y, z);
+    rogl_pfn_glWindowPos3s(_x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glWindowPos3sv(VALUE _obj_, VALUE _arg1_)
 {
-    void* v = (void*)val2ptr(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glWindowPos3sv(v);
+    rogl_pfn_glWindowPos3sv(_v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBlendColor(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    float red = (float)NUM2DBL(_arg1_);
-    float green = (float)NUM2DBL(_arg2_);
-    float blue = (float)NUM2DBL(_arg3_);
-    float alpha = (float)NUM2DBL(_arg4_);
+    float _red_ = (float)NUM2DBL(_arg1_);
+    float _green_ = (float)NUM2DBL(_arg2_);
+    float _blue_ = (float)NUM2DBL(_arg3_);
+    float _alpha_ = (float)NUM2DBL(_arg4_);
 
-    rogl_pfn_glBlendColor(red, green, blue, alpha);
+    rogl_pfn_glBlendColor(_red_, _green_, _blue_, _alpha_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBlendEquation(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glBlendEquation(mode);
+    rogl_pfn_glBlendEquation(_mode_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGenQueries(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* ids = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _ids_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glGenQueries(n, ids);
+    rogl_pfn_glGenQueries(_n_, _ids_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDeleteQueries(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* ids = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _ids_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glDeleteQueries(n, ids);
+    rogl_pfn_glDeleteQueries(_n_, _ids_);
 
     return Qnil;
 }
 
 static VALUE rogl_glIsQuery(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int id = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _id_ = (unsigned int)NUM2UINT(_arg1_);
 
-    unsigned char retval = rogl_pfn_glIsQuery(id);
+    unsigned char retval = rogl_pfn_glIsQuery(_id_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glBeginQuery(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int id = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _id_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glBeginQuery(target, id);
+    rogl_pfn_glBeginQuery(_target_, _id_);
 
     return Qnil;
 }
 
 static VALUE rogl_glEndQuery(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glEndQuery(target);
+    rogl_pfn_glEndQuery(_target_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetQueryiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetQueryiv(target, pname, params);
+    rogl_pfn_glGetQueryiv(_target_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetQueryObjectiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int id = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _id_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetQueryObjectiv(id, pname, params);
+    rogl_pfn_glGetQueryObjectiv(_id_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetQueryObjectuiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int id = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _id_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetQueryObjectuiv(id, pname, params);
+    rogl_pfn_glGetQueryObjectuiv(_id_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBindBuffer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glBindBuffer(target, buffer);
+    rogl_pfn_glBindBuffer(_target_, _buffer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDeleteBuffers(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* buffers = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _buffers_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glDeleteBuffers(n, buffers);
+    rogl_pfn_glDeleteBuffers(_n_, _buffers_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGenBuffers(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* buffers = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _buffers_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glGenBuffers(n, buffers);
+    rogl_pfn_glGenBuffers(_n_, _buffers_);
 
     return Qnil;
 }
 
 static VALUE rogl_glIsBuffer(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg1_);
 
-    unsigned char retval = rogl_pfn_glIsBuffer(buffer);
+    unsigned char retval = rogl_pfn_glIsBuffer(_buffer_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glBufferData(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg2_);
-    void* data = (void*)val2ptr(_arg3_);
-    unsigned int usage = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    ptrdiff_t _size_ = (ptrdiff_t)NUM2UINT(_arg2_);
+    void* _data_ = (void*)val2ptr(_arg3_);
+    unsigned int _usage_ = (unsigned int)NUM2UINT(_arg4_);
 
-    rogl_pfn_glBufferData(target, size, data, usage);
+    rogl_pfn_glBufferData(_target_, _size_, _data_, _usage_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBufferSubData(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg2_);
-    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg3_);
-    void* data = (void*)val2ptr(_arg4_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    ptrdiff_t _offset_ = (ptrdiff_t)NUM2UINT(_arg2_);
+    ptrdiff_t _size_ = (ptrdiff_t)NUM2UINT(_arg3_);
+    void* _data_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glBufferSubData(target, offset, size, data);
+    rogl_pfn_glBufferSubData(_target_, _offset_, _size_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetBufferSubData(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg2_);
-    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg3_);
-    void* data = (void*)val2ptr(_arg4_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    ptrdiff_t _offset_ = (ptrdiff_t)NUM2UINT(_arg2_);
+    ptrdiff_t _size_ = (ptrdiff_t)NUM2UINT(_arg3_);
+    void* _data_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetBufferSubData(target, offset, size, data);
+    rogl_pfn_glGetBufferSubData(_target_, _offset_, _size_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMapBuffer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int access = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _access_ = (unsigned int)NUM2UINT(_arg2_);
 
-    void* retval = rogl_pfn_glMapBuffer(target, access);
+    void* retval = rogl_pfn_glMapBuffer(_target_, _access_);
 
     return CPOINTER_AS_VALUE(retval);
 }
 
 static VALUE rogl_glUnmapBuffer(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
 
-    unsigned char retval = rogl_pfn_glUnmapBuffer(target);
+    unsigned char retval = rogl_pfn_glUnmapBuffer(_target_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glGetBufferParameteriv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetBufferParameteriv(target, pname, params);
+    rogl_pfn_glGetBufferParameteriv(_target_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetBufferPointerv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetBufferPointerv(target, pname, params);
+    rogl_pfn_glGetBufferPointerv(_target_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBlendEquationSeparate(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int modeRGB = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int modeAlpha = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _modeRGB_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _modeAlpha_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glBlendEquationSeparate(modeRGB, modeAlpha);
+    rogl_pfn_glBlendEquationSeparate(_modeRGB_, _modeAlpha_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDrawBuffers(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* bufs = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _bufs_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glDrawBuffers(n, bufs);
+    rogl_pfn_glDrawBuffers(_n_, _bufs_);
 
     return Qnil;
 }
 
 static VALUE rogl_glStencilOpSeparate(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int face = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int sfail = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int dpfail = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int dppass = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _face_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _sfail_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _dpfail_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _dppass_ = (unsigned int)NUM2UINT(_arg4_);
 
-    rogl_pfn_glStencilOpSeparate(face, sfail, dpfail, dppass);
+    rogl_pfn_glStencilOpSeparate(_face_, _sfail_, _dpfail_, _dppass_);
 
     return Qnil;
 }
 
 static VALUE rogl_glStencilFuncSeparate(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int face = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int func = (unsigned int)NUM2UINT(_arg2_);
-    int ref = (int)NUM2INT(_arg3_);
-    unsigned int mask = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _face_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _func_ = (unsigned int)NUM2UINT(_arg2_);
+    int _ref_ = (int)NUM2INT(_arg3_);
+    unsigned int _mask_ = (unsigned int)NUM2UINT(_arg4_);
 
-    rogl_pfn_glStencilFuncSeparate(face, func, ref, mask);
+    rogl_pfn_glStencilFuncSeparate(_face_, _func_, _ref_, _mask_);
 
     return Qnil;
 }
 
 static VALUE rogl_glStencilMaskSeparate(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int face = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int mask = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _face_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _mask_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glStencilMaskSeparate(face, mask);
+    rogl_pfn_glStencilMaskSeparate(_face_, _mask_);
 
     return Qnil;
 }
 
 static VALUE rogl_glAttachShader(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int shader = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _shader_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glAttachShader(program, shader);
+    rogl_pfn_glAttachShader(_program_, _shader_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBindAttribLocation(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
-    void* name = (void*)val2ptr(_arg3_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _name_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glBindAttribLocation(program, index, name);
+    rogl_pfn_glBindAttribLocation(_program_, _index_, _name_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCompileShader(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int shader = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _shader_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glCompileShader(shader);
+    rogl_pfn_glCompileShader(_shader_);
 
     return Qnil;
 }
@@ -6904,1055 +6904,1055 @@ static VALUE rogl_glCreateProgram(VALUE _obj_)
 
 static VALUE rogl_glCreateShader(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
 
-    unsigned int retval = rogl_pfn_glCreateShader(type);
+    unsigned int retval = rogl_pfn_glCreateShader(_type_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glDeleteProgram(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glDeleteProgram(program);
+    rogl_pfn_glDeleteProgram(_program_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDeleteShader(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int shader = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _shader_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glDeleteShader(shader);
+    rogl_pfn_glDeleteShader(_shader_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDetachShader(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int shader = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _shader_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glDetachShader(program, shader);
+    rogl_pfn_glDetachShader(_program_, _shader_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDisableVertexAttribArray(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glDisableVertexAttribArray(index);
+    rogl_pfn_glDisableVertexAttribArray(_index_);
 
     return Qnil;
 }
 
 static VALUE rogl_glEnableVertexAttribArray(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glEnableVertexAttribArray(index);
+    rogl_pfn_glEnableVertexAttribArray(_index_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetActiveAttrib(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
-    int bufSize = (int)NUM2INT(_arg3_);
-    void* length = (void*)val2ptr(_arg4_);
-    void* size = (void*)val2ptr(_arg5_);
-    void* type = (void*)val2ptr(_arg6_);
-    void* name = (void*)val2ptr(_arg7_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
+    int _bufSize_ = (int)NUM2INT(_arg3_);
+    void* _length_ = (void*)val2ptr(_arg4_);
+    void* _size_ = (void*)val2ptr(_arg5_);
+    void* _type_ = (void*)val2ptr(_arg6_);
+    void* _name_ = (void*)val2ptr(_arg7_);
 
-    rogl_pfn_glGetActiveAttrib(program, index, bufSize, length, size, type, name);
+    rogl_pfn_glGetActiveAttrib(_program_, _index_, _bufSize_, _length_, _size_, _type_, _name_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetActiveUniform(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
-    int bufSize = (int)NUM2INT(_arg3_);
-    void* length = (void*)val2ptr(_arg4_);
-    void* size = (void*)val2ptr(_arg5_);
-    void* type = (void*)val2ptr(_arg6_);
-    void* name = (void*)val2ptr(_arg7_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
+    int _bufSize_ = (int)NUM2INT(_arg3_);
+    void* _length_ = (void*)val2ptr(_arg4_);
+    void* _size_ = (void*)val2ptr(_arg5_);
+    void* _type_ = (void*)val2ptr(_arg6_);
+    void* _name_ = (void*)val2ptr(_arg7_);
 
-    rogl_pfn_glGetActiveUniform(program, index, bufSize, length, size, type, name);
+    rogl_pfn_glGetActiveUniform(_program_, _index_, _bufSize_, _length_, _size_, _type_, _name_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetAttachedShaders(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int maxCount = (int)NUM2INT(_arg2_);
-    void* count = (void*)val2ptr(_arg3_);
-    void* shaders = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _maxCount_ = (int)NUM2INT(_arg2_);
+    void* _count_ = (void*)val2ptr(_arg3_);
+    void* _shaders_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetAttachedShaders(program, maxCount, count, shaders);
+    rogl_pfn_glGetAttachedShaders(_program_, _maxCount_, _count_, _shaders_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetAttribLocation(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    void* name = (void*)val2ptr(_arg2_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _name_ = (void*)val2ptr(_arg2_);
 
-    int retval = rogl_pfn_glGetAttribLocation(program, name);
+    int retval = rogl_pfn_glGetAttribLocation(_program_, _name_);
 
     return INT2NUM(retval);
 }
 
 static VALUE rogl_glGetProgramiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetProgramiv(program, pname, params);
+    rogl_pfn_glGetProgramiv(_program_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetProgramInfoLog(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int bufSize = (int)NUM2INT(_arg2_);
-    void* length = (void*)val2ptr(_arg3_);
-    void* infoLog = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _bufSize_ = (int)NUM2INT(_arg2_);
+    void* _length_ = (void*)val2ptr(_arg3_);
+    void* _infoLog_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetProgramInfoLog(program, bufSize, length, infoLog);
+    rogl_pfn_glGetProgramInfoLog(_program_, _bufSize_, _length_, _infoLog_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetShaderiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int shader = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _shader_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetShaderiv(shader, pname, params);
+    rogl_pfn_glGetShaderiv(_shader_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetShaderInfoLog(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int shader = (unsigned int)NUM2UINT(_arg1_);
-    int bufSize = (int)NUM2INT(_arg2_);
-    void* length = (void*)val2ptr(_arg3_);
-    void* infoLog = (void*)val2ptr(_arg4_);
+    unsigned int _shader_ = (unsigned int)NUM2UINT(_arg1_);
+    int _bufSize_ = (int)NUM2INT(_arg2_);
+    void* _length_ = (void*)val2ptr(_arg3_);
+    void* _infoLog_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetShaderInfoLog(shader, bufSize, length, infoLog);
+    rogl_pfn_glGetShaderInfoLog(_shader_, _bufSize_, _length_, _infoLog_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetShaderSource(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int shader = (unsigned int)NUM2UINT(_arg1_);
-    int bufSize = (int)NUM2INT(_arg2_);
-    void* length = (void*)val2ptr(_arg3_);
-    void* source = (void*)val2ptr(_arg4_);
+    unsigned int _shader_ = (unsigned int)NUM2UINT(_arg1_);
+    int _bufSize_ = (int)NUM2INT(_arg2_);
+    void* _length_ = (void*)val2ptr(_arg3_);
+    void* _source_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetShaderSource(shader, bufSize, length, source);
+    rogl_pfn_glGetShaderSource(_shader_, _bufSize_, _length_, _source_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetUniformLocation(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    void* name = (void*)val2ptr(_arg2_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _name_ = (void*)val2ptr(_arg2_);
 
-    int retval = rogl_pfn_glGetUniformLocation(program, name);
+    int retval = rogl_pfn_glGetUniformLocation(_program_, _name_);
 
     return INT2NUM(retval);
 }
 
 static VALUE rogl_glGetUniformfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetUniformfv(program, location, params);
+    rogl_pfn_glGetUniformfv(_program_, _location_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetUniformiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetUniformiv(program, location, params);
+    rogl_pfn_glGetUniformiv(_program_, _location_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetVertexAttribdv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetVertexAttribdv(index, pname, params);
+    rogl_pfn_glGetVertexAttribdv(_index_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetVertexAttribfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetVertexAttribfv(index, pname, params);
+    rogl_pfn_glGetVertexAttribfv(_index_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetVertexAttribiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetVertexAttribiv(index, pname, params);
+    rogl_pfn_glGetVertexAttribiv(_index_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetVertexAttribPointerv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* pointer = (void*)val2ptr(_arg3_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _pointer_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetVertexAttribPointerv(index, pname, pointer);
+    rogl_pfn_glGetVertexAttribPointerv(_index_, _pname_, _pointer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glIsProgram(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
 
-    unsigned char retval = rogl_pfn_glIsProgram(program);
+    unsigned char retval = rogl_pfn_glIsProgram(_program_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glIsShader(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int shader = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _shader_ = (unsigned int)NUM2UINT(_arg1_);
 
-    unsigned char retval = rogl_pfn_glIsShader(shader);
+    unsigned char retval = rogl_pfn_glIsShader(_shader_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glLinkProgram(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glLinkProgram(program);
+    rogl_pfn_glLinkProgram(_program_);
 
     return Qnil;
 }
 
 static VALUE rogl_glShaderSource(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int shader = (unsigned int)NUM2UINT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* string = (void*)val2ptr(_arg3_);
-    void* length = (void*)val2ptr(_arg4_);
+    unsigned int _shader_ = (unsigned int)NUM2UINT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _string_ = (void*)val2ptr(_arg3_);
+    void* _length_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glShaderSource(shader, count, string, length);
+    rogl_pfn_glShaderSource(_shader_, _count_, _string_, _length_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUseProgram(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glUseProgram(program);
+    rogl_pfn_glUseProgram(_program_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform1f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    float v0 = (float)NUM2DBL(_arg2_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    float _v0_ = (float)NUM2DBL(_arg2_);
 
-    rogl_pfn_glUniform1f(location, v0);
+    rogl_pfn_glUniform1f(_location_, _v0_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform2f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    float v0 = (float)NUM2DBL(_arg2_);
-    float v1 = (float)NUM2DBL(_arg3_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    float _v0_ = (float)NUM2DBL(_arg2_);
+    float _v1_ = (float)NUM2DBL(_arg3_);
 
-    rogl_pfn_glUniform2f(location, v0, v1);
+    rogl_pfn_glUniform2f(_location_, _v0_, _v1_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform3f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    float v0 = (float)NUM2DBL(_arg2_);
-    float v1 = (float)NUM2DBL(_arg3_);
-    float v2 = (float)NUM2DBL(_arg4_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    float _v0_ = (float)NUM2DBL(_arg2_);
+    float _v1_ = (float)NUM2DBL(_arg3_);
+    float _v2_ = (float)NUM2DBL(_arg4_);
 
-    rogl_pfn_glUniform3f(location, v0, v1, v2);
+    rogl_pfn_glUniform3f(_location_, _v0_, _v1_, _v2_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform4f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    float v0 = (float)NUM2DBL(_arg2_);
-    float v1 = (float)NUM2DBL(_arg3_);
-    float v2 = (float)NUM2DBL(_arg4_);
-    float v3 = (float)NUM2DBL(_arg5_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    float _v0_ = (float)NUM2DBL(_arg2_);
+    float _v1_ = (float)NUM2DBL(_arg3_);
+    float _v2_ = (float)NUM2DBL(_arg4_);
+    float _v3_ = (float)NUM2DBL(_arg5_);
 
-    rogl_pfn_glUniform4f(location, v0, v1, v2, v3);
+    rogl_pfn_glUniform4f(_location_, _v0_, _v1_, _v2_, _v3_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform1i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int v0 = (int)NUM2INT(_arg2_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _v0_ = (int)NUM2INT(_arg2_);
 
-    rogl_pfn_glUniform1i(location, v0);
+    rogl_pfn_glUniform1i(_location_, _v0_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform2i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int v0 = (int)NUM2INT(_arg2_);
-    int v1 = (int)NUM2INT(_arg3_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _v0_ = (int)NUM2INT(_arg2_);
+    int _v1_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glUniform2i(location, v0, v1);
+    rogl_pfn_glUniform2i(_location_, _v0_, _v1_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform3i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int v0 = (int)NUM2INT(_arg2_);
-    int v1 = (int)NUM2INT(_arg3_);
-    int v2 = (int)NUM2INT(_arg4_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _v0_ = (int)NUM2INT(_arg2_);
+    int _v1_ = (int)NUM2INT(_arg3_);
+    int _v2_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glUniform3i(location, v0, v1, v2);
+    rogl_pfn_glUniform3i(_location_, _v0_, _v1_, _v2_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform4i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int v0 = (int)NUM2INT(_arg2_);
-    int v1 = (int)NUM2INT(_arg3_);
-    int v2 = (int)NUM2INT(_arg4_);
-    int v3 = (int)NUM2INT(_arg5_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _v0_ = (int)NUM2INT(_arg2_);
+    int _v1_ = (int)NUM2INT(_arg3_);
+    int _v2_ = (int)NUM2INT(_arg4_);
+    int _v3_ = (int)NUM2INT(_arg5_);
 
-    rogl_pfn_glUniform4i(location, v0, v1, v2, v3);
+    rogl_pfn_glUniform4i(_location_, _v0_, _v1_, _v2_, _v3_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform1fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* value = (void*)val2ptr(_arg3_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _value_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glUniform1fv(location, count, value);
+    rogl_pfn_glUniform1fv(_location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform2fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* value = (void*)val2ptr(_arg3_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _value_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glUniform2fv(location, count, value);
+    rogl_pfn_glUniform2fv(_location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform3fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* value = (void*)val2ptr(_arg3_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _value_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glUniform3fv(location, count, value);
+    rogl_pfn_glUniform3fv(_location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform4fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* value = (void*)val2ptr(_arg3_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _value_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glUniform4fv(location, count, value);
+    rogl_pfn_glUniform4fv(_location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform1iv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* value = (void*)val2ptr(_arg3_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _value_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glUniform1iv(location, count, value);
+    rogl_pfn_glUniform1iv(_location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform2iv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* value = (void*)val2ptr(_arg3_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _value_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glUniform2iv(location, count, value);
+    rogl_pfn_glUniform2iv(_location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform3iv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* value = (void*)val2ptr(_arg3_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _value_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glUniform3iv(location, count, value);
+    rogl_pfn_glUniform3iv(_location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform4iv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* value = (void*)val2ptr(_arg3_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _value_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glUniform4iv(location, count, value);
+    rogl_pfn_glUniform4iv(_location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniformMatrix2fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glUniformMatrix2fv(location, count, transpose, value);
+    rogl_pfn_glUniformMatrix2fv(_location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniformMatrix3fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glUniformMatrix3fv(location, count, transpose, value);
+    rogl_pfn_glUniformMatrix3fv(_location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniformMatrix4fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glUniformMatrix4fv(location, count, transpose, value);
+    rogl_pfn_glUniformMatrix4fv(_location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glValidateProgram(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glValidateProgram(program);
+    rogl_pfn_glValidateProgram(_program_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib1d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    double x = (double)NUM2DBL(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    double _x_ = (double)NUM2DBL(_arg2_);
 
-    rogl_pfn_glVertexAttrib1d(index, x);
+    rogl_pfn_glVertexAttrib1d(_index_, _x_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib1dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttrib1dv(index, v);
+    rogl_pfn_glVertexAttrib1dv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib1f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    float x = (float)NUM2DBL(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    float _x_ = (float)NUM2DBL(_arg2_);
 
-    rogl_pfn_glVertexAttrib1f(index, x);
+    rogl_pfn_glVertexAttrib1f(_index_, _x_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib1fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttrib1fv(index, v);
+    rogl_pfn_glVertexAttrib1fv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib1s(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    short x = (short)NUM2INT(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    short _x_ = (short)NUM2INT(_arg2_);
 
-    rogl_pfn_glVertexAttrib1s(index, x);
+    rogl_pfn_glVertexAttrib1s(_index_, _x_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib1sv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttrib1sv(index, v);
+    rogl_pfn_glVertexAttrib1sv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib2d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    double x = (double)NUM2DBL(_arg2_);
-    double y = (double)NUM2DBL(_arg3_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    double _x_ = (double)NUM2DBL(_arg2_);
+    double _y_ = (double)NUM2DBL(_arg3_);
 
-    rogl_pfn_glVertexAttrib2d(index, x, y);
+    rogl_pfn_glVertexAttrib2d(_index_, _x_, _y_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib2dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttrib2dv(index, v);
+    rogl_pfn_glVertexAttrib2dv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib2f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    float x = (float)NUM2DBL(_arg2_);
-    float y = (float)NUM2DBL(_arg3_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    float _x_ = (float)NUM2DBL(_arg2_);
+    float _y_ = (float)NUM2DBL(_arg3_);
 
-    rogl_pfn_glVertexAttrib2f(index, x, y);
+    rogl_pfn_glVertexAttrib2f(_index_, _x_, _y_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib2fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttrib2fv(index, v);
+    rogl_pfn_glVertexAttrib2fv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib2s(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    short x = (short)NUM2INT(_arg2_);
-    short y = (short)NUM2INT(_arg3_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    short _x_ = (short)NUM2INT(_arg2_);
+    short _y_ = (short)NUM2INT(_arg3_);
 
-    rogl_pfn_glVertexAttrib2s(index, x, y);
+    rogl_pfn_glVertexAttrib2s(_index_, _x_, _y_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib2sv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttrib2sv(index, v);
+    rogl_pfn_glVertexAttrib2sv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib3d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    double x = (double)NUM2DBL(_arg2_);
-    double y = (double)NUM2DBL(_arg3_);
-    double z = (double)NUM2DBL(_arg4_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    double _x_ = (double)NUM2DBL(_arg2_);
+    double _y_ = (double)NUM2DBL(_arg3_);
+    double _z_ = (double)NUM2DBL(_arg4_);
 
-    rogl_pfn_glVertexAttrib3d(index, x, y, z);
+    rogl_pfn_glVertexAttrib3d(_index_, _x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib3dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttrib3dv(index, v);
+    rogl_pfn_glVertexAttrib3dv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib3f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    float x = (float)NUM2DBL(_arg2_);
-    float y = (float)NUM2DBL(_arg3_);
-    float z = (float)NUM2DBL(_arg4_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    float _x_ = (float)NUM2DBL(_arg2_);
+    float _y_ = (float)NUM2DBL(_arg3_);
+    float _z_ = (float)NUM2DBL(_arg4_);
 
-    rogl_pfn_glVertexAttrib3f(index, x, y, z);
+    rogl_pfn_glVertexAttrib3f(_index_, _x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib3fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttrib3fv(index, v);
+    rogl_pfn_glVertexAttrib3fv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib3s(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    short x = (short)NUM2INT(_arg2_);
-    short y = (short)NUM2INT(_arg3_);
-    short z = (short)NUM2INT(_arg4_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    short _x_ = (short)NUM2INT(_arg2_);
+    short _y_ = (short)NUM2INT(_arg3_);
+    short _z_ = (short)NUM2INT(_arg4_);
 
-    rogl_pfn_glVertexAttrib3s(index, x, y, z);
+    rogl_pfn_glVertexAttrib3s(_index_, _x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib3sv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttrib3sv(index, v);
+    rogl_pfn_glVertexAttrib3sv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib4Nbv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttrib4Nbv(index, v);
+    rogl_pfn_glVertexAttrib4Nbv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib4Niv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttrib4Niv(index, v);
+    rogl_pfn_glVertexAttrib4Niv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib4Nsv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttrib4Nsv(index, v);
+    rogl_pfn_glVertexAttrib4Nsv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib4Nub(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    unsigned char x = (unsigned char)NUM2UINT(_arg2_);
-    unsigned char y = (unsigned char)NUM2UINT(_arg3_);
-    unsigned char z = (unsigned char)NUM2UINT(_arg4_);
-    unsigned char w = (unsigned char)NUM2UINT(_arg5_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned char _x_ = (unsigned char)NUM2UINT(_arg2_);
+    unsigned char _y_ = (unsigned char)NUM2UINT(_arg3_);
+    unsigned char _z_ = (unsigned char)NUM2UINT(_arg4_);
+    unsigned char _w_ = (unsigned char)NUM2UINT(_arg5_);
 
-    rogl_pfn_glVertexAttrib4Nub(index, x, y, z, w);
+    rogl_pfn_glVertexAttrib4Nub(_index_, _x_, _y_, _z_, _w_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib4Nubv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttrib4Nubv(index, v);
+    rogl_pfn_glVertexAttrib4Nubv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib4Nuiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttrib4Nuiv(index, v);
+    rogl_pfn_glVertexAttrib4Nuiv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib4Nusv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttrib4Nusv(index, v);
+    rogl_pfn_glVertexAttrib4Nusv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib4bv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttrib4bv(index, v);
+    rogl_pfn_glVertexAttrib4bv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib4d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    double x = (double)NUM2DBL(_arg2_);
-    double y = (double)NUM2DBL(_arg3_);
-    double z = (double)NUM2DBL(_arg4_);
-    double w = (double)NUM2DBL(_arg5_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    double _x_ = (double)NUM2DBL(_arg2_);
+    double _y_ = (double)NUM2DBL(_arg3_);
+    double _z_ = (double)NUM2DBL(_arg4_);
+    double _w_ = (double)NUM2DBL(_arg5_);
 
-    rogl_pfn_glVertexAttrib4d(index, x, y, z, w);
+    rogl_pfn_glVertexAttrib4d(_index_, _x_, _y_, _z_, _w_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib4dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttrib4dv(index, v);
+    rogl_pfn_glVertexAttrib4dv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib4f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    float x = (float)NUM2DBL(_arg2_);
-    float y = (float)NUM2DBL(_arg3_);
-    float z = (float)NUM2DBL(_arg4_);
-    float w = (float)NUM2DBL(_arg5_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    float _x_ = (float)NUM2DBL(_arg2_);
+    float _y_ = (float)NUM2DBL(_arg3_);
+    float _z_ = (float)NUM2DBL(_arg4_);
+    float _w_ = (float)NUM2DBL(_arg5_);
 
-    rogl_pfn_glVertexAttrib4f(index, x, y, z, w);
+    rogl_pfn_glVertexAttrib4f(_index_, _x_, _y_, _z_, _w_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib4fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttrib4fv(index, v);
+    rogl_pfn_glVertexAttrib4fv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib4iv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttrib4iv(index, v);
+    rogl_pfn_glVertexAttrib4iv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib4s(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    short x = (short)NUM2INT(_arg2_);
-    short y = (short)NUM2INT(_arg3_);
-    short z = (short)NUM2INT(_arg4_);
-    short w = (short)NUM2INT(_arg5_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    short _x_ = (short)NUM2INT(_arg2_);
+    short _y_ = (short)NUM2INT(_arg3_);
+    short _z_ = (short)NUM2INT(_arg4_);
+    short _w_ = (short)NUM2INT(_arg5_);
 
-    rogl_pfn_glVertexAttrib4s(index, x, y, z, w);
+    rogl_pfn_glVertexAttrib4s(_index_, _x_, _y_, _z_, _w_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib4sv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttrib4sv(index, v);
+    rogl_pfn_glVertexAttrib4sv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib4ubv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttrib4ubv(index, v);
+    rogl_pfn_glVertexAttrib4ubv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib4uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttrib4uiv(index, v);
+    rogl_pfn_glVertexAttrib4uiv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttrib4usv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttrib4usv(index, v);
+    rogl_pfn_glVertexAttrib4usv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribPointer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    int size = (int)NUM2INT(_arg2_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg3_);
-    unsigned char normalized = (unsigned char)NUM2UINT(_arg4_);
-    int stride = (int)NUM2INT(_arg5_);
-    void* pointer = (void*)val2ptr(_arg6_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    int _size_ = (int)NUM2INT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned char _normalized_ = (unsigned char)NUM2UINT(_arg4_);
+    int _stride_ = (int)NUM2INT(_arg5_);
+    void* _pointer_ = (void*)val2ptr(_arg6_);
 
-    rogl_pfn_glVertexAttribPointer(index, size, type, normalized, stride, pointer);
+    rogl_pfn_glVertexAttribPointer(_index_, _size_, _type_, _normalized_, _stride_, _pointer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniformMatrix2x3fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glUniformMatrix2x3fv(location, count, transpose, value);
+    rogl_pfn_glUniformMatrix2x3fv(_location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniformMatrix3x2fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glUniformMatrix3x2fv(location, count, transpose, value);
+    rogl_pfn_glUniformMatrix3x2fv(_location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniformMatrix2x4fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glUniformMatrix2x4fv(location, count, transpose, value);
+    rogl_pfn_glUniformMatrix2x4fv(_location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniformMatrix4x2fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glUniformMatrix4x2fv(location, count, transpose, value);
+    rogl_pfn_glUniformMatrix4x2fv(_location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniformMatrix3x4fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glUniformMatrix3x4fv(location, count, transpose, value);
+    rogl_pfn_glUniformMatrix3x4fv(_location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniformMatrix4x3fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glUniformMatrix4x3fv(location, count, transpose, value);
+    rogl_pfn_glUniformMatrix4x3fv(_location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColorMaski(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    unsigned char r = (unsigned char)NUM2UINT(_arg2_);
-    unsigned char g = (unsigned char)NUM2UINT(_arg3_);
-    unsigned char b = (unsigned char)NUM2UINT(_arg4_);
-    unsigned char a = (unsigned char)NUM2UINT(_arg5_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned char _r_ = (unsigned char)NUM2UINT(_arg2_);
+    unsigned char _g_ = (unsigned char)NUM2UINT(_arg3_);
+    unsigned char _b_ = (unsigned char)NUM2UINT(_arg4_);
+    unsigned char _a_ = (unsigned char)NUM2UINT(_arg5_);
 
-    rogl_pfn_glColorMaski(index, r, g, b, a);
+    rogl_pfn_glColorMaski(_index_, _r_, _g_, _b_, _a_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetBooleani_v(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
-    void* data = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _data_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetBooleani_v(target, index, data);
+    rogl_pfn_glGetBooleani_v(_target_, _index_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetIntegeri_v(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
-    void* data = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _data_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetIntegeri_v(target, index, data);
+    rogl_pfn_glGetIntegeri_v(_target_, _index_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glEnablei(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glEnablei(target, index);
+    rogl_pfn_glEnablei(_target_, _index_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDisablei(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glDisablei(target, index);
+    rogl_pfn_glDisablei(_target_, _index_);
 
     return Qnil;
 }
 
 static VALUE rogl_glIsEnabledi(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
 
-    unsigned char retval = rogl_pfn_glIsEnabledi(target, index);
+    unsigned char retval = rogl_pfn_glIsEnabledi(_target_, _index_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glBeginTransformFeedback(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int primitiveMode = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _primitiveMode_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glBeginTransformFeedback(primitiveMode);
+    rogl_pfn_glBeginTransformFeedback(_primitiveMode_);
 
     return Qnil;
 }
@@ -7966,71 +7966,71 @@ static VALUE rogl_glEndTransformFeedback(VALUE _obj_)
 
 static VALUE rogl_glBindBufferRange(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg3_);
-    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg4_);
-    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg5_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg3_);
+    ptrdiff_t _offset_ = (ptrdiff_t)NUM2UINT(_arg4_);
+    ptrdiff_t _size_ = (ptrdiff_t)NUM2UINT(_arg5_);
 
-    rogl_pfn_glBindBufferRange(target, index, buffer, offset, size);
+    rogl_pfn_glBindBufferRange(_target_, _index_, _buffer_, _offset_, _size_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBindBufferBase(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glBindBufferBase(target, index, buffer);
+    rogl_pfn_glBindBufferBase(_target_, _index_, _buffer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTransformFeedbackVaryings(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* varyings = (void*)val2ptr(_arg3_);
-    unsigned int bufferMode = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _varyings_ = (void*)val2ptr(_arg3_);
+    unsigned int _bufferMode_ = (unsigned int)NUM2UINT(_arg4_);
 
-    rogl_pfn_glTransformFeedbackVaryings(program, count, varyings, bufferMode);
+    rogl_pfn_glTransformFeedbackVaryings(_program_, _count_, _varyings_, _bufferMode_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetTransformFeedbackVarying(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
-    int bufSize = (int)NUM2INT(_arg3_);
-    void* length = (void*)val2ptr(_arg4_);
-    void* size = (void*)val2ptr(_arg5_);
-    void* type = (void*)val2ptr(_arg6_);
-    void* name = (void*)val2ptr(_arg7_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
+    int _bufSize_ = (int)NUM2INT(_arg3_);
+    void* _length_ = (void*)val2ptr(_arg4_);
+    void* _size_ = (void*)val2ptr(_arg5_);
+    void* _type_ = (void*)val2ptr(_arg6_);
+    void* _name_ = (void*)val2ptr(_arg7_);
 
-    rogl_pfn_glGetTransformFeedbackVarying(program, index, bufSize, length, size, type, name);
+    rogl_pfn_glGetTransformFeedbackVarying(_program_, _index_, _bufSize_, _length_, _size_, _type_, _name_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClampColor(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int clamp = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _clamp_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glClampColor(target, clamp);
+    rogl_pfn_glClampColor(_target_, _clamp_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBeginConditionalRender(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int id = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int mode = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _id_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glBeginConditionalRender(id, mode);
+    rogl_pfn_glBeginConditionalRender(_id_, _mode_);
 
     return Qnil;
 }
@@ -8044,2177 +8044,2177 @@ static VALUE rogl_glEndConditionalRender(VALUE _obj_)
 
 static VALUE rogl_glVertexAttribIPointer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    int size = (int)NUM2INT(_arg2_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg3_);
-    int stride = (int)NUM2INT(_arg4_);
-    void* pointer = (void*)val2ptr(_arg5_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    int _size_ = (int)NUM2INT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg3_);
+    int _stride_ = (int)NUM2INT(_arg4_);
+    void* _pointer_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glVertexAttribIPointer(index, size, type, stride, pointer);
+    rogl_pfn_glVertexAttribIPointer(_index_, _size_, _type_, _stride_, _pointer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetVertexAttribIiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetVertexAttribIiv(index, pname, params);
+    rogl_pfn_glGetVertexAttribIiv(_index_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetVertexAttribIuiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetVertexAttribIuiv(index, pname, params);
+    rogl_pfn_glGetVertexAttribIuiv(_index_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribI1i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    int x = (int)NUM2INT(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    int _x_ = (int)NUM2INT(_arg2_);
 
-    rogl_pfn_glVertexAttribI1i(index, x);
+    rogl_pfn_glVertexAttribI1i(_index_, _x_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribI2i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    int x = (int)NUM2INT(_arg2_);
-    int y = (int)NUM2INT(_arg3_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    int _x_ = (int)NUM2INT(_arg2_);
+    int _y_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glVertexAttribI2i(index, x, y);
+    rogl_pfn_glVertexAttribI2i(_index_, _x_, _y_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribI3i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    int x = (int)NUM2INT(_arg2_);
-    int y = (int)NUM2INT(_arg3_);
-    int z = (int)NUM2INT(_arg4_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    int _x_ = (int)NUM2INT(_arg2_);
+    int _y_ = (int)NUM2INT(_arg3_);
+    int _z_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glVertexAttribI3i(index, x, y, z);
+    rogl_pfn_glVertexAttribI3i(_index_, _x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribI4i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    int x = (int)NUM2INT(_arg2_);
-    int y = (int)NUM2INT(_arg3_);
-    int z = (int)NUM2INT(_arg4_);
-    int w = (int)NUM2INT(_arg5_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    int _x_ = (int)NUM2INT(_arg2_);
+    int _y_ = (int)NUM2INT(_arg3_);
+    int _z_ = (int)NUM2INT(_arg4_);
+    int _w_ = (int)NUM2INT(_arg5_);
 
-    rogl_pfn_glVertexAttribI4i(index, x, y, z, w);
+    rogl_pfn_glVertexAttribI4i(_index_, _x_, _y_, _z_, _w_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribI1ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int x = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _x_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glVertexAttribI1ui(index, x);
+    rogl_pfn_glVertexAttribI1ui(_index_, _x_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribI2ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int x = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int y = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _x_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _y_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glVertexAttribI2ui(index, x, y);
+    rogl_pfn_glVertexAttribI2ui(_index_, _x_, _y_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribI3ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int x = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int y = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int z = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _x_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _y_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _z_ = (unsigned int)NUM2UINT(_arg4_);
 
-    rogl_pfn_glVertexAttribI3ui(index, x, y, z);
+    rogl_pfn_glVertexAttribI3ui(_index_, _x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribI4ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int x = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int y = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int z = (unsigned int)NUM2UINT(_arg4_);
-    unsigned int w = (unsigned int)NUM2UINT(_arg5_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _x_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _y_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _z_ = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _w_ = (unsigned int)NUM2UINT(_arg5_);
 
-    rogl_pfn_glVertexAttribI4ui(index, x, y, z, w);
+    rogl_pfn_glVertexAttribI4ui(_index_, _x_, _y_, _z_, _w_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribI1iv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttribI1iv(index, v);
+    rogl_pfn_glVertexAttribI1iv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribI2iv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttribI2iv(index, v);
+    rogl_pfn_glVertexAttribI2iv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribI3iv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttribI3iv(index, v);
+    rogl_pfn_glVertexAttribI3iv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribI4iv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttribI4iv(index, v);
+    rogl_pfn_glVertexAttribI4iv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribI1uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttribI1uiv(index, v);
+    rogl_pfn_glVertexAttribI1uiv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribI2uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttribI2uiv(index, v);
+    rogl_pfn_glVertexAttribI2uiv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribI3uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttribI3uiv(index, v);
+    rogl_pfn_glVertexAttribI3uiv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribI4uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttribI4uiv(index, v);
+    rogl_pfn_glVertexAttribI4uiv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribI4bv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttribI4bv(index, v);
+    rogl_pfn_glVertexAttribI4bv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribI4sv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttribI4sv(index, v);
+    rogl_pfn_glVertexAttribI4sv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribI4ubv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttribI4ubv(index, v);
+    rogl_pfn_glVertexAttribI4ubv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribI4usv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttribI4usv(index, v);
+    rogl_pfn_glVertexAttribI4usv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetUniformuiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetUniformuiv(program, location, params);
+    rogl_pfn_glGetUniformuiv(_program_, _location_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBindFragDataLocation(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int color = (unsigned int)NUM2UINT(_arg2_);
-    void* name = (void*)val2ptr(_arg3_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _color_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _name_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glBindFragDataLocation(program, color, name);
+    rogl_pfn_glBindFragDataLocation(_program_, _color_, _name_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetFragDataLocation(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    void* name = (void*)val2ptr(_arg2_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _name_ = (void*)val2ptr(_arg2_);
 
-    int retval = rogl_pfn_glGetFragDataLocation(program, name);
+    int retval = rogl_pfn_glGetFragDataLocation(_program_, _name_);
 
     return INT2NUM(retval);
 }
 
 static VALUE rogl_glUniform1ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    unsigned int v0 = (unsigned int)NUM2UINT(_arg2_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    unsigned int _v0_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glUniform1ui(location, v0);
+    rogl_pfn_glUniform1ui(_location_, _v0_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform2ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    unsigned int v0 = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int v1 = (unsigned int)NUM2UINT(_arg3_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    unsigned int _v0_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _v1_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glUniform2ui(location, v0, v1);
+    rogl_pfn_glUniform2ui(_location_, _v0_, _v1_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform3ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    unsigned int v0 = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int v1 = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int v2 = (unsigned int)NUM2UINT(_arg4_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    unsigned int _v0_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _v1_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _v2_ = (unsigned int)NUM2UINT(_arg4_);
 
-    rogl_pfn_glUniform3ui(location, v0, v1, v2);
+    rogl_pfn_glUniform3ui(_location_, _v0_, _v1_, _v2_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform4ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    unsigned int v0 = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int v1 = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int v2 = (unsigned int)NUM2UINT(_arg4_);
-    unsigned int v3 = (unsigned int)NUM2UINT(_arg5_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    unsigned int _v0_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _v1_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _v2_ = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _v3_ = (unsigned int)NUM2UINT(_arg5_);
 
-    rogl_pfn_glUniform4ui(location, v0, v1, v2, v3);
+    rogl_pfn_glUniform4ui(_location_, _v0_, _v1_, _v2_, _v3_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform1uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* value = (void*)val2ptr(_arg3_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _value_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glUniform1uiv(location, count, value);
+    rogl_pfn_glUniform1uiv(_location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform2uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* value = (void*)val2ptr(_arg3_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _value_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glUniform2uiv(location, count, value);
+    rogl_pfn_glUniform2uiv(_location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform3uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* value = (void*)val2ptr(_arg3_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _value_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glUniform3uiv(location, count, value);
+    rogl_pfn_glUniform3uiv(_location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform4uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* value = (void*)val2ptr(_arg3_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _value_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glUniform4uiv(location, count, value);
+    rogl_pfn_glUniform4uiv(_location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexParameterIiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glTexParameterIiv(target, pname, params);
+    rogl_pfn_glTexParameterIiv(_target_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexParameterIuiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glTexParameterIuiv(target, pname, params);
+    rogl_pfn_glTexParameterIuiv(_target_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetTexParameterIiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetTexParameterIiv(target, pname, params);
+    rogl_pfn_glGetTexParameterIiv(_target_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetTexParameterIuiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetTexParameterIuiv(target, pname, params);
+    rogl_pfn_glGetTexParameterIuiv(_target_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClearBufferiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    int drawbuffer = (int)NUM2INT(_arg2_);
-    void* value = (void*)val2ptr(_arg3_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg1_);
+    int _drawbuffer_ = (int)NUM2INT(_arg2_);
+    void* _value_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glClearBufferiv(buffer, drawbuffer, value);
+    rogl_pfn_glClearBufferiv(_buffer_, _drawbuffer_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClearBufferuiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    int drawbuffer = (int)NUM2INT(_arg2_);
-    void* value = (void*)val2ptr(_arg3_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg1_);
+    int _drawbuffer_ = (int)NUM2INT(_arg2_);
+    void* _value_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glClearBufferuiv(buffer, drawbuffer, value);
+    rogl_pfn_glClearBufferuiv(_buffer_, _drawbuffer_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClearBufferfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    int drawbuffer = (int)NUM2INT(_arg2_);
-    void* value = (void*)val2ptr(_arg3_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg1_);
+    int _drawbuffer_ = (int)NUM2INT(_arg2_);
+    void* _value_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glClearBufferfv(buffer, drawbuffer, value);
+    rogl_pfn_glClearBufferfv(_buffer_, _drawbuffer_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClearBufferfi(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    int drawbuffer = (int)NUM2INT(_arg2_);
-    float depth = (float)NUM2DBL(_arg3_);
-    int stencil = (int)NUM2INT(_arg4_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg1_);
+    int _drawbuffer_ = (int)NUM2INT(_arg2_);
+    float _depth_ = (float)NUM2DBL(_arg3_);
+    int _stencil_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glClearBufferfi(buffer, drawbuffer, depth, stencil);
+    rogl_pfn_glClearBufferfi(_buffer_, _drawbuffer_, _depth_, _stencil_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetStringi(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int name = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _name_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
 
-    void* retval = rogl_pfn_glGetStringi(name, index);
+    void* retval = rogl_pfn_glGetStringi(_name_, _index_);
 
     return rb_str_new2(retval);
 }
 
 static VALUE rogl_glIsRenderbuffer(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int renderbuffer = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _renderbuffer_ = (unsigned int)NUM2UINT(_arg1_);
 
-    unsigned char retval = rogl_pfn_glIsRenderbuffer(renderbuffer);
+    unsigned char retval = rogl_pfn_glIsRenderbuffer(_renderbuffer_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glBindRenderbuffer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int renderbuffer = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _renderbuffer_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glBindRenderbuffer(target, renderbuffer);
+    rogl_pfn_glBindRenderbuffer(_target_, _renderbuffer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDeleteRenderbuffers(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* renderbuffers = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _renderbuffers_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glDeleteRenderbuffers(n, renderbuffers);
+    rogl_pfn_glDeleteRenderbuffers(_n_, _renderbuffers_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGenRenderbuffers(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* renderbuffers = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _renderbuffers_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glGenRenderbuffers(n, renderbuffers);
+    rogl_pfn_glGenRenderbuffers(_n_, _renderbuffers_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRenderbufferStorage(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg2_);
-    int width = (int)NUM2INT(_arg3_);
-    int height = (int)NUM2INT(_arg4_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg2_);
+    int _width_ = (int)NUM2INT(_arg3_);
+    int _height_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glRenderbufferStorage(target, internalformat, width, height);
+    rogl_pfn_glRenderbufferStorage(_target_, _internalformat_, _width_, _height_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetRenderbufferParameteriv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetRenderbufferParameteriv(target, pname, params);
+    rogl_pfn_glGetRenderbufferParameteriv(_target_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glIsFramebuffer(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int framebuffer = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _framebuffer_ = (unsigned int)NUM2UINT(_arg1_);
 
-    unsigned char retval = rogl_pfn_glIsFramebuffer(framebuffer);
+    unsigned char retval = rogl_pfn_glIsFramebuffer(_framebuffer_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glBindFramebuffer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int framebuffer = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _framebuffer_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glBindFramebuffer(target, framebuffer);
+    rogl_pfn_glBindFramebuffer(_target_, _framebuffer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDeleteFramebuffers(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* framebuffers = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _framebuffers_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glDeleteFramebuffers(n, framebuffers);
+    rogl_pfn_glDeleteFramebuffers(_n_, _framebuffers_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGenFramebuffers(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* framebuffers = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _framebuffers_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glGenFramebuffers(n, framebuffers);
+    rogl_pfn_glGenFramebuffers(_n_, _framebuffers_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCheckFramebufferStatus(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
 
-    unsigned int retval = rogl_pfn_glCheckFramebufferStatus(target);
+    unsigned int retval = rogl_pfn_glCheckFramebufferStatus(_target_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glFramebufferTexture1D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int attachment = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int textarget = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int texture = (unsigned int)NUM2UINT(_arg4_);
-    int level = (int)NUM2INT(_arg5_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _attachment_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _textarget_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg4_);
+    int _level_ = (int)NUM2INT(_arg5_);
 
-    rogl_pfn_glFramebufferTexture1D(target, attachment, textarget, texture, level);
+    rogl_pfn_glFramebufferTexture1D(_target_, _attachment_, _textarget_, _texture_, _level_);
 
     return Qnil;
 }
 
 static VALUE rogl_glFramebufferTexture2D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int attachment = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int textarget = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int texture = (unsigned int)NUM2UINT(_arg4_);
-    int level = (int)NUM2INT(_arg5_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _attachment_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _textarget_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg4_);
+    int _level_ = (int)NUM2INT(_arg5_);
 
-    rogl_pfn_glFramebufferTexture2D(target, attachment, textarget, texture, level);
+    rogl_pfn_glFramebufferTexture2D(_target_, _attachment_, _textarget_, _texture_, _level_);
 
     return Qnil;
 }
 
 static VALUE rogl_glFramebufferTexture3D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int attachment = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int textarget = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int texture = (unsigned int)NUM2UINT(_arg4_);
-    int level = (int)NUM2INT(_arg5_);
-    int zoffset = (int)NUM2INT(_arg6_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _attachment_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _textarget_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg4_);
+    int _level_ = (int)NUM2INT(_arg5_);
+    int _zoffset_ = (int)NUM2INT(_arg6_);
 
-    rogl_pfn_glFramebufferTexture3D(target, attachment, textarget, texture, level, zoffset);
+    rogl_pfn_glFramebufferTexture3D(_target_, _attachment_, _textarget_, _texture_, _level_, _zoffset_);
 
     return Qnil;
 }
 
 static VALUE rogl_glFramebufferRenderbuffer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int attachment = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int renderbuffertarget = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int renderbuffer = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _attachment_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _renderbuffertarget_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _renderbuffer_ = (unsigned int)NUM2UINT(_arg4_);
 
-    rogl_pfn_glFramebufferRenderbuffer(target, attachment, renderbuffertarget, renderbuffer);
+    rogl_pfn_glFramebufferRenderbuffer(_target_, _attachment_, _renderbuffertarget_, _renderbuffer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetFramebufferAttachmentParameteriv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int attachment = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
-    void* params = (void*)val2ptr(_arg4_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _attachment_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _params_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetFramebufferAttachmentParameteriv(target, attachment, pname, params);
+    rogl_pfn_glGetFramebufferAttachmentParameteriv(_target_, _attachment_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGenerateMipmap(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glGenerateMipmap(target);
+    rogl_pfn_glGenerateMipmap(_target_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBlitFramebuffer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_, VALUE _arg9_, VALUE _arg10_)
 {
-    int srcX0 = (int)NUM2INT(_arg1_);
-    int srcY0 = (int)NUM2INT(_arg2_);
-    int srcX1 = (int)NUM2INT(_arg3_);
-    int srcY1 = (int)NUM2INT(_arg4_);
-    int dstX0 = (int)NUM2INT(_arg5_);
-    int dstY0 = (int)NUM2INT(_arg6_);
-    int dstX1 = (int)NUM2INT(_arg7_);
-    int dstY1 = (int)NUM2INT(_arg8_);
-    unsigned int mask = (unsigned int)NUM2UINT(_arg9_);
-    unsigned int filter = (unsigned int)NUM2UINT(_arg10_);
+    int _srcX0_ = (int)NUM2INT(_arg1_);
+    int _srcY0_ = (int)NUM2INT(_arg2_);
+    int _srcX1_ = (int)NUM2INT(_arg3_);
+    int _srcY1_ = (int)NUM2INT(_arg4_);
+    int _dstX0_ = (int)NUM2INT(_arg5_);
+    int _dstY0_ = (int)NUM2INT(_arg6_);
+    int _dstX1_ = (int)NUM2INT(_arg7_);
+    int _dstY1_ = (int)NUM2INT(_arg8_);
+    unsigned int _mask_ = (unsigned int)NUM2UINT(_arg9_);
+    unsigned int _filter_ = (unsigned int)NUM2UINT(_arg10_);
 
-    rogl_pfn_glBlitFramebuffer(srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1, mask, filter);
+    rogl_pfn_glBlitFramebuffer(_srcX0_, _srcY0_, _srcX1_, _srcY1_, _dstX0_, _dstY0_, _dstX1_, _dstY1_, _mask_, _filter_);
 
     return Qnil;
 }
 
 static VALUE rogl_glRenderbufferStorageMultisample(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int samples = (int)NUM2INT(_arg2_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
-    int height = (int)NUM2INT(_arg5_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _samples_ = (int)NUM2INT(_arg2_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
+    int _height_ = (int)NUM2INT(_arg5_);
 
-    rogl_pfn_glRenderbufferStorageMultisample(target, samples, internalformat, width, height);
+    rogl_pfn_glRenderbufferStorageMultisample(_target_, _samples_, _internalformat_, _width_, _height_);
 
     return Qnil;
 }
 
 static VALUE rogl_glFramebufferTextureLayer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int attachment = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int texture = (unsigned int)NUM2UINT(_arg3_);
-    int level = (int)NUM2INT(_arg4_);
-    int layer = (int)NUM2INT(_arg5_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _attachment_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg3_);
+    int _level_ = (int)NUM2INT(_arg4_);
+    int _layer_ = (int)NUM2INT(_arg5_);
 
-    rogl_pfn_glFramebufferTextureLayer(target, attachment, texture, level, layer);
+    rogl_pfn_glFramebufferTextureLayer(_target_, _attachment_, _texture_, _level_, _layer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMapBufferRange(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg2_);
-    ptrdiff_t length = (ptrdiff_t)NUM2UINT(_arg3_);
-    unsigned int access = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    ptrdiff_t _offset_ = (ptrdiff_t)NUM2UINT(_arg2_);
+    ptrdiff_t _length_ = (ptrdiff_t)NUM2UINT(_arg3_);
+    unsigned int _access_ = (unsigned int)NUM2UINT(_arg4_);
 
-    void* retval = rogl_pfn_glMapBufferRange(target, offset, length, access);
+    void* retval = rogl_pfn_glMapBufferRange(_target_, _offset_, _length_, _access_);
 
     return CPOINTER_AS_VALUE(retval);
 }
 
 static VALUE rogl_glFlushMappedBufferRange(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg2_);
-    ptrdiff_t length = (ptrdiff_t)NUM2UINT(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    ptrdiff_t _offset_ = (ptrdiff_t)NUM2UINT(_arg2_);
+    ptrdiff_t _length_ = (ptrdiff_t)NUM2UINT(_arg3_);
 
-    rogl_pfn_glFlushMappedBufferRange(target, offset, length);
+    rogl_pfn_glFlushMappedBufferRange(_target_, _offset_, _length_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBindVertexArray(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int array = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _array_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glBindVertexArray(array);
+    rogl_pfn_glBindVertexArray(_array_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDeleteVertexArrays(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* arrays = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _arrays_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glDeleteVertexArrays(n, arrays);
+    rogl_pfn_glDeleteVertexArrays(_n_, _arrays_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGenVertexArrays(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* arrays = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _arrays_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glGenVertexArrays(n, arrays);
+    rogl_pfn_glGenVertexArrays(_n_, _arrays_);
 
     return Qnil;
 }
 
 static VALUE rogl_glIsVertexArray(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int array = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _array_ = (unsigned int)NUM2UINT(_arg1_);
 
-    unsigned char retval = rogl_pfn_glIsVertexArray(array);
+    unsigned char retval = rogl_pfn_glIsVertexArray(_array_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glDrawArraysInstanced(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    int first = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    int instancecount = (int)NUM2INT(_arg4_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    int _first_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    int _instancecount_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glDrawArraysInstanced(mode, first, count, instancecount);
+    rogl_pfn_glDrawArraysInstanced(_mode_, _first_, _count_, _instancecount_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDrawElementsInstanced(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg3_);
-    void* indices = (void*)val2ptr(_arg4_);
-    int instancecount = (int)NUM2INT(_arg5_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _indices_ = (void*)val2ptr(_arg4_);
+    int _instancecount_ = (int)NUM2INT(_arg5_);
 
-    rogl_pfn_glDrawElementsInstanced(mode, count, type, indices, instancecount);
+    rogl_pfn_glDrawElementsInstanced(_mode_, _count_, _type_, _indices_, _instancecount_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexBuffer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glTexBuffer(target, internalformat, buffer);
+    rogl_pfn_glTexBuffer(_target_, _internalformat_, _buffer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glPrimitiveRestartIndex(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glPrimitiveRestartIndex(index);
+    rogl_pfn_glPrimitiveRestartIndex(_index_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCopyBufferSubData(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int readTarget = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int writeTarget = (unsigned int)NUM2UINT(_arg2_);
-    ptrdiff_t readOffset = (ptrdiff_t)NUM2UINT(_arg3_);
-    ptrdiff_t writeOffset = (ptrdiff_t)NUM2UINT(_arg4_);
-    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg5_);
+    unsigned int _readTarget_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _writeTarget_ = (unsigned int)NUM2UINT(_arg2_);
+    ptrdiff_t _readOffset_ = (ptrdiff_t)NUM2UINT(_arg3_);
+    ptrdiff_t _writeOffset_ = (ptrdiff_t)NUM2UINT(_arg4_);
+    ptrdiff_t _size_ = (ptrdiff_t)NUM2UINT(_arg5_);
 
-    rogl_pfn_glCopyBufferSubData(readTarget, writeTarget, readOffset, writeOffset, size);
+    rogl_pfn_glCopyBufferSubData(_readTarget_, _writeTarget_, _readOffset_, _writeOffset_, _size_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetUniformIndices(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int uniformCount = (int)NUM2INT(_arg2_);
-    void* uniformNames = (void*)val2ptr(_arg3_);
-    void* uniformIndices = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _uniformCount_ = (int)NUM2INT(_arg2_);
+    void* _uniformNames_ = (void*)val2ptr(_arg3_);
+    void* _uniformIndices_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetUniformIndices(program, uniformCount, uniformNames, uniformIndices);
+    rogl_pfn_glGetUniformIndices(_program_, _uniformCount_, _uniformNames_, _uniformIndices_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetActiveUniformsiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int uniformCount = (int)NUM2INT(_arg2_);
-    void* uniformIndices = (void*)val2ptr(_arg3_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg4_);
-    void* params = (void*)val2ptr(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _uniformCount_ = (int)NUM2INT(_arg2_);
+    void* _uniformIndices_ = (void*)val2ptr(_arg3_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg4_);
+    void* _params_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glGetActiveUniformsiv(program, uniformCount, uniformIndices, pname, params);
+    rogl_pfn_glGetActiveUniformsiv(_program_, _uniformCount_, _uniformIndices_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetActiveUniformName(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int uniformIndex = (unsigned int)NUM2UINT(_arg2_);
-    int bufSize = (int)NUM2INT(_arg3_);
-    void* length = (void*)val2ptr(_arg4_);
-    void* uniformName = (void*)val2ptr(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _uniformIndex_ = (unsigned int)NUM2UINT(_arg2_);
+    int _bufSize_ = (int)NUM2INT(_arg3_);
+    void* _length_ = (void*)val2ptr(_arg4_);
+    void* _uniformName_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glGetActiveUniformName(program, uniformIndex, bufSize, length, uniformName);
+    rogl_pfn_glGetActiveUniformName(_program_, _uniformIndex_, _bufSize_, _length_, _uniformName_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetUniformBlockIndex(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    void* uniformBlockName = (void*)val2ptr(_arg2_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _uniformBlockName_ = (void*)val2ptr(_arg2_);
 
-    unsigned int retval = rogl_pfn_glGetUniformBlockIndex(program, uniformBlockName);
+    unsigned int retval = rogl_pfn_glGetUniformBlockIndex(_program_, _uniformBlockName_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glGetActiveUniformBlockiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int uniformBlockIndex = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
-    void* params = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _uniformBlockIndex_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _params_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetActiveUniformBlockiv(program, uniformBlockIndex, pname, params);
+    rogl_pfn_glGetActiveUniformBlockiv(_program_, _uniformBlockIndex_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetActiveUniformBlockName(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int uniformBlockIndex = (unsigned int)NUM2UINT(_arg2_);
-    int bufSize = (int)NUM2INT(_arg3_);
-    void* length = (void*)val2ptr(_arg4_);
-    void* uniformBlockName = (void*)val2ptr(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _uniformBlockIndex_ = (unsigned int)NUM2UINT(_arg2_);
+    int _bufSize_ = (int)NUM2INT(_arg3_);
+    void* _length_ = (void*)val2ptr(_arg4_);
+    void* _uniformBlockName_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glGetActiveUniformBlockName(program, uniformBlockIndex, bufSize, length, uniformBlockName);
+    rogl_pfn_glGetActiveUniformBlockName(_program_, _uniformBlockIndex_, _bufSize_, _length_, _uniformBlockName_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniformBlockBinding(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int uniformBlockIndex = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int uniformBlockBinding = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _uniformBlockIndex_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _uniformBlockBinding_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glUniformBlockBinding(program, uniformBlockIndex, uniformBlockBinding);
+    rogl_pfn_glUniformBlockBinding(_program_, _uniformBlockIndex_, _uniformBlockBinding_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDrawElementsBaseVertex(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg3_);
-    void* indices = (void*)val2ptr(_arg4_);
-    int basevertex = (int)NUM2INT(_arg5_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _indices_ = (void*)val2ptr(_arg4_);
+    int _basevertex_ = (int)NUM2INT(_arg5_);
 
-    rogl_pfn_glDrawElementsBaseVertex(mode, count, type, indices, basevertex);
+    rogl_pfn_glDrawElementsBaseVertex(_mode_, _count_, _type_, _indices_, _basevertex_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDrawRangeElementsBaseVertex(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int start = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int end = (unsigned int)NUM2UINT(_arg3_);
-    int count = (int)NUM2INT(_arg4_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg5_);
-    void* indices = (void*)val2ptr(_arg6_);
-    int basevertex = (int)NUM2INT(_arg7_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _start_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _end_ = (unsigned int)NUM2UINT(_arg3_);
+    int _count_ = (int)NUM2INT(_arg4_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg5_);
+    void* _indices_ = (void*)val2ptr(_arg6_);
+    int _basevertex_ = (int)NUM2INT(_arg7_);
 
-    rogl_pfn_glDrawRangeElementsBaseVertex(mode, start, end, count, type, indices, basevertex);
+    rogl_pfn_glDrawRangeElementsBaseVertex(_mode_, _start_, _end_, _count_, _type_, _indices_, _basevertex_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDrawElementsInstancedBaseVertex(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg3_);
-    void* indices = (void*)val2ptr(_arg4_);
-    int instancecount = (int)NUM2INT(_arg5_);
-    int basevertex = (int)NUM2INT(_arg6_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _indices_ = (void*)val2ptr(_arg4_);
+    int _instancecount_ = (int)NUM2INT(_arg5_);
+    int _basevertex_ = (int)NUM2INT(_arg6_);
 
-    rogl_pfn_glDrawElementsInstancedBaseVertex(mode, count, type, indices, instancecount, basevertex);
+    rogl_pfn_glDrawElementsInstancedBaseVertex(_mode_, _count_, _type_, _indices_, _instancecount_, _basevertex_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiDrawElementsBaseVertex(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    void* count = (void*)val2ptr(_arg2_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg3_);
-    void* indices = (void*)val2ptr(_arg4_);
-    int drawcount = (int)NUM2INT(_arg5_);
-    void* basevertex = (void*)val2ptr(_arg6_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _count_ = (void*)val2ptr(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _indices_ = (void*)val2ptr(_arg4_);
+    int _drawcount_ = (int)NUM2INT(_arg5_);
+    void* _basevertex_ = (void*)val2ptr(_arg6_);
 
-    rogl_pfn_glMultiDrawElementsBaseVertex(mode, count, type, indices, drawcount, basevertex);
+    rogl_pfn_glMultiDrawElementsBaseVertex(_mode_, _count_, _type_, _indices_, _drawcount_, _basevertex_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProvokingVertex(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glProvokingVertex(mode);
+    rogl_pfn_glProvokingVertex(_mode_);
 
     return Qnil;
 }
 
 static VALUE rogl_glFenceSync(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int condition = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int flags = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _condition_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _flags_ = (unsigned int)NUM2UINT(_arg2_);
 
-    void* retval = rogl_pfn_glFenceSync(condition, flags);
+    void* retval = rogl_pfn_glFenceSync(_condition_, _flags_);
 
     return CPOINTER_AS_VALUE(retval);
 }
 
 static VALUE rogl_glIsSync(VALUE _obj_, VALUE _arg1_)
 {
-    void* sync = (void*)val2ptr(_arg1_);
+    void* _sync_ = (void*)val2ptr(_arg1_);
 
-    unsigned char retval = rogl_pfn_glIsSync(sync);
+    unsigned char retval = rogl_pfn_glIsSync(_sync_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glDeleteSync(VALUE _obj_, VALUE _arg1_)
 {
-    void* sync = (void*)val2ptr(_arg1_);
+    void* _sync_ = (void*)val2ptr(_arg1_);
 
-    rogl_pfn_glDeleteSync(sync);
+    rogl_pfn_glDeleteSync(_sync_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClientWaitSync(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    void* sync = (void*)val2ptr(_arg1_);
-    unsigned int flags = (unsigned int)NUM2UINT(_arg2_);
-    unsigned long long timeout = (unsigned long long)NUM2ULL(_arg3_);
+    void* _sync_ = (void*)val2ptr(_arg1_);
+    unsigned int _flags_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned long long _timeout_ = (unsigned long long)NUM2ULL(_arg3_);
 
-    unsigned int retval = rogl_pfn_glClientWaitSync(sync, flags, timeout);
+    unsigned int retval = rogl_pfn_glClientWaitSync(_sync_, _flags_, _timeout_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glWaitSync(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    void* sync = (void*)val2ptr(_arg1_);
-    unsigned int flags = (unsigned int)NUM2UINT(_arg2_);
-    unsigned long long timeout = (unsigned long long)NUM2ULL(_arg3_);
+    void* _sync_ = (void*)val2ptr(_arg1_);
+    unsigned int _flags_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned long long _timeout_ = (unsigned long long)NUM2ULL(_arg3_);
 
-    rogl_pfn_glWaitSync(sync, flags, timeout);
+    rogl_pfn_glWaitSync(_sync_, _flags_, _timeout_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetInteger64v(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    void* data = (void*)val2ptr(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _data_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glGetInteger64v(pname, data);
+    rogl_pfn_glGetInteger64v(_pname_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetSynciv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    void* sync = (void*)val2ptr(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    int bufSize = (int)NUM2INT(_arg3_);
-    void* length = (void*)val2ptr(_arg4_);
-    void* values = (void*)val2ptr(_arg5_);
+    void* _sync_ = (void*)val2ptr(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    int _bufSize_ = (int)NUM2INT(_arg3_);
+    void* _length_ = (void*)val2ptr(_arg4_);
+    void* _values_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glGetSynciv(sync, pname, bufSize, length, values);
+    rogl_pfn_glGetSynciv(_sync_, _pname_, _bufSize_, _length_, _values_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetInteger64i_v(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
-    void* data = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _data_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetInteger64i_v(target, index, data);
+    rogl_pfn_glGetInteger64i_v(_target_, _index_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetBufferParameteri64v(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetBufferParameteri64v(target, pname, params);
+    rogl_pfn_glGetBufferParameteri64v(_target_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glFramebufferTexture(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int attachment = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int texture = (unsigned int)NUM2UINT(_arg3_);
-    int level = (int)NUM2INT(_arg4_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _attachment_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg3_);
+    int _level_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glFramebufferTexture(target, attachment, texture, level);
+    rogl_pfn_glFramebufferTexture(_target_, _attachment_, _texture_, _level_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexImage2DMultisample(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int samples = (int)NUM2INT(_arg2_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
-    int height = (int)NUM2INT(_arg5_);
-    unsigned char fixedsamplelocations = (unsigned char)NUM2UINT(_arg6_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _samples_ = (int)NUM2INT(_arg2_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
+    int _height_ = (int)NUM2INT(_arg5_);
+    unsigned char _fixedsamplelocations_ = (unsigned char)NUM2UINT(_arg6_);
 
-    rogl_pfn_glTexImage2DMultisample(target, samples, internalformat, width, height, fixedsamplelocations);
+    rogl_pfn_glTexImage2DMultisample(_target_, _samples_, _internalformat_, _width_, _height_, _fixedsamplelocations_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexImage3DMultisample(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int samples = (int)NUM2INT(_arg2_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
-    int height = (int)NUM2INT(_arg5_);
-    int depth = (int)NUM2INT(_arg6_);
-    unsigned char fixedsamplelocations = (unsigned char)NUM2UINT(_arg7_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _samples_ = (int)NUM2INT(_arg2_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
+    int _height_ = (int)NUM2INT(_arg5_);
+    int _depth_ = (int)NUM2INT(_arg6_);
+    unsigned char _fixedsamplelocations_ = (unsigned char)NUM2UINT(_arg7_);
 
-    rogl_pfn_glTexImage3DMultisample(target, samples, internalformat, width, height, depth, fixedsamplelocations);
+    rogl_pfn_glTexImage3DMultisample(_target_, _samples_, _internalformat_, _width_, _height_, _depth_, _fixedsamplelocations_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetMultisamplefv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
-    void* val = (void*)val2ptr(_arg3_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _val_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetMultisamplefv(pname, index, val);
+    rogl_pfn_glGetMultisamplefv(_pname_, _index_, _val_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSampleMaski(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int maskNumber = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int mask = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _maskNumber_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _mask_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glSampleMaski(maskNumber, mask);
+    rogl_pfn_glSampleMaski(_maskNumber_, _mask_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBindFragDataLocationIndexed(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int colorNumber = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg3_);
-    void* name = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _colorNumber_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _name_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glBindFragDataLocationIndexed(program, colorNumber, index, name);
+    rogl_pfn_glBindFragDataLocationIndexed(_program_, _colorNumber_, _index_, _name_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetFragDataIndex(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    void* name = (void*)val2ptr(_arg2_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _name_ = (void*)val2ptr(_arg2_);
 
-    int retval = rogl_pfn_glGetFragDataIndex(program, name);
+    int retval = rogl_pfn_glGetFragDataIndex(_program_, _name_);
 
     return INT2NUM(retval);
 }
 
 static VALUE rogl_glGenSamplers(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int count = (int)NUM2INT(_arg1_);
-    void* samplers = (void*)val2ptr(_arg2_);
+    int _count_ = (int)NUM2INT(_arg1_);
+    void* _samplers_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glGenSamplers(count, samplers);
+    rogl_pfn_glGenSamplers(_count_, _samplers_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDeleteSamplers(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int count = (int)NUM2INT(_arg1_);
-    void* samplers = (void*)val2ptr(_arg2_);
+    int _count_ = (int)NUM2INT(_arg1_);
+    void* _samplers_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glDeleteSamplers(count, samplers);
+    rogl_pfn_glDeleteSamplers(_count_, _samplers_);
 
     return Qnil;
 }
 
 static VALUE rogl_glIsSampler(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int sampler = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _sampler_ = (unsigned int)NUM2UINT(_arg1_);
 
-    unsigned char retval = rogl_pfn_glIsSampler(sampler);
+    unsigned char retval = rogl_pfn_glIsSampler(_sampler_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glBindSampler(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int unit = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int sampler = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _unit_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _sampler_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glBindSampler(unit, sampler);
+    rogl_pfn_glBindSampler(_unit_, _sampler_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSamplerParameteri(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int sampler = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    int param = (int)NUM2INT(_arg3_);
+    unsigned int _sampler_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    int _param_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glSamplerParameteri(sampler, pname, param);
+    rogl_pfn_glSamplerParameteri(_sampler_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSamplerParameteriv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int sampler = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* param = (void*)val2ptr(_arg3_);
+    unsigned int _sampler_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _param_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glSamplerParameteriv(sampler, pname, param);
+    rogl_pfn_glSamplerParameteriv(_sampler_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSamplerParameterf(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int sampler = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    float param = (float)NUM2DBL(_arg3_);
+    unsigned int _sampler_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    float _param_ = (float)NUM2DBL(_arg3_);
 
-    rogl_pfn_glSamplerParameterf(sampler, pname, param);
+    rogl_pfn_glSamplerParameterf(_sampler_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSamplerParameterfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int sampler = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* param = (void*)val2ptr(_arg3_);
+    unsigned int _sampler_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _param_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glSamplerParameterfv(sampler, pname, param);
+    rogl_pfn_glSamplerParameterfv(_sampler_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSamplerParameterIiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int sampler = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* param = (void*)val2ptr(_arg3_);
+    unsigned int _sampler_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _param_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glSamplerParameterIiv(sampler, pname, param);
+    rogl_pfn_glSamplerParameterIiv(_sampler_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSamplerParameterIuiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int sampler = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* param = (void*)val2ptr(_arg3_);
+    unsigned int _sampler_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _param_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glSamplerParameterIuiv(sampler, pname, param);
+    rogl_pfn_glSamplerParameterIuiv(_sampler_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetSamplerParameteriv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int sampler = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _sampler_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetSamplerParameteriv(sampler, pname, params);
+    rogl_pfn_glGetSamplerParameteriv(_sampler_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetSamplerParameterIiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int sampler = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _sampler_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetSamplerParameterIiv(sampler, pname, params);
+    rogl_pfn_glGetSamplerParameterIiv(_sampler_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetSamplerParameterfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int sampler = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _sampler_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetSamplerParameterfv(sampler, pname, params);
+    rogl_pfn_glGetSamplerParameterfv(_sampler_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetSamplerParameterIuiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int sampler = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _sampler_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetSamplerParameterIuiv(sampler, pname, params);
+    rogl_pfn_glGetSamplerParameterIuiv(_sampler_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glQueryCounter(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int id = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int target = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _id_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glQueryCounter(id, target);
+    rogl_pfn_glQueryCounter(_id_, _target_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetQueryObjecti64v(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int id = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _id_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetQueryObjecti64v(id, pname, params);
+    rogl_pfn_glGetQueryObjecti64v(_id_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetQueryObjectui64v(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int id = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _id_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetQueryObjectui64v(id, pname, params);
+    rogl_pfn_glGetQueryObjectui64v(_id_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribDivisor(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int divisor = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _divisor_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glVertexAttribDivisor(index, divisor);
+    rogl_pfn_glVertexAttribDivisor(_index_, _divisor_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribP1ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    unsigned char normalized = (unsigned char)NUM2UINT(_arg3_);
-    unsigned int value = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned char _normalized_ = (unsigned char)NUM2UINT(_arg3_);
+    unsigned int _value_ = (unsigned int)NUM2UINT(_arg4_);
 
-    rogl_pfn_glVertexAttribP1ui(index, type, normalized, value);
+    rogl_pfn_glVertexAttribP1ui(_index_, _type_, _normalized_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribP1uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    unsigned char normalized = (unsigned char)NUM2UINT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned char _normalized_ = (unsigned char)NUM2UINT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glVertexAttribP1uiv(index, type, normalized, value);
+    rogl_pfn_glVertexAttribP1uiv(_index_, _type_, _normalized_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribP2ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    unsigned char normalized = (unsigned char)NUM2UINT(_arg3_);
-    unsigned int value = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned char _normalized_ = (unsigned char)NUM2UINT(_arg3_);
+    unsigned int _value_ = (unsigned int)NUM2UINT(_arg4_);
 
-    rogl_pfn_glVertexAttribP2ui(index, type, normalized, value);
+    rogl_pfn_glVertexAttribP2ui(_index_, _type_, _normalized_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribP2uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    unsigned char normalized = (unsigned char)NUM2UINT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned char _normalized_ = (unsigned char)NUM2UINT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glVertexAttribP2uiv(index, type, normalized, value);
+    rogl_pfn_glVertexAttribP2uiv(_index_, _type_, _normalized_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribP3ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    unsigned char normalized = (unsigned char)NUM2UINT(_arg3_);
-    unsigned int value = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned char _normalized_ = (unsigned char)NUM2UINT(_arg3_);
+    unsigned int _value_ = (unsigned int)NUM2UINT(_arg4_);
 
-    rogl_pfn_glVertexAttribP3ui(index, type, normalized, value);
+    rogl_pfn_glVertexAttribP3ui(_index_, _type_, _normalized_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribP3uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    unsigned char normalized = (unsigned char)NUM2UINT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned char _normalized_ = (unsigned char)NUM2UINT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glVertexAttribP3uiv(index, type, normalized, value);
+    rogl_pfn_glVertexAttribP3uiv(_index_, _type_, _normalized_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribP4ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    unsigned char normalized = (unsigned char)NUM2UINT(_arg3_);
-    unsigned int value = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned char _normalized_ = (unsigned char)NUM2UINT(_arg3_);
+    unsigned int _value_ = (unsigned int)NUM2UINT(_arg4_);
 
-    rogl_pfn_glVertexAttribP4ui(index, type, normalized, value);
+    rogl_pfn_glVertexAttribP4ui(_index_, _type_, _normalized_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribP4uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    unsigned char normalized = (unsigned char)NUM2UINT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned char _normalized_ = (unsigned char)NUM2UINT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glVertexAttribP4uiv(index, type, normalized, value);
+    rogl_pfn_glVertexAttribP4uiv(_index_, _type_, _normalized_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexP2ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int value = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _value_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glVertexP2ui(type, value);
+    rogl_pfn_glVertexP2ui(_type_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexP2uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    void* value = (void*)val2ptr(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _value_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexP2uiv(type, value);
+    rogl_pfn_glVertexP2uiv(_type_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexP3ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int value = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _value_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glVertexP3ui(type, value);
+    rogl_pfn_glVertexP3ui(_type_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexP3uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    void* value = (void*)val2ptr(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _value_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexP3uiv(type, value);
+    rogl_pfn_glVertexP3uiv(_type_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexP4ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int value = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _value_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glVertexP4ui(type, value);
+    rogl_pfn_glVertexP4ui(_type_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexP4uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    void* value = (void*)val2ptr(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _value_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexP4uiv(type, value);
+    rogl_pfn_glVertexP4uiv(_type_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoordP1ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int coords = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _coords_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glTexCoordP1ui(type, coords);
+    rogl_pfn_glTexCoordP1ui(_type_, _coords_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoordP1uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    void* coords = (void*)val2ptr(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _coords_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glTexCoordP1uiv(type, coords);
+    rogl_pfn_glTexCoordP1uiv(_type_, _coords_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoordP2ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int coords = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _coords_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glTexCoordP2ui(type, coords);
+    rogl_pfn_glTexCoordP2ui(_type_, _coords_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoordP2uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    void* coords = (void*)val2ptr(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _coords_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glTexCoordP2uiv(type, coords);
+    rogl_pfn_glTexCoordP2uiv(_type_, _coords_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoordP3ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int coords = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _coords_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glTexCoordP3ui(type, coords);
+    rogl_pfn_glTexCoordP3ui(_type_, _coords_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoordP3uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    void* coords = (void*)val2ptr(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _coords_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glTexCoordP3uiv(type, coords);
+    rogl_pfn_glTexCoordP3uiv(_type_, _coords_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoordP4ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int coords = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _coords_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glTexCoordP4ui(type, coords);
+    rogl_pfn_glTexCoordP4ui(_type_, _coords_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexCoordP4uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    void* coords = (void*)val2ptr(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _coords_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glTexCoordP4uiv(type, coords);
+    rogl_pfn_glTexCoordP4uiv(_type_, _coords_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoordP1ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int coords = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _coords_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glMultiTexCoordP1ui(texture, type, coords);
+    rogl_pfn_glMultiTexCoordP1ui(_texture_, _type_, _coords_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoordP1uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    void* coords = (void*)val2ptr(_arg3_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _coords_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glMultiTexCoordP1uiv(texture, type, coords);
+    rogl_pfn_glMultiTexCoordP1uiv(_texture_, _type_, _coords_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoordP2ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int coords = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _coords_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glMultiTexCoordP2ui(texture, type, coords);
+    rogl_pfn_glMultiTexCoordP2ui(_texture_, _type_, _coords_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoordP2uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    void* coords = (void*)val2ptr(_arg3_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _coords_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glMultiTexCoordP2uiv(texture, type, coords);
+    rogl_pfn_glMultiTexCoordP2uiv(_texture_, _type_, _coords_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoordP3ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int coords = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _coords_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glMultiTexCoordP3ui(texture, type, coords);
+    rogl_pfn_glMultiTexCoordP3ui(_texture_, _type_, _coords_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoordP3uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    void* coords = (void*)val2ptr(_arg3_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _coords_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glMultiTexCoordP3uiv(texture, type, coords);
+    rogl_pfn_glMultiTexCoordP3uiv(_texture_, _type_, _coords_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoordP4ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int coords = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _coords_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glMultiTexCoordP4ui(texture, type, coords);
+    rogl_pfn_glMultiTexCoordP4ui(_texture_, _type_, _coords_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiTexCoordP4uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    void* coords = (void*)val2ptr(_arg3_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _coords_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glMultiTexCoordP4uiv(texture, type, coords);
+    rogl_pfn_glMultiTexCoordP4uiv(_texture_, _type_, _coords_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNormalP3ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int coords = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _coords_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glNormalP3ui(type, coords);
+    rogl_pfn_glNormalP3ui(_type_, _coords_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNormalP3uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    void* coords = (void*)val2ptr(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _coords_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glNormalP3uiv(type, coords);
+    rogl_pfn_glNormalP3uiv(_type_, _coords_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColorP3ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int color = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _color_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glColorP3ui(type, color);
+    rogl_pfn_glColorP3ui(_type_, _color_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColorP3uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    void* color = (void*)val2ptr(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _color_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glColorP3uiv(type, color);
+    rogl_pfn_glColorP3uiv(_type_, _color_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColorP4ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int color = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _color_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glColorP4ui(type, color);
+    rogl_pfn_glColorP4ui(_type_, _color_);
 
     return Qnil;
 }
 
 static VALUE rogl_glColorP4uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    void* color = (void*)val2ptr(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _color_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glColorP4uiv(type, color);
+    rogl_pfn_glColorP4uiv(_type_, _color_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSecondaryColorP3ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int color = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _color_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glSecondaryColorP3ui(type, color);
+    rogl_pfn_glSecondaryColorP3ui(_type_, _color_);
 
     return Qnil;
 }
 
 static VALUE rogl_glSecondaryColorP3uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    void* color = (void*)val2ptr(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _color_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glSecondaryColorP3uiv(type, color);
+    rogl_pfn_glSecondaryColorP3uiv(_type_, _color_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMinSampleShading(VALUE _obj_, VALUE _arg1_)
 {
-    float value = (float)NUM2DBL(_arg1_);
+    float _value_ = (float)NUM2DBL(_arg1_);
 
-    rogl_pfn_glMinSampleShading(value);
+    rogl_pfn_glMinSampleShading(_value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBlendEquationi(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int buf = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int mode = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _buf_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glBlendEquationi(buf, mode);
+    rogl_pfn_glBlendEquationi(_buf_, _mode_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBlendEquationSeparatei(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int buf = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int modeRGB = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int modeAlpha = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _buf_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _modeRGB_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _modeAlpha_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glBlendEquationSeparatei(buf, modeRGB, modeAlpha);
+    rogl_pfn_glBlendEquationSeparatei(_buf_, _modeRGB_, _modeAlpha_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBlendFunci(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int buf = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int src = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int dst = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _buf_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _src_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _dst_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glBlendFunci(buf, src, dst);
+    rogl_pfn_glBlendFunci(_buf_, _src_, _dst_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBlendFuncSeparatei(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int buf = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int srcRGB = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int dstRGB = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int srcAlpha = (unsigned int)NUM2UINT(_arg4_);
-    unsigned int dstAlpha = (unsigned int)NUM2UINT(_arg5_);
+    unsigned int _buf_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _srcRGB_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _dstRGB_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _srcAlpha_ = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _dstAlpha_ = (unsigned int)NUM2UINT(_arg5_);
 
-    rogl_pfn_glBlendFuncSeparatei(buf, srcRGB, dstRGB, srcAlpha, dstAlpha);
+    rogl_pfn_glBlendFuncSeparatei(_buf_, _srcRGB_, _dstRGB_, _srcAlpha_, _dstAlpha_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDrawArraysIndirect(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    void* indirect = (void*)val2ptr(_arg2_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _indirect_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glDrawArraysIndirect(mode, indirect);
+    rogl_pfn_glDrawArraysIndirect(_mode_, _indirect_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDrawElementsIndirect(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    void* indirect = (void*)val2ptr(_arg3_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _indirect_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glDrawElementsIndirect(mode, type, indirect);
+    rogl_pfn_glDrawElementsIndirect(_mode_, _type_, _indirect_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform1d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    double x = (double)NUM2DBL(_arg2_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    double _x_ = (double)NUM2DBL(_arg2_);
 
-    rogl_pfn_glUniform1d(location, x);
+    rogl_pfn_glUniform1d(_location_, _x_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform2d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    double x = (double)NUM2DBL(_arg2_);
-    double y = (double)NUM2DBL(_arg3_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    double _x_ = (double)NUM2DBL(_arg2_);
+    double _y_ = (double)NUM2DBL(_arg3_);
 
-    rogl_pfn_glUniform2d(location, x, y);
+    rogl_pfn_glUniform2d(_location_, _x_, _y_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform3d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    double x = (double)NUM2DBL(_arg2_);
-    double y = (double)NUM2DBL(_arg3_);
-    double z = (double)NUM2DBL(_arg4_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    double _x_ = (double)NUM2DBL(_arg2_);
+    double _y_ = (double)NUM2DBL(_arg3_);
+    double _z_ = (double)NUM2DBL(_arg4_);
 
-    rogl_pfn_glUniform3d(location, x, y, z);
+    rogl_pfn_glUniform3d(_location_, _x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform4d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    double x = (double)NUM2DBL(_arg2_);
-    double y = (double)NUM2DBL(_arg3_);
-    double z = (double)NUM2DBL(_arg4_);
-    double w = (double)NUM2DBL(_arg5_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    double _x_ = (double)NUM2DBL(_arg2_);
+    double _y_ = (double)NUM2DBL(_arg3_);
+    double _z_ = (double)NUM2DBL(_arg4_);
+    double _w_ = (double)NUM2DBL(_arg5_);
 
-    rogl_pfn_glUniform4d(location, x, y, z, w);
+    rogl_pfn_glUniform4d(_location_, _x_, _y_, _z_, _w_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform1dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* value = (void*)val2ptr(_arg3_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _value_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glUniform1dv(location, count, value);
+    rogl_pfn_glUniform1dv(_location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform2dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* value = (void*)val2ptr(_arg3_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _value_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glUniform2dv(location, count, value);
+    rogl_pfn_glUniform2dv(_location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform3dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* value = (void*)val2ptr(_arg3_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _value_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glUniform3dv(location, count, value);
+    rogl_pfn_glUniform3dv(_location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniform4dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* value = (void*)val2ptr(_arg3_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _value_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glUniform4dv(location, count, value);
+    rogl_pfn_glUniform4dv(_location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniformMatrix2dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glUniformMatrix2dv(location, count, transpose, value);
+    rogl_pfn_glUniformMatrix2dv(_location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniformMatrix3dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glUniformMatrix3dv(location, count, transpose, value);
+    rogl_pfn_glUniformMatrix3dv(_location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniformMatrix4dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glUniformMatrix4dv(location, count, transpose, value);
+    rogl_pfn_glUniformMatrix4dv(_location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniformMatrix2x3dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glUniformMatrix2x3dv(location, count, transpose, value);
+    rogl_pfn_glUniformMatrix2x3dv(_location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniformMatrix2x4dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glUniformMatrix2x4dv(location, count, transpose, value);
+    rogl_pfn_glUniformMatrix2x4dv(_location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniformMatrix3x2dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glUniformMatrix3x2dv(location, count, transpose, value);
+    rogl_pfn_glUniformMatrix3x2dv(_location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniformMatrix3x4dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glUniformMatrix3x4dv(location, count, transpose, value);
+    rogl_pfn_glUniformMatrix3x4dv(_location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniformMatrix4x2dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glUniformMatrix4x2dv(location, count, transpose, value);
+    rogl_pfn_glUniformMatrix4x2dv(_location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniformMatrix4x3dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    int location = (int)NUM2INT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    int _location_ = (int)NUM2INT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glUniformMatrix4x3dv(location, count, transpose, value);
+    rogl_pfn_glUniformMatrix4x3dv(_location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetUniformdv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetUniformdv(program, location, params);
+    rogl_pfn_glGetUniformdv(_program_, _location_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetSubroutineUniformLocation(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int shadertype = (unsigned int)NUM2UINT(_arg2_);
-    void* name = (void*)val2ptr(_arg3_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _shadertype_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _name_ = (void*)val2ptr(_arg3_);
 
-    int retval = rogl_pfn_glGetSubroutineUniformLocation(program, shadertype, name);
+    int retval = rogl_pfn_glGetSubroutineUniformLocation(_program_, _shadertype_, _name_);
 
     return INT2NUM(retval);
 }
 
 static VALUE rogl_glGetSubroutineIndex(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int shadertype = (unsigned int)NUM2UINT(_arg2_);
-    void* name = (void*)val2ptr(_arg3_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _shadertype_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _name_ = (void*)val2ptr(_arg3_);
 
-    unsigned int retval = rogl_pfn_glGetSubroutineIndex(program, shadertype, name);
+    unsigned int retval = rogl_pfn_glGetSubroutineIndex(_program_, _shadertype_, _name_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glGetActiveSubroutineUniformiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int shadertype = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg4_);
-    void* values = (void*)val2ptr(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _shadertype_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg4_);
+    void* _values_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glGetActiveSubroutineUniformiv(program, shadertype, index, pname, values);
+    rogl_pfn_glGetActiveSubroutineUniformiv(_program_, _shadertype_, _index_, _pname_, _values_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetActiveSubroutineUniformName(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int shadertype = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg3_);
-    int bufsize = (int)NUM2INT(_arg4_);
-    void* length = (void*)val2ptr(_arg5_);
-    void* name = (void*)val2ptr(_arg6_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _shadertype_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg3_);
+    int _bufsize_ = (int)NUM2INT(_arg4_);
+    void* _length_ = (void*)val2ptr(_arg5_);
+    void* _name_ = (void*)val2ptr(_arg6_);
 
-    rogl_pfn_glGetActiveSubroutineUniformName(program, shadertype, index, bufsize, length, name);
+    rogl_pfn_glGetActiveSubroutineUniformName(_program_, _shadertype_, _index_, _bufsize_, _length_, _name_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetActiveSubroutineName(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int shadertype = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg3_);
-    int bufsize = (int)NUM2INT(_arg4_);
-    void* length = (void*)val2ptr(_arg5_);
-    void* name = (void*)val2ptr(_arg6_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _shadertype_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg3_);
+    int _bufsize_ = (int)NUM2INT(_arg4_);
+    void* _length_ = (void*)val2ptr(_arg5_);
+    void* _name_ = (void*)val2ptr(_arg6_);
 
-    rogl_pfn_glGetActiveSubroutineName(program, shadertype, index, bufsize, length, name);
+    rogl_pfn_glGetActiveSubroutineName(_program_, _shadertype_, _index_, _bufsize_, _length_, _name_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUniformSubroutinesuiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int shadertype = (unsigned int)NUM2UINT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* indices = (void*)val2ptr(_arg3_);
+    unsigned int _shadertype_ = (unsigned int)NUM2UINT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _indices_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glUniformSubroutinesuiv(shadertype, count, indices);
+    rogl_pfn_glUniformSubroutinesuiv(_shadertype_, _count_, _indices_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetUniformSubroutineuiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int shadertype = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _shadertype_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetUniformSubroutineuiv(shadertype, location, params);
+    rogl_pfn_glGetUniformSubroutineuiv(_shadertype_, _location_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetProgramStageiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int shadertype = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
-    void* values = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _shadertype_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _values_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetProgramStageiv(program, shadertype, pname, values);
+    rogl_pfn_glGetProgramStageiv(_program_, _shadertype_, _pname_, _values_);
 
     return Qnil;
 }
 
 static VALUE rogl_glPatchParameteri(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    int value = (int)NUM2INT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    int _value_ = (int)NUM2INT(_arg2_);
 
-    rogl_pfn_glPatchParameteri(pname, value);
+    rogl_pfn_glPatchParameteri(_pname_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glPatchParameterfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
-    void* values = (void*)val2ptr(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _values_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glPatchParameterfv(pname, values);
+    rogl_pfn_glPatchParameterfv(_pname_, _values_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBindTransformFeedback(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int id = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _id_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glBindTransformFeedback(target, id);
+    rogl_pfn_glBindTransformFeedback(_target_, _id_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDeleteTransformFeedbacks(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* ids = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _ids_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glDeleteTransformFeedbacks(n, ids);
+    rogl_pfn_glDeleteTransformFeedbacks(_n_, _ids_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGenTransformFeedbacks(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* ids = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _ids_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glGenTransformFeedbacks(n, ids);
+    rogl_pfn_glGenTransformFeedbacks(_n_, _ids_);
 
     return Qnil;
 }
 
 static VALUE rogl_glIsTransformFeedback(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int id = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _id_ = (unsigned int)NUM2UINT(_arg1_);
 
-    unsigned char retval = rogl_pfn_glIsTransformFeedback(id);
+    unsigned char retval = rogl_pfn_glIsTransformFeedback(_id_);
 
     return UINT2NUM(retval);
 }
@@ -10235,54 +10235,54 @@ static VALUE rogl_glResumeTransformFeedback(VALUE _obj_)
 
 static VALUE rogl_glDrawTransformFeedback(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int id = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _id_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glDrawTransformFeedback(mode, id);
+    rogl_pfn_glDrawTransformFeedback(_mode_, _id_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDrawTransformFeedbackStream(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int id = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int stream = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _id_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _stream_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glDrawTransformFeedbackStream(mode, id, stream);
+    rogl_pfn_glDrawTransformFeedbackStream(_mode_, _id_, _stream_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBeginQueryIndexed(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int id = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _id_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glBeginQueryIndexed(target, index, id);
+    rogl_pfn_glBeginQueryIndexed(_target_, _index_, _id_);
 
     return Qnil;
 }
 
 static VALUE rogl_glEndQueryIndexed(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glEndQueryIndexed(target, index);
+    rogl_pfn_glEndQueryIndexed(_target_, _index_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetQueryIndexediv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
-    void* params = (void*)val2ptr(_arg4_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _params_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetQueryIndexediv(target, index, pname, params);
+    rogl_pfn_glGetQueryIndexediv(_target_, _index_, _pname_, _params_);
 
     return Qnil;
 }
@@ -10296,1665 +10296,1665 @@ static VALUE rogl_glReleaseShaderCompiler(VALUE _obj_)
 
 static VALUE rogl_glShaderBinary(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    int count = (int)NUM2INT(_arg1_);
-    void* shaders = (void*)val2ptr(_arg2_);
-    unsigned int binaryformat = (unsigned int)NUM2UINT(_arg3_);
-    void* binary = (void*)val2ptr(_arg4_);
-    int length = (int)NUM2INT(_arg5_);
+    int _count_ = (int)NUM2INT(_arg1_);
+    void* _shaders_ = (void*)val2ptr(_arg2_);
+    unsigned int _binaryformat_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _binary_ = (void*)val2ptr(_arg4_);
+    int _length_ = (int)NUM2INT(_arg5_);
 
-    rogl_pfn_glShaderBinary(count, shaders, binaryformat, binary, length);
+    rogl_pfn_glShaderBinary(_count_, _shaders_, _binaryformat_, _binary_, _length_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetShaderPrecisionFormat(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int shadertype = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int precisiontype = (unsigned int)NUM2UINT(_arg2_);
-    void* range = (void*)val2ptr(_arg3_);
-    void* precision = (void*)val2ptr(_arg4_);
+    unsigned int _shadertype_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _precisiontype_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _range_ = (void*)val2ptr(_arg3_);
+    void* _precision_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetShaderPrecisionFormat(shadertype, precisiontype, range, precision);
+    rogl_pfn_glGetShaderPrecisionFormat(_shadertype_, _precisiontype_, _range_, _precision_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDepthRangef(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    float n = (float)NUM2DBL(_arg1_);
-    float f = (float)NUM2DBL(_arg2_);
+    float _n_ = (float)NUM2DBL(_arg1_);
+    float _f_ = (float)NUM2DBL(_arg2_);
 
-    rogl_pfn_glDepthRangef(n, f);
+    rogl_pfn_glDepthRangef(_n_, _f_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClearDepthf(VALUE _obj_, VALUE _arg1_)
 {
-    float d = (float)NUM2DBL(_arg1_);
+    float _d_ = (float)NUM2DBL(_arg1_);
 
-    rogl_pfn_glClearDepthf(d);
+    rogl_pfn_glClearDepthf(_d_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetProgramBinary(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int bufSize = (int)NUM2INT(_arg2_);
-    void* length = (void*)val2ptr(_arg3_);
-    void* binaryFormat = (void*)val2ptr(_arg4_);
-    void* binary = (void*)val2ptr(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _bufSize_ = (int)NUM2INT(_arg2_);
+    void* _length_ = (void*)val2ptr(_arg3_);
+    void* _binaryFormat_ = (void*)val2ptr(_arg4_);
+    void* _binary_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glGetProgramBinary(program, bufSize, length, binaryFormat, binary);
+    rogl_pfn_glGetProgramBinary(_program_, _bufSize_, _length_, _binaryFormat_, _binary_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramBinary(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int binaryFormat = (unsigned int)NUM2UINT(_arg2_);
-    void* binary = (void*)val2ptr(_arg3_);
-    int length = (int)NUM2INT(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _binaryFormat_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _binary_ = (void*)val2ptr(_arg3_);
+    int _length_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glProgramBinary(program, binaryFormat, binary, length);
+    rogl_pfn_glProgramBinary(_program_, _binaryFormat_, _binary_, _length_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramParameteri(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    int value = (int)NUM2INT(_arg3_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    int _value_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glProgramParameteri(program, pname, value);
+    rogl_pfn_glProgramParameteri(_program_, _pname_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glUseProgramStages(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int pipeline = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int stages = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int program = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _pipeline_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _stages_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glUseProgramStages(pipeline, stages, program);
+    rogl_pfn_glUseProgramStages(_pipeline_, _stages_, _program_);
 
     return Qnil;
 }
 
 static VALUE rogl_glActiveShaderProgram(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int pipeline = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int program = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _pipeline_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glActiveShaderProgram(pipeline, program);
+    rogl_pfn_glActiveShaderProgram(_pipeline_, _program_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCreateShaderProgramv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int type = (unsigned int)NUM2UINT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* strings = (void*)val2ptr(_arg3_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _strings_ = (void*)val2ptr(_arg3_);
 
-    unsigned int retval = rogl_pfn_glCreateShaderProgramv(type, count, strings);
+    unsigned int retval = rogl_pfn_glCreateShaderProgramv(_type_, _count_, _strings_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glBindProgramPipeline(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int pipeline = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pipeline_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glBindProgramPipeline(pipeline);
+    rogl_pfn_glBindProgramPipeline(_pipeline_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDeleteProgramPipelines(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* pipelines = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _pipelines_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glDeleteProgramPipelines(n, pipelines);
+    rogl_pfn_glDeleteProgramPipelines(_n_, _pipelines_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGenProgramPipelines(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* pipelines = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _pipelines_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glGenProgramPipelines(n, pipelines);
+    rogl_pfn_glGenProgramPipelines(_n_, _pipelines_);
 
     return Qnil;
 }
 
 static VALUE rogl_glIsProgramPipeline(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int pipeline = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pipeline_ = (unsigned int)NUM2UINT(_arg1_);
 
-    unsigned char retval = rogl_pfn_glIsProgramPipeline(pipeline);
+    unsigned char retval = rogl_pfn_glIsProgramPipeline(_pipeline_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glGetProgramPipelineiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int pipeline = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _pipeline_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetProgramPipelineiv(pipeline, pname, params);
+    rogl_pfn_glGetProgramPipelineiv(_pipeline_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform1i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int v0 = (int)NUM2INT(_arg3_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _v0_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glProgramUniform1i(program, location, v0);
+    rogl_pfn_glProgramUniform1i(_program_, _location_, _v0_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform1iv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glProgramUniform1iv(program, location, count, value);
+    rogl_pfn_glProgramUniform1iv(_program_, _location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform1f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    float v0 = (float)NUM2DBL(_arg3_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    float _v0_ = (float)NUM2DBL(_arg3_);
 
-    rogl_pfn_glProgramUniform1f(program, location, v0);
+    rogl_pfn_glProgramUniform1f(_program_, _location_, _v0_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform1fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glProgramUniform1fv(program, location, count, value);
+    rogl_pfn_glProgramUniform1fv(_program_, _location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform1d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    double v0 = (double)NUM2DBL(_arg3_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    double _v0_ = (double)NUM2DBL(_arg3_);
 
-    rogl_pfn_glProgramUniform1d(program, location, v0);
+    rogl_pfn_glProgramUniform1d(_program_, _location_, _v0_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform1dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glProgramUniform1dv(program, location, count, value);
+    rogl_pfn_glProgramUniform1dv(_program_, _location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform1ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    unsigned int v0 = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    unsigned int _v0_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glProgramUniform1ui(program, location, v0);
+    rogl_pfn_glProgramUniform1ui(_program_, _location_, _v0_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform1uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glProgramUniform1uiv(program, location, count, value);
+    rogl_pfn_glProgramUniform1uiv(_program_, _location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform2i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int v0 = (int)NUM2INT(_arg3_);
-    int v1 = (int)NUM2INT(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _v0_ = (int)NUM2INT(_arg3_);
+    int _v1_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glProgramUniform2i(program, location, v0, v1);
+    rogl_pfn_glProgramUniform2i(_program_, _location_, _v0_, _v1_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform2iv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glProgramUniform2iv(program, location, count, value);
+    rogl_pfn_glProgramUniform2iv(_program_, _location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform2f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    float v0 = (float)NUM2DBL(_arg3_);
-    float v1 = (float)NUM2DBL(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    float _v0_ = (float)NUM2DBL(_arg3_);
+    float _v1_ = (float)NUM2DBL(_arg4_);
 
-    rogl_pfn_glProgramUniform2f(program, location, v0, v1);
+    rogl_pfn_glProgramUniform2f(_program_, _location_, _v0_, _v1_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform2fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glProgramUniform2fv(program, location, count, value);
+    rogl_pfn_glProgramUniform2fv(_program_, _location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform2d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    double v0 = (double)NUM2DBL(_arg3_);
-    double v1 = (double)NUM2DBL(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    double _v0_ = (double)NUM2DBL(_arg3_);
+    double _v1_ = (double)NUM2DBL(_arg4_);
 
-    rogl_pfn_glProgramUniform2d(program, location, v0, v1);
+    rogl_pfn_glProgramUniform2d(_program_, _location_, _v0_, _v1_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform2dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glProgramUniform2dv(program, location, count, value);
+    rogl_pfn_glProgramUniform2dv(_program_, _location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform2ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    unsigned int v0 = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int v1 = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    unsigned int _v0_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _v1_ = (unsigned int)NUM2UINT(_arg4_);
 
-    rogl_pfn_glProgramUniform2ui(program, location, v0, v1);
+    rogl_pfn_glProgramUniform2ui(_program_, _location_, _v0_, _v1_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform2uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glProgramUniform2uiv(program, location, count, value);
+    rogl_pfn_glProgramUniform2uiv(_program_, _location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform3i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int v0 = (int)NUM2INT(_arg3_);
-    int v1 = (int)NUM2INT(_arg4_);
-    int v2 = (int)NUM2INT(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _v0_ = (int)NUM2INT(_arg3_);
+    int _v1_ = (int)NUM2INT(_arg4_);
+    int _v2_ = (int)NUM2INT(_arg5_);
 
-    rogl_pfn_glProgramUniform3i(program, location, v0, v1, v2);
+    rogl_pfn_glProgramUniform3i(_program_, _location_, _v0_, _v1_, _v2_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform3iv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glProgramUniform3iv(program, location, count, value);
+    rogl_pfn_glProgramUniform3iv(_program_, _location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform3f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    float v0 = (float)NUM2DBL(_arg3_);
-    float v1 = (float)NUM2DBL(_arg4_);
-    float v2 = (float)NUM2DBL(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    float _v0_ = (float)NUM2DBL(_arg3_);
+    float _v1_ = (float)NUM2DBL(_arg4_);
+    float _v2_ = (float)NUM2DBL(_arg5_);
 
-    rogl_pfn_glProgramUniform3f(program, location, v0, v1, v2);
+    rogl_pfn_glProgramUniform3f(_program_, _location_, _v0_, _v1_, _v2_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform3fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glProgramUniform3fv(program, location, count, value);
+    rogl_pfn_glProgramUniform3fv(_program_, _location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform3d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    double v0 = (double)NUM2DBL(_arg3_);
-    double v1 = (double)NUM2DBL(_arg4_);
-    double v2 = (double)NUM2DBL(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    double _v0_ = (double)NUM2DBL(_arg3_);
+    double _v1_ = (double)NUM2DBL(_arg4_);
+    double _v2_ = (double)NUM2DBL(_arg5_);
 
-    rogl_pfn_glProgramUniform3d(program, location, v0, v1, v2);
+    rogl_pfn_glProgramUniform3d(_program_, _location_, _v0_, _v1_, _v2_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform3dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glProgramUniform3dv(program, location, count, value);
+    rogl_pfn_glProgramUniform3dv(_program_, _location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform3ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    unsigned int v0 = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int v1 = (unsigned int)NUM2UINT(_arg4_);
-    unsigned int v2 = (unsigned int)NUM2UINT(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    unsigned int _v0_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _v1_ = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _v2_ = (unsigned int)NUM2UINT(_arg5_);
 
-    rogl_pfn_glProgramUniform3ui(program, location, v0, v1, v2);
+    rogl_pfn_glProgramUniform3ui(_program_, _location_, _v0_, _v1_, _v2_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform3uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glProgramUniform3uiv(program, location, count, value);
+    rogl_pfn_glProgramUniform3uiv(_program_, _location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform4i(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int v0 = (int)NUM2INT(_arg3_);
-    int v1 = (int)NUM2INT(_arg4_);
-    int v2 = (int)NUM2INT(_arg5_);
-    int v3 = (int)NUM2INT(_arg6_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _v0_ = (int)NUM2INT(_arg3_);
+    int _v1_ = (int)NUM2INT(_arg4_);
+    int _v2_ = (int)NUM2INT(_arg5_);
+    int _v3_ = (int)NUM2INT(_arg6_);
 
-    rogl_pfn_glProgramUniform4i(program, location, v0, v1, v2, v3);
+    rogl_pfn_glProgramUniform4i(_program_, _location_, _v0_, _v1_, _v2_, _v3_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform4iv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glProgramUniform4iv(program, location, count, value);
+    rogl_pfn_glProgramUniform4iv(_program_, _location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform4f(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    float v0 = (float)NUM2DBL(_arg3_);
-    float v1 = (float)NUM2DBL(_arg4_);
-    float v2 = (float)NUM2DBL(_arg5_);
-    float v3 = (float)NUM2DBL(_arg6_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    float _v0_ = (float)NUM2DBL(_arg3_);
+    float _v1_ = (float)NUM2DBL(_arg4_);
+    float _v2_ = (float)NUM2DBL(_arg5_);
+    float _v3_ = (float)NUM2DBL(_arg6_);
 
-    rogl_pfn_glProgramUniform4f(program, location, v0, v1, v2, v3);
+    rogl_pfn_glProgramUniform4f(_program_, _location_, _v0_, _v1_, _v2_, _v3_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform4fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glProgramUniform4fv(program, location, count, value);
+    rogl_pfn_glProgramUniform4fv(_program_, _location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform4d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    double v0 = (double)NUM2DBL(_arg3_);
-    double v1 = (double)NUM2DBL(_arg4_);
-    double v2 = (double)NUM2DBL(_arg5_);
-    double v3 = (double)NUM2DBL(_arg6_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    double _v0_ = (double)NUM2DBL(_arg3_);
+    double _v1_ = (double)NUM2DBL(_arg4_);
+    double _v2_ = (double)NUM2DBL(_arg5_);
+    double _v3_ = (double)NUM2DBL(_arg6_);
 
-    rogl_pfn_glProgramUniform4d(program, location, v0, v1, v2, v3);
+    rogl_pfn_glProgramUniform4d(_program_, _location_, _v0_, _v1_, _v2_, _v3_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform4dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glProgramUniform4dv(program, location, count, value);
+    rogl_pfn_glProgramUniform4dv(_program_, _location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform4ui(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    unsigned int v0 = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int v1 = (unsigned int)NUM2UINT(_arg4_);
-    unsigned int v2 = (unsigned int)NUM2UINT(_arg5_);
-    unsigned int v3 = (unsigned int)NUM2UINT(_arg6_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    unsigned int _v0_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _v1_ = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _v2_ = (unsigned int)NUM2UINT(_arg5_);
+    unsigned int _v3_ = (unsigned int)NUM2UINT(_arg6_);
 
-    rogl_pfn_glProgramUniform4ui(program, location, v0, v1, v2, v3);
+    rogl_pfn_glProgramUniform4ui(_program_, _location_, _v0_, _v1_, _v2_, _v3_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniform4uiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glProgramUniform4uiv(program, location, count, value);
+    rogl_pfn_glProgramUniform4uiv(_program_, _location_, _count_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniformMatrix2fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
-    void* value = (void*)val2ptr(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg4_);
+    void* _value_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glProgramUniformMatrix2fv(program, location, count, transpose, value);
+    rogl_pfn_glProgramUniformMatrix2fv(_program_, _location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniformMatrix3fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
-    void* value = (void*)val2ptr(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg4_);
+    void* _value_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glProgramUniformMatrix3fv(program, location, count, transpose, value);
+    rogl_pfn_glProgramUniformMatrix3fv(_program_, _location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniformMatrix4fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
-    void* value = (void*)val2ptr(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg4_);
+    void* _value_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glProgramUniformMatrix4fv(program, location, count, transpose, value);
+    rogl_pfn_glProgramUniformMatrix4fv(_program_, _location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniformMatrix2dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
-    void* value = (void*)val2ptr(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg4_);
+    void* _value_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glProgramUniformMatrix2dv(program, location, count, transpose, value);
+    rogl_pfn_glProgramUniformMatrix2dv(_program_, _location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniformMatrix3dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
-    void* value = (void*)val2ptr(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg4_);
+    void* _value_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glProgramUniformMatrix3dv(program, location, count, transpose, value);
+    rogl_pfn_glProgramUniformMatrix3dv(_program_, _location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniformMatrix4dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
-    void* value = (void*)val2ptr(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg4_);
+    void* _value_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glProgramUniformMatrix4dv(program, location, count, transpose, value);
+    rogl_pfn_glProgramUniformMatrix4dv(_program_, _location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniformMatrix2x3fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
-    void* value = (void*)val2ptr(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg4_);
+    void* _value_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glProgramUniformMatrix2x3fv(program, location, count, transpose, value);
+    rogl_pfn_glProgramUniformMatrix2x3fv(_program_, _location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniformMatrix3x2fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
-    void* value = (void*)val2ptr(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg4_);
+    void* _value_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glProgramUniformMatrix3x2fv(program, location, count, transpose, value);
+    rogl_pfn_glProgramUniformMatrix3x2fv(_program_, _location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniformMatrix2x4fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
-    void* value = (void*)val2ptr(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg4_);
+    void* _value_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glProgramUniformMatrix2x4fv(program, location, count, transpose, value);
+    rogl_pfn_glProgramUniformMatrix2x4fv(_program_, _location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniformMatrix4x2fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
-    void* value = (void*)val2ptr(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg4_);
+    void* _value_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glProgramUniformMatrix4x2fv(program, location, count, transpose, value);
+    rogl_pfn_glProgramUniformMatrix4x2fv(_program_, _location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniformMatrix3x4fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
-    void* value = (void*)val2ptr(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg4_);
+    void* _value_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glProgramUniformMatrix3x4fv(program, location, count, transpose, value);
+    rogl_pfn_glProgramUniformMatrix3x4fv(_program_, _location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniformMatrix4x3fv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
-    void* value = (void*)val2ptr(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg4_);
+    void* _value_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glProgramUniformMatrix4x3fv(program, location, count, transpose, value);
+    rogl_pfn_glProgramUniformMatrix4x3fv(_program_, _location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniformMatrix2x3dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
-    void* value = (void*)val2ptr(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg4_);
+    void* _value_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glProgramUniformMatrix2x3dv(program, location, count, transpose, value);
+    rogl_pfn_glProgramUniformMatrix2x3dv(_program_, _location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniformMatrix3x2dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
-    void* value = (void*)val2ptr(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg4_);
+    void* _value_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glProgramUniformMatrix3x2dv(program, location, count, transpose, value);
+    rogl_pfn_glProgramUniformMatrix3x2dv(_program_, _location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniformMatrix2x4dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
-    void* value = (void*)val2ptr(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg4_);
+    void* _value_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glProgramUniformMatrix2x4dv(program, location, count, transpose, value);
+    rogl_pfn_glProgramUniformMatrix2x4dv(_program_, _location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniformMatrix4x2dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
-    void* value = (void*)val2ptr(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg4_);
+    void* _value_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glProgramUniformMatrix4x2dv(program, location, count, transpose, value);
+    rogl_pfn_glProgramUniformMatrix4x2dv(_program_, _location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniformMatrix3x4dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
-    void* value = (void*)val2ptr(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg4_);
+    void* _value_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glProgramUniformMatrix3x4dv(program, location, count, transpose, value);
+    rogl_pfn_glProgramUniformMatrix3x4dv(_program_, _location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glProgramUniformMatrix4x3dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
-    void* value = (void*)val2ptr(_arg5_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    unsigned char _transpose_ = (unsigned char)NUM2UINT(_arg4_);
+    void* _value_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glProgramUniformMatrix4x3dv(program, location, count, transpose, value);
+    rogl_pfn_glProgramUniformMatrix4x3dv(_program_, _location_, _count_, _transpose_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glValidateProgramPipeline(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int pipeline = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pipeline_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glValidateProgramPipeline(pipeline);
+    rogl_pfn_glValidateProgramPipeline(_pipeline_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetProgramPipelineInfoLog(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int pipeline = (unsigned int)NUM2UINT(_arg1_);
-    int bufSize = (int)NUM2INT(_arg2_);
-    void* length = (void*)val2ptr(_arg3_);
-    void* infoLog = (void*)val2ptr(_arg4_);
+    unsigned int _pipeline_ = (unsigned int)NUM2UINT(_arg1_);
+    int _bufSize_ = (int)NUM2INT(_arg2_);
+    void* _length_ = (void*)val2ptr(_arg3_);
+    void* _infoLog_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetProgramPipelineInfoLog(pipeline, bufSize, length, infoLog);
+    rogl_pfn_glGetProgramPipelineInfoLog(_pipeline_, _bufSize_, _length_, _infoLog_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribL1d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    double x = (double)NUM2DBL(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    double _x_ = (double)NUM2DBL(_arg2_);
 
-    rogl_pfn_glVertexAttribL1d(index, x);
+    rogl_pfn_glVertexAttribL1d(_index_, _x_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribL2d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    double x = (double)NUM2DBL(_arg2_);
-    double y = (double)NUM2DBL(_arg3_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    double _x_ = (double)NUM2DBL(_arg2_);
+    double _y_ = (double)NUM2DBL(_arg3_);
 
-    rogl_pfn_glVertexAttribL2d(index, x, y);
+    rogl_pfn_glVertexAttribL2d(_index_, _x_, _y_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribL3d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    double x = (double)NUM2DBL(_arg2_);
-    double y = (double)NUM2DBL(_arg3_);
-    double z = (double)NUM2DBL(_arg4_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    double _x_ = (double)NUM2DBL(_arg2_);
+    double _y_ = (double)NUM2DBL(_arg3_);
+    double _z_ = (double)NUM2DBL(_arg4_);
 
-    rogl_pfn_glVertexAttribL3d(index, x, y, z);
+    rogl_pfn_glVertexAttribL3d(_index_, _x_, _y_, _z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribL4d(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    double x = (double)NUM2DBL(_arg2_);
-    double y = (double)NUM2DBL(_arg3_);
-    double z = (double)NUM2DBL(_arg4_);
-    double w = (double)NUM2DBL(_arg5_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    double _x_ = (double)NUM2DBL(_arg2_);
+    double _y_ = (double)NUM2DBL(_arg3_);
+    double _z_ = (double)NUM2DBL(_arg4_);
+    double _w_ = (double)NUM2DBL(_arg5_);
 
-    rogl_pfn_glVertexAttribL4d(index, x, y, z, w);
+    rogl_pfn_glVertexAttribL4d(_index_, _x_, _y_, _z_, _w_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribL1dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttribL1dv(index, v);
+    rogl_pfn_glVertexAttribL1dv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribL2dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttribL2dv(index, v);
+    rogl_pfn_glVertexAttribL2dv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribL3dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttribL3dv(index, v);
+    rogl_pfn_glVertexAttribL3dv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribL4dv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glVertexAttribL4dv(index, v);
+    rogl_pfn_glVertexAttribL4dv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribLPointer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    int size = (int)NUM2INT(_arg2_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg3_);
-    int stride = (int)NUM2INT(_arg4_);
-    void* pointer = (void*)val2ptr(_arg5_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    int _size_ = (int)NUM2INT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg3_);
+    int _stride_ = (int)NUM2INT(_arg4_);
+    void* _pointer_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glVertexAttribLPointer(index, size, type, stride, pointer);
+    rogl_pfn_glVertexAttribLPointer(_index_, _size_, _type_, _stride_, _pointer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetVertexAttribLdv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetVertexAttribLdv(index, pname, params);
+    rogl_pfn_glGetVertexAttribLdv(_index_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glViewportArrayv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int first = (unsigned int)NUM2UINT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* v = (void*)val2ptr(_arg3_);
+    unsigned int _first_ = (unsigned int)NUM2UINT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _v_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glViewportArrayv(first, count, v);
+    rogl_pfn_glViewportArrayv(_first_, _count_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glViewportIndexedf(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    float x = (float)NUM2DBL(_arg2_);
-    float y = (float)NUM2DBL(_arg3_);
-    float w = (float)NUM2DBL(_arg4_);
-    float h = (float)NUM2DBL(_arg5_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    float _x_ = (float)NUM2DBL(_arg2_);
+    float _y_ = (float)NUM2DBL(_arg3_);
+    float _w_ = (float)NUM2DBL(_arg4_);
+    float _h_ = (float)NUM2DBL(_arg5_);
 
-    rogl_pfn_glViewportIndexedf(index, x, y, w, h);
+    rogl_pfn_glViewportIndexedf(_index_, _x_, _y_, _w_, _h_);
 
     return Qnil;
 }
 
 static VALUE rogl_glViewportIndexedfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glViewportIndexedfv(index, v);
+    rogl_pfn_glViewportIndexedfv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glScissorArrayv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int first = (unsigned int)NUM2UINT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* v = (void*)val2ptr(_arg3_);
+    unsigned int _first_ = (unsigned int)NUM2UINT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _v_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glScissorArrayv(first, count, v);
+    rogl_pfn_glScissorArrayv(_first_, _count_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glScissorIndexed(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    int left = (int)NUM2INT(_arg2_);
-    int bottom = (int)NUM2INT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
-    int height = (int)NUM2INT(_arg5_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    int _left_ = (int)NUM2INT(_arg2_);
+    int _bottom_ = (int)NUM2INT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
+    int _height_ = (int)NUM2INT(_arg5_);
 
-    rogl_pfn_glScissorIndexed(index, left, bottom, width, height);
+    rogl_pfn_glScissorIndexed(_index_, _left_, _bottom_, _width_, _height_);
 
     return Qnil;
 }
 
 static VALUE rogl_glScissorIndexedv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    void* v = (void*)val2ptr(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _v_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glScissorIndexedv(index, v);
+    rogl_pfn_glScissorIndexedv(_index_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDepthRangeArrayv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int first = (unsigned int)NUM2UINT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* v = (void*)val2ptr(_arg3_);
+    unsigned int _first_ = (unsigned int)NUM2UINT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _v_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glDepthRangeArrayv(first, count, v);
+    rogl_pfn_glDepthRangeArrayv(_first_, _count_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDepthRangeIndexed(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int index = (unsigned int)NUM2UINT(_arg1_);
-    double n = (double)NUM2DBL(_arg2_);
-    double f = (double)NUM2DBL(_arg3_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg1_);
+    double _n_ = (double)NUM2DBL(_arg2_);
+    double _f_ = (double)NUM2DBL(_arg3_);
 
-    rogl_pfn_glDepthRangeIndexed(index, n, f);
+    rogl_pfn_glDepthRangeIndexed(_index_, _n_, _f_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetFloati_v(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
-    void* data = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _data_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetFloati_v(target, index, data);
+    rogl_pfn_glGetFloati_v(_target_, _index_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetDoublei_v(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
-    void* data = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _data_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetDoublei_v(target, index, data);
+    rogl_pfn_glGetDoublei_v(_target_, _index_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDrawArraysInstancedBaseInstance(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    int first = (int)NUM2INT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    int instancecount = (int)NUM2INT(_arg4_);
-    unsigned int baseinstance = (unsigned int)NUM2UINT(_arg5_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    int _first_ = (int)NUM2INT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    int _instancecount_ = (int)NUM2INT(_arg4_);
+    unsigned int _baseinstance_ = (unsigned int)NUM2UINT(_arg5_);
 
-    rogl_pfn_glDrawArraysInstancedBaseInstance(mode, first, count, instancecount, baseinstance);
+    rogl_pfn_glDrawArraysInstancedBaseInstance(_mode_, _first_, _count_, _instancecount_, _baseinstance_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDrawElementsInstancedBaseInstance(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg3_);
-    void* indices = (void*)val2ptr(_arg4_);
-    int instancecount = (int)NUM2INT(_arg5_);
-    unsigned int baseinstance = (unsigned int)NUM2UINT(_arg6_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _indices_ = (void*)val2ptr(_arg4_);
+    int _instancecount_ = (int)NUM2INT(_arg5_);
+    unsigned int _baseinstance_ = (unsigned int)NUM2UINT(_arg6_);
 
-    rogl_pfn_glDrawElementsInstancedBaseInstance(mode, count, type, indices, instancecount, baseinstance);
+    rogl_pfn_glDrawElementsInstancedBaseInstance(_mode_, _count_, _type_, _indices_, _instancecount_, _baseinstance_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDrawElementsInstancedBaseVertexBaseInstance(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg3_);
-    void* indices = (void*)val2ptr(_arg4_);
-    int instancecount = (int)NUM2INT(_arg5_);
-    int basevertex = (int)NUM2INT(_arg6_);
-    unsigned int baseinstance = (unsigned int)NUM2UINT(_arg7_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _indices_ = (void*)val2ptr(_arg4_);
+    int _instancecount_ = (int)NUM2INT(_arg5_);
+    int _basevertex_ = (int)NUM2INT(_arg6_);
+    unsigned int _baseinstance_ = (unsigned int)NUM2UINT(_arg7_);
 
-    rogl_pfn_glDrawElementsInstancedBaseVertexBaseInstance(mode, count, type, indices, instancecount, basevertex, baseinstance);
+    rogl_pfn_glDrawElementsInstancedBaseVertexBaseInstance(_mode_, _count_, _type_, _indices_, _instancecount_, _basevertex_, _baseinstance_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetInternalformativ(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
-    int bufSize = (int)NUM2INT(_arg4_);
-    void* params = (void*)val2ptr(_arg5_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg3_);
+    int _bufSize_ = (int)NUM2INT(_arg4_);
+    void* _params_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glGetInternalformativ(target, internalformat, pname, bufSize, params);
+    rogl_pfn_glGetInternalformativ(_target_, _internalformat_, _pname_, _bufSize_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetActiveAtomicCounterBufferiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int bufferIndex = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
-    void* params = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _bufferIndex_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _params_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetActiveAtomicCounterBufferiv(program, bufferIndex, pname, params);
+    rogl_pfn_glGetActiveAtomicCounterBufferiv(_program_, _bufferIndex_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBindImageTexture(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_)
 {
-    unsigned int unit = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int texture = (unsigned int)NUM2UINT(_arg2_);
-    int level = (int)NUM2INT(_arg3_);
-    unsigned char layered = (unsigned char)NUM2UINT(_arg4_);
-    int layer = (int)NUM2INT(_arg5_);
-    unsigned int access = (unsigned int)NUM2UINT(_arg6_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg7_);
+    unsigned int _unit_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg2_);
+    int _level_ = (int)NUM2INT(_arg3_);
+    unsigned char _layered_ = (unsigned char)NUM2UINT(_arg4_);
+    int _layer_ = (int)NUM2INT(_arg5_);
+    unsigned int _access_ = (unsigned int)NUM2UINT(_arg6_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg7_);
 
-    rogl_pfn_glBindImageTexture(unit, texture, level, layered, layer, access, format);
+    rogl_pfn_glBindImageTexture(_unit_, _texture_, _level_, _layered_, _layer_, _access_, _format_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMemoryBarrier(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int barriers = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _barriers_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glMemoryBarrier(barriers);
+    rogl_pfn_glMemoryBarrier(_barriers_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexStorage1D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int levels = (int)NUM2INT(_arg2_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _levels_ = (int)NUM2INT(_arg2_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glTexStorage1D(target, levels, internalformat, width);
+    rogl_pfn_glTexStorage1D(_target_, _levels_, _internalformat_, _width_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexStorage2D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int levels = (int)NUM2INT(_arg2_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
-    int height = (int)NUM2INT(_arg5_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _levels_ = (int)NUM2INT(_arg2_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
+    int _height_ = (int)NUM2INT(_arg5_);
 
-    rogl_pfn_glTexStorage2D(target, levels, internalformat, width, height);
+    rogl_pfn_glTexStorage2D(_target_, _levels_, _internalformat_, _width_, _height_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexStorage3D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int levels = (int)NUM2INT(_arg2_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
-    int height = (int)NUM2INT(_arg5_);
-    int depth = (int)NUM2INT(_arg6_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _levels_ = (int)NUM2INT(_arg2_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
+    int _height_ = (int)NUM2INT(_arg5_);
+    int _depth_ = (int)NUM2INT(_arg6_);
 
-    rogl_pfn_glTexStorage3D(target, levels, internalformat, width, height, depth);
+    rogl_pfn_glTexStorage3D(_target_, _levels_, _internalformat_, _width_, _height_, _depth_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDrawTransformFeedbackInstanced(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int id = (unsigned int)NUM2UINT(_arg2_);
-    int instancecount = (int)NUM2INT(_arg3_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _id_ = (unsigned int)NUM2UINT(_arg2_);
+    int _instancecount_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glDrawTransformFeedbackInstanced(mode, id, instancecount);
+    rogl_pfn_glDrawTransformFeedbackInstanced(_mode_, _id_, _instancecount_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDrawTransformFeedbackStreamInstanced(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int id = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int stream = (unsigned int)NUM2UINT(_arg3_);
-    int instancecount = (int)NUM2INT(_arg4_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _id_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _stream_ = (unsigned int)NUM2UINT(_arg3_);
+    int _instancecount_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glDrawTransformFeedbackStreamInstanced(mode, id, stream, instancecount);
+    rogl_pfn_glDrawTransformFeedbackStreamInstanced(_mode_, _id_, _stream_, _instancecount_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClearBufferData(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg4_);
-    void* data = (void*)val2ptr(_arg5_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg4_);
+    void* _data_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glClearBufferData(target, internalformat, format, type, data);
+    rogl_pfn_glClearBufferData(_target_, _internalformat_, _format_, _type_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClearBufferSubData(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg2_);
-    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg3_);
-    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg4_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg5_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg6_);
-    void* data = (void*)val2ptr(_arg7_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg2_);
+    ptrdiff_t _offset_ = (ptrdiff_t)NUM2UINT(_arg3_);
+    ptrdiff_t _size_ = (ptrdiff_t)NUM2UINT(_arg4_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg5_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg6_);
+    void* _data_ = (void*)val2ptr(_arg7_);
 
-    rogl_pfn_glClearBufferSubData(target, internalformat, offset, size, format, type, data);
+    rogl_pfn_glClearBufferSubData(_target_, _internalformat_, _offset_, _size_, _format_, _type_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDispatchCompute(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int num_groups_x = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int num_groups_y = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int num_groups_z = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _num_groups_x_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _num_groups_y_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _num_groups_z_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glDispatchCompute(num_groups_x, num_groups_y, num_groups_z);
+    rogl_pfn_glDispatchCompute(_num_groups_x_, _num_groups_y_, _num_groups_z_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDispatchComputeIndirect(VALUE _obj_, VALUE _arg1_)
 {
-    ptrdiff_t indirect = (ptrdiff_t)NUM2UINT(_arg1_);
+    ptrdiff_t _indirect_ = (ptrdiff_t)NUM2UINT(_arg1_);
 
-    rogl_pfn_glDispatchComputeIndirect(indirect);
+    rogl_pfn_glDispatchComputeIndirect(_indirect_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCopyImageSubData(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_, VALUE _arg9_, VALUE _arg10_, VALUE _arg11_, VALUE _arg12_, VALUE _arg13_, VALUE _arg14_, VALUE _arg15_)
 {
-    unsigned int srcName = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int srcTarget = (unsigned int)NUM2UINT(_arg2_);
-    int srcLevel = (int)NUM2INT(_arg3_);
-    int srcX = (int)NUM2INT(_arg4_);
-    int srcY = (int)NUM2INT(_arg5_);
-    int srcZ = (int)NUM2INT(_arg6_);
-    unsigned int dstName = (unsigned int)NUM2UINT(_arg7_);
-    unsigned int dstTarget = (unsigned int)NUM2UINT(_arg8_);
-    int dstLevel = (int)NUM2INT(_arg9_);
-    int dstX = (int)NUM2INT(_arg10_);
-    int dstY = (int)NUM2INT(_arg11_);
-    int dstZ = (int)NUM2INT(_arg12_);
-    int srcWidth = (int)NUM2INT(_arg13_);
-    int srcHeight = (int)NUM2INT(_arg14_);
-    int srcDepth = (int)NUM2INT(_arg15_);
+    unsigned int _srcName_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _srcTarget_ = (unsigned int)NUM2UINT(_arg2_);
+    int _srcLevel_ = (int)NUM2INT(_arg3_);
+    int _srcX_ = (int)NUM2INT(_arg4_);
+    int _srcY_ = (int)NUM2INT(_arg5_);
+    int _srcZ_ = (int)NUM2INT(_arg6_);
+    unsigned int _dstName_ = (unsigned int)NUM2UINT(_arg7_);
+    unsigned int _dstTarget_ = (unsigned int)NUM2UINT(_arg8_);
+    int _dstLevel_ = (int)NUM2INT(_arg9_);
+    int _dstX_ = (int)NUM2INT(_arg10_);
+    int _dstY_ = (int)NUM2INT(_arg11_);
+    int _dstZ_ = (int)NUM2INT(_arg12_);
+    int _srcWidth_ = (int)NUM2INT(_arg13_);
+    int _srcHeight_ = (int)NUM2INT(_arg14_);
+    int _srcDepth_ = (int)NUM2INT(_arg15_);
 
-    rogl_pfn_glCopyImageSubData(srcName, srcTarget, srcLevel, srcX, srcY, srcZ, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, srcWidth, srcHeight, srcDepth);
+    rogl_pfn_glCopyImageSubData(_srcName_, _srcTarget_, _srcLevel_, _srcX_, _srcY_, _srcZ_, _dstName_, _dstTarget_, _dstLevel_, _dstX_, _dstY_, _dstZ_, _srcWidth_, _srcHeight_, _srcDepth_);
 
     return Qnil;
 }
 
 static VALUE rogl_glFramebufferParameteri(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    int param = (int)NUM2INT(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    int _param_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glFramebufferParameteri(target, pname, param);
+    rogl_pfn_glFramebufferParameteri(_target_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetFramebufferParameteriv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetFramebufferParameteriv(target, pname, params);
+    rogl_pfn_glGetFramebufferParameteriv(_target_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetInternalformati64v(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
-    int bufSize = (int)NUM2INT(_arg4_);
-    void* params = (void*)val2ptr(_arg5_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg3_);
+    int _bufSize_ = (int)NUM2INT(_arg4_);
+    void* _params_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glGetInternalformati64v(target, internalformat, pname, bufSize, params);
+    rogl_pfn_glGetInternalformati64v(_target_, _internalformat_, _pname_, _bufSize_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glInvalidateTexSubImage(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int xoffset = (int)NUM2INT(_arg3_);
-    int yoffset = (int)NUM2INT(_arg4_);
-    int zoffset = (int)NUM2INT(_arg5_);
-    int width = (int)NUM2INT(_arg6_);
-    int height = (int)NUM2INT(_arg7_);
-    int depth = (int)NUM2INT(_arg8_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _xoffset_ = (int)NUM2INT(_arg3_);
+    int _yoffset_ = (int)NUM2INT(_arg4_);
+    int _zoffset_ = (int)NUM2INT(_arg5_);
+    int _width_ = (int)NUM2INT(_arg6_);
+    int _height_ = (int)NUM2INT(_arg7_);
+    int _depth_ = (int)NUM2INT(_arg8_);
 
-    rogl_pfn_glInvalidateTexSubImage(texture, level, xoffset, yoffset, zoffset, width, height, depth);
+    rogl_pfn_glInvalidateTexSubImage(_texture_, _level_, _xoffset_, _yoffset_, _zoffset_, _width_, _height_, _depth_);
 
     return Qnil;
 }
 
 static VALUE rogl_glInvalidateTexImage(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
 
-    rogl_pfn_glInvalidateTexImage(texture, level);
+    rogl_pfn_glInvalidateTexImage(_texture_, _level_);
 
     return Qnil;
 }
 
 static VALUE rogl_glInvalidateBufferSubData(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg2_);
-    ptrdiff_t length = (ptrdiff_t)NUM2UINT(_arg3_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg1_);
+    ptrdiff_t _offset_ = (ptrdiff_t)NUM2UINT(_arg2_);
+    ptrdiff_t _length_ = (ptrdiff_t)NUM2UINT(_arg3_);
 
-    rogl_pfn_glInvalidateBufferSubData(buffer, offset, length);
+    rogl_pfn_glInvalidateBufferSubData(_buffer_, _offset_, _length_);
 
     return Qnil;
 }
 
 static VALUE rogl_glInvalidateBufferData(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glInvalidateBufferData(buffer);
+    rogl_pfn_glInvalidateBufferData(_buffer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glInvalidateFramebuffer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int numAttachments = (int)NUM2INT(_arg2_);
-    void* attachments = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _numAttachments_ = (int)NUM2INT(_arg2_);
+    void* _attachments_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glInvalidateFramebuffer(target, numAttachments, attachments);
+    rogl_pfn_glInvalidateFramebuffer(_target_, _numAttachments_, _attachments_);
 
     return Qnil;
 }
 
 static VALUE rogl_glInvalidateSubFramebuffer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int numAttachments = (int)NUM2INT(_arg2_);
-    void* attachments = (void*)val2ptr(_arg3_);
-    int x = (int)NUM2INT(_arg4_);
-    int y = (int)NUM2INT(_arg5_);
-    int width = (int)NUM2INT(_arg6_);
-    int height = (int)NUM2INT(_arg7_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _numAttachments_ = (int)NUM2INT(_arg2_);
+    void* _attachments_ = (void*)val2ptr(_arg3_);
+    int _x_ = (int)NUM2INT(_arg4_);
+    int _y_ = (int)NUM2INT(_arg5_);
+    int _width_ = (int)NUM2INT(_arg6_);
+    int _height_ = (int)NUM2INT(_arg7_);
 
-    rogl_pfn_glInvalidateSubFramebuffer(target, numAttachments, attachments, x, y, width, height);
+    rogl_pfn_glInvalidateSubFramebuffer(_target_, _numAttachments_, _attachments_, _x_, _y_, _width_, _height_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiDrawArraysIndirect(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    void* indirect = (void*)val2ptr(_arg2_);
-    int drawcount = (int)NUM2INT(_arg3_);
-    int stride = (int)NUM2INT(_arg4_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    void* _indirect_ = (void*)val2ptr(_arg2_);
+    int _drawcount_ = (int)NUM2INT(_arg3_);
+    int _stride_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glMultiDrawArraysIndirect(mode, indirect, drawcount, stride);
+    rogl_pfn_glMultiDrawArraysIndirect(_mode_, _indirect_, _drawcount_, _stride_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMultiDrawElementsIndirect(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    void* indirect = (void*)val2ptr(_arg3_);
-    int drawcount = (int)NUM2INT(_arg4_);
-    int stride = (int)NUM2INT(_arg5_);
+    unsigned int _mode_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _indirect_ = (void*)val2ptr(_arg3_);
+    int _drawcount_ = (int)NUM2INT(_arg4_);
+    int _stride_ = (int)NUM2INT(_arg5_);
 
-    rogl_pfn_glMultiDrawElementsIndirect(mode, type, indirect, drawcount, stride);
+    rogl_pfn_glMultiDrawElementsIndirect(_mode_, _type_, _indirect_, _drawcount_, _stride_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetProgramInterfaceiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int programInterface = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
-    void* params = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _programInterface_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _params_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetProgramInterfaceiv(program, programInterface, pname, params);
+    rogl_pfn_glGetProgramInterfaceiv(_program_, _programInterface_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetProgramResourceIndex(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int programInterface = (unsigned int)NUM2UINT(_arg2_);
-    void* name = (void*)val2ptr(_arg3_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _programInterface_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _name_ = (void*)val2ptr(_arg3_);
 
-    unsigned int retval = rogl_pfn_glGetProgramResourceIndex(program, programInterface, name);
+    unsigned int retval = rogl_pfn_glGetProgramResourceIndex(_program_, _programInterface_, _name_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glGetProgramResourceName(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int programInterface = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg3_);
-    int bufSize = (int)NUM2INT(_arg4_);
-    void* length = (void*)val2ptr(_arg5_);
-    void* name = (void*)val2ptr(_arg6_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _programInterface_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg3_);
+    int _bufSize_ = (int)NUM2INT(_arg4_);
+    void* _length_ = (void*)val2ptr(_arg5_);
+    void* _name_ = (void*)val2ptr(_arg6_);
 
-    rogl_pfn_glGetProgramResourceName(program, programInterface, index, bufSize, length, name);
+    rogl_pfn_glGetProgramResourceName(_program_, _programInterface_, _index_, _bufSize_, _length_, _name_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetProgramResourceiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int programInterface = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg3_);
-    int propCount = (int)NUM2INT(_arg4_);
-    void* props = (void*)val2ptr(_arg5_);
-    int bufSize = (int)NUM2INT(_arg6_);
-    void* length = (void*)val2ptr(_arg7_);
-    void* params = (void*)val2ptr(_arg8_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _programInterface_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg3_);
+    int _propCount_ = (int)NUM2INT(_arg4_);
+    void* _props_ = (void*)val2ptr(_arg5_);
+    int _bufSize_ = (int)NUM2INT(_arg6_);
+    void* _length_ = (void*)val2ptr(_arg7_);
+    void* _params_ = (void*)val2ptr(_arg8_);
 
-    rogl_pfn_glGetProgramResourceiv(program, programInterface, index, propCount, props, bufSize, length, params);
+    rogl_pfn_glGetProgramResourceiv(_program_, _programInterface_, _index_, _propCount_, _props_, _bufSize_, _length_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetProgramResourceLocation(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int programInterface = (unsigned int)NUM2UINT(_arg2_);
-    void* name = (void*)val2ptr(_arg3_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _programInterface_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _name_ = (void*)val2ptr(_arg3_);
 
-    int retval = rogl_pfn_glGetProgramResourceLocation(program, programInterface, name);
+    int retval = rogl_pfn_glGetProgramResourceLocation(_program_, _programInterface_, _name_);
 
     return INT2NUM(retval);
 }
 
 static VALUE rogl_glGetProgramResourceLocationIndex(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int programInterface = (unsigned int)NUM2UINT(_arg2_);
-    void* name = (void*)val2ptr(_arg3_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _programInterface_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _name_ = (void*)val2ptr(_arg3_);
 
-    int retval = rogl_pfn_glGetProgramResourceLocationIndex(program, programInterface, name);
+    int retval = rogl_pfn_glGetProgramResourceLocationIndex(_program_, _programInterface_, _name_);
 
     return INT2NUM(retval);
 }
 
 static VALUE rogl_glShaderStorageBlockBinding(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int storageBlockIndex = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int storageBlockBinding = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _storageBlockIndex_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _storageBlockBinding_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glShaderStorageBlockBinding(program, storageBlockIndex, storageBlockBinding);
+    rogl_pfn_glShaderStorageBlockBinding(_program_, _storageBlockIndex_, _storageBlockBinding_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexBufferRange(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg3_);
-    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg4_);
-    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg5_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg3_);
+    ptrdiff_t _offset_ = (ptrdiff_t)NUM2UINT(_arg4_);
+    ptrdiff_t _size_ = (ptrdiff_t)NUM2UINT(_arg5_);
 
-    rogl_pfn_glTexBufferRange(target, internalformat, buffer, offset, size);
+    rogl_pfn_glTexBufferRange(_target_, _internalformat_, _buffer_, _offset_, _size_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexStorage2DMultisample(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int samples = (int)NUM2INT(_arg2_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
-    int height = (int)NUM2INT(_arg5_);
-    unsigned char fixedsamplelocations = (unsigned char)NUM2UINT(_arg6_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _samples_ = (int)NUM2INT(_arg2_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
+    int _height_ = (int)NUM2INT(_arg5_);
+    unsigned char _fixedsamplelocations_ = (unsigned char)NUM2UINT(_arg6_);
 
-    rogl_pfn_glTexStorage2DMultisample(target, samples, internalformat, width, height, fixedsamplelocations);
+    rogl_pfn_glTexStorage2DMultisample(_target_, _samples_, _internalformat_, _width_, _height_, _fixedsamplelocations_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTexStorage3DMultisample(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int samples = (int)NUM2INT(_arg2_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
-    int height = (int)NUM2INT(_arg5_);
-    int depth = (int)NUM2INT(_arg6_);
-    unsigned char fixedsamplelocations = (unsigned char)NUM2UINT(_arg7_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _samples_ = (int)NUM2INT(_arg2_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
+    int _height_ = (int)NUM2INT(_arg5_);
+    int _depth_ = (int)NUM2INT(_arg6_);
+    unsigned char _fixedsamplelocations_ = (unsigned char)NUM2UINT(_arg7_);
 
-    rogl_pfn_glTexStorage3DMultisample(target, samples, internalformat, width, height, depth, fixedsamplelocations);
+    rogl_pfn_glTexStorage3DMultisample(_target_, _samples_, _internalformat_, _width_, _height_, _depth_, _fixedsamplelocations_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTextureView(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int target = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int origtexture = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg4_);
-    unsigned int minlevel = (unsigned int)NUM2UINT(_arg5_);
-    unsigned int numlevels = (unsigned int)NUM2UINT(_arg6_);
-    unsigned int minlayer = (unsigned int)NUM2UINT(_arg7_);
-    unsigned int numlayers = (unsigned int)NUM2UINT(_arg8_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _origtexture_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _minlevel_ = (unsigned int)NUM2UINT(_arg5_);
+    unsigned int _numlevels_ = (unsigned int)NUM2UINT(_arg6_);
+    unsigned int _minlayer_ = (unsigned int)NUM2UINT(_arg7_);
+    unsigned int _numlayers_ = (unsigned int)NUM2UINT(_arg8_);
 
-    rogl_pfn_glTextureView(texture, target, origtexture, internalformat, minlevel, numlevels, minlayer, numlayers);
+    rogl_pfn_glTextureView(_texture_, _target_, _origtexture_, _internalformat_, _minlevel_, _numlevels_, _minlayer_, _numlayers_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBindVertexBuffer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int bindingindex = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg2_);
-    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg3_);
-    int stride = (int)NUM2INT(_arg4_);
+    unsigned int _bindingindex_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg2_);
+    ptrdiff_t _offset_ = (ptrdiff_t)NUM2UINT(_arg3_);
+    int _stride_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glBindVertexBuffer(bindingindex, buffer, offset, stride);
+    rogl_pfn_glBindVertexBuffer(_bindingindex_, _buffer_, _offset_, _stride_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribFormat(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int attribindex = (unsigned int)NUM2UINT(_arg1_);
-    int size = (int)NUM2INT(_arg2_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg3_);
-    unsigned char normalized = (unsigned char)NUM2UINT(_arg4_);
-    unsigned int relativeoffset = (unsigned int)NUM2UINT(_arg5_);
+    unsigned int _attribindex_ = (unsigned int)NUM2UINT(_arg1_);
+    int _size_ = (int)NUM2INT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned char _normalized_ = (unsigned char)NUM2UINT(_arg4_);
+    unsigned int _relativeoffset_ = (unsigned int)NUM2UINT(_arg5_);
 
-    rogl_pfn_glVertexAttribFormat(attribindex, size, type, normalized, relativeoffset);
+    rogl_pfn_glVertexAttribFormat(_attribindex_, _size_, _type_, _normalized_, _relativeoffset_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribIFormat(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int attribindex = (unsigned int)NUM2UINT(_arg1_);
-    int size = (int)NUM2INT(_arg2_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int relativeoffset = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _attribindex_ = (unsigned int)NUM2UINT(_arg1_);
+    int _size_ = (int)NUM2INT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _relativeoffset_ = (unsigned int)NUM2UINT(_arg4_);
 
-    rogl_pfn_glVertexAttribIFormat(attribindex, size, type, relativeoffset);
+    rogl_pfn_glVertexAttribIFormat(_attribindex_, _size_, _type_, _relativeoffset_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribLFormat(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int attribindex = (unsigned int)NUM2UINT(_arg1_);
-    int size = (int)NUM2INT(_arg2_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int relativeoffset = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _attribindex_ = (unsigned int)NUM2UINT(_arg1_);
+    int _size_ = (int)NUM2INT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _relativeoffset_ = (unsigned int)NUM2UINT(_arg4_);
 
-    rogl_pfn_glVertexAttribLFormat(attribindex, size, type, relativeoffset);
+    rogl_pfn_glVertexAttribLFormat(_attribindex_, _size_, _type_, _relativeoffset_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexAttribBinding(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int attribindex = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int bindingindex = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _attribindex_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _bindingindex_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glVertexAttribBinding(attribindex, bindingindex);
+    rogl_pfn_glVertexAttribBinding(_attribindex_, _bindingindex_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexBindingDivisor(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int bindingindex = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int divisor = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _bindingindex_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _divisor_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glVertexBindingDivisor(bindingindex, divisor);
+    rogl_pfn_glVertexBindingDivisor(_bindingindex_, _divisor_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDebugMessageControl(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int source = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int severity = (unsigned int)NUM2UINT(_arg3_);
-    int count = (int)NUM2INT(_arg4_);
-    void* ids = (void*)val2ptr(_arg5_);
-    unsigned char enabled = (unsigned char)NUM2UINT(_arg6_);
+    unsigned int _source_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _severity_ = (unsigned int)NUM2UINT(_arg3_);
+    int _count_ = (int)NUM2INT(_arg4_);
+    void* _ids_ = (void*)val2ptr(_arg5_);
+    unsigned char _enabled_ = (unsigned char)NUM2UINT(_arg6_);
 
-    rogl_pfn_glDebugMessageControl(source, type, severity, count, ids, enabled);
+    rogl_pfn_glDebugMessageControl(_source_, _type_, _severity_, _count_, _ids_, _enabled_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDebugMessageInsert(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int source = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int id = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int severity = (unsigned int)NUM2UINT(_arg4_);
-    int length = (int)NUM2INT(_arg5_);
-    void* buf = (void*)val2ptr(_arg6_);
+    unsigned int _source_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _id_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _severity_ = (unsigned int)NUM2UINT(_arg4_);
+    int _length_ = (int)NUM2INT(_arg5_);
+    void* _buf_ = (void*)val2ptr(_arg6_);
 
-    rogl_pfn_glDebugMessageInsert(source, type, id, severity, length, buf);
+    rogl_pfn_glDebugMessageInsert(_source_, _type_, _id_, _severity_, _length_, _buf_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDebugMessageCallback(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    void* callback = (void*)val2ptr(_arg1_);
-    void* userParam = (void*)val2ptr(_arg2_);
+    void* _callback_ = (void*)val2ptr(_arg1_);
+    void* _userParam_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glDebugMessageCallback(callback, userParam);
+    rogl_pfn_glDebugMessageCallback(_callback_, _userParam_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetDebugMessageLog(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_)
 {
-    unsigned int count = (unsigned int)NUM2UINT(_arg1_);
-    int bufSize = (int)NUM2INT(_arg2_);
-    void* sources = (void*)val2ptr(_arg3_);
-    void* types = (void*)val2ptr(_arg4_);
-    void* ids = (void*)val2ptr(_arg5_);
-    void* severities = (void*)val2ptr(_arg6_);
-    void* lengths = (void*)val2ptr(_arg7_);
-    void* messageLog = (void*)val2ptr(_arg8_);
+    unsigned int _count_ = (unsigned int)NUM2UINT(_arg1_);
+    int _bufSize_ = (int)NUM2INT(_arg2_);
+    void* _sources_ = (void*)val2ptr(_arg3_);
+    void* _types_ = (void*)val2ptr(_arg4_);
+    void* _ids_ = (void*)val2ptr(_arg5_);
+    void* _severities_ = (void*)val2ptr(_arg6_);
+    void* _lengths_ = (void*)val2ptr(_arg7_);
+    void* _messageLog_ = (void*)val2ptr(_arg8_);
 
-    unsigned int retval = rogl_pfn_glGetDebugMessageLog(count, bufSize, sources, types, ids, severities, lengths, messageLog);
+    unsigned int retval = rogl_pfn_glGetDebugMessageLog(_count_, _bufSize_, _sources_, _types_, _ids_, _severities_, _lengths_, _messageLog_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glPushDebugGroup(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int source = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int id = (unsigned int)NUM2UINT(_arg2_);
-    int length = (int)NUM2INT(_arg3_);
-    void* message = (void*)val2ptr(_arg4_);
+    unsigned int _source_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _id_ = (unsigned int)NUM2UINT(_arg2_);
+    int _length_ = (int)NUM2INT(_arg3_);
+    void* _message_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glPushDebugGroup(source, id, length, message);
+    rogl_pfn_glPushDebugGroup(_source_, _id_, _length_, _message_);
 
     return Qnil;
 }
@@ -11968,1401 +11968,1401 @@ static VALUE rogl_glPopDebugGroup(VALUE _obj_)
 
 static VALUE rogl_glObjectLabel(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int identifier = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int name = (unsigned int)NUM2UINT(_arg2_);
-    int length = (int)NUM2INT(_arg3_);
-    void* label = (void*)val2ptr(_arg4_);
+    unsigned int _identifier_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _name_ = (unsigned int)NUM2UINT(_arg2_);
+    int _length_ = (int)NUM2INT(_arg3_);
+    void* _label_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glObjectLabel(identifier, name, length, label);
+    rogl_pfn_glObjectLabel(_identifier_, _name_, _length_, _label_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetObjectLabel(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int identifier = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int name = (unsigned int)NUM2UINT(_arg2_);
-    int bufSize = (int)NUM2INT(_arg3_);
-    void* length = (void*)val2ptr(_arg4_);
-    void* label = (void*)val2ptr(_arg5_);
+    unsigned int _identifier_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _name_ = (unsigned int)NUM2UINT(_arg2_);
+    int _bufSize_ = (int)NUM2INT(_arg3_);
+    void* _length_ = (void*)val2ptr(_arg4_);
+    void* _label_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glGetObjectLabel(identifier, name, bufSize, length, label);
+    rogl_pfn_glGetObjectLabel(_identifier_, _name_, _bufSize_, _length_, _label_);
 
     return Qnil;
 }
 
 static VALUE rogl_glObjectPtrLabel(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    void* ptr = (void*)val2ptr(_arg1_);
-    int length = (int)NUM2INT(_arg2_);
-    void* label = (void*)val2ptr(_arg3_);
+    void* _ptr_ = (void*)val2ptr(_arg1_);
+    int _length_ = (int)NUM2INT(_arg2_);
+    void* _label_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glObjectPtrLabel(ptr, length, label);
+    rogl_pfn_glObjectPtrLabel(_ptr_, _length_, _label_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetObjectPtrLabel(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    void* ptr = (void*)val2ptr(_arg1_);
-    int bufSize = (int)NUM2INT(_arg2_);
-    void* length = (void*)val2ptr(_arg3_);
-    void* label = (void*)val2ptr(_arg4_);
+    void* _ptr_ = (void*)val2ptr(_arg1_);
+    int _bufSize_ = (int)NUM2INT(_arg2_);
+    void* _length_ = (void*)val2ptr(_arg3_);
+    void* _label_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetObjectPtrLabel(ptr, bufSize, length, label);
+    rogl_pfn_glGetObjectPtrLabel(_ptr_, _bufSize_, _length_, _label_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBufferStorage(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg2_);
-    void* data = (void*)val2ptr(_arg3_);
-    unsigned int flags = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    ptrdiff_t _size_ = (ptrdiff_t)NUM2UINT(_arg2_);
+    void* _data_ = (void*)val2ptr(_arg3_);
+    unsigned int _flags_ = (unsigned int)NUM2UINT(_arg4_);
 
-    rogl_pfn_glBufferStorage(target, size, data, flags);
+    rogl_pfn_glBufferStorage(_target_, _size_, _data_, _flags_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClearTexImage(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg4_);
-    void* data = (void*)val2ptr(_arg5_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg4_);
+    void* _data_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glClearTexImage(texture, level, format, type, data);
+    rogl_pfn_glClearTexImage(_texture_, _level_, _format_, _type_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClearTexSubImage(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_, VALUE _arg9_, VALUE _arg10_, VALUE _arg11_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int xoffset = (int)NUM2INT(_arg3_);
-    int yoffset = (int)NUM2INT(_arg4_);
-    int zoffset = (int)NUM2INT(_arg5_);
-    int width = (int)NUM2INT(_arg6_);
-    int height = (int)NUM2INT(_arg7_);
-    int depth = (int)NUM2INT(_arg8_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg9_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg10_);
-    void* data = (void*)val2ptr(_arg11_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _xoffset_ = (int)NUM2INT(_arg3_);
+    int _yoffset_ = (int)NUM2INT(_arg4_);
+    int _zoffset_ = (int)NUM2INT(_arg5_);
+    int _width_ = (int)NUM2INT(_arg6_);
+    int _height_ = (int)NUM2INT(_arg7_);
+    int _depth_ = (int)NUM2INT(_arg8_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg9_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg10_);
+    void* _data_ = (void*)val2ptr(_arg11_);
 
-    rogl_pfn_glClearTexSubImage(texture, level, xoffset, yoffset, zoffset, width, height, depth, format, type, data);
+    rogl_pfn_glClearTexSubImage(_texture_, _level_, _xoffset_, _yoffset_, _zoffset_, _width_, _height_, _depth_, _format_, _type_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBindBuffersBase(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int first = (unsigned int)NUM2UINT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    void* buffers = (void*)val2ptr(_arg4_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _first_ = (unsigned int)NUM2UINT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    void* _buffers_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glBindBuffersBase(target, first, count, buffers);
+    rogl_pfn_glBindBuffersBase(_target_, _first_, _count_, _buffers_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBindBuffersRange(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int first = (unsigned int)NUM2UINT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    void* buffers = (void*)val2ptr(_arg4_);
-    void* offsets = (void*)val2ptr(_arg5_);
-    void* sizes = (void*)val2ptr(_arg6_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _first_ = (unsigned int)NUM2UINT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    void* _buffers_ = (void*)val2ptr(_arg4_);
+    void* _offsets_ = (void*)val2ptr(_arg5_);
+    void* _sizes_ = (void*)val2ptr(_arg6_);
 
-    rogl_pfn_glBindBuffersRange(target, first, count, buffers, offsets, sizes);
+    rogl_pfn_glBindBuffersRange(_target_, _first_, _count_, _buffers_, _offsets_, _sizes_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBindTextures(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int first = (unsigned int)NUM2UINT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* textures = (void*)val2ptr(_arg3_);
+    unsigned int _first_ = (unsigned int)NUM2UINT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _textures_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glBindTextures(first, count, textures);
+    rogl_pfn_glBindTextures(_first_, _count_, _textures_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBindSamplers(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int first = (unsigned int)NUM2UINT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* samplers = (void*)val2ptr(_arg3_);
+    unsigned int _first_ = (unsigned int)NUM2UINT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _samplers_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glBindSamplers(first, count, samplers);
+    rogl_pfn_glBindSamplers(_first_, _count_, _samplers_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBindImageTextures(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int first = (unsigned int)NUM2UINT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* textures = (void*)val2ptr(_arg3_);
+    unsigned int _first_ = (unsigned int)NUM2UINT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _textures_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glBindImageTextures(first, count, textures);
+    rogl_pfn_glBindImageTextures(_first_, _count_, _textures_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBindVertexBuffers(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int first = (unsigned int)NUM2UINT(_arg1_);
-    int count = (int)NUM2INT(_arg2_);
-    void* buffers = (void*)val2ptr(_arg3_);
-    void* offsets = (void*)val2ptr(_arg4_);
-    void* strides = (void*)val2ptr(_arg5_);
+    unsigned int _first_ = (unsigned int)NUM2UINT(_arg1_);
+    int _count_ = (int)NUM2INT(_arg2_);
+    void* _buffers_ = (void*)val2ptr(_arg3_);
+    void* _offsets_ = (void*)val2ptr(_arg4_);
+    void* _strides_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glBindVertexBuffers(first, count, buffers, offsets, strides);
+    rogl_pfn_glBindVertexBuffers(_first_, _count_, _buffers_, _offsets_, _strides_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClipControl(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int origin = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int depth = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _origin_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _depth_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glClipControl(origin, depth);
+    rogl_pfn_glClipControl(_origin_, _depth_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCreateTransformFeedbacks(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* ids = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _ids_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glCreateTransformFeedbacks(n, ids);
+    rogl_pfn_glCreateTransformFeedbacks(_n_, _ids_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTransformFeedbackBufferBase(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int xfb = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _xfb_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glTransformFeedbackBufferBase(xfb, index, buffer);
+    rogl_pfn_glTransformFeedbackBufferBase(_xfb_, _index_, _buffer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTransformFeedbackBufferRange(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int xfb = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg3_);
-    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg4_);
-    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg5_);
+    unsigned int _xfb_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg3_);
+    ptrdiff_t _offset_ = (ptrdiff_t)NUM2UINT(_arg4_);
+    ptrdiff_t _size_ = (ptrdiff_t)NUM2UINT(_arg5_);
 
-    rogl_pfn_glTransformFeedbackBufferRange(xfb, index, buffer, offset, size);
+    rogl_pfn_glTransformFeedbackBufferRange(_xfb_, _index_, _buffer_, _offset_, _size_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetTransformFeedbackiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int xfb = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* param = (void*)val2ptr(_arg3_);
+    unsigned int _xfb_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _param_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetTransformFeedbackiv(xfb, pname, param);
+    rogl_pfn_glGetTransformFeedbackiv(_xfb_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetTransformFeedbacki_v(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int xfb = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg3_);
-    void* param = (void*)val2ptr(_arg4_);
+    unsigned int _xfb_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _param_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetTransformFeedbacki_v(xfb, pname, index, param);
+    rogl_pfn_glGetTransformFeedbacki_v(_xfb_, _pname_, _index_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetTransformFeedbacki64_v(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int xfb = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg3_);
-    void* param = (void*)val2ptr(_arg4_);
+    unsigned int _xfb_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _param_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetTransformFeedbacki64_v(xfb, pname, index, param);
+    rogl_pfn_glGetTransformFeedbacki64_v(_xfb_, _pname_, _index_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCreateBuffers(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* buffers = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _buffers_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glCreateBuffers(n, buffers);
+    rogl_pfn_glCreateBuffers(_n_, _buffers_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNamedBufferStorage(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg2_);
-    void* data = (void*)val2ptr(_arg3_);
-    unsigned int flags = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg1_);
+    ptrdiff_t _size_ = (ptrdiff_t)NUM2UINT(_arg2_);
+    void* _data_ = (void*)val2ptr(_arg3_);
+    unsigned int _flags_ = (unsigned int)NUM2UINT(_arg4_);
 
-    rogl_pfn_glNamedBufferStorage(buffer, size, data, flags);
+    rogl_pfn_glNamedBufferStorage(_buffer_, _size_, _data_, _flags_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNamedBufferData(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg2_);
-    void* data = (void*)val2ptr(_arg3_);
-    unsigned int usage = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg1_);
+    ptrdiff_t _size_ = (ptrdiff_t)NUM2UINT(_arg2_);
+    void* _data_ = (void*)val2ptr(_arg3_);
+    unsigned int _usage_ = (unsigned int)NUM2UINT(_arg4_);
 
-    rogl_pfn_glNamedBufferData(buffer, size, data, usage);
+    rogl_pfn_glNamedBufferData(_buffer_, _size_, _data_, _usage_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNamedBufferSubData(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg2_);
-    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg3_);
-    void* data = (void*)val2ptr(_arg4_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg1_);
+    ptrdiff_t _offset_ = (ptrdiff_t)NUM2UINT(_arg2_);
+    ptrdiff_t _size_ = (ptrdiff_t)NUM2UINT(_arg3_);
+    void* _data_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glNamedBufferSubData(buffer, offset, size, data);
+    rogl_pfn_glNamedBufferSubData(_buffer_, _offset_, _size_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCopyNamedBufferSubData(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int readBuffer = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int writeBuffer = (unsigned int)NUM2UINT(_arg2_);
-    ptrdiff_t readOffset = (ptrdiff_t)NUM2UINT(_arg3_);
-    ptrdiff_t writeOffset = (ptrdiff_t)NUM2UINT(_arg4_);
-    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg5_);
+    unsigned int _readBuffer_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _writeBuffer_ = (unsigned int)NUM2UINT(_arg2_);
+    ptrdiff_t _readOffset_ = (ptrdiff_t)NUM2UINT(_arg3_);
+    ptrdiff_t _writeOffset_ = (ptrdiff_t)NUM2UINT(_arg4_);
+    ptrdiff_t _size_ = (ptrdiff_t)NUM2UINT(_arg5_);
 
-    rogl_pfn_glCopyNamedBufferSubData(readBuffer, writeBuffer, readOffset, writeOffset, size);
+    rogl_pfn_glCopyNamedBufferSubData(_readBuffer_, _writeBuffer_, _readOffset_, _writeOffset_, _size_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClearNamedBufferData(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg4_);
-    void* data = (void*)val2ptr(_arg5_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg4_);
+    void* _data_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glClearNamedBufferData(buffer, internalformat, format, type, data);
+    rogl_pfn_glClearNamedBufferData(_buffer_, _internalformat_, _format_, _type_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClearNamedBufferSubData(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_)
 {
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg2_);
-    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg3_);
-    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg4_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg5_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg6_);
-    void* data = (void*)val2ptr(_arg7_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg2_);
+    ptrdiff_t _offset_ = (ptrdiff_t)NUM2UINT(_arg3_);
+    ptrdiff_t _size_ = (ptrdiff_t)NUM2UINT(_arg4_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg5_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg6_);
+    void* _data_ = (void*)val2ptr(_arg7_);
 
-    rogl_pfn_glClearNamedBufferSubData(buffer, internalformat, offset, size, format, type, data);
+    rogl_pfn_glClearNamedBufferSubData(_buffer_, _internalformat_, _offset_, _size_, _format_, _type_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMapNamedBuffer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int access = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _access_ = (unsigned int)NUM2UINT(_arg2_);
 
-    void* retval = rogl_pfn_glMapNamedBuffer(buffer, access);
+    void* retval = rogl_pfn_glMapNamedBuffer(_buffer_, _access_);
 
     return CPOINTER_AS_VALUE(retval);
 }
 
 static VALUE rogl_glMapNamedBufferRange(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg2_);
-    ptrdiff_t length = (ptrdiff_t)NUM2UINT(_arg3_);
-    unsigned int access = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg1_);
+    ptrdiff_t _offset_ = (ptrdiff_t)NUM2UINT(_arg2_);
+    ptrdiff_t _length_ = (ptrdiff_t)NUM2UINT(_arg3_);
+    unsigned int _access_ = (unsigned int)NUM2UINT(_arg4_);
 
-    void* retval = rogl_pfn_glMapNamedBufferRange(buffer, offset, length, access);
+    void* retval = rogl_pfn_glMapNamedBufferRange(_buffer_, _offset_, _length_, _access_);
 
     return CPOINTER_AS_VALUE(retval);
 }
 
 static VALUE rogl_glUnmapNamedBuffer(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg1_);
 
-    unsigned char retval = rogl_pfn_glUnmapNamedBuffer(buffer);
+    unsigned char retval = rogl_pfn_glUnmapNamedBuffer(_buffer_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glFlushMappedNamedBufferRange(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg2_);
-    ptrdiff_t length = (ptrdiff_t)NUM2UINT(_arg3_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg1_);
+    ptrdiff_t _offset_ = (ptrdiff_t)NUM2UINT(_arg2_);
+    ptrdiff_t _length_ = (ptrdiff_t)NUM2UINT(_arg3_);
 
-    rogl_pfn_glFlushMappedNamedBufferRange(buffer, offset, length);
+    rogl_pfn_glFlushMappedNamedBufferRange(_buffer_, _offset_, _length_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetNamedBufferParameteriv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetNamedBufferParameteriv(buffer, pname, params);
+    rogl_pfn_glGetNamedBufferParameteriv(_buffer_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetNamedBufferParameteri64v(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetNamedBufferParameteri64v(buffer, pname, params);
+    rogl_pfn_glGetNamedBufferParameteri64v(_buffer_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetNamedBufferPointerv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetNamedBufferPointerv(buffer, pname, params);
+    rogl_pfn_glGetNamedBufferPointerv(_buffer_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetNamedBufferSubData(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
-    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg2_);
-    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg3_);
-    void* data = (void*)val2ptr(_arg4_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg1_);
+    ptrdiff_t _offset_ = (ptrdiff_t)NUM2UINT(_arg2_);
+    ptrdiff_t _size_ = (ptrdiff_t)NUM2UINT(_arg3_);
+    void* _data_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetNamedBufferSubData(buffer, offset, size, data);
+    rogl_pfn_glGetNamedBufferSubData(_buffer_, _offset_, _size_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCreateFramebuffers(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* framebuffers = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _framebuffers_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glCreateFramebuffers(n, framebuffers);
+    rogl_pfn_glCreateFramebuffers(_n_, _framebuffers_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNamedFramebufferRenderbuffer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int framebuffer = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int attachment = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int renderbuffertarget = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int renderbuffer = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _framebuffer_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _attachment_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _renderbuffertarget_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _renderbuffer_ = (unsigned int)NUM2UINT(_arg4_);
 
-    rogl_pfn_glNamedFramebufferRenderbuffer(framebuffer, attachment, renderbuffertarget, renderbuffer);
+    rogl_pfn_glNamedFramebufferRenderbuffer(_framebuffer_, _attachment_, _renderbuffertarget_, _renderbuffer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNamedFramebufferParameteri(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int framebuffer = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    int param = (int)NUM2INT(_arg3_);
+    unsigned int _framebuffer_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    int _param_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glNamedFramebufferParameteri(framebuffer, pname, param);
+    rogl_pfn_glNamedFramebufferParameteri(_framebuffer_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNamedFramebufferTexture(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int framebuffer = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int attachment = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int texture = (unsigned int)NUM2UINT(_arg3_);
-    int level = (int)NUM2INT(_arg4_);
+    unsigned int _framebuffer_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _attachment_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg3_);
+    int _level_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glNamedFramebufferTexture(framebuffer, attachment, texture, level);
+    rogl_pfn_glNamedFramebufferTexture(_framebuffer_, _attachment_, _texture_, _level_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNamedFramebufferTextureLayer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int framebuffer = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int attachment = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int texture = (unsigned int)NUM2UINT(_arg3_);
-    int level = (int)NUM2INT(_arg4_);
-    int layer = (int)NUM2INT(_arg5_);
+    unsigned int _framebuffer_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _attachment_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg3_);
+    int _level_ = (int)NUM2INT(_arg4_);
+    int _layer_ = (int)NUM2INT(_arg5_);
 
-    rogl_pfn_glNamedFramebufferTextureLayer(framebuffer, attachment, texture, level, layer);
+    rogl_pfn_glNamedFramebufferTextureLayer(_framebuffer_, _attachment_, _texture_, _level_, _layer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNamedFramebufferDrawBuffer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int framebuffer = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int buf = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _framebuffer_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _buf_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glNamedFramebufferDrawBuffer(framebuffer, buf);
+    rogl_pfn_glNamedFramebufferDrawBuffer(_framebuffer_, _buf_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNamedFramebufferDrawBuffers(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int framebuffer = (unsigned int)NUM2UINT(_arg1_);
-    int n = (int)NUM2INT(_arg2_);
-    void* bufs = (void*)val2ptr(_arg3_);
+    unsigned int _framebuffer_ = (unsigned int)NUM2UINT(_arg1_);
+    int _n_ = (int)NUM2INT(_arg2_);
+    void* _bufs_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glNamedFramebufferDrawBuffers(framebuffer, n, bufs);
+    rogl_pfn_glNamedFramebufferDrawBuffers(_framebuffer_, _n_, _bufs_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNamedFramebufferReadBuffer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int framebuffer = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int src = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _framebuffer_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _src_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glNamedFramebufferReadBuffer(framebuffer, src);
+    rogl_pfn_glNamedFramebufferReadBuffer(_framebuffer_, _src_);
 
     return Qnil;
 }
 
 static VALUE rogl_glInvalidateNamedFramebufferData(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int framebuffer = (unsigned int)NUM2UINT(_arg1_);
-    int numAttachments = (int)NUM2INT(_arg2_);
-    void* attachments = (void*)val2ptr(_arg3_);
+    unsigned int _framebuffer_ = (unsigned int)NUM2UINT(_arg1_);
+    int _numAttachments_ = (int)NUM2INT(_arg2_);
+    void* _attachments_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glInvalidateNamedFramebufferData(framebuffer, numAttachments, attachments);
+    rogl_pfn_glInvalidateNamedFramebufferData(_framebuffer_, _numAttachments_, _attachments_);
 
     return Qnil;
 }
 
 static VALUE rogl_glInvalidateNamedFramebufferSubData(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_)
 {
-    unsigned int framebuffer = (unsigned int)NUM2UINT(_arg1_);
-    int numAttachments = (int)NUM2INT(_arg2_);
-    void* attachments = (void*)val2ptr(_arg3_);
-    int x = (int)NUM2INT(_arg4_);
-    int y = (int)NUM2INT(_arg5_);
-    int width = (int)NUM2INT(_arg6_);
-    int height = (int)NUM2INT(_arg7_);
+    unsigned int _framebuffer_ = (unsigned int)NUM2UINT(_arg1_);
+    int _numAttachments_ = (int)NUM2INT(_arg2_);
+    void* _attachments_ = (void*)val2ptr(_arg3_);
+    int _x_ = (int)NUM2INT(_arg4_);
+    int _y_ = (int)NUM2INT(_arg5_);
+    int _width_ = (int)NUM2INT(_arg6_);
+    int _height_ = (int)NUM2INT(_arg7_);
 
-    rogl_pfn_glInvalidateNamedFramebufferSubData(framebuffer, numAttachments, attachments, x, y, width, height);
+    rogl_pfn_glInvalidateNamedFramebufferSubData(_framebuffer_, _numAttachments_, _attachments_, _x_, _y_, _width_, _height_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClearNamedFramebufferiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int framebuffer = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg2_);
-    int drawbuffer = (int)NUM2INT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    unsigned int _framebuffer_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg2_);
+    int _drawbuffer_ = (int)NUM2INT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glClearNamedFramebufferiv(framebuffer, buffer, drawbuffer, value);
+    rogl_pfn_glClearNamedFramebufferiv(_framebuffer_, _buffer_, _drawbuffer_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClearNamedFramebufferuiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int framebuffer = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg2_);
-    int drawbuffer = (int)NUM2INT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    unsigned int _framebuffer_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg2_);
+    int _drawbuffer_ = (int)NUM2INT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glClearNamedFramebufferuiv(framebuffer, buffer, drawbuffer, value);
+    rogl_pfn_glClearNamedFramebufferuiv(_framebuffer_, _buffer_, _drawbuffer_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClearNamedFramebufferfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int framebuffer = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg2_);
-    int drawbuffer = (int)NUM2INT(_arg3_);
-    void* value = (void*)val2ptr(_arg4_);
+    unsigned int _framebuffer_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg2_);
+    int _drawbuffer_ = (int)NUM2INT(_arg3_);
+    void* _value_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glClearNamedFramebufferfv(framebuffer, buffer, drawbuffer, value);
+    rogl_pfn_glClearNamedFramebufferfv(_framebuffer_, _buffer_, _drawbuffer_, _value_);
 
     return Qnil;
 }
 
 static VALUE rogl_glClearNamedFramebufferfi(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int framebuffer = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg2_);
-    int drawbuffer = (int)NUM2INT(_arg3_);
-    float depth = (float)NUM2DBL(_arg4_);
-    int stencil = (int)NUM2INT(_arg5_);
+    unsigned int _framebuffer_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg2_);
+    int _drawbuffer_ = (int)NUM2INT(_arg3_);
+    float _depth_ = (float)NUM2DBL(_arg4_);
+    int _stencil_ = (int)NUM2INT(_arg5_);
 
-    rogl_pfn_glClearNamedFramebufferfi(framebuffer, buffer, drawbuffer, depth, stencil);
+    rogl_pfn_glClearNamedFramebufferfi(_framebuffer_, _buffer_, _drawbuffer_, _depth_, _stencil_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBlitNamedFramebuffer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_, VALUE _arg9_, VALUE _arg10_, VALUE _arg11_, VALUE _arg12_)
 {
-    unsigned int readFramebuffer = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int drawFramebuffer = (unsigned int)NUM2UINT(_arg2_);
-    int srcX0 = (int)NUM2INT(_arg3_);
-    int srcY0 = (int)NUM2INT(_arg4_);
-    int srcX1 = (int)NUM2INT(_arg5_);
-    int srcY1 = (int)NUM2INT(_arg6_);
-    int dstX0 = (int)NUM2INT(_arg7_);
-    int dstY0 = (int)NUM2INT(_arg8_);
-    int dstX1 = (int)NUM2INT(_arg9_);
-    int dstY1 = (int)NUM2INT(_arg10_);
-    unsigned int mask = (unsigned int)NUM2UINT(_arg11_);
-    unsigned int filter = (unsigned int)NUM2UINT(_arg12_);
+    unsigned int _readFramebuffer_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _drawFramebuffer_ = (unsigned int)NUM2UINT(_arg2_);
+    int _srcX0_ = (int)NUM2INT(_arg3_);
+    int _srcY0_ = (int)NUM2INT(_arg4_);
+    int _srcX1_ = (int)NUM2INT(_arg5_);
+    int _srcY1_ = (int)NUM2INT(_arg6_);
+    int _dstX0_ = (int)NUM2INT(_arg7_);
+    int _dstY0_ = (int)NUM2INT(_arg8_);
+    int _dstX1_ = (int)NUM2INT(_arg9_);
+    int _dstY1_ = (int)NUM2INT(_arg10_);
+    unsigned int _mask_ = (unsigned int)NUM2UINT(_arg11_);
+    unsigned int _filter_ = (unsigned int)NUM2UINT(_arg12_);
 
-    rogl_pfn_glBlitNamedFramebuffer(readFramebuffer, drawFramebuffer, srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1, mask, filter);
+    rogl_pfn_glBlitNamedFramebuffer(_readFramebuffer_, _drawFramebuffer_, _srcX0_, _srcY0_, _srcX1_, _srcY1_, _dstX0_, _dstY0_, _dstX1_, _dstY1_, _mask_, _filter_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCheckNamedFramebufferStatus(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int framebuffer = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int target = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _framebuffer_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg2_);
 
-    unsigned int retval = rogl_pfn_glCheckNamedFramebufferStatus(framebuffer, target);
+    unsigned int retval = rogl_pfn_glCheckNamedFramebufferStatus(_framebuffer_, _target_);
 
     return UINT2NUM(retval);
 }
 
 static VALUE rogl_glGetNamedFramebufferParameteriv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int framebuffer = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* param = (void*)val2ptr(_arg3_);
+    unsigned int _framebuffer_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _param_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetNamedFramebufferParameteriv(framebuffer, pname, param);
+    rogl_pfn_glGetNamedFramebufferParameteriv(_framebuffer_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetNamedFramebufferAttachmentParameteriv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int framebuffer = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int attachment = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
-    void* params = (void*)val2ptr(_arg4_);
+    unsigned int _framebuffer_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _attachment_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _params_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetNamedFramebufferAttachmentParameteriv(framebuffer, attachment, pname, params);
+    rogl_pfn_glGetNamedFramebufferAttachmentParameteriv(_framebuffer_, _attachment_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCreateRenderbuffers(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* renderbuffers = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _renderbuffers_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glCreateRenderbuffers(n, renderbuffers);
+    rogl_pfn_glCreateRenderbuffers(_n_, _renderbuffers_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNamedRenderbufferStorage(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int renderbuffer = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg2_);
-    int width = (int)NUM2INT(_arg3_);
-    int height = (int)NUM2INT(_arg4_);
+    unsigned int _renderbuffer_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg2_);
+    int _width_ = (int)NUM2INT(_arg3_);
+    int _height_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glNamedRenderbufferStorage(renderbuffer, internalformat, width, height);
+    rogl_pfn_glNamedRenderbufferStorage(_renderbuffer_, _internalformat_, _width_, _height_);
 
     return Qnil;
 }
 
 static VALUE rogl_glNamedRenderbufferStorageMultisample(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int renderbuffer = (unsigned int)NUM2UINT(_arg1_);
-    int samples = (int)NUM2INT(_arg2_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
-    int height = (int)NUM2INT(_arg5_);
+    unsigned int _renderbuffer_ = (unsigned int)NUM2UINT(_arg1_);
+    int _samples_ = (int)NUM2INT(_arg2_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
+    int _height_ = (int)NUM2INT(_arg5_);
 
-    rogl_pfn_glNamedRenderbufferStorageMultisample(renderbuffer, samples, internalformat, width, height);
+    rogl_pfn_glNamedRenderbufferStorageMultisample(_renderbuffer_, _samples_, _internalformat_, _width_, _height_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetNamedRenderbufferParameteriv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int renderbuffer = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _renderbuffer_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetNamedRenderbufferParameteriv(renderbuffer, pname, params);
+    rogl_pfn_glGetNamedRenderbufferParameteriv(_renderbuffer_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCreateTextures(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int n = (int)NUM2INT(_arg2_);
-    void* textures = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _n_ = (int)NUM2INT(_arg2_);
+    void* _textures_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glCreateTextures(target, n, textures);
+    rogl_pfn_glCreateTextures(_target_, _n_, _textures_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTextureBuffer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glTextureBuffer(texture, internalformat, buffer);
+    rogl_pfn_glTextureBuffer(_texture_, _internalformat_, _buffer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTextureBufferRange(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg3_);
-    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg4_);
-    ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg5_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg3_);
+    ptrdiff_t _offset_ = (ptrdiff_t)NUM2UINT(_arg4_);
+    ptrdiff_t _size_ = (ptrdiff_t)NUM2UINT(_arg5_);
 
-    rogl_pfn_glTextureBufferRange(texture, internalformat, buffer, offset, size);
+    rogl_pfn_glTextureBufferRange(_texture_, _internalformat_, _buffer_, _offset_, _size_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTextureStorage1D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int levels = (int)NUM2INT(_arg2_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _levels_ = (int)NUM2INT(_arg2_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
 
-    rogl_pfn_glTextureStorage1D(texture, levels, internalformat, width);
+    rogl_pfn_glTextureStorage1D(_texture_, _levels_, _internalformat_, _width_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTextureStorage2D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int levels = (int)NUM2INT(_arg2_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
-    int height = (int)NUM2INT(_arg5_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _levels_ = (int)NUM2INT(_arg2_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
+    int _height_ = (int)NUM2INT(_arg5_);
 
-    rogl_pfn_glTextureStorage2D(texture, levels, internalformat, width, height);
+    rogl_pfn_glTextureStorage2D(_texture_, _levels_, _internalformat_, _width_, _height_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTextureStorage3D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int levels = (int)NUM2INT(_arg2_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
-    int height = (int)NUM2INT(_arg5_);
-    int depth = (int)NUM2INT(_arg6_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _levels_ = (int)NUM2INT(_arg2_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
+    int _height_ = (int)NUM2INT(_arg5_);
+    int _depth_ = (int)NUM2INT(_arg6_);
 
-    rogl_pfn_glTextureStorage3D(texture, levels, internalformat, width, height, depth);
+    rogl_pfn_glTextureStorage3D(_texture_, _levels_, _internalformat_, _width_, _height_, _depth_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTextureStorage2DMultisample(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int samples = (int)NUM2INT(_arg2_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
-    int height = (int)NUM2INT(_arg5_);
-    unsigned char fixedsamplelocations = (unsigned char)NUM2UINT(_arg6_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _samples_ = (int)NUM2INT(_arg2_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
+    int _height_ = (int)NUM2INT(_arg5_);
+    unsigned char _fixedsamplelocations_ = (unsigned char)NUM2UINT(_arg6_);
 
-    rogl_pfn_glTextureStorage2DMultisample(texture, samples, internalformat, width, height, fixedsamplelocations);
+    rogl_pfn_glTextureStorage2DMultisample(_texture_, _samples_, _internalformat_, _width_, _height_, _fixedsamplelocations_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTextureStorage3DMultisample(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int samples = (int)NUM2INT(_arg2_);
-    unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
-    int height = (int)NUM2INT(_arg5_);
-    int depth = (int)NUM2INT(_arg6_);
-    unsigned char fixedsamplelocations = (unsigned char)NUM2UINT(_arg7_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _samples_ = (int)NUM2INT(_arg2_);
+    unsigned int _internalformat_ = (unsigned int)NUM2UINT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
+    int _height_ = (int)NUM2INT(_arg5_);
+    int _depth_ = (int)NUM2INT(_arg6_);
+    unsigned char _fixedsamplelocations_ = (unsigned char)NUM2UINT(_arg7_);
 
-    rogl_pfn_glTextureStorage3DMultisample(texture, samples, internalformat, width, height, depth, fixedsamplelocations);
+    rogl_pfn_glTextureStorage3DMultisample(_texture_, _samples_, _internalformat_, _width_, _height_, _depth_, _fixedsamplelocations_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTextureSubImage1D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int xoffset = (int)NUM2INT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg5_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg6_);
-    void* pixels = (void*)val2ptr(_arg7_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _xoffset_ = (int)NUM2INT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg5_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg6_);
+    void* _pixels_ = (void*)val2ptr(_arg7_);
 
-    rogl_pfn_glTextureSubImage1D(texture, level, xoffset, width, format, type, pixels);
+    rogl_pfn_glTextureSubImage1D(_texture_, _level_, _xoffset_, _width_, _format_, _type_, _pixels_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTextureSubImage2D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_, VALUE _arg9_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int xoffset = (int)NUM2INT(_arg3_);
-    int yoffset = (int)NUM2INT(_arg4_);
-    int width = (int)NUM2INT(_arg5_);
-    int height = (int)NUM2INT(_arg6_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg7_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg8_);
-    void* pixels = (void*)val2ptr(_arg9_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _xoffset_ = (int)NUM2INT(_arg3_);
+    int _yoffset_ = (int)NUM2INT(_arg4_);
+    int _width_ = (int)NUM2INT(_arg5_);
+    int _height_ = (int)NUM2INT(_arg6_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg7_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg8_);
+    void* _pixels_ = (void*)val2ptr(_arg9_);
 
-    rogl_pfn_glTextureSubImage2D(texture, level, xoffset, yoffset, width, height, format, type, pixels);
+    rogl_pfn_glTextureSubImage2D(_texture_, _level_, _xoffset_, _yoffset_, _width_, _height_, _format_, _type_, _pixels_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTextureSubImage3D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_, VALUE _arg9_, VALUE _arg10_, VALUE _arg11_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int xoffset = (int)NUM2INT(_arg3_);
-    int yoffset = (int)NUM2INT(_arg4_);
-    int zoffset = (int)NUM2INT(_arg5_);
-    int width = (int)NUM2INT(_arg6_);
-    int height = (int)NUM2INT(_arg7_);
-    int depth = (int)NUM2INT(_arg8_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg9_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg10_);
-    void* pixels = (void*)val2ptr(_arg11_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _xoffset_ = (int)NUM2INT(_arg3_);
+    int _yoffset_ = (int)NUM2INT(_arg4_);
+    int _zoffset_ = (int)NUM2INT(_arg5_);
+    int _width_ = (int)NUM2INT(_arg6_);
+    int _height_ = (int)NUM2INT(_arg7_);
+    int _depth_ = (int)NUM2INT(_arg8_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg9_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg10_);
+    void* _pixels_ = (void*)val2ptr(_arg11_);
 
-    rogl_pfn_glTextureSubImage3D(texture, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels);
+    rogl_pfn_glTextureSubImage3D(_texture_, _level_, _xoffset_, _yoffset_, _zoffset_, _width_, _height_, _depth_, _format_, _type_, _pixels_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCompressedTextureSubImage1D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int xoffset = (int)NUM2INT(_arg3_);
-    int width = (int)NUM2INT(_arg4_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg5_);
-    int imageSize = (int)NUM2INT(_arg6_);
-    void* data = (void*)val2ptr(_arg7_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _xoffset_ = (int)NUM2INT(_arg3_);
+    int _width_ = (int)NUM2INT(_arg4_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg5_);
+    int _imageSize_ = (int)NUM2INT(_arg6_);
+    void* _data_ = (void*)val2ptr(_arg7_);
 
-    rogl_pfn_glCompressedTextureSubImage1D(texture, level, xoffset, width, format, imageSize, data);
+    rogl_pfn_glCompressedTextureSubImage1D(_texture_, _level_, _xoffset_, _width_, _format_, _imageSize_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCompressedTextureSubImage2D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_, VALUE _arg9_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int xoffset = (int)NUM2INT(_arg3_);
-    int yoffset = (int)NUM2INT(_arg4_);
-    int width = (int)NUM2INT(_arg5_);
-    int height = (int)NUM2INT(_arg6_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg7_);
-    int imageSize = (int)NUM2INT(_arg8_);
-    void* data = (void*)val2ptr(_arg9_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _xoffset_ = (int)NUM2INT(_arg3_);
+    int _yoffset_ = (int)NUM2INT(_arg4_);
+    int _width_ = (int)NUM2INT(_arg5_);
+    int _height_ = (int)NUM2INT(_arg6_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg7_);
+    int _imageSize_ = (int)NUM2INT(_arg8_);
+    void* _data_ = (void*)val2ptr(_arg9_);
 
-    rogl_pfn_glCompressedTextureSubImage2D(texture, level, xoffset, yoffset, width, height, format, imageSize, data);
+    rogl_pfn_glCompressedTextureSubImage2D(_texture_, _level_, _xoffset_, _yoffset_, _width_, _height_, _format_, _imageSize_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCompressedTextureSubImage3D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_, VALUE _arg9_, VALUE _arg10_, VALUE _arg11_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int xoffset = (int)NUM2INT(_arg3_);
-    int yoffset = (int)NUM2INT(_arg4_);
-    int zoffset = (int)NUM2INT(_arg5_);
-    int width = (int)NUM2INT(_arg6_);
-    int height = (int)NUM2INT(_arg7_);
-    int depth = (int)NUM2INT(_arg8_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg9_);
-    int imageSize = (int)NUM2INT(_arg10_);
-    void* data = (void*)val2ptr(_arg11_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _xoffset_ = (int)NUM2INT(_arg3_);
+    int _yoffset_ = (int)NUM2INT(_arg4_);
+    int _zoffset_ = (int)NUM2INT(_arg5_);
+    int _width_ = (int)NUM2INT(_arg6_);
+    int _height_ = (int)NUM2INT(_arg7_);
+    int _depth_ = (int)NUM2INT(_arg8_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg9_);
+    int _imageSize_ = (int)NUM2INT(_arg10_);
+    void* _data_ = (void*)val2ptr(_arg11_);
 
-    rogl_pfn_glCompressedTextureSubImage3D(texture, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, data);
+    rogl_pfn_glCompressedTextureSubImage3D(_texture_, _level_, _xoffset_, _yoffset_, _zoffset_, _width_, _height_, _depth_, _format_, _imageSize_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCopyTextureSubImage1D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int xoffset = (int)NUM2INT(_arg3_);
-    int x = (int)NUM2INT(_arg4_);
-    int y = (int)NUM2INT(_arg5_);
-    int width = (int)NUM2INT(_arg6_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _xoffset_ = (int)NUM2INT(_arg3_);
+    int _x_ = (int)NUM2INT(_arg4_);
+    int _y_ = (int)NUM2INT(_arg5_);
+    int _width_ = (int)NUM2INT(_arg6_);
 
-    rogl_pfn_glCopyTextureSubImage1D(texture, level, xoffset, x, y, width);
+    rogl_pfn_glCopyTextureSubImage1D(_texture_, _level_, _xoffset_, _x_, _y_, _width_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCopyTextureSubImage2D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int xoffset = (int)NUM2INT(_arg3_);
-    int yoffset = (int)NUM2INT(_arg4_);
-    int x = (int)NUM2INT(_arg5_);
-    int y = (int)NUM2INT(_arg6_);
-    int width = (int)NUM2INT(_arg7_);
-    int height = (int)NUM2INT(_arg8_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _xoffset_ = (int)NUM2INT(_arg3_);
+    int _yoffset_ = (int)NUM2INT(_arg4_);
+    int _x_ = (int)NUM2INT(_arg5_);
+    int _y_ = (int)NUM2INT(_arg6_);
+    int _width_ = (int)NUM2INT(_arg7_);
+    int _height_ = (int)NUM2INT(_arg8_);
 
-    rogl_pfn_glCopyTextureSubImage2D(texture, level, xoffset, yoffset, x, y, width, height);
+    rogl_pfn_glCopyTextureSubImage2D(_texture_, _level_, _xoffset_, _yoffset_, _x_, _y_, _width_, _height_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCopyTextureSubImage3D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_, VALUE _arg9_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int xoffset = (int)NUM2INT(_arg3_);
-    int yoffset = (int)NUM2INT(_arg4_);
-    int zoffset = (int)NUM2INT(_arg5_);
-    int x = (int)NUM2INT(_arg6_);
-    int y = (int)NUM2INT(_arg7_);
-    int width = (int)NUM2INT(_arg8_);
-    int height = (int)NUM2INT(_arg9_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _xoffset_ = (int)NUM2INT(_arg3_);
+    int _yoffset_ = (int)NUM2INT(_arg4_);
+    int _zoffset_ = (int)NUM2INT(_arg5_);
+    int _x_ = (int)NUM2INT(_arg6_);
+    int _y_ = (int)NUM2INT(_arg7_);
+    int _width_ = (int)NUM2INT(_arg8_);
+    int _height_ = (int)NUM2INT(_arg9_);
 
-    rogl_pfn_glCopyTextureSubImage3D(texture, level, xoffset, yoffset, zoffset, x, y, width, height);
+    rogl_pfn_glCopyTextureSubImage3D(_texture_, _level_, _xoffset_, _yoffset_, _zoffset_, _x_, _y_, _width_, _height_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTextureParameterf(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    float param = (float)NUM2DBL(_arg3_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    float _param_ = (float)NUM2DBL(_arg3_);
 
-    rogl_pfn_glTextureParameterf(texture, pname, param);
+    rogl_pfn_glTextureParameterf(_texture_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTextureParameterfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* param = (void*)val2ptr(_arg3_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _param_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glTextureParameterfv(texture, pname, param);
+    rogl_pfn_glTextureParameterfv(_texture_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTextureParameteri(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    int param = (int)NUM2INT(_arg3_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    int _param_ = (int)NUM2INT(_arg3_);
 
-    rogl_pfn_glTextureParameteri(texture, pname, param);
+    rogl_pfn_glTextureParameteri(_texture_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTextureParameterIiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glTextureParameterIiv(texture, pname, params);
+    rogl_pfn_glTextureParameterIiv(_texture_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTextureParameterIuiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glTextureParameterIuiv(texture, pname, params);
+    rogl_pfn_glTextureParameterIuiv(_texture_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glTextureParameteriv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* param = (void*)val2ptr(_arg3_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _param_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glTextureParameteriv(texture, pname, param);
+    rogl_pfn_glTextureParameteriv(_texture_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGenerateTextureMipmap(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glGenerateTextureMipmap(texture);
+    rogl_pfn_glGenerateTextureMipmap(_texture_);
 
     return Qnil;
 }
 
 static VALUE rogl_glBindTextureUnit(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int unit = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int texture = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _unit_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glBindTextureUnit(unit, texture);
+    rogl_pfn_glBindTextureUnit(_unit_, _texture_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetTextureImage(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg4_);
-    int bufSize = (int)NUM2INT(_arg5_);
-    void* pixels = (void*)val2ptr(_arg6_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg4_);
+    int _bufSize_ = (int)NUM2INT(_arg5_);
+    void* _pixels_ = (void*)val2ptr(_arg6_);
 
-    rogl_pfn_glGetTextureImage(texture, level, format, type, bufSize, pixels);
+    rogl_pfn_glGetTextureImage(_texture_, _level_, _format_, _type_, _bufSize_, _pixels_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetCompressedTextureImage(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int bufSize = (int)NUM2INT(_arg3_);
-    void* pixels = (void*)val2ptr(_arg4_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _bufSize_ = (int)NUM2INT(_arg3_);
+    void* _pixels_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetCompressedTextureImage(texture, level, bufSize, pixels);
+    rogl_pfn_glGetCompressedTextureImage(_texture_, _level_, _bufSize_, _pixels_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetTextureLevelParameterfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
-    void* params = (void*)val2ptr(_arg4_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _params_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetTextureLevelParameterfv(texture, level, pname, params);
+    rogl_pfn_glGetTextureLevelParameterfv(_texture_, _level_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetTextureLevelParameteriv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
-    void* params = (void*)val2ptr(_arg4_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _params_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetTextureLevelParameteriv(texture, level, pname, params);
+    rogl_pfn_glGetTextureLevelParameteriv(_texture_, _level_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetTextureParameterfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetTextureParameterfv(texture, pname, params);
+    rogl_pfn_glGetTextureParameterfv(_texture_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetTextureParameterIiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetTextureParameterIiv(texture, pname, params);
+    rogl_pfn_glGetTextureParameterIiv(_texture_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetTextureParameterIuiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetTextureParameterIuiv(texture, pname, params);
+    rogl_pfn_glGetTextureParameterIuiv(_texture_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetTextureParameteriv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* params = (void*)val2ptr(_arg3_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _params_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetTextureParameteriv(texture, pname, params);
+    rogl_pfn_glGetTextureParameteriv(_texture_, _pname_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCreateVertexArrays(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* arrays = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _arrays_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glCreateVertexArrays(n, arrays);
+    rogl_pfn_glCreateVertexArrays(_n_, _arrays_);
 
     return Qnil;
 }
 
 static VALUE rogl_glDisableVertexArrayAttrib(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int vaobj = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _vaobj_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glDisableVertexArrayAttrib(vaobj, index);
+    rogl_pfn_glDisableVertexArrayAttrib(_vaobj_, _index_);
 
     return Qnil;
 }
 
 static VALUE rogl_glEnableVertexArrayAttrib(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int vaobj = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _vaobj_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glEnableVertexArrayAttrib(vaobj, index);
+    rogl_pfn_glEnableVertexArrayAttrib(_vaobj_, _index_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexArrayElementBuffer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    unsigned int vaobj = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _vaobj_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg2_);
 
-    rogl_pfn_glVertexArrayElementBuffer(vaobj, buffer);
+    rogl_pfn_glVertexArrayElementBuffer(_vaobj_, _buffer_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexArrayVertexBuffer(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int vaobj = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int bindingindex = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg3_);
-    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg4_);
-    int stride = (int)NUM2INT(_arg5_);
+    unsigned int _vaobj_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _bindingindex_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg3_);
+    ptrdiff_t _offset_ = (ptrdiff_t)NUM2UINT(_arg4_);
+    int _stride_ = (int)NUM2INT(_arg5_);
 
-    rogl_pfn_glVertexArrayVertexBuffer(vaobj, bindingindex, buffer, offset, stride);
+    rogl_pfn_glVertexArrayVertexBuffer(_vaobj_, _bindingindex_, _buffer_, _offset_, _stride_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexArrayVertexBuffers(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int vaobj = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int first = (unsigned int)NUM2UINT(_arg2_);
-    int count = (int)NUM2INT(_arg3_);
-    void* buffers = (void*)val2ptr(_arg4_);
-    void* offsets = (void*)val2ptr(_arg5_);
-    void* strides = (void*)val2ptr(_arg6_);
+    unsigned int _vaobj_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _first_ = (unsigned int)NUM2UINT(_arg2_);
+    int _count_ = (int)NUM2INT(_arg3_);
+    void* _buffers_ = (void*)val2ptr(_arg4_);
+    void* _offsets_ = (void*)val2ptr(_arg5_);
+    void* _strides_ = (void*)val2ptr(_arg6_);
 
-    rogl_pfn_glVertexArrayVertexBuffers(vaobj, first, count, buffers, offsets, strides);
+    rogl_pfn_glVertexArrayVertexBuffers(_vaobj_, _first_, _count_, _buffers_, _offsets_, _strides_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexArrayAttribBinding(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int vaobj = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int attribindex = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int bindingindex = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _vaobj_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _attribindex_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _bindingindex_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glVertexArrayAttribBinding(vaobj, attribindex, bindingindex);
+    rogl_pfn_glVertexArrayAttribBinding(_vaobj_, _attribindex_, _bindingindex_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexArrayAttribFormat(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int vaobj = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int attribindex = (unsigned int)NUM2UINT(_arg2_);
-    int size = (int)NUM2INT(_arg3_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg4_);
-    unsigned char normalized = (unsigned char)NUM2UINT(_arg5_);
-    unsigned int relativeoffset = (unsigned int)NUM2UINT(_arg6_);
+    unsigned int _vaobj_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _attribindex_ = (unsigned int)NUM2UINT(_arg2_);
+    int _size_ = (int)NUM2INT(_arg3_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg4_);
+    unsigned char _normalized_ = (unsigned char)NUM2UINT(_arg5_);
+    unsigned int _relativeoffset_ = (unsigned int)NUM2UINT(_arg6_);
 
-    rogl_pfn_glVertexArrayAttribFormat(vaobj, attribindex, size, type, normalized, relativeoffset);
+    rogl_pfn_glVertexArrayAttribFormat(_vaobj_, _attribindex_, _size_, _type_, _normalized_, _relativeoffset_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexArrayAttribIFormat(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int vaobj = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int attribindex = (unsigned int)NUM2UINT(_arg2_);
-    int size = (int)NUM2INT(_arg3_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg4_);
-    unsigned int relativeoffset = (unsigned int)NUM2UINT(_arg5_);
+    unsigned int _vaobj_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _attribindex_ = (unsigned int)NUM2UINT(_arg2_);
+    int _size_ = (int)NUM2INT(_arg3_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _relativeoffset_ = (unsigned int)NUM2UINT(_arg5_);
 
-    rogl_pfn_glVertexArrayAttribIFormat(vaobj, attribindex, size, type, relativeoffset);
+    rogl_pfn_glVertexArrayAttribIFormat(_vaobj_, _attribindex_, _size_, _type_, _relativeoffset_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexArrayAttribLFormat(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int vaobj = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int attribindex = (unsigned int)NUM2UINT(_arg2_);
-    int size = (int)NUM2INT(_arg3_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg4_);
-    unsigned int relativeoffset = (unsigned int)NUM2UINT(_arg5_);
+    unsigned int _vaobj_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _attribindex_ = (unsigned int)NUM2UINT(_arg2_);
+    int _size_ = (int)NUM2INT(_arg3_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg4_);
+    unsigned int _relativeoffset_ = (unsigned int)NUM2UINT(_arg5_);
 
-    rogl_pfn_glVertexArrayAttribLFormat(vaobj, attribindex, size, type, relativeoffset);
+    rogl_pfn_glVertexArrayAttribLFormat(_vaobj_, _attribindex_, _size_, _type_, _relativeoffset_);
 
     return Qnil;
 }
 
 static VALUE rogl_glVertexArrayBindingDivisor(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int vaobj = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int bindingindex = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int divisor = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _vaobj_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _bindingindex_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _divisor_ = (unsigned int)NUM2UINT(_arg3_);
 
-    rogl_pfn_glVertexArrayBindingDivisor(vaobj, bindingindex, divisor);
+    rogl_pfn_glVertexArrayBindingDivisor(_vaobj_, _bindingindex_, _divisor_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetVertexArrayiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int vaobj = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
-    void* param = (void*)val2ptr(_arg3_);
+    unsigned int _vaobj_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg2_);
+    void* _param_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetVertexArrayiv(vaobj, pname, param);
+    rogl_pfn_glGetVertexArrayiv(_vaobj_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetVertexArrayIndexediv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int vaobj = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
-    void* param = (void*)val2ptr(_arg4_);
+    unsigned int _vaobj_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _param_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetVertexArrayIndexediv(vaobj, index, pname, param);
+    rogl_pfn_glGetVertexArrayIndexediv(_vaobj_, _index_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetVertexArrayIndexed64iv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int vaobj = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int index = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
-    void* param = (void*)val2ptr(_arg4_);
+    unsigned int _vaobj_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _index_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg3_);
+    void* _param_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetVertexArrayIndexed64iv(vaobj, index, pname, param);
+    rogl_pfn_glGetVertexArrayIndexed64iv(_vaobj_, _index_, _pname_, _param_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCreateSamplers(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* samplers = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _samplers_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glCreateSamplers(n, samplers);
+    rogl_pfn_glCreateSamplers(_n_, _samplers_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCreateProgramPipelines(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int n = (int)NUM2INT(_arg1_);
-    void* pipelines = (void*)val2ptr(_arg2_);
+    int _n_ = (int)NUM2INT(_arg1_);
+    void* _pipelines_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glCreateProgramPipelines(n, pipelines);
+    rogl_pfn_glCreateProgramPipelines(_n_, _pipelines_);
 
     return Qnil;
 }
 
 static VALUE rogl_glCreateQueries(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int n = (int)NUM2INT(_arg2_);
-    void* ids = (void*)val2ptr(_arg3_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _n_ = (int)NUM2INT(_arg2_);
+    void* _ids_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glCreateQueries(target, n, ids);
+    rogl_pfn_glCreateQueries(_target_, _n_, _ids_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetQueryBufferObjecti64v(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int id = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
-    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg4_);
+    unsigned int _id_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg3_);
+    ptrdiff_t _offset_ = (ptrdiff_t)NUM2UINT(_arg4_);
 
-    rogl_pfn_glGetQueryBufferObjecti64v(id, buffer, pname, offset);
+    rogl_pfn_glGetQueryBufferObjecti64v(_id_, _buffer_, _pname_, _offset_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetQueryBufferObjectiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int id = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
-    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg4_);
+    unsigned int _id_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg3_);
+    ptrdiff_t _offset_ = (ptrdiff_t)NUM2UINT(_arg4_);
 
-    rogl_pfn_glGetQueryBufferObjectiv(id, buffer, pname, offset);
+    rogl_pfn_glGetQueryBufferObjectiv(_id_, _buffer_, _pname_, _offset_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetQueryBufferObjectui64v(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int id = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
-    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg4_);
+    unsigned int _id_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg3_);
+    ptrdiff_t _offset_ = (ptrdiff_t)NUM2UINT(_arg4_);
 
-    rogl_pfn_glGetQueryBufferObjectui64v(id, buffer, pname, offset);
+    rogl_pfn_glGetQueryBufferObjectui64v(_id_, _buffer_, _pname_, _offset_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetQueryBufferObjectuiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int id = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int buffer = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
-    ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg4_);
+    unsigned int _id_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _buffer_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _pname_ = (unsigned int)NUM2UINT(_arg3_);
+    ptrdiff_t _offset_ = (ptrdiff_t)NUM2UINT(_arg4_);
 
-    rogl_pfn_glGetQueryBufferObjectuiv(id, buffer, pname, offset);
+    rogl_pfn_glGetQueryBufferObjectuiv(_id_, _buffer_, _pname_, _offset_);
 
     return Qnil;
 }
 
 static VALUE rogl_glMemoryBarrierByRegion(VALUE _obj_, VALUE _arg1_)
 {
-    unsigned int barriers = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _barriers_ = (unsigned int)NUM2UINT(_arg1_);
 
-    rogl_pfn_glMemoryBarrierByRegion(barriers);
+    rogl_pfn_glMemoryBarrierByRegion(_barriers_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetTextureSubImage(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_, VALUE _arg9_, VALUE _arg10_, VALUE _arg11_, VALUE _arg12_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int xoffset = (int)NUM2INT(_arg3_);
-    int yoffset = (int)NUM2INT(_arg4_);
-    int zoffset = (int)NUM2INT(_arg5_);
-    int width = (int)NUM2INT(_arg6_);
-    int height = (int)NUM2INT(_arg7_);
-    int depth = (int)NUM2INT(_arg8_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg9_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg10_);
-    int bufSize = (int)NUM2INT(_arg11_);
-    void* pixels = (void*)val2ptr(_arg12_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _xoffset_ = (int)NUM2INT(_arg3_);
+    int _yoffset_ = (int)NUM2INT(_arg4_);
+    int _zoffset_ = (int)NUM2INT(_arg5_);
+    int _width_ = (int)NUM2INT(_arg6_);
+    int _height_ = (int)NUM2INT(_arg7_);
+    int _depth_ = (int)NUM2INT(_arg8_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg9_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg10_);
+    int _bufSize_ = (int)NUM2INT(_arg11_);
+    void* _pixels_ = (void*)val2ptr(_arg12_);
 
-    rogl_pfn_glGetTextureSubImage(texture, level, xoffset, yoffset, zoffset, width, height, depth, format, type, bufSize, pixels);
+    rogl_pfn_glGetTextureSubImage(_texture_, _level_, _xoffset_, _yoffset_, _zoffset_, _width_, _height_, _depth_, _format_, _type_, _bufSize_, _pixels_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetCompressedTextureSubImage(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_, VALUE _arg9_, VALUE _arg10_)
 {
-    unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    int xoffset = (int)NUM2INT(_arg3_);
-    int yoffset = (int)NUM2INT(_arg4_);
-    int zoffset = (int)NUM2INT(_arg5_);
-    int width = (int)NUM2INT(_arg6_);
-    int height = (int)NUM2INT(_arg7_);
-    int depth = (int)NUM2INT(_arg8_);
-    int bufSize = (int)NUM2INT(_arg9_);
-    void* pixels = (void*)val2ptr(_arg10_);
+    unsigned int _texture_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    int _xoffset_ = (int)NUM2INT(_arg3_);
+    int _yoffset_ = (int)NUM2INT(_arg4_);
+    int _zoffset_ = (int)NUM2INT(_arg5_);
+    int _width_ = (int)NUM2INT(_arg6_);
+    int _height_ = (int)NUM2INT(_arg7_);
+    int _depth_ = (int)NUM2INT(_arg8_);
+    int _bufSize_ = (int)NUM2INT(_arg9_);
+    void* _pixels_ = (void*)val2ptr(_arg10_);
 
-    rogl_pfn_glGetCompressedTextureSubImage(texture, level, xoffset, yoffset, zoffset, width, height, depth, bufSize, pixels);
+    rogl_pfn_glGetCompressedTextureSubImage(_texture_, _level_, _xoffset_, _yoffset_, _zoffset_, _width_, _height_, _depth_, _bufSize_, _pixels_);
 
     return Qnil;
 }
@@ -13376,239 +13376,239 @@ static VALUE rogl_glGetGraphicsResetStatus(VALUE _obj_)
 
 static VALUE rogl_glGetnCompressedTexImage(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int lod = (int)NUM2INT(_arg2_);
-    int bufSize = (int)NUM2INT(_arg3_);
-    void* pixels = (void*)val2ptr(_arg4_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _lod_ = (int)NUM2INT(_arg2_);
+    int _bufSize_ = (int)NUM2INT(_arg3_);
+    void* _pixels_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetnCompressedTexImage(target, lod, bufSize, pixels);
+    rogl_pfn_glGetnCompressedTexImage(_target_, _lod_, _bufSize_, _pixels_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetnTexImage(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    int level = (int)NUM2INT(_arg2_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg4_);
-    int bufSize = (int)NUM2INT(_arg5_);
-    void* pixels = (void*)val2ptr(_arg6_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    int _level_ = (int)NUM2INT(_arg2_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg4_);
+    int _bufSize_ = (int)NUM2INT(_arg5_);
+    void* _pixels_ = (void*)val2ptr(_arg6_);
 
-    rogl_pfn_glGetnTexImage(target, level, format, type, bufSize, pixels);
+    rogl_pfn_glGetnTexImage(_target_, _level_, _format_, _type_, _bufSize_, _pixels_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetnUniformdv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int bufSize = (int)NUM2INT(_arg3_);
-    void* params = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _bufSize_ = (int)NUM2INT(_arg3_);
+    void* _params_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetnUniformdv(program, location, bufSize, params);
+    rogl_pfn_glGetnUniformdv(_program_, _location_, _bufSize_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetnUniformfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int bufSize = (int)NUM2INT(_arg3_);
-    void* params = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _bufSize_ = (int)NUM2INT(_arg3_);
+    void* _params_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetnUniformfv(program, location, bufSize, params);
+    rogl_pfn_glGetnUniformfv(_program_, _location_, _bufSize_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetnUniformiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int bufSize = (int)NUM2INT(_arg3_);
-    void* params = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _bufSize_ = (int)NUM2INT(_arg3_);
+    void* _params_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetnUniformiv(program, location, bufSize, params);
+    rogl_pfn_glGetnUniformiv(_program_, _location_, _bufSize_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetnUniformuiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int program = (unsigned int)NUM2UINT(_arg1_);
-    int location = (int)NUM2INT(_arg2_);
-    int bufSize = (int)NUM2INT(_arg3_);
-    void* params = (void*)val2ptr(_arg4_);
+    unsigned int _program_ = (unsigned int)NUM2UINT(_arg1_);
+    int _location_ = (int)NUM2INT(_arg2_);
+    int _bufSize_ = (int)NUM2INT(_arg3_);
+    void* _params_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetnUniformuiv(program, location, bufSize, params);
+    rogl_pfn_glGetnUniformuiv(_program_, _location_, _bufSize_, _params_);
 
     return Qnil;
 }
 
 static VALUE rogl_glReadnPixels(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_)
 {
-    int x = (int)NUM2INT(_arg1_);
-    int y = (int)NUM2INT(_arg2_);
-    int width = (int)NUM2INT(_arg3_);
-    int height = (int)NUM2INT(_arg4_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg5_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg6_);
-    int bufSize = (int)NUM2INT(_arg7_);
-    void* data = (void*)val2ptr(_arg8_);
+    int _x_ = (int)NUM2INT(_arg1_);
+    int _y_ = (int)NUM2INT(_arg2_);
+    int _width_ = (int)NUM2INT(_arg3_);
+    int _height_ = (int)NUM2INT(_arg4_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg5_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg6_);
+    int _bufSize_ = (int)NUM2INT(_arg7_);
+    void* _data_ = (void*)val2ptr(_arg8_);
 
-    rogl_pfn_glReadnPixels(x, y, width, height, format, type, bufSize, data);
+    rogl_pfn_glReadnPixels(_x_, _y_, _width_, _height_, _format_, _type_, _bufSize_, _data_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetnMapdv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int query = (unsigned int)NUM2UINT(_arg2_);
-    int bufSize = (int)NUM2INT(_arg3_);
-    void* v = (void*)val2ptr(_arg4_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _query_ = (unsigned int)NUM2UINT(_arg2_);
+    int _bufSize_ = (int)NUM2INT(_arg3_);
+    void* _v_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetnMapdv(target, query, bufSize, v);
+    rogl_pfn_glGetnMapdv(_target_, _query_, _bufSize_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetnMapfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int query = (unsigned int)NUM2UINT(_arg2_);
-    int bufSize = (int)NUM2INT(_arg3_);
-    void* v = (void*)val2ptr(_arg4_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _query_ = (unsigned int)NUM2UINT(_arg2_);
+    int _bufSize_ = (int)NUM2INT(_arg3_);
+    void* _v_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetnMapfv(target, query, bufSize, v);
+    rogl_pfn_glGetnMapfv(_target_, _query_, _bufSize_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetnMapiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int query = (unsigned int)NUM2UINT(_arg2_);
-    int bufSize = (int)NUM2INT(_arg3_);
-    void* v = (void*)val2ptr(_arg4_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _query_ = (unsigned int)NUM2UINT(_arg2_);
+    int _bufSize_ = (int)NUM2INT(_arg3_);
+    void* _v_ = (void*)val2ptr(_arg4_);
 
-    rogl_pfn_glGetnMapiv(target, query, bufSize, v);
+    rogl_pfn_glGetnMapiv(_target_, _query_, _bufSize_, _v_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetnPixelMapfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int map = (unsigned int)NUM2UINT(_arg1_);
-    int bufSize = (int)NUM2INT(_arg2_);
-    void* values = (void*)val2ptr(_arg3_);
+    unsigned int _map_ = (unsigned int)NUM2UINT(_arg1_);
+    int _bufSize_ = (int)NUM2INT(_arg2_);
+    void* _values_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetnPixelMapfv(map, bufSize, values);
+    rogl_pfn_glGetnPixelMapfv(_map_, _bufSize_, _values_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetnPixelMapuiv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int map = (unsigned int)NUM2UINT(_arg1_);
-    int bufSize = (int)NUM2INT(_arg2_);
-    void* values = (void*)val2ptr(_arg3_);
+    unsigned int _map_ = (unsigned int)NUM2UINT(_arg1_);
+    int _bufSize_ = (int)NUM2INT(_arg2_);
+    void* _values_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetnPixelMapuiv(map, bufSize, values);
+    rogl_pfn_glGetnPixelMapuiv(_map_, _bufSize_, _values_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetnPixelMapusv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
-    unsigned int map = (unsigned int)NUM2UINT(_arg1_);
-    int bufSize = (int)NUM2INT(_arg2_);
-    void* values = (void*)val2ptr(_arg3_);
+    unsigned int _map_ = (unsigned int)NUM2UINT(_arg1_);
+    int _bufSize_ = (int)NUM2INT(_arg2_);
+    void* _values_ = (void*)val2ptr(_arg3_);
 
-    rogl_pfn_glGetnPixelMapusv(map, bufSize, values);
+    rogl_pfn_glGetnPixelMapusv(_map_, _bufSize_, _values_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetnPolygonStipple(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
-    int bufSize = (int)NUM2INT(_arg1_);
-    void* pattern = (void*)val2ptr(_arg2_);
+    int _bufSize_ = (int)NUM2INT(_arg1_);
+    void* _pattern_ = (void*)val2ptr(_arg2_);
 
-    rogl_pfn_glGetnPolygonStipple(bufSize, pattern);
+    rogl_pfn_glGetnPolygonStipple(_bufSize_, _pattern_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetnColorTable(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg3_);
-    int bufSize = (int)NUM2INT(_arg4_);
-    void* table = (void*)val2ptr(_arg5_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg3_);
+    int _bufSize_ = (int)NUM2INT(_arg4_);
+    void* _table_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glGetnColorTable(target, format, type, bufSize, table);
+    rogl_pfn_glGetnColorTable(_target_, _format_, _type_, _bufSize_, _table_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetnConvolutionFilter(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg3_);
-    int bufSize = (int)NUM2INT(_arg4_);
-    void* image = (void*)val2ptr(_arg5_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg3_);
+    int _bufSize_ = (int)NUM2INT(_arg4_);
+    void* _image_ = (void*)val2ptr(_arg5_);
 
-    rogl_pfn_glGetnConvolutionFilter(target, format, type, bufSize, image);
+    rogl_pfn_glGetnConvolutionFilter(_target_, _format_, _type_, _bufSize_, _image_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetnSeparableFilter(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_, VALUE _arg7_, VALUE _arg8_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg2_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg3_);
-    int rowBufSize = (int)NUM2INT(_arg4_);
-    void* row = (void*)val2ptr(_arg5_);
-    int columnBufSize = (int)NUM2INT(_arg6_);
-    void* column = (void*)val2ptr(_arg7_);
-    void* span = (void*)val2ptr(_arg8_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg2_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg3_);
+    int _rowBufSize_ = (int)NUM2INT(_arg4_);
+    void* _row_ = (void*)val2ptr(_arg5_);
+    int _columnBufSize_ = (int)NUM2INT(_arg6_);
+    void* _column_ = (void*)val2ptr(_arg7_);
+    void* _span_ = (void*)val2ptr(_arg8_);
 
-    rogl_pfn_glGetnSeparableFilter(target, format, type, rowBufSize, row, columnBufSize, column, span);
+    rogl_pfn_glGetnSeparableFilter(_target_, _format_, _type_, _rowBufSize_, _row_, _columnBufSize_, _column_, _span_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetnHistogram(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned char reset = (unsigned char)NUM2UINT(_arg2_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg4_);
-    int bufSize = (int)NUM2INT(_arg5_);
-    void* values = (void*)val2ptr(_arg6_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned char _reset_ = (unsigned char)NUM2UINT(_arg2_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg4_);
+    int _bufSize_ = (int)NUM2INT(_arg5_);
+    void* _values_ = (void*)val2ptr(_arg6_);
 
-    rogl_pfn_glGetnHistogram(target, reset, format, type, bufSize, values);
+    rogl_pfn_glGetnHistogram(_target_, _reset_, _format_, _type_, _bufSize_, _values_);
 
     return Qnil;
 }
 
 static VALUE rogl_glGetnMinmax(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_, VALUE _arg6_)
 {
-    unsigned int target = (unsigned int)NUM2UINT(_arg1_);
-    unsigned char reset = (unsigned char)NUM2UINT(_arg2_);
-    unsigned int format = (unsigned int)NUM2UINT(_arg3_);
-    unsigned int type = (unsigned int)NUM2UINT(_arg4_);
-    int bufSize = (int)NUM2INT(_arg5_);
-    void* values = (void*)val2ptr(_arg6_);
+    unsigned int _target_ = (unsigned int)NUM2UINT(_arg1_);
+    unsigned char _reset_ = (unsigned char)NUM2UINT(_arg2_);
+    unsigned int _format_ = (unsigned int)NUM2UINT(_arg3_);
+    unsigned int _type_ = (unsigned int)NUM2UINT(_arg4_);
+    int _bufSize_ = (int)NUM2INT(_arg5_);
+    void* _values_ = (void*)val2ptr(_arg6_);
 
-    rogl_pfn_glGetnMinmax(target, reset, format, type, bufSize, values);
+    rogl_pfn_glGetnMinmax(_target_, _reset_, _format_, _type_, _bufSize_, _values_);
 
     return Qnil;
 }
