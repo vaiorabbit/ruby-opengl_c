@@ -1,3 +1,7 @@
+2015-11-03  vaiorabbit  <http://twitter.com/vaiorabbit>
+
+	* ext/opengl_c/rogl.c (CHECK_PROC_ADDRESS): Added for initialization order issue.
+
 2015-10-26  vaiorabbit  <http://twitter.com/vaiorabbit>
 
 	* generator/c_generate_command.rb: All arguments now have
