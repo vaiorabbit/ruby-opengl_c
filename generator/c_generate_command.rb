@@ -115,6 +115,7 @@ module GLCCommandCodeGenerator
       end
 
       # Function call
+      out.puts "    CHECK_PROC_ADDRESS(rogl_pfn_#{api}, \"#{api}\");"
       function_call_line = ""
       function_call_line += "    #{function_retstr}rogl_pfn_#{api}("
       if arg_names.length > 0

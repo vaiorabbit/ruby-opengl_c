@@ -3404,6 +3404,7 @@ static VALUE rogl_glTbufferMask3DFX(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int mask = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTbufferMask3DFX, "glTbufferMask3DFX");
     rogl_pfn_glTbufferMask3DFX(mask);
 
     return Qnil;
@@ -3417,6 +3418,7 @@ static VALUE rogl_glDebugMessageEnableAMD(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     void* ids = (void*)val2ptr(_arg4_);
     unsigned char enabled = (unsigned char)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDebugMessageEnableAMD, "glDebugMessageEnableAMD");
     rogl_pfn_glDebugMessageEnableAMD(category, severity, count, ids, enabled);
 
     return Qnil;
@@ -3430,6 +3432,7 @@ static VALUE rogl_glDebugMessageInsertAMD(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     int length = (int)NUM2INT(_arg4_);
     void* buf = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDebugMessageInsertAMD, "glDebugMessageInsertAMD");
     rogl_pfn_glDebugMessageInsertAMD(category, severity, id, length, buf);
 
     return Qnil;
@@ -3440,6 +3443,7 @@ static VALUE rogl_glDebugMessageCallbackAMD(VALUE _obj_, VALUE _arg1_, VALUE _ar
     void* callback = (void*)val2ptr(_arg1_);
     void* userParam = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDebugMessageCallbackAMD, "glDebugMessageCallbackAMD");
     rogl_pfn_glDebugMessageCallbackAMD(callback, userParam);
 
     return Qnil;
@@ -3455,6 +3459,7 @@ static VALUE rogl_glGetDebugMessageLogAMD(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     void* lengths = (void*)val2ptr(_arg6_);
     void* message = (void*)val2ptr(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetDebugMessageLogAMD, "glGetDebugMessageLogAMD");
     unsigned int retval = rogl_pfn_glGetDebugMessageLogAMD(count, bufsize, categories, severities, ids, lengths, message);
 
     return UINT2NUM(retval);
@@ -3466,6 +3471,7 @@ static VALUE rogl_glBlendFuncIndexedAMD(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int src = (unsigned int)NUM2UINT(_arg2_);
     unsigned int dst = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBlendFuncIndexedAMD, "glBlendFuncIndexedAMD");
     rogl_pfn_glBlendFuncIndexedAMD(buf, src, dst);
 
     return Qnil;
@@ -3479,6 +3485,7 @@ static VALUE rogl_glBlendFuncSeparateIndexedAMD(VALUE _obj_, VALUE _arg1_, VALUE
     unsigned int srcAlpha = (unsigned int)NUM2UINT(_arg4_);
     unsigned int dstAlpha = (unsigned int)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBlendFuncSeparateIndexedAMD, "glBlendFuncSeparateIndexedAMD");
     rogl_pfn_glBlendFuncSeparateIndexedAMD(buf, srcRGB, dstRGB, srcAlpha, dstAlpha);
 
     return Qnil;
@@ -3489,6 +3496,7 @@ static VALUE rogl_glBlendEquationIndexedAMD(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int buf = (unsigned int)NUM2UINT(_arg1_);
     unsigned int mode = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBlendEquationIndexedAMD, "glBlendEquationIndexedAMD");
     rogl_pfn_glBlendEquationIndexedAMD(buf, mode);
 
     return Qnil;
@@ -3500,6 +3508,7 @@ static VALUE rogl_glBlendEquationSeparateIndexedAMD(VALUE _obj_, VALUE _arg1_, V
     unsigned int modeRGB = (unsigned int)NUM2UINT(_arg2_);
     unsigned int modeAlpha = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBlendEquationSeparateIndexedAMD, "glBlendEquationSeparateIndexedAMD");
     rogl_pfn_glBlendEquationSeparateIndexedAMD(buf, modeRGB, modeAlpha);
 
     return Qnil;
@@ -3511,6 +3520,7 @@ static VALUE rogl_glVertexAttribParameteriAMD(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     int param = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribParameteriAMD, "glVertexAttribParameteriAMD");
     rogl_pfn_glVertexAttribParameteriAMD(index, pname, param);
 
     return Qnil;
@@ -3523,6 +3533,7 @@ static VALUE rogl_glMultiDrawArraysIndirectAMD(VALUE _obj_, VALUE _arg1_, VALUE 
     int primcount = (int)NUM2INT(_arg3_);
     int stride = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiDrawArraysIndirectAMD, "glMultiDrawArraysIndirectAMD");
     rogl_pfn_glMultiDrawArraysIndirectAMD(mode, indirect, primcount, stride);
 
     return Qnil;
@@ -3536,6 +3547,7 @@ static VALUE rogl_glMultiDrawElementsIndirectAMD(VALUE _obj_, VALUE _arg1_, VALU
     int primcount = (int)NUM2INT(_arg4_);
     int stride = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiDrawElementsIndirectAMD, "glMultiDrawElementsIndirectAMD");
     rogl_pfn_glMultiDrawElementsIndirectAMD(mode, type, indirect, primcount, stride);
 
     return Qnil;
@@ -3547,6 +3559,7 @@ static VALUE rogl_glGenNamesAMD(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _
     unsigned int num = (unsigned int)NUM2UINT(_arg2_);
     void* names = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGenNamesAMD, "glGenNamesAMD");
     rogl_pfn_glGenNamesAMD(identifier, num, names);
 
     return Qnil;
@@ -3558,6 +3571,7 @@ static VALUE rogl_glDeleteNamesAMD(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     unsigned int num = (unsigned int)NUM2UINT(_arg2_);
     void* names = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeleteNamesAMD, "glDeleteNamesAMD");
     rogl_pfn_glDeleteNamesAMD(identifier, num, names);
 
     return Qnil;
@@ -3568,6 +3582,7 @@ static VALUE rogl_glIsNameAMD(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int identifier = (unsigned int)NUM2UINT(_arg1_);
     unsigned int name = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsNameAMD, "glIsNameAMD");
     unsigned char retval = rogl_pfn_glIsNameAMD(identifier, name);
 
     return UINT2NUM(retval);
@@ -3580,6 +3595,7 @@ static VALUE rogl_glQueryObjectParameteruiAMD(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     unsigned int param = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glQueryObjectParameteruiAMD, "glQueryObjectParameteruiAMD");
     rogl_pfn_glQueryObjectParameteruiAMD(target, id, pname, param);
 
     return Qnil;
@@ -3591,6 +3607,7 @@ static VALUE rogl_glGetPerfMonitorGroupsAMD(VALUE _obj_, VALUE _arg1_, VALUE _ar
     int groupsSize = (int)NUM2INT(_arg2_);
     void* groups = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPerfMonitorGroupsAMD, "glGetPerfMonitorGroupsAMD");
     rogl_pfn_glGetPerfMonitorGroupsAMD(numGroups, groupsSize, groups);
 
     return Qnil;
@@ -3604,6 +3621,7 @@ static VALUE rogl_glGetPerfMonitorCountersAMD(VALUE _obj_, VALUE _arg1_, VALUE _
     int counterSize = (int)NUM2INT(_arg4_);
     void* counters = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPerfMonitorCountersAMD, "glGetPerfMonitorCountersAMD");
     rogl_pfn_glGetPerfMonitorCountersAMD(group, numCounters, maxActiveCounters, counterSize, counters);
 
     return Qnil;
@@ -3616,6 +3634,7 @@ static VALUE rogl_glGetPerfMonitorGroupStringAMD(VALUE _obj_, VALUE _arg1_, VALU
     void* length = (void*)val2ptr(_arg3_);
     void* groupString = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPerfMonitorGroupStringAMD, "glGetPerfMonitorGroupStringAMD");
     rogl_pfn_glGetPerfMonitorGroupStringAMD(group, bufSize, length, groupString);
 
     return Qnil;
@@ -3629,6 +3648,7 @@ static VALUE rogl_glGetPerfMonitorCounterStringAMD(VALUE _obj_, VALUE _arg1_, VA
     void* length = (void*)val2ptr(_arg4_);
     void* counterString = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPerfMonitorCounterStringAMD, "glGetPerfMonitorCounterStringAMD");
     rogl_pfn_glGetPerfMonitorCounterStringAMD(group, counter, bufSize, length, counterString);
 
     return Qnil;
@@ -3641,6 +3661,7 @@ static VALUE rogl_glGetPerfMonitorCounterInfoAMD(VALUE _obj_, VALUE _arg1_, VALU
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* data = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPerfMonitorCounterInfoAMD, "glGetPerfMonitorCounterInfoAMD");
     rogl_pfn_glGetPerfMonitorCounterInfoAMD(group, counter, pname, data);
 
     return Qnil;
@@ -3651,6 +3672,7 @@ static VALUE rogl_glGenPerfMonitorsAMD(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int n = (int)NUM2INT(_arg1_);
     void* monitors = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGenPerfMonitorsAMD, "glGenPerfMonitorsAMD");
     rogl_pfn_glGenPerfMonitorsAMD(n, monitors);
 
     return Qnil;
@@ -3661,6 +3683,7 @@ static VALUE rogl_glDeletePerfMonitorsAMD(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     int n = (int)NUM2INT(_arg1_);
     void* monitors = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeletePerfMonitorsAMD, "glDeletePerfMonitorsAMD");
     rogl_pfn_glDeletePerfMonitorsAMD(n, monitors);
 
     return Qnil;
@@ -3674,6 +3697,7 @@ static VALUE rogl_glSelectPerfMonitorCountersAMD(VALUE _obj_, VALUE _arg1_, VALU
     int numCounters = (int)NUM2INT(_arg4_);
     void* counterList = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSelectPerfMonitorCountersAMD, "glSelectPerfMonitorCountersAMD");
     rogl_pfn_glSelectPerfMonitorCountersAMD(monitor, enable, group, numCounters, counterList);
 
     return Qnil;
@@ -3683,6 +3707,7 @@ static VALUE rogl_glBeginPerfMonitorAMD(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int monitor = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBeginPerfMonitorAMD, "glBeginPerfMonitorAMD");
     rogl_pfn_glBeginPerfMonitorAMD(monitor);
 
     return Qnil;
@@ -3692,6 +3717,7 @@ static VALUE rogl_glEndPerfMonitorAMD(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int monitor = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glEndPerfMonitorAMD, "glEndPerfMonitorAMD");
     rogl_pfn_glEndPerfMonitorAMD(monitor);
 
     return Qnil;
@@ -3705,6 +3731,7 @@ static VALUE rogl_glGetPerfMonitorCounterDataAMD(VALUE _obj_, VALUE _arg1_, VALU
     void* data = (void*)val2ptr(_arg4_);
     void* bytesWritten = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPerfMonitorCounterDataAMD, "glGetPerfMonitorCounterDataAMD");
     rogl_pfn_glGetPerfMonitorCounterDataAMD(monitor, pname, dataSize, data, bytesWritten);
 
     return Qnil;
@@ -3716,6 +3743,7 @@ static VALUE rogl_glSetMultisamplefvAMD(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     void* val = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSetMultisamplefvAMD, "glSetMultisamplefvAMD");
     rogl_pfn_glSetMultisamplefvAMD(pname, index, val);
 
     return Qnil;
@@ -3731,6 +3759,7 @@ static VALUE rogl_glTexStorageSparseAMD(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     int layers = (int)NUM2INT(_arg6_);
     unsigned int flags = (unsigned int)NUM2UINT(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexStorageSparseAMD, "glTexStorageSparseAMD");
     rogl_pfn_glTexStorageSparseAMD(target, internalFormat, width, height, depth, layers, flags);
 
     return Qnil;
@@ -3747,6 +3776,7 @@ static VALUE rogl_glTextureStorageSparseAMD(VALUE _obj_, VALUE _arg1_, VALUE _ar
     int layers = (int)NUM2INT(_arg7_);
     unsigned int flags = (unsigned int)NUM2UINT(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureStorageSparseAMD, "glTextureStorageSparseAMD");
     rogl_pfn_glTextureStorageSparseAMD(texture, target, internalFormat, width, height, depth, layers, flags);
 
     return Qnil;
@@ -3757,6 +3787,7 @@ static VALUE rogl_glStencilOpValueAMD(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int face = (unsigned int)NUM2UINT(_arg1_);
     unsigned int value = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glStencilOpValueAMD, "glStencilOpValueAMD");
     rogl_pfn_glStencilOpValueAMD(face, value);
 
     return Qnil;
@@ -3766,6 +3797,7 @@ static VALUE rogl_glTessellationFactorAMD(VALUE _obj_, VALUE _arg1_)
 {
     float factor = (float)NUM2DBL(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTessellationFactorAMD, "glTessellationFactorAMD");
     rogl_pfn_glTessellationFactorAMD(factor);
 
     return Qnil;
@@ -3775,6 +3807,7 @@ static VALUE rogl_glTessellationModeAMD(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTessellationModeAMD, "glTessellationModeAMD");
     rogl_pfn_glTessellationModeAMD(mode);
 
     return Qnil;
@@ -3785,6 +3818,7 @@ static VALUE rogl_glElementPointerAPPLE(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int type = (unsigned int)NUM2UINT(_arg1_);
     void* pointer = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glElementPointerAPPLE, "glElementPointerAPPLE");
     rogl_pfn_glElementPointerAPPLE(type, pointer);
 
     return Qnil;
@@ -3796,6 +3830,7 @@ static VALUE rogl_glDrawElementArrayAPPLE(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     int first = (int)NUM2INT(_arg2_);
     int count = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDrawElementArrayAPPLE, "glDrawElementArrayAPPLE");
     rogl_pfn_glDrawElementArrayAPPLE(mode, first, count);
 
     return Qnil;
@@ -3809,6 +3844,7 @@ static VALUE rogl_glDrawRangeElementArrayAPPLE(VALUE _obj_, VALUE _arg1_, VALUE 
     int first = (int)NUM2INT(_arg4_);
     int count = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDrawRangeElementArrayAPPLE, "glDrawRangeElementArrayAPPLE");
     rogl_pfn_glDrawRangeElementArrayAPPLE(mode, start, end, first, count);
 
     return Qnil;
@@ -3821,6 +3857,7 @@ static VALUE rogl_glMultiDrawElementArrayAPPLE(VALUE _obj_, VALUE _arg1_, VALUE 
     void* count = (void*)val2ptr(_arg3_);
     int primcount = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiDrawElementArrayAPPLE, "glMultiDrawElementArrayAPPLE");
     rogl_pfn_glMultiDrawElementArrayAPPLE(mode, first, count, primcount);
 
     return Qnil;
@@ -3835,6 +3872,7 @@ static VALUE rogl_glMultiDrawRangeElementArrayAPPLE(VALUE _obj_, VALUE _arg1_, V
     void* count = (void*)val2ptr(_arg5_);
     int primcount = (int)NUM2INT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiDrawRangeElementArrayAPPLE, "glMultiDrawRangeElementArrayAPPLE");
     rogl_pfn_glMultiDrawRangeElementArrayAPPLE(mode, start, end, first, count, primcount);
 
     return Qnil;
@@ -3845,6 +3883,7 @@ static VALUE rogl_glGenFencesAPPLE(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int n = (int)NUM2INT(_arg1_);
     void* fences = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGenFencesAPPLE, "glGenFencesAPPLE");
     rogl_pfn_glGenFencesAPPLE(n, fences);
 
     return Qnil;
@@ -3855,6 +3894,7 @@ static VALUE rogl_glDeleteFencesAPPLE(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int n = (int)NUM2INT(_arg1_);
     void* fences = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeleteFencesAPPLE, "glDeleteFencesAPPLE");
     rogl_pfn_glDeleteFencesAPPLE(n, fences);
 
     return Qnil;
@@ -3864,6 +3904,7 @@ static VALUE rogl_glSetFenceAPPLE(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int fence = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSetFenceAPPLE, "glSetFenceAPPLE");
     rogl_pfn_glSetFenceAPPLE(fence);
 
     return Qnil;
@@ -3873,6 +3914,7 @@ static VALUE rogl_glIsFenceAPPLE(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int fence = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsFenceAPPLE, "glIsFenceAPPLE");
     unsigned char retval = rogl_pfn_glIsFenceAPPLE(fence);
 
     return UINT2NUM(retval);
@@ -3882,6 +3924,7 @@ static VALUE rogl_glTestFenceAPPLE(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int fence = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTestFenceAPPLE, "glTestFenceAPPLE");
     unsigned char retval = rogl_pfn_glTestFenceAPPLE(fence);
 
     return UINT2NUM(retval);
@@ -3891,6 +3934,7 @@ static VALUE rogl_glFinishFenceAPPLE(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int fence = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFinishFenceAPPLE, "glFinishFenceAPPLE");
     rogl_pfn_glFinishFenceAPPLE(fence);
 
     return Qnil;
@@ -3901,6 +3945,7 @@ static VALUE rogl_glTestObjectAPPLE(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int object = (unsigned int)NUM2UINT(_arg1_);
     unsigned int name = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTestObjectAPPLE, "glTestObjectAPPLE");
     unsigned char retval = rogl_pfn_glTestObjectAPPLE(object, name);
 
     return UINT2NUM(retval);
@@ -3911,6 +3956,7 @@ static VALUE rogl_glFinishObjectAPPLE(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int object = (unsigned int)NUM2UINT(_arg1_);
     int name = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFinishObjectAPPLE, "glFinishObjectAPPLE");
     rogl_pfn_glFinishObjectAPPLE(object, name);
 
     return Qnil;
@@ -3922,6 +3968,7 @@ static VALUE rogl_glBufferParameteriAPPLE(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     int param = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBufferParameteriAPPLE, "glBufferParameteriAPPLE");
     rogl_pfn_glBufferParameteriAPPLE(target, pname, param);
 
     return Qnil;
@@ -3933,6 +3980,7 @@ static VALUE rogl_glFlushMappedBufferRangeAPPLE(VALUE _obj_, VALUE _arg1_, VALUE
     ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg2_);
     ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFlushMappedBufferRangeAPPLE, "glFlushMappedBufferRangeAPPLE");
     rogl_pfn_glFlushMappedBufferRangeAPPLE(target, offset, size);
 
     return Qnil;
@@ -3944,6 +3992,7 @@ static VALUE rogl_glObjectPurgeableAPPLE(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int name = (unsigned int)NUM2UINT(_arg2_);
     unsigned int option = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glObjectPurgeableAPPLE, "glObjectPurgeableAPPLE");
     unsigned int retval = rogl_pfn_glObjectPurgeableAPPLE(objectType, name, option);
 
     return UINT2NUM(retval);
@@ -3955,6 +4004,7 @@ static VALUE rogl_glObjectUnpurgeableAPPLE(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int name = (unsigned int)NUM2UINT(_arg2_);
     unsigned int option = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glObjectUnpurgeableAPPLE, "glObjectUnpurgeableAPPLE");
     unsigned int retval = rogl_pfn_glObjectUnpurgeableAPPLE(objectType, name, option);
 
     return UINT2NUM(retval);
@@ -3967,6 +4017,7 @@ static VALUE rogl_glGetObjectParameterivAPPLE(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetObjectParameterivAPPLE, "glGetObjectParameterivAPPLE");
     rogl_pfn_glGetObjectParameterivAPPLE(objectType, name, pname, params);
 
     return Qnil;
@@ -3978,6 +4029,7 @@ static VALUE rogl_glTextureRangeAPPLE(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     int length = (int)NUM2INT(_arg2_);
     void* pointer = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureRangeAPPLE, "glTextureRangeAPPLE");
     rogl_pfn_glTextureRangeAPPLE(target, length, pointer);
 
     return Qnil;
@@ -3989,6 +4041,7 @@ static VALUE rogl_glGetTexParameterPointervAPPLE(VALUE _obj_, VALUE _arg1_, VALU
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTexParameterPointervAPPLE, "glGetTexParameterPointervAPPLE");
     rogl_pfn_glGetTexParameterPointervAPPLE(target, pname, params);
 
     return Qnil;
@@ -3998,6 +4051,7 @@ static VALUE rogl_glBindVertexArrayAPPLE(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int array = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindVertexArrayAPPLE, "glBindVertexArrayAPPLE");
     rogl_pfn_glBindVertexArrayAPPLE(array);
 
     return Qnil;
@@ -4008,6 +4062,7 @@ static VALUE rogl_glDeleteVertexArraysAPPLE(VALUE _obj_, VALUE _arg1_, VALUE _ar
     int n = (int)NUM2INT(_arg1_);
     void* arrays = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeleteVertexArraysAPPLE, "glDeleteVertexArraysAPPLE");
     rogl_pfn_glDeleteVertexArraysAPPLE(n, arrays);
 
     return Qnil;
@@ -4018,6 +4073,7 @@ static VALUE rogl_glGenVertexArraysAPPLE(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     int n = (int)NUM2INT(_arg1_);
     void* arrays = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGenVertexArraysAPPLE, "glGenVertexArraysAPPLE");
     rogl_pfn_glGenVertexArraysAPPLE(n, arrays);
 
     return Qnil;
@@ -4027,6 +4083,7 @@ static VALUE rogl_glIsVertexArrayAPPLE(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int array = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsVertexArrayAPPLE, "glIsVertexArrayAPPLE");
     unsigned char retval = rogl_pfn_glIsVertexArrayAPPLE(array);
 
     return UINT2NUM(retval);
@@ -4037,6 +4094,7 @@ static VALUE rogl_glVertexArrayRangeAPPLE(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     int length = (int)NUM2INT(_arg1_);
     void* pointer = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexArrayRangeAPPLE, "glVertexArrayRangeAPPLE");
     rogl_pfn_glVertexArrayRangeAPPLE(length, pointer);
 
     return Qnil;
@@ -4047,6 +4105,7 @@ static VALUE rogl_glFlushVertexArrayRangeAPPLE(VALUE _obj_, VALUE _arg1_, VALUE 
     int length = (int)NUM2INT(_arg1_);
     void* pointer = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFlushVertexArrayRangeAPPLE, "glFlushVertexArrayRangeAPPLE");
     rogl_pfn_glFlushVertexArrayRangeAPPLE(length, pointer);
 
     return Qnil;
@@ -4057,6 +4116,7 @@ static VALUE rogl_glVertexArrayParameteriAPPLE(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     int param = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexArrayParameteriAPPLE, "glVertexArrayParameteriAPPLE");
     rogl_pfn_glVertexArrayParameteriAPPLE(pname, param);
 
     return Qnil;
@@ -4067,6 +4127,7 @@ static VALUE rogl_glEnableVertexAttribAPPLE(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glEnableVertexAttribAPPLE, "glEnableVertexAttribAPPLE");
     rogl_pfn_glEnableVertexAttribAPPLE(index, pname);
 
     return Qnil;
@@ -4077,6 +4138,7 @@ static VALUE rogl_glDisableVertexAttribAPPLE(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDisableVertexAttribAPPLE, "glDisableVertexAttribAPPLE");
     rogl_pfn_glDisableVertexAttribAPPLE(index, pname);
 
     return Qnil;
@@ -4087,6 +4149,7 @@ static VALUE rogl_glIsVertexAttribEnabledAPPLE(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsVertexAttribEnabledAPPLE, "glIsVertexAttribEnabledAPPLE");
     unsigned char retval = rogl_pfn_glIsVertexAttribEnabledAPPLE(index, pname);
 
     return UINT2NUM(retval);
@@ -4102,6 +4165,7 @@ static VALUE rogl_glMapVertexAttrib1dAPPLE(VALUE _obj_, VALUE _arg1_, VALUE _arg
     int order = (int)NUM2INT(_arg6_);
     void* points = (void*)val2ptr(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMapVertexAttrib1dAPPLE, "glMapVertexAttrib1dAPPLE");
     rogl_pfn_glMapVertexAttrib1dAPPLE(index, size, u1, u2, stride, order, points);
 
     return Qnil;
@@ -4117,6 +4181,7 @@ static VALUE rogl_glMapVertexAttrib1fAPPLE(VALUE _obj_, VALUE _arg1_, VALUE _arg
     int order = (int)NUM2INT(_arg6_);
     void* points = (void*)val2ptr(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMapVertexAttrib1fAPPLE, "glMapVertexAttrib1fAPPLE");
     rogl_pfn_glMapVertexAttrib1fAPPLE(index, size, u1, u2, stride, order, points);
 
     return Qnil;
@@ -4136,6 +4201,7 @@ static VALUE rogl_glMapVertexAttrib2dAPPLE(VALUE _obj_, VALUE _arg1_, VALUE _arg
     int vorder = (int)NUM2INT(_arg10_);
     void* points = (void*)val2ptr(_arg11_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMapVertexAttrib2dAPPLE, "glMapVertexAttrib2dAPPLE");
     rogl_pfn_glMapVertexAttrib2dAPPLE(index, size, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points);
 
     return Qnil;
@@ -4155,6 +4221,7 @@ static VALUE rogl_glMapVertexAttrib2fAPPLE(VALUE _obj_, VALUE _arg1_, VALUE _arg
     int vorder = (int)NUM2INT(_arg10_);
     void* points = (void*)val2ptr(_arg11_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMapVertexAttrib2fAPPLE, "glMapVertexAttrib2fAPPLE");
     rogl_pfn_glMapVertexAttrib2fAPPLE(index, size, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points);
 
     return Qnil;
@@ -4171,6 +4238,7 @@ static VALUE rogl_glPrimitiveBoundingBoxARB(VALUE _obj_, VALUE _arg1_, VALUE _ar
     float maxZ = (float)NUM2DBL(_arg7_);
     float maxW = (float)NUM2DBL(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPrimitiveBoundingBoxARB, "glPrimitiveBoundingBoxARB");
     rogl_pfn_glPrimitiveBoundingBoxARB(minX, minY, minZ, minW, maxX, maxY, maxZ, maxW);
 
     return Qnil;
@@ -4180,6 +4248,7 @@ static VALUE rogl_glGetTextureHandleARB(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTextureHandleARB, "glGetTextureHandleARB");
     unsigned long long retval = rogl_pfn_glGetTextureHandleARB(texture);
 
     return ULL2NUM(retval);
@@ -4190,6 +4259,7 @@ static VALUE rogl_glGetTextureSamplerHandleARB(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
     unsigned int sampler = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTextureSamplerHandleARB, "glGetTextureSamplerHandleARB");
     unsigned long long retval = rogl_pfn_glGetTextureSamplerHandleARB(texture, sampler);
 
     return ULL2NUM(retval);
@@ -4199,6 +4269,7 @@ static VALUE rogl_glMakeTextureHandleResidentARB(VALUE _obj_, VALUE _arg1_)
 {
     unsigned long long handle = (unsigned long long)NUM2ULL(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMakeTextureHandleResidentARB, "glMakeTextureHandleResidentARB");
     rogl_pfn_glMakeTextureHandleResidentARB(handle);
 
     return Qnil;
@@ -4208,6 +4279,7 @@ static VALUE rogl_glMakeTextureHandleNonResidentARB(VALUE _obj_, VALUE _arg1_)
 {
     unsigned long long handle = (unsigned long long)NUM2ULL(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMakeTextureHandleNonResidentARB, "glMakeTextureHandleNonResidentARB");
     rogl_pfn_glMakeTextureHandleNonResidentARB(handle);
 
     return Qnil;
@@ -4221,6 +4293,7 @@ static VALUE rogl_glGetImageHandleARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     int layer = (int)NUM2INT(_arg4_);
     unsigned int format = (unsigned int)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetImageHandleARB, "glGetImageHandleARB");
     unsigned long long retval = rogl_pfn_glGetImageHandleARB(texture, level, layered, layer, format);
 
     return ULL2NUM(retval);
@@ -4231,6 +4304,7 @@ static VALUE rogl_glMakeImageHandleResidentARB(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned long long handle = (unsigned long long)NUM2ULL(_arg1_);
     unsigned int access = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMakeImageHandleResidentARB, "glMakeImageHandleResidentARB");
     rogl_pfn_glMakeImageHandleResidentARB(handle, access);
 
     return Qnil;
@@ -4240,6 +4314,7 @@ static VALUE rogl_glMakeImageHandleNonResidentARB(VALUE _obj_, VALUE _arg1_)
 {
     unsigned long long handle = (unsigned long long)NUM2ULL(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMakeImageHandleNonResidentARB, "glMakeImageHandleNonResidentARB");
     rogl_pfn_glMakeImageHandleNonResidentARB(handle);
 
     return Qnil;
@@ -4250,6 +4325,7 @@ static VALUE rogl_glUniformHandleui64ARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     int location = (int)NUM2INT(_arg1_);
     unsigned long long value = (unsigned long long)NUM2ULL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniformHandleui64ARB, "glUniformHandleui64ARB");
     rogl_pfn_glUniformHandleui64ARB(location, value);
 
     return Qnil;
@@ -4261,6 +4337,7 @@ static VALUE rogl_glUniformHandleui64vARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     int count = (int)NUM2INT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniformHandleui64vARB, "glUniformHandleui64vARB");
     rogl_pfn_glUniformHandleui64vARB(location, count, value);
 
     return Qnil;
@@ -4272,6 +4349,7 @@ static VALUE rogl_glProgramUniformHandleui64ARB(VALUE _obj_, VALUE _arg1_, VALUE
     int location = (int)NUM2INT(_arg2_);
     unsigned long long value = (unsigned long long)NUM2ULL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniformHandleui64ARB, "glProgramUniformHandleui64ARB");
     rogl_pfn_glProgramUniformHandleui64ARB(program, location, value);
 
     return Qnil;
@@ -4284,6 +4362,7 @@ static VALUE rogl_glProgramUniformHandleui64vARB(VALUE _obj_, VALUE _arg1_, VALU
     int count = (int)NUM2INT(_arg3_);
     void* values = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniformHandleui64vARB, "glProgramUniformHandleui64vARB");
     rogl_pfn_glProgramUniformHandleui64vARB(program, location, count, values);
 
     return Qnil;
@@ -4293,6 +4372,7 @@ static VALUE rogl_glIsTextureHandleResidentARB(VALUE _obj_, VALUE _arg1_)
 {
     unsigned long long handle = (unsigned long long)NUM2ULL(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsTextureHandleResidentARB, "glIsTextureHandleResidentARB");
     unsigned char retval = rogl_pfn_glIsTextureHandleResidentARB(handle);
 
     return UINT2NUM(retval);
@@ -4302,6 +4382,7 @@ static VALUE rogl_glIsImageHandleResidentARB(VALUE _obj_, VALUE _arg1_)
 {
     unsigned long long handle = (unsigned long long)NUM2ULL(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsImageHandleResidentARB, "glIsImageHandleResidentARB");
     unsigned char retval = rogl_pfn_glIsImageHandleResidentARB(handle);
 
     return UINT2NUM(retval);
@@ -4312,6 +4393,7 @@ static VALUE rogl_glVertexAttribL1ui64ARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     unsigned long long x = (unsigned long long)NUM2ULL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL1ui64ARB, "glVertexAttribL1ui64ARB");
     rogl_pfn_glVertexAttribL1ui64ARB(index, x);
 
     return Qnil;
@@ -4322,6 +4404,7 @@ static VALUE rogl_glVertexAttribL1ui64vARB(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL1ui64vARB, "glVertexAttribL1ui64vARB");
     rogl_pfn_glVertexAttribL1ui64vARB(index, v);
 
     return Qnil;
@@ -4333,6 +4416,7 @@ static VALUE rogl_glGetVertexAttribLui64vARB(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVertexAttribLui64vARB, "glGetVertexAttribLui64vARB");
     rogl_pfn_glGetVertexAttribLui64vARB(index, pname, params);
 
     return Qnil;
@@ -4344,6 +4428,7 @@ static VALUE rogl_glCreateSyncFromCLeventARB(VALUE _obj_, VALUE _arg1_, VALUE _a
     void* event = (void*)val2ptr(_arg2_);
     unsigned int flags = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCreateSyncFromCLeventARB, "glCreateSyncFromCLeventARB");
     void* retval = rogl_pfn_glCreateSyncFromCLeventARB(context, event, flags);
 
     return CPOINTER_AS_VALUE(retval);
@@ -4354,6 +4439,7 @@ static VALUE rogl_glClampColorARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     unsigned int clamp = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glClampColorARB, "glClampColorARB");
     rogl_pfn_glClampColorARB(target, clamp);
 
     return Qnil;
@@ -4368,6 +4454,7 @@ static VALUE rogl_glDispatchComputeGroupSizeARB(VALUE _obj_, VALUE _arg1_, VALUE
     unsigned int group_size_y = (unsigned int)NUM2UINT(_arg5_);
     unsigned int group_size_z = (unsigned int)NUM2UINT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDispatchComputeGroupSizeARB, "glDispatchComputeGroupSizeARB");
     rogl_pfn_glDispatchComputeGroupSizeARB(num_groups_x, num_groups_y, num_groups_z, group_size_x, group_size_y, group_size_z);
 
     return Qnil;
@@ -4382,6 +4469,7 @@ static VALUE rogl_glDebugMessageControlARB(VALUE _obj_, VALUE _arg1_, VALUE _arg
     void* ids = (void*)val2ptr(_arg5_);
     unsigned char enabled = (unsigned char)NUM2UINT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDebugMessageControlARB, "glDebugMessageControlARB");
     rogl_pfn_glDebugMessageControlARB(source, type, severity, count, ids, enabled);
 
     return Qnil;
@@ -4396,6 +4484,7 @@ static VALUE rogl_glDebugMessageInsertARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     int length = (int)NUM2INT(_arg5_);
     void* buf = (void*)val2ptr(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDebugMessageInsertARB, "glDebugMessageInsertARB");
     rogl_pfn_glDebugMessageInsertARB(source, type, id, severity, length, buf);
 
     return Qnil;
@@ -4406,6 +4495,7 @@ static VALUE rogl_glDebugMessageCallbackARB(VALUE _obj_, VALUE _arg1_, VALUE _ar
     void* callback = (void*)val2ptr(_arg1_);
     void* userParam = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDebugMessageCallbackARB, "glDebugMessageCallbackARB");
     rogl_pfn_glDebugMessageCallbackARB(callback, userParam);
 
     return Qnil;
@@ -4422,6 +4512,7 @@ static VALUE rogl_glGetDebugMessageLogARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     void* lengths = (void*)val2ptr(_arg7_);
     void* messageLog = (void*)val2ptr(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetDebugMessageLogARB, "glGetDebugMessageLogARB");
     unsigned int retval = rogl_pfn_glGetDebugMessageLogARB(count, bufSize, sources, types, ids, severities, lengths, messageLog);
 
     return UINT2NUM(retval);
@@ -4432,6 +4523,7 @@ static VALUE rogl_glDrawBuffersARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int n = (int)NUM2INT(_arg1_);
     void* bufs = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDrawBuffersARB, "glDrawBuffersARB");
     rogl_pfn_glDrawBuffersARB(n, bufs);
 
     return Qnil;
@@ -4442,6 +4534,7 @@ static VALUE rogl_glBlendEquationiARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int buf = (unsigned int)NUM2UINT(_arg1_);
     unsigned int mode = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBlendEquationiARB, "glBlendEquationiARB");
     rogl_pfn_glBlendEquationiARB(buf, mode);
 
     return Qnil;
@@ -4453,6 +4546,7 @@ static VALUE rogl_glBlendEquationSeparateiARB(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int modeRGB = (unsigned int)NUM2UINT(_arg2_);
     unsigned int modeAlpha = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBlendEquationSeparateiARB, "glBlendEquationSeparateiARB");
     rogl_pfn_glBlendEquationSeparateiARB(buf, modeRGB, modeAlpha);
 
     return Qnil;
@@ -4464,6 +4558,7 @@ static VALUE rogl_glBlendFunciARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     unsigned int src = (unsigned int)NUM2UINT(_arg2_);
     unsigned int dst = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBlendFunciARB, "glBlendFunciARB");
     rogl_pfn_glBlendFunciARB(buf, src, dst);
 
     return Qnil;
@@ -4477,6 +4572,7 @@ static VALUE rogl_glBlendFuncSeparateiARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int srcAlpha = (unsigned int)NUM2UINT(_arg4_);
     unsigned int dstAlpha = (unsigned int)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBlendFuncSeparateiARB, "glBlendFuncSeparateiARB");
     rogl_pfn_glBlendFuncSeparateiARB(buf, srcRGB, dstRGB, srcAlpha, dstAlpha);
 
     return Qnil;
@@ -4489,6 +4585,7 @@ static VALUE rogl_glDrawArraysInstancedARB(VALUE _obj_, VALUE _arg1_, VALUE _arg
     int count = (int)NUM2INT(_arg3_);
     int primcount = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDrawArraysInstancedARB, "glDrawArraysInstancedARB");
     rogl_pfn_glDrawArraysInstancedARB(mode, first, count, primcount);
 
     return Qnil;
@@ -4502,6 +4599,7 @@ static VALUE rogl_glDrawElementsInstancedARB(VALUE _obj_, VALUE _arg1_, VALUE _a
     void* indices = (void*)val2ptr(_arg4_);
     int primcount = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDrawElementsInstancedARB, "glDrawElementsInstancedARB");
     rogl_pfn_glDrawElementsInstancedARB(mode, count, type, indices, primcount);
 
     return Qnil;
@@ -4513,6 +4611,7 @@ static VALUE rogl_glProgramParameteriARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     int value = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramParameteriARB, "glProgramParameteriARB");
     rogl_pfn_glProgramParameteriARB(program, pname, value);
 
     return Qnil;
@@ -4525,6 +4624,7 @@ static VALUE rogl_glFramebufferTextureARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int texture = (unsigned int)NUM2UINT(_arg3_);
     int level = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFramebufferTextureARB, "glFramebufferTextureARB");
     rogl_pfn_glFramebufferTextureARB(target, attachment, texture, level);
 
     return Qnil;
@@ -4538,6 +4638,7 @@ static VALUE rogl_glFramebufferTextureLayerARB(VALUE _obj_, VALUE _arg1_, VALUE 
     int level = (int)NUM2INT(_arg4_);
     int layer = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFramebufferTextureLayerARB, "glFramebufferTextureLayerARB");
     rogl_pfn_glFramebufferTextureLayerARB(target, attachment, texture, level, layer);
 
     return Qnil;
@@ -4551,6 +4652,7 @@ static VALUE rogl_glFramebufferTextureFaceARB(VALUE _obj_, VALUE _arg1_, VALUE _
     int level = (int)NUM2INT(_arg4_);
     unsigned int face = (unsigned int)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFramebufferTextureFaceARB, "glFramebufferTextureFaceARB");
     rogl_pfn_glFramebufferTextureFaceARB(target, attachment, texture, level, face);
 
     return Qnil;
@@ -4561,6 +4663,7 @@ static VALUE rogl_glUniform1i64ARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int location = (int)NUM2INT(_arg1_);
     long long x = (long long)NUM2LL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform1i64ARB, "glUniform1i64ARB");
     rogl_pfn_glUniform1i64ARB(location, x);
 
     return Qnil;
@@ -4572,6 +4675,7 @@ static VALUE rogl_glUniform2i64ARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     long long x = (long long)NUM2LL(_arg2_);
     long long y = (long long)NUM2LL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform2i64ARB, "glUniform2i64ARB");
     rogl_pfn_glUniform2i64ARB(location, x, y);
 
     return Qnil;
@@ -4584,6 +4688,7 @@ static VALUE rogl_glUniform3i64ARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     long long y = (long long)NUM2LL(_arg3_);
     long long z = (long long)NUM2LL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform3i64ARB, "glUniform3i64ARB");
     rogl_pfn_glUniform3i64ARB(location, x, y, z);
 
     return Qnil;
@@ -4597,6 +4702,7 @@ static VALUE rogl_glUniform4i64ARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     long long z = (long long)NUM2LL(_arg4_);
     long long w = (long long)NUM2LL(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform4i64ARB, "glUniform4i64ARB");
     rogl_pfn_glUniform4i64ARB(location, x, y, z, w);
 
     return Qnil;
@@ -4608,6 +4714,7 @@ static VALUE rogl_glUniform1i64vARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     int count = (int)NUM2INT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform1i64vARB, "glUniform1i64vARB");
     rogl_pfn_glUniform1i64vARB(location, count, value);
 
     return Qnil;
@@ -4619,6 +4726,7 @@ static VALUE rogl_glUniform2i64vARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     int count = (int)NUM2INT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform2i64vARB, "glUniform2i64vARB");
     rogl_pfn_glUniform2i64vARB(location, count, value);
 
     return Qnil;
@@ -4630,6 +4738,7 @@ static VALUE rogl_glUniform3i64vARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     int count = (int)NUM2INT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform3i64vARB, "glUniform3i64vARB");
     rogl_pfn_glUniform3i64vARB(location, count, value);
 
     return Qnil;
@@ -4641,6 +4750,7 @@ static VALUE rogl_glUniform4i64vARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     int count = (int)NUM2INT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform4i64vARB, "glUniform4i64vARB");
     rogl_pfn_glUniform4i64vARB(location, count, value);
 
     return Qnil;
@@ -4651,6 +4761,7 @@ static VALUE rogl_glUniform1ui64ARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int location = (int)NUM2INT(_arg1_);
     unsigned long long x = (unsigned long long)NUM2ULL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform1ui64ARB, "glUniform1ui64ARB");
     rogl_pfn_glUniform1ui64ARB(location, x);
 
     return Qnil;
@@ -4662,6 +4773,7 @@ static VALUE rogl_glUniform2ui64ARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     unsigned long long x = (unsigned long long)NUM2ULL(_arg2_);
     unsigned long long y = (unsigned long long)NUM2ULL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform2ui64ARB, "glUniform2ui64ARB");
     rogl_pfn_glUniform2ui64ARB(location, x, y);
 
     return Qnil;
@@ -4674,6 +4786,7 @@ static VALUE rogl_glUniform3ui64ARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     unsigned long long y = (unsigned long long)NUM2ULL(_arg3_);
     unsigned long long z = (unsigned long long)NUM2ULL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform3ui64ARB, "glUniform3ui64ARB");
     rogl_pfn_glUniform3ui64ARB(location, x, y, z);
 
     return Qnil;
@@ -4687,6 +4800,7 @@ static VALUE rogl_glUniform4ui64ARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     unsigned long long z = (unsigned long long)NUM2ULL(_arg4_);
     unsigned long long w = (unsigned long long)NUM2ULL(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform4ui64ARB, "glUniform4ui64ARB");
     rogl_pfn_glUniform4ui64ARB(location, x, y, z, w);
 
     return Qnil;
@@ -4698,6 +4812,7 @@ static VALUE rogl_glUniform1ui64vARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     int count = (int)NUM2INT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform1ui64vARB, "glUniform1ui64vARB");
     rogl_pfn_glUniform1ui64vARB(location, count, value);
 
     return Qnil;
@@ -4709,6 +4824,7 @@ static VALUE rogl_glUniform2ui64vARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     int count = (int)NUM2INT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform2ui64vARB, "glUniform2ui64vARB");
     rogl_pfn_glUniform2ui64vARB(location, count, value);
 
     return Qnil;
@@ -4720,6 +4836,7 @@ static VALUE rogl_glUniform3ui64vARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     int count = (int)NUM2INT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform3ui64vARB, "glUniform3ui64vARB");
     rogl_pfn_glUniform3ui64vARB(location, count, value);
 
     return Qnil;
@@ -4731,6 +4848,7 @@ static VALUE rogl_glUniform4ui64vARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     int count = (int)NUM2INT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform4ui64vARB, "glUniform4ui64vARB");
     rogl_pfn_glUniform4ui64vARB(location, count, value);
 
     return Qnil;
@@ -4742,6 +4860,7 @@ static VALUE rogl_glGetUniformi64vARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     int location = (int)NUM2INT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetUniformi64vARB, "glGetUniformi64vARB");
     rogl_pfn_glGetUniformi64vARB(program, location, params);
 
     return Qnil;
@@ -4753,6 +4872,7 @@ static VALUE rogl_glGetUniformui64vARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int location = (int)NUM2INT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetUniformui64vARB, "glGetUniformui64vARB");
     rogl_pfn_glGetUniformui64vARB(program, location, params);
 
     return Qnil;
@@ -4765,6 +4885,7 @@ static VALUE rogl_glGetnUniformi64vARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int bufSize = (int)NUM2INT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetnUniformi64vARB, "glGetnUniformi64vARB");
     rogl_pfn_glGetnUniformi64vARB(program, location, bufSize, params);
 
     return Qnil;
@@ -4777,6 +4898,7 @@ static VALUE rogl_glGetnUniformui64vARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     int bufSize = (int)NUM2INT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetnUniformui64vARB, "glGetnUniformui64vARB");
     rogl_pfn_glGetnUniformui64vARB(program, location, bufSize, params);
 
     return Qnil;
@@ -4788,6 +4910,7 @@ static VALUE rogl_glProgramUniform1i64ARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     int location = (int)NUM2INT(_arg2_);
     long long x = (long long)NUM2LL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform1i64ARB, "glProgramUniform1i64ARB");
     rogl_pfn_glProgramUniform1i64ARB(program, location, x);
 
     return Qnil;
@@ -4800,6 +4923,7 @@ static VALUE rogl_glProgramUniform2i64ARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     long long x = (long long)NUM2LL(_arg3_);
     long long y = (long long)NUM2LL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform2i64ARB, "glProgramUniform2i64ARB");
     rogl_pfn_glProgramUniform2i64ARB(program, location, x, y);
 
     return Qnil;
@@ -4813,6 +4937,7 @@ static VALUE rogl_glProgramUniform3i64ARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     long long y = (long long)NUM2LL(_arg4_);
     long long z = (long long)NUM2LL(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform3i64ARB, "glProgramUniform3i64ARB");
     rogl_pfn_glProgramUniform3i64ARB(program, location, x, y, z);
 
     return Qnil;
@@ -4827,6 +4952,7 @@ static VALUE rogl_glProgramUniform4i64ARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     long long z = (long long)NUM2LL(_arg5_);
     long long w = (long long)NUM2LL(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform4i64ARB, "glProgramUniform4i64ARB");
     rogl_pfn_glProgramUniform4i64ARB(program, location, x, y, z, w);
 
     return Qnil;
@@ -4839,6 +4965,7 @@ static VALUE rogl_glProgramUniform1i64vARB(VALUE _obj_, VALUE _arg1_, VALUE _arg
     int count = (int)NUM2INT(_arg3_);
     void* value = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform1i64vARB, "glProgramUniform1i64vARB");
     rogl_pfn_glProgramUniform1i64vARB(program, location, count, value);
 
     return Qnil;
@@ -4851,6 +4978,7 @@ static VALUE rogl_glProgramUniform2i64vARB(VALUE _obj_, VALUE _arg1_, VALUE _arg
     int count = (int)NUM2INT(_arg3_);
     void* value = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform2i64vARB, "glProgramUniform2i64vARB");
     rogl_pfn_glProgramUniform2i64vARB(program, location, count, value);
 
     return Qnil;
@@ -4863,6 +4991,7 @@ static VALUE rogl_glProgramUniform3i64vARB(VALUE _obj_, VALUE _arg1_, VALUE _arg
     int count = (int)NUM2INT(_arg3_);
     void* value = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform3i64vARB, "glProgramUniform3i64vARB");
     rogl_pfn_glProgramUniform3i64vARB(program, location, count, value);
 
     return Qnil;
@@ -4875,6 +5004,7 @@ static VALUE rogl_glProgramUniform4i64vARB(VALUE _obj_, VALUE _arg1_, VALUE _arg
     int count = (int)NUM2INT(_arg3_);
     void* value = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform4i64vARB, "glProgramUniform4i64vARB");
     rogl_pfn_glProgramUniform4i64vARB(program, location, count, value);
 
     return Qnil;
@@ -4886,6 +5016,7 @@ static VALUE rogl_glProgramUniform1ui64ARB(VALUE _obj_, VALUE _arg1_, VALUE _arg
     int location = (int)NUM2INT(_arg2_);
     unsigned long long x = (unsigned long long)NUM2ULL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform1ui64ARB, "glProgramUniform1ui64ARB");
     rogl_pfn_glProgramUniform1ui64ARB(program, location, x);
 
     return Qnil;
@@ -4898,6 +5029,7 @@ static VALUE rogl_glProgramUniform2ui64ARB(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned long long x = (unsigned long long)NUM2ULL(_arg3_);
     unsigned long long y = (unsigned long long)NUM2ULL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform2ui64ARB, "glProgramUniform2ui64ARB");
     rogl_pfn_glProgramUniform2ui64ARB(program, location, x, y);
 
     return Qnil;
@@ -4911,6 +5043,7 @@ static VALUE rogl_glProgramUniform3ui64ARB(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned long long y = (unsigned long long)NUM2ULL(_arg4_);
     unsigned long long z = (unsigned long long)NUM2ULL(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform3ui64ARB, "glProgramUniform3ui64ARB");
     rogl_pfn_glProgramUniform3ui64ARB(program, location, x, y, z);
 
     return Qnil;
@@ -4925,6 +5058,7 @@ static VALUE rogl_glProgramUniform4ui64ARB(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned long long z = (unsigned long long)NUM2ULL(_arg5_);
     unsigned long long w = (unsigned long long)NUM2ULL(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform4ui64ARB, "glProgramUniform4ui64ARB");
     rogl_pfn_glProgramUniform4ui64ARB(program, location, x, y, z, w);
 
     return Qnil;
@@ -4937,6 +5071,7 @@ static VALUE rogl_glProgramUniform1ui64vARB(VALUE _obj_, VALUE _arg1_, VALUE _ar
     int count = (int)NUM2INT(_arg3_);
     void* value = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform1ui64vARB, "glProgramUniform1ui64vARB");
     rogl_pfn_glProgramUniform1ui64vARB(program, location, count, value);
 
     return Qnil;
@@ -4949,6 +5084,7 @@ static VALUE rogl_glProgramUniform2ui64vARB(VALUE _obj_, VALUE _arg1_, VALUE _ar
     int count = (int)NUM2INT(_arg3_);
     void* value = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform2ui64vARB, "glProgramUniform2ui64vARB");
     rogl_pfn_glProgramUniform2ui64vARB(program, location, count, value);
 
     return Qnil;
@@ -4961,6 +5097,7 @@ static VALUE rogl_glProgramUniform3ui64vARB(VALUE _obj_, VALUE _arg1_, VALUE _ar
     int count = (int)NUM2INT(_arg3_);
     void* value = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform3ui64vARB, "glProgramUniform3ui64vARB");
     rogl_pfn_glProgramUniform3ui64vARB(program, location, count, value);
 
     return Qnil;
@@ -4973,6 +5110,7 @@ static VALUE rogl_glProgramUniform4ui64vARB(VALUE _obj_, VALUE _arg1_, VALUE _ar
     int count = (int)NUM2INT(_arg3_);
     void* value = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform4ui64vARB, "glProgramUniform4ui64vARB");
     rogl_pfn_glProgramUniform4ui64vARB(program, location, count, value);
 
     return Qnil;
@@ -4987,6 +5125,7 @@ static VALUE rogl_glColorTable(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _a
     unsigned int type = (unsigned int)NUM2UINT(_arg5_);
     void* table = (void*)val2ptr(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColorTable, "glColorTable");
     rogl_pfn_glColorTable(target, internalformat, width, format, type, table);
 
     return Qnil;
@@ -4998,6 +5137,7 @@ static VALUE rogl_glColorTableParameterfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColorTableParameterfv, "glColorTableParameterfv");
     rogl_pfn_glColorTableParameterfv(target, pname, params);
 
     return Qnil;
@@ -5009,6 +5149,7 @@ static VALUE rogl_glColorTableParameteriv(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColorTableParameteriv, "glColorTableParameteriv");
     rogl_pfn_glColorTableParameteriv(target, pname, params);
 
     return Qnil;
@@ -5022,6 +5163,7 @@ static VALUE rogl_glCopyColorTable(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     int y = (int)NUM2INT(_arg4_);
     int width = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyColorTable, "glCopyColorTable");
     rogl_pfn_glCopyColorTable(target, internalformat, x, y, width);
 
     return Qnil;
@@ -5034,6 +5176,7 @@ static VALUE rogl_glGetColorTable(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     unsigned int type = (unsigned int)NUM2UINT(_arg3_);
     void* table = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetColorTable, "glGetColorTable");
     rogl_pfn_glGetColorTable(target, format, type, table);
 
     return Qnil;
@@ -5045,6 +5188,7 @@ static VALUE rogl_glGetColorTableParameterfv(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetColorTableParameterfv, "glGetColorTableParameterfv");
     rogl_pfn_glGetColorTableParameterfv(target, pname, params);
 
     return Qnil;
@@ -5056,6 +5200,7 @@ static VALUE rogl_glGetColorTableParameteriv(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetColorTableParameteriv, "glGetColorTableParameteriv");
     rogl_pfn_glGetColorTableParameteriv(target, pname, params);
 
     return Qnil;
@@ -5070,6 +5215,7 @@ static VALUE rogl_glColorSubTable(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     unsigned int type = (unsigned int)NUM2UINT(_arg5_);
     void* data = (void*)val2ptr(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColorSubTable, "glColorSubTable");
     rogl_pfn_glColorSubTable(target, start, count, format, type, data);
 
     return Qnil;
@@ -5083,6 +5229,7 @@ static VALUE rogl_glCopyColorSubTable(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     int y = (int)NUM2INT(_arg4_);
     int width = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyColorSubTable, "glCopyColorSubTable");
     rogl_pfn_glCopyColorSubTable(target, start, x, y, width);
 
     return Qnil;
@@ -5097,6 +5244,7 @@ static VALUE rogl_glConvolutionFilter1D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int type = (unsigned int)NUM2UINT(_arg5_);
     void* image = (void*)val2ptr(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glConvolutionFilter1D, "glConvolutionFilter1D");
     rogl_pfn_glConvolutionFilter1D(target, internalformat, width, format, type, image);
 
     return Qnil;
@@ -5112,6 +5260,7 @@ static VALUE rogl_glConvolutionFilter2D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int type = (unsigned int)NUM2UINT(_arg6_);
     void* image = (void*)val2ptr(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glConvolutionFilter2D, "glConvolutionFilter2D");
     rogl_pfn_glConvolutionFilter2D(target, internalformat, width, height, format, type, image);
 
     return Qnil;
@@ -5123,6 +5272,7 @@ static VALUE rogl_glConvolutionParameterf(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     float params = (float)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glConvolutionParameterf, "glConvolutionParameterf");
     rogl_pfn_glConvolutionParameterf(target, pname, params);
 
     return Qnil;
@@ -5134,6 +5284,7 @@ static VALUE rogl_glConvolutionParameterfv(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glConvolutionParameterfv, "glConvolutionParameterfv");
     rogl_pfn_glConvolutionParameterfv(target, pname, params);
 
     return Qnil;
@@ -5145,6 +5296,7 @@ static VALUE rogl_glConvolutionParameteri(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     int params = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glConvolutionParameteri, "glConvolutionParameteri");
     rogl_pfn_glConvolutionParameteri(target, pname, params);
 
     return Qnil;
@@ -5156,6 +5308,7 @@ static VALUE rogl_glConvolutionParameteriv(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glConvolutionParameteriv, "glConvolutionParameteriv");
     rogl_pfn_glConvolutionParameteriv(target, pname, params);
 
     return Qnil;
@@ -5169,6 +5322,7 @@ static VALUE rogl_glCopyConvolutionFilter1D(VALUE _obj_, VALUE _arg1_, VALUE _ar
     int y = (int)NUM2INT(_arg4_);
     int width = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyConvolutionFilter1D, "glCopyConvolutionFilter1D");
     rogl_pfn_glCopyConvolutionFilter1D(target, internalformat, x, y, width);
 
     return Qnil;
@@ -5183,6 +5337,7 @@ static VALUE rogl_glCopyConvolutionFilter2D(VALUE _obj_, VALUE _arg1_, VALUE _ar
     int width = (int)NUM2INT(_arg5_);
     int height = (int)NUM2INT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyConvolutionFilter2D, "glCopyConvolutionFilter2D");
     rogl_pfn_glCopyConvolutionFilter2D(target, internalformat, x, y, width, height);
 
     return Qnil;
@@ -5195,6 +5350,7 @@ static VALUE rogl_glGetConvolutionFilter(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int type = (unsigned int)NUM2UINT(_arg3_);
     void* image = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetConvolutionFilter, "glGetConvolutionFilter");
     rogl_pfn_glGetConvolutionFilter(target, format, type, image);
 
     return Qnil;
@@ -5206,6 +5362,7 @@ static VALUE rogl_glGetConvolutionParameterfv(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetConvolutionParameterfv, "glGetConvolutionParameterfv");
     rogl_pfn_glGetConvolutionParameterfv(target, pname, params);
 
     return Qnil;
@@ -5217,6 +5374,7 @@ static VALUE rogl_glGetConvolutionParameteriv(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetConvolutionParameteriv, "glGetConvolutionParameteriv");
     rogl_pfn_glGetConvolutionParameteriv(target, pname, params);
 
     return Qnil;
@@ -5231,6 +5389,7 @@ static VALUE rogl_glGetSeparableFilter(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     void* column = (void*)val2ptr(_arg5_);
     void* span = (void*)val2ptr(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetSeparableFilter, "glGetSeparableFilter");
     rogl_pfn_glGetSeparableFilter(target, format, type, row, column, span);
 
     return Qnil;
@@ -5247,6 +5406,7 @@ static VALUE rogl_glSeparableFilter2D(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     void* row = (void*)val2ptr(_arg7_);
     void* column = (void*)val2ptr(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSeparableFilter2D, "glSeparableFilter2D");
     rogl_pfn_glSeparableFilter2D(target, internalformat, width, height, format, type, row, column);
 
     return Qnil;
@@ -5260,6 +5420,7 @@ static VALUE rogl_glGetHistogram(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     unsigned int type = (unsigned int)NUM2UINT(_arg4_);
     void* values = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetHistogram, "glGetHistogram");
     rogl_pfn_glGetHistogram(target, reset, format, type, values);
 
     return Qnil;
@@ -5271,6 +5432,7 @@ static VALUE rogl_glGetHistogramParameterfv(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetHistogramParameterfv, "glGetHistogramParameterfv");
     rogl_pfn_glGetHistogramParameterfv(target, pname, params);
 
     return Qnil;
@@ -5282,6 +5444,7 @@ static VALUE rogl_glGetHistogramParameteriv(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetHistogramParameteriv, "glGetHistogramParameteriv");
     rogl_pfn_glGetHistogramParameteriv(target, pname, params);
 
     return Qnil;
@@ -5295,6 +5458,7 @@ static VALUE rogl_glGetMinmax(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _ar
     unsigned int type = (unsigned int)NUM2UINT(_arg4_);
     void* values = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMinmax, "glGetMinmax");
     rogl_pfn_glGetMinmax(target, reset, format, type, values);
 
     return Qnil;
@@ -5306,6 +5470,7 @@ static VALUE rogl_glGetMinmaxParameterfv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMinmaxParameterfv, "glGetMinmaxParameterfv");
     rogl_pfn_glGetMinmaxParameterfv(target, pname, params);
 
     return Qnil;
@@ -5317,6 +5482,7 @@ static VALUE rogl_glGetMinmaxParameteriv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMinmaxParameteriv, "glGetMinmaxParameteriv");
     rogl_pfn_glGetMinmaxParameteriv(target, pname, params);
 
     return Qnil;
@@ -5329,6 +5495,7 @@ static VALUE rogl_glHistogram(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _ar
     unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
     unsigned char sink = (unsigned char)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glHistogram, "glHistogram");
     rogl_pfn_glHistogram(target, width, internalformat, sink);
 
     return Qnil;
@@ -5340,6 +5507,7 @@ static VALUE rogl_glMinmax(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_
     unsigned int internalformat = (unsigned int)NUM2UINT(_arg2_);
     unsigned char sink = (unsigned char)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMinmax, "glMinmax");
     rogl_pfn_glMinmax(target, internalformat, sink);
 
     return Qnil;
@@ -5349,6 +5517,7 @@ static VALUE rogl_glResetHistogram(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glResetHistogram, "glResetHistogram");
     rogl_pfn_glResetHistogram(target);
 
     return Qnil;
@@ -5358,6 +5527,7 @@ static VALUE rogl_glResetMinmax(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glResetMinmax, "glResetMinmax");
     rogl_pfn_glResetMinmax(target);
 
     return Qnil;
@@ -5371,6 +5541,7 @@ static VALUE rogl_glMultiDrawArraysIndirectCountARB(VALUE _obj_, VALUE _arg1_, V
     int maxdrawcount = (int)NUM2INT(_arg4_);
     int stride = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiDrawArraysIndirectCountARB, "glMultiDrawArraysIndirectCountARB");
     rogl_pfn_glMultiDrawArraysIndirectCountARB(mode, indirect, drawcount, maxdrawcount, stride);
 
     return Qnil;
@@ -5385,6 +5556,7 @@ static VALUE rogl_glMultiDrawElementsIndirectCountARB(VALUE _obj_, VALUE _arg1_,
     int maxdrawcount = (int)NUM2INT(_arg5_);
     int stride = (int)NUM2INT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiDrawElementsIndirectCountARB, "glMultiDrawElementsIndirectCountARB");
     rogl_pfn_glMultiDrawElementsIndirectCountARB(mode, type, indirect, drawcount, maxdrawcount, stride);
 
     return Qnil;
@@ -5395,6 +5567,7 @@ static VALUE rogl_glVertexAttribDivisorARB(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     unsigned int divisor = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribDivisorARB, "glVertexAttribDivisorARB");
     rogl_pfn_glVertexAttribDivisorARB(index, divisor);
 
     return Qnil;
@@ -5404,6 +5577,7 @@ static VALUE rogl_glCurrentPaletteMatrixARB(VALUE _obj_, VALUE _arg1_)
 {
     int index = (int)NUM2INT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCurrentPaletteMatrixARB, "glCurrentPaletteMatrixARB");
     rogl_pfn_glCurrentPaletteMatrixARB(index);
 
     return Qnil;
@@ -5414,6 +5588,7 @@ static VALUE rogl_glMatrixIndexubvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int size = (int)NUM2INT(_arg1_);
     void* indices = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixIndexubvARB, "glMatrixIndexubvARB");
     rogl_pfn_glMatrixIndexubvARB(size, indices);
 
     return Qnil;
@@ -5424,6 +5599,7 @@ static VALUE rogl_glMatrixIndexusvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int size = (int)NUM2INT(_arg1_);
     void* indices = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixIndexusvARB, "glMatrixIndexusvARB");
     rogl_pfn_glMatrixIndexusvARB(size, indices);
 
     return Qnil;
@@ -5434,6 +5610,7 @@ static VALUE rogl_glMatrixIndexuivARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int size = (int)NUM2INT(_arg1_);
     void* indices = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixIndexuivARB, "glMatrixIndexuivARB");
     rogl_pfn_glMatrixIndexuivARB(size, indices);
 
     return Qnil;
@@ -5446,6 +5623,7 @@ static VALUE rogl_glMatrixIndexPointerARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     int stride = (int)NUM2INT(_arg3_);
     void* pointer = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixIndexPointerARB, "glMatrixIndexPointerARB");
     rogl_pfn_glMatrixIndexPointerARB(size, type, stride, pointer);
 
     return Qnil;
@@ -5456,6 +5634,7 @@ static VALUE rogl_glSampleCoverageARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     float value = (float)NUM2DBL(_arg1_);
     unsigned char invert = (unsigned char)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSampleCoverageARB, "glSampleCoverageARB");
     rogl_pfn_glSampleCoverageARB(value, invert);
 
     return Qnil;
@@ -5465,6 +5644,7 @@ static VALUE rogl_glActiveTextureARB(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glActiveTextureARB, "glActiveTextureARB");
     rogl_pfn_glActiveTextureARB(texture);
 
     return Qnil;
@@ -5474,6 +5654,7 @@ static VALUE rogl_glClientActiveTextureARB(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glClientActiveTextureARB, "glClientActiveTextureARB");
     rogl_pfn_glClientActiveTextureARB(texture);
 
     return Qnil;
@@ -5484,6 +5665,7 @@ static VALUE rogl_glMultiTexCoord1dARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     double s = (double)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord1dARB, "glMultiTexCoord1dARB");
     rogl_pfn_glMultiTexCoord1dARB(target, s);
 
     return Qnil;
@@ -5494,6 +5676,7 @@ static VALUE rogl_glMultiTexCoord1dvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord1dvARB, "glMultiTexCoord1dvARB");
     rogl_pfn_glMultiTexCoord1dvARB(target, v);
 
     return Qnil;
@@ -5504,6 +5687,7 @@ static VALUE rogl_glMultiTexCoord1fARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     float s = (float)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord1fARB, "glMultiTexCoord1fARB");
     rogl_pfn_glMultiTexCoord1fARB(target, s);
 
     return Qnil;
@@ -5514,6 +5698,7 @@ static VALUE rogl_glMultiTexCoord1fvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord1fvARB, "glMultiTexCoord1fvARB");
     rogl_pfn_glMultiTexCoord1fvARB(target, v);
 
     return Qnil;
@@ -5524,6 +5709,7 @@ static VALUE rogl_glMultiTexCoord1iARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     int s = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord1iARB, "glMultiTexCoord1iARB");
     rogl_pfn_glMultiTexCoord1iARB(target, s);
 
     return Qnil;
@@ -5534,6 +5720,7 @@ static VALUE rogl_glMultiTexCoord1ivARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord1ivARB, "glMultiTexCoord1ivARB");
     rogl_pfn_glMultiTexCoord1ivARB(target, v);
 
     return Qnil;
@@ -5544,6 +5731,7 @@ static VALUE rogl_glMultiTexCoord1sARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     short s = (short)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord1sARB, "glMultiTexCoord1sARB");
     rogl_pfn_glMultiTexCoord1sARB(target, s);
 
     return Qnil;
@@ -5554,6 +5742,7 @@ static VALUE rogl_glMultiTexCoord1svARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord1svARB, "glMultiTexCoord1svARB");
     rogl_pfn_glMultiTexCoord1svARB(target, v);
 
     return Qnil;
@@ -5565,6 +5754,7 @@ static VALUE rogl_glMultiTexCoord2dARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     double s = (double)NUM2DBL(_arg2_);
     double t = (double)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord2dARB, "glMultiTexCoord2dARB");
     rogl_pfn_glMultiTexCoord2dARB(target, s, t);
 
     return Qnil;
@@ -5575,6 +5765,7 @@ static VALUE rogl_glMultiTexCoord2dvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord2dvARB, "glMultiTexCoord2dvARB");
     rogl_pfn_glMultiTexCoord2dvARB(target, v);
 
     return Qnil;
@@ -5586,6 +5777,7 @@ static VALUE rogl_glMultiTexCoord2fARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     float s = (float)NUM2DBL(_arg2_);
     float t = (float)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord2fARB, "glMultiTexCoord2fARB");
     rogl_pfn_glMultiTexCoord2fARB(target, s, t);
 
     return Qnil;
@@ -5596,6 +5788,7 @@ static VALUE rogl_glMultiTexCoord2fvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord2fvARB, "glMultiTexCoord2fvARB");
     rogl_pfn_glMultiTexCoord2fvARB(target, v);
 
     return Qnil;
@@ -5607,6 +5800,7 @@ static VALUE rogl_glMultiTexCoord2iARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int s = (int)NUM2INT(_arg2_);
     int t = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord2iARB, "glMultiTexCoord2iARB");
     rogl_pfn_glMultiTexCoord2iARB(target, s, t);
 
     return Qnil;
@@ -5617,6 +5811,7 @@ static VALUE rogl_glMultiTexCoord2ivARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord2ivARB, "glMultiTexCoord2ivARB");
     rogl_pfn_glMultiTexCoord2ivARB(target, v);
 
     return Qnil;
@@ -5628,6 +5823,7 @@ static VALUE rogl_glMultiTexCoord2sARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     short s = (short)NUM2INT(_arg2_);
     short t = (short)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord2sARB, "glMultiTexCoord2sARB");
     rogl_pfn_glMultiTexCoord2sARB(target, s, t);
 
     return Qnil;
@@ -5638,6 +5834,7 @@ static VALUE rogl_glMultiTexCoord2svARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord2svARB, "glMultiTexCoord2svARB");
     rogl_pfn_glMultiTexCoord2svARB(target, v);
 
     return Qnil;
@@ -5650,6 +5847,7 @@ static VALUE rogl_glMultiTexCoord3dARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     double t = (double)NUM2DBL(_arg3_);
     double r = (double)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord3dARB, "glMultiTexCoord3dARB");
     rogl_pfn_glMultiTexCoord3dARB(target, s, t, r);
 
     return Qnil;
@@ -5660,6 +5858,7 @@ static VALUE rogl_glMultiTexCoord3dvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord3dvARB, "glMultiTexCoord3dvARB");
     rogl_pfn_glMultiTexCoord3dvARB(target, v);
 
     return Qnil;
@@ -5672,6 +5871,7 @@ static VALUE rogl_glMultiTexCoord3fARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     float t = (float)NUM2DBL(_arg3_);
     float r = (float)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord3fARB, "glMultiTexCoord3fARB");
     rogl_pfn_glMultiTexCoord3fARB(target, s, t, r);
 
     return Qnil;
@@ -5682,6 +5882,7 @@ static VALUE rogl_glMultiTexCoord3fvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord3fvARB, "glMultiTexCoord3fvARB");
     rogl_pfn_glMultiTexCoord3fvARB(target, v);
 
     return Qnil;
@@ -5694,6 +5895,7 @@ static VALUE rogl_glMultiTexCoord3iARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int t = (int)NUM2INT(_arg3_);
     int r = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord3iARB, "glMultiTexCoord3iARB");
     rogl_pfn_glMultiTexCoord3iARB(target, s, t, r);
 
     return Qnil;
@@ -5704,6 +5906,7 @@ static VALUE rogl_glMultiTexCoord3ivARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord3ivARB, "glMultiTexCoord3ivARB");
     rogl_pfn_glMultiTexCoord3ivARB(target, v);
 
     return Qnil;
@@ -5716,6 +5919,7 @@ static VALUE rogl_glMultiTexCoord3sARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     short t = (short)NUM2INT(_arg3_);
     short r = (short)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord3sARB, "glMultiTexCoord3sARB");
     rogl_pfn_glMultiTexCoord3sARB(target, s, t, r);
 
     return Qnil;
@@ -5726,6 +5930,7 @@ static VALUE rogl_glMultiTexCoord3svARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord3svARB, "glMultiTexCoord3svARB");
     rogl_pfn_glMultiTexCoord3svARB(target, v);
 
     return Qnil;
@@ -5739,6 +5944,7 @@ static VALUE rogl_glMultiTexCoord4dARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     double r = (double)NUM2DBL(_arg4_);
     double q = (double)NUM2DBL(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord4dARB, "glMultiTexCoord4dARB");
     rogl_pfn_glMultiTexCoord4dARB(target, s, t, r, q);
 
     return Qnil;
@@ -5749,6 +5955,7 @@ static VALUE rogl_glMultiTexCoord4dvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord4dvARB, "glMultiTexCoord4dvARB");
     rogl_pfn_glMultiTexCoord4dvARB(target, v);
 
     return Qnil;
@@ -5762,6 +5969,7 @@ static VALUE rogl_glMultiTexCoord4fARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     float r = (float)NUM2DBL(_arg4_);
     float q = (float)NUM2DBL(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord4fARB, "glMultiTexCoord4fARB");
     rogl_pfn_glMultiTexCoord4fARB(target, s, t, r, q);
 
     return Qnil;
@@ -5772,6 +5980,7 @@ static VALUE rogl_glMultiTexCoord4fvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord4fvARB, "glMultiTexCoord4fvARB");
     rogl_pfn_glMultiTexCoord4fvARB(target, v);
 
     return Qnil;
@@ -5785,6 +5994,7 @@ static VALUE rogl_glMultiTexCoord4iARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int r = (int)NUM2INT(_arg4_);
     int q = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord4iARB, "glMultiTexCoord4iARB");
     rogl_pfn_glMultiTexCoord4iARB(target, s, t, r, q);
 
     return Qnil;
@@ -5795,6 +6005,7 @@ static VALUE rogl_glMultiTexCoord4ivARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord4ivARB, "glMultiTexCoord4ivARB");
     rogl_pfn_glMultiTexCoord4ivARB(target, v);
 
     return Qnil;
@@ -5808,6 +6019,7 @@ static VALUE rogl_glMultiTexCoord4sARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     short r = (short)NUM2INT(_arg4_);
     short q = (short)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord4sARB, "glMultiTexCoord4sARB");
     rogl_pfn_glMultiTexCoord4sARB(target, s, t, r, q);
 
     return Qnil;
@@ -5818,6 +6030,7 @@ static VALUE rogl_glMultiTexCoord4svARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord4svARB, "glMultiTexCoord4svARB");
     rogl_pfn_glMultiTexCoord4svARB(target, v);
 
     return Qnil;
@@ -5828,6 +6041,7 @@ static VALUE rogl_glGenQueriesARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int n = (int)NUM2INT(_arg1_);
     void* ids = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGenQueriesARB, "glGenQueriesARB");
     rogl_pfn_glGenQueriesARB(n, ids);
 
     return Qnil;
@@ -5838,6 +6052,7 @@ static VALUE rogl_glDeleteQueriesARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int n = (int)NUM2INT(_arg1_);
     void* ids = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeleteQueriesARB, "glDeleteQueriesARB");
     rogl_pfn_glDeleteQueriesARB(n, ids);
 
     return Qnil;
@@ -5847,6 +6062,7 @@ static VALUE rogl_glIsQueryARB(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int id = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsQueryARB, "glIsQueryARB");
     unsigned char retval = rogl_pfn_glIsQueryARB(id);
 
     return UINT2NUM(retval);
@@ -5857,6 +6073,7 @@ static VALUE rogl_glBeginQueryARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     unsigned int id = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBeginQueryARB, "glBeginQueryARB");
     rogl_pfn_glBeginQueryARB(target, id);
 
     return Qnil;
@@ -5866,6 +6083,7 @@ static VALUE rogl_glEndQueryARB(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glEndQueryARB, "glEndQueryARB");
     rogl_pfn_glEndQueryARB(target);
 
     return Qnil;
@@ -5877,6 +6095,7 @@ static VALUE rogl_glGetQueryivARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetQueryivARB, "glGetQueryivARB");
     rogl_pfn_glGetQueryivARB(target, pname, params);
 
     return Qnil;
@@ -5888,6 +6107,7 @@ static VALUE rogl_glGetQueryObjectivARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetQueryObjectivARB, "glGetQueryObjectivARB");
     rogl_pfn_glGetQueryObjectivARB(id, pname, params);
 
     return Qnil;
@@ -5899,6 +6119,7 @@ static VALUE rogl_glGetQueryObjectuivARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetQueryObjectuivARB, "glGetQueryObjectuivARB");
     rogl_pfn_glGetQueryObjectuivARB(id, pname, params);
 
     return Qnil;
@@ -5908,6 +6129,7 @@ static VALUE rogl_glMaxShaderCompilerThreadsARB(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int count = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMaxShaderCompilerThreadsARB, "glMaxShaderCompilerThreadsARB");
     rogl_pfn_glMaxShaderCompilerThreadsARB(count);
 
     return Qnil;
@@ -5918,6 +6140,7 @@ static VALUE rogl_glPointParameterfARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     float param = (float)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPointParameterfARB, "glPointParameterfARB");
     rogl_pfn_glPointParameterfARB(pname, param);
 
     return Qnil;
@@ -5928,6 +6151,7 @@ static VALUE rogl_glPointParameterfvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* params = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPointParameterfvARB, "glPointParameterfvARB");
     rogl_pfn_glPointParameterfvARB(pname, params);
 
     return Qnil;
@@ -5935,6 +6159,7 @@ static VALUE rogl_glPointParameterfvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 
 static VALUE rogl_glGetGraphicsResetStatusARB(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetGraphicsResetStatusARB, "glGetGraphicsResetStatusARB");
     unsigned int retval = rogl_pfn_glGetGraphicsResetStatusARB();
 
     return UINT2NUM(retval);
@@ -5949,6 +6174,7 @@ static VALUE rogl_glGetnTexImageARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     int bufSize = (int)NUM2INT(_arg5_);
     void* img = (void*)val2ptr(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetnTexImageARB, "glGetnTexImageARB");
     rogl_pfn_glGetnTexImageARB(target, level, format, type, bufSize, img);
 
     return Qnil;
@@ -5965,6 +6191,7 @@ static VALUE rogl_glReadnPixelsARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     int bufSize = (int)NUM2INT(_arg7_);
     void* data = (void*)val2ptr(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReadnPixelsARB, "glReadnPixelsARB");
     rogl_pfn_glReadnPixelsARB(x, y, width, height, format, type, bufSize, data);
 
     return Qnil;
@@ -5977,6 +6204,7 @@ static VALUE rogl_glGetnCompressedTexImageARB(VALUE _obj_, VALUE _arg1_, VALUE _
     int bufSize = (int)NUM2INT(_arg3_);
     void* img = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetnCompressedTexImageARB, "glGetnCompressedTexImageARB");
     rogl_pfn_glGetnCompressedTexImageARB(target, lod, bufSize, img);
 
     return Qnil;
@@ -5989,6 +6217,7 @@ static VALUE rogl_glGetnUniformfvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     int bufSize = (int)NUM2INT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetnUniformfvARB, "glGetnUniformfvARB");
     rogl_pfn_glGetnUniformfvARB(program, location, bufSize, params);
 
     return Qnil;
@@ -6001,6 +6230,7 @@ static VALUE rogl_glGetnUniformivARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     int bufSize = (int)NUM2INT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetnUniformivARB, "glGetnUniformivARB");
     rogl_pfn_glGetnUniformivARB(program, location, bufSize, params);
 
     return Qnil;
@@ -6013,6 +6243,7 @@ static VALUE rogl_glGetnUniformuivARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     int bufSize = (int)NUM2INT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetnUniformuivARB, "glGetnUniformuivARB");
     rogl_pfn_glGetnUniformuivARB(program, location, bufSize, params);
 
     return Qnil;
@@ -6025,6 +6256,7 @@ static VALUE rogl_glGetnUniformdvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     int bufSize = (int)NUM2INT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetnUniformdvARB, "glGetnUniformdvARB");
     rogl_pfn_glGetnUniformdvARB(program, location, bufSize, params);
 
     return Qnil;
@@ -6037,6 +6269,7 @@ static VALUE rogl_glGetnMapdvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     int bufSize = (int)NUM2INT(_arg3_);
     void* v = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetnMapdvARB, "glGetnMapdvARB");
     rogl_pfn_glGetnMapdvARB(target, query, bufSize, v);
 
     return Qnil;
@@ -6049,6 +6282,7 @@ static VALUE rogl_glGetnMapfvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     int bufSize = (int)NUM2INT(_arg3_);
     void* v = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetnMapfvARB, "glGetnMapfvARB");
     rogl_pfn_glGetnMapfvARB(target, query, bufSize, v);
 
     return Qnil;
@@ -6061,6 +6295,7 @@ static VALUE rogl_glGetnMapivARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     int bufSize = (int)NUM2INT(_arg3_);
     void* v = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetnMapivARB, "glGetnMapivARB");
     rogl_pfn_glGetnMapivARB(target, query, bufSize, v);
 
     return Qnil;
@@ -6072,6 +6307,7 @@ static VALUE rogl_glGetnPixelMapfvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     int bufSize = (int)NUM2INT(_arg2_);
     void* values = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetnPixelMapfvARB, "glGetnPixelMapfvARB");
     rogl_pfn_glGetnPixelMapfvARB(map, bufSize, values);
 
     return Qnil;
@@ -6083,6 +6319,7 @@ static VALUE rogl_glGetnPixelMapuivARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int bufSize = (int)NUM2INT(_arg2_);
     void* values = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetnPixelMapuivARB, "glGetnPixelMapuivARB");
     rogl_pfn_glGetnPixelMapuivARB(map, bufSize, values);
 
     return Qnil;
@@ -6094,6 +6331,7 @@ static VALUE rogl_glGetnPixelMapusvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int bufSize = (int)NUM2INT(_arg2_);
     void* values = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetnPixelMapusvARB, "glGetnPixelMapusvARB");
     rogl_pfn_glGetnPixelMapusvARB(map, bufSize, values);
 
     return Qnil;
@@ -6104,6 +6342,7 @@ static VALUE rogl_glGetnPolygonStippleARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     int bufSize = (int)NUM2INT(_arg1_);
     void* pattern = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetnPolygonStippleARB, "glGetnPolygonStippleARB");
     rogl_pfn_glGetnPolygonStippleARB(bufSize, pattern);
 
     return Qnil;
@@ -6117,6 +6356,7 @@ static VALUE rogl_glGetnColorTableARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     int bufSize = (int)NUM2INT(_arg4_);
     void* table = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetnColorTableARB, "glGetnColorTableARB");
     rogl_pfn_glGetnColorTableARB(target, format, type, bufSize, table);
 
     return Qnil;
@@ -6130,6 +6370,7 @@ static VALUE rogl_glGetnConvolutionFilterARB(VALUE _obj_, VALUE _arg1_, VALUE _a
     int bufSize = (int)NUM2INT(_arg4_);
     void* image = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetnConvolutionFilterARB, "glGetnConvolutionFilterARB");
     rogl_pfn_glGetnConvolutionFilterARB(target, format, type, bufSize, image);
 
     return Qnil;
@@ -6146,6 +6387,7 @@ static VALUE rogl_glGetnSeparableFilterARB(VALUE _obj_, VALUE _arg1_, VALUE _arg
     void* column = (void*)val2ptr(_arg7_);
     void* span = (void*)val2ptr(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetnSeparableFilterARB, "glGetnSeparableFilterARB");
     rogl_pfn_glGetnSeparableFilterARB(target, format, type, rowBufSize, row, columnBufSize, column, span);
 
     return Qnil;
@@ -6160,6 +6402,7 @@ static VALUE rogl_glGetnHistogramARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     int bufSize = (int)NUM2INT(_arg5_);
     void* values = (void*)val2ptr(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetnHistogramARB, "glGetnHistogramARB");
     rogl_pfn_glGetnHistogramARB(target, reset, format, type, bufSize, values);
 
     return Qnil;
@@ -6174,6 +6417,7 @@ static VALUE rogl_glGetnMinmaxARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     int bufSize = (int)NUM2INT(_arg5_);
     void* values = (void*)val2ptr(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetnMinmaxARB, "glGetnMinmaxARB");
     rogl_pfn_glGetnMinmaxARB(target, reset, format, type, bufSize, values);
 
     return Qnil;
@@ -6186,6 +6430,7 @@ static VALUE rogl_glFramebufferSampleLocationsfvARB(VALUE _obj_, VALUE _arg1_, V
     int count = (int)NUM2INT(_arg3_);
     void* v = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFramebufferSampleLocationsfvARB, "glFramebufferSampleLocationsfvARB");
     rogl_pfn_glFramebufferSampleLocationsfvARB(target, start, count, v);
 
     return Qnil;
@@ -6198,6 +6443,7 @@ static VALUE rogl_glNamedFramebufferSampleLocationsfvARB(VALUE _obj_, VALUE _arg
     int count = (int)NUM2INT(_arg3_);
     void* v = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedFramebufferSampleLocationsfvARB, "glNamedFramebufferSampleLocationsfvARB");
     rogl_pfn_glNamedFramebufferSampleLocationsfvARB(framebuffer, start, count, v);
 
     return Qnil;
@@ -6205,6 +6451,7 @@ static VALUE rogl_glNamedFramebufferSampleLocationsfvARB(VALUE _obj_, VALUE _arg
 
 static VALUE rogl_glEvaluateDepthValuesARB(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glEvaluateDepthValuesARB, "glEvaluateDepthValuesARB");
     rogl_pfn_glEvaluateDepthValuesARB();
 
     return Qnil;
@@ -6214,6 +6461,7 @@ static VALUE rogl_glMinSampleShadingARB(VALUE _obj_, VALUE _arg1_)
 {
     float value = (float)NUM2DBL(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMinSampleShadingARB, "glMinSampleShadingARB");
     rogl_pfn_glMinSampleShadingARB(value);
 
     return Qnil;
@@ -6223,6 +6471,7 @@ static VALUE rogl_glDeleteObjectARB(VALUE _obj_, VALUE _arg1_)
 {
     void* obj = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeleteObjectARB, "glDeleteObjectARB");
     rogl_pfn_glDeleteObjectARB(obj);
 
     return Qnil;
@@ -6232,6 +6481,7 @@ static VALUE rogl_glGetHandleARB(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetHandleARB, "glGetHandleARB");
     void* retval = rogl_pfn_glGetHandleARB(pname);
 
     return CPOINTER_AS_VALUE(retval);
@@ -6242,6 +6492,7 @@ static VALUE rogl_glDetachObjectARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     void* containerObj = (void*)val2ptr(_arg1_);
     void* attachedObj = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDetachObjectARB, "glDetachObjectARB");
     rogl_pfn_glDetachObjectARB(containerObj, attachedObj);
 
     return Qnil;
@@ -6251,6 +6502,7 @@ static VALUE rogl_glCreateShaderObjectARB(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int shaderType = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCreateShaderObjectARB, "glCreateShaderObjectARB");
     void* retval = rogl_pfn_glCreateShaderObjectARB(shaderType);
 
     return CPOINTER_AS_VALUE(retval);
@@ -6263,6 +6515,7 @@ static VALUE rogl_glShaderSourceARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     void* string = (void*)val2ptr(_arg3_);
     void* length = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glShaderSourceARB, "glShaderSourceARB");
     rogl_pfn_glShaderSourceARB(shaderObj, count, string, length);
 
     return Qnil;
@@ -6272,6 +6525,7 @@ static VALUE rogl_glCompileShaderARB(VALUE _obj_, VALUE _arg1_)
 {
     void* shaderObj = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCompileShaderARB, "glCompileShaderARB");
     rogl_pfn_glCompileShaderARB(shaderObj);
 
     return Qnil;
@@ -6279,6 +6533,7 @@ static VALUE rogl_glCompileShaderARB(VALUE _obj_, VALUE _arg1_)
 
 static VALUE rogl_glCreateProgramObjectARB(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glCreateProgramObjectARB, "glCreateProgramObjectARB");
     void* retval = rogl_pfn_glCreateProgramObjectARB();
 
     return CPOINTER_AS_VALUE(retval);
@@ -6289,6 +6544,7 @@ static VALUE rogl_glAttachObjectARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     void* containerObj = (void*)val2ptr(_arg1_);
     void* obj = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glAttachObjectARB, "glAttachObjectARB");
     rogl_pfn_glAttachObjectARB(containerObj, obj);
 
     return Qnil;
@@ -6298,6 +6554,7 @@ static VALUE rogl_glLinkProgramARB(VALUE _obj_, VALUE _arg1_)
 {
     void* programObj = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glLinkProgramARB, "glLinkProgramARB");
     rogl_pfn_glLinkProgramARB(programObj);
 
     return Qnil;
@@ -6307,6 +6564,7 @@ static VALUE rogl_glUseProgramObjectARB(VALUE _obj_, VALUE _arg1_)
 {
     void* programObj = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUseProgramObjectARB, "glUseProgramObjectARB");
     rogl_pfn_glUseProgramObjectARB(programObj);
 
     return Qnil;
@@ -6316,6 +6574,7 @@ static VALUE rogl_glValidateProgramARB(VALUE _obj_, VALUE _arg1_)
 {
     void* programObj = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glValidateProgramARB, "glValidateProgramARB");
     rogl_pfn_glValidateProgramARB(programObj);
 
     return Qnil;
@@ -6326,6 +6585,7 @@ static VALUE rogl_glUniform1fARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int location = (int)NUM2INT(_arg1_);
     float v0 = (float)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform1fARB, "glUniform1fARB");
     rogl_pfn_glUniform1fARB(location, v0);
 
     return Qnil;
@@ -6337,6 +6597,7 @@ static VALUE rogl_glUniform2fARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     float v0 = (float)NUM2DBL(_arg2_);
     float v1 = (float)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform2fARB, "glUniform2fARB");
     rogl_pfn_glUniform2fARB(location, v0, v1);
 
     return Qnil;
@@ -6349,6 +6610,7 @@ static VALUE rogl_glUniform3fARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     float v1 = (float)NUM2DBL(_arg3_);
     float v2 = (float)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform3fARB, "glUniform3fARB");
     rogl_pfn_glUniform3fARB(location, v0, v1, v2);
 
     return Qnil;
@@ -6362,6 +6624,7 @@ static VALUE rogl_glUniform4fARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     float v2 = (float)NUM2DBL(_arg4_);
     float v3 = (float)NUM2DBL(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform4fARB, "glUniform4fARB");
     rogl_pfn_glUniform4fARB(location, v0, v1, v2, v3);
 
     return Qnil;
@@ -6372,6 +6635,7 @@ static VALUE rogl_glUniform1iARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int location = (int)NUM2INT(_arg1_);
     int v0 = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform1iARB, "glUniform1iARB");
     rogl_pfn_glUniform1iARB(location, v0);
 
     return Qnil;
@@ -6383,6 +6647,7 @@ static VALUE rogl_glUniform2iARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     int v0 = (int)NUM2INT(_arg2_);
     int v1 = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform2iARB, "glUniform2iARB");
     rogl_pfn_glUniform2iARB(location, v0, v1);
 
     return Qnil;
@@ -6395,6 +6660,7 @@ static VALUE rogl_glUniform3iARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     int v1 = (int)NUM2INT(_arg3_);
     int v2 = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform3iARB, "glUniform3iARB");
     rogl_pfn_glUniform3iARB(location, v0, v1, v2);
 
     return Qnil;
@@ -6408,6 +6674,7 @@ static VALUE rogl_glUniform4iARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     int v2 = (int)NUM2INT(_arg4_);
     int v3 = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform4iARB, "glUniform4iARB");
     rogl_pfn_glUniform4iARB(location, v0, v1, v2, v3);
 
     return Qnil;
@@ -6419,6 +6686,7 @@ static VALUE rogl_glUniform1fvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     int count = (int)NUM2INT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform1fvARB, "glUniform1fvARB");
     rogl_pfn_glUniform1fvARB(location, count, value);
 
     return Qnil;
@@ -6430,6 +6698,7 @@ static VALUE rogl_glUniform2fvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     int count = (int)NUM2INT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform2fvARB, "glUniform2fvARB");
     rogl_pfn_glUniform2fvARB(location, count, value);
 
     return Qnil;
@@ -6441,6 +6710,7 @@ static VALUE rogl_glUniform3fvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     int count = (int)NUM2INT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform3fvARB, "glUniform3fvARB");
     rogl_pfn_glUniform3fvARB(location, count, value);
 
     return Qnil;
@@ -6452,6 +6722,7 @@ static VALUE rogl_glUniform4fvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     int count = (int)NUM2INT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform4fvARB, "glUniform4fvARB");
     rogl_pfn_glUniform4fvARB(location, count, value);
 
     return Qnil;
@@ -6463,6 +6734,7 @@ static VALUE rogl_glUniform1ivARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     int count = (int)NUM2INT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform1ivARB, "glUniform1ivARB");
     rogl_pfn_glUniform1ivARB(location, count, value);
 
     return Qnil;
@@ -6474,6 +6746,7 @@ static VALUE rogl_glUniform2ivARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     int count = (int)NUM2INT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform2ivARB, "glUniform2ivARB");
     rogl_pfn_glUniform2ivARB(location, count, value);
 
     return Qnil;
@@ -6485,6 +6758,7 @@ static VALUE rogl_glUniform3ivARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     int count = (int)NUM2INT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform3ivARB, "glUniform3ivARB");
     rogl_pfn_glUniform3ivARB(location, count, value);
 
     return Qnil;
@@ -6496,6 +6770,7 @@ static VALUE rogl_glUniform4ivARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     int count = (int)NUM2INT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform4ivARB, "glUniform4ivARB");
     rogl_pfn_glUniform4ivARB(location, count, value);
 
     return Qnil;
@@ -6508,6 +6783,7 @@ static VALUE rogl_glUniformMatrix2fvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned char transpose = (unsigned char)NUM2UINT(_arg3_);
     void* value = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniformMatrix2fvARB, "glUniformMatrix2fvARB");
     rogl_pfn_glUniformMatrix2fvARB(location, count, transpose, value);
 
     return Qnil;
@@ -6520,6 +6796,7 @@ static VALUE rogl_glUniformMatrix3fvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned char transpose = (unsigned char)NUM2UINT(_arg3_);
     void* value = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniformMatrix3fvARB, "glUniformMatrix3fvARB");
     rogl_pfn_glUniformMatrix3fvARB(location, count, transpose, value);
 
     return Qnil;
@@ -6532,6 +6809,7 @@ static VALUE rogl_glUniformMatrix4fvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned char transpose = (unsigned char)NUM2UINT(_arg3_);
     void* value = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniformMatrix4fvARB, "glUniformMatrix4fvARB");
     rogl_pfn_glUniformMatrix4fvARB(location, count, transpose, value);
 
     return Qnil;
@@ -6543,6 +6821,7 @@ static VALUE rogl_glGetObjectParameterfvARB(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetObjectParameterfvARB, "glGetObjectParameterfvARB");
     rogl_pfn_glGetObjectParameterfvARB(obj, pname, params);
 
     return Qnil;
@@ -6554,6 +6833,7 @@ static VALUE rogl_glGetObjectParameterivARB(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetObjectParameterivARB, "glGetObjectParameterivARB");
     rogl_pfn_glGetObjectParameterivARB(obj, pname, params);
 
     return Qnil;
@@ -6566,6 +6846,7 @@ static VALUE rogl_glGetInfoLogARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     void* length = (void*)val2ptr(_arg3_);
     void* infoLog = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetInfoLogARB, "glGetInfoLogARB");
     rogl_pfn_glGetInfoLogARB(obj, maxLength, length, infoLog);
 
     return Qnil;
@@ -6578,6 +6859,7 @@ static VALUE rogl_glGetAttachedObjectsARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     void* count = (void*)val2ptr(_arg3_);
     void* obj = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetAttachedObjectsARB, "glGetAttachedObjectsARB");
     rogl_pfn_glGetAttachedObjectsARB(containerObj, maxCount, count, obj);
 
     return Qnil;
@@ -6588,6 +6870,7 @@ static VALUE rogl_glGetUniformLocationARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     void* programObj = (void*)val2ptr(_arg1_);
     void* name = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetUniformLocationARB, "glGetUniformLocationARB");
     int retval = rogl_pfn_glGetUniformLocationARB(programObj, name);
 
     return INT2NUM(retval);
@@ -6603,6 +6886,7 @@ static VALUE rogl_glGetActiveUniformARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     void* type = (void*)val2ptr(_arg6_);
     void* name = (void*)val2ptr(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetActiveUniformARB, "glGetActiveUniformARB");
     rogl_pfn_glGetActiveUniformARB(programObj, index, maxLength, length, size, type, name);
 
     return Qnil;
@@ -6614,6 +6898,7 @@ static VALUE rogl_glGetUniformfvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     int location = (int)NUM2INT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetUniformfvARB, "glGetUniformfvARB");
     rogl_pfn_glGetUniformfvARB(programObj, location, params);
 
     return Qnil;
@@ -6625,6 +6910,7 @@ static VALUE rogl_glGetUniformivARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     int location = (int)NUM2INT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetUniformivARB, "glGetUniformivARB");
     rogl_pfn_glGetUniformivARB(programObj, location, params);
 
     return Qnil;
@@ -6637,6 +6923,7 @@ static VALUE rogl_glGetShaderSourceARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     void* length = (void*)val2ptr(_arg3_);
     void* source = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetShaderSourceARB, "glGetShaderSourceARB");
     rogl_pfn_glGetShaderSourceARB(obj, maxLength, length, source);
 
     return Qnil;
@@ -6650,6 +6937,7 @@ static VALUE rogl_glNamedStringARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     int stringlen = (int)NUM2INT(_arg4_);
     void* string = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedStringARB, "glNamedStringARB");
     rogl_pfn_glNamedStringARB(type, namelen, name, stringlen, string);
 
     return Qnil;
@@ -6660,6 +6948,7 @@ static VALUE rogl_glDeleteNamedStringARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     int namelen = (int)NUM2INT(_arg1_);
     void* name = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeleteNamedStringARB, "glDeleteNamedStringARB");
     rogl_pfn_glDeleteNamedStringARB(namelen, name);
 
     return Qnil;
@@ -6672,6 +6961,7 @@ static VALUE rogl_glCompileShaderIncludeARB(VALUE _obj_, VALUE _arg1_, VALUE _ar
     void* path = (void*)val2ptr(_arg3_);
     void* length = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCompileShaderIncludeARB, "glCompileShaderIncludeARB");
     rogl_pfn_glCompileShaderIncludeARB(shader, count, path, length);
 
     return Qnil;
@@ -6682,6 +6972,7 @@ static VALUE rogl_glIsNamedStringARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int namelen = (int)NUM2INT(_arg1_);
     void* name = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsNamedStringARB, "glIsNamedStringARB");
     unsigned char retval = rogl_pfn_glIsNamedStringARB(namelen, name);
 
     return UINT2NUM(retval);
@@ -6695,6 +6986,7 @@ static VALUE rogl_glGetNamedStringARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     void* stringlen = (void*)val2ptr(_arg4_);
     void* string = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetNamedStringARB, "glGetNamedStringARB");
     rogl_pfn_glGetNamedStringARB(namelen, name, bufSize, stringlen, string);
 
     return Qnil;
@@ -6707,6 +6999,7 @@ static VALUE rogl_glGetNamedStringivARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetNamedStringivARB, "glGetNamedStringivARB");
     rogl_pfn_glGetNamedStringivARB(namelen, name, pname, params);
 
     return Qnil;
@@ -6719,6 +7012,7 @@ static VALUE rogl_glBufferPageCommitmentARB(VALUE _obj_, VALUE _arg1_, VALUE _ar
     ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg3_);
     unsigned char commit = (unsigned char)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBufferPageCommitmentARB, "glBufferPageCommitmentARB");
     rogl_pfn_glBufferPageCommitmentARB(target, offset, size, commit);
 
     return Qnil;
@@ -6731,6 +7025,7 @@ static VALUE rogl_glNamedBufferPageCommitmentEXT(VALUE _obj_, VALUE _arg1_, VALU
     ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg3_);
     unsigned char commit = (unsigned char)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedBufferPageCommitmentEXT, "glNamedBufferPageCommitmentEXT");
     rogl_pfn_glNamedBufferPageCommitmentEXT(buffer, offset, size, commit);
 
     return Qnil;
@@ -6743,6 +7038,7 @@ static VALUE rogl_glNamedBufferPageCommitmentARB(VALUE _obj_, VALUE _arg1_, VALU
     ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg3_);
     unsigned char commit = (unsigned char)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedBufferPageCommitmentARB, "glNamedBufferPageCommitmentARB");
     rogl_pfn_glNamedBufferPageCommitmentARB(buffer, offset, size, commit);
 
     return Qnil;
@@ -6760,6 +7056,7 @@ static VALUE rogl_glTexPageCommitmentARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     int depth = (int)NUM2INT(_arg8_);
     unsigned char commit = (unsigned char)NUM2UINT(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexPageCommitmentARB, "glTexPageCommitmentARB");
     rogl_pfn_glTexPageCommitmentARB(target, level, xoffset, yoffset, zoffset, width, height, depth, commit);
 
     return Qnil;
@@ -6771,6 +7068,7 @@ static VALUE rogl_glTexBufferARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     unsigned int internalformat = (unsigned int)NUM2UINT(_arg2_);
     unsigned int buffer = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexBufferARB, "glTexBufferARB");
     rogl_pfn_glTexBufferARB(target, internalformat, buffer);
 
     return Qnil;
@@ -6788,6 +7086,7 @@ static VALUE rogl_glCompressedTexImage3DARB(VALUE _obj_, VALUE _arg1_, VALUE _ar
     int imageSize = (int)NUM2INT(_arg8_);
     void* data = (void*)val2ptr(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCompressedTexImage3DARB, "glCompressedTexImage3DARB");
     rogl_pfn_glCompressedTexImage3DARB(target, level, internalformat, width, height, depth, border, imageSize, data);
 
     return Qnil;
@@ -6804,6 +7103,7 @@ static VALUE rogl_glCompressedTexImage2DARB(VALUE _obj_, VALUE _arg1_, VALUE _ar
     int imageSize = (int)NUM2INT(_arg7_);
     void* data = (void*)val2ptr(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCompressedTexImage2DARB, "glCompressedTexImage2DARB");
     rogl_pfn_glCompressedTexImage2DARB(target, level, internalformat, width, height, border, imageSize, data);
 
     return Qnil;
@@ -6819,6 +7119,7 @@ static VALUE rogl_glCompressedTexImage1DARB(VALUE _obj_, VALUE _arg1_, VALUE _ar
     int imageSize = (int)NUM2INT(_arg6_);
     void* data = (void*)val2ptr(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCompressedTexImage1DARB, "glCompressedTexImage1DARB");
     rogl_pfn_glCompressedTexImage1DARB(target, level, internalformat, width, border, imageSize, data);
 
     return Qnil;
@@ -6838,6 +7139,7 @@ static VALUE rogl_glCompressedTexSubImage3DARB(VALUE _obj_, VALUE _arg1_, VALUE 
     int imageSize = (int)NUM2INT(_arg10_);
     void* data = (void*)val2ptr(_arg11_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCompressedTexSubImage3DARB, "glCompressedTexSubImage3DARB");
     rogl_pfn_glCompressedTexSubImage3DARB(target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, data);
 
     return Qnil;
@@ -6855,6 +7157,7 @@ static VALUE rogl_glCompressedTexSubImage2DARB(VALUE _obj_, VALUE _arg1_, VALUE 
     int imageSize = (int)NUM2INT(_arg8_);
     void* data = (void*)val2ptr(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCompressedTexSubImage2DARB, "glCompressedTexSubImage2DARB");
     rogl_pfn_glCompressedTexSubImage2DARB(target, level, xoffset, yoffset, width, height, format, imageSize, data);
 
     return Qnil;
@@ -6870,6 +7173,7 @@ static VALUE rogl_glCompressedTexSubImage1DARB(VALUE _obj_, VALUE _arg1_, VALUE 
     int imageSize = (int)NUM2INT(_arg6_);
     void* data = (void*)val2ptr(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCompressedTexSubImage1DARB, "glCompressedTexSubImage1DARB");
     rogl_pfn_glCompressedTexSubImage1DARB(target, level, xoffset, width, format, imageSize, data);
 
     return Qnil;
@@ -6881,6 +7185,7 @@ static VALUE rogl_glGetCompressedTexImageARB(VALUE _obj_, VALUE _arg1_, VALUE _a
     int level = (int)NUM2INT(_arg2_);
     void* img = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetCompressedTexImageARB, "glGetCompressedTexImageARB");
     rogl_pfn_glGetCompressedTexImageARB(target, level, img);
 
     return Qnil;
@@ -6890,6 +7195,7 @@ static VALUE rogl_glLoadTransposeMatrixfARB(VALUE _obj_, VALUE _arg1_)
 {
     void* m = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glLoadTransposeMatrixfARB, "glLoadTransposeMatrixfARB");
     rogl_pfn_glLoadTransposeMatrixfARB(m);
 
     return Qnil;
@@ -6899,6 +7205,7 @@ static VALUE rogl_glLoadTransposeMatrixdARB(VALUE _obj_, VALUE _arg1_)
 {
     void* m = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glLoadTransposeMatrixdARB, "glLoadTransposeMatrixdARB");
     rogl_pfn_glLoadTransposeMatrixdARB(m);
 
     return Qnil;
@@ -6908,6 +7215,7 @@ static VALUE rogl_glMultTransposeMatrixfARB(VALUE _obj_, VALUE _arg1_)
 {
     void* m = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultTransposeMatrixfARB, "glMultTransposeMatrixfARB");
     rogl_pfn_glMultTransposeMatrixfARB(m);
 
     return Qnil;
@@ -6917,6 +7225,7 @@ static VALUE rogl_glMultTransposeMatrixdARB(VALUE _obj_, VALUE _arg1_)
 {
     void* m = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultTransposeMatrixdARB, "glMultTransposeMatrixdARB");
     rogl_pfn_glMultTransposeMatrixdARB(m);
 
     return Qnil;
@@ -6927,6 +7236,7 @@ static VALUE rogl_glWeightbvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int size = (int)NUM2INT(_arg1_);
     void* weights = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWeightbvARB, "glWeightbvARB");
     rogl_pfn_glWeightbvARB(size, weights);
 
     return Qnil;
@@ -6937,6 +7247,7 @@ static VALUE rogl_glWeightsvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int size = (int)NUM2INT(_arg1_);
     void* weights = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWeightsvARB, "glWeightsvARB");
     rogl_pfn_glWeightsvARB(size, weights);
 
     return Qnil;
@@ -6947,6 +7258,7 @@ static VALUE rogl_glWeightivARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int size = (int)NUM2INT(_arg1_);
     void* weights = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWeightivARB, "glWeightivARB");
     rogl_pfn_glWeightivARB(size, weights);
 
     return Qnil;
@@ -6957,6 +7269,7 @@ static VALUE rogl_glWeightfvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int size = (int)NUM2INT(_arg1_);
     void* weights = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWeightfvARB, "glWeightfvARB");
     rogl_pfn_glWeightfvARB(size, weights);
 
     return Qnil;
@@ -6967,6 +7280,7 @@ static VALUE rogl_glWeightdvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int size = (int)NUM2INT(_arg1_);
     void* weights = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWeightdvARB, "glWeightdvARB");
     rogl_pfn_glWeightdvARB(size, weights);
 
     return Qnil;
@@ -6977,6 +7291,7 @@ static VALUE rogl_glWeightubvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int size = (int)NUM2INT(_arg1_);
     void* weights = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWeightubvARB, "glWeightubvARB");
     rogl_pfn_glWeightubvARB(size, weights);
 
     return Qnil;
@@ -6987,6 +7302,7 @@ static VALUE rogl_glWeightusvARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int size = (int)NUM2INT(_arg1_);
     void* weights = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWeightusvARB, "glWeightusvARB");
     rogl_pfn_glWeightusvARB(size, weights);
 
     return Qnil;
@@ -6997,6 +7313,7 @@ static VALUE rogl_glWeightuivARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int size = (int)NUM2INT(_arg1_);
     void* weights = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWeightuivARB, "glWeightuivARB");
     rogl_pfn_glWeightuivARB(size, weights);
 
     return Qnil;
@@ -7009,6 +7326,7 @@ static VALUE rogl_glWeightPointerARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     int stride = (int)NUM2INT(_arg3_);
     void* pointer = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWeightPointerARB, "glWeightPointerARB");
     rogl_pfn_glWeightPointerARB(size, type, stride, pointer);
 
     return Qnil;
@@ -7018,6 +7336,7 @@ static VALUE rogl_glVertexBlendARB(VALUE _obj_, VALUE _arg1_)
 {
     int count = (int)NUM2INT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexBlendARB, "glVertexBlendARB");
     rogl_pfn_glVertexBlendARB(count);
 
     return Qnil;
@@ -7028,6 +7347,7 @@ static VALUE rogl_glBindBufferARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     unsigned int buffer = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindBufferARB, "glBindBufferARB");
     rogl_pfn_glBindBufferARB(target, buffer);
 
     return Qnil;
@@ -7038,6 +7358,7 @@ static VALUE rogl_glDeleteBuffersARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int n = (int)NUM2INT(_arg1_);
     void* buffers = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeleteBuffersARB, "glDeleteBuffersARB");
     rogl_pfn_glDeleteBuffersARB(n, buffers);
 
     return Qnil;
@@ -7048,6 +7369,7 @@ static VALUE rogl_glGenBuffersARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int n = (int)NUM2INT(_arg1_);
     void* buffers = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGenBuffersARB, "glGenBuffersARB");
     rogl_pfn_glGenBuffersARB(n, buffers);
 
     return Qnil;
@@ -7057,6 +7379,7 @@ static VALUE rogl_glIsBufferARB(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsBufferARB, "glIsBufferARB");
     unsigned char retval = rogl_pfn_glIsBufferARB(buffer);
 
     return UINT2NUM(retval);
@@ -7069,6 +7392,7 @@ static VALUE rogl_glBufferDataARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     void* data = (void*)val2ptr(_arg3_);
     unsigned int usage = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBufferDataARB, "glBufferDataARB");
     rogl_pfn_glBufferDataARB(target, size, data, usage);
 
     return Qnil;
@@ -7081,6 +7405,7 @@ static VALUE rogl_glBufferSubDataARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg3_);
     void* data = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBufferSubDataARB, "glBufferSubDataARB");
     rogl_pfn_glBufferSubDataARB(target, offset, size, data);
 
     return Qnil;
@@ -7093,6 +7418,7 @@ static VALUE rogl_glGetBufferSubDataARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg3_);
     void* data = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetBufferSubDataARB, "glGetBufferSubDataARB");
     rogl_pfn_glGetBufferSubDataARB(target, offset, size, data);
 
     return Qnil;
@@ -7103,6 +7429,7 @@ static VALUE rogl_glMapBufferARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     unsigned int access = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMapBufferARB, "glMapBufferARB");
     void* retval = rogl_pfn_glMapBufferARB(target, access);
 
     return CPOINTER_AS_VALUE(retval);
@@ -7112,6 +7439,7 @@ static VALUE rogl_glUnmapBufferARB(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUnmapBufferARB, "glUnmapBufferARB");
     unsigned char retval = rogl_pfn_glUnmapBufferARB(target);
 
     return UINT2NUM(retval);
@@ -7123,6 +7451,7 @@ static VALUE rogl_glGetBufferParameterivARB(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetBufferParameterivARB, "glGetBufferParameterivARB");
     rogl_pfn_glGetBufferParameterivARB(target, pname, params);
 
     return Qnil;
@@ -7134,6 +7463,7 @@ static VALUE rogl_glGetBufferPointervARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetBufferPointervARB, "glGetBufferPointervARB");
     rogl_pfn_glGetBufferPointervARB(target, pname, params);
 
     return Qnil;
@@ -7145,6 +7475,7 @@ static VALUE rogl_glBindAttribLocationARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     void* name = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindAttribLocationARB, "glBindAttribLocationARB");
     rogl_pfn_glBindAttribLocationARB(programObj, index, name);
 
     return Qnil;
@@ -7160,6 +7491,7 @@ static VALUE rogl_glGetActiveAttribARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     void* type = (void*)val2ptr(_arg6_);
     void* name = (void*)val2ptr(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetActiveAttribARB, "glGetActiveAttribARB");
     rogl_pfn_glGetActiveAttribARB(programObj, index, maxLength, length, size, type, name);
 
     return Qnil;
@@ -7170,6 +7502,7 @@ static VALUE rogl_glGetAttribLocationARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     void* programObj = (void*)val2ptr(_arg1_);
     void* name = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetAttribLocationARB, "glGetAttribLocationARB");
     int retval = rogl_pfn_glGetAttribLocationARB(programObj, name);
 
     return INT2NUM(retval);
@@ -7180,6 +7513,7 @@ static VALUE rogl_glWindowPos2dARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     double x = (double)NUM2DBL(_arg1_);
     double y = (double)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos2dARB, "glWindowPos2dARB");
     rogl_pfn_glWindowPos2dARB(x, y);
 
     return Qnil;
@@ -7189,6 +7523,7 @@ static VALUE rogl_glWindowPos2dvARB(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos2dvARB, "glWindowPos2dvARB");
     rogl_pfn_glWindowPos2dvARB(v);
 
     return Qnil;
@@ -7199,6 +7534,7 @@ static VALUE rogl_glWindowPos2fARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     float x = (float)NUM2DBL(_arg1_);
     float y = (float)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos2fARB, "glWindowPos2fARB");
     rogl_pfn_glWindowPos2fARB(x, y);
 
     return Qnil;
@@ -7208,6 +7544,7 @@ static VALUE rogl_glWindowPos2fvARB(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos2fvARB, "glWindowPos2fvARB");
     rogl_pfn_glWindowPos2fvARB(v);
 
     return Qnil;
@@ -7218,6 +7555,7 @@ static VALUE rogl_glWindowPos2iARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int x = (int)NUM2INT(_arg1_);
     int y = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos2iARB, "glWindowPos2iARB");
     rogl_pfn_glWindowPos2iARB(x, y);
 
     return Qnil;
@@ -7227,6 +7565,7 @@ static VALUE rogl_glWindowPos2ivARB(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos2ivARB, "glWindowPos2ivARB");
     rogl_pfn_glWindowPos2ivARB(v);
 
     return Qnil;
@@ -7237,6 +7576,7 @@ static VALUE rogl_glWindowPos2sARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     short x = (short)NUM2INT(_arg1_);
     short y = (short)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos2sARB, "glWindowPos2sARB");
     rogl_pfn_glWindowPos2sARB(x, y);
 
     return Qnil;
@@ -7246,6 +7586,7 @@ static VALUE rogl_glWindowPos2svARB(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos2svARB, "glWindowPos2svARB");
     rogl_pfn_glWindowPos2svARB(v);
 
     return Qnil;
@@ -7257,6 +7598,7 @@ static VALUE rogl_glWindowPos3dARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     double y = (double)NUM2DBL(_arg2_);
     double z = (double)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos3dARB, "glWindowPos3dARB");
     rogl_pfn_glWindowPos3dARB(x, y, z);
 
     return Qnil;
@@ -7266,6 +7608,7 @@ static VALUE rogl_glWindowPos3dvARB(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos3dvARB, "glWindowPos3dvARB");
     rogl_pfn_glWindowPos3dvARB(v);
 
     return Qnil;
@@ -7277,6 +7620,7 @@ static VALUE rogl_glWindowPos3fARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     float y = (float)NUM2DBL(_arg2_);
     float z = (float)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos3fARB, "glWindowPos3fARB");
     rogl_pfn_glWindowPos3fARB(x, y, z);
 
     return Qnil;
@@ -7286,6 +7630,7 @@ static VALUE rogl_glWindowPos3fvARB(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos3fvARB, "glWindowPos3fvARB");
     rogl_pfn_glWindowPos3fvARB(v);
 
     return Qnil;
@@ -7297,6 +7642,7 @@ static VALUE rogl_glWindowPos3iARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     int y = (int)NUM2INT(_arg2_);
     int z = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos3iARB, "glWindowPos3iARB");
     rogl_pfn_glWindowPos3iARB(x, y, z);
 
     return Qnil;
@@ -7306,6 +7652,7 @@ static VALUE rogl_glWindowPos3ivARB(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos3ivARB, "glWindowPos3ivARB");
     rogl_pfn_glWindowPos3ivARB(v);
 
     return Qnil;
@@ -7317,6 +7664,7 @@ static VALUE rogl_glWindowPos3sARB(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     short y = (short)NUM2INT(_arg2_);
     short z = (short)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos3sARB, "glWindowPos3sARB");
     rogl_pfn_glWindowPos3sARB(x, y, z);
 
     return Qnil;
@@ -7326,6 +7674,7 @@ static VALUE rogl_glWindowPos3svARB(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos3svARB, "glWindowPos3svARB");
     rogl_pfn_glWindowPos3svARB(v);
 
     return Qnil;
@@ -7336,6 +7685,7 @@ static VALUE rogl_glDrawBuffersATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int n = (int)NUM2INT(_arg1_);
     void* bufs = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDrawBuffersATI, "glDrawBuffersATI");
     rogl_pfn_glDrawBuffersATI(n, bufs);
 
     return Qnil;
@@ -7346,6 +7696,7 @@ static VALUE rogl_glElementPointerATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int type = (unsigned int)NUM2UINT(_arg1_);
     void* pointer = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glElementPointerATI, "glElementPointerATI");
     rogl_pfn_glElementPointerATI(type, pointer);
 
     return Qnil;
@@ -7356,6 +7707,7 @@ static VALUE rogl_glDrawElementArrayATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
     int count = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDrawElementArrayATI, "glDrawElementArrayATI");
     rogl_pfn_glDrawElementArrayATI(mode, count);
 
     return Qnil;
@@ -7368,6 +7720,7 @@ static VALUE rogl_glDrawRangeElementArrayATI(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int end = (unsigned int)NUM2UINT(_arg3_);
     int count = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDrawRangeElementArrayATI, "glDrawRangeElementArrayATI");
     rogl_pfn_glDrawRangeElementArrayATI(mode, start, end, count);
 
     return Qnil;
@@ -7378,6 +7731,7 @@ static VALUE rogl_glTexBumpParameterivATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* param = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexBumpParameterivATI, "glTexBumpParameterivATI");
     rogl_pfn_glTexBumpParameterivATI(pname, param);
 
     return Qnil;
@@ -7388,6 +7742,7 @@ static VALUE rogl_glTexBumpParameterfvATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* param = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexBumpParameterfvATI, "glTexBumpParameterfvATI");
     rogl_pfn_glTexBumpParameterfvATI(pname, param);
 
     return Qnil;
@@ -7398,6 +7753,7 @@ static VALUE rogl_glGetTexBumpParameterivATI(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* param = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTexBumpParameterivATI, "glGetTexBumpParameterivATI");
     rogl_pfn_glGetTexBumpParameterivATI(pname, param);
 
     return Qnil;
@@ -7408,6 +7764,7 @@ static VALUE rogl_glGetTexBumpParameterfvATI(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* param = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTexBumpParameterfvATI, "glGetTexBumpParameterfvATI");
     rogl_pfn_glGetTexBumpParameterfvATI(pname, param);
 
     return Qnil;
@@ -7417,6 +7774,7 @@ static VALUE rogl_glGenFragmentShadersATI(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int range = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGenFragmentShadersATI, "glGenFragmentShadersATI");
     unsigned int retval = rogl_pfn_glGenFragmentShadersATI(range);
 
     return UINT2NUM(retval);
@@ -7426,6 +7784,7 @@ static VALUE rogl_glBindFragmentShaderATI(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int id = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindFragmentShaderATI, "glBindFragmentShaderATI");
     rogl_pfn_glBindFragmentShaderATI(id);
 
     return Qnil;
@@ -7435,6 +7794,7 @@ static VALUE rogl_glDeleteFragmentShaderATI(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int id = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeleteFragmentShaderATI, "glDeleteFragmentShaderATI");
     rogl_pfn_glDeleteFragmentShaderATI(id);
 
     return Qnil;
@@ -7442,6 +7802,7 @@ static VALUE rogl_glDeleteFragmentShaderATI(VALUE _obj_, VALUE _arg1_)
 
 static VALUE rogl_glBeginFragmentShaderATI(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glBeginFragmentShaderATI, "glBeginFragmentShaderATI");
     rogl_pfn_glBeginFragmentShaderATI();
 
     return Qnil;
@@ -7449,6 +7810,7 @@ static VALUE rogl_glBeginFragmentShaderATI(VALUE _obj_)
 
 static VALUE rogl_glEndFragmentShaderATI(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glEndFragmentShaderATI, "glEndFragmentShaderATI");
     rogl_pfn_glEndFragmentShaderATI();
 
     return Qnil;
@@ -7460,6 +7822,7 @@ static VALUE rogl_glPassTexCoordATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     unsigned int coord = (unsigned int)NUM2UINT(_arg2_);
     unsigned int swizzle = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPassTexCoordATI, "glPassTexCoordATI");
     rogl_pfn_glPassTexCoordATI(dst, coord, swizzle);
 
     return Qnil;
@@ -7471,6 +7834,7 @@ static VALUE rogl_glSampleMapATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     unsigned int interp = (unsigned int)NUM2UINT(_arg2_);
     unsigned int swizzle = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSampleMapATI, "glSampleMapATI");
     rogl_pfn_glSampleMapATI(dst, interp, swizzle);
 
     return Qnil;
@@ -7486,6 +7850,7 @@ static VALUE rogl_glColorFragmentOp1ATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int arg1Rep = (unsigned int)NUM2UINT(_arg6_);
     unsigned int arg1Mod = (unsigned int)NUM2UINT(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColorFragmentOp1ATI, "glColorFragmentOp1ATI");
     rogl_pfn_glColorFragmentOp1ATI(op, dst, dstMask, dstMod, arg1, arg1Rep, arg1Mod);
 
     return Qnil;
@@ -7504,6 +7869,7 @@ static VALUE rogl_glColorFragmentOp2ATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int arg2Rep = (unsigned int)NUM2UINT(_arg9_);
     unsigned int arg2Mod = (unsigned int)NUM2UINT(_arg10_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColorFragmentOp2ATI, "glColorFragmentOp2ATI");
     rogl_pfn_glColorFragmentOp2ATI(op, dst, dstMask, dstMod, arg1, arg1Rep, arg1Mod, arg2, arg2Rep, arg2Mod);
 
     return Qnil;
@@ -7525,6 +7891,7 @@ static VALUE rogl_glColorFragmentOp3ATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int arg3Rep = (unsigned int)NUM2UINT(_arg12_);
     unsigned int arg3Mod = (unsigned int)NUM2UINT(_arg13_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColorFragmentOp3ATI, "glColorFragmentOp3ATI");
     rogl_pfn_glColorFragmentOp3ATI(op, dst, dstMask, dstMod, arg1, arg1Rep, arg1Mod, arg2, arg2Rep, arg2Mod, arg3, arg3Rep, arg3Mod);
 
     return Qnil;
@@ -7539,6 +7906,7 @@ static VALUE rogl_glAlphaFragmentOp1ATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int arg1Rep = (unsigned int)NUM2UINT(_arg5_);
     unsigned int arg1Mod = (unsigned int)NUM2UINT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glAlphaFragmentOp1ATI, "glAlphaFragmentOp1ATI");
     rogl_pfn_glAlphaFragmentOp1ATI(op, dst, dstMod, arg1, arg1Rep, arg1Mod);
 
     return Qnil;
@@ -7556,6 +7924,7 @@ static VALUE rogl_glAlphaFragmentOp2ATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int arg2Rep = (unsigned int)NUM2UINT(_arg8_);
     unsigned int arg2Mod = (unsigned int)NUM2UINT(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glAlphaFragmentOp2ATI, "glAlphaFragmentOp2ATI");
     rogl_pfn_glAlphaFragmentOp2ATI(op, dst, dstMod, arg1, arg1Rep, arg1Mod, arg2, arg2Rep, arg2Mod);
 
     return Qnil;
@@ -7576,6 +7945,7 @@ static VALUE rogl_glAlphaFragmentOp3ATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int arg3Rep = (unsigned int)NUM2UINT(_arg11_);
     unsigned int arg3Mod = (unsigned int)NUM2UINT(_arg12_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glAlphaFragmentOp3ATI, "glAlphaFragmentOp3ATI");
     rogl_pfn_glAlphaFragmentOp3ATI(op, dst, dstMod, arg1, arg1Rep, arg1Mod, arg2, arg2Rep, arg2Mod, arg3, arg3Rep, arg3Mod);
 
     return Qnil;
@@ -7586,6 +7956,7 @@ static VALUE rogl_glSetFragmentShaderConstantATI(VALUE _obj_, VALUE _arg1_, VALU
     unsigned int dst = (unsigned int)NUM2UINT(_arg1_);
     void* value = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSetFragmentShaderConstantATI, "glSetFragmentShaderConstantATI");
     rogl_pfn_glSetFragmentShaderConstantATI(dst, value);
 
     return Qnil;
@@ -7595,6 +7966,7 @@ static VALUE rogl_glMapObjectBufferATI(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMapObjectBufferATI, "glMapObjectBufferATI");
     void* retval = rogl_pfn_glMapObjectBufferATI(buffer);
 
     return CPOINTER_AS_VALUE(retval);
@@ -7604,6 +7976,7 @@ static VALUE rogl_glUnmapObjectBufferATI(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUnmapObjectBufferATI, "glUnmapObjectBufferATI");
     rogl_pfn_glUnmapObjectBufferATI(buffer);
 
     return Qnil;
@@ -7614,6 +7987,7 @@ static VALUE rogl_glPNTrianglesiATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     int param = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPNTrianglesiATI, "glPNTrianglesiATI");
     rogl_pfn_glPNTrianglesiATI(pname, param);
 
     return Qnil;
@@ -7624,6 +7998,7 @@ static VALUE rogl_glPNTrianglesfATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     float param = (float)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPNTrianglesfATI, "glPNTrianglesfATI");
     rogl_pfn_glPNTrianglesfATI(pname, param);
 
     return Qnil;
@@ -7636,6 +8011,7 @@ static VALUE rogl_glStencilOpSeparateATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int dpfail = (unsigned int)NUM2UINT(_arg3_);
     unsigned int dppass = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glStencilOpSeparateATI, "glStencilOpSeparateATI");
     rogl_pfn_glStencilOpSeparateATI(face, sfail, dpfail, dppass);
 
     return Qnil;
@@ -7648,6 +8024,7 @@ static VALUE rogl_glStencilFuncSeparateATI(VALUE _obj_, VALUE _arg1_, VALUE _arg
     int ref = (int)NUM2INT(_arg3_);
     unsigned int mask = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glStencilFuncSeparateATI, "glStencilFuncSeparateATI");
     rogl_pfn_glStencilFuncSeparateATI(frontfunc, backfunc, ref, mask);
 
     return Qnil;
@@ -7659,6 +8036,7 @@ static VALUE rogl_glNewObjectBufferATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     void* pointer = (void*)val2ptr(_arg2_);
     unsigned int usage = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNewObjectBufferATI, "glNewObjectBufferATI");
     unsigned int retval = rogl_pfn_glNewObjectBufferATI(size, pointer, usage);
 
     return UINT2NUM(retval);
@@ -7668,6 +8046,7 @@ static VALUE rogl_glIsObjectBufferATI(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsObjectBufferATI, "glIsObjectBufferATI");
     unsigned char retval = rogl_pfn_glIsObjectBufferATI(buffer);
 
     return UINT2NUM(retval);
@@ -7681,6 +8060,7 @@ static VALUE rogl_glUpdateObjectBufferATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     void* pointer = (void*)val2ptr(_arg4_);
     unsigned int preserve = (unsigned int)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUpdateObjectBufferATI, "glUpdateObjectBufferATI");
     rogl_pfn_glUpdateObjectBufferATI(buffer, offset, size, pointer, preserve);
 
     return Qnil;
@@ -7692,6 +8072,7 @@ static VALUE rogl_glGetObjectBufferfvATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetObjectBufferfvATI, "glGetObjectBufferfvATI");
     rogl_pfn_glGetObjectBufferfvATI(buffer, pname, params);
 
     return Qnil;
@@ -7703,6 +8084,7 @@ static VALUE rogl_glGetObjectBufferivATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetObjectBufferivATI, "glGetObjectBufferivATI");
     rogl_pfn_glGetObjectBufferivATI(buffer, pname, params);
 
     return Qnil;
@@ -7712,6 +8094,7 @@ static VALUE rogl_glFreeObjectBufferATI(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFreeObjectBufferATI, "glFreeObjectBufferATI");
     rogl_pfn_glFreeObjectBufferATI(buffer);
 
     return Qnil;
@@ -7726,6 +8109,7 @@ static VALUE rogl_glArrayObjectATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     unsigned int buffer = (unsigned int)NUM2UINT(_arg5_);
     unsigned int offset = (unsigned int)NUM2UINT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glArrayObjectATI, "glArrayObjectATI");
     rogl_pfn_glArrayObjectATI(array, size, type, stride, buffer, offset);
 
     return Qnil;
@@ -7737,6 +8121,7 @@ static VALUE rogl_glGetArrayObjectfvATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetArrayObjectfvATI, "glGetArrayObjectfvATI");
     rogl_pfn_glGetArrayObjectfvATI(array, pname, params);
 
     return Qnil;
@@ -7748,6 +8133,7 @@ static VALUE rogl_glGetArrayObjectivATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetArrayObjectivATI, "glGetArrayObjectivATI");
     rogl_pfn_glGetArrayObjectivATI(array, pname, params);
 
     return Qnil;
@@ -7761,6 +8147,7 @@ static VALUE rogl_glVariantArrayObjectATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int buffer = (unsigned int)NUM2UINT(_arg4_);
     unsigned int offset = (unsigned int)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVariantArrayObjectATI, "glVariantArrayObjectATI");
     rogl_pfn_glVariantArrayObjectATI(id, type, stride, buffer, offset);
 
     return Qnil;
@@ -7772,6 +8159,7 @@ static VALUE rogl_glGetVariantArrayObjectfvATI(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVariantArrayObjectfvATI, "glGetVariantArrayObjectfvATI");
     rogl_pfn_glGetVariantArrayObjectfvATI(id, pname, params);
 
     return Qnil;
@@ -7783,6 +8171,7 @@ static VALUE rogl_glGetVariantArrayObjectivATI(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVariantArrayObjectivATI, "glGetVariantArrayObjectivATI");
     rogl_pfn_glGetVariantArrayObjectivATI(id, pname, params);
 
     return Qnil;
@@ -7798,6 +8187,7 @@ static VALUE rogl_glVertexAttribArrayObjectATI(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int buffer = (unsigned int)NUM2UINT(_arg6_);
     unsigned int offset = (unsigned int)NUM2UINT(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribArrayObjectATI, "glVertexAttribArrayObjectATI");
     rogl_pfn_glVertexAttribArrayObjectATI(index, size, type, normalized, stride, buffer, offset);
 
     return Qnil;
@@ -7809,6 +8199,7 @@ static VALUE rogl_glGetVertexAttribArrayObjectfvATI(VALUE _obj_, VALUE _arg1_, V
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVertexAttribArrayObjectfvATI, "glGetVertexAttribArrayObjectfvATI");
     rogl_pfn_glGetVertexAttribArrayObjectfvATI(index, pname, params);
 
     return Qnil;
@@ -7820,6 +8211,7 @@ static VALUE rogl_glGetVertexAttribArrayObjectivATI(VALUE _obj_, VALUE _arg1_, V
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVertexAttribArrayObjectivATI, "glGetVertexAttribArrayObjectivATI");
     rogl_pfn_glGetVertexAttribArrayObjectivATI(index, pname, params);
 
     return Qnil;
@@ -7830,6 +8222,7 @@ static VALUE rogl_glVertexStream1sATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     short x = (short)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream1sATI, "glVertexStream1sATI");
     rogl_pfn_glVertexStream1sATI(stream, x);
 
     return Qnil;
@@ -7840,6 +8233,7 @@ static VALUE rogl_glVertexStream1svATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream1svATI, "glVertexStream1svATI");
     rogl_pfn_glVertexStream1svATI(stream, coords);
 
     return Qnil;
@@ -7850,6 +8244,7 @@ static VALUE rogl_glVertexStream1iATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     int x = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream1iATI, "glVertexStream1iATI");
     rogl_pfn_glVertexStream1iATI(stream, x);
 
     return Qnil;
@@ -7860,6 +8255,7 @@ static VALUE rogl_glVertexStream1ivATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream1ivATI, "glVertexStream1ivATI");
     rogl_pfn_glVertexStream1ivATI(stream, coords);
 
     return Qnil;
@@ -7870,6 +8266,7 @@ static VALUE rogl_glVertexStream1fATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     float x = (float)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream1fATI, "glVertexStream1fATI");
     rogl_pfn_glVertexStream1fATI(stream, x);
 
     return Qnil;
@@ -7880,6 +8277,7 @@ static VALUE rogl_glVertexStream1fvATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream1fvATI, "glVertexStream1fvATI");
     rogl_pfn_glVertexStream1fvATI(stream, coords);
 
     return Qnil;
@@ -7890,6 +8288,7 @@ static VALUE rogl_glVertexStream1dATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     double x = (double)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream1dATI, "glVertexStream1dATI");
     rogl_pfn_glVertexStream1dATI(stream, x);
 
     return Qnil;
@@ -7900,6 +8299,7 @@ static VALUE rogl_glVertexStream1dvATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream1dvATI, "glVertexStream1dvATI");
     rogl_pfn_glVertexStream1dvATI(stream, coords);
 
     return Qnil;
@@ -7911,6 +8311,7 @@ static VALUE rogl_glVertexStream2sATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     short x = (short)NUM2INT(_arg2_);
     short y = (short)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream2sATI, "glVertexStream2sATI");
     rogl_pfn_glVertexStream2sATI(stream, x, y);
 
     return Qnil;
@@ -7921,6 +8322,7 @@ static VALUE rogl_glVertexStream2svATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream2svATI, "glVertexStream2svATI");
     rogl_pfn_glVertexStream2svATI(stream, coords);
 
     return Qnil;
@@ -7932,6 +8334,7 @@ static VALUE rogl_glVertexStream2iATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     int x = (int)NUM2INT(_arg2_);
     int y = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream2iATI, "glVertexStream2iATI");
     rogl_pfn_glVertexStream2iATI(stream, x, y);
 
     return Qnil;
@@ -7942,6 +8345,7 @@ static VALUE rogl_glVertexStream2ivATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream2ivATI, "glVertexStream2ivATI");
     rogl_pfn_glVertexStream2ivATI(stream, coords);
 
     return Qnil;
@@ -7953,6 +8357,7 @@ static VALUE rogl_glVertexStream2fATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     float x = (float)NUM2DBL(_arg2_);
     float y = (float)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream2fATI, "glVertexStream2fATI");
     rogl_pfn_glVertexStream2fATI(stream, x, y);
 
     return Qnil;
@@ -7963,6 +8368,7 @@ static VALUE rogl_glVertexStream2fvATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream2fvATI, "glVertexStream2fvATI");
     rogl_pfn_glVertexStream2fvATI(stream, coords);
 
     return Qnil;
@@ -7974,6 +8380,7 @@ static VALUE rogl_glVertexStream2dATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     double x = (double)NUM2DBL(_arg2_);
     double y = (double)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream2dATI, "glVertexStream2dATI");
     rogl_pfn_glVertexStream2dATI(stream, x, y);
 
     return Qnil;
@@ -7984,6 +8391,7 @@ static VALUE rogl_glVertexStream2dvATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream2dvATI, "glVertexStream2dvATI");
     rogl_pfn_glVertexStream2dvATI(stream, coords);
 
     return Qnil;
@@ -7996,6 +8404,7 @@ static VALUE rogl_glVertexStream3sATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     short y = (short)NUM2INT(_arg3_);
     short z = (short)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream3sATI, "glVertexStream3sATI");
     rogl_pfn_glVertexStream3sATI(stream, x, y, z);
 
     return Qnil;
@@ -8006,6 +8415,7 @@ static VALUE rogl_glVertexStream3svATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream3svATI, "glVertexStream3svATI");
     rogl_pfn_glVertexStream3svATI(stream, coords);
 
     return Qnil;
@@ -8018,6 +8428,7 @@ static VALUE rogl_glVertexStream3iATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     int y = (int)NUM2INT(_arg3_);
     int z = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream3iATI, "glVertexStream3iATI");
     rogl_pfn_glVertexStream3iATI(stream, x, y, z);
 
     return Qnil;
@@ -8028,6 +8439,7 @@ static VALUE rogl_glVertexStream3ivATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream3ivATI, "glVertexStream3ivATI");
     rogl_pfn_glVertexStream3ivATI(stream, coords);
 
     return Qnil;
@@ -8040,6 +8452,7 @@ static VALUE rogl_glVertexStream3fATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     float y = (float)NUM2DBL(_arg3_);
     float z = (float)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream3fATI, "glVertexStream3fATI");
     rogl_pfn_glVertexStream3fATI(stream, x, y, z);
 
     return Qnil;
@@ -8050,6 +8463,7 @@ static VALUE rogl_glVertexStream3fvATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream3fvATI, "glVertexStream3fvATI");
     rogl_pfn_glVertexStream3fvATI(stream, coords);
 
     return Qnil;
@@ -8062,6 +8476,7 @@ static VALUE rogl_glVertexStream3dATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     double y = (double)NUM2DBL(_arg3_);
     double z = (double)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream3dATI, "glVertexStream3dATI");
     rogl_pfn_glVertexStream3dATI(stream, x, y, z);
 
     return Qnil;
@@ -8072,6 +8487,7 @@ static VALUE rogl_glVertexStream3dvATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream3dvATI, "glVertexStream3dvATI");
     rogl_pfn_glVertexStream3dvATI(stream, coords);
 
     return Qnil;
@@ -8085,6 +8501,7 @@ static VALUE rogl_glVertexStream4sATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     short z = (short)NUM2INT(_arg4_);
     short w = (short)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream4sATI, "glVertexStream4sATI");
     rogl_pfn_glVertexStream4sATI(stream, x, y, z, w);
 
     return Qnil;
@@ -8095,6 +8512,7 @@ static VALUE rogl_glVertexStream4svATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream4svATI, "glVertexStream4svATI");
     rogl_pfn_glVertexStream4svATI(stream, coords);
 
     return Qnil;
@@ -8108,6 +8526,7 @@ static VALUE rogl_glVertexStream4iATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     int z = (int)NUM2INT(_arg4_);
     int w = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream4iATI, "glVertexStream4iATI");
     rogl_pfn_glVertexStream4iATI(stream, x, y, z, w);
 
     return Qnil;
@@ -8118,6 +8537,7 @@ static VALUE rogl_glVertexStream4ivATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream4ivATI, "glVertexStream4ivATI");
     rogl_pfn_glVertexStream4ivATI(stream, coords);
 
     return Qnil;
@@ -8131,6 +8551,7 @@ static VALUE rogl_glVertexStream4fATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     float z = (float)NUM2DBL(_arg4_);
     float w = (float)NUM2DBL(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream4fATI, "glVertexStream4fATI");
     rogl_pfn_glVertexStream4fATI(stream, x, y, z, w);
 
     return Qnil;
@@ -8141,6 +8562,7 @@ static VALUE rogl_glVertexStream4fvATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream4fvATI, "glVertexStream4fvATI");
     rogl_pfn_glVertexStream4fvATI(stream, coords);
 
     return Qnil;
@@ -8154,6 +8576,7 @@ static VALUE rogl_glVertexStream4dATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     double z = (double)NUM2DBL(_arg4_);
     double w = (double)NUM2DBL(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream4dATI, "glVertexStream4dATI");
     rogl_pfn_glVertexStream4dATI(stream, x, y, z, w);
 
     return Qnil;
@@ -8164,6 +8587,7 @@ static VALUE rogl_glVertexStream4dvATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexStream4dvATI, "glVertexStream4dvATI");
     rogl_pfn_glVertexStream4dvATI(stream, coords);
 
     return Qnil;
@@ -8176,6 +8600,7 @@ static VALUE rogl_glNormalStream3bATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     char ny = (char)NUM2INT(_arg3_);
     char nz = (char)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNormalStream3bATI, "glNormalStream3bATI");
     rogl_pfn_glNormalStream3bATI(stream, nx, ny, nz);
 
     return Qnil;
@@ -8186,6 +8611,7 @@ static VALUE rogl_glNormalStream3bvATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNormalStream3bvATI, "glNormalStream3bvATI");
     rogl_pfn_glNormalStream3bvATI(stream, coords);
 
     return Qnil;
@@ -8198,6 +8624,7 @@ static VALUE rogl_glNormalStream3sATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     short ny = (short)NUM2INT(_arg3_);
     short nz = (short)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNormalStream3sATI, "glNormalStream3sATI");
     rogl_pfn_glNormalStream3sATI(stream, nx, ny, nz);
 
     return Qnil;
@@ -8208,6 +8635,7 @@ static VALUE rogl_glNormalStream3svATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNormalStream3svATI, "glNormalStream3svATI");
     rogl_pfn_glNormalStream3svATI(stream, coords);
 
     return Qnil;
@@ -8220,6 +8648,7 @@ static VALUE rogl_glNormalStream3iATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     int ny = (int)NUM2INT(_arg3_);
     int nz = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNormalStream3iATI, "glNormalStream3iATI");
     rogl_pfn_glNormalStream3iATI(stream, nx, ny, nz);
 
     return Qnil;
@@ -8230,6 +8659,7 @@ static VALUE rogl_glNormalStream3ivATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNormalStream3ivATI, "glNormalStream3ivATI");
     rogl_pfn_glNormalStream3ivATI(stream, coords);
 
     return Qnil;
@@ -8242,6 +8672,7 @@ static VALUE rogl_glNormalStream3fATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     float ny = (float)NUM2DBL(_arg3_);
     float nz = (float)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNormalStream3fATI, "glNormalStream3fATI");
     rogl_pfn_glNormalStream3fATI(stream, nx, ny, nz);
 
     return Qnil;
@@ -8252,6 +8683,7 @@ static VALUE rogl_glNormalStream3fvATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNormalStream3fvATI, "glNormalStream3fvATI");
     rogl_pfn_glNormalStream3fvATI(stream, coords);
 
     return Qnil;
@@ -8264,6 +8696,7 @@ static VALUE rogl_glNormalStream3dATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     double ny = (double)NUM2DBL(_arg3_);
     double nz = (double)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNormalStream3dATI, "glNormalStream3dATI");
     rogl_pfn_glNormalStream3dATI(stream, nx, ny, nz);
 
     return Qnil;
@@ -8274,6 +8707,7 @@ static VALUE rogl_glNormalStream3dvATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNormalStream3dvATI, "glNormalStream3dvATI");
     rogl_pfn_glNormalStream3dvATI(stream, coords);
 
     return Qnil;
@@ -8283,6 +8717,7 @@ static VALUE rogl_glClientActiveVertexStreamATI(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int stream = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glClientActiveVertexStreamATI, "glClientActiveVertexStreamATI");
     rogl_pfn_glClientActiveVertexStreamATI(stream);
 
     return Qnil;
@@ -8293,6 +8728,7 @@ static VALUE rogl_glVertexBlendEnviATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     int param = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexBlendEnviATI, "glVertexBlendEnviATI");
     rogl_pfn_glVertexBlendEnviATI(pname, param);
 
     return Qnil;
@@ -8303,6 +8739,7 @@ static VALUE rogl_glVertexBlendEnvfATI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     float param = (float)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexBlendEnvfATI, "glVertexBlendEnvfATI");
     rogl_pfn_glVertexBlendEnvfATI(pname, param);
 
     return Qnil;
@@ -8314,6 +8751,7 @@ static VALUE rogl_glUniformBufferEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     int location = (int)NUM2INT(_arg2_);
     unsigned int buffer = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniformBufferEXT, "glUniformBufferEXT");
     rogl_pfn_glUniformBufferEXT(program, location, buffer);
 
     return Qnil;
@@ -8324,6 +8762,7 @@ static VALUE rogl_glGetUniformBufferSizeEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int program = (unsigned int)NUM2UINT(_arg1_);
     int location = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetUniformBufferSizeEXT, "glGetUniformBufferSizeEXT");
     int retval = rogl_pfn_glGetUniformBufferSizeEXT(program, location);
 
     return INT2NUM(retval);
@@ -8334,6 +8773,7 @@ static VALUE rogl_glGetUniformOffsetEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int program = (unsigned int)NUM2UINT(_arg1_);
     int location = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetUniformOffsetEXT, "glGetUniformOffsetEXT");
     ptrdiff_t retval = rogl_pfn_glGetUniformOffsetEXT(program, location);
 
     return UINT2NUM(retval);
@@ -8346,6 +8786,7 @@ static VALUE rogl_glBlendColorEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     float blue = (float)NUM2DBL(_arg3_);
     float alpha = (float)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBlendColorEXT, "glBlendColorEXT");
     rogl_pfn_glBlendColorEXT(red, green, blue, alpha);
 
     return Qnil;
@@ -8356,6 +8797,7 @@ static VALUE rogl_glBlendEquationSeparateEXT(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int modeRGB = (unsigned int)NUM2UINT(_arg1_);
     unsigned int modeAlpha = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBlendEquationSeparateEXT, "glBlendEquationSeparateEXT");
     rogl_pfn_glBlendEquationSeparateEXT(modeRGB, modeAlpha);
 
     return Qnil;
@@ -8368,6 +8810,7 @@ static VALUE rogl_glBlendFuncSeparateEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int sfactorAlpha = (unsigned int)NUM2UINT(_arg3_);
     unsigned int dfactorAlpha = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBlendFuncSeparateEXT, "glBlendFuncSeparateEXT");
     rogl_pfn_glBlendFuncSeparateEXT(sfactorRGB, dfactorRGB, sfactorAlpha, dfactorAlpha);
 
     return Qnil;
@@ -8377,6 +8820,7 @@ static VALUE rogl_glBlendEquationEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBlendEquationEXT, "glBlendEquationEXT");
     rogl_pfn_glBlendEquationEXT(mode);
 
     return Qnil;
@@ -8391,6 +8835,7 @@ static VALUE rogl_glColorSubTableEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int type = (unsigned int)NUM2UINT(_arg5_);
     void* data = (void*)val2ptr(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColorSubTableEXT, "glColorSubTableEXT");
     rogl_pfn_glColorSubTableEXT(target, start, count, format, type, data);
 
     return Qnil;
@@ -8404,6 +8849,7 @@ static VALUE rogl_glCopyColorSubTableEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     int y = (int)NUM2INT(_arg4_);
     int width = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyColorSubTableEXT, "glCopyColorSubTableEXT");
     rogl_pfn_glCopyColorSubTableEXT(target, start, x, y, width);
 
     return Qnil;
@@ -8414,6 +8860,7 @@ static VALUE rogl_glLockArraysEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int first = (int)NUM2INT(_arg1_);
     int count = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glLockArraysEXT, "glLockArraysEXT");
     rogl_pfn_glLockArraysEXT(first, count);
 
     return Qnil;
@@ -8421,6 +8868,7 @@ static VALUE rogl_glLockArraysEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 
 static VALUE rogl_glUnlockArraysEXT(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glUnlockArraysEXT, "glUnlockArraysEXT");
     rogl_pfn_glUnlockArraysEXT();
 
     return Qnil;
@@ -8435,6 +8883,7 @@ static VALUE rogl_glConvolutionFilter1DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int type = (unsigned int)NUM2UINT(_arg5_);
     void* image = (void*)val2ptr(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glConvolutionFilter1DEXT, "glConvolutionFilter1DEXT");
     rogl_pfn_glConvolutionFilter1DEXT(target, internalformat, width, format, type, image);
 
     return Qnil;
@@ -8450,6 +8899,7 @@ static VALUE rogl_glConvolutionFilter2DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int type = (unsigned int)NUM2UINT(_arg6_);
     void* image = (void*)val2ptr(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glConvolutionFilter2DEXT, "glConvolutionFilter2DEXT");
     rogl_pfn_glConvolutionFilter2DEXT(target, internalformat, width, height, format, type, image);
 
     return Qnil;
@@ -8461,6 +8911,7 @@ static VALUE rogl_glConvolutionParameterfEXT(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     float params = (float)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glConvolutionParameterfEXT, "glConvolutionParameterfEXT");
     rogl_pfn_glConvolutionParameterfEXT(target, pname, params);
 
     return Qnil;
@@ -8472,6 +8923,7 @@ static VALUE rogl_glConvolutionParameterfvEXT(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glConvolutionParameterfvEXT, "glConvolutionParameterfvEXT");
     rogl_pfn_glConvolutionParameterfvEXT(target, pname, params);
 
     return Qnil;
@@ -8483,6 +8935,7 @@ static VALUE rogl_glConvolutionParameteriEXT(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     int params = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glConvolutionParameteriEXT, "glConvolutionParameteriEXT");
     rogl_pfn_glConvolutionParameteriEXT(target, pname, params);
 
     return Qnil;
@@ -8494,6 +8947,7 @@ static VALUE rogl_glConvolutionParameterivEXT(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glConvolutionParameterivEXT, "glConvolutionParameterivEXT");
     rogl_pfn_glConvolutionParameterivEXT(target, pname, params);
 
     return Qnil;
@@ -8507,6 +8961,7 @@ static VALUE rogl_glCopyConvolutionFilter1DEXT(VALUE _obj_, VALUE _arg1_, VALUE 
     int y = (int)NUM2INT(_arg4_);
     int width = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyConvolutionFilter1DEXT, "glCopyConvolutionFilter1DEXT");
     rogl_pfn_glCopyConvolutionFilter1DEXT(target, internalformat, x, y, width);
 
     return Qnil;
@@ -8521,6 +8976,7 @@ static VALUE rogl_glCopyConvolutionFilter2DEXT(VALUE _obj_, VALUE _arg1_, VALUE 
     int width = (int)NUM2INT(_arg5_);
     int height = (int)NUM2INT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyConvolutionFilter2DEXT, "glCopyConvolutionFilter2DEXT");
     rogl_pfn_glCopyConvolutionFilter2DEXT(target, internalformat, x, y, width, height);
 
     return Qnil;
@@ -8533,6 +8989,7 @@ static VALUE rogl_glGetConvolutionFilterEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int type = (unsigned int)NUM2UINT(_arg3_);
     void* image = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetConvolutionFilterEXT, "glGetConvolutionFilterEXT");
     rogl_pfn_glGetConvolutionFilterEXT(target, format, type, image);
 
     return Qnil;
@@ -8544,6 +9001,7 @@ static VALUE rogl_glGetConvolutionParameterfvEXT(VALUE _obj_, VALUE _arg1_, VALU
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetConvolutionParameterfvEXT, "glGetConvolutionParameterfvEXT");
     rogl_pfn_glGetConvolutionParameterfvEXT(target, pname, params);
 
     return Qnil;
@@ -8555,6 +9013,7 @@ static VALUE rogl_glGetConvolutionParameterivEXT(VALUE _obj_, VALUE _arg1_, VALU
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetConvolutionParameterivEXT, "glGetConvolutionParameterivEXT");
     rogl_pfn_glGetConvolutionParameterivEXT(target, pname, params);
 
     return Qnil;
@@ -8569,6 +9028,7 @@ static VALUE rogl_glGetSeparableFilterEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     void* column = (void*)val2ptr(_arg5_);
     void* span = (void*)val2ptr(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetSeparableFilterEXT, "glGetSeparableFilterEXT");
     rogl_pfn_glGetSeparableFilterEXT(target, format, type, row, column, span);
 
     return Qnil;
@@ -8585,6 +9045,7 @@ static VALUE rogl_glSeparableFilter2DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     void* row = (void*)val2ptr(_arg7_);
     void* column = (void*)val2ptr(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSeparableFilter2DEXT, "glSeparableFilter2DEXT");
     rogl_pfn_glSeparableFilter2DEXT(target, internalformat, width, height, format, type, row, column);
 
     return Qnil;
@@ -8596,6 +9057,7 @@ static VALUE rogl_glTangent3bEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     char ty = (char)NUM2INT(_arg2_);
     char tz = (char)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTangent3bEXT, "glTangent3bEXT");
     rogl_pfn_glTangent3bEXT(tx, ty, tz);
 
     return Qnil;
@@ -8605,6 +9067,7 @@ static VALUE rogl_glTangent3bvEXT(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTangent3bvEXT, "glTangent3bvEXT");
     rogl_pfn_glTangent3bvEXT(v);
 
     return Qnil;
@@ -8616,6 +9079,7 @@ static VALUE rogl_glTangent3dEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     double ty = (double)NUM2DBL(_arg2_);
     double tz = (double)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTangent3dEXT, "glTangent3dEXT");
     rogl_pfn_glTangent3dEXT(tx, ty, tz);
 
     return Qnil;
@@ -8625,6 +9089,7 @@ static VALUE rogl_glTangent3dvEXT(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTangent3dvEXT, "glTangent3dvEXT");
     rogl_pfn_glTangent3dvEXT(v);
 
     return Qnil;
@@ -8636,6 +9101,7 @@ static VALUE rogl_glTangent3fEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     float ty = (float)NUM2DBL(_arg2_);
     float tz = (float)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTangent3fEXT, "glTangent3fEXT");
     rogl_pfn_glTangent3fEXT(tx, ty, tz);
 
     return Qnil;
@@ -8645,6 +9111,7 @@ static VALUE rogl_glTangent3fvEXT(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTangent3fvEXT, "glTangent3fvEXT");
     rogl_pfn_glTangent3fvEXT(v);
 
     return Qnil;
@@ -8656,6 +9123,7 @@ static VALUE rogl_glTangent3iEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     int ty = (int)NUM2INT(_arg2_);
     int tz = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTangent3iEXT, "glTangent3iEXT");
     rogl_pfn_glTangent3iEXT(tx, ty, tz);
 
     return Qnil;
@@ -8665,6 +9133,7 @@ static VALUE rogl_glTangent3ivEXT(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTangent3ivEXT, "glTangent3ivEXT");
     rogl_pfn_glTangent3ivEXT(v);
 
     return Qnil;
@@ -8676,6 +9145,7 @@ static VALUE rogl_glTangent3sEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     short ty = (short)NUM2INT(_arg2_);
     short tz = (short)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTangent3sEXT, "glTangent3sEXT");
     rogl_pfn_glTangent3sEXT(tx, ty, tz);
 
     return Qnil;
@@ -8685,6 +9155,7 @@ static VALUE rogl_glTangent3svEXT(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTangent3svEXT, "glTangent3svEXT");
     rogl_pfn_glTangent3svEXT(v);
 
     return Qnil;
@@ -8696,6 +9167,7 @@ static VALUE rogl_glBinormal3bEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     char by = (char)NUM2INT(_arg2_);
     char bz = (char)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBinormal3bEXT, "glBinormal3bEXT");
     rogl_pfn_glBinormal3bEXT(bx, by, bz);
 
     return Qnil;
@@ -8705,6 +9177,7 @@ static VALUE rogl_glBinormal3bvEXT(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBinormal3bvEXT, "glBinormal3bvEXT");
     rogl_pfn_glBinormal3bvEXT(v);
 
     return Qnil;
@@ -8716,6 +9189,7 @@ static VALUE rogl_glBinormal3dEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     double by = (double)NUM2DBL(_arg2_);
     double bz = (double)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBinormal3dEXT, "glBinormal3dEXT");
     rogl_pfn_glBinormal3dEXT(bx, by, bz);
 
     return Qnil;
@@ -8725,6 +9199,7 @@ static VALUE rogl_glBinormal3dvEXT(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBinormal3dvEXT, "glBinormal3dvEXT");
     rogl_pfn_glBinormal3dvEXT(v);
 
     return Qnil;
@@ -8736,6 +9211,7 @@ static VALUE rogl_glBinormal3fEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     float by = (float)NUM2DBL(_arg2_);
     float bz = (float)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBinormal3fEXT, "glBinormal3fEXT");
     rogl_pfn_glBinormal3fEXT(bx, by, bz);
 
     return Qnil;
@@ -8745,6 +9221,7 @@ static VALUE rogl_glBinormal3fvEXT(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBinormal3fvEXT, "glBinormal3fvEXT");
     rogl_pfn_glBinormal3fvEXT(v);
 
     return Qnil;
@@ -8756,6 +9233,7 @@ static VALUE rogl_glBinormal3iEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     int by = (int)NUM2INT(_arg2_);
     int bz = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBinormal3iEXT, "glBinormal3iEXT");
     rogl_pfn_glBinormal3iEXT(bx, by, bz);
 
     return Qnil;
@@ -8765,6 +9243,7 @@ static VALUE rogl_glBinormal3ivEXT(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBinormal3ivEXT, "glBinormal3ivEXT");
     rogl_pfn_glBinormal3ivEXT(v);
 
     return Qnil;
@@ -8776,6 +9255,7 @@ static VALUE rogl_glBinormal3sEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     short by = (short)NUM2INT(_arg2_);
     short bz = (short)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBinormal3sEXT, "glBinormal3sEXT");
     rogl_pfn_glBinormal3sEXT(bx, by, bz);
 
     return Qnil;
@@ -8785,6 +9265,7 @@ static VALUE rogl_glBinormal3svEXT(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBinormal3svEXT, "glBinormal3svEXT");
     rogl_pfn_glBinormal3svEXT(v);
 
     return Qnil;
@@ -8796,6 +9277,7 @@ static VALUE rogl_glTangentPointerEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     int stride = (int)NUM2INT(_arg2_);
     void* pointer = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTangentPointerEXT, "glTangentPointerEXT");
     rogl_pfn_glTangentPointerEXT(type, stride, pointer);
 
     return Qnil;
@@ -8807,6 +9289,7 @@ static VALUE rogl_glBinormalPointerEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int stride = (int)NUM2INT(_arg2_);
     void* pointer = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBinormalPointerEXT, "glBinormalPointerEXT");
     rogl_pfn_glBinormalPointerEXT(type, stride, pointer);
 
     return Qnil;
@@ -8822,6 +9305,7 @@ static VALUE rogl_glCopyTexImage1DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     int width = (int)NUM2INT(_arg6_);
     int border = (int)NUM2INT(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyTexImage1DEXT, "glCopyTexImage1DEXT");
     rogl_pfn_glCopyTexImage1DEXT(target, level, internalformat, x, y, width, border);
 
     return Qnil;
@@ -8838,6 +9322,7 @@ static VALUE rogl_glCopyTexImage2DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     int height = (int)NUM2INT(_arg7_);
     int border = (int)NUM2INT(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyTexImage2DEXT, "glCopyTexImage2DEXT");
     rogl_pfn_glCopyTexImage2DEXT(target, level, internalformat, x, y, width, height, border);
 
     return Qnil;
@@ -8852,6 +9337,7 @@ static VALUE rogl_glCopyTexSubImage1DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     int y = (int)NUM2INT(_arg5_);
     int width = (int)NUM2INT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyTexSubImage1DEXT, "glCopyTexSubImage1DEXT");
     rogl_pfn_glCopyTexSubImage1DEXT(target, level, xoffset, x, y, width);
 
     return Qnil;
@@ -8868,6 +9354,7 @@ static VALUE rogl_glCopyTexSubImage2DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     int width = (int)NUM2INT(_arg7_);
     int height = (int)NUM2INT(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyTexSubImage2DEXT, "glCopyTexSubImage2DEXT");
     rogl_pfn_glCopyTexSubImage2DEXT(target, level, xoffset, yoffset, x, y, width, height);
 
     return Qnil;
@@ -8885,6 +9372,7 @@ static VALUE rogl_glCopyTexSubImage3DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     int width = (int)NUM2INT(_arg8_);
     int height = (int)NUM2INT(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyTexSubImage3DEXT, "glCopyTexSubImage3DEXT");
     rogl_pfn_glCopyTexSubImage3DEXT(target, level, xoffset, yoffset, zoffset, x, y, width, height);
 
     return Qnil;
@@ -8895,6 +9383,7 @@ static VALUE rogl_glCullParameterdvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* params = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCullParameterdvEXT, "glCullParameterdvEXT");
     rogl_pfn_glCullParameterdvEXT(pname, params);
 
     return Qnil;
@@ -8905,6 +9394,7 @@ static VALUE rogl_glCullParameterfvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* params = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCullParameterfvEXT, "glCullParameterfvEXT");
     rogl_pfn_glCullParameterfvEXT(pname, params);
 
     return Qnil;
@@ -8917,6 +9407,7 @@ static VALUE rogl_glLabelObjectEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     int length = (int)NUM2INT(_arg3_);
     void* label = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glLabelObjectEXT, "glLabelObjectEXT");
     rogl_pfn_glLabelObjectEXT(type, object, length, label);
 
     return Qnil;
@@ -8930,6 +9421,7 @@ static VALUE rogl_glGetObjectLabelEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     void* length = (void*)val2ptr(_arg4_);
     void* label = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetObjectLabelEXT, "glGetObjectLabelEXT");
     rogl_pfn_glGetObjectLabelEXT(type, object, bufSize, length, label);
 
     return Qnil;
@@ -8940,6 +9432,7 @@ static VALUE rogl_glInsertEventMarkerEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     int length = (int)NUM2INT(_arg1_);
     void* marker = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glInsertEventMarkerEXT, "glInsertEventMarkerEXT");
     rogl_pfn_glInsertEventMarkerEXT(length, marker);
 
     return Qnil;
@@ -8950,6 +9443,7 @@ static VALUE rogl_glPushGroupMarkerEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int length = (int)NUM2INT(_arg1_);
     void* marker = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPushGroupMarkerEXT, "glPushGroupMarkerEXT");
     rogl_pfn_glPushGroupMarkerEXT(length, marker);
 
     return Qnil;
@@ -8957,6 +9451,7 @@ static VALUE rogl_glPushGroupMarkerEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 
 static VALUE rogl_glPopGroupMarkerEXT(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glPopGroupMarkerEXT, "glPopGroupMarkerEXT");
     rogl_pfn_glPopGroupMarkerEXT();
 
     return Qnil;
@@ -8967,6 +9462,7 @@ static VALUE rogl_glDepthBoundsEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     double zmin = (double)NUM2DBL(_arg1_);
     double zmax = (double)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDepthBoundsEXT, "glDepthBoundsEXT");
     rogl_pfn_glDepthBoundsEXT(zmin, zmax);
 
     return Qnil;
@@ -8977,6 +9473,7 @@ static VALUE rogl_glMatrixLoadfEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
     void* m = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixLoadfEXT, "glMatrixLoadfEXT");
     rogl_pfn_glMatrixLoadfEXT(mode, m);
 
     return Qnil;
@@ -8987,6 +9484,7 @@ static VALUE rogl_glMatrixLoaddEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
     void* m = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixLoaddEXT, "glMatrixLoaddEXT");
     rogl_pfn_glMatrixLoaddEXT(mode, m);
 
     return Qnil;
@@ -8997,6 +9495,7 @@ static VALUE rogl_glMatrixMultfEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
     void* m = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixMultfEXT, "glMatrixMultfEXT");
     rogl_pfn_glMatrixMultfEXT(mode, m);
 
     return Qnil;
@@ -9007,6 +9506,7 @@ static VALUE rogl_glMatrixMultdEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
     void* m = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixMultdEXT, "glMatrixMultdEXT");
     rogl_pfn_glMatrixMultdEXT(mode, m);
 
     return Qnil;
@@ -9016,6 +9516,7 @@ static VALUE rogl_glMatrixLoadIdentityEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixLoadIdentityEXT, "glMatrixLoadIdentityEXT");
     rogl_pfn_glMatrixLoadIdentityEXT(mode);
 
     return Qnil;
@@ -9029,6 +9530,7 @@ static VALUE rogl_glMatrixRotatefEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     float y = (float)NUM2DBL(_arg4_);
     float z = (float)NUM2DBL(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixRotatefEXT, "glMatrixRotatefEXT");
     rogl_pfn_glMatrixRotatefEXT(mode, angle, x, y, z);
 
     return Qnil;
@@ -9042,6 +9544,7 @@ static VALUE rogl_glMatrixRotatedEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     double y = (double)NUM2DBL(_arg4_);
     double z = (double)NUM2DBL(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixRotatedEXT, "glMatrixRotatedEXT");
     rogl_pfn_glMatrixRotatedEXT(mode, angle, x, y, z);
 
     return Qnil;
@@ -9054,6 +9557,7 @@ static VALUE rogl_glMatrixScalefEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     float y = (float)NUM2DBL(_arg3_);
     float z = (float)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixScalefEXT, "glMatrixScalefEXT");
     rogl_pfn_glMatrixScalefEXT(mode, x, y, z);
 
     return Qnil;
@@ -9066,6 +9570,7 @@ static VALUE rogl_glMatrixScaledEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     double y = (double)NUM2DBL(_arg3_);
     double z = (double)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixScaledEXT, "glMatrixScaledEXT");
     rogl_pfn_glMatrixScaledEXT(mode, x, y, z);
 
     return Qnil;
@@ -9078,6 +9583,7 @@ static VALUE rogl_glMatrixTranslatefEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     float y = (float)NUM2DBL(_arg3_);
     float z = (float)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixTranslatefEXT, "glMatrixTranslatefEXT");
     rogl_pfn_glMatrixTranslatefEXT(mode, x, y, z);
 
     return Qnil;
@@ -9090,6 +9596,7 @@ static VALUE rogl_glMatrixTranslatedEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     double y = (double)NUM2DBL(_arg3_);
     double z = (double)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixTranslatedEXT, "glMatrixTranslatedEXT");
     rogl_pfn_glMatrixTranslatedEXT(mode, x, y, z);
 
     return Qnil;
@@ -9105,6 +9612,7 @@ static VALUE rogl_glMatrixFrustumEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     double zNear = (double)NUM2DBL(_arg6_);
     double zFar = (double)NUM2DBL(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixFrustumEXT, "glMatrixFrustumEXT");
     rogl_pfn_glMatrixFrustumEXT(mode, left, right, bottom, top, zNear, zFar);
 
     return Qnil;
@@ -9120,6 +9628,7 @@ static VALUE rogl_glMatrixOrthoEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     double zNear = (double)NUM2DBL(_arg6_);
     double zFar = (double)NUM2DBL(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixOrthoEXT, "glMatrixOrthoEXT");
     rogl_pfn_glMatrixOrthoEXT(mode, left, right, bottom, top, zNear, zFar);
 
     return Qnil;
@@ -9129,6 +9638,7 @@ static VALUE rogl_glMatrixPopEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixPopEXT, "glMatrixPopEXT");
     rogl_pfn_glMatrixPopEXT(mode);
 
     return Qnil;
@@ -9138,6 +9648,7 @@ static VALUE rogl_glMatrixPushEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixPushEXT, "glMatrixPushEXT");
     rogl_pfn_glMatrixPushEXT(mode);
 
     return Qnil;
@@ -9147,6 +9658,7 @@ static VALUE rogl_glClientAttribDefaultEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int mask = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glClientAttribDefaultEXT, "glClientAttribDefaultEXT");
     rogl_pfn_glClientAttribDefaultEXT(mask);
 
     return Qnil;
@@ -9156,6 +9668,7 @@ static VALUE rogl_glPushClientAttribDefaultEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int mask = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPushClientAttribDefaultEXT, "glPushClientAttribDefaultEXT");
     rogl_pfn_glPushClientAttribDefaultEXT(mask);
 
     return Qnil;
@@ -9168,6 +9681,7 @@ static VALUE rogl_glTextureParameterfEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     float param = (float)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureParameterfEXT, "glTextureParameterfEXT");
     rogl_pfn_glTextureParameterfEXT(texture, target, pname, param);
 
     return Qnil;
@@ -9180,6 +9694,7 @@ static VALUE rogl_glTextureParameterfvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureParameterfvEXT, "glTextureParameterfvEXT");
     rogl_pfn_glTextureParameterfvEXT(texture, target, pname, params);
 
     return Qnil;
@@ -9192,6 +9707,7 @@ static VALUE rogl_glTextureParameteriEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     int param = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureParameteriEXT, "glTextureParameteriEXT");
     rogl_pfn_glTextureParameteriEXT(texture, target, pname, param);
 
     return Qnil;
@@ -9204,6 +9720,7 @@ static VALUE rogl_glTextureParameterivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureParameterivEXT, "glTextureParameterivEXT");
     rogl_pfn_glTextureParameterivEXT(texture, target, pname, params);
 
     return Qnil;
@@ -9221,6 +9738,7 @@ static VALUE rogl_glTextureImage1DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     unsigned int type = (unsigned int)NUM2UINT(_arg8_);
     void* pixels = (void*)val2ptr(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureImage1DEXT, "glTextureImage1DEXT");
     rogl_pfn_glTextureImage1DEXT(texture, target, level, internalformat, width, border, format, type, pixels);
 
     return Qnil;
@@ -9239,6 +9757,7 @@ static VALUE rogl_glTextureImage2DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     unsigned int type = (unsigned int)NUM2UINT(_arg9_);
     void* pixels = (void*)val2ptr(_arg10_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureImage2DEXT, "glTextureImage2DEXT");
     rogl_pfn_glTextureImage2DEXT(texture, target, level, internalformat, width, height, border, format, type, pixels);
 
     return Qnil;
@@ -9255,6 +9774,7 @@ static VALUE rogl_glTextureSubImage1DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int type = (unsigned int)NUM2UINT(_arg7_);
     void* pixels = (void*)val2ptr(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureSubImage1DEXT, "glTextureSubImage1DEXT");
     rogl_pfn_glTextureSubImage1DEXT(texture, target, level, xoffset, width, format, type, pixels);
 
     return Qnil;
@@ -9273,6 +9793,7 @@ static VALUE rogl_glTextureSubImage2DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int type = (unsigned int)NUM2UINT(_arg9_);
     void* pixels = (void*)val2ptr(_arg10_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureSubImage2DEXT, "glTextureSubImage2DEXT");
     rogl_pfn_glTextureSubImage2DEXT(texture, target, level, xoffset, yoffset, width, height, format, type, pixels);
 
     return Qnil;
@@ -9289,6 +9810,7 @@ static VALUE rogl_glCopyTextureImage1DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     int width = (int)NUM2INT(_arg7_);
     int border = (int)NUM2INT(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyTextureImage1DEXT, "glCopyTextureImage1DEXT");
     rogl_pfn_glCopyTextureImage1DEXT(texture, target, level, internalformat, x, y, width, border);
 
     return Qnil;
@@ -9306,6 +9828,7 @@ static VALUE rogl_glCopyTextureImage2DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     int height = (int)NUM2INT(_arg8_);
     int border = (int)NUM2INT(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyTextureImage2DEXT, "glCopyTextureImage2DEXT");
     rogl_pfn_glCopyTextureImage2DEXT(texture, target, level, internalformat, x, y, width, height, border);
 
     return Qnil;
@@ -9321,6 +9844,7 @@ static VALUE rogl_glCopyTextureSubImage1DEXT(VALUE _obj_, VALUE _arg1_, VALUE _a
     int y = (int)NUM2INT(_arg6_);
     int width = (int)NUM2INT(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyTextureSubImage1DEXT, "glCopyTextureSubImage1DEXT");
     rogl_pfn_glCopyTextureSubImage1DEXT(texture, target, level, xoffset, x, y, width);
 
     return Qnil;
@@ -9338,6 +9862,7 @@ static VALUE rogl_glCopyTextureSubImage2DEXT(VALUE _obj_, VALUE _arg1_, VALUE _a
     int width = (int)NUM2INT(_arg8_);
     int height = (int)NUM2INT(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyTextureSubImage2DEXT, "glCopyTextureSubImage2DEXT");
     rogl_pfn_glCopyTextureSubImage2DEXT(texture, target, level, xoffset, yoffset, x, y, width, height);
 
     return Qnil;
@@ -9352,6 +9877,7 @@ static VALUE rogl_glGetTextureImageEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     unsigned int type = (unsigned int)NUM2UINT(_arg5_);
     void* pixels = (void*)val2ptr(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTextureImageEXT, "glGetTextureImageEXT");
     rogl_pfn_glGetTextureImageEXT(texture, target, level, format, type, pixels);
 
     return Qnil;
@@ -9364,6 +9890,7 @@ static VALUE rogl_glGetTextureParameterfvEXT(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTextureParameterfvEXT, "glGetTextureParameterfvEXT");
     rogl_pfn_glGetTextureParameterfvEXT(texture, target, pname, params);
 
     return Qnil;
@@ -9376,6 +9903,7 @@ static VALUE rogl_glGetTextureParameterivEXT(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTextureParameterivEXT, "glGetTextureParameterivEXT");
     rogl_pfn_glGetTextureParameterivEXT(texture, target, pname, params);
 
     return Qnil;
@@ -9389,6 +9917,7 @@ static VALUE rogl_glGetTextureLevelParameterfvEXT(VALUE _obj_, VALUE _arg1_, VAL
     unsigned int pname = (unsigned int)NUM2UINT(_arg4_);
     void* params = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTextureLevelParameterfvEXT, "glGetTextureLevelParameterfvEXT");
     rogl_pfn_glGetTextureLevelParameterfvEXT(texture, target, level, pname, params);
 
     return Qnil;
@@ -9402,6 +9931,7 @@ static VALUE rogl_glGetTextureLevelParameterivEXT(VALUE _obj_, VALUE _arg1_, VAL
     unsigned int pname = (unsigned int)NUM2UINT(_arg4_);
     void* params = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTextureLevelParameterivEXT, "glGetTextureLevelParameterivEXT");
     rogl_pfn_glGetTextureLevelParameterivEXT(texture, target, level, pname, params);
 
     return Qnil;
@@ -9421,6 +9951,7 @@ static VALUE rogl_glTextureImage3DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     unsigned int type = (unsigned int)NUM2UINT(_arg10_);
     void* pixels = (void*)val2ptr(_arg11_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureImage3DEXT, "glTextureImage3DEXT");
     rogl_pfn_glTextureImage3DEXT(texture, target, level, internalformat, width, height, depth, border, format, type, pixels);
 
     return Qnil;
@@ -9441,6 +9972,7 @@ static VALUE rogl_glTextureSubImage3DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int type = (unsigned int)NUM2UINT(_arg11_);
     void* pixels = (void*)val2ptr(_arg12_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureSubImage3DEXT, "glTextureSubImage3DEXT");
     rogl_pfn_glTextureSubImage3DEXT(texture, target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels);
 
     return Qnil;
@@ -9459,6 +9991,7 @@ static VALUE rogl_glCopyTextureSubImage3DEXT(VALUE _obj_, VALUE _arg1_, VALUE _a
     int width = (int)NUM2INT(_arg9_);
     int height = (int)NUM2INT(_arg10_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyTextureSubImage3DEXT, "glCopyTextureSubImage3DEXT");
     rogl_pfn_glCopyTextureSubImage3DEXT(texture, target, level, xoffset, yoffset, zoffset, x, y, width, height);
 
     return Qnil;
@@ -9470,6 +10003,7 @@ static VALUE rogl_glBindMultiTextureEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int target = (unsigned int)NUM2UINT(_arg2_);
     unsigned int texture = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindMultiTextureEXT, "glBindMultiTextureEXT");
     rogl_pfn_glBindMultiTextureEXT(texunit, target, texture);
 
     return Qnil;
@@ -9483,6 +10017,7 @@ static VALUE rogl_glMultiTexCoordPointerEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
     int stride = (int)NUM2INT(_arg4_);
     void* pointer = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoordPointerEXT, "glMultiTexCoordPointerEXT");
     rogl_pfn_glMultiTexCoordPointerEXT(texunit, size, type, stride, pointer);
 
     return Qnil;
@@ -9495,6 +10030,7 @@ static VALUE rogl_glMultiTexEnvfEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     float param = (float)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexEnvfEXT, "glMultiTexEnvfEXT");
     rogl_pfn_glMultiTexEnvfEXT(texunit, target, pname, param);
 
     return Qnil;
@@ -9507,6 +10043,7 @@ static VALUE rogl_glMultiTexEnvfvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexEnvfvEXT, "glMultiTexEnvfvEXT");
     rogl_pfn_glMultiTexEnvfvEXT(texunit, target, pname, params);
 
     return Qnil;
@@ -9519,6 +10056,7 @@ static VALUE rogl_glMultiTexEnviEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     int param = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexEnviEXT, "glMultiTexEnviEXT");
     rogl_pfn_glMultiTexEnviEXT(texunit, target, pname, param);
 
     return Qnil;
@@ -9531,6 +10069,7 @@ static VALUE rogl_glMultiTexEnvivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexEnvivEXT, "glMultiTexEnvivEXT");
     rogl_pfn_glMultiTexEnvivEXT(texunit, target, pname, params);
 
     return Qnil;
@@ -9543,6 +10082,7 @@ static VALUE rogl_glMultiTexGendEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     double param = (double)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexGendEXT, "glMultiTexGendEXT");
     rogl_pfn_glMultiTexGendEXT(texunit, coord, pname, param);
 
     return Qnil;
@@ -9555,6 +10095,7 @@ static VALUE rogl_glMultiTexGendvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexGendvEXT, "glMultiTexGendvEXT");
     rogl_pfn_glMultiTexGendvEXT(texunit, coord, pname, params);
 
     return Qnil;
@@ -9567,6 +10108,7 @@ static VALUE rogl_glMultiTexGenfEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     float param = (float)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexGenfEXT, "glMultiTexGenfEXT");
     rogl_pfn_glMultiTexGenfEXT(texunit, coord, pname, param);
 
     return Qnil;
@@ -9579,6 +10121,7 @@ static VALUE rogl_glMultiTexGenfvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexGenfvEXT, "glMultiTexGenfvEXT");
     rogl_pfn_glMultiTexGenfvEXT(texunit, coord, pname, params);
 
     return Qnil;
@@ -9591,6 +10134,7 @@ static VALUE rogl_glMultiTexGeniEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     int param = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexGeniEXT, "glMultiTexGeniEXT");
     rogl_pfn_glMultiTexGeniEXT(texunit, coord, pname, param);
 
     return Qnil;
@@ -9603,6 +10147,7 @@ static VALUE rogl_glMultiTexGenivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexGenivEXT, "glMultiTexGenivEXT");
     rogl_pfn_glMultiTexGenivEXT(texunit, coord, pname, params);
 
     return Qnil;
@@ -9615,6 +10160,7 @@ static VALUE rogl_glGetMultiTexEnvfvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMultiTexEnvfvEXT, "glGetMultiTexEnvfvEXT");
     rogl_pfn_glGetMultiTexEnvfvEXT(texunit, target, pname, params);
 
     return Qnil;
@@ -9627,6 +10173,7 @@ static VALUE rogl_glGetMultiTexEnvivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMultiTexEnvivEXT, "glGetMultiTexEnvivEXT");
     rogl_pfn_glGetMultiTexEnvivEXT(texunit, target, pname, params);
 
     return Qnil;
@@ -9639,6 +10186,7 @@ static VALUE rogl_glGetMultiTexGendvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMultiTexGendvEXT, "glGetMultiTexGendvEXT");
     rogl_pfn_glGetMultiTexGendvEXT(texunit, coord, pname, params);
 
     return Qnil;
@@ -9651,6 +10199,7 @@ static VALUE rogl_glGetMultiTexGenfvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMultiTexGenfvEXT, "glGetMultiTexGenfvEXT");
     rogl_pfn_glGetMultiTexGenfvEXT(texunit, coord, pname, params);
 
     return Qnil;
@@ -9663,6 +10212,7 @@ static VALUE rogl_glGetMultiTexGenivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMultiTexGenivEXT, "glGetMultiTexGenivEXT");
     rogl_pfn_glGetMultiTexGenivEXT(texunit, coord, pname, params);
 
     return Qnil;
@@ -9675,6 +10225,7 @@ static VALUE rogl_glMultiTexParameteriEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     int param = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexParameteriEXT, "glMultiTexParameteriEXT");
     rogl_pfn_glMultiTexParameteriEXT(texunit, target, pname, param);
 
     return Qnil;
@@ -9687,6 +10238,7 @@ static VALUE rogl_glMultiTexParameterivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexParameterivEXT, "glMultiTexParameterivEXT");
     rogl_pfn_glMultiTexParameterivEXT(texunit, target, pname, params);
 
     return Qnil;
@@ -9699,6 +10251,7 @@ static VALUE rogl_glMultiTexParameterfEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     float param = (float)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexParameterfEXT, "glMultiTexParameterfEXT");
     rogl_pfn_glMultiTexParameterfEXT(texunit, target, pname, param);
 
     return Qnil;
@@ -9711,6 +10264,7 @@ static VALUE rogl_glMultiTexParameterfvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexParameterfvEXT, "glMultiTexParameterfvEXT");
     rogl_pfn_glMultiTexParameterfvEXT(texunit, target, pname, params);
 
     return Qnil;
@@ -9728,6 +10282,7 @@ static VALUE rogl_glMultiTexImage1DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     unsigned int type = (unsigned int)NUM2UINT(_arg8_);
     void* pixels = (void*)val2ptr(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexImage1DEXT, "glMultiTexImage1DEXT");
     rogl_pfn_glMultiTexImage1DEXT(texunit, target, level, internalformat, width, border, format, type, pixels);
 
     return Qnil;
@@ -9746,6 +10301,7 @@ static VALUE rogl_glMultiTexImage2DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     unsigned int type = (unsigned int)NUM2UINT(_arg9_);
     void* pixels = (void*)val2ptr(_arg10_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexImage2DEXT, "glMultiTexImage2DEXT");
     rogl_pfn_glMultiTexImage2DEXT(texunit, target, level, internalformat, width, height, border, format, type, pixels);
 
     return Qnil;
@@ -9762,6 +10318,7 @@ static VALUE rogl_glMultiTexSubImage1DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int type = (unsigned int)NUM2UINT(_arg7_);
     void* pixels = (void*)val2ptr(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexSubImage1DEXT, "glMultiTexSubImage1DEXT");
     rogl_pfn_glMultiTexSubImage1DEXT(texunit, target, level, xoffset, width, format, type, pixels);
 
     return Qnil;
@@ -9780,6 +10337,7 @@ static VALUE rogl_glMultiTexSubImage2DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int type = (unsigned int)NUM2UINT(_arg9_);
     void* pixels = (void*)val2ptr(_arg10_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexSubImage2DEXT, "glMultiTexSubImage2DEXT");
     rogl_pfn_glMultiTexSubImage2DEXT(texunit, target, level, xoffset, yoffset, width, height, format, type, pixels);
 
     return Qnil;
@@ -9796,6 +10354,7 @@ static VALUE rogl_glCopyMultiTexImage1DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     int width = (int)NUM2INT(_arg7_);
     int border = (int)NUM2INT(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyMultiTexImage1DEXT, "glCopyMultiTexImage1DEXT");
     rogl_pfn_glCopyMultiTexImage1DEXT(texunit, target, level, internalformat, x, y, width, border);
 
     return Qnil;
@@ -9813,6 +10372,7 @@ static VALUE rogl_glCopyMultiTexImage2DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     int height = (int)NUM2INT(_arg8_);
     int border = (int)NUM2INT(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyMultiTexImage2DEXT, "glCopyMultiTexImage2DEXT");
     rogl_pfn_glCopyMultiTexImage2DEXT(texunit, target, level, internalformat, x, y, width, height, border);
 
     return Qnil;
@@ -9828,6 +10388,7 @@ static VALUE rogl_glCopyMultiTexSubImage1DEXT(VALUE _obj_, VALUE _arg1_, VALUE _
     int y = (int)NUM2INT(_arg6_);
     int width = (int)NUM2INT(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyMultiTexSubImage1DEXT, "glCopyMultiTexSubImage1DEXT");
     rogl_pfn_glCopyMultiTexSubImage1DEXT(texunit, target, level, xoffset, x, y, width);
 
     return Qnil;
@@ -9845,6 +10406,7 @@ static VALUE rogl_glCopyMultiTexSubImage2DEXT(VALUE _obj_, VALUE _arg1_, VALUE _
     int width = (int)NUM2INT(_arg8_);
     int height = (int)NUM2INT(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyMultiTexSubImage2DEXT, "glCopyMultiTexSubImage2DEXT");
     rogl_pfn_glCopyMultiTexSubImage2DEXT(texunit, target, level, xoffset, yoffset, x, y, width, height);
 
     return Qnil;
@@ -9859,6 +10421,7 @@ static VALUE rogl_glGetMultiTexImageEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int type = (unsigned int)NUM2UINT(_arg5_);
     void* pixels = (void*)val2ptr(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMultiTexImageEXT, "glGetMultiTexImageEXT");
     rogl_pfn_glGetMultiTexImageEXT(texunit, target, level, format, type, pixels);
 
     return Qnil;
@@ -9871,6 +10434,7 @@ static VALUE rogl_glGetMultiTexParameterfvEXT(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMultiTexParameterfvEXT, "glGetMultiTexParameterfvEXT");
     rogl_pfn_glGetMultiTexParameterfvEXT(texunit, target, pname, params);
 
     return Qnil;
@@ -9883,6 +10447,7 @@ static VALUE rogl_glGetMultiTexParameterivEXT(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMultiTexParameterivEXT, "glGetMultiTexParameterivEXT");
     rogl_pfn_glGetMultiTexParameterivEXT(texunit, target, pname, params);
 
     return Qnil;
@@ -9896,6 +10461,7 @@ static VALUE rogl_glGetMultiTexLevelParameterfvEXT(VALUE _obj_, VALUE _arg1_, VA
     unsigned int pname = (unsigned int)NUM2UINT(_arg4_);
     void* params = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMultiTexLevelParameterfvEXT, "glGetMultiTexLevelParameterfvEXT");
     rogl_pfn_glGetMultiTexLevelParameterfvEXT(texunit, target, level, pname, params);
 
     return Qnil;
@@ -9909,6 +10475,7 @@ static VALUE rogl_glGetMultiTexLevelParameterivEXT(VALUE _obj_, VALUE _arg1_, VA
     unsigned int pname = (unsigned int)NUM2UINT(_arg4_);
     void* params = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMultiTexLevelParameterivEXT, "glGetMultiTexLevelParameterivEXT");
     rogl_pfn_glGetMultiTexLevelParameterivEXT(texunit, target, level, pname, params);
 
     return Qnil;
@@ -9928,6 +10495,7 @@ static VALUE rogl_glMultiTexImage3DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     unsigned int type = (unsigned int)NUM2UINT(_arg10_);
     void* pixels = (void*)val2ptr(_arg11_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexImage3DEXT, "glMultiTexImage3DEXT");
     rogl_pfn_glMultiTexImage3DEXT(texunit, target, level, internalformat, width, height, depth, border, format, type, pixels);
 
     return Qnil;
@@ -9948,6 +10516,7 @@ static VALUE rogl_glMultiTexSubImage3DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int type = (unsigned int)NUM2UINT(_arg11_);
     void* pixels = (void*)val2ptr(_arg12_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexSubImage3DEXT, "glMultiTexSubImage3DEXT");
     rogl_pfn_glMultiTexSubImage3DEXT(texunit, target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels);
 
     return Qnil;
@@ -9966,6 +10535,7 @@ static VALUE rogl_glCopyMultiTexSubImage3DEXT(VALUE _obj_, VALUE _arg1_, VALUE _
     int width = (int)NUM2INT(_arg9_);
     int height = (int)NUM2INT(_arg10_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyMultiTexSubImage3DEXT, "glCopyMultiTexSubImage3DEXT");
     rogl_pfn_glCopyMultiTexSubImage3DEXT(texunit, target, level, xoffset, yoffset, zoffset, x, y, width, height);
 
     return Qnil;
@@ -9976,6 +10546,7 @@ static VALUE rogl_glEnableClientStateIndexedEXT(VALUE _obj_, VALUE _arg1_, VALUE
     unsigned int array = (unsigned int)NUM2UINT(_arg1_);
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glEnableClientStateIndexedEXT, "glEnableClientStateIndexedEXT");
     rogl_pfn_glEnableClientStateIndexedEXT(array, index);
 
     return Qnil;
@@ -9986,6 +10557,7 @@ static VALUE rogl_glDisableClientStateIndexedEXT(VALUE _obj_, VALUE _arg1_, VALU
     unsigned int array = (unsigned int)NUM2UINT(_arg1_);
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDisableClientStateIndexedEXT, "glDisableClientStateIndexedEXT");
     rogl_pfn_glDisableClientStateIndexedEXT(array, index);
 
     return Qnil;
@@ -9997,6 +10569,7 @@ static VALUE rogl_glGetFloatIndexedvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     void* data = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetFloatIndexedvEXT, "glGetFloatIndexedvEXT");
     rogl_pfn_glGetFloatIndexedvEXT(target, index, data);
 
     return Qnil;
@@ -10008,6 +10581,7 @@ static VALUE rogl_glGetDoubleIndexedvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     void* data = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetDoubleIndexedvEXT, "glGetDoubleIndexedvEXT");
     rogl_pfn_glGetDoubleIndexedvEXT(target, index, data);
 
     return Qnil;
@@ -10019,6 +10593,7 @@ static VALUE rogl_glGetPointerIndexedvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     void* data = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPointerIndexedvEXT, "glGetPointerIndexedvEXT");
     rogl_pfn_glGetPointerIndexedvEXT(target, index, data);
 
     return Qnil;
@@ -10037,6 +10612,7 @@ static VALUE rogl_glCompressedTextureImage3DEXT(VALUE _obj_, VALUE _arg1_, VALUE
     int imageSize = (int)NUM2INT(_arg9_);
     void* bits = (void*)val2ptr(_arg10_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCompressedTextureImage3DEXT, "glCompressedTextureImage3DEXT");
     rogl_pfn_glCompressedTextureImage3DEXT(texture, target, level, internalformat, width, height, depth, border, imageSize, bits);
 
     return Qnil;
@@ -10054,6 +10630,7 @@ static VALUE rogl_glCompressedTextureImage2DEXT(VALUE _obj_, VALUE _arg1_, VALUE
     int imageSize = (int)NUM2INT(_arg8_);
     void* bits = (void*)val2ptr(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCompressedTextureImage2DEXT, "glCompressedTextureImage2DEXT");
     rogl_pfn_glCompressedTextureImage2DEXT(texture, target, level, internalformat, width, height, border, imageSize, bits);
 
     return Qnil;
@@ -10070,6 +10647,7 @@ static VALUE rogl_glCompressedTextureImage1DEXT(VALUE _obj_, VALUE _arg1_, VALUE
     int imageSize = (int)NUM2INT(_arg7_);
     void* bits = (void*)val2ptr(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCompressedTextureImage1DEXT, "glCompressedTextureImage1DEXT");
     rogl_pfn_glCompressedTextureImage1DEXT(texture, target, level, internalformat, width, border, imageSize, bits);
 
     return Qnil;
@@ -10090,6 +10668,7 @@ static VALUE rogl_glCompressedTextureSubImage3DEXT(VALUE _obj_, VALUE _arg1_, VA
     int imageSize = (int)NUM2INT(_arg11_);
     void* bits = (void*)val2ptr(_arg12_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCompressedTextureSubImage3DEXT, "glCompressedTextureSubImage3DEXT");
     rogl_pfn_glCompressedTextureSubImage3DEXT(texture, target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, bits);
 
     return Qnil;
@@ -10108,6 +10687,7 @@ static VALUE rogl_glCompressedTextureSubImage2DEXT(VALUE _obj_, VALUE _arg1_, VA
     int imageSize = (int)NUM2INT(_arg9_);
     void* bits = (void*)val2ptr(_arg10_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCompressedTextureSubImage2DEXT, "glCompressedTextureSubImage2DEXT");
     rogl_pfn_glCompressedTextureSubImage2DEXT(texture, target, level, xoffset, yoffset, width, height, format, imageSize, bits);
 
     return Qnil;
@@ -10124,6 +10704,7 @@ static VALUE rogl_glCompressedTextureSubImage1DEXT(VALUE _obj_, VALUE _arg1_, VA
     int imageSize = (int)NUM2INT(_arg7_);
     void* bits = (void*)val2ptr(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCompressedTextureSubImage1DEXT, "glCompressedTextureSubImage1DEXT");
     rogl_pfn_glCompressedTextureSubImage1DEXT(texture, target, level, xoffset, width, format, imageSize, bits);
 
     return Qnil;
@@ -10136,6 +10717,7 @@ static VALUE rogl_glGetCompressedTextureImageEXT(VALUE _obj_, VALUE _arg1_, VALU
     int lod = (int)NUM2INT(_arg3_);
     void* img = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetCompressedTextureImageEXT, "glGetCompressedTextureImageEXT");
     rogl_pfn_glGetCompressedTextureImageEXT(texture, target, lod, img);
 
     return Qnil;
@@ -10154,6 +10736,7 @@ static VALUE rogl_glCompressedMultiTexImage3DEXT(VALUE _obj_, VALUE _arg1_, VALU
     int imageSize = (int)NUM2INT(_arg9_);
     void* bits = (void*)val2ptr(_arg10_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCompressedMultiTexImage3DEXT, "glCompressedMultiTexImage3DEXT");
     rogl_pfn_glCompressedMultiTexImage3DEXT(texunit, target, level, internalformat, width, height, depth, border, imageSize, bits);
 
     return Qnil;
@@ -10171,6 +10754,7 @@ static VALUE rogl_glCompressedMultiTexImage2DEXT(VALUE _obj_, VALUE _arg1_, VALU
     int imageSize = (int)NUM2INT(_arg8_);
     void* bits = (void*)val2ptr(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCompressedMultiTexImage2DEXT, "glCompressedMultiTexImage2DEXT");
     rogl_pfn_glCompressedMultiTexImage2DEXT(texunit, target, level, internalformat, width, height, border, imageSize, bits);
 
     return Qnil;
@@ -10187,6 +10771,7 @@ static VALUE rogl_glCompressedMultiTexImage1DEXT(VALUE _obj_, VALUE _arg1_, VALU
     int imageSize = (int)NUM2INT(_arg7_);
     void* bits = (void*)val2ptr(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCompressedMultiTexImage1DEXT, "glCompressedMultiTexImage1DEXT");
     rogl_pfn_glCompressedMultiTexImage1DEXT(texunit, target, level, internalformat, width, border, imageSize, bits);
 
     return Qnil;
@@ -10207,6 +10792,7 @@ static VALUE rogl_glCompressedMultiTexSubImage3DEXT(VALUE _obj_, VALUE _arg1_, V
     int imageSize = (int)NUM2INT(_arg11_);
     void* bits = (void*)val2ptr(_arg12_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCompressedMultiTexSubImage3DEXT, "glCompressedMultiTexSubImage3DEXT");
     rogl_pfn_glCompressedMultiTexSubImage3DEXT(texunit, target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, bits);
 
     return Qnil;
@@ -10225,6 +10811,7 @@ static VALUE rogl_glCompressedMultiTexSubImage2DEXT(VALUE _obj_, VALUE _arg1_, V
     int imageSize = (int)NUM2INT(_arg9_);
     void* bits = (void*)val2ptr(_arg10_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCompressedMultiTexSubImage2DEXT, "glCompressedMultiTexSubImage2DEXT");
     rogl_pfn_glCompressedMultiTexSubImage2DEXT(texunit, target, level, xoffset, yoffset, width, height, format, imageSize, bits);
 
     return Qnil;
@@ -10241,6 +10828,7 @@ static VALUE rogl_glCompressedMultiTexSubImage1DEXT(VALUE _obj_, VALUE _arg1_, V
     int imageSize = (int)NUM2INT(_arg7_);
     void* bits = (void*)val2ptr(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCompressedMultiTexSubImage1DEXT, "glCompressedMultiTexSubImage1DEXT");
     rogl_pfn_glCompressedMultiTexSubImage1DEXT(texunit, target, level, xoffset, width, format, imageSize, bits);
 
     return Qnil;
@@ -10253,6 +10841,7 @@ static VALUE rogl_glGetCompressedMultiTexImageEXT(VALUE _obj_, VALUE _arg1_, VAL
     int lod = (int)NUM2INT(_arg3_);
     void* img = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetCompressedMultiTexImageEXT, "glGetCompressedMultiTexImageEXT");
     rogl_pfn_glGetCompressedMultiTexImageEXT(texunit, target, lod, img);
 
     return Qnil;
@@ -10263,6 +10852,7 @@ static VALUE rogl_glMatrixLoadTransposefEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
     void* m = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixLoadTransposefEXT, "glMatrixLoadTransposefEXT");
     rogl_pfn_glMatrixLoadTransposefEXT(mode, m);
 
     return Qnil;
@@ -10273,6 +10863,7 @@ static VALUE rogl_glMatrixLoadTransposedEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
     void* m = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixLoadTransposedEXT, "glMatrixLoadTransposedEXT");
     rogl_pfn_glMatrixLoadTransposedEXT(mode, m);
 
     return Qnil;
@@ -10283,6 +10874,7 @@ static VALUE rogl_glMatrixMultTransposefEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
     void* m = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixMultTransposefEXT, "glMatrixMultTransposefEXT");
     rogl_pfn_glMatrixMultTransposefEXT(mode, m);
 
     return Qnil;
@@ -10293,6 +10885,7 @@ static VALUE rogl_glMatrixMultTransposedEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
     void* m = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixMultTransposedEXT, "glMatrixMultTransposedEXT");
     rogl_pfn_glMatrixMultTransposedEXT(mode, m);
 
     return Qnil;
@@ -10305,6 +10898,7 @@ static VALUE rogl_glNamedBufferDataEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     void* data = (void*)val2ptr(_arg3_);
     unsigned int usage = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedBufferDataEXT, "glNamedBufferDataEXT");
     rogl_pfn_glNamedBufferDataEXT(buffer, size, data, usage);
 
     return Qnil;
@@ -10317,6 +10911,7 @@ static VALUE rogl_glNamedBufferSubDataEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg3_);
     void* data = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedBufferSubDataEXT, "glNamedBufferSubDataEXT");
     rogl_pfn_glNamedBufferSubDataEXT(buffer, offset, size, data);
 
     return Qnil;
@@ -10327,6 +10922,7 @@ static VALUE rogl_glMapNamedBufferEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
     unsigned int access = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMapNamedBufferEXT, "glMapNamedBufferEXT");
     void* retval = rogl_pfn_glMapNamedBufferEXT(buffer, access);
 
     return CPOINTER_AS_VALUE(retval);
@@ -10336,6 +10932,7 @@ static VALUE rogl_glUnmapNamedBufferEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUnmapNamedBufferEXT, "glUnmapNamedBufferEXT");
     unsigned char retval = rogl_pfn_glUnmapNamedBufferEXT(buffer);
 
     return UINT2NUM(retval);
@@ -10347,6 +10944,7 @@ static VALUE rogl_glGetNamedBufferParameterivEXT(VALUE _obj_, VALUE _arg1_, VALU
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetNamedBufferParameterivEXT, "glGetNamedBufferParameterivEXT");
     rogl_pfn_glGetNamedBufferParameterivEXT(buffer, pname, params);
 
     return Qnil;
@@ -10358,6 +10956,7 @@ static VALUE rogl_glGetNamedBufferPointervEXT(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetNamedBufferPointervEXT, "glGetNamedBufferPointervEXT");
     rogl_pfn_glGetNamedBufferPointervEXT(buffer, pname, params);
 
     return Qnil;
@@ -10370,6 +10969,7 @@ static VALUE rogl_glGetNamedBufferSubDataEXT(VALUE _obj_, VALUE _arg1_, VALUE _a
     ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg3_);
     void* data = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetNamedBufferSubDataEXT, "glGetNamedBufferSubDataEXT");
     rogl_pfn_glGetNamedBufferSubDataEXT(buffer, offset, size, data);
 
     return Qnil;
@@ -10382,6 +10982,7 @@ static VALUE rogl_glTextureBufferEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
     unsigned int buffer = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureBufferEXT, "glTextureBufferEXT");
     rogl_pfn_glTextureBufferEXT(texture, target, internalformat, buffer);
 
     return Qnil;
@@ -10394,6 +10995,7 @@ static VALUE rogl_glMultiTexBufferEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
     unsigned int buffer = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexBufferEXT, "glMultiTexBufferEXT");
     rogl_pfn_glMultiTexBufferEXT(texunit, target, internalformat, buffer);
 
     return Qnil;
@@ -10406,6 +11008,7 @@ static VALUE rogl_glTextureParameterIivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureParameterIivEXT, "glTextureParameterIivEXT");
     rogl_pfn_glTextureParameterIivEXT(texture, target, pname, params);
 
     return Qnil;
@@ -10418,6 +11021,7 @@ static VALUE rogl_glTextureParameterIuivEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureParameterIuivEXT, "glTextureParameterIuivEXT");
     rogl_pfn_glTextureParameterIuivEXT(texture, target, pname, params);
 
     return Qnil;
@@ -10430,6 +11034,7 @@ static VALUE rogl_glGetTextureParameterIivEXT(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTextureParameterIivEXT, "glGetTextureParameterIivEXT");
     rogl_pfn_glGetTextureParameterIivEXT(texture, target, pname, params);
 
     return Qnil;
@@ -10442,6 +11047,7 @@ static VALUE rogl_glGetTextureParameterIuivEXT(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTextureParameterIuivEXT, "glGetTextureParameterIuivEXT");
     rogl_pfn_glGetTextureParameterIuivEXT(texture, target, pname, params);
 
     return Qnil;
@@ -10454,6 +11060,7 @@ static VALUE rogl_glMultiTexParameterIivEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexParameterIivEXT, "glMultiTexParameterIivEXT");
     rogl_pfn_glMultiTexParameterIivEXT(texunit, target, pname, params);
 
     return Qnil;
@@ -10466,6 +11073,7 @@ static VALUE rogl_glMultiTexParameterIuivEXT(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexParameterIuivEXT, "glMultiTexParameterIuivEXT");
     rogl_pfn_glMultiTexParameterIuivEXT(texunit, target, pname, params);
 
     return Qnil;
@@ -10478,6 +11086,7 @@ static VALUE rogl_glGetMultiTexParameterIivEXT(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMultiTexParameterIivEXT, "glGetMultiTexParameterIivEXT");
     rogl_pfn_glGetMultiTexParameterIivEXT(texunit, target, pname, params);
 
     return Qnil;
@@ -10490,6 +11099,7 @@ static VALUE rogl_glGetMultiTexParameterIuivEXT(VALUE _obj_, VALUE _arg1_, VALUE
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMultiTexParameterIuivEXT, "glGetMultiTexParameterIuivEXT");
     rogl_pfn_glGetMultiTexParameterIuivEXT(texunit, target, pname, params);
 
     return Qnil;
@@ -10503,6 +11113,7 @@ static VALUE rogl_glNamedProgramLocalParameters4fvEXT(VALUE _obj_, VALUE _arg1_,
     int count = (int)NUM2INT(_arg4_);
     void* params = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedProgramLocalParameters4fvEXT, "glNamedProgramLocalParameters4fvEXT");
     rogl_pfn_glNamedProgramLocalParameters4fvEXT(program, target, index, count, params);
 
     return Qnil;
@@ -10518,6 +11129,7 @@ static VALUE rogl_glNamedProgramLocalParameterI4iEXT(VALUE _obj_, VALUE _arg1_, 
     int z = (int)NUM2INT(_arg6_);
     int w = (int)NUM2INT(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedProgramLocalParameterI4iEXT, "glNamedProgramLocalParameterI4iEXT");
     rogl_pfn_glNamedProgramLocalParameterI4iEXT(program, target, index, x, y, z, w);
 
     return Qnil;
@@ -10530,6 +11142,7 @@ static VALUE rogl_glNamedProgramLocalParameterI4ivEXT(VALUE _obj_, VALUE _arg1_,
     unsigned int index = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedProgramLocalParameterI4ivEXT, "glNamedProgramLocalParameterI4ivEXT");
     rogl_pfn_glNamedProgramLocalParameterI4ivEXT(program, target, index, params);
 
     return Qnil;
@@ -10543,6 +11156,7 @@ static VALUE rogl_glNamedProgramLocalParametersI4ivEXT(VALUE _obj_, VALUE _arg1_
     int count = (int)NUM2INT(_arg4_);
     void* params = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedProgramLocalParametersI4ivEXT, "glNamedProgramLocalParametersI4ivEXT");
     rogl_pfn_glNamedProgramLocalParametersI4ivEXT(program, target, index, count, params);
 
     return Qnil;
@@ -10558,6 +11172,7 @@ static VALUE rogl_glNamedProgramLocalParameterI4uiEXT(VALUE _obj_, VALUE _arg1_,
     unsigned int z = (unsigned int)NUM2UINT(_arg6_);
     unsigned int w = (unsigned int)NUM2UINT(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedProgramLocalParameterI4uiEXT, "glNamedProgramLocalParameterI4uiEXT");
     rogl_pfn_glNamedProgramLocalParameterI4uiEXT(program, target, index, x, y, z, w);
 
     return Qnil;
@@ -10570,6 +11185,7 @@ static VALUE rogl_glNamedProgramLocalParameterI4uivEXT(VALUE _obj_, VALUE _arg1_
     unsigned int index = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedProgramLocalParameterI4uivEXT, "glNamedProgramLocalParameterI4uivEXT");
     rogl_pfn_glNamedProgramLocalParameterI4uivEXT(program, target, index, params);
 
     return Qnil;
@@ -10583,6 +11199,7 @@ static VALUE rogl_glNamedProgramLocalParametersI4uivEXT(VALUE _obj_, VALUE _arg1
     int count = (int)NUM2INT(_arg4_);
     void* params = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedProgramLocalParametersI4uivEXT, "glNamedProgramLocalParametersI4uivEXT");
     rogl_pfn_glNamedProgramLocalParametersI4uivEXT(program, target, index, count, params);
 
     return Qnil;
@@ -10595,6 +11212,7 @@ static VALUE rogl_glGetNamedProgramLocalParameterIivEXT(VALUE _obj_, VALUE _arg1
     unsigned int index = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetNamedProgramLocalParameterIivEXT, "glGetNamedProgramLocalParameterIivEXT");
     rogl_pfn_glGetNamedProgramLocalParameterIivEXT(program, target, index, params);
 
     return Qnil;
@@ -10607,6 +11225,7 @@ static VALUE rogl_glGetNamedProgramLocalParameterIuivEXT(VALUE _obj_, VALUE _arg
     unsigned int index = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetNamedProgramLocalParameterIuivEXT, "glGetNamedProgramLocalParameterIuivEXT");
     rogl_pfn_glGetNamedProgramLocalParameterIuivEXT(program, target, index, params);
 
     return Qnil;
@@ -10617,6 +11236,7 @@ static VALUE rogl_glEnableClientStateiEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int array = (unsigned int)NUM2UINT(_arg1_);
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glEnableClientStateiEXT, "glEnableClientStateiEXT");
     rogl_pfn_glEnableClientStateiEXT(array, index);
 
     return Qnil;
@@ -10627,6 +11247,7 @@ static VALUE rogl_glDisableClientStateiEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int array = (unsigned int)NUM2UINT(_arg1_);
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDisableClientStateiEXT, "glDisableClientStateiEXT");
     rogl_pfn_glDisableClientStateiEXT(array, index);
 
     return Qnil;
@@ -10638,6 +11259,7 @@ static VALUE rogl_glGetFloati_vEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetFloati_vEXT, "glGetFloati_vEXT");
     rogl_pfn_glGetFloati_vEXT(pname, index, params);
 
     return Qnil;
@@ -10649,6 +11271,7 @@ static VALUE rogl_glGetDoublei_vEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetDoublei_vEXT, "glGetDoublei_vEXT");
     rogl_pfn_glGetDoublei_vEXT(pname, index, params);
 
     return Qnil;
@@ -10660,6 +11283,7 @@ static VALUE rogl_glGetPointeri_vEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPointeri_vEXT, "glGetPointeri_vEXT");
     rogl_pfn_glGetPointeri_vEXT(pname, index, params);
 
     return Qnil;
@@ -10673,6 +11297,7 @@ static VALUE rogl_glNamedProgramStringEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     int len = (int)NUM2INT(_arg4_);
     void* string = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedProgramStringEXT, "glNamedProgramStringEXT");
     rogl_pfn_glNamedProgramStringEXT(program, target, format, len, string);
 
     return Qnil;
@@ -10688,6 +11313,7 @@ static VALUE rogl_glNamedProgramLocalParameter4dEXT(VALUE _obj_, VALUE _arg1_, V
     double z = (double)NUM2DBL(_arg6_);
     double w = (double)NUM2DBL(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedProgramLocalParameter4dEXT, "glNamedProgramLocalParameter4dEXT");
     rogl_pfn_glNamedProgramLocalParameter4dEXT(program, target, index, x, y, z, w);
 
     return Qnil;
@@ -10700,6 +11326,7 @@ static VALUE rogl_glNamedProgramLocalParameter4dvEXT(VALUE _obj_, VALUE _arg1_, 
     unsigned int index = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedProgramLocalParameter4dvEXT, "glNamedProgramLocalParameter4dvEXT");
     rogl_pfn_glNamedProgramLocalParameter4dvEXT(program, target, index, params);
 
     return Qnil;
@@ -10715,6 +11342,7 @@ static VALUE rogl_glNamedProgramLocalParameter4fEXT(VALUE _obj_, VALUE _arg1_, V
     float z = (float)NUM2DBL(_arg6_);
     float w = (float)NUM2DBL(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedProgramLocalParameter4fEXT, "glNamedProgramLocalParameter4fEXT");
     rogl_pfn_glNamedProgramLocalParameter4fEXT(program, target, index, x, y, z, w);
 
     return Qnil;
@@ -10727,6 +11355,7 @@ static VALUE rogl_glNamedProgramLocalParameter4fvEXT(VALUE _obj_, VALUE _arg1_, 
     unsigned int index = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedProgramLocalParameter4fvEXT, "glNamedProgramLocalParameter4fvEXT");
     rogl_pfn_glNamedProgramLocalParameter4fvEXT(program, target, index, params);
 
     return Qnil;
@@ -10739,6 +11368,7 @@ static VALUE rogl_glGetNamedProgramLocalParameterdvEXT(VALUE _obj_, VALUE _arg1_
     unsigned int index = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetNamedProgramLocalParameterdvEXT, "glGetNamedProgramLocalParameterdvEXT");
     rogl_pfn_glGetNamedProgramLocalParameterdvEXT(program, target, index, params);
 
     return Qnil;
@@ -10751,6 +11381,7 @@ static VALUE rogl_glGetNamedProgramLocalParameterfvEXT(VALUE _obj_, VALUE _arg1_
     unsigned int index = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetNamedProgramLocalParameterfvEXT, "glGetNamedProgramLocalParameterfvEXT");
     rogl_pfn_glGetNamedProgramLocalParameterfvEXT(program, target, index, params);
 
     return Qnil;
@@ -10763,6 +11394,7 @@ static VALUE rogl_glGetNamedProgramivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetNamedProgramivEXT, "glGetNamedProgramivEXT");
     rogl_pfn_glGetNamedProgramivEXT(program, target, pname, params);
 
     return Qnil;
@@ -10775,6 +11407,7 @@ static VALUE rogl_glGetNamedProgramStringEXT(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* string = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetNamedProgramStringEXT, "glGetNamedProgramStringEXT");
     rogl_pfn_glGetNamedProgramStringEXT(program, target, pname, string);
 
     return Qnil;
@@ -10787,6 +11420,7 @@ static VALUE rogl_glNamedRenderbufferStorageEXT(VALUE _obj_, VALUE _arg1_, VALUE
     int width = (int)NUM2INT(_arg3_);
     int height = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedRenderbufferStorageEXT, "glNamedRenderbufferStorageEXT");
     rogl_pfn_glNamedRenderbufferStorageEXT(renderbuffer, internalformat, width, height);
 
     return Qnil;
@@ -10798,6 +11432,7 @@ static VALUE rogl_glGetNamedRenderbufferParameterivEXT(VALUE _obj_, VALUE _arg1_
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetNamedRenderbufferParameterivEXT, "glGetNamedRenderbufferParameterivEXT");
     rogl_pfn_glGetNamedRenderbufferParameterivEXT(renderbuffer, pname, params);
 
     return Qnil;
@@ -10811,6 +11446,7 @@ static VALUE rogl_glNamedRenderbufferStorageMultisampleEXT(VALUE _obj_, VALUE _a
     int width = (int)NUM2INT(_arg4_);
     int height = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedRenderbufferStorageMultisampleEXT, "glNamedRenderbufferStorageMultisampleEXT");
     rogl_pfn_glNamedRenderbufferStorageMultisampleEXT(renderbuffer, samples, internalformat, width, height);
 
     return Qnil;
@@ -10825,6 +11461,7 @@ static VALUE rogl_glNamedRenderbufferStorageMultisampleCoverageEXT(VALUE _obj_, 
     int width = (int)NUM2INT(_arg5_);
     int height = (int)NUM2INT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedRenderbufferStorageMultisampleCoverageEXT, "glNamedRenderbufferStorageMultisampleCoverageEXT");
     rogl_pfn_glNamedRenderbufferStorageMultisampleCoverageEXT(renderbuffer, coverageSamples, colorSamples, internalformat, width, height);
 
     return Qnil;
@@ -10835,6 +11472,7 @@ static VALUE rogl_glCheckNamedFramebufferStatusEXT(VALUE _obj_, VALUE _arg1_, VA
     unsigned int framebuffer = (unsigned int)NUM2UINT(_arg1_);
     unsigned int target = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCheckNamedFramebufferStatusEXT, "glCheckNamedFramebufferStatusEXT");
     unsigned int retval = rogl_pfn_glCheckNamedFramebufferStatusEXT(framebuffer, target);
 
     return UINT2NUM(retval);
@@ -10848,6 +11486,7 @@ static VALUE rogl_glNamedFramebufferTexture1DEXT(VALUE _obj_, VALUE _arg1_, VALU
     unsigned int texture = (unsigned int)NUM2UINT(_arg4_);
     int level = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedFramebufferTexture1DEXT, "glNamedFramebufferTexture1DEXT");
     rogl_pfn_glNamedFramebufferTexture1DEXT(framebuffer, attachment, textarget, texture, level);
 
     return Qnil;
@@ -10861,6 +11500,7 @@ static VALUE rogl_glNamedFramebufferTexture2DEXT(VALUE _obj_, VALUE _arg1_, VALU
     unsigned int texture = (unsigned int)NUM2UINT(_arg4_);
     int level = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedFramebufferTexture2DEXT, "glNamedFramebufferTexture2DEXT");
     rogl_pfn_glNamedFramebufferTexture2DEXT(framebuffer, attachment, textarget, texture, level);
 
     return Qnil;
@@ -10875,6 +11515,7 @@ static VALUE rogl_glNamedFramebufferTexture3DEXT(VALUE _obj_, VALUE _arg1_, VALU
     int level = (int)NUM2INT(_arg5_);
     int zoffset = (int)NUM2INT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedFramebufferTexture3DEXT, "glNamedFramebufferTexture3DEXT");
     rogl_pfn_glNamedFramebufferTexture3DEXT(framebuffer, attachment, textarget, texture, level, zoffset);
 
     return Qnil;
@@ -10887,6 +11528,7 @@ static VALUE rogl_glNamedFramebufferRenderbufferEXT(VALUE _obj_, VALUE _arg1_, V
     unsigned int renderbuffertarget = (unsigned int)NUM2UINT(_arg3_);
     unsigned int renderbuffer = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedFramebufferRenderbufferEXT, "glNamedFramebufferRenderbufferEXT");
     rogl_pfn_glNamedFramebufferRenderbufferEXT(framebuffer, attachment, renderbuffertarget, renderbuffer);
 
     return Qnil;
@@ -10899,6 +11541,7 @@ static VALUE rogl_glGetNamedFramebufferAttachmentParameterivEXT(VALUE _obj_, VAL
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetNamedFramebufferAttachmentParameterivEXT, "glGetNamedFramebufferAttachmentParameterivEXT");
     rogl_pfn_glGetNamedFramebufferAttachmentParameterivEXT(framebuffer, attachment, pname, params);
 
     return Qnil;
@@ -10909,6 +11552,7 @@ static VALUE rogl_glGenerateTextureMipmapEXT(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
     unsigned int target = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGenerateTextureMipmapEXT, "glGenerateTextureMipmapEXT");
     rogl_pfn_glGenerateTextureMipmapEXT(texture, target);
 
     return Qnil;
@@ -10919,6 +11563,7 @@ static VALUE rogl_glGenerateMultiTexMipmapEXT(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int texunit = (unsigned int)NUM2UINT(_arg1_);
     unsigned int target = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGenerateMultiTexMipmapEXT, "glGenerateMultiTexMipmapEXT");
     rogl_pfn_glGenerateMultiTexMipmapEXT(texunit, target);
 
     return Qnil;
@@ -10929,6 +11574,7 @@ static VALUE rogl_glFramebufferDrawBufferEXT(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int framebuffer = (unsigned int)NUM2UINT(_arg1_);
     unsigned int mode = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFramebufferDrawBufferEXT, "glFramebufferDrawBufferEXT");
     rogl_pfn_glFramebufferDrawBufferEXT(framebuffer, mode);
 
     return Qnil;
@@ -10940,6 +11586,7 @@ static VALUE rogl_glFramebufferDrawBuffersEXT(VALUE _obj_, VALUE _arg1_, VALUE _
     int n = (int)NUM2INT(_arg2_);
     void* bufs = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFramebufferDrawBuffersEXT, "glFramebufferDrawBuffersEXT");
     rogl_pfn_glFramebufferDrawBuffersEXT(framebuffer, n, bufs);
 
     return Qnil;
@@ -10950,6 +11597,7 @@ static VALUE rogl_glFramebufferReadBufferEXT(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int framebuffer = (unsigned int)NUM2UINT(_arg1_);
     unsigned int mode = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFramebufferReadBufferEXT, "glFramebufferReadBufferEXT");
     rogl_pfn_glFramebufferReadBufferEXT(framebuffer, mode);
 
     return Qnil;
@@ -10961,6 +11609,7 @@ static VALUE rogl_glGetFramebufferParameterivEXT(VALUE _obj_, VALUE _arg1_, VALU
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetFramebufferParameterivEXT, "glGetFramebufferParameterivEXT");
     rogl_pfn_glGetFramebufferParameterivEXT(framebuffer, pname, params);
 
     return Qnil;
@@ -10974,6 +11623,7 @@ static VALUE rogl_glNamedCopyBufferSubDataEXT(VALUE _obj_, VALUE _arg1_, VALUE _
     ptrdiff_t writeOffset = (ptrdiff_t)NUM2UINT(_arg4_);
     ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedCopyBufferSubDataEXT, "glNamedCopyBufferSubDataEXT");
     rogl_pfn_glNamedCopyBufferSubDataEXT(readBuffer, writeBuffer, readOffset, writeOffset, size);
 
     return Qnil;
@@ -10986,6 +11636,7 @@ static VALUE rogl_glNamedFramebufferTextureEXT(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int texture = (unsigned int)NUM2UINT(_arg3_);
     int level = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedFramebufferTextureEXT, "glNamedFramebufferTextureEXT");
     rogl_pfn_glNamedFramebufferTextureEXT(framebuffer, attachment, texture, level);
 
     return Qnil;
@@ -10999,6 +11650,7 @@ static VALUE rogl_glNamedFramebufferTextureLayerEXT(VALUE _obj_, VALUE _arg1_, V
     int level = (int)NUM2INT(_arg4_);
     int layer = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedFramebufferTextureLayerEXT, "glNamedFramebufferTextureLayerEXT");
     rogl_pfn_glNamedFramebufferTextureLayerEXT(framebuffer, attachment, texture, level, layer);
 
     return Qnil;
@@ -11012,6 +11664,7 @@ static VALUE rogl_glNamedFramebufferTextureFaceEXT(VALUE _obj_, VALUE _arg1_, VA
     int level = (int)NUM2INT(_arg4_);
     unsigned int face = (unsigned int)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedFramebufferTextureFaceEXT, "glNamedFramebufferTextureFaceEXT");
     rogl_pfn_glNamedFramebufferTextureFaceEXT(framebuffer, attachment, texture, level, face);
 
     return Qnil;
@@ -11023,6 +11676,7 @@ static VALUE rogl_glTextureRenderbufferEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int target = (unsigned int)NUM2UINT(_arg2_);
     unsigned int renderbuffer = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureRenderbufferEXT, "glTextureRenderbufferEXT");
     rogl_pfn_glTextureRenderbufferEXT(texture, target, renderbuffer);
 
     return Qnil;
@@ -11034,6 +11688,7 @@ static VALUE rogl_glMultiTexRenderbufferEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int target = (unsigned int)NUM2UINT(_arg2_);
     unsigned int renderbuffer = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexRenderbufferEXT, "glMultiTexRenderbufferEXT");
     rogl_pfn_glMultiTexRenderbufferEXT(texunit, target, renderbuffer);
 
     return Qnil;
@@ -11048,6 +11703,7 @@ static VALUE rogl_glVertexArrayVertexOffsetEXT(VALUE _obj_, VALUE _arg1_, VALUE 
     int stride = (int)NUM2INT(_arg5_);
     ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexArrayVertexOffsetEXT, "glVertexArrayVertexOffsetEXT");
     rogl_pfn_glVertexArrayVertexOffsetEXT(vaobj, buffer, size, type, stride, offset);
 
     return Qnil;
@@ -11062,6 +11718,7 @@ static VALUE rogl_glVertexArrayColorOffsetEXT(VALUE _obj_, VALUE _arg1_, VALUE _
     int stride = (int)NUM2INT(_arg5_);
     ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexArrayColorOffsetEXT, "glVertexArrayColorOffsetEXT");
     rogl_pfn_glVertexArrayColorOffsetEXT(vaobj, buffer, size, type, stride, offset);
 
     return Qnil;
@@ -11074,6 +11731,7 @@ static VALUE rogl_glVertexArrayEdgeFlagOffsetEXT(VALUE _obj_, VALUE _arg1_, VALU
     int stride = (int)NUM2INT(_arg3_);
     ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexArrayEdgeFlagOffsetEXT, "glVertexArrayEdgeFlagOffsetEXT");
     rogl_pfn_glVertexArrayEdgeFlagOffsetEXT(vaobj, buffer, stride, offset);
 
     return Qnil;
@@ -11087,6 +11745,7 @@ static VALUE rogl_glVertexArrayIndexOffsetEXT(VALUE _obj_, VALUE _arg1_, VALUE _
     int stride = (int)NUM2INT(_arg4_);
     ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexArrayIndexOffsetEXT, "glVertexArrayIndexOffsetEXT");
     rogl_pfn_glVertexArrayIndexOffsetEXT(vaobj, buffer, type, stride, offset);
 
     return Qnil;
@@ -11100,6 +11759,7 @@ static VALUE rogl_glVertexArrayNormalOffsetEXT(VALUE _obj_, VALUE _arg1_, VALUE 
     int stride = (int)NUM2INT(_arg4_);
     ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexArrayNormalOffsetEXT, "glVertexArrayNormalOffsetEXT");
     rogl_pfn_glVertexArrayNormalOffsetEXT(vaobj, buffer, type, stride, offset);
 
     return Qnil;
@@ -11114,6 +11774,7 @@ static VALUE rogl_glVertexArrayTexCoordOffsetEXT(VALUE _obj_, VALUE _arg1_, VALU
     int stride = (int)NUM2INT(_arg5_);
     ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexArrayTexCoordOffsetEXT, "glVertexArrayTexCoordOffsetEXT");
     rogl_pfn_glVertexArrayTexCoordOffsetEXT(vaobj, buffer, size, type, stride, offset);
 
     return Qnil;
@@ -11129,6 +11790,7 @@ static VALUE rogl_glVertexArrayMultiTexCoordOffsetEXT(VALUE _obj_, VALUE _arg1_,
     int stride = (int)NUM2INT(_arg6_);
     ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexArrayMultiTexCoordOffsetEXT, "glVertexArrayMultiTexCoordOffsetEXT");
     rogl_pfn_glVertexArrayMultiTexCoordOffsetEXT(vaobj, buffer, texunit, size, type, stride, offset);
 
     return Qnil;
@@ -11142,6 +11804,7 @@ static VALUE rogl_glVertexArrayFogCoordOffsetEXT(VALUE _obj_, VALUE _arg1_, VALU
     int stride = (int)NUM2INT(_arg4_);
     ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexArrayFogCoordOffsetEXT, "glVertexArrayFogCoordOffsetEXT");
     rogl_pfn_glVertexArrayFogCoordOffsetEXT(vaobj, buffer, type, stride, offset);
 
     return Qnil;
@@ -11156,6 +11819,7 @@ static VALUE rogl_glVertexArraySecondaryColorOffsetEXT(VALUE _obj_, VALUE _arg1_
     int stride = (int)NUM2INT(_arg5_);
     ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexArraySecondaryColorOffsetEXT, "glVertexArraySecondaryColorOffsetEXT");
     rogl_pfn_glVertexArraySecondaryColorOffsetEXT(vaobj, buffer, size, type, stride, offset);
 
     return Qnil;
@@ -11172,6 +11836,7 @@ static VALUE rogl_glVertexArrayVertexAttribOffsetEXT(VALUE _obj_, VALUE _arg1_, 
     int stride = (int)NUM2INT(_arg7_);
     ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexArrayVertexAttribOffsetEXT, "glVertexArrayVertexAttribOffsetEXT");
     rogl_pfn_glVertexArrayVertexAttribOffsetEXT(vaobj, buffer, index, size, type, normalized, stride, offset);
 
     return Qnil;
@@ -11187,6 +11852,7 @@ static VALUE rogl_glVertexArrayVertexAttribIOffsetEXT(VALUE _obj_, VALUE _arg1_,
     int stride = (int)NUM2INT(_arg6_);
     ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexArrayVertexAttribIOffsetEXT, "glVertexArrayVertexAttribIOffsetEXT");
     rogl_pfn_glVertexArrayVertexAttribIOffsetEXT(vaobj, buffer, index, size, type, stride, offset);
 
     return Qnil;
@@ -11197,6 +11863,7 @@ static VALUE rogl_glEnableVertexArrayEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int vaobj = (unsigned int)NUM2UINT(_arg1_);
     unsigned int array = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glEnableVertexArrayEXT, "glEnableVertexArrayEXT");
     rogl_pfn_glEnableVertexArrayEXT(vaobj, array);
 
     return Qnil;
@@ -11207,6 +11874,7 @@ static VALUE rogl_glDisableVertexArrayEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int vaobj = (unsigned int)NUM2UINT(_arg1_);
     unsigned int array = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDisableVertexArrayEXT, "glDisableVertexArrayEXT");
     rogl_pfn_glDisableVertexArrayEXT(vaobj, array);
 
     return Qnil;
@@ -11217,6 +11885,7 @@ static VALUE rogl_glEnableVertexArrayAttribEXT(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int vaobj = (unsigned int)NUM2UINT(_arg1_);
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glEnableVertexArrayAttribEXT, "glEnableVertexArrayAttribEXT");
     rogl_pfn_glEnableVertexArrayAttribEXT(vaobj, index);
 
     return Qnil;
@@ -11227,6 +11896,7 @@ static VALUE rogl_glDisableVertexArrayAttribEXT(VALUE _obj_, VALUE _arg1_, VALUE
     unsigned int vaobj = (unsigned int)NUM2UINT(_arg1_);
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDisableVertexArrayAttribEXT, "glDisableVertexArrayAttribEXT");
     rogl_pfn_glDisableVertexArrayAttribEXT(vaobj, index);
 
     return Qnil;
@@ -11238,6 +11908,7 @@ static VALUE rogl_glGetVertexArrayIntegervEXT(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* param = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVertexArrayIntegervEXT, "glGetVertexArrayIntegervEXT");
     rogl_pfn_glGetVertexArrayIntegervEXT(vaobj, pname, param);
 
     return Qnil;
@@ -11249,6 +11920,7 @@ static VALUE rogl_glGetVertexArrayPointervEXT(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* param = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVertexArrayPointervEXT, "glGetVertexArrayPointervEXT");
     rogl_pfn_glGetVertexArrayPointervEXT(vaobj, pname, param);
 
     return Qnil;
@@ -11261,6 +11933,7 @@ static VALUE rogl_glGetVertexArrayIntegeri_vEXT(VALUE _obj_, VALUE _arg1_, VALUE
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* param = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVertexArrayIntegeri_vEXT, "glGetVertexArrayIntegeri_vEXT");
     rogl_pfn_glGetVertexArrayIntegeri_vEXT(vaobj, index, pname, param);
 
     return Qnil;
@@ -11273,6 +11946,7 @@ static VALUE rogl_glGetVertexArrayPointeri_vEXT(VALUE _obj_, VALUE _arg1_, VALUE
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* param = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVertexArrayPointeri_vEXT, "glGetVertexArrayPointeri_vEXT");
     rogl_pfn_glGetVertexArrayPointeri_vEXT(vaobj, index, pname, param);
 
     return Qnil;
@@ -11285,6 +11959,7 @@ static VALUE rogl_glMapNamedBufferRangeEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     ptrdiff_t length = (ptrdiff_t)NUM2UINT(_arg3_);
     unsigned int access = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMapNamedBufferRangeEXT, "glMapNamedBufferRangeEXT");
     void* retval = rogl_pfn_glMapNamedBufferRangeEXT(buffer, offset, length, access);
 
     return CPOINTER_AS_VALUE(retval);
@@ -11296,6 +11971,7 @@ static VALUE rogl_glFlushMappedNamedBufferRangeEXT(VALUE _obj_, VALUE _arg1_, VA
     ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg2_);
     ptrdiff_t length = (ptrdiff_t)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFlushMappedNamedBufferRangeEXT, "glFlushMappedNamedBufferRangeEXT");
     rogl_pfn_glFlushMappedNamedBufferRangeEXT(buffer, offset, length);
 
     return Qnil;
@@ -11308,6 +11984,7 @@ static VALUE rogl_glNamedBufferStorageEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     void* data = (void*)val2ptr(_arg3_);
     unsigned int flags = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedBufferStorageEXT, "glNamedBufferStorageEXT");
     rogl_pfn_glNamedBufferStorageEXT(buffer, size, data, flags);
 
     return Qnil;
@@ -11321,6 +11998,7 @@ static VALUE rogl_glClearNamedBufferDataEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int type = (unsigned int)NUM2UINT(_arg4_);
     void* data = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glClearNamedBufferDataEXT, "glClearNamedBufferDataEXT");
     rogl_pfn_glClearNamedBufferDataEXT(buffer, internalformat, format, type, data);
 
     return Qnil;
@@ -11336,6 +12014,7 @@ static VALUE rogl_glClearNamedBufferSubDataEXT(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int type = (unsigned int)NUM2UINT(_arg6_);
     void* data = (void*)val2ptr(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glClearNamedBufferSubDataEXT, "glClearNamedBufferSubDataEXT");
     rogl_pfn_glClearNamedBufferSubDataEXT(buffer, internalformat, offset, size, format, type, data);
 
     return Qnil;
@@ -11347,6 +12026,7 @@ static VALUE rogl_glNamedFramebufferParameteriEXT(VALUE _obj_, VALUE _arg1_, VAL
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     int param = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedFramebufferParameteriEXT, "glNamedFramebufferParameteriEXT");
     rogl_pfn_glNamedFramebufferParameteriEXT(framebuffer, pname, param);
 
     return Qnil;
@@ -11358,6 +12038,7 @@ static VALUE rogl_glGetNamedFramebufferParameterivEXT(VALUE _obj_, VALUE _arg1_,
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetNamedFramebufferParameterivEXT, "glGetNamedFramebufferParameterivEXT");
     rogl_pfn_glGetNamedFramebufferParameterivEXT(framebuffer, pname, params);
 
     return Qnil;
@@ -11369,6 +12050,7 @@ static VALUE rogl_glProgramUniform1dEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     int location = (int)NUM2INT(_arg2_);
     double x = (double)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform1dEXT, "glProgramUniform1dEXT");
     rogl_pfn_glProgramUniform1dEXT(program, location, x);
 
     return Qnil;
@@ -11381,6 +12063,7 @@ static VALUE rogl_glProgramUniform2dEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     double x = (double)NUM2DBL(_arg3_);
     double y = (double)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform2dEXT, "glProgramUniform2dEXT");
     rogl_pfn_glProgramUniform2dEXT(program, location, x, y);
 
     return Qnil;
@@ -11394,6 +12077,7 @@ static VALUE rogl_glProgramUniform3dEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     double y = (double)NUM2DBL(_arg4_);
     double z = (double)NUM2DBL(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform3dEXT, "glProgramUniform3dEXT");
     rogl_pfn_glProgramUniform3dEXT(program, location, x, y, z);
 
     return Qnil;
@@ -11408,6 +12092,7 @@ static VALUE rogl_glProgramUniform4dEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     double z = (double)NUM2DBL(_arg5_);
     double w = (double)NUM2DBL(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform4dEXT, "glProgramUniform4dEXT");
     rogl_pfn_glProgramUniform4dEXT(program, location, x, y, z, w);
 
     return Qnil;
@@ -11420,6 +12105,7 @@ static VALUE rogl_glProgramUniform1dvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     int count = (int)NUM2INT(_arg3_);
     void* value = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform1dvEXT, "glProgramUniform1dvEXT");
     rogl_pfn_glProgramUniform1dvEXT(program, location, count, value);
 
     return Qnil;
@@ -11432,6 +12118,7 @@ static VALUE rogl_glProgramUniform2dvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     int count = (int)NUM2INT(_arg3_);
     void* value = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform2dvEXT, "glProgramUniform2dvEXT");
     rogl_pfn_glProgramUniform2dvEXT(program, location, count, value);
 
     return Qnil;
@@ -11444,6 +12131,7 @@ static VALUE rogl_glProgramUniform3dvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     int count = (int)NUM2INT(_arg3_);
     void* value = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform3dvEXT, "glProgramUniform3dvEXT");
     rogl_pfn_glProgramUniform3dvEXT(program, location, count, value);
 
     return Qnil;
@@ -11456,6 +12144,7 @@ static VALUE rogl_glProgramUniform4dvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     int count = (int)NUM2INT(_arg3_);
     void* value = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniform4dvEXT, "glProgramUniform4dvEXT");
     rogl_pfn_glProgramUniform4dvEXT(program, location, count, value);
 
     return Qnil;
@@ -11469,6 +12158,7 @@ static VALUE rogl_glProgramUniformMatrix2dvEXT(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
     void* value = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniformMatrix2dvEXT, "glProgramUniformMatrix2dvEXT");
     rogl_pfn_glProgramUniformMatrix2dvEXT(program, location, count, transpose, value);
 
     return Qnil;
@@ -11482,6 +12172,7 @@ static VALUE rogl_glProgramUniformMatrix3dvEXT(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
     void* value = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniformMatrix3dvEXT, "glProgramUniformMatrix3dvEXT");
     rogl_pfn_glProgramUniformMatrix3dvEXT(program, location, count, transpose, value);
 
     return Qnil;
@@ -11495,6 +12186,7 @@ static VALUE rogl_glProgramUniformMatrix4dvEXT(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
     void* value = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniformMatrix4dvEXT, "glProgramUniformMatrix4dvEXT");
     rogl_pfn_glProgramUniformMatrix4dvEXT(program, location, count, transpose, value);
 
     return Qnil;
@@ -11508,6 +12200,7 @@ static VALUE rogl_glProgramUniformMatrix2x3dvEXT(VALUE _obj_, VALUE _arg1_, VALU
     unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
     void* value = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniformMatrix2x3dvEXT, "glProgramUniformMatrix2x3dvEXT");
     rogl_pfn_glProgramUniformMatrix2x3dvEXT(program, location, count, transpose, value);
 
     return Qnil;
@@ -11521,6 +12214,7 @@ static VALUE rogl_glProgramUniformMatrix2x4dvEXT(VALUE _obj_, VALUE _arg1_, VALU
     unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
     void* value = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniformMatrix2x4dvEXT, "glProgramUniformMatrix2x4dvEXT");
     rogl_pfn_glProgramUniformMatrix2x4dvEXT(program, location, count, transpose, value);
 
     return Qnil;
@@ -11534,6 +12228,7 @@ static VALUE rogl_glProgramUniformMatrix3x2dvEXT(VALUE _obj_, VALUE _arg1_, VALU
     unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
     void* value = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniformMatrix3x2dvEXT, "glProgramUniformMatrix3x2dvEXT");
     rogl_pfn_glProgramUniformMatrix3x2dvEXT(program, location, count, transpose, value);
 
     return Qnil;
@@ -11547,6 +12242,7 @@ static VALUE rogl_glProgramUniformMatrix3x4dvEXT(VALUE _obj_, VALUE _arg1_, VALU
     unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
     void* value = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniformMatrix3x4dvEXT, "glProgramUniformMatrix3x4dvEXT");
     rogl_pfn_glProgramUniformMatrix3x4dvEXT(program, location, count, transpose, value);
 
     return Qnil;
@@ -11560,6 +12256,7 @@ static VALUE rogl_glProgramUniformMatrix4x2dvEXT(VALUE _obj_, VALUE _arg1_, VALU
     unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
     void* value = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniformMatrix4x2dvEXT, "glProgramUniformMatrix4x2dvEXT");
     rogl_pfn_glProgramUniformMatrix4x2dvEXT(program, location, count, transpose, value);
 
     return Qnil;
@@ -11573,6 +12270,7 @@ static VALUE rogl_glProgramUniformMatrix4x3dvEXT(VALUE _obj_, VALUE _arg1_, VALU
     unsigned char transpose = (unsigned char)NUM2UINT(_arg4_);
     void* value = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniformMatrix4x3dvEXT, "glProgramUniformMatrix4x3dvEXT");
     rogl_pfn_glProgramUniformMatrix4x3dvEXT(program, location, count, transpose, value);
 
     return Qnil;
@@ -11587,6 +12285,7 @@ static VALUE rogl_glTextureBufferRangeEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg5_);
     ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureBufferRangeEXT, "glTextureBufferRangeEXT");
     rogl_pfn_glTextureBufferRangeEXT(texture, target, internalformat, buffer, offset, size);
 
     return Qnil;
@@ -11600,6 +12299,7 @@ static VALUE rogl_glTextureStorage1DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int internalformat = (unsigned int)NUM2UINT(_arg4_);
     int width = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureStorage1DEXT, "glTextureStorage1DEXT");
     rogl_pfn_glTextureStorage1DEXT(texture, target, levels, internalformat, width);
 
     return Qnil;
@@ -11614,6 +12314,7 @@ static VALUE rogl_glTextureStorage2DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     int width = (int)NUM2INT(_arg5_);
     int height = (int)NUM2INT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureStorage2DEXT, "glTextureStorage2DEXT");
     rogl_pfn_glTextureStorage2DEXT(texture, target, levels, internalformat, width, height);
 
     return Qnil;
@@ -11629,6 +12330,7 @@ static VALUE rogl_glTextureStorage3DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     int height = (int)NUM2INT(_arg6_);
     int depth = (int)NUM2INT(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureStorage3DEXT, "glTextureStorage3DEXT");
     rogl_pfn_glTextureStorage3DEXT(texture, target, levels, internalformat, width, height, depth);
 
     return Qnil;
@@ -11644,6 +12346,7 @@ static VALUE rogl_glTextureStorage2DMultisampleEXT(VALUE _obj_, VALUE _arg1_, VA
     int height = (int)NUM2INT(_arg6_);
     unsigned char fixedsamplelocations = (unsigned char)NUM2UINT(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureStorage2DMultisampleEXT, "glTextureStorage2DMultisampleEXT");
     rogl_pfn_glTextureStorage2DMultisampleEXT(texture, target, samples, internalformat, width, height, fixedsamplelocations);
 
     return Qnil;
@@ -11660,6 +12363,7 @@ static VALUE rogl_glTextureStorage3DMultisampleEXT(VALUE _obj_, VALUE _arg1_, VA
     int depth = (int)NUM2INT(_arg7_);
     unsigned char fixedsamplelocations = (unsigned char)NUM2UINT(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureStorage3DMultisampleEXT, "glTextureStorage3DMultisampleEXT");
     rogl_pfn_glTextureStorage3DMultisampleEXT(texture, target, samples, internalformat, width, height, depth, fixedsamplelocations);
 
     return Qnil;
@@ -11673,6 +12377,7 @@ static VALUE rogl_glVertexArrayBindVertexBufferEXT(VALUE _obj_, VALUE _arg1_, VA
     ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg4_);
     int stride = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexArrayBindVertexBufferEXT, "glVertexArrayBindVertexBufferEXT");
     rogl_pfn_glVertexArrayBindVertexBufferEXT(vaobj, bindingindex, buffer, offset, stride);
 
     return Qnil;
@@ -11687,6 +12392,7 @@ static VALUE rogl_glVertexArrayVertexAttribFormatEXT(VALUE _obj_, VALUE _arg1_, 
     unsigned char normalized = (unsigned char)NUM2UINT(_arg5_);
     unsigned int relativeoffset = (unsigned int)NUM2UINT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexArrayVertexAttribFormatEXT, "glVertexArrayVertexAttribFormatEXT");
     rogl_pfn_glVertexArrayVertexAttribFormatEXT(vaobj, attribindex, size, type, normalized, relativeoffset);
 
     return Qnil;
@@ -11700,6 +12406,7 @@ static VALUE rogl_glVertexArrayVertexAttribIFormatEXT(VALUE _obj_, VALUE _arg1_,
     unsigned int type = (unsigned int)NUM2UINT(_arg4_);
     unsigned int relativeoffset = (unsigned int)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexArrayVertexAttribIFormatEXT, "glVertexArrayVertexAttribIFormatEXT");
     rogl_pfn_glVertexArrayVertexAttribIFormatEXT(vaobj, attribindex, size, type, relativeoffset);
 
     return Qnil;
@@ -11713,6 +12420,7 @@ static VALUE rogl_glVertexArrayVertexAttribLFormatEXT(VALUE _obj_, VALUE _arg1_,
     unsigned int type = (unsigned int)NUM2UINT(_arg4_);
     unsigned int relativeoffset = (unsigned int)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexArrayVertexAttribLFormatEXT, "glVertexArrayVertexAttribLFormatEXT");
     rogl_pfn_glVertexArrayVertexAttribLFormatEXT(vaobj, attribindex, size, type, relativeoffset);
 
     return Qnil;
@@ -11724,6 +12432,7 @@ static VALUE rogl_glVertexArrayVertexAttribBindingEXT(VALUE _obj_, VALUE _arg1_,
     unsigned int attribindex = (unsigned int)NUM2UINT(_arg2_);
     unsigned int bindingindex = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexArrayVertexAttribBindingEXT, "glVertexArrayVertexAttribBindingEXT");
     rogl_pfn_glVertexArrayVertexAttribBindingEXT(vaobj, attribindex, bindingindex);
 
     return Qnil;
@@ -11735,6 +12444,7 @@ static VALUE rogl_glVertexArrayVertexBindingDivisorEXT(VALUE _obj_, VALUE _arg1_
     unsigned int bindingindex = (unsigned int)NUM2UINT(_arg2_);
     unsigned int divisor = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexArrayVertexBindingDivisorEXT, "glVertexArrayVertexBindingDivisorEXT");
     rogl_pfn_glVertexArrayVertexBindingDivisorEXT(vaobj, bindingindex, divisor);
 
     return Qnil;
@@ -11750,6 +12460,7 @@ static VALUE rogl_glVertexArrayVertexAttribLOffsetEXT(VALUE _obj_, VALUE _arg1_,
     int stride = (int)NUM2INT(_arg6_);
     ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexArrayVertexAttribLOffsetEXT, "glVertexArrayVertexAttribLOffsetEXT");
     rogl_pfn_glVertexArrayVertexAttribLOffsetEXT(vaobj, buffer, index, size, type, stride, offset);
 
     return Qnil;
@@ -11767,6 +12478,7 @@ static VALUE rogl_glTexturePageCommitmentEXT(VALUE _obj_, VALUE _arg1_, VALUE _a
     int depth = (int)NUM2INT(_arg8_);
     unsigned char commit = (unsigned char)NUM2UINT(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexturePageCommitmentEXT, "glTexturePageCommitmentEXT");
     rogl_pfn_glTexturePageCommitmentEXT(texture, level, xoffset, yoffset, zoffset, width, height, depth, commit);
 
     return Qnil;
@@ -11778,6 +12490,7 @@ static VALUE rogl_glVertexArrayVertexAttribDivisorEXT(VALUE _obj_, VALUE _arg1_,
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     unsigned int divisor = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexArrayVertexAttribDivisorEXT, "glVertexArrayVertexAttribDivisorEXT");
     rogl_pfn_glVertexArrayVertexAttribDivisorEXT(vaobj, index, divisor);
 
     return Qnil;
@@ -11791,6 +12504,7 @@ static VALUE rogl_glColorMaskIndexedEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned char b = (unsigned char)NUM2UINT(_arg4_);
     unsigned char a = (unsigned char)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColorMaskIndexedEXT, "glColorMaskIndexedEXT");
     rogl_pfn_glColorMaskIndexedEXT(index, r, g, b, a);
 
     return Qnil;
@@ -11803,6 +12517,7 @@ static VALUE rogl_glDrawArraysInstancedEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     int count = (int)NUM2INT(_arg3_);
     int primcount = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDrawArraysInstancedEXT, "glDrawArraysInstancedEXT");
     rogl_pfn_glDrawArraysInstancedEXT(mode, start, count, primcount);
 
     return Qnil;
@@ -11816,6 +12531,7 @@ static VALUE rogl_glDrawElementsInstancedEXT(VALUE _obj_, VALUE _arg1_, VALUE _a
     void* indices = (void*)val2ptr(_arg4_);
     int primcount = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDrawElementsInstancedEXT, "glDrawElementsInstancedEXT");
     rogl_pfn_glDrawElementsInstancedEXT(mode, count, type, indices, primcount);
 
     return Qnil;
@@ -11830,6 +12546,7 @@ static VALUE rogl_glDrawRangeElementsEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int type = (unsigned int)NUM2UINT(_arg5_);
     void* indices = (void*)val2ptr(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDrawRangeElementsEXT, "glDrawRangeElementsEXT");
     rogl_pfn_glDrawRangeElementsEXT(mode, start, end, count, type, indices);
 
     return Qnil;
@@ -11839,6 +12556,7 @@ static VALUE rogl_glFogCoordfEXT(VALUE _obj_, VALUE _arg1_)
 {
     float coord = (float)NUM2DBL(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFogCoordfEXT, "glFogCoordfEXT");
     rogl_pfn_glFogCoordfEXT(coord);
 
     return Qnil;
@@ -11848,6 +12566,7 @@ static VALUE rogl_glFogCoordfvEXT(VALUE _obj_, VALUE _arg1_)
 {
     void* coord = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFogCoordfvEXT, "glFogCoordfvEXT");
     rogl_pfn_glFogCoordfvEXT(coord);
 
     return Qnil;
@@ -11857,6 +12576,7 @@ static VALUE rogl_glFogCoorddEXT(VALUE _obj_, VALUE _arg1_)
 {
     double coord = (double)NUM2DBL(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFogCoorddEXT, "glFogCoorddEXT");
     rogl_pfn_glFogCoorddEXT(coord);
 
     return Qnil;
@@ -11866,6 +12586,7 @@ static VALUE rogl_glFogCoorddvEXT(VALUE _obj_, VALUE _arg1_)
 {
     void* coord = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFogCoorddvEXT, "glFogCoorddvEXT");
     rogl_pfn_glFogCoorddvEXT(coord);
 
     return Qnil;
@@ -11877,6 +12598,7 @@ static VALUE rogl_glFogCoordPointerEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int stride = (int)NUM2INT(_arg2_);
     void* pointer = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFogCoordPointerEXT, "glFogCoordPointerEXT");
     rogl_pfn_glFogCoordPointerEXT(type, stride, pointer);
 
     return Qnil;
@@ -11895,6 +12617,7 @@ static VALUE rogl_glBlitFramebufferEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     unsigned int mask = (unsigned int)NUM2UINT(_arg9_);
     unsigned int filter = (unsigned int)NUM2UINT(_arg10_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBlitFramebufferEXT, "glBlitFramebufferEXT");
     rogl_pfn_glBlitFramebufferEXT(srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1, mask, filter);
 
     return Qnil;
@@ -11908,6 +12631,7 @@ static VALUE rogl_glRenderbufferStorageMultisampleEXT(VALUE _obj_, VALUE _arg1_,
     int width = (int)NUM2INT(_arg4_);
     int height = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glRenderbufferStorageMultisampleEXT, "glRenderbufferStorageMultisampleEXT");
     rogl_pfn_glRenderbufferStorageMultisampleEXT(target, samples, internalformat, width, height);
 
     return Qnil;
@@ -11917,6 +12641,7 @@ static VALUE rogl_glIsRenderbufferEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int renderbuffer = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsRenderbufferEXT, "glIsRenderbufferEXT");
     unsigned char retval = rogl_pfn_glIsRenderbufferEXT(renderbuffer);
 
     return UINT2NUM(retval);
@@ -11927,6 +12652,7 @@ static VALUE rogl_glBindRenderbufferEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     unsigned int renderbuffer = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindRenderbufferEXT, "glBindRenderbufferEXT");
     rogl_pfn_glBindRenderbufferEXT(target, renderbuffer);
 
     return Qnil;
@@ -11937,6 +12663,7 @@ static VALUE rogl_glDeleteRenderbuffersEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     int n = (int)NUM2INT(_arg1_);
     void* renderbuffers = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeleteRenderbuffersEXT, "glDeleteRenderbuffersEXT");
     rogl_pfn_glDeleteRenderbuffersEXT(n, renderbuffers);
 
     return Qnil;
@@ -11947,6 +12674,7 @@ static VALUE rogl_glGenRenderbuffersEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int n = (int)NUM2INT(_arg1_);
     void* renderbuffers = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGenRenderbuffersEXT, "glGenRenderbuffersEXT");
     rogl_pfn_glGenRenderbuffersEXT(n, renderbuffers);
 
     return Qnil;
@@ -11959,6 +12687,7 @@ static VALUE rogl_glRenderbufferStorageEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     int width = (int)NUM2INT(_arg3_);
     int height = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glRenderbufferStorageEXT, "glRenderbufferStorageEXT");
     rogl_pfn_glRenderbufferStorageEXT(target, internalformat, width, height);
 
     return Qnil;
@@ -11970,6 +12699,7 @@ static VALUE rogl_glGetRenderbufferParameterivEXT(VALUE _obj_, VALUE _arg1_, VAL
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetRenderbufferParameterivEXT, "glGetRenderbufferParameterivEXT");
     rogl_pfn_glGetRenderbufferParameterivEXT(target, pname, params);
 
     return Qnil;
@@ -11979,6 +12709,7 @@ static VALUE rogl_glIsFramebufferEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int framebuffer = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsFramebufferEXT, "glIsFramebufferEXT");
     unsigned char retval = rogl_pfn_glIsFramebufferEXT(framebuffer);
 
     return UINT2NUM(retval);
@@ -11989,6 +12720,7 @@ static VALUE rogl_glBindFramebufferEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     unsigned int framebuffer = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindFramebufferEXT, "glBindFramebufferEXT");
     rogl_pfn_glBindFramebufferEXT(target, framebuffer);
 
     return Qnil;
@@ -11999,6 +12731,7 @@ static VALUE rogl_glDeleteFramebuffersEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     int n = (int)NUM2INT(_arg1_);
     void* framebuffers = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeleteFramebuffersEXT, "glDeleteFramebuffersEXT");
     rogl_pfn_glDeleteFramebuffersEXT(n, framebuffers);
 
     return Qnil;
@@ -12009,6 +12742,7 @@ static VALUE rogl_glGenFramebuffersEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int n = (int)NUM2INT(_arg1_);
     void* framebuffers = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGenFramebuffersEXT, "glGenFramebuffersEXT");
     rogl_pfn_glGenFramebuffersEXT(n, framebuffers);
 
     return Qnil;
@@ -12018,6 +12752,7 @@ static VALUE rogl_glCheckFramebufferStatusEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCheckFramebufferStatusEXT, "glCheckFramebufferStatusEXT");
     unsigned int retval = rogl_pfn_glCheckFramebufferStatusEXT(target);
 
     return UINT2NUM(retval);
@@ -12031,6 +12766,7 @@ static VALUE rogl_glFramebufferTexture1DEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int texture = (unsigned int)NUM2UINT(_arg4_);
     int level = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFramebufferTexture1DEXT, "glFramebufferTexture1DEXT");
     rogl_pfn_glFramebufferTexture1DEXT(target, attachment, textarget, texture, level);
 
     return Qnil;
@@ -12044,6 +12780,7 @@ static VALUE rogl_glFramebufferTexture2DEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int texture = (unsigned int)NUM2UINT(_arg4_);
     int level = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFramebufferTexture2DEXT, "glFramebufferTexture2DEXT");
     rogl_pfn_glFramebufferTexture2DEXT(target, attachment, textarget, texture, level);
 
     return Qnil;
@@ -12058,6 +12795,7 @@ static VALUE rogl_glFramebufferTexture3DEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
     int level = (int)NUM2INT(_arg5_);
     int zoffset = (int)NUM2INT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFramebufferTexture3DEXT, "glFramebufferTexture3DEXT");
     rogl_pfn_glFramebufferTexture3DEXT(target, attachment, textarget, texture, level, zoffset);
 
     return Qnil;
@@ -12070,6 +12808,7 @@ static VALUE rogl_glFramebufferRenderbufferEXT(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int renderbuffertarget = (unsigned int)NUM2UINT(_arg3_);
     unsigned int renderbuffer = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFramebufferRenderbufferEXT, "glFramebufferRenderbufferEXT");
     rogl_pfn_glFramebufferRenderbufferEXT(target, attachment, renderbuffertarget, renderbuffer);
 
     return Qnil;
@@ -12082,6 +12821,7 @@ static VALUE rogl_glGetFramebufferAttachmentParameterivEXT(VALUE _obj_, VALUE _a
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetFramebufferAttachmentParameterivEXT, "glGetFramebufferAttachmentParameterivEXT");
     rogl_pfn_glGetFramebufferAttachmentParameterivEXT(target, attachment, pname, params);
 
     return Qnil;
@@ -12091,6 +12831,7 @@ static VALUE rogl_glGenerateMipmapEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGenerateMipmapEXT, "glGenerateMipmapEXT");
     rogl_pfn_glGenerateMipmapEXT(target);
 
     return Qnil;
@@ -12103,6 +12844,7 @@ static VALUE rogl_glProgramEnvParameters4fvEXT(VALUE _obj_, VALUE _arg1_, VALUE 
     int count = (int)NUM2INT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramEnvParameters4fvEXT, "glProgramEnvParameters4fvEXT");
     rogl_pfn_glProgramEnvParameters4fvEXT(target, index, count, params);
 
     return Qnil;
@@ -12115,6 +12857,7 @@ static VALUE rogl_glProgramLocalParameters4fvEXT(VALUE _obj_, VALUE _arg1_, VALU
     int count = (int)NUM2INT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramLocalParameters4fvEXT, "glProgramLocalParameters4fvEXT");
     rogl_pfn_glProgramLocalParameters4fvEXT(target, index, count, params);
 
     return Qnil;
@@ -12126,6 +12869,7 @@ static VALUE rogl_glGetUniformuivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     int location = (int)NUM2INT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetUniformuivEXT, "glGetUniformuivEXT");
     rogl_pfn_glGetUniformuivEXT(program, location, params);
 
     return Qnil;
@@ -12137,6 +12881,7 @@ static VALUE rogl_glBindFragDataLocationEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int color = (unsigned int)NUM2UINT(_arg2_);
     void* name = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindFragDataLocationEXT, "glBindFragDataLocationEXT");
     rogl_pfn_glBindFragDataLocationEXT(program, color, name);
 
     return Qnil;
@@ -12147,6 +12892,7 @@ static VALUE rogl_glGetFragDataLocationEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int program = (unsigned int)NUM2UINT(_arg1_);
     void* name = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetFragDataLocationEXT, "glGetFragDataLocationEXT");
     int retval = rogl_pfn_glGetFragDataLocationEXT(program, name);
 
     return INT2NUM(retval);
@@ -12157,6 +12903,7 @@ static VALUE rogl_glUniform1uiEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int location = (int)NUM2INT(_arg1_);
     unsigned int v0 = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform1uiEXT, "glUniform1uiEXT");
     rogl_pfn_glUniform1uiEXT(location, v0);
 
     return Qnil;
@@ -12168,6 +12915,7 @@ static VALUE rogl_glUniform2uiEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     unsigned int v0 = (unsigned int)NUM2UINT(_arg2_);
     unsigned int v1 = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform2uiEXT, "glUniform2uiEXT");
     rogl_pfn_glUniform2uiEXT(location, v0, v1);
 
     return Qnil;
@@ -12180,6 +12928,7 @@ static VALUE rogl_glUniform3uiEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     unsigned int v1 = (unsigned int)NUM2UINT(_arg3_);
     unsigned int v2 = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform3uiEXT, "glUniform3uiEXT");
     rogl_pfn_glUniform3uiEXT(location, v0, v1, v2);
 
     return Qnil;
@@ -12193,6 +12942,7 @@ static VALUE rogl_glUniform4uiEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     unsigned int v2 = (unsigned int)NUM2UINT(_arg4_);
     unsigned int v3 = (unsigned int)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform4uiEXT, "glUniform4uiEXT");
     rogl_pfn_glUniform4uiEXT(location, v0, v1, v2, v3);
 
     return Qnil;
@@ -12204,6 +12954,7 @@ static VALUE rogl_glUniform1uivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     int count = (int)NUM2INT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform1uivEXT, "glUniform1uivEXT");
     rogl_pfn_glUniform1uivEXT(location, count, value);
 
     return Qnil;
@@ -12215,6 +12966,7 @@ static VALUE rogl_glUniform2uivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     int count = (int)NUM2INT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform2uivEXT, "glUniform2uivEXT");
     rogl_pfn_glUniform2uivEXT(location, count, value);
 
     return Qnil;
@@ -12226,6 +12978,7 @@ static VALUE rogl_glUniform3uivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     int count = (int)NUM2INT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform3uivEXT, "glUniform3uivEXT");
     rogl_pfn_glUniform3uivEXT(location, count, value);
 
     return Qnil;
@@ -12237,6 +12990,7 @@ static VALUE rogl_glUniform4uivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     int count = (int)NUM2INT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniform4uivEXT, "glUniform4uivEXT");
     rogl_pfn_glUniform4uivEXT(location, count, value);
 
     return Qnil;
@@ -12250,6 +13004,7 @@ static VALUE rogl_glGetHistogramEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     unsigned int type = (unsigned int)NUM2UINT(_arg4_);
     void* values = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetHistogramEXT, "glGetHistogramEXT");
     rogl_pfn_glGetHistogramEXT(target, reset, format, type, values);
 
     return Qnil;
@@ -12261,6 +13016,7 @@ static VALUE rogl_glGetHistogramParameterfvEXT(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetHistogramParameterfvEXT, "glGetHistogramParameterfvEXT");
     rogl_pfn_glGetHistogramParameterfvEXT(target, pname, params);
 
     return Qnil;
@@ -12272,6 +13028,7 @@ static VALUE rogl_glGetHistogramParameterivEXT(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetHistogramParameterivEXT, "glGetHistogramParameterivEXT");
     rogl_pfn_glGetHistogramParameterivEXT(target, pname, params);
 
     return Qnil;
@@ -12285,6 +13042,7 @@ static VALUE rogl_glGetMinmaxEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     unsigned int type = (unsigned int)NUM2UINT(_arg4_);
     void* values = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMinmaxEXT, "glGetMinmaxEXT");
     rogl_pfn_glGetMinmaxEXT(target, reset, format, type, values);
 
     return Qnil;
@@ -12296,6 +13054,7 @@ static VALUE rogl_glGetMinmaxParameterfvEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMinmaxParameterfvEXT, "glGetMinmaxParameterfvEXT");
     rogl_pfn_glGetMinmaxParameterfvEXT(target, pname, params);
 
     return Qnil;
@@ -12307,6 +13066,7 @@ static VALUE rogl_glGetMinmaxParameterivEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMinmaxParameterivEXT, "glGetMinmaxParameterivEXT");
     rogl_pfn_glGetMinmaxParameterivEXT(target, pname, params);
 
     return Qnil;
@@ -12319,6 +13079,7 @@ static VALUE rogl_glHistogramEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     unsigned int internalformat = (unsigned int)NUM2UINT(_arg3_);
     unsigned char sink = (unsigned char)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glHistogramEXT, "glHistogramEXT");
     rogl_pfn_glHistogramEXT(target, width, internalformat, sink);
 
     return Qnil;
@@ -12330,6 +13091,7 @@ static VALUE rogl_glMinmaxEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _ar
     unsigned int internalformat = (unsigned int)NUM2UINT(_arg2_);
     unsigned char sink = (unsigned char)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMinmaxEXT, "glMinmaxEXT");
     rogl_pfn_glMinmaxEXT(target, internalformat, sink);
 
     return Qnil;
@@ -12339,6 +13101,7 @@ static VALUE rogl_glResetHistogramEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glResetHistogramEXT, "glResetHistogramEXT");
     rogl_pfn_glResetHistogramEXT(target);
 
     return Qnil;
@@ -12348,6 +13111,7 @@ static VALUE rogl_glResetMinmaxEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glResetMinmaxEXT, "glResetMinmaxEXT");
     rogl_pfn_glResetMinmaxEXT(target);
 
     return Qnil;
@@ -12358,6 +13122,7 @@ static VALUE rogl_glIndexFuncEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int func = (unsigned int)NUM2UINT(_arg1_);
     float ref = (float)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIndexFuncEXT, "glIndexFuncEXT");
     rogl_pfn_glIndexFuncEXT(func, ref);
 
     return Qnil;
@@ -12368,6 +13133,7 @@ static VALUE rogl_glIndexMaterialEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int face = (unsigned int)NUM2UINT(_arg1_);
     unsigned int mode = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIndexMaterialEXT, "glIndexMaterialEXT");
     rogl_pfn_glIndexMaterialEXT(face, mode);
 
     return Qnil;
@@ -12377,6 +13143,7 @@ static VALUE rogl_glApplyTextureEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glApplyTextureEXT, "glApplyTextureEXT");
     rogl_pfn_glApplyTextureEXT(mode);
 
     return Qnil;
@@ -12386,6 +13153,7 @@ static VALUE rogl_glTextureLightEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureLightEXT, "glTextureLightEXT");
     rogl_pfn_glTextureLightEXT(pname);
 
     return Qnil;
@@ -12396,6 +13164,7 @@ static VALUE rogl_glTextureMaterialEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int face = (unsigned int)NUM2UINT(_arg1_);
     unsigned int mode = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureMaterialEXT, "glTextureMaterialEXT");
     rogl_pfn_glTextureMaterialEXT(face, mode);
 
     return Qnil;
@@ -12408,6 +13177,7 @@ static VALUE rogl_glMultiDrawArraysEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     void* count = (void*)val2ptr(_arg3_);
     int primcount = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiDrawArraysEXT, "glMultiDrawArraysEXT");
     rogl_pfn_glMultiDrawArraysEXT(mode, first, count, primcount);
 
     return Qnil;
@@ -12421,6 +13191,7 @@ static VALUE rogl_glMultiDrawElementsEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     void* indices = (void*)val2ptr(_arg4_);
     int primcount = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiDrawElementsEXT, "glMultiDrawElementsEXT");
     rogl_pfn_glMultiDrawElementsEXT(mode, count, type, indices, primcount);
 
     return Qnil;
@@ -12431,6 +13202,7 @@ static VALUE rogl_glSampleMaskEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     float value = (float)NUM2DBL(_arg1_);
     unsigned char invert = (unsigned char)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSampleMaskEXT, "glSampleMaskEXT");
     rogl_pfn_glSampleMaskEXT(value, invert);
 
     return Qnil;
@@ -12440,6 +13212,7 @@ static VALUE rogl_glSamplePatternEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int pattern = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSamplePatternEXT, "glSamplePatternEXT");
     rogl_pfn_glSamplePatternEXT(pattern);
 
     return Qnil;
@@ -12454,6 +13227,7 @@ static VALUE rogl_glColorTableEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     unsigned int type = (unsigned int)NUM2UINT(_arg5_);
     void* table = (void*)val2ptr(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColorTableEXT, "glColorTableEXT");
     rogl_pfn_glColorTableEXT(target, internalFormat, width, format, type, table);
 
     return Qnil;
@@ -12466,6 +13240,7 @@ static VALUE rogl_glGetColorTableEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int type = (unsigned int)NUM2UINT(_arg3_);
     void* data = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetColorTableEXT, "glGetColorTableEXT");
     rogl_pfn_glGetColorTableEXT(target, format, type, data);
 
     return Qnil;
@@ -12477,6 +13252,7 @@ static VALUE rogl_glGetColorTableParameterivEXT(VALUE _obj_, VALUE _arg1_, VALUE
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetColorTableParameterivEXT, "glGetColorTableParameterivEXT");
     rogl_pfn_glGetColorTableParameterivEXT(target, pname, params);
 
     return Qnil;
@@ -12488,6 +13264,7 @@ static VALUE rogl_glGetColorTableParameterfvEXT(VALUE _obj_, VALUE _arg1_, VALUE
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetColorTableParameterfvEXT, "glGetColorTableParameterfvEXT");
     rogl_pfn_glGetColorTableParameterfvEXT(target, pname, params);
 
     return Qnil;
@@ -12499,6 +13276,7 @@ static VALUE rogl_glPixelTransformParameteriEXT(VALUE _obj_, VALUE _arg1_, VALUE
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     int param = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPixelTransformParameteriEXT, "glPixelTransformParameteriEXT");
     rogl_pfn_glPixelTransformParameteriEXT(target, pname, param);
 
     return Qnil;
@@ -12510,6 +13288,7 @@ static VALUE rogl_glPixelTransformParameterfEXT(VALUE _obj_, VALUE _arg1_, VALUE
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     float param = (float)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPixelTransformParameterfEXT, "glPixelTransformParameterfEXT");
     rogl_pfn_glPixelTransformParameterfEXT(target, pname, param);
 
     return Qnil;
@@ -12521,6 +13300,7 @@ static VALUE rogl_glPixelTransformParameterivEXT(VALUE _obj_, VALUE _arg1_, VALU
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPixelTransformParameterivEXT, "glPixelTransformParameterivEXT");
     rogl_pfn_glPixelTransformParameterivEXT(target, pname, params);
 
     return Qnil;
@@ -12532,6 +13312,7 @@ static VALUE rogl_glPixelTransformParameterfvEXT(VALUE _obj_, VALUE _arg1_, VALU
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPixelTransformParameterfvEXT, "glPixelTransformParameterfvEXT");
     rogl_pfn_glPixelTransformParameterfvEXT(target, pname, params);
 
     return Qnil;
@@ -12543,6 +13324,7 @@ static VALUE rogl_glGetPixelTransformParameterivEXT(VALUE _obj_, VALUE _arg1_, V
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPixelTransformParameterivEXT, "glGetPixelTransformParameterivEXT");
     rogl_pfn_glGetPixelTransformParameterivEXT(target, pname, params);
 
     return Qnil;
@@ -12554,6 +13336,7 @@ static VALUE rogl_glGetPixelTransformParameterfvEXT(VALUE _obj_, VALUE _arg1_, V
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPixelTransformParameterfvEXT, "glGetPixelTransformParameterfvEXT");
     rogl_pfn_glGetPixelTransformParameterfvEXT(target, pname, params);
 
     return Qnil;
@@ -12564,6 +13347,7 @@ static VALUE rogl_glPointParameterfEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     float param = (float)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPointParameterfEXT, "glPointParameterfEXT");
     rogl_pfn_glPointParameterfEXT(pname, param);
 
     return Qnil;
@@ -12574,6 +13358,7 @@ static VALUE rogl_glPointParameterfvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* params = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPointParameterfvEXT, "glPointParameterfvEXT");
     rogl_pfn_glPointParameterfvEXT(pname, params);
 
     return Qnil;
@@ -12584,6 +13369,7 @@ static VALUE rogl_glPolygonOffsetEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     float factor = (float)NUM2DBL(_arg1_);
     float bias = (float)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPolygonOffsetEXT, "glPolygonOffsetEXT");
     rogl_pfn_glPolygonOffsetEXT(factor, bias);
 
     return Qnil;
@@ -12595,6 +13381,7 @@ static VALUE rogl_glPolygonOffsetClampEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     float units = (float)NUM2DBL(_arg2_);
     float clamp = (float)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPolygonOffsetClampEXT, "glPolygonOffsetClampEXT");
     rogl_pfn_glPolygonOffsetClampEXT(factor, units, clamp);
 
     return Qnil;
@@ -12604,6 +13391,7 @@ static VALUE rogl_glProvokingVertexEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProvokingVertexEXT, "glProvokingVertexEXT");
     rogl_pfn_glProvokingVertexEXT(mode);
 
     return Qnil;
@@ -12615,6 +13403,7 @@ static VALUE rogl_glSecondaryColor3bEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     char green = (char)NUM2INT(_arg2_);
     char blue = (char)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSecondaryColor3bEXT, "glSecondaryColor3bEXT");
     rogl_pfn_glSecondaryColor3bEXT(red, green, blue);
 
     return Qnil;
@@ -12624,6 +13413,7 @@ static VALUE rogl_glSecondaryColor3bvEXT(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSecondaryColor3bvEXT, "glSecondaryColor3bvEXT");
     rogl_pfn_glSecondaryColor3bvEXT(v);
 
     return Qnil;
@@ -12635,6 +13425,7 @@ static VALUE rogl_glSecondaryColor3dEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     double green = (double)NUM2DBL(_arg2_);
     double blue = (double)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSecondaryColor3dEXT, "glSecondaryColor3dEXT");
     rogl_pfn_glSecondaryColor3dEXT(red, green, blue);
 
     return Qnil;
@@ -12644,6 +13435,7 @@ static VALUE rogl_glSecondaryColor3dvEXT(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSecondaryColor3dvEXT, "glSecondaryColor3dvEXT");
     rogl_pfn_glSecondaryColor3dvEXT(v);
 
     return Qnil;
@@ -12655,6 +13447,7 @@ static VALUE rogl_glSecondaryColor3fEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     float green = (float)NUM2DBL(_arg2_);
     float blue = (float)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSecondaryColor3fEXT, "glSecondaryColor3fEXT");
     rogl_pfn_glSecondaryColor3fEXT(red, green, blue);
 
     return Qnil;
@@ -12664,6 +13457,7 @@ static VALUE rogl_glSecondaryColor3fvEXT(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSecondaryColor3fvEXT, "glSecondaryColor3fvEXT");
     rogl_pfn_glSecondaryColor3fvEXT(v);
 
     return Qnil;
@@ -12675,6 +13469,7 @@ static VALUE rogl_glSecondaryColor3iEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     int green = (int)NUM2INT(_arg2_);
     int blue = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSecondaryColor3iEXT, "glSecondaryColor3iEXT");
     rogl_pfn_glSecondaryColor3iEXT(red, green, blue);
 
     return Qnil;
@@ -12684,6 +13479,7 @@ static VALUE rogl_glSecondaryColor3ivEXT(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSecondaryColor3ivEXT, "glSecondaryColor3ivEXT");
     rogl_pfn_glSecondaryColor3ivEXT(v);
 
     return Qnil;
@@ -12695,6 +13491,7 @@ static VALUE rogl_glSecondaryColor3sEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     short green = (short)NUM2INT(_arg2_);
     short blue = (short)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSecondaryColor3sEXT, "glSecondaryColor3sEXT");
     rogl_pfn_glSecondaryColor3sEXT(red, green, blue);
 
     return Qnil;
@@ -12704,6 +13501,7 @@ static VALUE rogl_glSecondaryColor3svEXT(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSecondaryColor3svEXT, "glSecondaryColor3svEXT");
     rogl_pfn_glSecondaryColor3svEXT(v);
 
     return Qnil;
@@ -12715,6 +13513,7 @@ static VALUE rogl_glSecondaryColor3ubEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned char green = (unsigned char)NUM2UINT(_arg2_);
     unsigned char blue = (unsigned char)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSecondaryColor3ubEXT, "glSecondaryColor3ubEXT");
     rogl_pfn_glSecondaryColor3ubEXT(red, green, blue);
 
     return Qnil;
@@ -12724,6 +13523,7 @@ static VALUE rogl_glSecondaryColor3ubvEXT(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSecondaryColor3ubvEXT, "glSecondaryColor3ubvEXT");
     rogl_pfn_glSecondaryColor3ubvEXT(v);
 
     return Qnil;
@@ -12735,6 +13535,7 @@ static VALUE rogl_glSecondaryColor3uiEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int green = (unsigned int)NUM2UINT(_arg2_);
     unsigned int blue = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSecondaryColor3uiEXT, "glSecondaryColor3uiEXT");
     rogl_pfn_glSecondaryColor3uiEXT(red, green, blue);
 
     return Qnil;
@@ -12744,6 +13545,7 @@ static VALUE rogl_glSecondaryColor3uivEXT(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSecondaryColor3uivEXT, "glSecondaryColor3uivEXT");
     rogl_pfn_glSecondaryColor3uivEXT(v);
 
     return Qnil;
@@ -12755,6 +13557,7 @@ static VALUE rogl_glSecondaryColor3usEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned short green = (unsigned short)NUM2UINT(_arg2_);
     unsigned short blue = (unsigned short)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSecondaryColor3usEXT, "glSecondaryColor3usEXT");
     rogl_pfn_glSecondaryColor3usEXT(red, green, blue);
 
     return Qnil;
@@ -12764,6 +13567,7 @@ static VALUE rogl_glSecondaryColor3usvEXT(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSecondaryColor3usvEXT, "glSecondaryColor3usvEXT");
     rogl_pfn_glSecondaryColor3usvEXT(v);
 
     return Qnil;
@@ -12776,6 +13580,7 @@ static VALUE rogl_glSecondaryColorPointerEXT(VALUE _obj_, VALUE _arg1_, VALUE _a
     int stride = (int)NUM2INT(_arg3_);
     void* pointer = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSecondaryColorPointerEXT, "glSecondaryColorPointerEXT");
     rogl_pfn_glSecondaryColorPointerEXT(size, type, stride, pointer);
 
     return Qnil;
@@ -12786,6 +13591,7 @@ static VALUE rogl_glUseShaderProgramEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int type = (unsigned int)NUM2UINT(_arg1_);
     unsigned int program = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUseShaderProgramEXT, "glUseShaderProgramEXT");
     rogl_pfn_glUseShaderProgramEXT(type, program);
 
     return Qnil;
@@ -12795,6 +13601,7 @@ static VALUE rogl_glActiveProgramEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int program = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glActiveProgramEXT, "glActiveProgramEXT");
     rogl_pfn_glActiveProgramEXT(program);
 
     return Qnil;
@@ -12805,6 +13612,7 @@ static VALUE rogl_glCreateShaderProgramEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int type = (unsigned int)NUM2UINT(_arg1_);
     void* string = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCreateShaderProgramEXT, "glCreateShaderProgramEXT");
     unsigned int retval = rogl_pfn_glCreateShaderProgramEXT(type, string);
 
     return UINT2NUM(retval);
@@ -12815,6 +13623,7 @@ static VALUE rogl_glActiveShaderProgramEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int pipeline = (unsigned int)NUM2UINT(_arg1_);
     unsigned int program = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glActiveShaderProgramEXT, "glActiveShaderProgramEXT");
     rogl_pfn_glActiveShaderProgramEXT(pipeline, program);
 
     return Qnil;
@@ -12824,6 +13633,7 @@ static VALUE rogl_glBindProgramPipelineEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int pipeline = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindProgramPipelineEXT, "glBindProgramPipelineEXT");
     rogl_pfn_glBindProgramPipelineEXT(pipeline);
 
     return Qnil;
@@ -12835,6 +13645,7 @@ static VALUE rogl_glCreateShaderProgramvEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
     int count = (int)NUM2INT(_arg2_);
     void* strings = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCreateShaderProgramvEXT, "glCreateShaderProgramvEXT");
     unsigned int retval = rogl_pfn_glCreateShaderProgramvEXT(type, count, strings);
 
     return UINT2NUM(retval);
@@ -12845,6 +13656,7 @@ static VALUE rogl_glDeleteProgramPipelinesEXT(VALUE _obj_, VALUE _arg1_, VALUE _
     int n = (int)NUM2INT(_arg1_);
     void* pipelines = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeleteProgramPipelinesEXT, "glDeleteProgramPipelinesEXT");
     rogl_pfn_glDeleteProgramPipelinesEXT(n, pipelines);
 
     return Qnil;
@@ -12855,6 +13667,7 @@ static VALUE rogl_glGenProgramPipelinesEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     int n = (int)NUM2INT(_arg1_);
     void* pipelines = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGenProgramPipelinesEXT, "glGenProgramPipelinesEXT");
     rogl_pfn_glGenProgramPipelinesEXT(n, pipelines);
 
     return Qnil;
@@ -12867,6 +13680,7 @@ static VALUE rogl_glGetProgramPipelineInfoLogEXT(VALUE _obj_, VALUE _arg1_, VALU
     void* length = (void*)val2ptr(_arg3_);
     void* infoLog = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetProgramPipelineInfoLogEXT, "glGetProgramPipelineInfoLogEXT");
     rogl_pfn_glGetProgramPipelineInfoLogEXT(pipeline, bufSize, length, infoLog);
 
     return Qnil;
@@ -12878,6 +13692,7 @@ static VALUE rogl_glGetProgramPipelineivEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetProgramPipelineivEXT, "glGetProgramPipelineivEXT");
     rogl_pfn_glGetProgramPipelineivEXT(pipeline, pname, params);
 
     return Qnil;
@@ -12887,6 +13702,7 @@ static VALUE rogl_glIsProgramPipelineEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int pipeline = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsProgramPipelineEXT, "glIsProgramPipelineEXT");
     unsigned char retval = rogl_pfn_glIsProgramPipelineEXT(pipeline);
 
     return UINT2NUM(retval);
@@ -12898,6 +13714,7 @@ static VALUE rogl_glUseProgramStagesEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int stages = (unsigned int)NUM2UINT(_arg2_);
     unsigned int program = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUseProgramStagesEXT, "glUseProgramStagesEXT");
     rogl_pfn_glUseProgramStagesEXT(pipeline, stages, program);
 
     return Qnil;
@@ -12907,6 +13724,7 @@ static VALUE rogl_glValidateProgramPipelineEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int pipeline = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glValidateProgramPipelineEXT, "glValidateProgramPipelineEXT");
     rogl_pfn_glValidateProgramPipelineEXT(pipeline);
 
     return Qnil;
@@ -12922,6 +13740,7 @@ static VALUE rogl_glBindImageTextureEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int access = (unsigned int)NUM2UINT(_arg6_);
     int format = (int)NUM2INT(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindImageTextureEXT, "glBindImageTextureEXT");
     rogl_pfn_glBindImageTextureEXT(index, texture, level, layered, layer, access, format);
 
     return Qnil;
@@ -12931,6 +13750,7 @@ static VALUE rogl_glMemoryBarrierEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int barriers = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMemoryBarrierEXT, "glMemoryBarrierEXT");
     rogl_pfn_glMemoryBarrierEXT(barriers);
 
     return Qnil;
@@ -12941,6 +13761,7 @@ static VALUE rogl_glStencilClearTagEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int stencilTagBits = (int)NUM2INT(_arg1_);
     unsigned int stencilClearTag = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glStencilClearTagEXT, "glStencilClearTagEXT");
     rogl_pfn_glStencilClearTagEXT(stencilTagBits, stencilClearTag);
 
     return Qnil;
@@ -12950,6 +13771,7 @@ static VALUE rogl_glActiveStencilFaceEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int face = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glActiveStencilFaceEXT, "glActiveStencilFaceEXT");
     rogl_pfn_glActiveStencilFaceEXT(face);
 
     return Qnil;
@@ -12965,6 +13787,7 @@ static VALUE rogl_glTexSubImage1DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int type = (unsigned int)NUM2UINT(_arg6_);
     void* pixels = (void*)val2ptr(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexSubImage1DEXT, "glTexSubImage1DEXT");
     rogl_pfn_glTexSubImage1DEXT(target, level, xoffset, width, format, type, pixels);
 
     return Qnil;
@@ -12982,6 +13805,7 @@ static VALUE rogl_glTexSubImage2DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int type = (unsigned int)NUM2UINT(_arg8_);
     void* pixels = (void*)val2ptr(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexSubImage2DEXT, "glTexSubImage2DEXT");
     rogl_pfn_glTexSubImage2DEXT(target, level, xoffset, yoffset, width, height, format, type, pixels);
 
     return Qnil;
@@ -13000,6 +13824,7 @@ static VALUE rogl_glTexImage3DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     unsigned int type = (unsigned int)NUM2UINT(_arg9_);
     void* pixels = (void*)val2ptr(_arg10_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexImage3DEXT, "glTexImage3DEXT");
     rogl_pfn_glTexImage3DEXT(target, level, internalformat, width, height, depth, border, format, type, pixels);
 
     return Qnil;
@@ -13019,6 +13844,7 @@ static VALUE rogl_glTexSubImage3DEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int type = (unsigned int)NUM2UINT(_arg10_);
     void* pixels = (void*)val2ptr(_arg11_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexSubImage3DEXT, "glTexSubImage3DEXT");
     rogl_pfn_glTexSubImage3DEXT(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels);
 
     return Qnil;
@@ -13030,6 +13856,7 @@ static VALUE rogl_glTexBufferEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     unsigned int internalformat = (unsigned int)NUM2UINT(_arg2_);
     unsigned int buffer = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexBufferEXT, "glTexBufferEXT");
     rogl_pfn_glTexBufferEXT(target, internalformat, buffer);
 
     return Qnil;
@@ -13041,6 +13868,7 @@ static VALUE rogl_glTexParameterIivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexParameterIivEXT, "glTexParameterIivEXT");
     rogl_pfn_glTexParameterIivEXT(target, pname, params);
 
     return Qnil;
@@ -13052,6 +13880,7 @@ static VALUE rogl_glTexParameterIuivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexParameterIuivEXT, "glTexParameterIuivEXT");
     rogl_pfn_glTexParameterIuivEXT(target, pname, params);
 
     return Qnil;
@@ -13063,6 +13892,7 @@ static VALUE rogl_glGetTexParameterIivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTexParameterIivEXT, "glGetTexParameterIivEXT");
     rogl_pfn_glGetTexParameterIivEXT(target, pname, params);
 
     return Qnil;
@@ -13074,6 +13904,7 @@ static VALUE rogl_glGetTexParameterIuivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTexParameterIuivEXT, "glGetTexParameterIuivEXT");
     rogl_pfn_glGetTexParameterIuivEXT(target, pname, params);
 
     return Qnil;
@@ -13086,6 +13917,7 @@ static VALUE rogl_glClearColorIiEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     int blue = (int)NUM2INT(_arg3_);
     int alpha = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glClearColorIiEXT, "glClearColorIiEXT");
     rogl_pfn_glClearColorIiEXT(red, green, blue, alpha);
 
     return Qnil;
@@ -13098,6 +13930,7 @@ static VALUE rogl_glClearColorIuiEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int blue = (unsigned int)NUM2UINT(_arg3_);
     unsigned int alpha = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glClearColorIuiEXT, "glClearColorIuiEXT");
     rogl_pfn_glClearColorIuiEXT(red, green, blue, alpha);
 
     return Qnil;
@@ -13109,6 +13942,7 @@ static VALUE rogl_glAreTexturesResidentEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     void* textures = (void*)val2ptr(_arg2_);
     void* residences = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glAreTexturesResidentEXT, "glAreTexturesResidentEXT");
     unsigned char retval = rogl_pfn_glAreTexturesResidentEXT(n, textures, residences);
 
     return UINT2NUM(retval);
@@ -13119,6 +13953,7 @@ static VALUE rogl_glBindTextureEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     unsigned int texture = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindTextureEXT, "glBindTextureEXT");
     rogl_pfn_glBindTextureEXT(target, texture);
 
     return Qnil;
@@ -13129,6 +13964,7 @@ static VALUE rogl_glDeleteTexturesEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int n = (int)NUM2INT(_arg1_);
     void* textures = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeleteTexturesEXT, "glDeleteTexturesEXT");
     rogl_pfn_glDeleteTexturesEXT(n, textures);
 
     return Qnil;
@@ -13139,6 +13975,7 @@ static VALUE rogl_glGenTexturesEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int n = (int)NUM2INT(_arg1_);
     void* textures = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGenTexturesEXT, "glGenTexturesEXT");
     rogl_pfn_glGenTexturesEXT(n, textures);
 
     return Qnil;
@@ -13148,6 +13985,7 @@ static VALUE rogl_glIsTextureEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsTextureEXT, "glIsTextureEXT");
     unsigned char retval = rogl_pfn_glIsTextureEXT(texture);
 
     return UINT2NUM(retval);
@@ -13159,6 +13997,7 @@ static VALUE rogl_glPrioritizeTexturesEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     void* textures = (void*)val2ptr(_arg2_);
     void* priorities = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPrioritizeTexturesEXT, "glPrioritizeTexturesEXT");
     rogl_pfn_glPrioritizeTexturesEXT(n, textures, priorities);
 
     return Qnil;
@@ -13168,6 +14007,7 @@ static VALUE rogl_glTextureNormalEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureNormalEXT, "glTextureNormalEXT");
     rogl_pfn_glTextureNormalEXT(mode);
 
     return Qnil;
@@ -13179,6 +14019,7 @@ static VALUE rogl_glGetQueryObjecti64vEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetQueryObjecti64vEXT, "glGetQueryObjecti64vEXT");
     rogl_pfn_glGetQueryObjecti64vEXT(id, pname, params);
 
     return Qnil;
@@ -13190,6 +14031,7 @@ static VALUE rogl_glGetQueryObjectui64vEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetQueryObjectui64vEXT, "glGetQueryObjectui64vEXT");
     rogl_pfn_glGetQueryObjectui64vEXT(id, pname, params);
 
     return Qnil;
@@ -13199,6 +14041,7 @@ static VALUE rogl_glBeginTransformFeedbackEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int primitiveMode = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBeginTransformFeedbackEXT, "glBeginTransformFeedbackEXT");
     rogl_pfn_glBeginTransformFeedbackEXT(primitiveMode);
 
     return Qnil;
@@ -13206,6 +14049,7 @@ static VALUE rogl_glBeginTransformFeedbackEXT(VALUE _obj_, VALUE _arg1_)
 
 static VALUE rogl_glEndTransformFeedbackEXT(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glEndTransformFeedbackEXT, "glEndTransformFeedbackEXT");
     rogl_pfn_glEndTransformFeedbackEXT();
 
     return Qnil;
@@ -13219,6 +14063,7 @@ static VALUE rogl_glBindBufferRangeEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg4_);
     ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindBufferRangeEXT, "glBindBufferRangeEXT");
     rogl_pfn_glBindBufferRangeEXT(target, index, buffer, offset, size);
 
     return Qnil;
@@ -13231,6 +14076,7 @@ static VALUE rogl_glBindBufferOffsetEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int buffer = (unsigned int)NUM2UINT(_arg3_);
     ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindBufferOffsetEXT, "glBindBufferOffsetEXT");
     rogl_pfn_glBindBufferOffsetEXT(target, index, buffer, offset);
 
     return Qnil;
@@ -13242,6 +14088,7 @@ static VALUE rogl_glBindBufferBaseEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     unsigned int buffer = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindBufferBaseEXT, "glBindBufferBaseEXT");
     rogl_pfn_glBindBufferBaseEXT(target, index, buffer);
 
     return Qnil;
@@ -13254,6 +14101,7 @@ static VALUE rogl_glTransformFeedbackVaryingsEXT(VALUE _obj_, VALUE _arg1_, VALU
     void* varyings = (void*)val2ptr(_arg3_);
     unsigned int bufferMode = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTransformFeedbackVaryingsEXT, "glTransformFeedbackVaryingsEXT");
     rogl_pfn_glTransformFeedbackVaryingsEXT(program, count, varyings, bufferMode);
 
     return Qnil;
@@ -13269,6 +14117,7 @@ static VALUE rogl_glGetTransformFeedbackVaryingEXT(VALUE _obj_, VALUE _arg1_, VA
     void* type = (void*)val2ptr(_arg6_);
     void* name = (void*)val2ptr(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTransformFeedbackVaryingEXT, "glGetTransformFeedbackVaryingEXT");
     rogl_pfn_glGetTransformFeedbackVaryingEXT(program, index, bufSize, length, size, type, name);
 
     return Qnil;
@@ -13278,6 +14127,7 @@ static VALUE rogl_glArrayElementEXT(VALUE _obj_, VALUE _arg1_)
 {
     int i = (int)NUM2INT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glArrayElementEXT, "glArrayElementEXT");
     rogl_pfn_glArrayElementEXT(i);
 
     return Qnil;
@@ -13291,6 +14141,7 @@ static VALUE rogl_glColorPointerEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     int count = (int)NUM2INT(_arg4_);
     void* pointer = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColorPointerEXT, "glColorPointerEXT");
     rogl_pfn_glColorPointerEXT(size, type, stride, count, pointer);
 
     return Qnil;
@@ -13302,6 +14153,7 @@ static VALUE rogl_glDrawArraysEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     int first = (int)NUM2INT(_arg2_);
     int count = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDrawArraysEXT, "glDrawArraysEXT");
     rogl_pfn_glDrawArraysEXT(mode, first, count);
 
     return Qnil;
@@ -13313,6 +14165,7 @@ static VALUE rogl_glEdgeFlagPointerEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int count = (int)NUM2INT(_arg2_);
     void* pointer = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glEdgeFlagPointerEXT, "glEdgeFlagPointerEXT");
     rogl_pfn_glEdgeFlagPointerEXT(stride, count, pointer);
 
     return Qnil;
@@ -13323,6 +14176,7 @@ static VALUE rogl_glGetPointervEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* params = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPointervEXT, "glGetPointervEXT");
     rogl_pfn_glGetPointervEXT(pname, params);
 
     return Qnil;
@@ -13335,6 +14189,7 @@ static VALUE rogl_glIndexPointerEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     int count = (int)NUM2INT(_arg3_);
     void* pointer = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIndexPointerEXT, "glIndexPointerEXT");
     rogl_pfn_glIndexPointerEXT(type, stride, count, pointer);
 
     return Qnil;
@@ -13347,6 +14202,7 @@ static VALUE rogl_glNormalPointerEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     int count = (int)NUM2INT(_arg3_);
     void* pointer = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNormalPointerEXT, "glNormalPointerEXT");
     rogl_pfn_glNormalPointerEXT(type, stride, count, pointer);
 
     return Qnil;
@@ -13360,6 +14216,7 @@ static VALUE rogl_glTexCoordPointerEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int count = (int)NUM2INT(_arg4_);
     void* pointer = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoordPointerEXT, "glTexCoordPointerEXT");
     rogl_pfn_glTexCoordPointerEXT(size, type, stride, count, pointer);
 
     return Qnil;
@@ -13373,6 +14230,7 @@ static VALUE rogl_glVertexPointerEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     int count = (int)NUM2INT(_arg4_);
     void* pointer = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexPointerEXT, "glVertexPointerEXT");
     rogl_pfn_glVertexPointerEXT(size, type, stride, count, pointer);
 
     return Qnil;
@@ -13383,6 +14241,7 @@ static VALUE rogl_glVertexAttribL1dEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     double x = (double)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL1dEXT, "glVertexAttribL1dEXT");
     rogl_pfn_glVertexAttribL1dEXT(index, x);
 
     return Qnil;
@@ -13394,6 +14253,7 @@ static VALUE rogl_glVertexAttribL2dEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     double x = (double)NUM2DBL(_arg2_);
     double y = (double)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL2dEXT, "glVertexAttribL2dEXT");
     rogl_pfn_glVertexAttribL2dEXT(index, x, y);
 
     return Qnil;
@@ -13406,6 +14266,7 @@ static VALUE rogl_glVertexAttribL3dEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     double y = (double)NUM2DBL(_arg3_);
     double z = (double)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL3dEXT, "glVertexAttribL3dEXT");
     rogl_pfn_glVertexAttribL3dEXT(index, x, y, z);
 
     return Qnil;
@@ -13419,6 +14280,7 @@ static VALUE rogl_glVertexAttribL4dEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     double z = (double)NUM2DBL(_arg4_);
     double w = (double)NUM2DBL(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL4dEXT, "glVertexAttribL4dEXT");
     rogl_pfn_glVertexAttribL4dEXT(index, x, y, z, w);
 
     return Qnil;
@@ -13429,6 +14291,7 @@ static VALUE rogl_glVertexAttribL1dvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL1dvEXT, "glVertexAttribL1dvEXT");
     rogl_pfn_glVertexAttribL1dvEXT(index, v);
 
     return Qnil;
@@ -13439,6 +14302,7 @@ static VALUE rogl_glVertexAttribL2dvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL2dvEXT, "glVertexAttribL2dvEXT");
     rogl_pfn_glVertexAttribL2dvEXT(index, v);
 
     return Qnil;
@@ -13449,6 +14313,7 @@ static VALUE rogl_glVertexAttribL3dvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL3dvEXT, "glVertexAttribL3dvEXT");
     rogl_pfn_glVertexAttribL3dvEXT(index, v);
 
     return Qnil;
@@ -13459,6 +14324,7 @@ static VALUE rogl_glVertexAttribL4dvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL4dvEXT, "glVertexAttribL4dvEXT");
     rogl_pfn_glVertexAttribL4dvEXT(index, v);
 
     return Qnil;
@@ -13472,6 +14338,7 @@ static VALUE rogl_glVertexAttribLPointerEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
     int stride = (int)NUM2INT(_arg4_);
     void* pointer = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribLPointerEXT, "glVertexAttribLPointerEXT");
     rogl_pfn_glVertexAttribLPointerEXT(index, size, type, stride, pointer);
 
     return Qnil;
@@ -13483,6 +14350,7 @@ static VALUE rogl_glGetVertexAttribLdvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVertexAttribLdvEXT, "glGetVertexAttribLdvEXT");
     rogl_pfn_glGetVertexAttribLdvEXT(index, pname, params);
 
     return Qnil;
@@ -13490,6 +14358,7 @@ static VALUE rogl_glGetVertexAttribLdvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
 
 static VALUE rogl_glBeginVertexShaderEXT(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glBeginVertexShaderEXT, "glBeginVertexShaderEXT");
     rogl_pfn_glBeginVertexShaderEXT();
 
     return Qnil;
@@ -13497,6 +14366,7 @@ static VALUE rogl_glBeginVertexShaderEXT(VALUE _obj_)
 
 static VALUE rogl_glEndVertexShaderEXT(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glEndVertexShaderEXT, "glEndVertexShaderEXT");
     rogl_pfn_glEndVertexShaderEXT();
 
     return Qnil;
@@ -13506,6 +14376,7 @@ static VALUE rogl_glBindVertexShaderEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int id = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindVertexShaderEXT, "glBindVertexShaderEXT");
     rogl_pfn_glBindVertexShaderEXT(id);
 
     return Qnil;
@@ -13515,6 +14386,7 @@ static VALUE rogl_glGenVertexShadersEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int range = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGenVertexShadersEXT, "glGenVertexShadersEXT");
     unsigned int retval = rogl_pfn_glGenVertexShadersEXT(range);
 
     return UINT2NUM(retval);
@@ -13524,6 +14396,7 @@ static VALUE rogl_glDeleteVertexShaderEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int id = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeleteVertexShaderEXT, "glDeleteVertexShaderEXT");
     rogl_pfn_glDeleteVertexShaderEXT(id);
 
     return Qnil;
@@ -13535,6 +14408,7 @@ static VALUE rogl_glShaderOp1EXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     unsigned int res = (unsigned int)NUM2UINT(_arg2_);
     unsigned int arg1 = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glShaderOp1EXT, "glShaderOp1EXT");
     rogl_pfn_glShaderOp1EXT(op, res, arg1);
 
     return Qnil;
@@ -13547,6 +14421,7 @@ static VALUE rogl_glShaderOp2EXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     unsigned int arg1 = (unsigned int)NUM2UINT(_arg3_);
     unsigned int arg2 = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glShaderOp2EXT, "glShaderOp2EXT");
     rogl_pfn_glShaderOp2EXT(op, res, arg1, arg2);
 
     return Qnil;
@@ -13560,6 +14435,7 @@ static VALUE rogl_glShaderOp3EXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     unsigned int arg2 = (unsigned int)NUM2UINT(_arg4_);
     unsigned int arg3 = (unsigned int)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glShaderOp3EXT, "glShaderOp3EXT");
     rogl_pfn_glShaderOp3EXT(op, res, arg1, arg2, arg3);
 
     return Qnil;
@@ -13574,6 +14450,7 @@ static VALUE rogl_glSwizzleEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _a
     unsigned int outZ = (unsigned int)NUM2UINT(_arg5_);
     unsigned int outW = (unsigned int)NUM2UINT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSwizzleEXT, "glSwizzleEXT");
     rogl_pfn_glSwizzleEXT(res, in, outX, outY, outZ, outW);
 
     return Qnil;
@@ -13588,6 +14465,7 @@ static VALUE rogl_glWriteMaskEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     unsigned int outZ = (unsigned int)NUM2UINT(_arg5_);
     unsigned int outW = (unsigned int)NUM2UINT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWriteMaskEXT, "glWriteMaskEXT");
     rogl_pfn_glWriteMaskEXT(res, in, outX, outY, outZ, outW);
 
     return Qnil;
@@ -13599,6 +14477,7 @@ static VALUE rogl_glInsertComponentEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     unsigned int src = (unsigned int)NUM2UINT(_arg2_);
     unsigned int num = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glInsertComponentEXT, "glInsertComponentEXT");
     rogl_pfn_glInsertComponentEXT(res, src, num);
 
     return Qnil;
@@ -13610,6 +14489,7 @@ static VALUE rogl_glExtractComponentEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int src = (unsigned int)NUM2UINT(_arg2_);
     unsigned int num = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glExtractComponentEXT, "glExtractComponentEXT");
     rogl_pfn_glExtractComponentEXT(res, src, num);
 
     return Qnil;
@@ -13622,6 +14502,7 @@ static VALUE rogl_glGenSymbolsEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     unsigned int range = (unsigned int)NUM2UINT(_arg3_);
     unsigned int components = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGenSymbolsEXT, "glGenSymbolsEXT");
     unsigned int retval = rogl_pfn_glGenSymbolsEXT(datatype, storagetype, range, components);
 
     return UINT2NUM(retval);
@@ -13633,6 +14514,7 @@ static VALUE rogl_glSetInvariantEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     unsigned int type = (unsigned int)NUM2UINT(_arg2_);
     void* addr = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSetInvariantEXT, "glSetInvariantEXT");
     rogl_pfn_glSetInvariantEXT(id, type, addr);
 
     return Qnil;
@@ -13644,6 +14526,7 @@ static VALUE rogl_glSetLocalConstantEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int type = (unsigned int)NUM2UINT(_arg2_);
     void* addr = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSetLocalConstantEXT, "glSetLocalConstantEXT");
     rogl_pfn_glSetLocalConstantEXT(id, type, addr);
 
     return Qnil;
@@ -13654,6 +14537,7 @@ static VALUE rogl_glVariantbvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int id = (unsigned int)NUM2UINT(_arg1_);
     void* addr = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVariantbvEXT, "glVariantbvEXT");
     rogl_pfn_glVariantbvEXT(id, addr);
 
     return Qnil;
@@ -13664,6 +14548,7 @@ static VALUE rogl_glVariantsvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int id = (unsigned int)NUM2UINT(_arg1_);
     void* addr = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVariantsvEXT, "glVariantsvEXT");
     rogl_pfn_glVariantsvEXT(id, addr);
 
     return Qnil;
@@ -13674,6 +14559,7 @@ static VALUE rogl_glVariantivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int id = (unsigned int)NUM2UINT(_arg1_);
     void* addr = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVariantivEXT, "glVariantivEXT");
     rogl_pfn_glVariantivEXT(id, addr);
 
     return Qnil;
@@ -13684,6 +14570,7 @@ static VALUE rogl_glVariantfvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int id = (unsigned int)NUM2UINT(_arg1_);
     void* addr = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVariantfvEXT, "glVariantfvEXT");
     rogl_pfn_glVariantfvEXT(id, addr);
 
     return Qnil;
@@ -13694,6 +14581,7 @@ static VALUE rogl_glVariantdvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int id = (unsigned int)NUM2UINT(_arg1_);
     void* addr = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVariantdvEXT, "glVariantdvEXT");
     rogl_pfn_glVariantdvEXT(id, addr);
 
     return Qnil;
@@ -13704,6 +14592,7 @@ static VALUE rogl_glVariantubvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int id = (unsigned int)NUM2UINT(_arg1_);
     void* addr = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVariantubvEXT, "glVariantubvEXT");
     rogl_pfn_glVariantubvEXT(id, addr);
 
     return Qnil;
@@ -13714,6 +14603,7 @@ static VALUE rogl_glVariantusvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int id = (unsigned int)NUM2UINT(_arg1_);
     void* addr = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVariantusvEXT, "glVariantusvEXT");
     rogl_pfn_glVariantusvEXT(id, addr);
 
     return Qnil;
@@ -13724,6 +14614,7 @@ static VALUE rogl_glVariantuivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int id = (unsigned int)NUM2UINT(_arg1_);
     void* addr = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVariantuivEXT, "glVariantuivEXT");
     rogl_pfn_glVariantuivEXT(id, addr);
 
     return Qnil;
@@ -13736,6 +14627,7 @@ static VALUE rogl_glVariantPointerEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     unsigned int stride = (unsigned int)NUM2UINT(_arg3_);
     void* addr = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVariantPointerEXT, "glVariantPointerEXT");
     rogl_pfn_glVariantPointerEXT(id, type, stride, addr);
 
     return Qnil;
@@ -13745,6 +14637,7 @@ static VALUE rogl_glEnableVariantClientStateEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int id = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glEnableVariantClientStateEXT, "glEnableVariantClientStateEXT");
     rogl_pfn_glEnableVariantClientStateEXT(id);
 
     return Qnil;
@@ -13754,6 +14647,7 @@ static VALUE rogl_glDisableVariantClientStateEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int id = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDisableVariantClientStateEXT, "glDisableVariantClientStateEXT");
     rogl_pfn_glDisableVariantClientStateEXT(id);
 
     return Qnil;
@@ -13764,6 +14658,7 @@ static VALUE rogl_glBindLightParameterEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int light = (unsigned int)NUM2UINT(_arg1_);
     unsigned int value = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindLightParameterEXT, "glBindLightParameterEXT");
     unsigned int retval = rogl_pfn_glBindLightParameterEXT(light, value);
 
     return UINT2NUM(retval);
@@ -13774,6 +14669,7 @@ static VALUE rogl_glBindMaterialParameterEXT(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int face = (unsigned int)NUM2UINT(_arg1_);
     unsigned int value = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindMaterialParameterEXT, "glBindMaterialParameterEXT");
     unsigned int retval = rogl_pfn_glBindMaterialParameterEXT(face, value);
 
     return UINT2NUM(retval);
@@ -13785,6 +14681,7 @@ static VALUE rogl_glBindTexGenParameterEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int coord = (unsigned int)NUM2UINT(_arg2_);
     unsigned int value = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindTexGenParameterEXT, "glBindTexGenParameterEXT");
     unsigned int retval = rogl_pfn_glBindTexGenParameterEXT(unit, coord, value);
 
     return UINT2NUM(retval);
@@ -13795,6 +14692,7 @@ static VALUE rogl_glBindTextureUnitParameterEXT(VALUE _obj_, VALUE _arg1_, VALUE
     unsigned int unit = (unsigned int)NUM2UINT(_arg1_);
     unsigned int value = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindTextureUnitParameterEXT, "glBindTextureUnitParameterEXT");
     unsigned int retval = rogl_pfn_glBindTextureUnitParameterEXT(unit, value);
 
     return UINT2NUM(retval);
@@ -13804,6 +14702,7 @@ static VALUE rogl_glBindParameterEXT(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int value = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindParameterEXT, "glBindParameterEXT");
     unsigned int retval = rogl_pfn_glBindParameterEXT(value);
 
     return UINT2NUM(retval);
@@ -13814,6 +14713,7 @@ static VALUE rogl_glIsVariantEnabledEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int id = (unsigned int)NUM2UINT(_arg1_);
     unsigned int cap = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsVariantEnabledEXT, "glIsVariantEnabledEXT");
     unsigned char retval = rogl_pfn_glIsVariantEnabledEXT(id, cap);
 
     return UINT2NUM(retval);
@@ -13825,6 +14725,7 @@ static VALUE rogl_glGetVariantBooleanvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int value = (unsigned int)NUM2UINT(_arg2_);
     void* data = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVariantBooleanvEXT, "glGetVariantBooleanvEXT");
     rogl_pfn_glGetVariantBooleanvEXT(id, value, data);
 
     return Qnil;
@@ -13836,6 +14737,7 @@ static VALUE rogl_glGetVariantIntegervEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int value = (unsigned int)NUM2UINT(_arg2_);
     void* data = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVariantIntegervEXT, "glGetVariantIntegervEXT");
     rogl_pfn_glGetVariantIntegervEXT(id, value, data);
 
     return Qnil;
@@ -13847,6 +14749,7 @@ static VALUE rogl_glGetVariantFloatvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int value = (unsigned int)NUM2UINT(_arg2_);
     void* data = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVariantFloatvEXT, "glGetVariantFloatvEXT");
     rogl_pfn_glGetVariantFloatvEXT(id, value, data);
 
     return Qnil;
@@ -13858,6 +14761,7 @@ static VALUE rogl_glGetVariantPointervEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int value = (unsigned int)NUM2UINT(_arg2_);
     void* data = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVariantPointervEXT, "glGetVariantPointervEXT");
     rogl_pfn_glGetVariantPointervEXT(id, value, data);
 
     return Qnil;
@@ -13869,6 +14773,7 @@ static VALUE rogl_glGetInvariantBooleanvEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int value = (unsigned int)NUM2UINT(_arg2_);
     void* data = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetInvariantBooleanvEXT, "glGetInvariantBooleanvEXT");
     rogl_pfn_glGetInvariantBooleanvEXT(id, value, data);
 
     return Qnil;
@@ -13880,6 +14785,7 @@ static VALUE rogl_glGetInvariantIntegervEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int value = (unsigned int)NUM2UINT(_arg2_);
     void* data = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetInvariantIntegervEXT, "glGetInvariantIntegervEXT");
     rogl_pfn_glGetInvariantIntegervEXT(id, value, data);
 
     return Qnil;
@@ -13891,6 +14797,7 @@ static VALUE rogl_glGetInvariantFloatvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int value = (unsigned int)NUM2UINT(_arg2_);
     void* data = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetInvariantFloatvEXT, "glGetInvariantFloatvEXT");
     rogl_pfn_glGetInvariantFloatvEXT(id, value, data);
 
     return Qnil;
@@ -13902,6 +14809,7 @@ static VALUE rogl_glGetLocalConstantBooleanvEXT(VALUE _obj_, VALUE _arg1_, VALUE
     unsigned int value = (unsigned int)NUM2UINT(_arg2_);
     void* data = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetLocalConstantBooleanvEXT, "glGetLocalConstantBooleanvEXT");
     rogl_pfn_glGetLocalConstantBooleanvEXT(id, value, data);
 
     return Qnil;
@@ -13913,6 +14821,7 @@ static VALUE rogl_glGetLocalConstantIntegervEXT(VALUE _obj_, VALUE _arg1_, VALUE
     unsigned int value = (unsigned int)NUM2UINT(_arg2_);
     void* data = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetLocalConstantIntegervEXT, "glGetLocalConstantIntegervEXT");
     rogl_pfn_glGetLocalConstantIntegervEXT(id, value, data);
 
     return Qnil;
@@ -13924,6 +14833,7 @@ static VALUE rogl_glGetLocalConstantFloatvEXT(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int value = (unsigned int)NUM2UINT(_arg2_);
     void* data = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetLocalConstantFloatvEXT, "glGetLocalConstantFloatvEXT");
     rogl_pfn_glGetLocalConstantFloatvEXT(id, value, data);
 
     return Qnil;
@@ -13933,6 +14843,7 @@ static VALUE rogl_glVertexWeightfEXT(VALUE _obj_, VALUE _arg1_)
 {
     float weight = (float)NUM2DBL(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexWeightfEXT, "glVertexWeightfEXT");
     rogl_pfn_glVertexWeightfEXT(weight);
 
     return Qnil;
@@ -13942,6 +14853,7 @@ static VALUE rogl_glVertexWeightfvEXT(VALUE _obj_, VALUE _arg1_)
 {
     void* weight = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexWeightfvEXT, "glVertexWeightfvEXT");
     rogl_pfn_glVertexWeightfvEXT(weight);
 
     return Qnil;
@@ -13954,6 +14866,7 @@ static VALUE rogl_glVertexWeightPointerEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     int stride = (int)NUM2INT(_arg3_);
     void* pointer = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexWeightPointerEXT, "glVertexWeightPointerEXT");
     rogl_pfn_glVertexWeightPointerEXT(size, type, stride, pointer);
 
     return Qnil;
@@ -13965,6 +14878,7 @@ static VALUE rogl_glImportSyncEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     ptrdiff_t external_sync = (ptrdiff_t)NUM2UINT(_arg2_);
     unsigned int flags = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glImportSyncEXT, "glImportSyncEXT");
     void* retval = rogl_pfn_glImportSyncEXT(external_sync_type, external_sync, flags);
 
     return CPOINTER_AS_VALUE(retval);
@@ -13972,6 +14886,7 @@ static VALUE rogl_glImportSyncEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
 
 static VALUE rogl_glFrameTerminatorGREMEDY(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glFrameTerminatorGREMEDY, "glFrameTerminatorGREMEDY");
     rogl_pfn_glFrameTerminatorGREMEDY();
 
     return Qnil;
@@ -13982,6 +14897,7 @@ static VALUE rogl_glStringMarkerGREMEDY(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int len = (int)NUM2INT(_arg1_);
     void* string = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glStringMarkerGREMEDY, "glStringMarkerGREMEDY");
     rogl_pfn_glStringMarkerGREMEDY(len, string);
 
     return Qnil;
@@ -13993,6 +14909,7 @@ static VALUE rogl_glImageTransformParameteriHP(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     int param = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glImageTransformParameteriHP, "glImageTransformParameteriHP");
     rogl_pfn_glImageTransformParameteriHP(target, pname, param);
 
     return Qnil;
@@ -14004,6 +14921,7 @@ static VALUE rogl_glImageTransformParameterfHP(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     float param = (float)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glImageTransformParameterfHP, "glImageTransformParameterfHP");
     rogl_pfn_glImageTransformParameterfHP(target, pname, param);
 
     return Qnil;
@@ -14015,6 +14933,7 @@ static VALUE rogl_glImageTransformParameterivHP(VALUE _obj_, VALUE _arg1_, VALUE
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glImageTransformParameterivHP, "glImageTransformParameterivHP");
     rogl_pfn_glImageTransformParameterivHP(target, pname, params);
 
     return Qnil;
@@ -14026,6 +14945,7 @@ static VALUE rogl_glImageTransformParameterfvHP(VALUE _obj_, VALUE _arg1_, VALUE
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glImageTransformParameterfvHP, "glImageTransformParameterfvHP");
     rogl_pfn_glImageTransformParameterfvHP(target, pname, params);
 
     return Qnil;
@@ -14037,6 +14957,7 @@ static VALUE rogl_glGetImageTransformParameterivHP(VALUE _obj_, VALUE _arg1_, VA
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetImageTransformParameterivHP, "glGetImageTransformParameterivHP");
     rogl_pfn_glGetImageTransformParameterivHP(target, pname, params);
 
     return Qnil;
@@ -14048,6 +14969,7 @@ static VALUE rogl_glGetImageTransformParameterfvHP(VALUE _obj_, VALUE _arg1_, VA
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetImageTransformParameterfvHP, "glGetImageTransformParameterfvHP");
     rogl_pfn_glGetImageTransformParameterfvHP(target, pname, params);
 
     return Qnil;
@@ -14061,6 +14983,7 @@ static VALUE rogl_glMultiModeDrawArraysIBM(VALUE _obj_, VALUE _arg1_, VALUE _arg
     int primcount = (int)NUM2INT(_arg4_);
     int modestride = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiModeDrawArraysIBM, "glMultiModeDrawArraysIBM");
     rogl_pfn_glMultiModeDrawArraysIBM(mode, first, count, primcount, modestride);
 
     return Qnil;
@@ -14075,6 +14998,7 @@ static VALUE rogl_glMultiModeDrawElementsIBM(VALUE _obj_, VALUE _arg1_, VALUE _a
     int primcount = (int)NUM2INT(_arg5_);
     int modestride = (int)NUM2INT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiModeDrawElementsIBM, "glMultiModeDrawElementsIBM");
     rogl_pfn_glMultiModeDrawElementsIBM(mode, count, type, indices, primcount, modestride);
 
     return Qnil;
@@ -14084,6 +15008,7 @@ static VALUE rogl_glFlushStaticDataIBM(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFlushStaticDataIBM, "glFlushStaticDataIBM");
     rogl_pfn_glFlushStaticDataIBM(target);
 
     return Qnil;
@@ -14097,6 +15022,7 @@ static VALUE rogl_glColorPointerListIBM(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     void* pointer = (void*)val2ptr(_arg4_);
     int ptrstride = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColorPointerListIBM, "glColorPointerListIBM");
     rogl_pfn_glColorPointerListIBM(size, type, stride, pointer, ptrstride);
 
     return Qnil;
@@ -14110,6 +15036,7 @@ static VALUE rogl_glSecondaryColorPointerListIBM(VALUE _obj_, VALUE _arg1_, VALU
     void* pointer = (void*)val2ptr(_arg4_);
     int ptrstride = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSecondaryColorPointerListIBM, "glSecondaryColorPointerListIBM");
     rogl_pfn_glSecondaryColorPointerListIBM(size, type, stride, pointer, ptrstride);
 
     return Qnil;
@@ -14121,6 +15048,7 @@ static VALUE rogl_glEdgeFlagPointerListIBM(VALUE _obj_, VALUE _arg1_, VALUE _arg
     void* pointer = (void*)val2ptr(_arg2_);
     int ptrstride = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glEdgeFlagPointerListIBM, "glEdgeFlagPointerListIBM");
     rogl_pfn_glEdgeFlagPointerListIBM(stride, pointer, ptrstride);
 
     return Qnil;
@@ -14133,6 +15061,7 @@ static VALUE rogl_glFogCoordPointerListIBM(VALUE _obj_, VALUE _arg1_, VALUE _arg
     void* pointer = (void*)val2ptr(_arg3_);
     int ptrstride = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFogCoordPointerListIBM, "glFogCoordPointerListIBM");
     rogl_pfn_glFogCoordPointerListIBM(type, stride, pointer, ptrstride);
 
     return Qnil;
@@ -14145,6 +15074,7 @@ static VALUE rogl_glIndexPointerListIBM(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     void* pointer = (void*)val2ptr(_arg3_);
     int ptrstride = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIndexPointerListIBM, "glIndexPointerListIBM");
     rogl_pfn_glIndexPointerListIBM(type, stride, pointer, ptrstride);
 
     return Qnil;
@@ -14157,6 +15087,7 @@ static VALUE rogl_glNormalPointerListIBM(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     void* pointer = (void*)val2ptr(_arg3_);
     int ptrstride = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNormalPointerListIBM, "glNormalPointerListIBM");
     rogl_pfn_glNormalPointerListIBM(type, stride, pointer, ptrstride);
 
     return Qnil;
@@ -14170,6 +15101,7 @@ static VALUE rogl_glTexCoordPointerListIBM(VALUE _obj_, VALUE _arg1_, VALUE _arg
     void* pointer = (void*)val2ptr(_arg4_);
     int ptrstride = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoordPointerListIBM, "glTexCoordPointerListIBM");
     rogl_pfn_glTexCoordPointerListIBM(size, type, stride, pointer, ptrstride);
 
     return Qnil;
@@ -14183,6 +15115,7 @@ static VALUE rogl_glVertexPointerListIBM(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     void* pointer = (void*)val2ptr(_arg4_);
     int ptrstride = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexPointerListIBM, "glVertexPointerListIBM");
     rogl_pfn_glVertexPointerListIBM(size, type, stride, pointer, ptrstride);
 
     return Qnil;
@@ -14195,6 +15128,7 @@ static VALUE rogl_glBlendFuncSeparateINGR(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int sfactorAlpha = (unsigned int)NUM2UINT(_arg3_);
     unsigned int dfactorAlpha = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBlendFuncSeparateINGR, "glBlendFuncSeparateINGR");
     rogl_pfn_glBlendFuncSeparateINGR(sfactorRGB, dfactorRGB, sfactorAlpha, dfactorAlpha);
 
     return Qnil;
@@ -14202,6 +15136,7 @@ static VALUE rogl_glBlendFuncSeparateINGR(VALUE _obj_, VALUE _arg1_, VALUE _arg2
 
 static VALUE rogl_glApplyFramebufferAttachmentCMAAINTEL(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glApplyFramebufferAttachmentCMAAINTEL, "glApplyFramebufferAttachmentCMAAINTEL");
     rogl_pfn_glApplyFramebufferAttachmentCMAAINTEL();
 
     return Qnil;
@@ -14211,6 +15146,7 @@ static VALUE rogl_glSyncTextureINTEL(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSyncTextureINTEL, "glSyncTextureINTEL");
     rogl_pfn_glSyncTextureINTEL(texture);
 
     return Qnil;
@@ -14221,6 +15157,7 @@ static VALUE rogl_glUnmapTexture2DINTEL(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
     int level = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUnmapTexture2DINTEL, "glUnmapTexture2DINTEL");
     rogl_pfn_glUnmapTexture2DINTEL(texture, level);
 
     return Qnil;
@@ -14234,6 +15171,7 @@ static VALUE rogl_glMapTexture2DINTEL(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     void* stride = (void*)val2ptr(_arg4_);
     void* layout = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMapTexture2DINTEL, "glMapTexture2DINTEL");
     void* retval = rogl_pfn_glMapTexture2DINTEL(texture, level, access, stride, layout);
 
     return CPOINTER_AS_VALUE(retval);
@@ -14245,6 +15183,7 @@ static VALUE rogl_glVertexPointervINTEL(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int type = (unsigned int)NUM2UINT(_arg2_);
     void* pointer = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexPointervINTEL, "glVertexPointervINTEL");
     rogl_pfn_glVertexPointervINTEL(size, type, pointer);
 
     return Qnil;
@@ -14255,6 +15194,7 @@ static VALUE rogl_glNormalPointervINTEL(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int type = (unsigned int)NUM2UINT(_arg1_);
     void* pointer = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNormalPointervINTEL, "glNormalPointervINTEL");
     rogl_pfn_glNormalPointervINTEL(type, pointer);
 
     return Qnil;
@@ -14266,6 +15206,7 @@ static VALUE rogl_glColorPointervINTEL(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     unsigned int type = (unsigned int)NUM2UINT(_arg2_);
     void* pointer = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColorPointervINTEL, "glColorPointervINTEL");
     rogl_pfn_glColorPointervINTEL(size, type, pointer);
 
     return Qnil;
@@ -14277,6 +15218,7 @@ static VALUE rogl_glTexCoordPointervINTEL(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int type = (unsigned int)NUM2UINT(_arg2_);
     void* pointer = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoordPointervINTEL, "glTexCoordPointervINTEL");
     rogl_pfn_glTexCoordPointervINTEL(size, type, pointer);
 
     return Qnil;
@@ -14286,6 +15228,7 @@ static VALUE rogl_glBeginPerfQueryINTEL(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int queryHandle = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBeginPerfQueryINTEL, "glBeginPerfQueryINTEL");
     rogl_pfn_glBeginPerfQueryINTEL(queryHandle);
 
     return Qnil;
@@ -14296,6 +15239,7 @@ static VALUE rogl_glCreatePerfQueryINTEL(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int queryId = (unsigned int)NUM2UINT(_arg1_);
     void* queryHandle = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCreatePerfQueryINTEL, "glCreatePerfQueryINTEL");
     rogl_pfn_glCreatePerfQueryINTEL(queryId, queryHandle);
 
     return Qnil;
@@ -14305,6 +15249,7 @@ static VALUE rogl_glDeletePerfQueryINTEL(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int queryHandle = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeletePerfQueryINTEL, "glDeletePerfQueryINTEL");
     rogl_pfn_glDeletePerfQueryINTEL(queryHandle);
 
     return Qnil;
@@ -14314,6 +15259,7 @@ static VALUE rogl_glEndPerfQueryINTEL(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int queryHandle = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glEndPerfQueryINTEL, "glEndPerfQueryINTEL");
     rogl_pfn_glEndPerfQueryINTEL(queryHandle);
 
     return Qnil;
@@ -14323,6 +15269,7 @@ static VALUE rogl_glGetFirstPerfQueryIdINTEL(VALUE _obj_, VALUE _arg1_)
 {
     void* queryId = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetFirstPerfQueryIdINTEL, "glGetFirstPerfQueryIdINTEL");
     rogl_pfn_glGetFirstPerfQueryIdINTEL(queryId);
 
     return Qnil;
@@ -14333,6 +15280,7 @@ static VALUE rogl_glGetNextPerfQueryIdINTEL(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int queryId = (unsigned int)NUM2UINT(_arg1_);
     void* nextQueryId = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetNextPerfQueryIdINTEL, "glGetNextPerfQueryIdINTEL");
     rogl_pfn_glGetNextPerfQueryIdINTEL(queryId, nextQueryId);
 
     return Qnil;
@@ -14352,6 +15300,7 @@ static VALUE rogl_glGetPerfCounterInfoINTEL(VALUE _obj_, VALUE _arg1_, VALUE _ar
     void* counterDataTypeEnum = (void*)val2ptr(_arg10_);
     void* rawCounterMaxValue = (void*)val2ptr(_arg11_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPerfCounterInfoINTEL, "glGetPerfCounterInfoINTEL");
     rogl_pfn_glGetPerfCounterInfoINTEL(queryId, counterId, counterNameLength, counterName, counterDescLength, counterDesc, counterOffset, counterDataSize, counterTypeEnum, counterDataTypeEnum, rawCounterMaxValue);
 
     return Qnil;
@@ -14365,6 +15314,7 @@ static VALUE rogl_glGetPerfQueryDataINTEL(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     void* data = (void*)val2ptr(_arg4_);
     void* bytesWritten = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPerfQueryDataINTEL, "glGetPerfQueryDataINTEL");
     rogl_pfn_glGetPerfQueryDataINTEL(queryHandle, flags, dataSize, data, bytesWritten);
 
     return Qnil;
@@ -14375,6 +15325,7 @@ static VALUE rogl_glGetPerfQueryIdByNameINTEL(VALUE _obj_, VALUE _arg1_, VALUE _
     void* queryName = (void*)val2ptr(_arg1_);
     void* queryId = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPerfQueryIdByNameINTEL, "glGetPerfQueryIdByNameINTEL");
     rogl_pfn_glGetPerfQueryIdByNameINTEL(queryName, queryId);
 
     return Qnil;
@@ -14390,6 +15341,7 @@ static VALUE rogl_glGetPerfQueryInfoINTEL(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     void* noInstances = (void*)val2ptr(_arg6_);
     void* capsMask = (void*)val2ptr(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPerfQueryInfoINTEL, "glGetPerfQueryInfoINTEL");
     rogl_pfn_glGetPerfQueryInfoINTEL(queryId, queryNameLength, queryName, dataSize, noCounters, noInstances, capsMask);
 
     return Qnil;
@@ -14397,6 +15349,7 @@ static VALUE rogl_glGetPerfQueryInfoINTEL(VALUE _obj_, VALUE _arg1_, VALUE _arg2
 
 static VALUE rogl_glBlendBarrierKHR(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glBlendBarrierKHR, "glBlendBarrierKHR");
     rogl_pfn_glBlendBarrierKHR();
 
     return Qnil;
@@ -14411,6 +15364,7 @@ static VALUE rogl_glDebugMessageControlKHR(VALUE _obj_, VALUE _arg1_, VALUE _arg
     void* ids = (void*)val2ptr(_arg5_);
     unsigned char enabled = (unsigned char)NUM2UINT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDebugMessageControlKHR, "glDebugMessageControlKHR");
     rogl_pfn_glDebugMessageControlKHR(source, type, severity, count, ids, enabled);
 
     return Qnil;
@@ -14425,6 +15379,7 @@ static VALUE rogl_glDebugMessageInsertKHR(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     int length = (int)NUM2INT(_arg5_);
     void* buf = (void*)val2ptr(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDebugMessageInsertKHR, "glDebugMessageInsertKHR");
     rogl_pfn_glDebugMessageInsertKHR(source, type, id, severity, length, buf);
 
     return Qnil;
@@ -14435,6 +15390,7 @@ static VALUE rogl_glDebugMessageCallbackKHR(VALUE _obj_, VALUE _arg1_, VALUE _ar
     void* callback = (void*)val2ptr(_arg1_);
     void* userParam = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDebugMessageCallbackKHR, "glDebugMessageCallbackKHR");
     rogl_pfn_glDebugMessageCallbackKHR(callback, userParam);
 
     return Qnil;
@@ -14451,6 +15407,7 @@ static VALUE rogl_glGetDebugMessageLogKHR(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     void* lengths = (void*)val2ptr(_arg7_);
     void* messageLog = (void*)val2ptr(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetDebugMessageLogKHR, "glGetDebugMessageLogKHR");
     unsigned int retval = rogl_pfn_glGetDebugMessageLogKHR(count, bufSize, sources, types, ids, severities, lengths, messageLog);
 
     return UINT2NUM(retval);
@@ -14463,6 +15420,7 @@ static VALUE rogl_glPushDebugGroupKHR(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     int length = (int)NUM2INT(_arg3_);
     void* message = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPushDebugGroupKHR, "glPushDebugGroupKHR");
     rogl_pfn_glPushDebugGroupKHR(source, id, length, message);
 
     return Qnil;
@@ -14470,6 +15428,7 @@ static VALUE rogl_glPushDebugGroupKHR(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
 
 static VALUE rogl_glPopDebugGroupKHR(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glPopDebugGroupKHR, "glPopDebugGroupKHR");
     rogl_pfn_glPopDebugGroupKHR();
 
     return Qnil;
@@ -14482,6 +15441,7 @@ static VALUE rogl_glObjectLabelKHR(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     int length = (int)NUM2INT(_arg3_);
     void* label = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glObjectLabelKHR, "glObjectLabelKHR");
     rogl_pfn_glObjectLabelKHR(identifier, name, length, label);
 
     return Qnil;
@@ -14495,6 +15455,7 @@ static VALUE rogl_glGetObjectLabelKHR(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     void* length = (void*)val2ptr(_arg4_);
     void* label = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetObjectLabelKHR, "glGetObjectLabelKHR");
     rogl_pfn_glGetObjectLabelKHR(identifier, name, bufSize, length, label);
 
     return Qnil;
@@ -14506,6 +15467,7 @@ static VALUE rogl_glObjectPtrLabelKHR(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     int length = (int)NUM2INT(_arg2_);
     void* label = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glObjectPtrLabelKHR, "glObjectPtrLabelKHR");
     rogl_pfn_glObjectPtrLabelKHR(ptr, length, label);
 
     return Qnil;
@@ -14518,6 +15480,7 @@ static VALUE rogl_glGetObjectPtrLabelKHR(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     void* length = (void*)val2ptr(_arg3_);
     void* label = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetObjectPtrLabelKHR, "glGetObjectPtrLabelKHR");
     rogl_pfn_glGetObjectPtrLabelKHR(ptr, bufSize, length, label);
 
     return Qnil;
@@ -14528,6 +15491,7 @@ static VALUE rogl_glGetPointervKHR(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* params = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPointervKHR, "glGetPointervKHR");
     rogl_pfn_glGetPointervKHR(pname, params);
 
     return Qnil;
@@ -14535,6 +15499,7 @@ static VALUE rogl_glGetPointervKHR(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 
 static VALUE rogl_glGetGraphicsResetStatusKHR(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetGraphicsResetStatusKHR, "glGetGraphicsResetStatusKHR");
     unsigned int retval = rogl_pfn_glGetGraphicsResetStatusKHR();
 
     return UINT2NUM(retval);
@@ -14551,6 +15516,7 @@ static VALUE rogl_glReadnPixelsKHR(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     int bufSize = (int)NUM2INT(_arg7_);
     void* data = (void*)val2ptr(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReadnPixelsKHR, "glReadnPixelsKHR");
     rogl_pfn_glReadnPixelsKHR(x, y, width, height, format, type, bufSize, data);
 
     return Qnil;
@@ -14563,6 +15529,7 @@ static VALUE rogl_glGetnUniformfvKHR(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     int bufSize = (int)NUM2INT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetnUniformfvKHR, "glGetnUniformfvKHR");
     rogl_pfn_glGetnUniformfvKHR(program, location, bufSize, params);
 
     return Qnil;
@@ -14575,6 +15542,7 @@ static VALUE rogl_glGetnUniformivKHR(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     int bufSize = (int)NUM2INT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetnUniformivKHR, "glGetnUniformivKHR");
     rogl_pfn_glGetnUniformivKHR(program, location, bufSize, params);
 
     return Qnil;
@@ -14587,6 +15555,7 @@ static VALUE rogl_glGetnUniformuivKHR(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     int bufSize = (int)NUM2INT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetnUniformuivKHR, "glGetnUniformuivKHR");
     rogl_pfn_glGetnUniformuivKHR(program, location, bufSize, params);
 
     return Qnil;
@@ -14594,6 +15563,7 @@ static VALUE rogl_glGetnUniformuivKHR(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
 
 static VALUE rogl_glResizeBuffersMESA(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glResizeBuffersMESA, "glResizeBuffersMESA");
     rogl_pfn_glResizeBuffersMESA();
 
     return Qnil;
@@ -14604,6 +15574,7 @@ static VALUE rogl_glWindowPos2dMESA(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     double x = (double)NUM2DBL(_arg1_);
     double y = (double)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos2dMESA, "glWindowPos2dMESA");
     rogl_pfn_glWindowPos2dMESA(x, y);
 
     return Qnil;
@@ -14613,6 +15584,7 @@ static VALUE rogl_glWindowPos2dvMESA(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos2dvMESA, "glWindowPos2dvMESA");
     rogl_pfn_glWindowPos2dvMESA(v);
 
     return Qnil;
@@ -14623,6 +15595,7 @@ static VALUE rogl_glWindowPos2fMESA(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     float x = (float)NUM2DBL(_arg1_);
     float y = (float)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos2fMESA, "glWindowPos2fMESA");
     rogl_pfn_glWindowPos2fMESA(x, y);
 
     return Qnil;
@@ -14632,6 +15605,7 @@ static VALUE rogl_glWindowPos2fvMESA(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos2fvMESA, "glWindowPos2fvMESA");
     rogl_pfn_glWindowPos2fvMESA(v);
 
     return Qnil;
@@ -14642,6 +15616,7 @@ static VALUE rogl_glWindowPos2iMESA(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int x = (int)NUM2INT(_arg1_);
     int y = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos2iMESA, "glWindowPos2iMESA");
     rogl_pfn_glWindowPos2iMESA(x, y);
 
     return Qnil;
@@ -14651,6 +15626,7 @@ static VALUE rogl_glWindowPos2ivMESA(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos2ivMESA, "glWindowPos2ivMESA");
     rogl_pfn_glWindowPos2ivMESA(v);
 
     return Qnil;
@@ -14661,6 +15637,7 @@ static VALUE rogl_glWindowPos2sMESA(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     short x = (short)NUM2INT(_arg1_);
     short y = (short)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos2sMESA, "glWindowPos2sMESA");
     rogl_pfn_glWindowPos2sMESA(x, y);
 
     return Qnil;
@@ -14670,6 +15647,7 @@ static VALUE rogl_glWindowPos2svMESA(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos2svMESA, "glWindowPos2svMESA");
     rogl_pfn_glWindowPos2svMESA(v);
 
     return Qnil;
@@ -14681,6 +15659,7 @@ static VALUE rogl_glWindowPos3dMESA(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     double y = (double)NUM2DBL(_arg2_);
     double z = (double)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos3dMESA, "glWindowPos3dMESA");
     rogl_pfn_glWindowPos3dMESA(x, y, z);
 
     return Qnil;
@@ -14690,6 +15669,7 @@ static VALUE rogl_glWindowPos3dvMESA(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos3dvMESA, "glWindowPos3dvMESA");
     rogl_pfn_glWindowPos3dvMESA(v);
 
     return Qnil;
@@ -14701,6 +15681,7 @@ static VALUE rogl_glWindowPos3fMESA(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     float y = (float)NUM2DBL(_arg2_);
     float z = (float)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos3fMESA, "glWindowPos3fMESA");
     rogl_pfn_glWindowPos3fMESA(x, y, z);
 
     return Qnil;
@@ -14710,6 +15691,7 @@ static VALUE rogl_glWindowPos3fvMESA(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos3fvMESA, "glWindowPos3fvMESA");
     rogl_pfn_glWindowPos3fvMESA(v);
 
     return Qnil;
@@ -14721,6 +15703,7 @@ static VALUE rogl_glWindowPos3iMESA(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     int y = (int)NUM2INT(_arg2_);
     int z = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos3iMESA, "glWindowPos3iMESA");
     rogl_pfn_glWindowPos3iMESA(x, y, z);
 
     return Qnil;
@@ -14730,6 +15713,7 @@ static VALUE rogl_glWindowPos3ivMESA(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos3ivMESA, "glWindowPos3ivMESA");
     rogl_pfn_glWindowPos3ivMESA(v);
 
     return Qnil;
@@ -14741,6 +15725,7 @@ static VALUE rogl_glWindowPos3sMESA(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     short y = (short)NUM2INT(_arg2_);
     short z = (short)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos3sMESA, "glWindowPos3sMESA");
     rogl_pfn_glWindowPos3sMESA(x, y, z);
 
     return Qnil;
@@ -14750,6 +15735,7 @@ static VALUE rogl_glWindowPos3svMESA(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos3svMESA, "glWindowPos3svMESA");
     rogl_pfn_glWindowPos3svMESA(v);
 
     return Qnil;
@@ -14762,6 +15748,7 @@ static VALUE rogl_glWindowPos4dMESA(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     double z = (double)NUM2DBL(_arg3_);
     double w = (double)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos4dMESA, "glWindowPos4dMESA");
     rogl_pfn_glWindowPos4dMESA(x, y, z, w);
 
     return Qnil;
@@ -14771,6 +15758,7 @@ static VALUE rogl_glWindowPos4dvMESA(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos4dvMESA, "glWindowPos4dvMESA");
     rogl_pfn_glWindowPos4dvMESA(v);
 
     return Qnil;
@@ -14783,6 +15771,7 @@ static VALUE rogl_glWindowPos4fMESA(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     float z = (float)NUM2DBL(_arg3_);
     float w = (float)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos4fMESA, "glWindowPos4fMESA");
     rogl_pfn_glWindowPos4fMESA(x, y, z, w);
 
     return Qnil;
@@ -14792,6 +15781,7 @@ static VALUE rogl_glWindowPos4fvMESA(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos4fvMESA, "glWindowPos4fvMESA");
     rogl_pfn_glWindowPos4fvMESA(v);
 
     return Qnil;
@@ -14804,6 +15794,7 @@ static VALUE rogl_glWindowPos4iMESA(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     int z = (int)NUM2INT(_arg3_);
     int w = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos4iMESA, "glWindowPos4iMESA");
     rogl_pfn_glWindowPos4iMESA(x, y, z, w);
 
     return Qnil;
@@ -14813,6 +15804,7 @@ static VALUE rogl_glWindowPos4ivMESA(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos4ivMESA, "glWindowPos4ivMESA");
     rogl_pfn_glWindowPos4ivMESA(v);
 
     return Qnil;
@@ -14825,6 +15817,7 @@ static VALUE rogl_glWindowPos4sMESA(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     short z = (short)NUM2INT(_arg3_);
     short w = (short)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos4sMESA, "glWindowPos4sMESA");
     rogl_pfn_glWindowPos4sMESA(x, y, z, w);
 
     return Qnil;
@@ -14834,6 +15827,7 @@ static VALUE rogl_glWindowPos4svMESA(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowPos4svMESA, "glWindowPos4svMESA");
     rogl_pfn_glWindowPos4svMESA(v);
 
     return Qnil;
@@ -14843,6 +15837,7 @@ static VALUE rogl_glBeginConditionalRenderNVX(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int id = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBeginConditionalRenderNVX, "glBeginConditionalRenderNVX");
     rogl_pfn_glBeginConditionalRenderNVX(id);
 
     return Qnil;
@@ -14850,6 +15845,7 @@ static VALUE rogl_glBeginConditionalRenderNVX(VALUE _obj_, VALUE _arg1_)
 
 static VALUE rogl_glEndConditionalRenderNVX(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glEndConditionalRenderNVX, "glEndConditionalRenderNVX");
     rogl_pfn_glEndConditionalRenderNVX();
 
     return Qnil;
@@ -14863,6 +15859,7 @@ static VALUE rogl_glMultiDrawArraysIndirectBindlessNV(VALUE _obj_, VALUE _arg1_,
     int stride = (int)NUM2INT(_arg4_);
     int vertexBufferCount = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiDrawArraysIndirectBindlessNV, "glMultiDrawArraysIndirectBindlessNV");
     rogl_pfn_glMultiDrawArraysIndirectBindlessNV(mode, indirect, drawCount, stride, vertexBufferCount);
 
     return Qnil;
@@ -14877,6 +15874,7 @@ static VALUE rogl_glMultiDrawElementsIndirectBindlessNV(VALUE _obj_, VALUE _arg1
     int stride = (int)NUM2INT(_arg5_);
     int vertexBufferCount = (int)NUM2INT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiDrawElementsIndirectBindlessNV, "glMultiDrawElementsIndirectBindlessNV");
     rogl_pfn_glMultiDrawElementsIndirectBindlessNV(mode, type, indirect, drawCount, stride, vertexBufferCount);
 
     return Qnil;
@@ -14891,6 +15889,7 @@ static VALUE rogl_glMultiDrawArraysIndirectBindlessCountNV(VALUE _obj_, VALUE _a
     int stride = (int)NUM2INT(_arg5_);
     int vertexBufferCount = (int)NUM2INT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiDrawArraysIndirectBindlessCountNV, "glMultiDrawArraysIndirectBindlessCountNV");
     rogl_pfn_glMultiDrawArraysIndirectBindlessCountNV(mode, indirect, drawCount, maxDrawCount, stride, vertexBufferCount);
 
     return Qnil;
@@ -14906,6 +15905,7 @@ static VALUE rogl_glMultiDrawElementsIndirectBindlessCountNV(VALUE _obj_, VALUE 
     int stride = (int)NUM2INT(_arg6_);
     int vertexBufferCount = (int)NUM2INT(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiDrawElementsIndirectBindlessCountNV, "glMultiDrawElementsIndirectBindlessCountNV");
     rogl_pfn_glMultiDrawElementsIndirectBindlessCountNV(mode, type, indirect, drawCount, maxDrawCount, stride, vertexBufferCount);
 
     return Qnil;
@@ -14915,6 +15915,7 @@ static VALUE rogl_glGetTextureHandleNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTextureHandleNV, "glGetTextureHandleNV");
     unsigned long long retval = rogl_pfn_glGetTextureHandleNV(texture);
 
     return ULL2NUM(retval);
@@ -14925,6 +15926,7 @@ static VALUE rogl_glGetTextureSamplerHandleNV(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
     unsigned int sampler = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTextureSamplerHandleNV, "glGetTextureSamplerHandleNV");
     unsigned long long retval = rogl_pfn_glGetTextureSamplerHandleNV(texture, sampler);
 
     return ULL2NUM(retval);
@@ -14934,6 +15936,7 @@ static VALUE rogl_glMakeTextureHandleResidentNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned long long handle = (unsigned long long)NUM2ULL(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMakeTextureHandleResidentNV, "glMakeTextureHandleResidentNV");
     rogl_pfn_glMakeTextureHandleResidentNV(handle);
 
     return Qnil;
@@ -14943,6 +15946,7 @@ static VALUE rogl_glMakeTextureHandleNonResidentNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned long long handle = (unsigned long long)NUM2ULL(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMakeTextureHandleNonResidentNV, "glMakeTextureHandleNonResidentNV");
     rogl_pfn_glMakeTextureHandleNonResidentNV(handle);
 
     return Qnil;
@@ -14956,6 +15960,7 @@ static VALUE rogl_glGetImageHandleNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     int layer = (int)NUM2INT(_arg4_);
     unsigned int format = (unsigned int)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetImageHandleNV, "glGetImageHandleNV");
     unsigned long long retval = rogl_pfn_glGetImageHandleNV(texture, level, layered, layer, format);
 
     return ULL2NUM(retval);
@@ -14966,6 +15971,7 @@ static VALUE rogl_glMakeImageHandleResidentNV(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned long long handle = (unsigned long long)NUM2ULL(_arg1_);
     unsigned int access = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMakeImageHandleResidentNV, "glMakeImageHandleResidentNV");
     rogl_pfn_glMakeImageHandleResidentNV(handle, access);
 
     return Qnil;
@@ -14975,6 +15981,7 @@ static VALUE rogl_glMakeImageHandleNonResidentNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned long long handle = (unsigned long long)NUM2ULL(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMakeImageHandleNonResidentNV, "glMakeImageHandleNonResidentNV");
     rogl_pfn_glMakeImageHandleNonResidentNV(handle);
 
     return Qnil;
@@ -14985,6 +15992,7 @@ static VALUE rogl_glUniformHandleui64NV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int location = (int)NUM2INT(_arg1_);
     unsigned long long value = (unsigned long long)NUM2ULL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniformHandleui64NV, "glUniformHandleui64NV");
     rogl_pfn_glUniformHandleui64NV(location, value);
 
     return Qnil;
@@ -14996,6 +16004,7 @@ static VALUE rogl_glUniformHandleui64vNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     int count = (int)NUM2INT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniformHandleui64vNV, "glUniformHandleui64vNV");
     rogl_pfn_glUniformHandleui64vNV(location, count, value);
 
     return Qnil;
@@ -15007,6 +16016,7 @@ static VALUE rogl_glProgramUniformHandleui64NV(VALUE _obj_, VALUE _arg1_, VALUE 
     int location = (int)NUM2INT(_arg2_);
     unsigned long long value = (unsigned long long)NUM2ULL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniformHandleui64NV, "glProgramUniformHandleui64NV");
     rogl_pfn_glProgramUniformHandleui64NV(program, location, value);
 
     return Qnil;
@@ -15019,6 +16029,7 @@ static VALUE rogl_glProgramUniformHandleui64vNV(VALUE _obj_, VALUE _arg1_, VALUE
     int count = (int)NUM2INT(_arg3_);
     void* values = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniformHandleui64vNV, "glProgramUniformHandleui64vNV");
     rogl_pfn_glProgramUniformHandleui64vNV(program, location, count, values);
 
     return Qnil;
@@ -15028,6 +16039,7 @@ static VALUE rogl_glIsTextureHandleResidentNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned long long handle = (unsigned long long)NUM2ULL(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsTextureHandleResidentNV, "glIsTextureHandleResidentNV");
     unsigned char retval = rogl_pfn_glIsTextureHandleResidentNV(handle);
 
     return UINT2NUM(retval);
@@ -15037,6 +16049,7 @@ static VALUE rogl_glIsImageHandleResidentNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned long long handle = (unsigned long long)NUM2ULL(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsImageHandleResidentNV, "glIsImageHandleResidentNV");
     unsigned char retval = rogl_pfn_glIsImageHandleResidentNV(handle);
 
     return UINT2NUM(retval);
@@ -15047,6 +16060,7 @@ static VALUE rogl_glBlendParameteriNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     int value = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBlendParameteriNV, "glBlendParameteriNV");
     rogl_pfn_glBlendParameteriNV(pname, value);
 
     return Qnil;
@@ -15054,6 +16068,7 @@ static VALUE rogl_glBlendParameteriNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 
 static VALUE rogl_glBlendBarrierNV(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glBlendBarrierNV, "glBlendBarrierNV");
     rogl_pfn_glBlendBarrierNV();
 
     return Qnil;
@@ -15064,6 +16079,7 @@ static VALUE rogl_glCreateStatesNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int n = (int)NUM2INT(_arg1_);
     void* states = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCreateStatesNV, "glCreateStatesNV");
     rogl_pfn_glCreateStatesNV(n, states);
 
     return Qnil;
@@ -15074,6 +16090,7 @@ static VALUE rogl_glDeleteStatesNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int n = (int)NUM2INT(_arg1_);
     void* states = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeleteStatesNV, "glDeleteStatesNV");
     rogl_pfn_glDeleteStatesNV(n, states);
 
     return Qnil;
@@ -15083,6 +16100,7 @@ static VALUE rogl_glIsStateNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int state = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsStateNV, "glIsStateNV");
     unsigned char retval = rogl_pfn_glIsStateNV(state);
 
     return UINT2NUM(retval);
@@ -15093,6 +16111,7 @@ static VALUE rogl_glStateCaptureNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int state = (unsigned int)NUM2UINT(_arg1_);
     unsigned int mode = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glStateCaptureNV, "glStateCaptureNV");
     rogl_pfn_glStateCaptureNV(state, mode);
 
     return Qnil;
@@ -15103,6 +16122,7 @@ static VALUE rogl_glGetCommandHeaderNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int tokenID = (unsigned int)NUM2UINT(_arg1_);
     unsigned int size = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetCommandHeaderNV, "glGetCommandHeaderNV");
     unsigned int retval = rogl_pfn_glGetCommandHeaderNV(tokenID, size);
 
     return UINT2NUM(retval);
@@ -15112,6 +16132,7 @@ static VALUE rogl_glGetStageIndexNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int shadertype = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetStageIndexNV, "glGetStageIndexNV");
     unsigned short retval = rogl_pfn_glGetStageIndexNV(shadertype);
 
     return UINT2NUM(retval);
@@ -15125,6 +16146,7 @@ static VALUE rogl_glDrawCommandsNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     void* sizes = (void*)val2ptr(_arg4_);
     unsigned int count = (unsigned int)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDrawCommandsNV, "glDrawCommandsNV");
     rogl_pfn_glDrawCommandsNV(primitiveMode, buffer, indirects, sizes, count);
 
     return Qnil;
@@ -15137,6 +16159,7 @@ static VALUE rogl_glDrawCommandsAddressNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     void* sizes = (void*)val2ptr(_arg3_);
     unsigned int count = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDrawCommandsAddressNV, "glDrawCommandsAddressNV");
     rogl_pfn_glDrawCommandsAddressNV(primitiveMode, indirects, sizes, count);
 
     return Qnil;
@@ -15151,6 +16174,7 @@ static VALUE rogl_glDrawCommandsStatesNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     void* fbos = (void*)val2ptr(_arg5_);
     unsigned int count = (unsigned int)NUM2UINT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDrawCommandsStatesNV, "glDrawCommandsStatesNV");
     rogl_pfn_glDrawCommandsStatesNV(buffer, indirects, sizes, states, fbos, count);
 
     return Qnil;
@@ -15164,6 +16188,7 @@ static VALUE rogl_glDrawCommandsStatesAddressNV(VALUE _obj_, VALUE _arg1_, VALUE
     void* fbos = (void*)val2ptr(_arg4_);
     unsigned int count = (unsigned int)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDrawCommandsStatesAddressNV, "glDrawCommandsStatesAddressNV");
     rogl_pfn_glDrawCommandsStatesAddressNV(indirects, sizes, states, fbos, count);
 
     return Qnil;
@@ -15174,6 +16199,7 @@ static VALUE rogl_glCreateCommandListsNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     int n = (int)NUM2INT(_arg1_);
     void* lists = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCreateCommandListsNV, "glCreateCommandListsNV");
     rogl_pfn_glCreateCommandListsNV(n, lists);
 
     return Qnil;
@@ -15184,6 +16210,7 @@ static VALUE rogl_glDeleteCommandListsNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     int n = (int)NUM2INT(_arg1_);
     void* lists = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeleteCommandListsNV, "glDeleteCommandListsNV");
     rogl_pfn_glDeleteCommandListsNV(n, lists);
 
     return Qnil;
@@ -15193,6 +16220,7 @@ static VALUE rogl_glIsCommandListNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int list = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsCommandListNV, "glIsCommandListNV");
     unsigned char retval = rogl_pfn_glIsCommandListNV(list);
 
     return UINT2NUM(retval);
@@ -15208,6 +16236,7 @@ static VALUE rogl_glListDrawCommandsStatesClientNV(VALUE _obj_, VALUE _arg1_, VA
     void* fbos = (void*)val2ptr(_arg6_);
     unsigned int count = (unsigned int)NUM2UINT(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glListDrawCommandsStatesClientNV, "glListDrawCommandsStatesClientNV");
     rogl_pfn_glListDrawCommandsStatesClientNV(list, segment, indirects, sizes, states, fbos, count);
 
     return Qnil;
@@ -15218,6 +16247,7 @@ static VALUE rogl_glCommandListSegmentsNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int list = (unsigned int)NUM2UINT(_arg1_);
     unsigned int segments = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCommandListSegmentsNV, "glCommandListSegmentsNV");
     rogl_pfn_glCommandListSegmentsNV(list, segments);
 
     return Qnil;
@@ -15227,6 +16257,7 @@ static VALUE rogl_glCompileCommandListNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int list = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCompileCommandListNV, "glCompileCommandListNV");
     rogl_pfn_glCompileCommandListNV(list);
 
     return Qnil;
@@ -15236,6 +16267,7 @@ static VALUE rogl_glCallCommandListNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int list = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCallCommandListNV, "glCallCommandListNV");
     rogl_pfn_glCallCommandListNV(list);
 
     return Qnil;
@@ -15246,6 +16278,7 @@ static VALUE rogl_glBeginConditionalRenderNV(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int id = (unsigned int)NUM2UINT(_arg1_);
     unsigned int mode = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBeginConditionalRenderNV, "glBeginConditionalRenderNV");
     rogl_pfn_glBeginConditionalRenderNV(id, mode);
 
     return Qnil;
@@ -15253,6 +16286,7 @@ static VALUE rogl_glBeginConditionalRenderNV(VALUE _obj_, VALUE _arg1_, VALUE _a
 
 static VALUE rogl_glEndConditionalRenderNV(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glEndConditionalRenderNV, "glEndConditionalRenderNV");
     rogl_pfn_glEndConditionalRenderNV();
 
     return Qnil;
@@ -15263,6 +16297,7 @@ static VALUE rogl_glSubpixelPrecisionBiasNV(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int xbits = (unsigned int)NUM2UINT(_arg1_);
     unsigned int ybits = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSubpixelPrecisionBiasNV, "glSubpixelPrecisionBiasNV");
     rogl_pfn_glSubpixelPrecisionBiasNV(xbits, ybits);
 
     return Qnil;
@@ -15273,6 +16308,7 @@ static VALUE rogl_glConservativeRasterParameterfNV(VALUE _obj_, VALUE _arg1_, VA
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     float value = (float)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glConservativeRasterParameterfNV, "glConservativeRasterParameterfNV");
     rogl_pfn_glConservativeRasterParameterfNV(pname, value);
 
     return Qnil;
@@ -15296,6 +16332,7 @@ static VALUE rogl_glCopyImageSubDataNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int height = (int)NUM2INT(_arg14_);
     int depth = (int)NUM2INT(_arg15_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyImageSubDataNV, "glCopyImageSubDataNV");
     rogl_pfn_glCopyImageSubDataNV(srcName, srcTarget, srcLevel, srcX, srcY, srcZ, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, width, height, depth);
 
     return Qnil;
@@ -15306,6 +16343,7 @@ static VALUE rogl_glDepthRangedNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     double zNear = (double)NUM2DBL(_arg1_);
     double zFar = (double)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDepthRangedNV, "glDepthRangedNV");
     rogl_pfn_glDepthRangedNV(zNear, zFar);
 
     return Qnil;
@@ -15315,6 +16353,7 @@ static VALUE rogl_glClearDepthdNV(VALUE _obj_, VALUE _arg1_)
 {
     double depth = (double)NUM2DBL(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glClearDepthdNV, "glClearDepthdNV");
     rogl_pfn_glClearDepthdNV(depth);
 
     return Qnil;
@@ -15325,6 +16364,7 @@ static VALUE rogl_glDepthBoundsdNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     double zmin = (double)NUM2DBL(_arg1_);
     double zmax = (double)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDepthBoundsdNV, "glDepthBoundsdNV");
     rogl_pfn_glDepthBoundsdNV(zmin, zmax);
 
     return Qnil;
@@ -15344,6 +16384,7 @@ static VALUE rogl_glDrawTextureNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     float s1 = (float)NUM2DBL(_arg10_);
     float t1 = (float)NUM2DBL(_arg11_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDrawTextureNV, "glDrawTextureNV");
     rogl_pfn_glDrawTextureNV(texture, sampler, x0, y0, x1, y1, z, s0, t0, s1, t1);
 
     return Qnil;
@@ -15361,6 +16402,7 @@ static VALUE rogl_glMapControlPointsNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     unsigned char packed = (unsigned char)NUM2UINT(_arg8_);
     void* points = (void*)val2ptr(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMapControlPointsNV, "glMapControlPointsNV");
     rogl_pfn_glMapControlPointsNV(target, index, type, ustride, vstride, uorder, vorder, packed, points);
 
     return Qnil;
@@ -15372,6 +16414,7 @@ static VALUE rogl_glMapParameterivNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMapParameterivNV, "glMapParameterivNV");
     rogl_pfn_glMapParameterivNV(target, pname, params);
 
     return Qnil;
@@ -15383,6 +16426,7 @@ static VALUE rogl_glMapParameterfvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMapParameterfvNV, "glMapParameterfvNV");
     rogl_pfn_glMapParameterfvNV(target, pname, params);
 
     return Qnil;
@@ -15398,6 +16442,7 @@ static VALUE rogl_glGetMapControlPointsNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned char packed = (unsigned char)NUM2UINT(_arg6_);
     void* points = (void*)val2ptr(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMapControlPointsNV, "glGetMapControlPointsNV");
     rogl_pfn_glGetMapControlPointsNV(target, index, type, ustride, vstride, packed, points);
 
     return Qnil;
@@ -15409,6 +16454,7 @@ static VALUE rogl_glGetMapParameterivNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMapParameterivNV, "glGetMapParameterivNV");
     rogl_pfn_glGetMapParameterivNV(target, pname, params);
 
     return Qnil;
@@ -15420,6 +16466,7 @@ static VALUE rogl_glGetMapParameterfvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMapParameterfvNV, "glGetMapParameterfvNV");
     rogl_pfn_glGetMapParameterfvNV(target, pname, params);
 
     return Qnil;
@@ -15432,6 +16479,7 @@ static VALUE rogl_glGetMapAttribParameterivNV(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMapAttribParameterivNV, "glGetMapAttribParameterivNV");
     rogl_pfn_glGetMapAttribParameterivNV(target, index, pname, params);
 
     return Qnil;
@@ -15444,6 +16492,7 @@ static VALUE rogl_glGetMapAttribParameterfvNV(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMapAttribParameterfvNV, "glGetMapAttribParameterfvNV");
     rogl_pfn_glGetMapAttribParameterfvNV(target, index, pname, params);
 
     return Qnil;
@@ -15454,6 +16503,7 @@ static VALUE rogl_glEvalMapsNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     unsigned int mode = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glEvalMapsNV, "glEvalMapsNV");
     rogl_pfn_glEvalMapsNV(target, mode);
 
     return Qnil;
@@ -15465,6 +16515,7 @@ static VALUE rogl_glGetMultisamplefvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     void* val = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMultisamplefvNV, "glGetMultisamplefvNV");
     rogl_pfn_glGetMultisamplefvNV(pname, index, val);
 
     return Qnil;
@@ -15475,6 +16526,7 @@ static VALUE rogl_glSampleMaskIndexedNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     unsigned int mask = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSampleMaskIndexedNV, "glSampleMaskIndexedNV");
     rogl_pfn_glSampleMaskIndexedNV(index, mask);
 
     return Qnil;
@@ -15485,6 +16537,7 @@ static VALUE rogl_glTexRenderbufferNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     unsigned int renderbuffer = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexRenderbufferNV, "glTexRenderbufferNV");
     rogl_pfn_glTexRenderbufferNV(target, renderbuffer);
 
     return Qnil;
@@ -15495,6 +16548,7 @@ static VALUE rogl_glDeleteFencesNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int n = (int)NUM2INT(_arg1_);
     void* fences = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeleteFencesNV, "glDeleteFencesNV");
     rogl_pfn_glDeleteFencesNV(n, fences);
 
     return Qnil;
@@ -15505,6 +16559,7 @@ static VALUE rogl_glGenFencesNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int n = (int)NUM2INT(_arg1_);
     void* fences = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGenFencesNV, "glGenFencesNV");
     rogl_pfn_glGenFencesNV(n, fences);
 
     return Qnil;
@@ -15514,6 +16569,7 @@ static VALUE rogl_glIsFenceNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int fence = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsFenceNV, "glIsFenceNV");
     unsigned char retval = rogl_pfn_glIsFenceNV(fence);
 
     return UINT2NUM(retval);
@@ -15523,6 +16579,7 @@ static VALUE rogl_glTestFenceNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int fence = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTestFenceNV, "glTestFenceNV");
     unsigned char retval = rogl_pfn_glTestFenceNV(fence);
 
     return UINT2NUM(retval);
@@ -15534,6 +16591,7 @@ static VALUE rogl_glGetFenceivNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetFenceivNV, "glGetFenceivNV");
     rogl_pfn_glGetFenceivNV(fence, pname, params);
 
     return Qnil;
@@ -15543,6 +16601,7 @@ static VALUE rogl_glFinishFenceNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int fence = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFinishFenceNV, "glFinishFenceNV");
     rogl_pfn_glFinishFenceNV(fence);
 
     return Qnil;
@@ -15553,6 +16612,7 @@ static VALUE rogl_glSetFenceNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int fence = (unsigned int)NUM2UINT(_arg1_);
     unsigned int condition = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSetFenceNV, "glSetFenceNV");
     rogl_pfn_glSetFenceNV(fence, condition);
 
     return Qnil;
@@ -15562,6 +16622,7 @@ static VALUE rogl_glFragmentCoverageColorNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int color = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFragmentCoverageColorNV, "glFragmentCoverageColorNV");
     rogl_pfn_glFragmentCoverageColorNV(color);
 
     return Qnil;
@@ -15577,6 +16638,7 @@ static VALUE rogl_glProgramNamedParameter4fNV(VALUE _obj_, VALUE _arg1_, VALUE _
     float z = (float)NUM2DBL(_arg6_);
     float w = (float)NUM2DBL(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramNamedParameter4fNV, "glProgramNamedParameter4fNV");
     rogl_pfn_glProgramNamedParameter4fNV(id, len, name, x, y, z, w);
 
     return Qnil;
@@ -15589,6 +16651,7 @@ static VALUE rogl_glProgramNamedParameter4fvNV(VALUE _obj_, VALUE _arg1_, VALUE 
     void* name = (void*)val2ptr(_arg3_);
     void* v = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramNamedParameter4fvNV, "glProgramNamedParameter4fvNV");
     rogl_pfn_glProgramNamedParameter4fvNV(id, len, name, v);
 
     return Qnil;
@@ -15604,6 +16667,7 @@ static VALUE rogl_glProgramNamedParameter4dNV(VALUE _obj_, VALUE _arg1_, VALUE _
     double z = (double)NUM2DBL(_arg6_);
     double w = (double)NUM2DBL(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramNamedParameter4dNV, "glProgramNamedParameter4dNV");
     rogl_pfn_glProgramNamedParameter4dNV(id, len, name, x, y, z, w);
 
     return Qnil;
@@ -15616,6 +16680,7 @@ static VALUE rogl_glProgramNamedParameter4dvNV(VALUE _obj_, VALUE _arg1_, VALUE 
     void* name = (void*)val2ptr(_arg3_);
     void* v = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramNamedParameter4dvNV, "glProgramNamedParameter4dvNV");
     rogl_pfn_glProgramNamedParameter4dvNV(id, len, name, v);
 
     return Qnil;
@@ -15628,6 +16693,7 @@ static VALUE rogl_glGetProgramNamedParameterfvNV(VALUE _obj_, VALUE _arg1_, VALU
     void* name = (void*)val2ptr(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetProgramNamedParameterfvNV, "glGetProgramNamedParameterfvNV");
     rogl_pfn_glGetProgramNamedParameterfvNV(id, len, name, params);
 
     return Qnil;
@@ -15640,6 +16706,7 @@ static VALUE rogl_glGetProgramNamedParameterdvNV(VALUE _obj_, VALUE _arg1_, VALU
     void* name = (void*)val2ptr(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetProgramNamedParameterdvNV, "glGetProgramNamedParameterdvNV");
     rogl_pfn_glGetProgramNamedParameterdvNV(id, len, name, params);
 
     return Qnil;
@@ -15650,6 +16717,7 @@ static VALUE rogl_glCoverageModulationTableNV(VALUE _obj_, VALUE _arg1_, VALUE _
     int n = (int)NUM2INT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCoverageModulationTableNV, "glCoverageModulationTableNV");
     rogl_pfn_glCoverageModulationTableNV(n, v);
 
     return Qnil;
@@ -15660,6 +16728,7 @@ static VALUE rogl_glGetCoverageModulationTableNV(VALUE _obj_, VALUE _arg1_, VALU
     int bufsize = (int)NUM2INT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetCoverageModulationTableNV, "glGetCoverageModulationTableNV");
     rogl_pfn_glGetCoverageModulationTableNV(bufsize, v);
 
     return Qnil;
@@ -15669,6 +16738,7 @@ static VALUE rogl_glCoverageModulationNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int components = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCoverageModulationNV, "glCoverageModulationNV");
     rogl_pfn_glCoverageModulationNV(components);
 
     return Qnil;
@@ -15683,6 +16753,7 @@ static VALUE rogl_glRenderbufferStorageMultisampleCoverageNV(VALUE _obj_, VALUE 
     int width = (int)NUM2INT(_arg5_);
     int height = (int)NUM2INT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glRenderbufferStorageMultisampleCoverageNV, "glRenderbufferStorageMultisampleCoverageNV");
     rogl_pfn_glRenderbufferStorageMultisampleCoverageNV(target, coverageSamples, colorSamples, internalformat, width, height);
 
     return Qnil;
@@ -15693,6 +16764,7 @@ static VALUE rogl_glProgramVertexLimitNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     int limit = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramVertexLimitNV, "glProgramVertexLimitNV");
     rogl_pfn_glProgramVertexLimitNV(target, limit);
 
     return Qnil;
@@ -15705,6 +16777,7 @@ static VALUE rogl_glFramebufferTextureEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int texture = (unsigned int)NUM2UINT(_arg3_);
     int level = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFramebufferTextureEXT, "glFramebufferTextureEXT");
     rogl_pfn_glFramebufferTextureEXT(target, attachment, texture, level);
 
     return Qnil;
@@ -15718,6 +16791,7 @@ static VALUE rogl_glFramebufferTextureFaceEXT(VALUE _obj_, VALUE _arg1_, VALUE _
     int level = (int)NUM2INT(_arg4_);
     unsigned int face = (unsigned int)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFramebufferTextureFaceEXT, "glFramebufferTextureFaceEXT");
     rogl_pfn_glFramebufferTextureFaceEXT(target, attachment, texture, level, face);
 
     return Qnil;
@@ -15732,6 +16806,7 @@ static VALUE rogl_glProgramLocalParameterI4iNV(VALUE _obj_, VALUE _arg1_, VALUE 
     int z = (int)NUM2INT(_arg5_);
     int w = (int)NUM2INT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramLocalParameterI4iNV, "glProgramLocalParameterI4iNV");
     rogl_pfn_glProgramLocalParameterI4iNV(target, index, x, y, z, w);
 
     return Qnil;
@@ -15743,6 +16818,7 @@ static VALUE rogl_glProgramLocalParameterI4ivNV(VALUE _obj_, VALUE _arg1_, VALUE
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramLocalParameterI4ivNV, "glProgramLocalParameterI4ivNV");
     rogl_pfn_glProgramLocalParameterI4ivNV(target, index, params);
 
     return Qnil;
@@ -15755,6 +16831,7 @@ static VALUE rogl_glProgramLocalParametersI4ivNV(VALUE _obj_, VALUE _arg1_, VALU
     int count = (int)NUM2INT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramLocalParametersI4ivNV, "glProgramLocalParametersI4ivNV");
     rogl_pfn_glProgramLocalParametersI4ivNV(target, index, count, params);
 
     return Qnil;
@@ -15769,6 +16846,7 @@ static VALUE rogl_glProgramLocalParameterI4uiNV(VALUE _obj_, VALUE _arg1_, VALUE
     unsigned int z = (unsigned int)NUM2UINT(_arg5_);
     unsigned int w = (unsigned int)NUM2UINT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramLocalParameterI4uiNV, "glProgramLocalParameterI4uiNV");
     rogl_pfn_glProgramLocalParameterI4uiNV(target, index, x, y, z, w);
 
     return Qnil;
@@ -15780,6 +16858,7 @@ static VALUE rogl_glProgramLocalParameterI4uivNV(VALUE _obj_, VALUE _arg1_, VALU
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramLocalParameterI4uivNV, "glProgramLocalParameterI4uivNV");
     rogl_pfn_glProgramLocalParameterI4uivNV(target, index, params);
 
     return Qnil;
@@ -15792,6 +16871,7 @@ static VALUE rogl_glProgramLocalParametersI4uivNV(VALUE _obj_, VALUE _arg1_, VAL
     int count = (int)NUM2INT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramLocalParametersI4uivNV, "glProgramLocalParametersI4uivNV");
     rogl_pfn_glProgramLocalParametersI4uivNV(target, index, count, params);
 
     return Qnil;
@@ -15806,6 +16886,7 @@ static VALUE rogl_glProgramEnvParameterI4iNV(VALUE _obj_, VALUE _arg1_, VALUE _a
     int z = (int)NUM2INT(_arg5_);
     int w = (int)NUM2INT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramEnvParameterI4iNV, "glProgramEnvParameterI4iNV");
     rogl_pfn_glProgramEnvParameterI4iNV(target, index, x, y, z, w);
 
     return Qnil;
@@ -15817,6 +16898,7 @@ static VALUE rogl_glProgramEnvParameterI4ivNV(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramEnvParameterI4ivNV, "glProgramEnvParameterI4ivNV");
     rogl_pfn_glProgramEnvParameterI4ivNV(target, index, params);
 
     return Qnil;
@@ -15829,6 +16911,7 @@ static VALUE rogl_glProgramEnvParametersI4ivNV(VALUE _obj_, VALUE _arg1_, VALUE 
     int count = (int)NUM2INT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramEnvParametersI4ivNV, "glProgramEnvParametersI4ivNV");
     rogl_pfn_glProgramEnvParametersI4ivNV(target, index, count, params);
 
     return Qnil;
@@ -15843,6 +16926,7 @@ static VALUE rogl_glProgramEnvParameterI4uiNV(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int z = (unsigned int)NUM2UINT(_arg5_);
     unsigned int w = (unsigned int)NUM2UINT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramEnvParameterI4uiNV, "glProgramEnvParameterI4uiNV");
     rogl_pfn_glProgramEnvParameterI4uiNV(target, index, x, y, z, w);
 
     return Qnil;
@@ -15854,6 +16938,7 @@ static VALUE rogl_glProgramEnvParameterI4uivNV(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramEnvParameterI4uivNV, "glProgramEnvParameterI4uivNV");
     rogl_pfn_glProgramEnvParameterI4uivNV(target, index, params);
 
     return Qnil;
@@ -15866,6 +16951,7 @@ static VALUE rogl_glProgramEnvParametersI4uivNV(VALUE _obj_, VALUE _arg1_, VALUE
     int count = (int)NUM2INT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramEnvParametersI4uivNV, "glProgramEnvParametersI4uivNV");
     rogl_pfn_glProgramEnvParametersI4uivNV(target, index, count, params);
 
     return Qnil;
@@ -15877,6 +16963,7 @@ static VALUE rogl_glGetProgramLocalParameterIivNV(VALUE _obj_, VALUE _arg1_, VAL
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetProgramLocalParameterIivNV, "glGetProgramLocalParameterIivNV");
     rogl_pfn_glGetProgramLocalParameterIivNV(target, index, params);
 
     return Qnil;
@@ -15888,6 +16975,7 @@ static VALUE rogl_glGetProgramLocalParameterIuivNV(VALUE _obj_, VALUE _arg1_, VA
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetProgramLocalParameterIuivNV, "glGetProgramLocalParameterIuivNV");
     rogl_pfn_glGetProgramLocalParameterIuivNV(target, index, params);
 
     return Qnil;
@@ -15899,6 +16987,7 @@ static VALUE rogl_glGetProgramEnvParameterIivNV(VALUE _obj_, VALUE _arg1_, VALUE
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetProgramEnvParameterIivNV, "glGetProgramEnvParameterIivNV");
     rogl_pfn_glGetProgramEnvParameterIivNV(target, index, params);
 
     return Qnil;
@@ -15910,6 +16999,7 @@ static VALUE rogl_glGetProgramEnvParameterIuivNV(VALUE _obj_, VALUE _arg1_, VALU
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetProgramEnvParameterIuivNV, "glGetProgramEnvParameterIuivNV");
     rogl_pfn_glGetProgramEnvParameterIuivNV(target, index, params);
 
     return Qnil;
@@ -15921,6 +17011,7 @@ static VALUE rogl_glProgramSubroutineParametersuivNV(VALUE _obj_, VALUE _arg1_, 
     int count = (int)NUM2INT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramSubroutineParametersuivNV, "glProgramSubroutineParametersuivNV");
     rogl_pfn_glProgramSubroutineParametersuivNV(target, count, params);
 
     return Qnil;
@@ -15932,6 +17023,7 @@ static VALUE rogl_glGetProgramSubroutineParameteruivNV(VALUE _obj_, VALUE _arg1_
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     void* param = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetProgramSubroutineParameteruivNV, "glGetProgramSubroutineParameteruivNV");
     rogl_pfn_glGetProgramSubroutineParameteruivNV(target, index, param);
 
     return Qnil;
@@ -15942,6 +17034,7 @@ static VALUE rogl_glVertex2hNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned short x = (unsigned short)NUM2UINT(_arg1_);
     unsigned short y = (unsigned short)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertex2hNV, "glVertex2hNV");
     rogl_pfn_glVertex2hNV(x, y);
 
     return Qnil;
@@ -15951,6 +17044,7 @@ static VALUE rogl_glVertex2hvNV(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertex2hvNV, "glVertex2hvNV");
     rogl_pfn_glVertex2hvNV(v);
 
     return Qnil;
@@ -15962,6 +17056,7 @@ static VALUE rogl_glVertex3hNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _a
     unsigned short y = (unsigned short)NUM2UINT(_arg2_);
     unsigned short z = (unsigned short)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertex3hNV, "glVertex3hNV");
     rogl_pfn_glVertex3hNV(x, y, z);
 
     return Qnil;
@@ -15971,6 +17066,7 @@ static VALUE rogl_glVertex3hvNV(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertex3hvNV, "glVertex3hvNV");
     rogl_pfn_glVertex3hvNV(v);
 
     return Qnil;
@@ -15983,6 +17079,7 @@ static VALUE rogl_glVertex4hNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _a
     unsigned short z = (unsigned short)NUM2UINT(_arg3_);
     unsigned short w = (unsigned short)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertex4hNV, "glVertex4hNV");
     rogl_pfn_glVertex4hNV(x, y, z, w);
 
     return Qnil;
@@ -15992,6 +17089,7 @@ static VALUE rogl_glVertex4hvNV(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertex4hvNV, "glVertex4hvNV");
     rogl_pfn_glVertex4hvNV(v);
 
     return Qnil;
@@ -16003,6 +17101,7 @@ static VALUE rogl_glNormal3hNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _a
     unsigned short ny = (unsigned short)NUM2UINT(_arg2_);
     unsigned short nz = (unsigned short)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNormal3hNV, "glNormal3hNV");
     rogl_pfn_glNormal3hNV(nx, ny, nz);
 
     return Qnil;
@@ -16012,6 +17111,7 @@ static VALUE rogl_glNormal3hvNV(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNormal3hvNV, "glNormal3hvNV");
     rogl_pfn_glNormal3hvNV(v);
 
     return Qnil;
@@ -16023,6 +17123,7 @@ static VALUE rogl_glColor3hNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _ar
     unsigned short green = (unsigned short)NUM2UINT(_arg2_);
     unsigned short blue = (unsigned short)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColor3hNV, "glColor3hNV");
     rogl_pfn_glColor3hNV(red, green, blue);
 
     return Qnil;
@@ -16032,6 +17133,7 @@ static VALUE rogl_glColor3hvNV(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColor3hvNV, "glColor3hvNV");
     rogl_pfn_glColor3hvNV(v);
 
     return Qnil;
@@ -16044,6 +17146,7 @@ static VALUE rogl_glColor4hNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _ar
     unsigned short blue = (unsigned short)NUM2UINT(_arg3_);
     unsigned short alpha = (unsigned short)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColor4hNV, "glColor4hNV");
     rogl_pfn_glColor4hNV(red, green, blue, alpha);
 
     return Qnil;
@@ -16053,6 +17156,7 @@ static VALUE rogl_glColor4hvNV(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColor4hvNV, "glColor4hvNV");
     rogl_pfn_glColor4hvNV(v);
 
     return Qnil;
@@ -16062,6 +17166,7 @@ static VALUE rogl_glTexCoord1hNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned short s = (unsigned short)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord1hNV, "glTexCoord1hNV");
     rogl_pfn_glTexCoord1hNV(s);
 
     return Qnil;
@@ -16071,6 +17176,7 @@ static VALUE rogl_glTexCoord1hvNV(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord1hvNV, "glTexCoord1hvNV");
     rogl_pfn_glTexCoord1hvNV(v);
 
     return Qnil;
@@ -16081,6 +17187,7 @@ static VALUE rogl_glTexCoord2hNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned short s = (unsigned short)NUM2UINT(_arg1_);
     unsigned short t = (unsigned short)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord2hNV, "glTexCoord2hNV");
     rogl_pfn_glTexCoord2hNV(s, t);
 
     return Qnil;
@@ -16090,6 +17197,7 @@ static VALUE rogl_glTexCoord2hvNV(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord2hvNV, "glTexCoord2hvNV");
     rogl_pfn_glTexCoord2hvNV(v);
 
     return Qnil;
@@ -16101,6 +17209,7 @@ static VALUE rogl_glTexCoord3hNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     unsigned short t = (unsigned short)NUM2UINT(_arg2_);
     unsigned short r = (unsigned short)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord3hNV, "glTexCoord3hNV");
     rogl_pfn_glTexCoord3hNV(s, t, r);
 
     return Qnil;
@@ -16110,6 +17219,7 @@ static VALUE rogl_glTexCoord3hvNV(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord3hvNV, "glTexCoord3hvNV");
     rogl_pfn_glTexCoord3hvNV(v);
 
     return Qnil;
@@ -16122,6 +17232,7 @@ static VALUE rogl_glTexCoord4hNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     unsigned short r = (unsigned short)NUM2UINT(_arg3_);
     unsigned short q = (unsigned short)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord4hNV, "glTexCoord4hNV");
     rogl_pfn_glTexCoord4hNV(s, t, r, q);
 
     return Qnil;
@@ -16131,6 +17242,7 @@ static VALUE rogl_glTexCoord4hvNV(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord4hvNV, "glTexCoord4hvNV");
     rogl_pfn_glTexCoord4hvNV(v);
 
     return Qnil;
@@ -16141,6 +17253,7 @@ static VALUE rogl_glMultiTexCoord1hNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     unsigned short s = (unsigned short)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord1hNV, "glMultiTexCoord1hNV");
     rogl_pfn_glMultiTexCoord1hNV(target, s);
 
     return Qnil;
@@ -16151,6 +17264,7 @@ static VALUE rogl_glMultiTexCoord1hvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord1hvNV, "glMultiTexCoord1hvNV");
     rogl_pfn_glMultiTexCoord1hvNV(target, v);
 
     return Qnil;
@@ -16162,6 +17276,7 @@ static VALUE rogl_glMultiTexCoord2hNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     unsigned short s = (unsigned short)NUM2UINT(_arg2_);
     unsigned short t = (unsigned short)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord2hNV, "glMultiTexCoord2hNV");
     rogl_pfn_glMultiTexCoord2hNV(target, s, t);
 
     return Qnil;
@@ -16172,6 +17287,7 @@ static VALUE rogl_glMultiTexCoord2hvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord2hvNV, "glMultiTexCoord2hvNV");
     rogl_pfn_glMultiTexCoord2hvNV(target, v);
 
     return Qnil;
@@ -16184,6 +17300,7 @@ static VALUE rogl_glMultiTexCoord3hNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     unsigned short t = (unsigned short)NUM2UINT(_arg3_);
     unsigned short r = (unsigned short)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord3hNV, "glMultiTexCoord3hNV");
     rogl_pfn_glMultiTexCoord3hNV(target, s, t, r);
 
     return Qnil;
@@ -16194,6 +17311,7 @@ static VALUE rogl_glMultiTexCoord3hvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord3hvNV, "glMultiTexCoord3hvNV");
     rogl_pfn_glMultiTexCoord3hvNV(target, v);
 
     return Qnil;
@@ -16207,6 +17325,7 @@ static VALUE rogl_glMultiTexCoord4hNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     unsigned short r = (unsigned short)NUM2UINT(_arg4_);
     unsigned short q = (unsigned short)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord4hNV, "glMultiTexCoord4hNV");
     rogl_pfn_glMultiTexCoord4hNV(target, s, t, r, q);
 
     return Qnil;
@@ -16217,6 +17336,7 @@ static VALUE rogl_glMultiTexCoord4hvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord4hvNV, "glMultiTexCoord4hvNV");
     rogl_pfn_glMultiTexCoord4hvNV(target, v);
 
     return Qnil;
@@ -16226,6 +17346,7 @@ static VALUE rogl_glFogCoordhNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned short fog = (unsigned short)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFogCoordhNV, "glFogCoordhNV");
     rogl_pfn_glFogCoordhNV(fog);
 
     return Qnil;
@@ -16235,6 +17356,7 @@ static VALUE rogl_glFogCoordhvNV(VALUE _obj_, VALUE _arg1_)
 {
     void* fog = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFogCoordhvNV, "glFogCoordhvNV");
     rogl_pfn_glFogCoordhvNV(fog);
 
     return Qnil;
@@ -16246,6 +17368,7 @@ static VALUE rogl_glSecondaryColor3hNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     unsigned short green = (unsigned short)NUM2UINT(_arg2_);
     unsigned short blue = (unsigned short)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSecondaryColor3hNV, "glSecondaryColor3hNV");
     rogl_pfn_glSecondaryColor3hNV(red, green, blue);
 
     return Qnil;
@@ -16255,6 +17378,7 @@ static VALUE rogl_glSecondaryColor3hvNV(VALUE _obj_, VALUE _arg1_)
 {
     void* v = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSecondaryColor3hvNV, "glSecondaryColor3hvNV");
     rogl_pfn_glSecondaryColor3hvNV(v);
 
     return Qnil;
@@ -16264,6 +17388,7 @@ static VALUE rogl_glVertexWeighthNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned short weight = (unsigned short)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexWeighthNV, "glVertexWeighthNV");
     rogl_pfn_glVertexWeighthNV(weight);
 
     return Qnil;
@@ -16273,6 +17398,7 @@ static VALUE rogl_glVertexWeighthvNV(VALUE _obj_, VALUE _arg1_)
 {
     void* weight = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexWeighthvNV, "glVertexWeighthvNV");
     rogl_pfn_glVertexWeighthvNV(weight);
 
     return Qnil;
@@ -16283,6 +17409,7 @@ static VALUE rogl_glVertexAttrib1hNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     unsigned short x = (unsigned short)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib1hNV, "glVertexAttrib1hNV");
     rogl_pfn_glVertexAttrib1hNV(index, x);
 
     return Qnil;
@@ -16293,6 +17420,7 @@ static VALUE rogl_glVertexAttrib1hvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib1hvNV, "glVertexAttrib1hvNV");
     rogl_pfn_glVertexAttrib1hvNV(index, v);
 
     return Qnil;
@@ -16304,6 +17432,7 @@ static VALUE rogl_glVertexAttrib2hNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned short x = (unsigned short)NUM2UINT(_arg2_);
     unsigned short y = (unsigned short)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib2hNV, "glVertexAttrib2hNV");
     rogl_pfn_glVertexAttrib2hNV(index, x, y);
 
     return Qnil;
@@ -16314,6 +17443,7 @@ static VALUE rogl_glVertexAttrib2hvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib2hvNV, "glVertexAttrib2hvNV");
     rogl_pfn_glVertexAttrib2hvNV(index, v);
 
     return Qnil;
@@ -16326,6 +17456,7 @@ static VALUE rogl_glVertexAttrib3hNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned short y = (unsigned short)NUM2UINT(_arg3_);
     unsigned short z = (unsigned short)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib3hNV, "glVertexAttrib3hNV");
     rogl_pfn_glVertexAttrib3hNV(index, x, y, z);
 
     return Qnil;
@@ -16336,6 +17467,7 @@ static VALUE rogl_glVertexAttrib3hvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib3hvNV, "glVertexAttrib3hvNV");
     rogl_pfn_glVertexAttrib3hvNV(index, v);
 
     return Qnil;
@@ -16349,6 +17481,7 @@ static VALUE rogl_glVertexAttrib4hNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned short z = (unsigned short)NUM2UINT(_arg4_);
     unsigned short w = (unsigned short)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib4hNV, "glVertexAttrib4hNV");
     rogl_pfn_glVertexAttrib4hNV(index, x, y, z, w);
 
     return Qnil;
@@ -16359,6 +17492,7 @@ static VALUE rogl_glVertexAttrib4hvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib4hvNV, "glVertexAttrib4hvNV");
     rogl_pfn_glVertexAttrib4hvNV(index, v);
 
     return Qnil;
@@ -16370,6 +17504,7 @@ static VALUE rogl_glVertexAttribs1hvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int n = (int)NUM2INT(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribs1hvNV, "glVertexAttribs1hvNV");
     rogl_pfn_glVertexAttribs1hvNV(index, n, v);
 
     return Qnil;
@@ -16381,6 +17516,7 @@ static VALUE rogl_glVertexAttribs2hvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int n = (int)NUM2INT(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribs2hvNV, "glVertexAttribs2hvNV");
     rogl_pfn_glVertexAttribs2hvNV(index, n, v);
 
     return Qnil;
@@ -16392,6 +17528,7 @@ static VALUE rogl_glVertexAttribs3hvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int n = (int)NUM2INT(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribs3hvNV, "glVertexAttribs3hvNV");
     rogl_pfn_glVertexAttribs3hvNV(index, n, v);
 
     return Qnil;
@@ -16403,6 +17540,7 @@ static VALUE rogl_glVertexAttribs4hvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int n = (int)NUM2INT(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribs4hvNV, "glVertexAttribs4hvNV");
     rogl_pfn_glVertexAttribs4hvNV(index, n, v);
 
     return Qnil;
@@ -16417,6 +17555,7 @@ static VALUE rogl_glGetInternalformatSampleivNV(VALUE _obj_, VALUE _arg1_, VALUE
     int bufSize = (int)NUM2INT(_arg5_);
     void* params = (void*)val2ptr(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetInternalformatSampleivNV, "glGetInternalformatSampleivNV");
     rogl_pfn_glGetInternalformatSampleivNV(target, internalformat, samples, pname, bufSize, params);
 
     return Qnil;
@@ -16427,6 +17566,7 @@ static VALUE rogl_glGenOcclusionQueriesNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     int n = (int)NUM2INT(_arg1_);
     void* ids = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGenOcclusionQueriesNV, "glGenOcclusionQueriesNV");
     rogl_pfn_glGenOcclusionQueriesNV(n, ids);
 
     return Qnil;
@@ -16437,6 +17577,7 @@ static VALUE rogl_glDeleteOcclusionQueriesNV(VALUE _obj_, VALUE _arg1_, VALUE _a
     int n = (int)NUM2INT(_arg1_);
     void* ids = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeleteOcclusionQueriesNV, "glDeleteOcclusionQueriesNV");
     rogl_pfn_glDeleteOcclusionQueriesNV(n, ids);
 
     return Qnil;
@@ -16446,6 +17587,7 @@ static VALUE rogl_glIsOcclusionQueryNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int id = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsOcclusionQueryNV, "glIsOcclusionQueryNV");
     unsigned char retval = rogl_pfn_glIsOcclusionQueryNV(id);
 
     return UINT2NUM(retval);
@@ -16455,6 +17597,7 @@ static VALUE rogl_glBeginOcclusionQueryNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int id = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBeginOcclusionQueryNV, "glBeginOcclusionQueryNV");
     rogl_pfn_glBeginOcclusionQueryNV(id);
 
     return Qnil;
@@ -16462,6 +17605,7 @@ static VALUE rogl_glBeginOcclusionQueryNV(VALUE _obj_, VALUE _arg1_)
 
 static VALUE rogl_glEndOcclusionQueryNV(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glEndOcclusionQueryNV, "glEndOcclusionQueryNV");
     rogl_pfn_glEndOcclusionQueryNV();
 
     return Qnil;
@@ -16473,6 +17617,7 @@ static VALUE rogl_glGetOcclusionQueryivNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetOcclusionQueryivNV, "glGetOcclusionQueryivNV");
     rogl_pfn_glGetOcclusionQueryivNV(id, pname, params);
 
     return Qnil;
@@ -16484,6 +17629,7 @@ static VALUE rogl_glGetOcclusionQueryuivNV(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetOcclusionQueryuivNV, "glGetOcclusionQueryuivNV");
     rogl_pfn_glGetOcclusionQueryuivNV(id, pname, params);
 
     return Qnil;
@@ -16497,6 +17643,7 @@ static VALUE rogl_glProgramBufferParametersfvNV(VALUE _obj_, VALUE _arg1_, VALUE
     int count = (int)NUM2INT(_arg4_);
     void* params = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramBufferParametersfvNV, "glProgramBufferParametersfvNV");
     rogl_pfn_glProgramBufferParametersfvNV(target, bindingIndex, wordIndex, count, params);
 
     return Qnil;
@@ -16510,6 +17657,7 @@ static VALUE rogl_glProgramBufferParametersIivNV(VALUE _obj_, VALUE _arg1_, VALU
     int count = (int)NUM2INT(_arg4_);
     void* params = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramBufferParametersIivNV, "glProgramBufferParametersIivNV");
     rogl_pfn_glProgramBufferParametersIivNV(target, bindingIndex, wordIndex, count, params);
 
     return Qnil;
@@ -16523,6 +17671,7 @@ static VALUE rogl_glProgramBufferParametersIuivNV(VALUE _obj_, VALUE _arg1_, VAL
     int count = (int)NUM2INT(_arg4_);
     void* params = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramBufferParametersIuivNV, "glProgramBufferParametersIuivNV");
     rogl_pfn_glProgramBufferParametersIuivNV(target, bindingIndex, wordIndex, count, params);
 
     return Qnil;
@@ -16532,6 +17681,7 @@ static VALUE rogl_glGenPathsNV(VALUE _obj_, VALUE _arg1_)
 {
     int range = (int)NUM2INT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGenPathsNV, "glGenPathsNV");
     unsigned int retval = rogl_pfn_glGenPathsNV(range);
 
     return UINT2NUM(retval);
@@ -16542,6 +17692,7 @@ static VALUE rogl_glDeletePathsNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int path = (unsigned int)NUM2UINT(_arg1_);
     int range = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeletePathsNV, "glDeletePathsNV");
     rogl_pfn_glDeletePathsNV(path, range);
 
     return Qnil;
@@ -16551,6 +17702,7 @@ static VALUE rogl_glIsPathNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int path = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsPathNV, "glIsPathNV");
     unsigned char retval = rogl_pfn_glIsPathNV(path);
 
     return UINT2NUM(retval);
@@ -16565,6 +17717,7 @@ static VALUE rogl_glPathCommandsNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     unsigned int coordType = (unsigned int)NUM2UINT(_arg5_);
     void* coords = (void*)val2ptr(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPathCommandsNV, "glPathCommandsNV");
     rogl_pfn_glPathCommandsNV(path, numCommands, commands, numCoords, coordType, coords);
 
     return Qnil;
@@ -16577,6 +17730,7 @@ static VALUE rogl_glPathCoordsNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     unsigned int coordType = (unsigned int)NUM2UINT(_arg3_);
     void* coords = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPathCoordsNV, "glPathCoordsNV");
     rogl_pfn_glPathCoordsNV(path, numCoords, coordType, coords);
 
     return Qnil;
@@ -16593,6 +17747,7 @@ static VALUE rogl_glPathSubCommandsNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     unsigned int coordType = (unsigned int)NUM2UINT(_arg7_);
     void* coords = (void*)val2ptr(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPathSubCommandsNV, "glPathSubCommandsNV");
     rogl_pfn_glPathSubCommandsNV(path, commandStart, commandsToDelete, numCommands, commands, numCoords, coordType, coords);
 
     return Qnil;
@@ -16606,6 +17761,7 @@ static VALUE rogl_glPathSubCoordsNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     unsigned int coordType = (unsigned int)NUM2UINT(_arg4_);
     void* coords = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPathSubCoordsNV, "glPathSubCoordsNV");
     rogl_pfn_glPathSubCoordsNV(path, coordStart, numCoords, coordType, coords);
 
     return Qnil;
@@ -16618,6 +17774,7 @@ static VALUE rogl_glPathStringNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     int length = (int)NUM2INT(_arg3_);
     void* pathString = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPathStringNV, "glPathStringNV");
     rogl_pfn_glPathStringNV(path, format, length, pathString);
 
     return Qnil;
@@ -16636,6 +17793,7 @@ static VALUE rogl_glPathGlyphsNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     unsigned int pathParameterTemplate = (unsigned int)NUM2UINT(_arg9_);
     float emScale = (float)NUM2DBL(_arg10_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPathGlyphsNV, "glPathGlyphsNV");
     rogl_pfn_glPathGlyphsNV(firstPathName, fontTarget, fontName, fontStyle, numGlyphs, type, charcodes, handleMissingGlyphs, pathParameterTemplate, emScale);
 
     return Qnil;
@@ -16653,6 +17811,7 @@ static VALUE rogl_glPathGlyphRangeNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int pathParameterTemplate = (unsigned int)NUM2UINT(_arg8_);
     float emScale = (float)NUM2DBL(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPathGlyphRangeNV, "glPathGlyphRangeNV");
     rogl_pfn_glPathGlyphRangeNV(firstPathName, fontTarget, fontName, fontStyle, firstGlyph, numGlyphs, handleMissingGlyphs, pathParameterTemplate, emScale);
 
     return Qnil;
@@ -16665,6 +17824,7 @@ static VALUE rogl_glWeightPathsNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     void* paths = (void*)val2ptr(_arg3_);
     void* weights = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glWeightPathsNV, "glWeightPathsNV");
     rogl_pfn_glWeightPathsNV(resultPath, numPaths, paths, weights);
 
     return Qnil;
@@ -16675,6 +17835,7 @@ static VALUE rogl_glCopyPathNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int resultPath = (unsigned int)NUM2UINT(_arg1_);
     unsigned int srcPath = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyPathNV, "glCopyPathNV");
     rogl_pfn_glCopyPathNV(resultPath, srcPath);
 
     return Qnil;
@@ -16687,6 +17848,7 @@ static VALUE rogl_glInterpolatePathsNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     unsigned int pathB = (unsigned int)NUM2UINT(_arg3_);
     float weight = (float)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glInterpolatePathsNV, "glInterpolatePathsNV");
     rogl_pfn_glInterpolatePathsNV(resultPath, pathA, pathB, weight);
 
     return Qnil;
@@ -16699,6 +17861,7 @@ static VALUE rogl_glTransformPathNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     unsigned int transformType = (unsigned int)NUM2UINT(_arg3_);
     void* transformValues = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTransformPathNV, "glTransformPathNV");
     rogl_pfn_glTransformPathNV(resultPath, srcPath, transformType, transformValues);
 
     return Qnil;
@@ -16710,6 +17873,7 @@ static VALUE rogl_glPathParameterivNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPathParameterivNV, "glPathParameterivNV");
     rogl_pfn_glPathParameterivNV(path, pname, value);
 
     return Qnil;
@@ -16721,6 +17885,7 @@ static VALUE rogl_glPathParameteriNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     int value = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPathParameteriNV, "glPathParameteriNV");
     rogl_pfn_glPathParameteriNV(path, pname, value);
 
     return Qnil;
@@ -16732,6 +17897,7 @@ static VALUE rogl_glPathParameterfvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPathParameterfvNV, "glPathParameterfvNV");
     rogl_pfn_glPathParameterfvNV(path, pname, value);
 
     return Qnil;
@@ -16743,6 +17909,7 @@ static VALUE rogl_glPathParameterfNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     float value = (float)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPathParameterfNV, "glPathParameterfNV");
     rogl_pfn_glPathParameterfNV(path, pname, value);
 
     return Qnil;
@@ -16754,6 +17921,7 @@ static VALUE rogl_glPathDashArrayNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     int dashCount = (int)NUM2INT(_arg2_);
     void* dashArray = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPathDashArrayNV, "glPathDashArrayNV");
     rogl_pfn_glPathDashArrayNV(path, dashCount, dashArray);
 
     return Qnil;
@@ -16765,6 +17933,7 @@ static VALUE rogl_glPathStencilFuncNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     int ref = (int)NUM2INT(_arg2_);
     unsigned int mask = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPathStencilFuncNV, "glPathStencilFuncNV");
     rogl_pfn_glPathStencilFuncNV(func, ref, mask);
 
     return Qnil;
@@ -16775,6 +17944,7 @@ static VALUE rogl_glPathStencilDepthOffsetNV(VALUE _obj_, VALUE _arg1_, VALUE _a
     float factor = (float)NUM2DBL(_arg1_);
     float units = (float)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPathStencilDepthOffsetNV, "glPathStencilDepthOffsetNV");
     rogl_pfn_glPathStencilDepthOffsetNV(factor, units);
 
     return Qnil;
@@ -16786,6 +17956,7 @@ static VALUE rogl_glStencilFillPathNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     unsigned int fillMode = (unsigned int)NUM2UINT(_arg2_);
     unsigned int mask = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glStencilFillPathNV, "glStencilFillPathNV");
     rogl_pfn_glStencilFillPathNV(path, fillMode, mask);
 
     return Qnil;
@@ -16797,6 +17968,7 @@ static VALUE rogl_glStencilStrokePathNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     int reference = (int)NUM2INT(_arg2_);
     unsigned int mask = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glStencilStrokePathNV, "glStencilStrokePathNV");
     rogl_pfn_glStencilStrokePathNV(path, reference, mask);
 
     return Qnil;
@@ -16813,6 +17985,7 @@ static VALUE rogl_glStencilFillPathInstancedNV(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int transformType = (unsigned int)NUM2UINT(_arg7_);
     void* transformValues = (void*)val2ptr(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glStencilFillPathInstancedNV, "glStencilFillPathInstancedNV");
     rogl_pfn_glStencilFillPathInstancedNV(numPaths, pathNameType, paths, pathBase, fillMode, mask, transformType, transformValues);
 
     return Qnil;
@@ -16829,6 +18002,7 @@ static VALUE rogl_glStencilStrokePathInstancedNV(VALUE _obj_, VALUE _arg1_, VALU
     unsigned int transformType = (unsigned int)NUM2UINT(_arg7_);
     void* transformValues = (void*)val2ptr(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glStencilStrokePathInstancedNV, "glStencilStrokePathInstancedNV");
     rogl_pfn_glStencilStrokePathInstancedNV(numPaths, pathNameType, paths, pathBase, reference, mask, transformType, transformValues);
 
     return Qnil;
@@ -16838,6 +18012,7 @@ static VALUE rogl_glPathCoverDepthFuncNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int func = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPathCoverDepthFuncNV, "glPathCoverDepthFuncNV");
     rogl_pfn_glPathCoverDepthFuncNV(func);
 
     return Qnil;
@@ -16848,6 +18023,7 @@ static VALUE rogl_glCoverFillPathNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int path = (unsigned int)NUM2UINT(_arg1_);
     unsigned int coverMode = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCoverFillPathNV, "glCoverFillPathNV");
     rogl_pfn_glCoverFillPathNV(path, coverMode);
 
     return Qnil;
@@ -16858,6 +18034,7 @@ static VALUE rogl_glCoverStrokePathNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int path = (unsigned int)NUM2UINT(_arg1_);
     unsigned int coverMode = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCoverStrokePathNV, "glCoverStrokePathNV");
     rogl_pfn_glCoverStrokePathNV(path, coverMode);
 
     return Qnil;
@@ -16873,6 +18050,7 @@ static VALUE rogl_glCoverFillPathInstancedNV(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int transformType = (unsigned int)NUM2UINT(_arg6_);
     void* transformValues = (void*)val2ptr(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCoverFillPathInstancedNV, "glCoverFillPathInstancedNV");
     rogl_pfn_glCoverFillPathInstancedNV(numPaths, pathNameType, paths, pathBase, coverMode, transformType, transformValues);
 
     return Qnil;
@@ -16888,6 +18066,7 @@ static VALUE rogl_glCoverStrokePathInstancedNV(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int transformType = (unsigned int)NUM2UINT(_arg6_);
     void* transformValues = (void*)val2ptr(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCoverStrokePathInstancedNV, "glCoverStrokePathInstancedNV");
     rogl_pfn_glCoverStrokePathInstancedNV(numPaths, pathNameType, paths, pathBase, coverMode, transformType, transformValues);
 
     return Qnil;
@@ -16899,6 +18078,7 @@ static VALUE rogl_glGetPathParameterivNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPathParameterivNV, "glGetPathParameterivNV");
     rogl_pfn_glGetPathParameterivNV(path, pname, value);
 
     return Qnil;
@@ -16910,6 +18090,7 @@ static VALUE rogl_glGetPathParameterfvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPathParameterfvNV, "glGetPathParameterfvNV");
     rogl_pfn_glGetPathParameterfvNV(path, pname, value);
 
     return Qnil;
@@ -16920,6 +18101,7 @@ static VALUE rogl_glGetPathCommandsNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int path = (unsigned int)NUM2UINT(_arg1_);
     void* commands = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPathCommandsNV, "glGetPathCommandsNV");
     rogl_pfn_glGetPathCommandsNV(path, commands);
 
     return Qnil;
@@ -16930,6 +18112,7 @@ static VALUE rogl_glGetPathCoordsNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int path = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPathCoordsNV, "glGetPathCoordsNV");
     rogl_pfn_glGetPathCoordsNV(path, coords);
 
     return Qnil;
@@ -16940,6 +18123,7 @@ static VALUE rogl_glGetPathDashArrayNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int path = (unsigned int)NUM2UINT(_arg1_);
     void* dashArray = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPathDashArrayNV, "glGetPathDashArrayNV");
     rogl_pfn_glGetPathDashArrayNV(path, dashArray);
 
     return Qnil;
@@ -16955,6 +18139,7 @@ static VALUE rogl_glGetPathMetricsNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     int stride = (int)NUM2INT(_arg6_);
     void* metrics = (void*)val2ptr(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPathMetricsNV, "glGetPathMetricsNV");
     rogl_pfn_glGetPathMetricsNV(metricQueryMask, numPaths, pathNameType, paths, pathBase, stride, metrics);
 
     return Qnil;
@@ -16968,6 +18153,7 @@ static VALUE rogl_glGetPathMetricRangeNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     int stride = (int)NUM2INT(_arg4_);
     void* metrics = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPathMetricRangeNV, "glGetPathMetricRangeNV");
     rogl_pfn_glGetPathMetricRangeNV(metricQueryMask, firstPathName, numPaths, stride, metrics);
 
     return Qnil;
@@ -16985,6 +18171,7 @@ static VALUE rogl_glGetPathSpacingNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int transformType = (unsigned int)NUM2UINT(_arg8_);
     void* returnedSpacing = (void*)val2ptr(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPathSpacingNV, "glGetPathSpacingNV");
     rogl_pfn_glGetPathSpacingNV(pathListMode, numPaths, pathNameType, paths, pathBase, advanceScale, kerningScale, transformType, returnedSpacing);
 
     return Qnil;
@@ -16997,6 +18184,7 @@ static VALUE rogl_glIsPointInFillPathNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     float x = (float)NUM2DBL(_arg3_);
     float y = (float)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsPointInFillPathNV, "glIsPointInFillPathNV");
     unsigned char retval = rogl_pfn_glIsPointInFillPathNV(path, mask, x, y);
 
     return UINT2NUM(retval);
@@ -17008,6 +18196,7 @@ static VALUE rogl_glIsPointInStrokePathNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     float x = (float)NUM2DBL(_arg2_);
     float y = (float)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsPointInStrokePathNV, "glIsPointInStrokePathNV");
     unsigned char retval = rogl_pfn_glIsPointInStrokePathNV(path, x, y);
 
     return UINT2NUM(retval);
@@ -17019,6 +18208,7 @@ static VALUE rogl_glGetPathLengthNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     int startSegment = (int)NUM2INT(_arg2_);
     int numSegments = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPathLengthNV, "glGetPathLengthNV");
     float retval = rogl_pfn_glGetPathLengthNV(path, startSegment, numSegments);
 
     return DBL2NUM(retval);
@@ -17035,6 +18225,7 @@ static VALUE rogl_glPointAlongPathNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     void* tangentX = (void*)val2ptr(_arg7_);
     void* tangentY = (void*)val2ptr(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPointAlongPathNV, "glPointAlongPathNV");
     unsigned char retval = rogl_pfn_glPointAlongPathNV(path, startSegment, numSegments, distance, x, y, tangentX, tangentY);
 
     return UINT2NUM(retval);
@@ -17045,6 +18236,7 @@ static VALUE rogl_glMatrixLoad3x2fNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int matrixMode = (unsigned int)NUM2UINT(_arg1_);
     void* m = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixLoad3x2fNV, "glMatrixLoad3x2fNV");
     rogl_pfn_glMatrixLoad3x2fNV(matrixMode, m);
 
     return Qnil;
@@ -17055,6 +18247,7 @@ static VALUE rogl_glMatrixLoad3x3fNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int matrixMode = (unsigned int)NUM2UINT(_arg1_);
     void* m = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixLoad3x3fNV, "glMatrixLoad3x3fNV");
     rogl_pfn_glMatrixLoad3x3fNV(matrixMode, m);
 
     return Qnil;
@@ -17065,6 +18258,7 @@ static VALUE rogl_glMatrixLoadTranspose3x3fNV(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int matrixMode = (unsigned int)NUM2UINT(_arg1_);
     void* m = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixLoadTranspose3x3fNV, "glMatrixLoadTranspose3x3fNV");
     rogl_pfn_glMatrixLoadTranspose3x3fNV(matrixMode, m);
 
     return Qnil;
@@ -17075,6 +18269,7 @@ static VALUE rogl_glMatrixMult3x2fNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int matrixMode = (unsigned int)NUM2UINT(_arg1_);
     void* m = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixMult3x2fNV, "glMatrixMult3x2fNV");
     rogl_pfn_glMatrixMult3x2fNV(matrixMode, m);
 
     return Qnil;
@@ -17085,6 +18280,7 @@ static VALUE rogl_glMatrixMult3x3fNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int matrixMode = (unsigned int)NUM2UINT(_arg1_);
     void* m = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixMult3x3fNV, "glMatrixMult3x3fNV");
     rogl_pfn_glMatrixMult3x3fNV(matrixMode, m);
 
     return Qnil;
@@ -17095,6 +18291,7 @@ static VALUE rogl_glMatrixMultTranspose3x3fNV(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int matrixMode = (unsigned int)NUM2UINT(_arg1_);
     void* m = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMatrixMultTranspose3x3fNV, "glMatrixMultTranspose3x3fNV");
     rogl_pfn_glMatrixMultTranspose3x3fNV(matrixMode, m);
 
     return Qnil;
@@ -17107,6 +18304,7 @@ static VALUE rogl_glStencilThenCoverFillPathNV(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int mask = (unsigned int)NUM2UINT(_arg3_);
     unsigned int coverMode = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glStencilThenCoverFillPathNV, "glStencilThenCoverFillPathNV");
     rogl_pfn_glStencilThenCoverFillPathNV(path, fillMode, mask, coverMode);
 
     return Qnil;
@@ -17119,6 +18317,7 @@ static VALUE rogl_glStencilThenCoverStrokePathNV(VALUE _obj_, VALUE _arg1_, VALU
     unsigned int mask = (unsigned int)NUM2UINT(_arg3_);
     unsigned int coverMode = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glStencilThenCoverStrokePathNV, "glStencilThenCoverStrokePathNV");
     rogl_pfn_glStencilThenCoverStrokePathNV(path, reference, mask, coverMode);
 
     return Qnil;
@@ -17136,6 +18335,7 @@ static VALUE rogl_glStencilThenCoverFillPathInstancedNV(VALUE _obj_, VALUE _arg1
     unsigned int transformType = (unsigned int)NUM2UINT(_arg8_);
     void* transformValues = (void*)val2ptr(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glStencilThenCoverFillPathInstancedNV, "glStencilThenCoverFillPathInstancedNV");
     rogl_pfn_glStencilThenCoverFillPathInstancedNV(numPaths, pathNameType, paths, pathBase, fillMode, mask, coverMode, transformType, transformValues);
 
     return Qnil;
@@ -17153,6 +18353,7 @@ static VALUE rogl_glStencilThenCoverStrokePathInstancedNV(VALUE _obj_, VALUE _ar
     unsigned int transformType = (unsigned int)NUM2UINT(_arg8_);
     void* transformValues = (void*)val2ptr(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glStencilThenCoverStrokePathInstancedNV, "glStencilThenCoverStrokePathInstancedNV");
     rogl_pfn_glStencilThenCoverStrokePathInstancedNV(numPaths, pathNameType, paths, pathBase, reference, mask, coverMode, transformType, transformValues);
 
     return Qnil;
@@ -17167,6 +18368,7 @@ static VALUE rogl_glPathGlyphIndexRangeNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     float emScale = (float)NUM2DBL(_arg5_);
     void* baseAndCount = (void*)val2ptr(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPathGlyphIndexRangeNV, "glPathGlyphIndexRangeNV");
     unsigned int retval = rogl_pfn_glPathGlyphIndexRangeNV(fontTarget, fontName, fontStyle, pathParameterTemplate, emScale, baseAndCount);
 
     return UINT2NUM(retval);
@@ -17183,6 +18385,7 @@ static VALUE rogl_glPathGlyphIndexArrayNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int pathParameterTemplate = (unsigned int)NUM2UINT(_arg7_);
     float emScale = (float)NUM2DBL(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPathGlyphIndexArrayNV, "glPathGlyphIndexArrayNV");
     unsigned int retval = rogl_pfn_glPathGlyphIndexArrayNV(firstPathName, fontTarget, fontName, fontStyle, firstGlyphIndex, numGlyphs, pathParameterTemplate, emScale);
 
     return UINT2NUM(retval);
@@ -17200,6 +18403,7 @@ static VALUE rogl_glPathMemoryGlyphIndexArrayNV(VALUE _obj_, VALUE _arg1_, VALUE
     unsigned int pathParameterTemplate = (unsigned int)NUM2UINT(_arg8_);
     float emScale = (float)NUM2DBL(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPathMemoryGlyphIndexArrayNV, "glPathMemoryGlyphIndexArrayNV");
     unsigned int retval = rogl_pfn_glPathMemoryGlyphIndexArrayNV(firstPathName, fontTarget, fontSize, fontData, faceIndex, firstGlyphIndex, numGlyphs, pathParameterTemplate, emScale);
 
     return UINT2NUM(retval);
@@ -17213,6 +18417,7 @@ static VALUE rogl_glProgramPathFragmentInputGenNV(VALUE _obj_, VALUE _arg1_, VAL
     int components = (int)NUM2INT(_arg4_);
     void* coeffs = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramPathFragmentInputGenNV, "glProgramPathFragmentInputGenNV");
     rogl_pfn_glProgramPathFragmentInputGenNV(program, location, genMode, components, coeffs);
 
     return Qnil;
@@ -17229,6 +18434,7 @@ static VALUE rogl_glGetProgramResourcefvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg
     void* length = (void*)val2ptr(_arg7_);
     void* params = (void*)val2ptr(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetProgramResourcefvNV, "glGetProgramResourcefvNV");
     rogl_pfn_glGetProgramResourcefvNV(program, programInterface, index, propCount, props, bufSize, length, params);
 
     return Qnil;
@@ -17241,6 +18447,7 @@ static VALUE rogl_glPathColorGenNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     unsigned int colorFormat = (unsigned int)NUM2UINT(_arg3_);
     void* coeffs = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPathColorGenNV, "glPathColorGenNV");
     rogl_pfn_glPathColorGenNV(color, genMode, colorFormat, coeffs);
 
     return Qnil;
@@ -17253,6 +18460,7 @@ static VALUE rogl_glPathTexGenNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     int components = (int)NUM2INT(_arg3_);
     void* coeffs = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPathTexGenNV, "glPathTexGenNV");
     rogl_pfn_glPathTexGenNV(texCoordSet, genMode, components, coeffs);
 
     return Qnil;
@@ -17262,6 +18470,7 @@ static VALUE rogl_glPathFogGenNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int genMode = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPathFogGenNV, "glPathFogGenNV");
     rogl_pfn_glPathFogGenNV(genMode);
 
     return Qnil;
@@ -17273,6 +18482,7 @@ static VALUE rogl_glGetPathColorGenivNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPathColorGenivNV, "glGetPathColorGenivNV");
     rogl_pfn_glGetPathColorGenivNV(color, pname, value);
 
     return Qnil;
@@ -17284,6 +18494,7 @@ static VALUE rogl_glGetPathColorGenfvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPathColorGenfvNV, "glGetPathColorGenfvNV");
     rogl_pfn_glGetPathColorGenfvNV(color, pname, value);
 
     return Qnil;
@@ -17295,6 +18506,7 @@ static VALUE rogl_glGetPathTexGenivNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPathTexGenivNV, "glGetPathTexGenivNV");
     rogl_pfn_glGetPathTexGenivNV(texCoordSet, pname, value);
 
     return Qnil;
@@ -17306,6 +18518,7 @@ static VALUE rogl_glGetPathTexGenfvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPathTexGenfvNV, "glGetPathTexGenfvNV");
     rogl_pfn_glGetPathTexGenfvNV(texCoordSet, pname, value);
 
     return Qnil;
@@ -17317,6 +18530,7 @@ static VALUE rogl_glPixelDataRangeNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     int length = (int)NUM2INT(_arg2_);
     void* pointer = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPixelDataRangeNV, "glPixelDataRangeNV");
     rogl_pfn_glPixelDataRangeNV(target, length, pointer);
 
     return Qnil;
@@ -17326,6 +18540,7 @@ static VALUE rogl_glFlushPixelDataRangeNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFlushPixelDataRangeNV, "glFlushPixelDataRangeNV");
     rogl_pfn_glFlushPixelDataRangeNV(target);
 
     return Qnil;
@@ -17336,6 +18551,7 @@ static VALUE rogl_glPointParameteriNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     int param = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPointParameteriNV, "glPointParameteriNV");
     rogl_pfn_glPointParameteriNV(pname, param);
 
     return Qnil;
@@ -17346,6 +18562,7 @@ static VALUE rogl_glPointParameterivNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* params = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPointParameterivNV, "glPointParameterivNV");
     rogl_pfn_glPointParameterivNV(pname, params);
 
     return Qnil;
@@ -17365,6 +18582,7 @@ static VALUE rogl_glPresentFrameKeyedNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int fill1 = (unsigned int)NUM2UINT(_arg10_);
     unsigned int key1 = (unsigned int)NUM2UINT(_arg11_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPresentFrameKeyedNV, "glPresentFrameKeyedNV");
     rogl_pfn_glPresentFrameKeyedNV(video_slot, minPresentTime, beginPresentTimeId, presentDurationId, type, target0, fill0, key0, target1, fill1, key1);
 
     return Qnil;
@@ -17386,6 +18604,7 @@ static VALUE rogl_glPresentFrameDualFillNV(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int target3 = (unsigned int)NUM2UINT(_arg12_);
     unsigned int fill3 = (unsigned int)NUM2UINT(_arg13_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPresentFrameDualFillNV, "glPresentFrameDualFillNV");
     rogl_pfn_glPresentFrameDualFillNV(video_slot, minPresentTime, beginPresentTimeId, presentDurationId, type, target0, fill0, target1, fill1, target2, fill2, target3, fill3);
 
     return Qnil;
@@ -17397,6 +18616,7 @@ static VALUE rogl_glGetVideoivNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVideoivNV, "glGetVideoivNV");
     rogl_pfn_glGetVideoivNV(video_slot, pname, params);
 
     return Qnil;
@@ -17408,6 +18628,7 @@ static VALUE rogl_glGetVideouivNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVideouivNV, "glGetVideouivNV");
     rogl_pfn_glGetVideouivNV(video_slot, pname, params);
 
     return Qnil;
@@ -17419,6 +18640,7 @@ static VALUE rogl_glGetVideoi64vNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVideoi64vNV, "glGetVideoi64vNV");
     rogl_pfn_glGetVideoi64vNV(video_slot, pname, params);
 
     return Qnil;
@@ -17430,6 +18652,7 @@ static VALUE rogl_glGetVideoui64vNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVideoui64vNV, "glGetVideoui64vNV");
     rogl_pfn_glGetVideoui64vNV(video_slot, pname, params);
 
     return Qnil;
@@ -17437,6 +18660,7 @@ static VALUE rogl_glGetVideoui64vNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
 
 static VALUE rogl_glPrimitiveRestartNV(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glPrimitiveRestartNV, "glPrimitiveRestartNV");
     rogl_pfn_glPrimitiveRestartNV();
 
     return Qnil;
@@ -17446,6 +18670,7 @@ static VALUE rogl_glPrimitiveRestartIndexNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPrimitiveRestartIndexNV, "glPrimitiveRestartIndexNV");
     rogl_pfn_glPrimitiveRestartIndexNV(index);
 
     return Qnil;
@@ -17456,6 +18681,7 @@ static VALUE rogl_glCombinerParameterfvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* params = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCombinerParameterfvNV, "glCombinerParameterfvNV");
     rogl_pfn_glCombinerParameterfvNV(pname, params);
 
     return Qnil;
@@ -17466,6 +18692,7 @@ static VALUE rogl_glCombinerParameterfNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     float param = (float)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCombinerParameterfNV, "glCombinerParameterfNV");
     rogl_pfn_glCombinerParameterfNV(pname, param);
 
     return Qnil;
@@ -17476,6 +18703,7 @@ static VALUE rogl_glCombinerParameterivNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* params = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCombinerParameterivNV, "glCombinerParameterivNV");
     rogl_pfn_glCombinerParameterivNV(pname, params);
 
     return Qnil;
@@ -17486,6 +18714,7 @@ static VALUE rogl_glCombinerParameteriNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     int param = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCombinerParameteriNV, "glCombinerParameteriNV");
     rogl_pfn_glCombinerParameteriNV(pname, param);
 
     return Qnil;
@@ -17500,6 +18729,7 @@ static VALUE rogl_glCombinerInputNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     unsigned int mapping = (unsigned int)NUM2UINT(_arg5_);
     unsigned int componentUsage = (unsigned int)NUM2UINT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCombinerInputNV, "glCombinerInputNV");
     rogl_pfn_glCombinerInputNV(stage, portion, variable, input, mapping, componentUsage);
 
     return Qnil;
@@ -17518,6 +18748,7 @@ static VALUE rogl_glCombinerOutputNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned char cdDotProduct = (unsigned char)NUM2UINT(_arg9_);
     unsigned char muxSum = (unsigned char)NUM2UINT(_arg10_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCombinerOutputNV, "glCombinerOutputNV");
     rogl_pfn_glCombinerOutputNV(stage, portion, abOutput, cdOutput, sumOutput, scale, bias, abDotProduct, cdDotProduct, muxSum);
 
     return Qnil;
@@ -17530,6 +18761,7 @@ static VALUE rogl_glFinalCombinerInputNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int mapping = (unsigned int)NUM2UINT(_arg3_);
     unsigned int componentUsage = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFinalCombinerInputNV, "glFinalCombinerInputNV");
     rogl_pfn_glFinalCombinerInputNV(variable, input, mapping, componentUsage);
 
     return Qnil;
@@ -17543,6 +18775,7 @@ static VALUE rogl_glGetCombinerInputParameterfvNV(VALUE _obj_, VALUE _arg1_, VAL
     unsigned int pname = (unsigned int)NUM2UINT(_arg4_);
     void* params = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetCombinerInputParameterfvNV, "glGetCombinerInputParameterfvNV");
     rogl_pfn_glGetCombinerInputParameterfvNV(stage, portion, variable, pname, params);
 
     return Qnil;
@@ -17556,6 +18789,7 @@ static VALUE rogl_glGetCombinerInputParameterivNV(VALUE _obj_, VALUE _arg1_, VAL
     unsigned int pname = (unsigned int)NUM2UINT(_arg4_);
     void* params = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetCombinerInputParameterivNV, "glGetCombinerInputParameterivNV");
     rogl_pfn_glGetCombinerInputParameterivNV(stage, portion, variable, pname, params);
 
     return Qnil;
@@ -17568,6 +18802,7 @@ static VALUE rogl_glGetCombinerOutputParameterfvNV(VALUE _obj_, VALUE _arg1_, VA
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetCombinerOutputParameterfvNV, "glGetCombinerOutputParameterfvNV");
     rogl_pfn_glGetCombinerOutputParameterfvNV(stage, portion, pname, params);
 
     return Qnil;
@@ -17580,6 +18815,7 @@ static VALUE rogl_glGetCombinerOutputParameterivNV(VALUE _obj_, VALUE _arg1_, VA
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetCombinerOutputParameterivNV, "glGetCombinerOutputParameterivNV");
     rogl_pfn_glGetCombinerOutputParameterivNV(stage, portion, pname, params);
 
     return Qnil;
@@ -17591,6 +18827,7 @@ static VALUE rogl_glGetFinalCombinerInputParameterfvNV(VALUE _obj_, VALUE _arg1_
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetFinalCombinerInputParameterfvNV, "glGetFinalCombinerInputParameterfvNV");
     rogl_pfn_glGetFinalCombinerInputParameterfvNV(variable, pname, params);
 
     return Qnil;
@@ -17602,6 +18839,7 @@ static VALUE rogl_glGetFinalCombinerInputParameterivNV(VALUE _obj_, VALUE _arg1_
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetFinalCombinerInputParameterivNV, "glGetFinalCombinerInputParameterivNV");
     rogl_pfn_glGetFinalCombinerInputParameterivNV(variable, pname, params);
 
     return Qnil;
@@ -17613,6 +18851,7 @@ static VALUE rogl_glCombinerStageParameterfvNV(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCombinerStageParameterfvNV, "glCombinerStageParameterfvNV");
     rogl_pfn_glCombinerStageParameterfvNV(stage, pname, params);
 
     return Qnil;
@@ -17624,6 +18863,7 @@ static VALUE rogl_glGetCombinerStageParameterfvNV(VALUE _obj_, VALUE _arg1_, VAL
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetCombinerStageParameterfvNV, "glGetCombinerStageParameterfvNV");
     rogl_pfn_glGetCombinerStageParameterfvNV(stage, pname, params);
 
     return Qnil;
@@ -17636,6 +18876,7 @@ static VALUE rogl_glFramebufferSampleLocationsfvNV(VALUE _obj_, VALUE _arg1_, VA
     int count = (int)NUM2INT(_arg3_);
     void* v = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFramebufferSampleLocationsfvNV, "glFramebufferSampleLocationsfvNV");
     rogl_pfn_glFramebufferSampleLocationsfvNV(target, start, count, v);
 
     return Qnil;
@@ -17648,6 +18889,7 @@ static VALUE rogl_glNamedFramebufferSampleLocationsfvNV(VALUE _obj_, VALUE _arg1
     int count = (int)NUM2INT(_arg3_);
     void* v = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNamedFramebufferSampleLocationsfvNV, "glNamedFramebufferSampleLocationsfvNV");
     rogl_pfn_glNamedFramebufferSampleLocationsfvNV(framebuffer, start, count, v);
 
     return Qnil;
@@ -17655,6 +18897,7 @@ static VALUE rogl_glNamedFramebufferSampleLocationsfvNV(VALUE _obj_, VALUE _arg1
 
 static VALUE rogl_glResolveDepthValuesNV(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glResolveDepthValuesNV, "glResolveDepthValuesNV");
     rogl_pfn_glResolveDepthValuesNV();
 
     return Qnil;
@@ -17665,6 +18908,7 @@ static VALUE rogl_glMakeBufferResidentNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     unsigned int access = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMakeBufferResidentNV, "glMakeBufferResidentNV");
     rogl_pfn_glMakeBufferResidentNV(target, access);
 
     return Qnil;
@@ -17674,6 +18918,7 @@ static VALUE rogl_glMakeBufferNonResidentNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMakeBufferNonResidentNV, "glMakeBufferNonResidentNV");
     rogl_pfn_glMakeBufferNonResidentNV(target);
 
     return Qnil;
@@ -17683,6 +18928,7 @@ static VALUE rogl_glIsBufferResidentNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsBufferResidentNV, "glIsBufferResidentNV");
     unsigned char retval = rogl_pfn_glIsBufferResidentNV(target);
 
     return UINT2NUM(retval);
@@ -17693,6 +18939,7 @@ static VALUE rogl_glMakeNamedBufferResidentNV(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
     unsigned int access = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMakeNamedBufferResidentNV, "glMakeNamedBufferResidentNV");
     rogl_pfn_glMakeNamedBufferResidentNV(buffer, access);
 
     return Qnil;
@@ -17702,6 +18949,7 @@ static VALUE rogl_glMakeNamedBufferNonResidentNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMakeNamedBufferNonResidentNV, "glMakeNamedBufferNonResidentNV");
     rogl_pfn_glMakeNamedBufferNonResidentNV(buffer);
 
     return Qnil;
@@ -17711,6 +18959,7 @@ static VALUE rogl_glIsNamedBufferResidentNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int buffer = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsNamedBufferResidentNV, "glIsNamedBufferResidentNV");
     unsigned char retval = rogl_pfn_glIsNamedBufferResidentNV(buffer);
 
     return UINT2NUM(retval);
@@ -17722,6 +18971,7 @@ static VALUE rogl_glGetBufferParameterui64vNV(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetBufferParameterui64vNV, "glGetBufferParameterui64vNV");
     rogl_pfn_glGetBufferParameterui64vNV(target, pname, params);
 
     return Qnil;
@@ -17733,6 +18983,7 @@ static VALUE rogl_glGetNamedBufferParameterui64vNV(VALUE _obj_, VALUE _arg1_, VA
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetNamedBufferParameterui64vNV, "glGetNamedBufferParameterui64vNV");
     rogl_pfn_glGetNamedBufferParameterui64vNV(buffer, pname, params);
 
     return Qnil;
@@ -17743,6 +18994,7 @@ static VALUE rogl_glGetIntegerui64vNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int value = (unsigned int)NUM2UINT(_arg1_);
     void* result = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetIntegerui64vNV, "glGetIntegerui64vNV");
     rogl_pfn_glGetIntegerui64vNV(value, result);
 
     return Qnil;
@@ -17753,6 +19005,7 @@ static VALUE rogl_glUniformui64NV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int location = (int)NUM2INT(_arg1_);
     unsigned long long value = (unsigned long long)NUM2ULL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniformui64NV, "glUniformui64NV");
     rogl_pfn_glUniformui64NV(location, value);
 
     return Qnil;
@@ -17764,6 +19017,7 @@ static VALUE rogl_glUniformui64vNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     int count = (int)NUM2INT(_arg2_);
     void* value = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glUniformui64vNV, "glUniformui64vNV");
     rogl_pfn_glUniformui64vNV(location, count, value);
 
     return Qnil;
@@ -17775,6 +19029,7 @@ static VALUE rogl_glProgramUniformui64NV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     int location = (int)NUM2INT(_arg2_);
     unsigned long long value = (unsigned long long)NUM2ULL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniformui64NV, "glProgramUniformui64NV");
     rogl_pfn_glProgramUniformui64NV(program, location, value);
 
     return Qnil;
@@ -17787,6 +19042,7 @@ static VALUE rogl_glProgramUniformui64vNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     int count = (int)NUM2INT(_arg3_);
     void* value = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramUniformui64vNV, "glProgramUniformui64vNV");
     rogl_pfn_glProgramUniformui64vNV(program, location, count, value);
 
     return Qnil;
@@ -17794,6 +19050,7 @@ static VALUE rogl_glProgramUniformui64vNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2
 
 static VALUE rogl_glTextureBarrierNV(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureBarrierNV, "glTextureBarrierNV");
     rogl_pfn_glTextureBarrierNV();
 
     return Qnil;
@@ -17809,6 +19066,7 @@ static VALUE rogl_glTexImage2DMultisampleCoverageNV(VALUE _obj_, VALUE _arg1_, V
     int height = (int)NUM2INT(_arg6_);
     unsigned char fixedSampleLocations = (unsigned char)NUM2UINT(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexImage2DMultisampleCoverageNV, "glTexImage2DMultisampleCoverageNV");
     rogl_pfn_glTexImage2DMultisampleCoverageNV(target, coverageSamples, colorSamples, internalFormat, width, height, fixedSampleLocations);
 
     return Qnil;
@@ -17825,6 +19083,7 @@ static VALUE rogl_glTexImage3DMultisampleCoverageNV(VALUE _obj_, VALUE _arg1_, V
     int depth = (int)NUM2INT(_arg7_);
     unsigned char fixedSampleLocations = (unsigned char)NUM2UINT(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexImage3DMultisampleCoverageNV, "glTexImage3DMultisampleCoverageNV");
     rogl_pfn_glTexImage3DMultisampleCoverageNV(target, coverageSamples, colorSamples, internalFormat, width, height, depth, fixedSampleLocations);
 
     return Qnil;
@@ -17840,6 +19099,7 @@ static VALUE rogl_glTextureImage2DMultisampleNV(VALUE _obj_, VALUE _arg1_, VALUE
     int height = (int)NUM2INT(_arg6_);
     unsigned char fixedSampleLocations = (unsigned char)NUM2UINT(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureImage2DMultisampleNV, "glTextureImage2DMultisampleNV");
     rogl_pfn_glTextureImage2DMultisampleNV(texture, target, samples, internalFormat, width, height, fixedSampleLocations);
 
     return Qnil;
@@ -17856,6 +19116,7 @@ static VALUE rogl_glTextureImage3DMultisampleNV(VALUE _obj_, VALUE _arg1_, VALUE
     int depth = (int)NUM2INT(_arg7_);
     unsigned char fixedSampleLocations = (unsigned char)NUM2UINT(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureImage3DMultisampleNV, "glTextureImage3DMultisampleNV");
     rogl_pfn_glTextureImage3DMultisampleNV(texture, target, samples, internalFormat, width, height, depth, fixedSampleLocations);
 
     return Qnil;
@@ -17872,6 +19133,7 @@ static VALUE rogl_glTextureImage2DMultisampleCoverageNV(VALUE _obj_, VALUE _arg1
     int height = (int)NUM2INT(_arg7_);
     unsigned char fixedSampleLocations = (unsigned char)NUM2UINT(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureImage2DMultisampleCoverageNV, "glTextureImage2DMultisampleCoverageNV");
     rogl_pfn_glTextureImage2DMultisampleCoverageNV(texture, target, coverageSamples, colorSamples, internalFormat, width, height, fixedSampleLocations);
 
     return Qnil;
@@ -17889,6 +19151,7 @@ static VALUE rogl_glTextureImage3DMultisampleCoverageNV(VALUE _obj_, VALUE _arg1
     int depth = (int)NUM2INT(_arg8_);
     unsigned char fixedSampleLocations = (unsigned char)NUM2UINT(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureImage3DMultisampleCoverageNV, "glTextureImage3DMultisampleCoverageNV");
     rogl_pfn_glTextureImage3DMultisampleCoverageNV(texture, target, coverageSamples, colorSamples, internalFormat, width, height, depth, fixedSampleLocations);
 
     return Qnil;
@@ -17898,6 +19161,7 @@ static VALUE rogl_glBeginTransformFeedbackNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int primitiveMode = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBeginTransformFeedbackNV, "glBeginTransformFeedbackNV");
     rogl_pfn_glBeginTransformFeedbackNV(primitiveMode);
 
     return Qnil;
@@ -17905,6 +19169,7 @@ static VALUE rogl_glBeginTransformFeedbackNV(VALUE _obj_, VALUE _arg1_)
 
 static VALUE rogl_glEndTransformFeedbackNV(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glEndTransformFeedbackNV, "glEndTransformFeedbackNV");
     rogl_pfn_glEndTransformFeedbackNV();
 
     return Qnil;
@@ -17916,6 +19181,7 @@ static VALUE rogl_glTransformFeedbackAttribsNV(VALUE _obj_, VALUE _arg1_, VALUE 
     void* attribs = (void*)val2ptr(_arg2_);
     unsigned int bufferMode = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTransformFeedbackAttribsNV, "glTransformFeedbackAttribsNV");
     rogl_pfn_glTransformFeedbackAttribsNV(count, attribs, bufferMode);
 
     return Qnil;
@@ -17929,6 +19195,7 @@ static VALUE rogl_glBindBufferRangeNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg4_);
     ptrdiff_t size = (ptrdiff_t)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindBufferRangeNV, "glBindBufferRangeNV");
     rogl_pfn_glBindBufferRangeNV(target, index, buffer, offset, size);
 
     return Qnil;
@@ -17941,6 +19208,7 @@ static VALUE rogl_glBindBufferOffsetNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     unsigned int buffer = (unsigned int)NUM2UINT(_arg3_);
     ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindBufferOffsetNV, "glBindBufferOffsetNV");
     rogl_pfn_glBindBufferOffsetNV(target, index, buffer, offset);
 
     return Qnil;
@@ -17952,6 +19220,7 @@ static VALUE rogl_glBindBufferBaseNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     unsigned int buffer = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindBufferBaseNV, "glBindBufferBaseNV");
     rogl_pfn_glBindBufferBaseNV(target, index, buffer);
 
     return Qnil;
@@ -17964,6 +19233,7 @@ static VALUE rogl_glTransformFeedbackVaryingsNV(VALUE _obj_, VALUE _arg1_, VALUE
     void* locations = (void*)val2ptr(_arg3_);
     unsigned int bufferMode = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTransformFeedbackVaryingsNV, "glTransformFeedbackVaryingsNV");
     rogl_pfn_glTransformFeedbackVaryingsNV(program, count, locations, bufferMode);
 
     return Qnil;
@@ -17974,6 +19244,7 @@ static VALUE rogl_glActiveVaryingNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int program = (unsigned int)NUM2UINT(_arg1_);
     void* name = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glActiveVaryingNV, "glActiveVaryingNV");
     rogl_pfn_glActiveVaryingNV(program, name);
 
     return Qnil;
@@ -17984,6 +19255,7 @@ static VALUE rogl_glGetVaryingLocationNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int program = (unsigned int)NUM2UINT(_arg1_);
     void* name = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVaryingLocationNV, "glGetVaryingLocationNV");
     int retval = rogl_pfn_glGetVaryingLocationNV(program, name);
 
     return INT2NUM(retval);
@@ -17999,6 +19271,7 @@ static VALUE rogl_glGetActiveVaryingNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     void* type = (void*)val2ptr(_arg6_);
     void* name = (void*)val2ptr(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetActiveVaryingNV, "glGetActiveVaryingNV");
     rogl_pfn_glGetActiveVaryingNV(program, index, bufSize, length, size, type, name);
 
     return Qnil;
@@ -18010,6 +19283,7 @@ static VALUE rogl_glGetTransformFeedbackVaryingNV(VALUE _obj_, VALUE _arg1_, VAL
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     void* location = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTransformFeedbackVaryingNV, "glGetTransformFeedbackVaryingNV");
     rogl_pfn_glGetTransformFeedbackVaryingNV(program, index, location);
 
     return Qnil;
@@ -18023,6 +19297,7 @@ static VALUE rogl_glTransformFeedbackStreamAttribsNV(VALUE _obj_, VALUE _arg1_, 
     void* bufstreams = (void*)val2ptr(_arg4_);
     unsigned int bufferMode = (unsigned int)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTransformFeedbackStreamAttribsNV, "glTransformFeedbackStreamAttribsNV");
     rogl_pfn_glTransformFeedbackStreamAttribsNV(count, attribs, nbuffers, bufstreams, bufferMode);
 
     return Qnil;
@@ -18033,6 +19308,7 @@ static VALUE rogl_glBindTransformFeedbackNV(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     unsigned int id = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindTransformFeedbackNV, "glBindTransformFeedbackNV");
     rogl_pfn_glBindTransformFeedbackNV(target, id);
 
     return Qnil;
@@ -18043,6 +19319,7 @@ static VALUE rogl_glDeleteTransformFeedbacksNV(VALUE _obj_, VALUE _arg1_, VALUE 
     int n = (int)NUM2INT(_arg1_);
     void* ids = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeleteTransformFeedbacksNV, "glDeleteTransformFeedbacksNV");
     rogl_pfn_glDeleteTransformFeedbacksNV(n, ids);
 
     return Qnil;
@@ -18053,6 +19330,7 @@ static VALUE rogl_glGenTransformFeedbacksNV(VALUE _obj_, VALUE _arg1_, VALUE _ar
     int n = (int)NUM2INT(_arg1_);
     void* ids = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGenTransformFeedbacksNV, "glGenTransformFeedbacksNV");
     rogl_pfn_glGenTransformFeedbacksNV(n, ids);
 
     return Qnil;
@@ -18062,6 +19340,7 @@ static VALUE rogl_glIsTransformFeedbackNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int id = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsTransformFeedbackNV, "glIsTransformFeedbackNV");
     unsigned char retval = rogl_pfn_glIsTransformFeedbackNV(id);
 
     return UINT2NUM(retval);
@@ -18069,6 +19348,7 @@ static VALUE rogl_glIsTransformFeedbackNV(VALUE _obj_, VALUE _arg1_)
 
 static VALUE rogl_glPauseTransformFeedbackNV(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glPauseTransformFeedbackNV, "glPauseTransformFeedbackNV");
     rogl_pfn_glPauseTransformFeedbackNV();
 
     return Qnil;
@@ -18076,6 +19356,7 @@ static VALUE rogl_glPauseTransformFeedbackNV(VALUE _obj_)
 
 static VALUE rogl_glResumeTransformFeedbackNV(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glResumeTransformFeedbackNV, "glResumeTransformFeedbackNV");
     rogl_pfn_glResumeTransformFeedbackNV();
 
     return Qnil;
@@ -18086,6 +19367,7 @@ static VALUE rogl_glDrawTransformFeedbackNV(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
     unsigned int id = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDrawTransformFeedbackNV, "glDrawTransformFeedbackNV");
     rogl_pfn_glDrawTransformFeedbackNV(mode, id);
 
     return Qnil;
@@ -18096,6 +19378,7 @@ static VALUE rogl_glVDPAUInitNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     void* vdpDevice = (void*)val2ptr(_arg1_);
     void* getProcAddress = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVDPAUInitNV, "glVDPAUInitNV");
     rogl_pfn_glVDPAUInitNV(vdpDevice, getProcAddress);
 
     return Qnil;
@@ -18103,6 +19386,7 @@ static VALUE rogl_glVDPAUInitNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 
 static VALUE rogl_glVDPAUFiniNV(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glVDPAUFiniNV, "glVDPAUFiniNV");
     rogl_pfn_glVDPAUFiniNV();
 
     return Qnil;
@@ -18115,6 +19399,7 @@ static VALUE rogl_glVDPAURegisterVideoSurfaceNV(VALUE _obj_, VALUE _arg1_, VALUE
     int numTextureNames = (int)NUM2INT(_arg3_);
     void* textureNames = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVDPAURegisterVideoSurfaceNV, "glVDPAURegisterVideoSurfaceNV");
     ptrdiff_t retval = rogl_pfn_glVDPAURegisterVideoSurfaceNV(vdpSurface, target, numTextureNames, textureNames);
 
     return UINT2NUM(retval);
@@ -18127,6 +19412,7 @@ static VALUE rogl_glVDPAURegisterOutputSurfaceNV(VALUE _obj_, VALUE _arg1_, VALU
     int numTextureNames = (int)NUM2INT(_arg3_);
     void* textureNames = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVDPAURegisterOutputSurfaceNV, "glVDPAURegisterOutputSurfaceNV");
     ptrdiff_t retval = rogl_pfn_glVDPAURegisterOutputSurfaceNV(vdpSurface, target, numTextureNames, textureNames);
 
     return UINT2NUM(retval);
@@ -18136,6 +19422,7 @@ static VALUE rogl_glVDPAUIsSurfaceNV(VALUE _obj_, VALUE _arg1_)
 {
     ptrdiff_t surface = (ptrdiff_t)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVDPAUIsSurfaceNV, "glVDPAUIsSurfaceNV");
     unsigned char retval = rogl_pfn_glVDPAUIsSurfaceNV(surface);
 
     return UINT2NUM(retval);
@@ -18145,6 +19432,7 @@ static VALUE rogl_glVDPAUUnregisterSurfaceNV(VALUE _obj_, VALUE _arg1_)
 {
     ptrdiff_t surface = (ptrdiff_t)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVDPAUUnregisterSurfaceNV, "glVDPAUUnregisterSurfaceNV");
     rogl_pfn_glVDPAUUnregisterSurfaceNV(surface);
 
     return Qnil;
@@ -18158,6 +19446,7 @@ static VALUE rogl_glVDPAUGetSurfaceivNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     void* length = (void*)val2ptr(_arg4_);
     void* values = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVDPAUGetSurfaceivNV, "glVDPAUGetSurfaceivNV");
     rogl_pfn_glVDPAUGetSurfaceivNV(surface, pname, bufSize, length, values);
 
     return Qnil;
@@ -18168,6 +19457,7 @@ static VALUE rogl_glVDPAUSurfaceAccessNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     ptrdiff_t surface = (ptrdiff_t)NUM2UINT(_arg1_);
     unsigned int access = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVDPAUSurfaceAccessNV, "glVDPAUSurfaceAccessNV");
     rogl_pfn_glVDPAUSurfaceAccessNV(surface, access);
 
     return Qnil;
@@ -18178,6 +19468,7 @@ static VALUE rogl_glVDPAUMapSurfacesNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int numSurfaces = (int)NUM2INT(_arg1_);
     void* surfaces = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVDPAUMapSurfacesNV, "glVDPAUMapSurfacesNV");
     rogl_pfn_glVDPAUMapSurfacesNV(numSurfaces, surfaces);
 
     return Qnil;
@@ -18188,6 +19479,7 @@ static VALUE rogl_glVDPAUUnmapSurfacesNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     int numSurface = (int)NUM2INT(_arg1_);
     void* surfaces = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVDPAUUnmapSurfacesNV, "glVDPAUUnmapSurfacesNV");
     rogl_pfn_glVDPAUUnmapSurfacesNV(numSurface, surfaces);
 
     return Qnil;
@@ -18195,6 +19487,7 @@ static VALUE rogl_glVDPAUUnmapSurfacesNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
 
 static VALUE rogl_glFlushVertexArrayRangeNV(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glFlushVertexArrayRangeNV, "glFlushVertexArrayRangeNV");
     rogl_pfn_glFlushVertexArrayRangeNV();
 
     return Qnil;
@@ -18205,6 +19498,7 @@ static VALUE rogl_glVertexArrayRangeNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int length = (int)NUM2INT(_arg1_);
     void* pointer = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexArrayRangeNV, "glVertexArrayRangeNV");
     rogl_pfn_glVertexArrayRangeNV(length, pointer);
 
     return Qnil;
@@ -18215,6 +19509,7 @@ static VALUE rogl_glVertexAttribL1i64NV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     long long x = (long long)NUM2LL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL1i64NV, "glVertexAttribL1i64NV");
     rogl_pfn_glVertexAttribL1i64NV(index, x);
 
     return Qnil;
@@ -18226,6 +19521,7 @@ static VALUE rogl_glVertexAttribL2i64NV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     long long x = (long long)NUM2LL(_arg2_);
     long long y = (long long)NUM2LL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL2i64NV, "glVertexAttribL2i64NV");
     rogl_pfn_glVertexAttribL2i64NV(index, x, y);
 
     return Qnil;
@@ -18238,6 +19534,7 @@ static VALUE rogl_glVertexAttribL3i64NV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     long long y = (long long)NUM2LL(_arg3_);
     long long z = (long long)NUM2LL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL3i64NV, "glVertexAttribL3i64NV");
     rogl_pfn_glVertexAttribL3i64NV(index, x, y, z);
 
     return Qnil;
@@ -18251,6 +19548,7 @@ static VALUE rogl_glVertexAttribL4i64NV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     long long z = (long long)NUM2LL(_arg4_);
     long long w = (long long)NUM2LL(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL4i64NV, "glVertexAttribL4i64NV");
     rogl_pfn_glVertexAttribL4i64NV(index, x, y, z, w);
 
     return Qnil;
@@ -18261,6 +19559,7 @@ static VALUE rogl_glVertexAttribL1i64vNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL1i64vNV, "glVertexAttribL1i64vNV");
     rogl_pfn_glVertexAttribL1i64vNV(index, v);
 
     return Qnil;
@@ -18271,6 +19570,7 @@ static VALUE rogl_glVertexAttribL2i64vNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL2i64vNV, "glVertexAttribL2i64vNV");
     rogl_pfn_glVertexAttribL2i64vNV(index, v);
 
     return Qnil;
@@ -18281,6 +19581,7 @@ static VALUE rogl_glVertexAttribL3i64vNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL3i64vNV, "glVertexAttribL3i64vNV");
     rogl_pfn_glVertexAttribL3i64vNV(index, v);
 
     return Qnil;
@@ -18291,6 +19592,7 @@ static VALUE rogl_glVertexAttribL4i64vNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL4i64vNV, "glVertexAttribL4i64vNV");
     rogl_pfn_glVertexAttribL4i64vNV(index, v);
 
     return Qnil;
@@ -18301,6 +19603,7 @@ static VALUE rogl_glVertexAttribL1ui64NV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     unsigned long long x = (unsigned long long)NUM2ULL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL1ui64NV, "glVertexAttribL1ui64NV");
     rogl_pfn_glVertexAttribL1ui64NV(index, x);
 
     return Qnil;
@@ -18312,6 +19615,7 @@ static VALUE rogl_glVertexAttribL2ui64NV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned long long x = (unsigned long long)NUM2ULL(_arg2_);
     unsigned long long y = (unsigned long long)NUM2ULL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL2ui64NV, "glVertexAttribL2ui64NV");
     rogl_pfn_glVertexAttribL2ui64NV(index, x, y);
 
     return Qnil;
@@ -18324,6 +19628,7 @@ static VALUE rogl_glVertexAttribL3ui64NV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned long long y = (unsigned long long)NUM2ULL(_arg3_);
     unsigned long long z = (unsigned long long)NUM2ULL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL3ui64NV, "glVertexAttribL3ui64NV");
     rogl_pfn_glVertexAttribL3ui64NV(index, x, y, z);
 
     return Qnil;
@@ -18337,6 +19642,7 @@ static VALUE rogl_glVertexAttribL4ui64NV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned long long z = (unsigned long long)NUM2ULL(_arg4_);
     unsigned long long w = (unsigned long long)NUM2ULL(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL4ui64NV, "glVertexAttribL4ui64NV");
     rogl_pfn_glVertexAttribL4ui64NV(index, x, y, z, w);
 
     return Qnil;
@@ -18347,6 +19653,7 @@ static VALUE rogl_glVertexAttribL1ui64vNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL1ui64vNV, "glVertexAttribL1ui64vNV");
     rogl_pfn_glVertexAttribL1ui64vNV(index, v);
 
     return Qnil;
@@ -18357,6 +19664,7 @@ static VALUE rogl_glVertexAttribL2ui64vNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL2ui64vNV, "glVertexAttribL2ui64vNV");
     rogl_pfn_glVertexAttribL2ui64vNV(index, v);
 
     return Qnil;
@@ -18367,6 +19675,7 @@ static VALUE rogl_glVertexAttribL3ui64vNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL3ui64vNV, "glVertexAttribL3ui64vNV");
     rogl_pfn_glVertexAttribL3ui64vNV(index, v);
 
     return Qnil;
@@ -18377,6 +19686,7 @@ static VALUE rogl_glVertexAttribL4ui64vNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribL4ui64vNV, "glVertexAttribL4ui64vNV");
     rogl_pfn_glVertexAttribL4ui64vNV(index, v);
 
     return Qnil;
@@ -18388,6 +19698,7 @@ static VALUE rogl_glGetVertexAttribLi64vNV(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVertexAttribLi64vNV, "glGetVertexAttribLi64vNV");
     rogl_pfn_glGetVertexAttribLi64vNV(index, pname, params);
 
     return Qnil;
@@ -18399,6 +19710,7 @@ static VALUE rogl_glGetVertexAttribLui64vNV(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVertexAttribLui64vNV, "glGetVertexAttribLui64vNV");
     rogl_pfn_glGetVertexAttribLui64vNV(index, pname, params);
 
     return Qnil;
@@ -18411,6 +19723,7 @@ static VALUE rogl_glVertexAttribLFormatNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int type = (unsigned int)NUM2UINT(_arg3_);
     int stride = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribLFormatNV, "glVertexAttribLFormatNV");
     rogl_pfn_glVertexAttribLFormatNV(index, size, type, stride);
 
     return Qnil;
@@ -18423,6 +19736,7 @@ static VALUE rogl_glBufferAddressRangeNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned long long address = (unsigned long long)NUM2ULL(_arg3_);
     ptrdiff_t length = (ptrdiff_t)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBufferAddressRangeNV, "glBufferAddressRangeNV");
     rogl_pfn_glBufferAddressRangeNV(pname, index, address, length);
 
     return Qnil;
@@ -18434,6 +19748,7 @@ static VALUE rogl_glVertexFormatNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     unsigned int type = (unsigned int)NUM2UINT(_arg2_);
     int stride = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexFormatNV, "glVertexFormatNV");
     rogl_pfn_glVertexFormatNV(size, type, stride);
 
     return Qnil;
@@ -18444,6 +19759,7 @@ static VALUE rogl_glNormalFormatNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int type = (unsigned int)NUM2UINT(_arg1_);
     int stride = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNormalFormatNV, "glNormalFormatNV");
     rogl_pfn_glNormalFormatNV(type, stride);
 
     return Qnil;
@@ -18455,6 +19771,7 @@ static VALUE rogl_glColorFormatNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     unsigned int type = (unsigned int)NUM2UINT(_arg2_);
     int stride = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColorFormatNV, "glColorFormatNV");
     rogl_pfn_glColorFormatNV(size, type, stride);
 
     return Qnil;
@@ -18465,6 +19782,7 @@ static VALUE rogl_glIndexFormatNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int type = (unsigned int)NUM2UINT(_arg1_);
     int stride = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIndexFormatNV, "glIndexFormatNV");
     rogl_pfn_glIndexFormatNV(type, stride);
 
     return Qnil;
@@ -18476,6 +19794,7 @@ static VALUE rogl_glTexCoordFormatNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int type = (unsigned int)NUM2UINT(_arg2_);
     int stride = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoordFormatNV, "glTexCoordFormatNV");
     rogl_pfn_glTexCoordFormatNV(size, type, stride);
 
     return Qnil;
@@ -18485,6 +19804,7 @@ static VALUE rogl_glEdgeFlagFormatNV(VALUE _obj_, VALUE _arg1_)
 {
     int stride = (int)NUM2INT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glEdgeFlagFormatNV, "glEdgeFlagFormatNV");
     rogl_pfn_glEdgeFlagFormatNV(stride);
 
     return Qnil;
@@ -18496,6 +19816,7 @@ static VALUE rogl_glSecondaryColorFormatNV(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int type = (unsigned int)NUM2UINT(_arg2_);
     int stride = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSecondaryColorFormatNV, "glSecondaryColorFormatNV");
     rogl_pfn_glSecondaryColorFormatNV(size, type, stride);
 
     return Qnil;
@@ -18506,6 +19827,7 @@ static VALUE rogl_glFogCoordFormatNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int type = (unsigned int)NUM2UINT(_arg1_);
     int stride = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFogCoordFormatNV, "glFogCoordFormatNV");
     rogl_pfn_glFogCoordFormatNV(type, stride);
 
     return Qnil;
@@ -18519,6 +19841,7 @@ static VALUE rogl_glVertexAttribFormatNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned char normalized = (unsigned char)NUM2UINT(_arg4_);
     int stride = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribFormatNV, "glVertexAttribFormatNV");
     rogl_pfn_glVertexAttribFormatNV(index, size, type, normalized, stride);
 
     return Qnil;
@@ -18531,6 +19854,7 @@ static VALUE rogl_glVertexAttribIFormatNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int type = (unsigned int)NUM2UINT(_arg3_);
     int stride = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribIFormatNV, "glVertexAttribIFormatNV");
     rogl_pfn_glVertexAttribIFormatNV(index, size, type, stride);
 
     return Qnil;
@@ -18542,6 +19866,7 @@ static VALUE rogl_glGetIntegerui64i_vNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     void* result = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetIntegerui64i_vNV, "glGetIntegerui64i_vNV");
     rogl_pfn_glGetIntegerui64i_vNV(value, index, result);
 
     return Qnil;
@@ -18553,6 +19878,7 @@ static VALUE rogl_glAreProgramsResidentNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     void* programs = (void*)val2ptr(_arg2_);
     void* residences = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glAreProgramsResidentNV, "glAreProgramsResidentNV");
     unsigned char retval = rogl_pfn_glAreProgramsResidentNV(n, programs, residences);
 
     return UINT2NUM(retval);
@@ -18563,6 +19889,7 @@ static VALUE rogl_glBindProgramNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     unsigned int id = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindProgramNV, "glBindProgramNV");
     rogl_pfn_glBindProgramNV(target, id);
 
     return Qnil;
@@ -18573,6 +19900,7 @@ static VALUE rogl_glDeleteProgramsNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int n = (int)NUM2INT(_arg1_);
     void* programs = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeleteProgramsNV, "glDeleteProgramsNV");
     rogl_pfn_glDeleteProgramsNV(n, programs);
 
     return Qnil;
@@ -18584,6 +19912,7 @@ static VALUE rogl_glExecuteProgramNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int id = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glExecuteProgramNV, "glExecuteProgramNV");
     rogl_pfn_glExecuteProgramNV(target, id, params);
 
     return Qnil;
@@ -18594,6 +19923,7 @@ static VALUE rogl_glGenProgramsNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int n = (int)NUM2INT(_arg1_);
     void* programs = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGenProgramsNV, "glGenProgramsNV");
     rogl_pfn_glGenProgramsNV(n, programs);
 
     return Qnil;
@@ -18606,6 +19936,7 @@ static VALUE rogl_glGetProgramParameterdvNV(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetProgramParameterdvNV, "glGetProgramParameterdvNV");
     rogl_pfn_glGetProgramParameterdvNV(target, index, pname, params);
 
     return Qnil;
@@ -18618,6 +19949,7 @@ static VALUE rogl_glGetProgramParameterfvNV(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetProgramParameterfvNV, "glGetProgramParameterfvNV");
     rogl_pfn_glGetProgramParameterfvNV(target, index, pname, params);
 
     return Qnil;
@@ -18629,6 +19961,7 @@ static VALUE rogl_glGetProgramivNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetProgramivNV, "glGetProgramivNV");
     rogl_pfn_glGetProgramivNV(id, pname, params);
 
     return Qnil;
@@ -18640,6 +19973,7 @@ static VALUE rogl_glGetProgramStringNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* program = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetProgramStringNV, "glGetProgramStringNV");
     rogl_pfn_glGetProgramStringNV(id, pname, program);
 
     return Qnil;
@@ -18652,6 +19986,7 @@ static VALUE rogl_glGetTrackMatrixivNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTrackMatrixivNV, "glGetTrackMatrixivNV");
     rogl_pfn_glGetTrackMatrixivNV(target, address, pname, params);
 
     return Qnil;
@@ -18663,6 +19998,7 @@ static VALUE rogl_glGetVertexAttribdvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVertexAttribdvNV, "glGetVertexAttribdvNV");
     rogl_pfn_glGetVertexAttribdvNV(index, pname, params);
 
     return Qnil;
@@ -18674,6 +20010,7 @@ static VALUE rogl_glGetVertexAttribfvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVertexAttribfvNV, "glGetVertexAttribfvNV");
     rogl_pfn_glGetVertexAttribfvNV(index, pname, params);
 
     return Qnil;
@@ -18685,6 +20022,7 @@ static VALUE rogl_glGetVertexAttribivNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVertexAttribivNV, "glGetVertexAttribivNV");
     rogl_pfn_glGetVertexAttribivNV(index, pname, params);
 
     return Qnil;
@@ -18696,6 +20034,7 @@ static VALUE rogl_glGetVertexAttribPointervNV(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* pointer = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVertexAttribPointervNV, "glGetVertexAttribPointervNV");
     rogl_pfn_glGetVertexAttribPointervNV(index, pname, pointer);
 
     return Qnil;
@@ -18705,6 +20044,7 @@ static VALUE rogl_glIsProgramNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int id = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsProgramNV, "glIsProgramNV");
     unsigned char retval = rogl_pfn_glIsProgramNV(id);
 
     return UINT2NUM(retval);
@@ -18717,6 +20057,7 @@ static VALUE rogl_glLoadProgramNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     int len = (int)NUM2INT(_arg3_);
     void* program = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glLoadProgramNV, "glLoadProgramNV");
     rogl_pfn_glLoadProgramNV(target, id, len, program);
 
     return Qnil;
@@ -18731,6 +20072,7 @@ static VALUE rogl_glProgramParameter4dNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     double z = (double)NUM2DBL(_arg5_);
     double w = (double)NUM2DBL(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramParameter4dNV, "glProgramParameter4dNV");
     rogl_pfn_glProgramParameter4dNV(target, index, x, y, z, w);
 
     return Qnil;
@@ -18742,6 +20084,7 @@ static VALUE rogl_glProgramParameter4dvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramParameter4dvNV, "glProgramParameter4dvNV");
     rogl_pfn_glProgramParameter4dvNV(target, index, v);
 
     return Qnil;
@@ -18756,6 +20099,7 @@ static VALUE rogl_glProgramParameter4fNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     float z = (float)NUM2DBL(_arg5_);
     float w = (float)NUM2DBL(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramParameter4fNV, "glProgramParameter4fNV");
     rogl_pfn_glProgramParameter4fNV(target, index, x, y, z, w);
 
     return Qnil;
@@ -18767,6 +20111,7 @@ static VALUE rogl_glProgramParameter4fvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int index = (unsigned int)NUM2UINT(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramParameter4fvNV, "glProgramParameter4fvNV");
     rogl_pfn_glProgramParameter4fvNV(target, index, v);
 
     return Qnil;
@@ -18779,6 +20124,7 @@ static VALUE rogl_glProgramParameters4dvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg
     int count = (int)NUM2INT(_arg3_);
     void* v = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramParameters4dvNV, "glProgramParameters4dvNV");
     rogl_pfn_glProgramParameters4dvNV(target, index, count, v);
 
     return Qnil;
@@ -18791,6 +20137,7 @@ static VALUE rogl_glProgramParameters4fvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg
     int count = (int)NUM2INT(_arg3_);
     void* v = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glProgramParameters4fvNV, "glProgramParameters4fvNV");
     rogl_pfn_glProgramParameters4fvNV(target, index, count, v);
 
     return Qnil;
@@ -18801,6 +20148,7 @@ static VALUE rogl_glRequestResidentProgramsNV(VALUE _obj_, VALUE _arg1_, VALUE _
     int n = (int)NUM2INT(_arg1_);
     void* programs = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glRequestResidentProgramsNV, "glRequestResidentProgramsNV");
     rogl_pfn_glRequestResidentProgramsNV(n, programs);
 
     return Qnil;
@@ -18813,6 +20161,7 @@ static VALUE rogl_glTrackMatrixNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     unsigned int matrix = (unsigned int)NUM2UINT(_arg3_);
     unsigned int transform = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTrackMatrixNV, "glTrackMatrixNV");
     rogl_pfn_glTrackMatrixNV(target, address, matrix, transform);
 
     return Qnil;
@@ -18826,6 +20175,7 @@ static VALUE rogl_glVertexAttribPointerNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     int stride = (int)NUM2INT(_arg4_);
     void* pointer = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribPointerNV, "glVertexAttribPointerNV");
     rogl_pfn_glVertexAttribPointerNV(index, fsize, type, stride, pointer);
 
     return Qnil;
@@ -18836,6 +20186,7 @@ static VALUE rogl_glVertexAttrib1dNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     double x = (double)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib1dNV, "glVertexAttrib1dNV");
     rogl_pfn_glVertexAttrib1dNV(index, x);
 
     return Qnil;
@@ -18846,6 +20197,7 @@ static VALUE rogl_glVertexAttrib1dvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib1dvNV, "glVertexAttrib1dvNV");
     rogl_pfn_glVertexAttrib1dvNV(index, v);
 
     return Qnil;
@@ -18856,6 +20208,7 @@ static VALUE rogl_glVertexAttrib1fNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     float x = (float)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib1fNV, "glVertexAttrib1fNV");
     rogl_pfn_glVertexAttrib1fNV(index, x);
 
     return Qnil;
@@ -18866,6 +20219,7 @@ static VALUE rogl_glVertexAttrib1fvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib1fvNV, "glVertexAttrib1fvNV");
     rogl_pfn_glVertexAttrib1fvNV(index, v);
 
     return Qnil;
@@ -18876,6 +20230,7 @@ static VALUE rogl_glVertexAttrib1sNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     short x = (short)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib1sNV, "glVertexAttrib1sNV");
     rogl_pfn_glVertexAttrib1sNV(index, x);
 
     return Qnil;
@@ -18886,6 +20241,7 @@ static VALUE rogl_glVertexAttrib1svNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib1svNV, "glVertexAttrib1svNV");
     rogl_pfn_glVertexAttrib1svNV(index, v);
 
     return Qnil;
@@ -18897,6 +20253,7 @@ static VALUE rogl_glVertexAttrib2dNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     double x = (double)NUM2DBL(_arg2_);
     double y = (double)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib2dNV, "glVertexAttrib2dNV");
     rogl_pfn_glVertexAttrib2dNV(index, x, y);
 
     return Qnil;
@@ -18907,6 +20264,7 @@ static VALUE rogl_glVertexAttrib2dvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib2dvNV, "glVertexAttrib2dvNV");
     rogl_pfn_glVertexAttrib2dvNV(index, v);
 
     return Qnil;
@@ -18918,6 +20276,7 @@ static VALUE rogl_glVertexAttrib2fNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     float x = (float)NUM2DBL(_arg2_);
     float y = (float)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib2fNV, "glVertexAttrib2fNV");
     rogl_pfn_glVertexAttrib2fNV(index, x, y);
 
     return Qnil;
@@ -18928,6 +20287,7 @@ static VALUE rogl_glVertexAttrib2fvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib2fvNV, "glVertexAttrib2fvNV");
     rogl_pfn_glVertexAttrib2fvNV(index, v);
 
     return Qnil;
@@ -18939,6 +20299,7 @@ static VALUE rogl_glVertexAttrib2sNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     short x = (short)NUM2INT(_arg2_);
     short y = (short)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib2sNV, "glVertexAttrib2sNV");
     rogl_pfn_glVertexAttrib2sNV(index, x, y);
 
     return Qnil;
@@ -18949,6 +20310,7 @@ static VALUE rogl_glVertexAttrib2svNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib2svNV, "glVertexAttrib2svNV");
     rogl_pfn_glVertexAttrib2svNV(index, v);
 
     return Qnil;
@@ -18961,6 +20323,7 @@ static VALUE rogl_glVertexAttrib3dNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     double y = (double)NUM2DBL(_arg3_);
     double z = (double)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib3dNV, "glVertexAttrib3dNV");
     rogl_pfn_glVertexAttrib3dNV(index, x, y, z);
 
     return Qnil;
@@ -18971,6 +20334,7 @@ static VALUE rogl_glVertexAttrib3dvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib3dvNV, "glVertexAttrib3dvNV");
     rogl_pfn_glVertexAttrib3dvNV(index, v);
 
     return Qnil;
@@ -18983,6 +20347,7 @@ static VALUE rogl_glVertexAttrib3fNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     float y = (float)NUM2DBL(_arg3_);
     float z = (float)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib3fNV, "glVertexAttrib3fNV");
     rogl_pfn_glVertexAttrib3fNV(index, x, y, z);
 
     return Qnil;
@@ -18993,6 +20358,7 @@ static VALUE rogl_glVertexAttrib3fvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib3fvNV, "glVertexAttrib3fvNV");
     rogl_pfn_glVertexAttrib3fvNV(index, v);
 
     return Qnil;
@@ -19005,6 +20371,7 @@ static VALUE rogl_glVertexAttrib3sNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     short y = (short)NUM2INT(_arg3_);
     short z = (short)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib3sNV, "glVertexAttrib3sNV");
     rogl_pfn_glVertexAttrib3sNV(index, x, y, z);
 
     return Qnil;
@@ -19015,6 +20382,7 @@ static VALUE rogl_glVertexAttrib3svNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib3svNV, "glVertexAttrib3svNV");
     rogl_pfn_glVertexAttrib3svNV(index, v);
 
     return Qnil;
@@ -19028,6 +20396,7 @@ static VALUE rogl_glVertexAttrib4dNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     double z = (double)NUM2DBL(_arg4_);
     double w = (double)NUM2DBL(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib4dNV, "glVertexAttrib4dNV");
     rogl_pfn_glVertexAttrib4dNV(index, x, y, z, w);
 
     return Qnil;
@@ -19038,6 +20407,7 @@ static VALUE rogl_glVertexAttrib4dvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib4dvNV, "glVertexAttrib4dvNV");
     rogl_pfn_glVertexAttrib4dvNV(index, v);
 
     return Qnil;
@@ -19051,6 +20421,7 @@ static VALUE rogl_glVertexAttrib4fNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     float z = (float)NUM2DBL(_arg4_);
     float w = (float)NUM2DBL(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib4fNV, "glVertexAttrib4fNV");
     rogl_pfn_glVertexAttrib4fNV(index, x, y, z, w);
 
     return Qnil;
@@ -19061,6 +20432,7 @@ static VALUE rogl_glVertexAttrib4fvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib4fvNV, "glVertexAttrib4fvNV");
     rogl_pfn_glVertexAttrib4fvNV(index, v);
 
     return Qnil;
@@ -19074,6 +20446,7 @@ static VALUE rogl_glVertexAttrib4sNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     short z = (short)NUM2INT(_arg4_);
     short w = (short)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib4sNV, "glVertexAttrib4sNV");
     rogl_pfn_glVertexAttrib4sNV(index, x, y, z, w);
 
     return Qnil;
@@ -19084,6 +20457,7 @@ static VALUE rogl_glVertexAttrib4svNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib4svNV, "glVertexAttrib4svNV");
     rogl_pfn_glVertexAttrib4svNV(index, v);
 
     return Qnil;
@@ -19097,6 +20471,7 @@ static VALUE rogl_glVertexAttrib4ubNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     unsigned char z = (unsigned char)NUM2UINT(_arg4_);
     unsigned char w = (unsigned char)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib4ubNV, "glVertexAttrib4ubNV");
     rogl_pfn_glVertexAttrib4ubNV(index, x, y, z, w);
 
     return Qnil;
@@ -19107,6 +20482,7 @@ static VALUE rogl_glVertexAttrib4ubvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttrib4ubvNV, "glVertexAttrib4ubvNV");
     rogl_pfn_glVertexAttrib4ubvNV(index, v);
 
     return Qnil;
@@ -19118,6 +20494,7 @@ static VALUE rogl_glVertexAttribs1dvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int count = (int)NUM2INT(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribs1dvNV, "glVertexAttribs1dvNV");
     rogl_pfn_glVertexAttribs1dvNV(index, count, v);
 
     return Qnil;
@@ -19129,6 +20506,7 @@ static VALUE rogl_glVertexAttribs1fvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int count = (int)NUM2INT(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribs1fvNV, "glVertexAttribs1fvNV");
     rogl_pfn_glVertexAttribs1fvNV(index, count, v);
 
     return Qnil;
@@ -19140,6 +20518,7 @@ static VALUE rogl_glVertexAttribs1svNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int count = (int)NUM2INT(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribs1svNV, "glVertexAttribs1svNV");
     rogl_pfn_glVertexAttribs1svNV(index, count, v);
 
     return Qnil;
@@ -19151,6 +20530,7 @@ static VALUE rogl_glVertexAttribs2dvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int count = (int)NUM2INT(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribs2dvNV, "glVertexAttribs2dvNV");
     rogl_pfn_glVertexAttribs2dvNV(index, count, v);
 
     return Qnil;
@@ -19162,6 +20542,7 @@ static VALUE rogl_glVertexAttribs2fvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int count = (int)NUM2INT(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribs2fvNV, "glVertexAttribs2fvNV");
     rogl_pfn_glVertexAttribs2fvNV(index, count, v);
 
     return Qnil;
@@ -19173,6 +20554,7 @@ static VALUE rogl_glVertexAttribs2svNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int count = (int)NUM2INT(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribs2svNV, "glVertexAttribs2svNV");
     rogl_pfn_glVertexAttribs2svNV(index, count, v);
 
     return Qnil;
@@ -19184,6 +20566,7 @@ static VALUE rogl_glVertexAttribs3dvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int count = (int)NUM2INT(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribs3dvNV, "glVertexAttribs3dvNV");
     rogl_pfn_glVertexAttribs3dvNV(index, count, v);
 
     return Qnil;
@@ -19195,6 +20578,7 @@ static VALUE rogl_glVertexAttribs3fvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int count = (int)NUM2INT(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribs3fvNV, "glVertexAttribs3fvNV");
     rogl_pfn_glVertexAttribs3fvNV(index, count, v);
 
     return Qnil;
@@ -19206,6 +20590,7 @@ static VALUE rogl_glVertexAttribs3svNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int count = (int)NUM2INT(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribs3svNV, "glVertexAttribs3svNV");
     rogl_pfn_glVertexAttribs3svNV(index, count, v);
 
     return Qnil;
@@ -19217,6 +20602,7 @@ static VALUE rogl_glVertexAttribs4dvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int count = (int)NUM2INT(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribs4dvNV, "glVertexAttribs4dvNV");
     rogl_pfn_glVertexAttribs4dvNV(index, count, v);
 
     return Qnil;
@@ -19228,6 +20614,7 @@ static VALUE rogl_glVertexAttribs4fvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int count = (int)NUM2INT(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribs4fvNV, "glVertexAttribs4fvNV");
     rogl_pfn_glVertexAttribs4fvNV(index, count, v);
 
     return Qnil;
@@ -19239,6 +20626,7 @@ static VALUE rogl_glVertexAttribs4svNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int count = (int)NUM2INT(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribs4svNV, "glVertexAttribs4svNV");
     rogl_pfn_glVertexAttribs4svNV(index, count, v);
 
     return Qnil;
@@ -19250,6 +20638,7 @@ static VALUE rogl_glVertexAttribs4ubvNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     int count = (int)NUM2INT(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribs4ubvNV, "glVertexAttribs4ubvNV");
     rogl_pfn_glVertexAttribs4ubvNV(index, count, v);
 
     return Qnil;
@@ -19260,6 +20649,7 @@ static VALUE rogl_glVertexAttribI1iEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     int x = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribI1iEXT, "glVertexAttribI1iEXT");
     rogl_pfn_glVertexAttribI1iEXT(index, x);
 
     return Qnil;
@@ -19271,6 +20661,7 @@ static VALUE rogl_glVertexAttribI2iEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int x = (int)NUM2INT(_arg2_);
     int y = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribI2iEXT, "glVertexAttribI2iEXT");
     rogl_pfn_glVertexAttribI2iEXT(index, x, y);
 
     return Qnil;
@@ -19283,6 +20674,7 @@ static VALUE rogl_glVertexAttribI3iEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int y = (int)NUM2INT(_arg3_);
     int z = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribI3iEXT, "glVertexAttribI3iEXT");
     rogl_pfn_glVertexAttribI3iEXT(index, x, y, z);
 
     return Qnil;
@@ -19296,6 +20688,7 @@ static VALUE rogl_glVertexAttribI4iEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int z = (int)NUM2INT(_arg4_);
     int w = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribI4iEXT, "glVertexAttribI4iEXT");
     rogl_pfn_glVertexAttribI4iEXT(index, x, y, z, w);
 
     return Qnil;
@@ -19306,6 +20699,7 @@ static VALUE rogl_glVertexAttribI1uiEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     unsigned int x = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribI1uiEXT, "glVertexAttribI1uiEXT");
     rogl_pfn_glVertexAttribI1uiEXT(index, x);
 
     return Qnil;
@@ -19317,6 +20711,7 @@ static VALUE rogl_glVertexAttribI2uiEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int x = (unsigned int)NUM2UINT(_arg2_);
     unsigned int y = (unsigned int)NUM2UINT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribI2uiEXT, "glVertexAttribI2uiEXT");
     rogl_pfn_glVertexAttribI2uiEXT(index, x, y);
 
     return Qnil;
@@ -19329,6 +20724,7 @@ static VALUE rogl_glVertexAttribI3uiEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int y = (unsigned int)NUM2UINT(_arg3_);
     unsigned int z = (unsigned int)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribI3uiEXT, "glVertexAttribI3uiEXT");
     rogl_pfn_glVertexAttribI3uiEXT(index, x, y, z);
 
     return Qnil;
@@ -19342,6 +20738,7 @@ static VALUE rogl_glVertexAttribI4uiEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int z = (unsigned int)NUM2UINT(_arg4_);
     unsigned int w = (unsigned int)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribI4uiEXT, "glVertexAttribI4uiEXT");
     rogl_pfn_glVertexAttribI4uiEXT(index, x, y, z, w);
 
     return Qnil;
@@ -19352,6 +20749,7 @@ static VALUE rogl_glVertexAttribI1ivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribI1ivEXT, "glVertexAttribI1ivEXT");
     rogl_pfn_glVertexAttribI1ivEXT(index, v);
 
     return Qnil;
@@ -19362,6 +20760,7 @@ static VALUE rogl_glVertexAttribI2ivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribI2ivEXT, "glVertexAttribI2ivEXT");
     rogl_pfn_glVertexAttribI2ivEXT(index, v);
 
     return Qnil;
@@ -19372,6 +20771,7 @@ static VALUE rogl_glVertexAttribI3ivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribI3ivEXT, "glVertexAttribI3ivEXT");
     rogl_pfn_glVertexAttribI3ivEXT(index, v);
 
     return Qnil;
@@ -19382,6 +20782,7 @@ static VALUE rogl_glVertexAttribI4ivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribI4ivEXT, "glVertexAttribI4ivEXT");
     rogl_pfn_glVertexAttribI4ivEXT(index, v);
 
     return Qnil;
@@ -19392,6 +20793,7 @@ static VALUE rogl_glVertexAttribI1uivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribI1uivEXT, "glVertexAttribI1uivEXT");
     rogl_pfn_glVertexAttribI1uivEXT(index, v);
 
     return Qnil;
@@ -19402,6 +20804,7 @@ static VALUE rogl_glVertexAttribI2uivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribI2uivEXT, "glVertexAttribI2uivEXT");
     rogl_pfn_glVertexAttribI2uivEXT(index, v);
 
     return Qnil;
@@ -19412,6 +20815,7 @@ static VALUE rogl_glVertexAttribI3uivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribI3uivEXT, "glVertexAttribI3uivEXT");
     rogl_pfn_glVertexAttribI3uivEXT(index, v);
 
     return Qnil;
@@ -19422,6 +20826,7 @@ static VALUE rogl_glVertexAttribI4uivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribI4uivEXT, "glVertexAttribI4uivEXT");
     rogl_pfn_glVertexAttribI4uivEXT(index, v);
 
     return Qnil;
@@ -19432,6 +20837,7 @@ static VALUE rogl_glVertexAttribI4bvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribI4bvEXT, "glVertexAttribI4bvEXT");
     rogl_pfn_glVertexAttribI4bvEXT(index, v);
 
     return Qnil;
@@ -19442,6 +20848,7 @@ static VALUE rogl_glVertexAttribI4svEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribI4svEXT, "glVertexAttribI4svEXT");
     rogl_pfn_glVertexAttribI4svEXT(index, v);
 
     return Qnil;
@@ -19452,6 +20859,7 @@ static VALUE rogl_glVertexAttribI4ubvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribI4ubvEXT, "glVertexAttribI4ubvEXT");
     rogl_pfn_glVertexAttribI4ubvEXT(index, v);
 
     return Qnil;
@@ -19462,6 +20870,7 @@ static VALUE rogl_glVertexAttribI4usvEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int index = (unsigned int)NUM2UINT(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribI4usvEXT, "glVertexAttribI4usvEXT");
     rogl_pfn_glVertexAttribI4usvEXT(index, v);
 
     return Qnil;
@@ -19475,6 +20884,7 @@ static VALUE rogl_glVertexAttribIPointerEXT(VALUE _obj_, VALUE _arg1_, VALUE _ar
     int stride = (int)NUM2INT(_arg4_);
     void* pointer = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertexAttribIPointerEXT, "glVertexAttribIPointerEXT");
     rogl_pfn_glVertexAttribIPointerEXT(index, size, type, stride, pointer);
 
     return Qnil;
@@ -19486,6 +20896,7 @@ static VALUE rogl_glGetVertexAttribIivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVertexAttribIivEXT, "glGetVertexAttribIivEXT");
     rogl_pfn_glGetVertexAttribIivEXT(index, pname, params);
 
     return Qnil;
@@ -19497,6 +20908,7 @@ static VALUE rogl_glGetVertexAttribIuivEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVertexAttribIuivEXT, "glGetVertexAttribIuivEXT");
     rogl_pfn_glGetVertexAttribIuivEXT(index, pname, params);
 
     return Qnil;
@@ -19506,6 +20918,7 @@ static VALUE rogl_glBeginVideoCaptureNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int video_capture_slot = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBeginVideoCaptureNV, "glBeginVideoCaptureNV");
     rogl_pfn_glBeginVideoCaptureNV(video_capture_slot);
 
     return Qnil;
@@ -19518,6 +20931,7 @@ static VALUE rogl_glBindVideoCaptureStreamBufferNV(VALUE _obj_, VALUE _arg1_, VA
     unsigned int frame_region = (unsigned int)NUM2UINT(_arg3_);
     ptrdiff_t offset = (ptrdiff_t)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindVideoCaptureStreamBufferNV, "glBindVideoCaptureStreamBufferNV");
     rogl_pfn_glBindVideoCaptureStreamBufferNV(video_capture_slot, stream, frame_region, offset);
 
     return Qnil;
@@ -19531,6 +20945,7 @@ static VALUE rogl_glBindVideoCaptureStreamTextureNV(VALUE _obj_, VALUE _arg1_, V
     unsigned int target = (unsigned int)NUM2UINT(_arg4_);
     unsigned int texture = (unsigned int)NUM2UINT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBindVideoCaptureStreamTextureNV, "glBindVideoCaptureStreamTextureNV");
     rogl_pfn_glBindVideoCaptureStreamTextureNV(video_capture_slot, stream, frame_region, target, texture);
 
     return Qnil;
@@ -19540,6 +20955,7 @@ static VALUE rogl_glEndVideoCaptureNV(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int video_capture_slot = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glEndVideoCaptureNV, "glEndVideoCaptureNV");
     rogl_pfn_glEndVideoCaptureNV(video_capture_slot);
 
     return Qnil;
@@ -19551,6 +20967,7 @@ static VALUE rogl_glGetVideoCaptureivNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVideoCaptureivNV, "glGetVideoCaptureivNV");
     rogl_pfn_glGetVideoCaptureivNV(video_capture_slot, pname, params);
 
     return Qnil;
@@ -19563,6 +20980,7 @@ static VALUE rogl_glGetVideoCaptureStreamivNV(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVideoCaptureStreamivNV, "glGetVideoCaptureStreamivNV");
     rogl_pfn_glGetVideoCaptureStreamivNV(video_capture_slot, stream, pname, params);
 
     return Qnil;
@@ -19575,6 +20993,7 @@ static VALUE rogl_glGetVideoCaptureStreamfvNV(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVideoCaptureStreamfvNV, "glGetVideoCaptureStreamfvNV");
     rogl_pfn_glGetVideoCaptureStreamfvNV(video_capture_slot, stream, pname, params);
 
     return Qnil;
@@ -19587,6 +21006,7 @@ static VALUE rogl_glGetVideoCaptureStreamdvNV(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetVideoCaptureStreamdvNV, "glGetVideoCaptureStreamdvNV");
     rogl_pfn_glGetVideoCaptureStreamdvNV(video_capture_slot, stream, pname, params);
 
     return Qnil;
@@ -19598,6 +21018,7 @@ static VALUE rogl_glVideoCaptureNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     void* sequence_num = (void*)val2ptr(_arg2_);
     void* capture_time = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVideoCaptureNV, "glVideoCaptureNV");
     unsigned int retval = rogl_pfn_glVideoCaptureNV(video_capture_slot, sequence_num, capture_time);
 
     return UINT2NUM(retval);
@@ -19610,6 +21031,7 @@ static VALUE rogl_glVideoCaptureStreamParameterivNV(VALUE _obj_, VALUE _arg1_, V
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVideoCaptureStreamParameterivNV, "glVideoCaptureStreamParameterivNV");
     rogl_pfn_glVideoCaptureStreamParameterivNV(video_capture_slot, stream, pname, params);
 
     return Qnil;
@@ -19622,6 +21044,7 @@ static VALUE rogl_glVideoCaptureStreamParameterfvNV(VALUE _obj_, VALUE _arg1_, V
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVideoCaptureStreamParameterfvNV, "glVideoCaptureStreamParameterfvNV");
     rogl_pfn_glVideoCaptureStreamParameterfvNV(video_capture_slot, stream, pname, params);
 
     return Qnil;
@@ -19634,6 +21057,7 @@ static VALUE rogl_glVideoCaptureStreamParameterdvNV(VALUE _obj_, VALUE _arg1_, V
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVideoCaptureStreamParameterdvNV, "glVideoCaptureStreamParameterdvNV");
     rogl_pfn_glVideoCaptureStreamParameterdvNV(video_capture_slot, stream, pname, params);
 
     return Qnil;
@@ -19644,6 +21068,7 @@ static VALUE rogl_glMultiTexCoord1bOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
     char s = (char)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord1bOES, "glMultiTexCoord1bOES");
     rogl_pfn_glMultiTexCoord1bOES(texture, s);
 
     return Qnil;
@@ -19654,6 +21079,7 @@ static VALUE rogl_glMultiTexCoord1bvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord1bvOES, "glMultiTexCoord1bvOES");
     rogl_pfn_glMultiTexCoord1bvOES(texture, coords);
 
     return Qnil;
@@ -19665,6 +21091,7 @@ static VALUE rogl_glMultiTexCoord2bOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     char s = (char)NUM2INT(_arg2_);
     char t = (char)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord2bOES, "glMultiTexCoord2bOES");
     rogl_pfn_glMultiTexCoord2bOES(texture, s, t);
 
     return Qnil;
@@ -19675,6 +21102,7 @@ static VALUE rogl_glMultiTexCoord2bvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord2bvOES, "glMultiTexCoord2bvOES");
     rogl_pfn_glMultiTexCoord2bvOES(texture, coords);
 
     return Qnil;
@@ -19687,6 +21115,7 @@ static VALUE rogl_glMultiTexCoord3bOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     char t = (char)NUM2INT(_arg3_);
     char r = (char)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord3bOES, "glMultiTexCoord3bOES");
     rogl_pfn_glMultiTexCoord3bOES(texture, s, t, r);
 
     return Qnil;
@@ -19697,6 +21126,7 @@ static VALUE rogl_glMultiTexCoord3bvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord3bvOES, "glMultiTexCoord3bvOES");
     rogl_pfn_glMultiTexCoord3bvOES(texture, coords);
 
     return Qnil;
@@ -19710,6 +21140,7 @@ static VALUE rogl_glMultiTexCoord4bOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     char r = (char)NUM2INT(_arg4_);
     char q = (char)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord4bOES, "glMultiTexCoord4bOES");
     rogl_pfn_glMultiTexCoord4bOES(texture, s, t, r, q);
 
     return Qnil;
@@ -19720,6 +21151,7 @@ static VALUE rogl_glMultiTexCoord4bvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord4bvOES, "glMultiTexCoord4bvOES");
     rogl_pfn_glMultiTexCoord4bvOES(texture, coords);
 
     return Qnil;
@@ -19729,6 +21161,7 @@ static VALUE rogl_glTexCoord1bOES(VALUE _obj_, VALUE _arg1_)
 {
     char s = (char)NUM2INT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord1bOES, "glTexCoord1bOES");
     rogl_pfn_glTexCoord1bOES(s);
 
     return Qnil;
@@ -19738,6 +21171,7 @@ static VALUE rogl_glTexCoord1bvOES(VALUE _obj_, VALUE _arg1_)
 {
     void* coords = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord1bvOES, "glTexCoord1bvOES");
     rogl_pfn_glTexCoord1bvOES(coords);
 
     return Qnil;
@@ -19748,6 +21182,7 @@ static VALUE rogl_glTexCoord2bOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     char s = (char)NUM2INT(_arg1_);
     char t = (char)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord2bOES, "glTexCoord2bOES");
     rogl_pfn_glTexCoord2bOES(s, t);
 
     return Qnil;
@@ -19757,6 +21192,7 @@ static VALUE rogl_glTexCoord2bvOES(VALUE _obj_, VALUE _arg1_)
 {
     void* coords = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord2bvOES, "glTexCoord2bvOES");
     rogl_pfn_glTexCoord2bvOES(coords);
 
     return Qnil;
@@ -19768,6 +21204,7 @@ static VALUE rogl_glTexCoord3bOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     char t = (char)NUM2INT(_arg2_);
     char r = (char)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord3bOES, "glTexCoord3bOES");
     rogl_pfn_glTexCoord3bOES(s, t, r);
 
     return Qnil;
@@ -19777,6 +21214,7 @@ static VALUE rogl_glTexCoord3bvOES(VALUE _obj_, VALUE _arg1_)
 {
     void* coords = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord3bvOES, "glTexCoord3bvOES");
     rogl_pfn_glTexCoord3bvOES(coords);
 
     return Qnil;
@@ -19789,6 +21227,7 @@ static VALUE rogl_glTexCoord4bOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     char r = (char)NUM2INT(_arg3_);
     char q = (char)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord4bOES, "glTexCoord4bOES");
     rogl_pfn_glTexCoord4bOES(s, t, r, q);
 
     return Qnil;
@@ -19798,6 +21237,7 @@ static VALUE rogl_glTexCoord4bvOES(VALUE _obj_, VALUE _arg1_)
 {
     void* coords = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord4bvOES, "glTexCoord4bvOES");
     rogl_pfn_glTexCoord4bvOES(coords);
 
     return Qnil;
@@ -19808,6 +21248,7 @@ static VALUE rogl_glVertex2bOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     char x = (char)NUM2INT(_arg1_);
     char y = (char)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertex2bOES, "glVertex2bOES");
     rogl_pfn_glVertex2bOES(x, y);
 
     return Qnil;
@@ -19817,6 +21258,7 @@ static VALUE rogl_glVertex2bvOES(VALUE _obj_, VALUE _arg1_)
 {
     void* coords = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertex2bvOES, "glVertex2bvOES");
     rogl_pfn_glVertex2bvOES(coords);
 
     return Qnil;
@@ -19828,6 +21270,7 @@ static VALUE rogl_glVertex3bOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _
     char y = (char)NUM2INT(_arg2_);
     char z = (char)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertex3bOES, "glVertex3bOES");
     rogl_pfn_glVertex3bOES(x, y, z);
 
     return Qnil;
@@ -19837,6 +21280,7 @@ static VALUE rogl_glVertex3bvOES(VALUE _obj_, VALUE _arg1_)
 {
     void* coords = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertex3bvOES, "glVertex3bvOES");
     rogl_pfn_glVertex3bvOES(coords);
 
     return Qnil;
@@ -19849,6 +21293,7 @@ static VALUE rogl_glVertex4bOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _
     char z = (char)NUM2INT(_arg3_);
     char w = (char)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertex4bOES, "glVertex4bOES");
     rogl_pfn_glVertex4bOES(x, y, z, w);
 
     return Qnil;
@@ -19858,6 +21303,7 @@ static VALUE rogl_glVertex4bvOES(VALUE _obj_, VALUE _arg1_)
 {
     void* coords = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertex4bvOES, "glVertex4bvOES");
     rogl_pfn_glVertex4bvOES(coords);
 
     return Qnil;
@@ -19868,6 +21314,7 @@ static VALUE rogl_glAlphaFuncxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int func = (unsigned int)NUM2UINT(_arg1_);
     int ref = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glAlphaFuncxOES, "glAlphaFuncxOES");
     rogl_pfn_glAlphaFuncxOES(func, ref);
 
     return Qnil;
@@ -19880,6 +21327,7 @@ static VALUE rogl_glClearColorxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     int blue = (int)NUM2INT(_arg3_);
     int alpha = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glClearColorxOES, "glClearColorxOES");
     rogl_pfn_glClearColorxOES(red, green, blue, alpha);
 
     return Qnil;
@@ -19889,6 +21337,7 @@ static VALUE rogl_glClearDepthxOES(VALUE _obj_, VALUE _arg1_)
 {
     int depth = (int)NUM2INT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glClearDepthxOES, "glClearDepthxOES");
     rogl_pfn_glClearDepthxOES(depth);
 
     return Qnil;
@@ -19899,6 +21348,7 @@ static VALUE rogl_glClipPlanexOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int plane = (unsigned int)NUM2UINT(_arg1_);
     void* equation = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glClipPlanexOES, "glClipPlanexOES");
     rogl_pfn_glClipPlanexOES(plane, equation);
 
     return Qnil;
@@ -19911,6 +21361,7 @@ static VALUE rogl_glColor4xOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _a
     int blue = (int)NUM2INT(_arg3_);
     int alpha = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColor4xOES, "glColor4xOES");
     rogl_pfn_glColor4xOES(red, green, blue, alpha);
 
     return Qnil;
@@ -19921,6 +21372,7 @@ static VALUE rogl_glDepthRangexOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int n = (int)NUM2INT(_arg1_);
     int f = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDepthRangexOES, "glDepthRangexOES");
     rogl_pfn_glDepthRangexOES(n, f);
 
     return Qnil;
@@ -19931,6 +21383,7 @@ static VALUE rogl_glFogxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     int param = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFogxOES, "glFogxOES");
     rogl_pfn_glFogxOES(pname, param);
 
     return Qnil;
@@ -19941,6 +21394,7 @@ static VALUE rogl_glFogxvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* param = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFogxvOES, "glFogxvOES");
     rogl_pfn_glFogxvOES(pname, param);
 
     return Qnil;
@@ -19955,6 +21409,7 @@ static VALUE rogl_glFrustumxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _
     int n = (int)NUM2INT(_arg5_);
     int f = (int)NUM2INT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFrustumxOES, "glFrustumxOES");
     rogl_pfn_glFrustumxOES(l, r, b, t, n, f);
 
     return Qnil;
@@ -19965,6 +21420,7 @@ static VALUE rogl_glGetClipPlanexOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int plane = (unsigned int)NUM2UINT(_arg1_);
     void* equation = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetClipPlanexOES, "glGetClipPlanexOES");
     rogl_pfn_glGetClipPlanexOES(plane, equation);
 
     return Qnil;
@@ -19975,6 +21431,7 @@ static VALUE rogl_glGetFixedvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* params = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetFixedvOES, "glGetFixedvOES");
     rogl_pfn_glGetFixedvOES(pname, params);
 
     return Qnil;
@@ -19986,6 +21443,7 @@ static VALUE rogl_glGetTexEnvxvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTexEnvxvOES, "glGetTexEnvxvOES");
     rogl_pfn_glGetTexEnvxvOES(target, pname, params);
 
     return Qnil;
@@ -19997,6 +21455,7 @@ static VALUE rogl_glGetTexParameterxvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTexParameterxvOES, "glGetTexParameterxvOES");
     rogl_pfn_glGetTexParameterxvOES(target, pname, params);
 
     return Qnil;
@@ -20007,6 +21466,7 @@ static VALUE rogl_glLightModelxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     int param = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glLightModelxOES, "glLightModelxOES");
     rogl_pfn_glLightModelxOES(pname, param);
 
     return Qnil;
@@ -20017,6 +21477,7 @@ static VALUE rogl_glLightModelxvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* param = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glLightModelxvOES, "glLightModelxvOES");
     rogl_pfn_glLightModelxvOES(pname, param);
 
     return Qnil;
@@ -20028,6 +21489,7 @@ static VALUE rogl_glLightxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _ar
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     int param = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glLightxOES, "glLightxOES");
     rogl_pfn_glLightxOES(light, pname, param);
 
     return Qnil;
@@ -20039,6 +21501,7 @@ static VALUE rogl_glLightxvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _a
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glLightxvOES, "glLightxvOES");
     rogl_pfn_glLightxvOES(light, pname, params);
 
     return Qnil;
@@ -20048,6 +21511,7 @@ static VALUE rogl_glLineWidthxOES(VALUE _obj_, VALUE _arg1_)
 {
     int width = (int)NUM2INT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glLineWidthxOES, "glLineWidthxOES");
     rogl_pfn_glLineWidthxOES(width);
 
     return Qnil;
@@ -20057,6 +21521,7 @@ static VALUE rogl_glLoadMatrixxOES(VALUE _obj_, VALUE _arg1_)
 {
     void* m = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glLoadMatrixxOES, "glLoadMatrixxOES");
     rogl_pfn_glLoadMatrixxOES(m);
 
     return Qnil;
@@ -20068,6 +21533,7 @@ static VALUE rogl_glMaterialxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     int param = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMaterialxOES, "glMaterialxOES");
     rogl_pfn_glMaterialxOES(face, pname, param);
 
     return Qnil;
@@ -20079,6 +21545,7 @@ static VALUE rogl_glMaterialxvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* param = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMaterialxvOES, "glMaterialxvOES");
     rogl_pfn_glMaterialxvOES(face, pname, param);
 
     return Qnil;
@@ -20088,6 +21555,7 @@ static VALUE rogl_glMultMatrixxOES(VALUE _obj_, VALUE _arg1_)
 {
     void* m = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultMatrixxOES, "glMultMatrixxOES");
     rogl_pfn_glMultMatrixxOES(m);
 
     return Qnil;
@@ -20101,6 +21569,7 @@ static VALUE rogl_glMultiTexCoord4xOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int r = (int)NUM2INT(_arg4_);
     int q = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord4xOES, "glMultiTexCoord4xOES");
     rogl_pfn_glMultiTexCoord4xOES(texture, s, t, r, q);
 
     return Qnil;
@@ -20112,6 +21581,7 @@ static VALUE rogl_glNormal3xOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _
     int ny = (int)NUM2INT(_arg2_);
     int nz = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNormal3xOES, "glNormal3xOES");
     rogl_pfn_glNormal3xOES(nx, ny, nz);
 
     return Qnil;
@@ -20126,6 +21596,7 @@ static VALUE rogl_glOrthoxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _ar
     int n = (int)NUM2INT(_arg5_);
     int f = (int)NUM2INT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glOrthoxOES, "glOrthoxOES");
     rogl_pfn_glOrthoxOES(l, r, b, t, n, f);
 
     return Qnil;
@@ -20136,6 +21607,7 @@ static VALUE rogl_glPointParameterxvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* params = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPointParameterxvOES, "glPointParameterxvOES");
     rogl_pfn_glPointParameterxvOES(pname, params);
 
     return Qnil;
@@ -20145,6 +21617,7 @@ static VALUE rogl_glPointSizexOES(VALUE _obj_, VALUE _arg1_)
 {
     int size = (int)NUM2INT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPointSizexOES, "glPointSizexOES");
     rogl_pfn_glPointSizexOES(size);
 
     return Qnil;
@@ -20155,6 +21628,7 @@ static VALUE rogl_glPolygonOffsetxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int factor = (int)NUM2INT(_arg1_);
     int units = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPolygonOffsetxOES, "glPolygonOffsetxOES");
     rogl_pfn_glPolygonOffsetxOES(factor, units);
 
     return Qnil;
@@ -20167,6 +21641,7 @@ static VALUE rogl_glRotatexOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _a
     int y = (int)NUM2INT(_arg3_);
     int z = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glRotatexOES, "glRotatexOES");
     rogl_pfn_glRotatexOES(angle, x, y, z);
 
     return Qnil;
@@ -20178,6 +21653,7 @@ static VALUE rogl_glScalexOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _ar
     int y = (int)NUM2INT(_arg2_);
     int z = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glScalexOES, "glScalexOES");
     rogl_pfn_glScalexOES(x, y, z);
 
     return Qnil;
@@ -20189,6 +21665,7 @@ static VALUE rogl_glTexEnvxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _a
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     int param = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexEnvxOES, "glTexEnvxOES");
     rogl_pfn_glTexEnvxOES(target, pname, param);
 
     return Qnil;
@@ -20200,6 +21677,7 @@ static VALUE rogl_glTexEnvxvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexEnvxvOES, "glTexEnvxvOES");
     rogl_pfn_glTexEnvxvOES(target, pname, params);
 
     return Qnil;
@@ -20211,6 +21689,7 @@ static VALUE rogl_glTexParameterxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     int param = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexParameterxOES, "glTexParameterxOES");
     rogl_pfn_glTexParameterxOES(target, pname, param);
 
     return Qnil;
@@ -20222,6 +21701,7 @@ static VALUE rogl_glTexParameterxvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexParameterxvOES, "glTexParameterxvOES");
     rogl_pfn_glTexParameterxvOES(target, pname, params);
 
     return Qnil;
@@ -20233,6 +21713,7 @@ static VALUE rogl_glTranslatexOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     int y = (int)NUM2INT(_arg2_);
     int z = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTranslatexOES, "glTranslatexOES");
     rogl_pfn_glTranslatexOES(x, y, z);
 
     return Qnil;
@@ -20244,6 +21725,7 @@ static VALUE rogl_glGetLightxvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetLightxvOES, "glGetLightxvOES");
     rogl_pfn_glGetLightxvOES(light, pname, params);
 
     return Qnil;
@@ -20255,6 +21737,7 @@ static VALUE rogl_glGetMaterialxvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMaterialxvOES, "glGetMaterialxvOES");
     rogl_pfn_glGetMaterialxvOES(face, pname, params);
 
     return Qnil;
@@ -20265,6 +21748,7 @@ static VALUE rogl_glPointParameterxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     int param = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPointParameterxOES, "glPointParameterxOES");
     rogl_pfn_glPointParameterxOES(pname, param);
 
     return Qnil;
@@ -20275,6 +21759,7 @@ static VALUE rogl_glSampleCoveragexOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int value = (int)NUM2INT(_arg1_);
     unsigned char invert = (unsigned char)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSampleCoveragexOES, "glSampleCoveragexOES");
     rogl_pfn_glSampleCoveragexOES(value, invert);
 
     return Qnil;
@@ -20285,6 +21770,7 @@ static VALUE rogl_glAccumxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int op = (unsigned int)NUM2UINT(_arg1_);
     int value = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glAccumxOES, "glAccumxOES");
     rogl_pfn_glAccumxOES(op, value);
 
     return Qnil;
@@ -20300,6 +21786,7 @@ static VALUE rogl_glBitmapxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _a
     int ymove = (int)NUM2INT(_arg6_);
     void* bitmap = (void*)val2ptr(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBitmapxOES, "glBitmapxOES");
     rogl_pfn_glBitmapxOES(width, height, xorig, yorig, xmove, ymove, bitmap);
 
     return Qnil;
@@ -20312,6 +21799,7 @@ static VALUE rogl_glBlendColorxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     int blue = (int)NUM2INT(_arg3_);
     int alpha = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glBlendColorxOES, "glBlendColorxOES");
     rogl_pfn_glBlendColorxOES(red, green, blue, alpha);
 
     return Qnil;
@@ -20324,6 +21812,7 @@ static VALUE rogl_glClearAccumxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     int blue = (int)NUM2INT(_arg3_);
     int alpha = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glClearAccumxOES, "glClearAccumxOES");
     rogl_pfn_glClearAccumxOES(red, green, blue, alpha);
 
     return Qnil;
@@ -20335,6 +21824,7 @@ static VALUE rogl_glColor3xOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _a
     int green = (int)NUM2INT(_arg2_);
     int blue = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColor3xOES, "glColor3xOES");
     rogl_pfn_glColor3xOES(red, green, blue);
 
     return Qnil;
@@ -20344,6 +21834,7 @@ static VALUE rogl_glColor3xvOES(VALUE _obj_, VALUE _arg1_)
 {
     void* components = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColor3xvOES, "glColor3xvOES");
     rogl_pfn_glColor3xvOES(components);
 
     return Qnil;
@@ -20353,6 +21844,7 @@ static VALUE rogl_glColor4xvOES(VALUE _obj_, VALUE _arg1_)
 {
     void* components = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColor4xvOES, "glColor4xvOES");
     rogl_pfn_glColor4xvOES(components);
 
     return Qnil;
@@ -20364,6 +21856,7 @@ static VALUE rogl_glConvolutionParameterxOES(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     int param = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glConvolutionParameterxOES, "glConvolutionParameterxOES");
     rogl_pfn_glConvolutionParameterxOES(target, pname, param);
 
     return Qnil;
@@ -20375,6 +21868,7 @@ static VALUE rogl_glConvolutionParameterxvOES(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glConvolutionParameterxvOES, "glConvolutionParameterxvOES");
     rogl_pfn_glConvolutionParameterxvOES(target, pname, params);
 
     return Qnil;
@@ -20384,6 +21878,7 @@ static VALUE rogl_glEvalCoord1xOES(VALUE _obj_, VALUE _arg1_)
 {
     int u = (int)NUM2INT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glEvalCoord1xOES, "glEvalCoord1xOES");
     rogl_pfn_glEvalCoord1xOES(u);
 
     return Qnil;
@@ -20393,6 +21888,7 @@ static VALUE rogl_glEvalCoord1xvOES(VALUE _obj_, VALUE _arg1_)
 {
     void* coords = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glEvalCoord1xvOES, "glEvalCoord1xvOES");
     rogl_pfn_glEvalCoord1xvOES(coords);
 
     return Qnil;
@@ -20403,6 +21899,7 @@ static VALUE rogl_glEvalCoord2xOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int u = (int)NUM2INT(_arg1_);
     int v = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glEvalCoord2xOES, "glEvalCoord2xOES");
     rogl_pfn_glEvalCoord2xOES(u, v);
 
     return Qnil;
@@ -20412,6 +21909,7 @@ static VALUE rogl_glEvalCoord2xvOES(VALUE _obj_, VALUE _arg1_)
 {
     void* coords = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glEvalCoord2xvOES, "glEvalCoord2xvOES");
     rogl_pfn_glEvalCoord2xvOES(coords);
 
     return Qnil;
@@ -20423,6 +21921,7 @@ static VALUE rogl_glFeedbackBufferxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     unsigned int type = (unsigned int)NUM2UINT(_arg2_);
     void* buffer = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFeedbackBufferxOES, "glFeedbackBufferxOES");
     rogl_pfn_glFeedbackBufferxOES(n, type, buffer);
 
     return Qnil;
@@ -20434,6 +21933,7 @@ static VALUE rogl_glGetConvolutionParameterxvOES(VALUE _obj_, VALUE _arg1_, VALU
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetConvolutionParameterxvOES, "glGetConvolutionParameterxvOES");
     rogl_pfn_glGetConvolutionParameterxvOES(target, pname, params);
 
     return Qnil;
@@ -20445,6 +21945,7 @@ static VALUE rogl_glGetHistogramParameterxvOES(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetHistogramParameterxvOES, "glGetHistogramParameterxvOES");
     rogl_pfn_glGetHistogramParameterxvOES(target, pname, params);
 
     return Qnil;
@@ -20456,6 +21957,7 @@ static VALUE rogl_glGetLightxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetLightxOES, "glGetLightxOES");
     rogl_pfn_glGetLightxOES(light, pname, params);
 
     return Qnil;
@@ -20467,6 +21969,7 @@ static VALUE rogl_glGetMapxvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _
     unsigned int query = (unsigned int)NUM2UINT(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMapxvOES, "glGetMapxvOES");
     rogl_pfn_glGetMapxvOES(target, query, v);
 
     return Qnil;
@@ -20478,6 +21981,7 @@ static VALUE rogl_glGetMaterialxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VAL
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     int param = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetMaterialxOES, "glGetMaterialxOES");
     rogl_pfn_glGetMaterialxOES(face, pname, param);
 
     return Qnil;
@@ -20489,6 +21993,7 @@ static VALUE rogl_glGetPixelMapxv(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     int size = (int)NUM2INT(_arg2_);
     void* values = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPixelMapxv, "glGetPixelMapxv");
     rogl_pfn_glGetPixelMapxv(map, size, values);
 
     return Qnil;
@@ -20500,6 +22005,7 @@ static VALUE rogl_glGetTexGenxvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTexGenxvOES, "glGetTexGenxvOES");
     rogl_pfn_glGetTexGenxvOES(coord, pname, params);
 
     return Qnil;
@@ -20512,6 +22018,7 @@ static VALUE rogl_glGetTexLevelParameterxvOES(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg3_);
     void* params = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTexLevelParameterxvOES, "glGetTexLevelParameterxvOES");
     rogl_pfn_glGetTexLevelParameterxvOES(target, level, pname, params);
 
     return Qnil;
@@ -20521,6 +22028,7 @@ static VALUE rogl_glIndexxOES(VALUE _obj_, VALUE _arg1_)
 {
     int component = (int)NUM2INT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIndexxOES, "glIndexxOES");
     rogl_pfn_glIndexxOES(component);
 
     return Qnil;
@@ -20530,6 +22038,7 @@ static VALUE rogl_glIndexxvOES(VALUE _obj_, VALUE _arg1_)
 {
     void* component = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIndexxvOES, "glIndexxvOES");
     rogl_pfn_glIndexxvOES(component);
 
     return Qnil;
@@ -20539,6 +22048,7 @@ static VALUE rogl_glLoadTransposeMatrixxOES(VALUE _obj_, VALUE _arg1_)
 {
     void* m = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glLoadTransposeMatrixxOES, "glLoadTransposeMatrixxOES");
     rogl_pfn_glLoadTransposeMatrixxOES(m);
 
     return Qnil;
@@ -20553,6 +22063,7 @@ static VALUE rogl_glMap1xOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg
     int order = (int)NUM2INT(_arg5_);
     int points = (int)NUM2INT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMap1xOES, "glMap1xOES");
     rogl_pfn_glMap1xOES(target, u1, u2, stride, order, points);
 
     return Qnil;
@@ -20571,6 +22082,7 @@ static VALUE rogl_glMap2xOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg
     int vorder = (int)NUM2INT(_arg9_);
     int points = (int)NUM2INT(_arg10_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMap2xOES, "glMap2xOES");
     rogl_pfn_glMap2xOES(target, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points);
 
     return Qnil;
@@ -20582,6 +22094,7 @@ static VALUE rogl_glMapGrid1xOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     int u1 = (int)NUM2INT(_arg2_);
     int u2 = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMapGrid1xOES, "glMapGrid1xOES");
     rogl_pfn_glMapGrid1xOES(n, u1, u2);
 
     return Qnil;
@@ -20595,6 +22108,7 @@ static VALUE rogl_glMapGrid2xOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE 
     int v1 = (int)NUM2INT(_arg4_);
     int v2 = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMapGrid2xOES, "glMapGrid2xOES");
     rogl_pfn_glMapGrid2xOES(n, u1, u2, v1, v2);
 
     return Qnil;
@@ -20604,6 +22118,7 @@ static VALUE rogl_glMultTransposeMatrixxOES(VALUE _obj_, VALUE _arg1_)
 {
     void* m = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultTransposeMatrixxOES, "glMultTransposeMatrixxOES");
     rogl_pfn_glMultTransposeMatrixxOES(m);
 
     return Qnil;
@@ -20614,6 +22129,7 @@ static VALUE rogl_glMultiTexCoord1xOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
     int s = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord1xOES, "glMultiTexCoord1xOES");
     rogl_pfn_glMultiTexCoord1xOES(texture, s);
 
     return Qnil;
@@ -20624,6 +22140,7 @@ static VALUE rogl_glMultiTexCoord1xvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord1xvOES, "glMultiTexCoord1xvOES");
     rogl_pfn_glMultiTexCoord1xvOES(texture, coords);
 
     return Qnil;
@@ -20635,6 +22152,7 @@ static VALUE rogl_glMultiTexCoord2xOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int s = (int)NUM2INT(_arg2_);
     int t = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord2xOES, "glMultiTexCoord2xOES");
     rogl_pfn_glMultiTexCoord2xOES(texture, s, t);
 
     return Qnil;
@@ -20645,6 +22163,7 @@ static VALUE rogl_glMultiTexCoord2xvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord2xvOES, "glMultiTexCoord2xvOES");
     rogl_pfn_glMultiTexCoord2xvOES(texture, coords);
 
     return Qnil;
@@ -20657,6 +22176,7 @@ static VALUE rogl_glMultiTexCoord3xOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int t = (int)NUM2INT(_arg3_);
     int r = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord3xOES, "glMultiTexCoord3xOES");
     rogl_pfn_glMultiTexCoord3xOES(texture, s, t, r);
 
     return Qnil;
@@ -20667,6 +22187,7 @@ static VALUE rogl_glMultiTexCoord3xvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord3xvOES, "glMultiTexCoord3xvOES");
     rogl_pfn_glMultiTexCoord3xvOES(texture, coords);
 
     return Qnil;
@@ -20677,6 +22198,7 @@ static VALUE rogl_glMultiTexCoord4xvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int texture = (unsigned int)NUM2UINT(_arg1_);
     void* coords = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glMultiTexCoord4xvOES, "glMultiTexCoord4xvOES");
     rogl_pfn_glMultiTexCoord4xvOES(texture, coords);
 
     return Qnil;
@@ -20686,6 +22208,7 @@ static VALUE rogl_glNormal3xvOES(VALUE _obj_, VALUE _arg1_)
 {
     void* coords = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNormal3xvOES, "glNormal3xvOES");
     rogl_pfn_glNormal3xvOES(coords);
 
     return Qnil;
@@ -20695,6 +22218,7 @@ static VALUE rogl_glPassThroughxOES(VALUE _obj_, VALUE _arg1_)
 {
     int token = (int)NUM2INT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPassThroughxOES, "glPassThroughxOES");
     rogl_pfn_glPassThroughxOES(token);
 
     return Qnil;
@@ -20706,6 +22230,7 @@ static VALUE rogl_glPixelMapx(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _ar
     int size = (int)NUM2INT(_arg2_);
     void* values = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPixelMapx, "glPixelMapx");
     rogl_pfn_glPixelMapx(map, size, values);
 
     return Qnil;
@@ -20716,6 +22241,7 @@ static VALUE rogl_glPixelStorex(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     int param = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPixelStorex, "glPixelStorex");
     rogl_pfn_glPixelStorex(pname, param);
 
     return Qnil;
@@ -20726,6 +22252,7 @@ static VALUE rogl_glPixelTransferxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     int param = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPixelTransferxOES, "glPixelTransferxOES");
     rogl_pfn_glPixelTransferxOES(pname, param);
 
     return Qnil;
@@ -20736,6 +22263,7 @@ static VALUE rogl_glPixelZoomxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int xfactor = (int)NUM2INT(_arg1_);
     int yfactor = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPixelZoomxOES, "glPixelZoomxOES");
     rogl_pfn_glPixelZoomxOES(xfactor, yfactor);
 
     return Qnil;
@@ -20747,6 +22275,7 @@ static VALUE rogl_glPrioritizeTexturesxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg
     void* textures = (void*)val2ptr(_arg2_);
     void* priorities = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPrioritizeTexturesxOES, "glPrioritizeTexturesxOES");
     rogl_pfn_glPrioritizeTexturesxOES(n, textures, priorities);
 
     return Qnil;
@@ -20757,6 +22286,7 @@ static VALUE rogl_glRasterPos2xOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int x = (int)NUM2INT(_arg1_);
     int y = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glRasterPos2xOES, "glRasterPos2xOES");
     rogl_pfn_glRasterPos2xOES(x, y);
 
     return Qnil;
@@ -20766,6 +22296,7 @@ static VALUE rogl_glRasterPos2xvOES(VALUE _obj_, VALUE _arg1_)
 {
     void* coords = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glRasterPos2xvOES, "glRasterPos2xvOES");
     rogl_pfn_glRasterPos2xvOES(coords);
 
     return Qnil;
@@ -20777,6 +22308,7 @@ static VALUE rogl_glRasterPos3xOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     int y = (int)NUM2INT(_arg2_);
     int z = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glRasterPos3xOES, "glRasterPos3xOES");
     rogl_pfn_glRasterPos3xOES(x, y, z);
 
     return Qnil;
@@ -20786,6 +22318,7 @@ static VALUE rogl_glRasterPos3xvOES(VALUE _obj_, VALUE _arg1_)
 {
     void* coords = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glRasterPos3xvOES, "glRasterPos3xvOES");
     rogl_pfn_glRasterPos3xvOES(coords);
 
     return Qnil;
@@ -20798,6 +22331,7 @@ static VALUE rogl_glRasterPos4xOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     int z = (int)NUM2INT(_arg3_);
     int w = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glRasterPos4xOES, "glRasterPos4xOES");
     rogl_pfn_glRasterPos4xOES(x, y, z, w);
 
     return Qnil;
@@ -20807,6 +22341,7 @@ static VALUE rogl_glRasterPos4xvOES(VALUE _obj_, VALUE _arg1_)
 {
     void* coords = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glRasterPos4xvOES, "glRasterPos4xvOES");
     rogl_pfn_glRasterPos4xvOES(coords);
 
     return Qnil;
@@ -20819,6 +22354,7 @@ static VALUE rogl_glRectxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg
     int x2 = (int)NUM2INT(_arg3_);
     int y2 = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glRectxOES, "glRectxOES");
     rogl_pfn_glRectxOES(x1, y1, x2, y2);
 
     return Qnil;
@@ -20829,6 +22365,7 @@ static VALUE rogl_glRectxvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     void* v1 = (void*)val2ptr(_arg1_);
     void* v2 = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glRectxvOES, "glRectxvOES");
     rogl_pfn_glRectxvOES(v1, v2);
 
     return Qnil;
@@ -20838,6 +22375,7 @@ static VALUE rogl_glTexCoord1xOES(VALUE _obj_, VALUE _arg1_)
 {
     int s = (int)NUM2INT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord1xOES, "glTexCoord1xOES");
     rogl_pfn_glTexCoord1xOES(s);
 
     return Qnil;
@@ -20847,6 +22385,7 @@ static VALUE rogl_glTexCoord1xvOES(VALUE _obj_, VALUE _arg1_)
 {
     void* coords = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord1xvOES, "glTexCoord1xvOES");
     rogl_pfn_glTexCoord1xvOES(coords);
 
     return Qnil;
@@ -20857,6 +22396,7 @@ static VALUE rogl_glTexCoord2xOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int s = (int)NUM2INT(_arg1_);
     int t = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord2xOES, "glTexCoord2xOES");
     rogl_pfn_glTexCoord2xOES(s, t);
 
     return Qnil;
@@ -20866,6 +22406,7 @@ static VALUE rogl_glTexCoord2xvOES(VALUE _obj_, VALUE _arg1_)
 {
     void* coords = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord2xvOES, "glTexCoord2xvOES");
     rogl_pfn_glTexCoord2xvOES(coords);
 
     return Qnil;
@@ -20877,6 +22418,7 @@ static VALUE rogl_glTexCoord3xOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     int t = (int)NUM2INT(_arg2_);
     int r = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord3xOES, "glTexCoord3xOES");
     rogl_pfn_glTexCoord3xOES(s, t, r);
 
     return Qnil;
@@ -20886,6 +22428,7 @@ static VALUE rogl_glTexCoord3xvOES(VALUE _obj_, VALUE _arg1_)
 {
     void* coords = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord3xvOES, "glTexCoord3xvOES");
     rogl_pfn_glTexCoord3xvOES(coords);
 
     return Qnil;
@@ -20898,6 +22441,7 @@ static VALUE rogl_glTexCoord4xOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     int r = (int)NUM2INT(_arg3_);
     int q = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord4xOES, "glTexCoord4xOES");
     rogl_pfn_glTexCoord4xOES(s, t, r, q);
 
     return Qnil;
@@ -20907,6 +22451,7 @@ static VALUE rogl_glTexCoord4xvOES(VALUE _obj_, VALUE _arg1_)
 {
     void* coords = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord4xvOES, "glTexCoord4xvOES");
     rogl_pfn_glTexCoord4xvOES(coords);
 
     return Qnil;
@@ -20918,6 +22463,7 @@ static VALUE rogl_glTexGenxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _a
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     int param = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexGenxOES, "glTexGenxOES");
     rogl_pfn_glTexGenxOES(coord, pname, param);
 
     return Qnil;
@@ -20929,6 +22475,7 @@ static VALUE rogl_glTexGenxvOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexGenxvOES, "glTexGenxvOES");
     rogl_pfn_glTexGenxvOES(coord, pname, params);
 
     return Qnil;
@@ -20938,6 +22485,7 @@ static VALUE rogl_glVertex2xOES(VALUE _obj_, VALUE _arg1_)
 {
     int x = (int)NUM2INT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertex2xOES, "glVertex2xOES");
     rogl_pfn_glVertex2xOES(x);
 
     return Qnil;
@@ -20947,6 +22495,7 @@ static VALUE rogl_glVertex2xvOES(VALUE _obj_, VALUE _arg1_)
 {
     void* coords = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertex2xvOES, "glVertex2xvOES");
     rogl_pfn_glVertex2xvOES(coords);
 
     return Qnil;
@@ -20957,6 +22506,7 @@ static VALUE rogl_glVertex3xOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int x = (int)NUM2INT(_arg1_);
     int y = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertex3xOES, "glVertex3xOES");
     rogl_pfn_glVertex3xOES(x, y);
 
     return Qnil;
@@ -20966,6 +22516,7 @@ static VALUE rogl_glVertex3xvOES(VALUE _obj_, VALUE _arg1_)
 {
     void* coords = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertex3xvOES, "glVertex3xvOES");
     rogl_pfn_glVertex3xvOES(coords);
 
     return Qnil;
@@ -20977,6 +22528,7 @@ static VALUE rogl_glVertex4xOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _
     int y = (int)NUM2INT(_arg2_);
     int z = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertex4xOES, "glVertex4xOES");
     rogl_pfn_glVertex4xOES(x, y, z);
 
     return Qnil;
@@ -20986,6 +22538,7 @@ static VALUE rogl_glVertex4xvOES(VALUE _obj_, VALUE _arg1_)
 {
     void* coords = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glVertex4xvOES, "glVertex4xvOES");
     rogl_pfn_glVertex4xvOES(coords);
 
     return Qnil;
@@ -20996,6 +22549,7 @@ static VALUE rogl_glQueryMatrixxOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     void* mantissa = (void*)val2ptr(_arg1_);
     void* exponent = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glQueryMatrixxOES, "glQueryMatrixxOES");
     unsigned int retval = rogl_pfn_glQueryMatrixxOES(mantissa, exponent);
 
     return UINT2NUM(retval);
@@ -21005,6 +22559,7 @@ static VALUE rogl_glClearDepthfOES(VALUE _obj_, VALUE _arg1_)
 {
     float depth = (float)NUM2DBL(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glClearDepthfOES, "glClearDepthfOES");
     rogl_pfn_glClearDepthfOES(depth);
 
     return Qnil;
@@ -21015,6 +22570,7 @@ static VALUE rogl_glClipPlanefOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int plane = (unsigned int)NUM2UINT(_arg1_);
     void* equation = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glClipPlanefOES, "glClipPlanefOES");
     rogl_pfn_glClipPlanefOES(plane, equation);
 
     return Qnil;
@@ -21025,6 +22581,7 @@ static VALUE rogl_glDepthRangefOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     float n = (float)NUM2DBL(_arg1_);
     float f = (float)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDepthRangefOES, "glDepthRangefOES");
     rogl_pfn_glDepthRangefOES(n, f);
 
     return Qnil;
@@ -21039,6 +22596,7 @@ static VALUE rogl_glFrustumfOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _
     float n = (float)NUM2DBL(_arg5_);
     float f = (float)NUM2DBL(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFrustumfOES, "glFrustumfOES");
     rogl_pfn_glFrustumfOES(l, r, b, t, n, f);
 
     return Qnil;
@@ -21049,6 +22607,7 @@ static VALUE rogl_glGetClipPlanefOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int plane = (unsigned int)NUM2UINT(_arg1_);
     void* equation = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetClipPlanefOES, "glGetClipPlanefOES");
     rogl_pfn_glGetClipPlanefOES(plane, equation);
 
     return Qnil;
@@ -21063,6 +22622,7 @@ static VALUE rogl_glOrthofOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _ar
     float n = (float)NUM2DBL(_arg5_);
     float f = (float)NUM2DBL(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glOrthofOES, "glOrthofOES");
     rogl_pfn_glOrthofOES(l, r, b, t, n, f);
 
     return Qnil;
@@ -21077,6 +22637,7 @@ static VALUE rogl_glFramebufferTextureMultiviewOVR(VALUE _obj_, VALUE _arg1_, VA
     int baseViewIndex = (int)NUM2INT(_arg5_);
     int numViews = (int)NUM2INT(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFramebufferTextureMultiviewOVR, "glFramebufferTextureMultiviewOVR");
     rogl_pfn_glFramebufferTextureMultiviewOVR(target, attachment, texture, level, baseViewIndex, numViews);
 
     return Qnil;
@@ -21087,6 +22648,7 @@ static VALUE rogl_glHintPGI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     int mode = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glHintPGI, "glHintPGI");
     rogl_pfn_glHintPGI(target, mode);
 
     return Qnil;
@@ -21098,6 +22660,7 @@ static VALUE rogl_glDetailTexFuncSGIS(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     int n = (int)NUM2INT(_arg2_);
     void* points = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDetailTexFuncSGIS, "glDetailTexFuncSGIS");
     rogl_pfn_glDetailTexFuncSGIS(target, n, points);
 
     return Qnil;
@@ -21108,6 +22671,7 @@ static VALUE rogl_glGetDetailTexFuncSGIS(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     void* points = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetDetailTexFuncSGIS, "glGetDetailTexFuncSGIS");
     rogl_pfn_glGetDetailTexFuncSGIS(target, points);
 
     return Qnil;
@@ -21118,6 +22682,7 @@ static VALUE rogl_glFogFuncSGIS(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     int n = (int)NUM2INT(_arg1_);
     void* points = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFogFuncSGIS, "glFogFuncSGIS");
     rogl_pfn_glFogFuncSGIS(n, points);
 
     return Qnil;
@@ -21127,6 +22692,7 @@ static VALUE rogl_glGetFogFuncSGIS(VALUE _obj_, VALUE _arg1_)
 {
     void* points = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetFogFuncSGIS, "glGetFogFuncSGIS");
     rogl_pfn_glGetFogFuncSGIS(points);
 
     return Qnil;
@@ -21137,6 +22703,7 @@ static VALUE rogl_glSampleMaskSGIS(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     float value = (float)NUM2DBL(_arg1_);
     unsigned char invert = (unsigned char)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSampleMaskSGIS, "glSampleMaskSGIS");
     rogl_pfn_glSampleMaskSGIS(value, invert);
 
     return Qnil;
@@ -21146,6 +22713,7 @@ static VALUE rogl_glSamplePatternSGIS(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int pattern = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSamplePatternSGIS, "glSamplePatternSGIS");
     rogl_pfn_glSamplePatternSGIS(pattern);
 
     return Qnil;
@@ -21156,6 +22724,7 @@ static VALUE rogl_glPixelTexGenParameteriSGIS(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     int param = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPixelTexGenParameteriSGIS, "glPixelTexGenParameteriSGIS");
     rogl_pfn_glPixelTexGenParameteriSGIS(pname, param);
 
     return Qnil;
@@ -21166,6 +22735,7 @@ static VALUE rogl_glPixelTexGenParameterivSGIS(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* params = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPixelTexGenParameterivSGIS, "glPixelTexGenParameterivSGIS");
     rogl_pfn_glPixelTexGenParameterivSGIS(pname, params);
 
     return Qnil;
@@ -21176,6 +22746,7 @@ static VALUE rogl_glPixelTexGenParameterfSGIS(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     float param = (float)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPixelTexGenParameterfSGIS, "glPixelTexGenParameterfSGIS");
     rogl_pfn_glPixelTexGenParameterfSGIS(pname, param);
 
     return Qnil;
@@ -21186,6 +22757,7 @@ static VALUE rogl_glPixelTexGenParameterfvSGIS(VALUE _obj_, VALUE _arg1_, VALUE 
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* params = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPixelTexGenParameterfvSGIS, "glPixelTexGenParameterfvSGIS");
     rogl_pfn_glPixelTexGenParameterfvSGIS(pname, params);
 
     return Qnil;
@@ -21196,6 +22768,7 @@ static VALUE rogl_glGetPixelTexGenParameterivSGIS(VALUE _obj_, VALUE _arg1_, VAL
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* params = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPixelTexGenParameterivSGIS, "glGetPixelTexGenParameterivSGIS");
     rogl_pfn_glGetPixelTexGenParameterivSGIS(pname, params);
 
     return Qnil;
@@ -21206,6 +22779,7 @@ static VALUE rogl_glGetPixelTexGenParameterfvSGIS(VALUE _obj_, VALUE _arg1_, VAL
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* params = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetPixelTexGenParameterfvSGIS, "glGetPixelTexGenParameterfvSGIS");
     rogl_pfn_glGetPixelTexGenParameterfvSGIS(pname, params);
 
     return Qnil;
@@ -21216,6 +22790,7 @@ static VALUE rogl_glPointParameterfSGIS(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     float param = (float)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPointParameterfSGIS, "glPointParameterfSGIS");
     rogl_pfn_glPointParameterfSGIS(pname, param);
 
     return Qnil;
@@ -21226,6 +22801,7 @@ static VALUE rogl_glPointParameterfvSGIS(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* params = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPointParameterfvSGIS, "glPointParameterfvSGIS");
     rogl_pfn_glPointParameterfvSGIS(pname, params);
 
     return Qnil;
@@ -21237,6 +22813,7 @@ static VALUE rogl_glSharpenTexFuncSGIS(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     int n = (int)NUM2INT(_arg2_);
     void* points = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSharpenTexFuncSGIS, "glSharpenTexFuncSGIS");
     rogl_pfn_glSharpenTexFuncSGIS(target, n, points);
 
     return Qnil;
@@ -21247,6 +22824,7 @@ static VALUE rogl_glGetSharpenTexFuncSGIS(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int target = (unsigned int)NUM2UINT(_arg1_);
     void* points = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetSharpenTexFuncSGIS, "glGetSharpenTexFuncSGIS");
     rogl_pfn_glGetSharpenTexFuncSGIS(target, points);
 
     return Qnil;
@@ -21266,6 +22844,7 @@ static VALUE rogl_glTexImage4DSGIS(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALU
     unsigned int type = (unsigned int)NUM2UINT(_arg10_);
     void* pixels = (void*)val2ptr(_arg11_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexImage4DSGIS, "glTexImage4DSGIS");
     rogl_pfn_glTexImage4DSGIS(target, level, internalformat, width, height, depth, size4d, border, format, type, pixels);
 
     return Qnil;
@@ -21287,6 +22866,7 @@ static VALUE rogl_glTexSubImage4DSGIS(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     unsigned int type = (unsigned int)NUM2UINT(_arg12_);
     void* pixels = (void*)val2ptr(_arg13_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexSubImage4DSGIS, "glTexSubImage4DSGIS");
     rogl_pfn_glTexSubImage4DSGIS(target, level, xoffset, yoffset, zoffset, woffset, width, height, depth, size4d, format, type, pixels);
 
     return Qnil;
@@ -21299,6 +22879,7 @@ static VALUE rogl_glTextureColorMaskSGIS(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned char blue = (unsigned char)NUM2UINT(_arg3_);
     unsigned char alpha = (unsigned char)NUM2UINT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTextureColorMaskSGIS, "glTextureColorMaskSGIS");
     rogl_pfn_glTextureColorMaskSGIS(red, green, blue, alpha);
 
     return Qnil;
@@ -21310,6 +22891,7 @@ static VALUE rogl_glGetTexFilterFuncSGIS(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int filter = (unsigned int)NUM2UINT(_arg2_);
     void* weights = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetTexFilterFuncSGIS, "glGetTexFilterFuncSGIS");
     rogl_pfn_glGetTexFilterFuncSGIS(target, filter, weights);
 
     return Qnil;
@@ -21322,6 +22904,7 @@ static VALUE rogl_glTexFilterFuncSGIS(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     int n = (int)NUM2INT(_arg3_);
     void* weights = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexFilterFuncSGIS, "glTexFilterFuncSGIS");
     rogl_pfn_glTexFilterFuncSGIS(target, filter, n, weights);
 
     return Qnil;
@@ -21331,6 +22914,7 @@ static VALUE rogl_glAsyncMarkerSGIX(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int marker = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glAsyncMarkerSGIX, "glAsyncMarkerSGIX");
     rogl_pfn_glAsyncMarkerSGIX(marker);
 
     return Qnil;
@@ -21340,6 +22924,7 @@ static VALUE rogl_glFinishAsyncSGIX(VALUE _obj_, VALUE _arg1_)
 {
     void* markerp = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFinishAsyncSGIX, "glFinishAsyncSGIX");
     int retval = rogl_pfn_glFinishAsyncSGIX(markerp);
 
     return INT2NUM(retval);
@@ -21349,6 +22934,7 @@ static VALUE rogl_glPollAsyncSGIX(VALUE _obj_, VALUE _arg1_)
 {
     void* markerp = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPollAsyncSGIX, "glPollAsyncSGIX");
     int retval = rogl_pfn_glPollAsyncSGIX(markerp);
 
     return INT2NUM(retval);
@@ -21358,6 +22944,7 @@ static VALUE rogl_glGenAsyncMarkersSGIX(VALUE _obj_, VALUE _arg1_)
 {
     int range = (int)NUM2INT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGenAsyncMarkersSGIX, "glGenAsyncMarkersSGIX");
     unsigned int retval = rogl_pfn_glGenAsyncMarkersSGIX(range);
 
     return UINT2NUM(retval);
@@ -21368,6 +22955,7 @@ static VALUE rogl_glDeleteAsyncMarkersSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int marker = (unsigned int)NUM2UINT(_arg1_);
     int range = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeleteAsyncMarkersSGIX, "glDeleteAsyncMarkersSGIX");
     rogl_pfn_glDeleteAsyncMarkersSGIX(marker, range);
 
     return Qnil;
@@ -21377,6 +22965,7 @@ static VALUE rogl_glIsAsyncMarkerSGIX(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int marker = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIsAsyncMarkerSGIX, "glIsAsyncMarkerSGIX");
     unsigned char retval = rogl_pfn_glIsAsyncMarkerSGIX(marker);
 
     return UINT2NUM(retval);
@@ -21384,6 +22973,7 @@ static VALUE rogl_glIsAsyncMarkerSGIX(VALUE _obj_, VALUE _arg1_)
 
 static VALUE rogl_glFlushRasterSGIX(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glFlushRasterSGIX, "glFlushRasterSGIX");
     rogl_pfn_glFlushRasterSGIX();
 
     return Qnil;
@@ -21394,6 +22984,7 @@ static VALUE rogl_glFragmentColorMaterialSGIX(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int face = (unsigned int)NUM2UINT(_arg1_);
     unsigned int mode = (unsigned int)NUM2UINT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFragmentColorMaterialSGIX, "glFragmentColorMaterialSGIX");
     rogl_pfn_glFragmentColorMaterialSGIX(face, mode);
 
     return Qnil;
@@ -21405,6 +22996,7 @@ static VALUE rogl_glFragmentLightfSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     float param = (float)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFragmentLightfSGIX, "glFragmentLightfSGIX");
     rogl_pfn_glFragmentLightfSGIX(light, pname, param);
 
     return Qnil;
@@ -21416,6 +23008,7 @@ static VALUE rogl_glFragmentLightfvSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFragmentLightfvSGIX, "glFragmentLightfvSGIX");
     rogl_pfn_glFragmentLightfvSGIX(light, pname, params);
 
     return Qnil;
@@ -21427,6 +23020,7 @@ static VALUE rogl_glFragmentLightiSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     int param = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFragmentLightiSGIX, "glFragmentLightiSGIX");
     rogl_pfn_glFragmentLightiSGIX(light, pname, param);
 
     return Qnil;
@@ -21438,6 +23032,7 @@ static VALUE rogl_glFragmentLightivSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFragmentLightivSGIX, "glFragmentLightivSGIX");
     rogl_pfn_glFragmentLightivSGIX(light, pname, params);
 
     return Qnil;
@@ -21448,6 +23043,7 @@ static VALUE rogl_glFragmentLightModelfSGIX(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     float param = (float)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFragmentLightModelfSGIX, "glFragmentLightModelfSGIX");
     rogl_pfn_glFragmentLightModelfSGIX(pname, param);
 
     return Qnil;
@@ -21458,6 +23054,7 @@ static VALUE rogl_glFragmentLightModelfvSGIX(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* params = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFragmentLightModelfvSGIX, "glFragmentLightModelfvSGIX");
     rogl_pfn_glFragmentLightModelfvSGIX(pname, params);
 
     return Qnil;
@@ -21468,6 +23065,7 @@ static VALUE rogl_glFragmentLightModeliSGIX(VALUE _obj_, VALUE _arg1_, VALUE _ar
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     int param = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFragmentLightModeliSGIX, "glFragmentLightModeliSGIX");
     rogl_pfn_glFragmentLightModeliSGIX(pname, param);
 
     return Qnil;
@@ -21478,6 +23076,7 @@ static VALUE rogl_glFragmentLightModelivSGIX(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* params = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFragmentLightModelivSGIX, "glFragmentLightModelivSGIX");
     rogl_pfn_glFragmentLightModelivSGIX(pname, params);
 
     return Qnil;
@@ -21489,6 +23088,7 @@ static VALUE rogl_glFragmentMaterialfSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     float param = (float)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFragmentMaterialfSGIX, "glFragmentMaterialfSGIX");
     rogl_pfn_glFragmentMaterialfSGIX(face, pname, param);
 
     return Qnil;
@@ -21500,6 +23100,7 @@ static VALUE rogl_glFragmentMaterialfvSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFragmentMaterialfvSGIX, "glFragmentMaterialfvSGIX");
     rogl_pfn_glFragmentMaterialfvSGIX(face, pname, params);
 
     return Qnil;
@@ -21511,6 +23112,7 @@ static VALUE rogl_glFragmentMaterialiSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     int param = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFragmentMaterialiSGIX, "glFragmentMaterialiSGIX");
     rogl_pfn_glFragmentMaterialiSGIX(face, pname, param);
 
     return Qnil;
@@ -21522,6 +23124,7 @@ static VALUE rogl_glFragmentMaterialivSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFragmentMaterialivSGIX, "glFragmentMaterialivSGIX");
     rogl_pfn_glFragmentMaterialivSGIX(face, pname, params);
 
     return Qnil;
@@ -21533,6 +23136,7 @@ static VALUE rogl_glGetFragmentLightfvSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetFragmentLightfvSGIX, "glGetFragmentLightfvSGIX");
     rogl_pfn_glGetFragmentLightfvSGIX(light, pname, params);
 
     return Qnil;
@@ -21544,6 +23148,7 @@ static VALUE rogl_glGetFragmentLightivSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetFragmentLightivSGIX, "glGetFragmentLightivSGIX");
     rogl_pfn_glGetFragmentLightivSGIX(light, pname, params);
 
     return Qnil;
@@ -21555,6 +23160,7 @@ static VALUE rogl_glGetFragmentMaterialfvSGIX(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetFragmentMaterialfvSGIX, "glGetFragmentMaterialfvSGIX");
     rogl_pfn_glGetFragmentMaterialfvSGIX(face, pname, params);
 
     return Qnil;
@@ -21566,6 +23172,7 @@ static VALUE rogl_glGetFragmentMaterialivSGIX(VALUE _obj_, VALUE _arg1_, VALUE _
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetFragmentMaterialivSGIX, "glGetFragmentMaterialivSGIX");
     rogl_pfn_glGetFragmentMaterialivSGIX(face, pname, params);
 
     return Qnil;
@@ -21576,6 +23183,7 @@ static VALUE rogl_glLightEnviSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     int param = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glLightEnviSGIX, "glLightEnviSGIX");
     rogl_pfn_glLightEnviSGIX(pname, param);
 
     return Qnil;
@@ -21585,6 +23193,7 @@ static VALUE rogl_glFrameZoomSGIX(VALUE _obj_, VALUE _arg1_)
 {
     int factor = (int)NUM2INT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glFrameZoomSGIX, "glFrameZoomSGIX");
     rogl_pfn_glFrameZoomSGIX(factor);
 
     return Qnil;
@@ -21595,6 +23204,7 @@ static VALUE rogl_glIglooInterfaceSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* params = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glIglooInterfaceSGIX, "glIglooInterfaceSGIX");
     rogl_pfn_glIglooInterfaceSGIX(pname, params);
 
     return Qnil;
@@ -21602,6 +23212,7 @@ static VALUE rogl_glIglooInterfaceSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 
 static VALUE rogl_glGetInstrumentsSGIX(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetInstrumentsSGIX, "glGetInstrumentsSGIX");
     int retval = rogl_pfn_glGetInstrumentsSGIX();
 
     return INT2NUM(retval);
@@ -21612,6 +23223,7 @@ static VALUE rogl_glInstrumentsBufferSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     int size = (int)NUM2INT(_arg1_);
     void* buffer = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glInstrumentsBufferSGIX, "glInstrumentsBufferSGIX");
     rogl_pfn_glInstrumentsBufferSGIX(size, buffer);
 
     return Qnil;
@@ -21621,6 +23233,7 @@ static VALUE rogl_glPollInstrumentsSGIX(VALUE _obj_, VALUE _arg1_)
 {
     void* marker_p = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPollInstrumentsSGIX, "glPollInstrumentsSGIX");
     int retval = rogl_pfn_glPollInstrumentsSGIX(marker_p);
 
     return INT2NUM(retval);
@@ -21630,6 +23243,7 @@ static VALUE rogl_glReadInstrumentsSGIX(VALUE _obj_, VALUE _arg1_)
 {
     int marker = (int)NUM2INT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReadInstrumentsSGIX, "glReadInstrumentsSGIX");
     rogl_pfn_glReadInstrumentsSGIX(marker);
 
     return Qnil;
@@ -21637,6 +23251,7 @@ static VALUE rogl_glReadInstrumentsSGIX(VALUE _obj_, VALUE _arg1_)
 
 static VALUE rogl_glStartInstrumentsSGIX(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glStartInstrumentsSGIX, "glStartInstrumentsSGIX");
     rogl_pfn_glStartInstrumentsSGIX();
 
     return Qnil;
@@ -21646,6 +23261,7 @@ static VALUE rogl_glStopInstrumentsSGIX(VALUE _obj_, VALUE _arg1_)
 {
     int marker = (int)NUM2INT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glStopInstrumentsSGIX, "glStopInstrumentsSGIX");
     rogl_pfn_glStopInstrumentsSGIX(marker);
 
     return Qnil;
@@ -21657,6 +23273,7 @@ static VALUE rogl_glGetListParameterfvSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetListParameterfvSGIX, "glGetListParameterfvSGIX");
     rogl_pfn_glGetListParameterfvSGIX(list, pname, params);
 
     return Qnil;
@@ -21668,6 +23285,7 @@ static VALUE rogl_glGetListParameterivSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetListParameterivSGIX, "glGetListParameterivSGIX");
     rogl_pfn_glGetListParameterivSGIX(list, pname, params);
 
     return Qnil;
@@ -21679,6 +23297,7 @@ static VALUE rogl_glListParameterfSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     float param = (float)NUM2DBL(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glListParameterfSGIX, "glListParameterfSGIX");
     rogl_pfn_glListParameterfSGIX(list, pname, param);
 
     return Qnil;
@@ -21690,6 +23309,7 @@ static VALUE rogl_glListParameterfvSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glListParameterfvSGIX, "glListParameterfvSGIX");
     rogl_pfn_glListParameterfvSGIX(list, pname, params);
 
     return Qnil;
@@ -21701,6 +23321,7 @@ static VALUE rogl_glListParameteriSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     int param = (int)NUM2INT(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glListParameteriSGIX, "glListParameteriSGIX");
     rogl_pfn_glListParameteriSGIX(list, pname, param);
 
     return Qnil;
@@ -21712,6 +23333,7 @@ static VALUE rogl_glListParameterivSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glListParameterivSGIX, "glListParameterivSGIX");
     rogl_pfn_glListParameterivSGIX(list, pname, params);
 
     return Qnil;
@@ -21721,6 +23343,7 @@ static VALUE rogl_glPixelTexGenSGIX(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int mode = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glPixelTexGenSGIX, "glPixelTexGenSGIX");
     rogl_pfn_glPixelTexGenSGIX(mode);
 
     return Qnil;
@@ -21743,6 +23366,7 @@ static VALUE rogl_glDeformationMap3dSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     int worder = (int)NUM2INT(_arg13_);
     void* points = (void*)val2ptr(_arg14_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeformationMap3dSGIX, "glDeformationMap3dSGIX");
     rogl_pfn_glDeformationMap3dSGIX(target, u1, u2, ustride, uorder, v1, v2, vstride, vorder, w1, w2, wstride, worder, points);
 
     return Qnil;
@@ -21765,6 +23389,7 @@ static VALUE rogl_glDeformationMap3fSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     int worder = (int)NUM2INT(_arg13_);
     void* points = (void*)val2ptr(_arg14_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeformationMap3fSGIX, "glDeformationMap3fSGIX");
     rogl_pfn_glDeformationMap3fSGIX(target, u1, u2, ustride, uorder, v1, v2, vstride, vorder, w1, w2, wstride, worder, points);
 
     return Qnil;
@@ -21774,6 +23399,7 @@ static VALUE rogl_glDeformSGIX(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int mask = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDeformSGIX, "glDeformSGIX");
     rogl_pfn_glDeformSGIX(mask);
 
     return Qnil;
@@ -21783,6 +23409,7 @@ static VALUE rogl_glLoadIdentityDeformationMapSGIX(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int mask = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glLoadIdentityDeformationMapSGIX, "glLoadIdentityDeformationMapSGIX");
     rogl_pfn_glLoadIdentityDeformationMapSGIX(mask);
 
     return Qnil;
@@ -21792,6 +23419,7 @@ static VALUE rogl_glReferencePlaneSGIX(VALUE _obj_, VALUE _arg1_)
 {
     void* equation = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReferencePlaneSGIX, "glReferencePlaneSGIX");
     rogl_pfn_glReferencePlaneSGIX(equation);
 
     return Qnil;
@@ -21802,6 +23430,7 @@ static VALUE rogl_glSpriteParameterfSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     float param = (float)NUM2DBL(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSpriteParameterfSGIX, "glSpriteParameterfSGIX");
     rogl_pfn_glSpriteParameterfSGIX(pname, param);
 
     return Qnil;
@@ -21812,6 +23441,7 @@ static VALUE rogl_glSpriteParameterfvSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* params = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSpriteParameterfvSGIX, "glSpriteParameterfvSGIX");
     rogl_pfn_glSpriteParameterfvSGIX(pname, params);
 
     return Qnil;
@@ -21822,6 +23452,7 @@ static VALUE rogl_glSpriteParameteriSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     int param = (int)NUM2INT(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSpriteParameteriSGIX, "glSpriteParameteriSGIX");
     rogl_pfn_glSpriteParameteriSGIX(pname, param);
 
     return Qnil;
@@ -21832,6 +23463,7 @@ static VALUE rogl_glSpriteParameterivSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     unsigned int pname = (unsigned int)NUM2UINT(_arg1_);
     void* params = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glSpriteParameterivSGIX, "glSpriteParameterivSGIX");
     rogl_pfn_glSpriteParameterivSGIX(pname, params);
 
     return Qnil;
@@ -21839,6 +23471,7 @@ static VALUE rogl_glSpriteParameterivSGIX(VALUE _obj_, VALUE _arg1_, VALUE _arg2
 
 static VALUE rogl_glTagSampleBufferSGIX(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glTagSampleBufferSGIX, "glTagSampleBufferSGIX");
     rogl_pfn_glTagSampleBufferSGIX();
 
     return Qnil;
@@ -21853,6 +23486,7 @@ static VALUE rogl_glColorTableSGI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE
     unsigned int type = (unsigned int)NUM2UINT(_arg5_);
     void* table = (void*)val2ptr(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColorTableSGI, "glColorTableSGI");
     rogl_pfn_glColorTableSGI(target, internalformat, width, format, type, table);
 
     return Qnil;
@@ -21864,6 +23498,7 @@ static VALUE rogl_glColorTableParameterfvSGI(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColorTableParameterfvSGI, "glColorTableParameterfvSGI");
     rogl_pfn_glColorTableParameterfvSGI(target, pname, params);
 
     return Qnil;
@@ -21875,6 +23510,7 @@ static VALUE rogl_glColorTableParameterivSGI(VALUE _obj_, VALUE _arg1_, VALUE _a
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColorTableParameterivSGI, "glColorTableParameterivSGI");
     rogl_pfn_glColorTableParameterivSGI(target, pname, params);
 
     return Qnil;
@@ -21888,6 +23524,7 @@ static VALUE rogl_glCopyColorTableSGI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     int y = (int)NUM2INT(_arg4_);
     int width = (int)NUM2INT(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glCopyColorTableSGI, "glCopyColorTableSGI");
     rogl_pfn_glCopyColorTableSGI(target, internalformat, x, y, width);
 
     return Qnil;
@@ -21900,6 +23537,7 @@ static VALUE rogl_glGetColorTableSGI(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VA
     unsigned int type = (unsigned int)NUM2UINT(_arg3_);
     void* table = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetColorTableSGI, "glGetColorTableSGI");
     rogl_pfn_glGetColorTableSGI(target, format, type, table);
 
     return Qnil;
@@ -21911,6 +23549,7 @@ static VALUE rogl_glGetColorTableParameterfvSGI(VALUE _obj_, VALUE _arg1_, VALUE
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetColorTableParameterfvSGI, "glGetColorTableParameterfvSGI");
     rogl_pfn_glGetColorTableParameterfvSGI(target, pname, params);
 
     return Qnil;
@@ -21922,6 +23561,7 @@ static VALUE rogl_glGetColorTableParameterivSGI(VALUE _obj_, VALUE _arg1_, VALUE
     unsigned int pname = (unsigned int)NUM2UINT(_arg2_);
     void* params = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGetColorTableParameterivSGI, "glGetColorTableParameterivSGI");
     rogl_pfn_glGetColorTableParameterivSGI(target, pname, params);
 
     return Qnil;
@@ -21929,6 +23569,7 @@ static VALUE rogl_glGetColorTableParameterivSGI(VALUE _obj_, VALUE _arg1_, VALUE
 
 static VALUE rogl_glFinishTextureSUNX(VALUE _obj_)
 {
+    CHECK_PROC_ADDRESS(rogl_pfn_glFinishTextureSUNX, "glFinishTextureSUNX");
     rogl_pfn_glFinishTextureSUNX();
 
     return Qnil;
@@ -21938,6 +23579,7 @@ static VALUE rogl_glGlobalAlphaFactorbSUN(VALUE _obj_, VALUE _arg1_)
 {
     char factor = (char)NUM2INT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGlobalAlphaFactorbSUN, "glGlobalAlphaFactorbSUN");
     rogl_pfn_glGlobalAlphaFactorbSUN(factor);
 
     return Qnil;
@@ -21947,6 +23589,7 @@ static VALUE rogl_glGlobalAlphaFactorsSUN(VALUE _obj_, VALUE _arg1_)
 {
     short factor = (short)NUM2INT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGlobalAlphaFactorsSUN, "glGlobalAlphaFactorsSUN");
     rogl_pfn_glGlobalAlphaFactorsSUN(factor);
 
     return Qnil;
@@ -21956,6 +23599,7 @@ static VALUE rogl_glGlobalAlphaFactoriSUN(VALUE _obj_, VALUE _arg1_)
 {
     int factor = (int)NUM2INT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGlobalAlphaFactoriSUN, "glGlobalAlphaFactoriSUN");
     rogl_pfn_glGlobalAlphaFactoriSUN(factor);
 
     return Qnil;
@@ -21965,6 +23609,7 @@ static VALUE rogl_glGlobalAlphaFactorfSUN(VALUE _obj_, VALUE _arg1_)
 {
     float factor = (float)NUM2DBL(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGlobalAlphaFactorfSUN, "glGlobalAlphaFactorfSUN");
     rogl_pfn_glGlobalAlphaFactorfSUN(factor);
 
     return Qnil;
@@ -21974,6 +23619,7 @@ static VALUE rogl_glGlobalAlphaFactordSUN(VALUE _obj_, VALUE _arg1_)
 {
     double factor = (double)NUM2DBL(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGlobalAlphaFactordSUN, "glGlobalAlphaFactordSUN");
     rogl_pfn_glGlobalAlphaFactordSUN(factor);
 
     return Qnil;
@@ -21983,6 +23629,7 @@ static VALUE rogl_glGlobalAlphaFactorubSUN(VALUE _obj_, VALUE _arg1_)
 {
     unsigned char factor = (unsigned char)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGlobalAlphaFactorubSUN, "glGlobalAlphaFactorubSUN");
     rogl_pfn_glGlobalAlphaFactorubSUN(factor);
 
     return Qnil;
@@ -21992,6 +23639,7 @@ static VALUE rogl_glGlobalAlphaFactorusSUN(VALUE _obj_, VALUE _arg1_)
 {
     unsigned short factor = (unsigned short)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGlobalAlphaFactorusSUN, "glGlobalAlphaFactorusSUN");
     rogl_pfn_glGlobalAlphaFactorusSUN(factor);
 
     return Qnil;
@@ -22001,6 +23649,7 @@ static VALUE rogl_glGlobalAlphaFactoruiSUN(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int factor = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glGlobalAlphaFactoruiSUN, "glGlobalAlphaFactoruiSUN");
     rogl_pfn_glGlobalAlphaFactoruiSUN(factor);
 
     return Qnil;
@@ -22013,6 +23662,7 @@ static VALUE rogl_glDrawMeshArraysSUN(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, V
     int count = (int)NUM2INT(_arg3_);
     int width = (int)NUM2INT(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glDrawMeshArraysSUN, "glDrawMeshArraysSUN");
     rogl_pfn_glDrawMeshArraysSUN(mode, first, count, width);
 
     return Qnil;
@@ -22022,6 +23672,7 @@ static VALUE rogl_glReplacementCodeuiSUN(VALUE _obj_, VALUE _arg1_)
 {
     unsigned int code = (unsigned int)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReplacementCodeuiSUN, "glReplacementCodeuiSUN");
     rogl_pfn_glReplacementCodeuiSUN(code);
 
     return Qnil;
@@ -22031,6 +23682,7 @@ static VALUE rogl_glReplacementCodeusSUN(VALUE _obj_, VALUE _arg1_)
 {
     unsigned short code = (unsigned short)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReplacementCodeusSUN, "glReplacementCodeusSUN");
     rogl_pfn_glReplacementCodeusSUN(code);
 
     return Qnil;
@@ -22040,6 +23692,7 @@ static VALUE rogl_glReplacementCodeubSUN(VALUE _obj_, VALUE _arg1_)
 {
     unsigned char code = (unsigned char)NUM2UINT(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReplacementCodeubSUN, "glReplacementCodeubSUN");
     rogl_pfn_glReplacementCodeubSUN(code);
 
     return Qnil;
@@ -22049,6 +23702,7 @@ static VALUE rogl_glReplacementCodeuivSUN(VALUE _obj_, VALUE _arg1_)
 {
     void* code = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReplacementCodeuivSUN, "glReplacementCodeuivSUN");
     rogl_pfn_glReplacementCodeuivSUN(code);
 
     return Qnil;
@@ -22058,6 +23712,7 @@ static VALUE rogl_glReplacementCodeusvSUN(VALUE _obj_, VALUE _arg1_)
 {
     void* code = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReplacementCodeusvSUN, "glReplacementCodeusvSUN");
     rogl_pfn_glReplacementCodeusvSUN(code);
 
     return Qnil;
@@ -22067,6 +23722,7 @@ static VALUE rogl_glReplacementCodeubvSUN(VALUE _obj_, VALUE _arg1_)
 {
     void* code = (void*)val2ptr(_arg1_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReplacementCodeubvSUN, "glReplacementCodeubvSUN");
     rogl_pfn_glReplacementCodeubvSUN(code);
 
     return Qnil;
@@ -22078,6 +23734,7 @@ static VALUE rogl_glReplacementCodePointerSUN(VALUE _obj_, VALUE _arg1_, VALUE _
     int stride = (int)NUM2INT(_arg2_);
     void* pointer = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReplacementCodePointerSUN, "glReplacementCodePointerSUN");
     rogl_pfn_glReplacementCodePointerSUN(type, stride, pointer);
 
     return Qnil;
@@ -22092,6 +23749,7 @@ static VALUE rogl_glColor4ubVertex2fSUN(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     float x = (float)NUM2DBL(_arg5_);
     float y = (float)NUM2DBL(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColor4ubVertex2fSUN, "glColor4ubVertex2fSUN");
     rogl_pfn_glColor4ubVertex2fSUN(r, g, b, a, x, y);
 
     return Qnil;
@@ -22102,6 +23760,7 @@ static VALUE rogl_glColor4ubVertex2fvSUN(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     void* c = (void*)val2ptr(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColor4ubVertex2fvSUN, "glColor4ubVertex2fvSUN");
     rogl_pfn_glColor4ubVertex2fvSUN(c, v);
 
     return Qnil;
@@ -22117,6 +23776,7 @@ static VALUE rogl_glColor4ubVertex3fSUN(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     float y = (float)NUM2DBL(_arg6_);
     float z = (float)NUM2DBL(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColor4ubVertex3fSUN, "glColor4ubVertex3fSUN");
     rogl_pfn_glColor4ubVertex3fSUN(r, g, b, a, x, y, z);
 
     return Qnil;
@@ -22127,6 +23787,7 @@ static VALUE rogl_glColor4ubVertex3fvSUN(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     void* c = (void*)val2ptr(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColor4ubVertex3fvSUN, "glColor4ubVertex3fvSUN");
     rogl_pfn_glColor4ubVertex3fvSUN(c, v);
 
     return Qnil;
@@ -22141,6 +23802,7 @@ static VALUE rogl_glColor3fVertex3fSUN(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, 
     float y = (float)NUM2DBL(_arg5_);
     float z = (float)NUM2DBL(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColor3fVertex3fSUN, "glColor3fVertex3fSUN");
     rogl_pfn_glColor3fVertex3fSUN(r, g, b, x, y, z);
 
     return Qnil;
@@ -22151,6 +23813,7 @@ static VALUE rogl_glColor3fVertex3fvSUN(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
     void* c = (void*)val2ptr(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColor3fVertex3fvSUN, "glColor3fVertex3fvSUN");
     rogl_pfn_glColor3fVertex3fvSUN(c, v);
 
     return Qnil;
@@ -22165,6 +23828,7 @@ static VALUE rogl_glNormal3fVertex3fSUN(VALUE _obj_, VALUE _arg1_, VALUE _arg2_,
     float y = (float)NUM2DBL(_arg5_);
     float z = (float)NUM2DBL(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNormal3fVertex3fSUN, "glNormal3fVertex3fSUN");
     rogl_pfn_glNormal3fVertex3fSUN(nx, ny, nz, x, y, z);
 
     return Qnil;
@@ -22175,6 +23839,7 @@ static VALUE rogl_glNormal3fVertex3fvSUN(VALUE _obj_, VALUE _arg1_, VALUE _arg2_
     void* n = (void*)val2ptr(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glNormal3fVertex3fvSUN, "glNormal3fVertex3fvSUN");
     rogl_pfn_glNormal3fVertex3fvSUN(n, v);
 
     return Qnil;
@@ -22193,6 +23858,7 @@ static VALUE rogl_glColor4fNormal3fVertex3fSUN(VALUE _obj_, VALUE _arg1_, VALUE 
     float y = (float)NUM2DBL(_arg9_);
     float z = (float)NUM2DBL(_arg10_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColor4fNormal3fVertex3fSUN, "glColor4fNormal3fVertex3fSUN");
     rogl_pfn_glColor4fNormal3fVertex3fSUN(r, g, b, a, nx, ny, nz, x, y, z);
 
     return Qnil;
@@ -22204,6 +23870,7 @@ static VALUE rogl_glColor4fNormal3fVertex3fvSUN(VALUE _obj_, VALUE _arg1_, VALUE
     void* n = (void*)val2ptr(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glColor4fNormal3fVertex3fvSUN, "glColor4fNormal3fVertex3fvSUN");
     rogl_pfn_glColor4fNormal3fVertex3fvSUN(c, n, v);
 
     return Qnil;
@@ -22217,6 +23884,7 @@ static VALUE rogl_glTexCoord2fVertex3fSUN(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     float y = (float)NUM2DBL(_arg4_);
     float z = (float)NUM2DBL(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord2fVertex3fSUN, "glTexCoord2fVertex3fSUN");
     rogl_pfn_glTexCoord2fVertex3fSUN(s, t, x, y, z);
 
     return Qnil;
@@ -22227,6 +23895,7 @@ static VALUE rogl_glTexCoord2fVertex3fvSUN(VALUE _obj_, VALUE _arg1_, VALUE _arg
     void* tc = (void*)val2ptr(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord2fVertex3fvSUN, "glTexCoord2fVertex3fvSUN");
     rogl_pfn_glTexCoord2fVertex3fvSUN(tc, v);
 
     return Qnil;
@@ -22243,6 +23912,7 @@ static VALUE rogl_glTexCoord4fVertex4fSUN(VALUE _obj_, VALUE _arg1_, VALUE _arg2
     float z = (float)NUM2DBL(_arg7_);
     float w = (float)NUM2DBL(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord4fVertex4fSUN, "glTexCoord4fVertex4fSUN");
     rogl_pfn_glTexCoord4fVertex4fSUN(s, t, p, q, x, y, z, w);
 
     return Qnil;
@@ -22253,6 +23923,7 @@ static VALUE rogl_glTexCoord4fVertex4fvSUN(VALUE _obj_, VALUE _arg1_, VALUE _arg
     void* tc = (void*)val2ptr(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord4fVertex4fvSUN, "glTexCoord4fVertex4fvSUN");
     rogl_pfn_glTexCoord4fVertex4fvSUN(tc, v);
 
     return Qnil;
@@ -22270,6 +23941,7 @@ static VALUE rogl_glTexCoord2fColor4ubVertex3fSUN(VALUE _obj_, VALUE _arg1_, VAL
     float y = (float)NUM2DBL(_arg8_);
     float z = (float)NUM2DBL(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord2fColor4ubVertex3fSUN, "glTexCoord2fColor4ubVertex3fSUN");
     rogl_pfn_glTexCoord2fColor4ubVertex3fSUN(s, t, r, g, b, a, x, y, z);
 
     return Qnil;
@@ -22281,6 +23953,7 @@ static VALUE rogl_glTexCoord2fColor4ubVertex3fvSUN(VALUE _obj_, VALUE _arg1_, VA
     void* c = (void*)val2ptr(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord2fColor4ubVertex3fvSUN, "glTexCoord2fColor4ubVertex3fvSUN");
     rogl_pfn_glTexCoord2fColor4ubVertex3fvSUN(tc, c, v);
 
     return Qnil;
@@ -22297,6 +23970,7 @@ static VALUE rogl_glTexCoord2fColor3fVertex3fSUN(VALUE _obj_, VALUE _arg1_, VALU
     float y = (float)NUM2DBL(_arg7_);
     float z = (float)NUM2DBL(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord2fColor3fVertex3fSUN, "glTexCoord2fColor3fVertex3fSUN");
     rogl_pfn_glTexCoord2fColor3fVertex3fSUN(s, t, r, g, b, x, y, z);
 
     return Qnil;
@@ -22308,6 +23982,7 @@ static VALUE rogl_glTexCoord2fColor3fVertex3fvSUN(VALUE _obj_, VALUE _arg1_, VAL
     void* c = (void*)val2ptr(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord2fColor3fVertex3fvSUN, "glTexCoord2fColor3fVertex3fvSUN");
     rogl_pfn_glTexCoord2fColor3fVertex3fvSUN(tc, c, v);
 
     return Qnil;
@@ -22324,6 +23999,7 @@ static VALUE rogl_glTexCoord2fNormal3fVertex3fSUN(VALUE _obj_, VALUE _arg1_, VAL
     float y = (float)NUM2DBL(_arg7_);
     float z = (float)NUM2DBL(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord2fNormal3fVertex3fSUN, "glTexCoord2fNormal3fVertex3fSUN");
     rogl_pfn_glTexCoord2fNormal3fVertex3fSUN(s, t, nx, ny, nz, x, y, z);
 
     return Qnil;
@@ -22335,6 +24011,7 @@ static VALUE rogl_glTexCoord2fNormal3fVertex3fvSUN(VALUE _obj_, VALUE _arg1_, VA
     void* n = (void*)val2ptr(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord2fNormal3fVertex3fvSUN, "glTexCoord2fNormal3fVertex3fvSUN");
     rogl_pfn_glTexCoord2fNormal3fVertex3fvSUN(tc, n, v);
 
     return Qnil;
@@ -22355,6 +24032,7 @@ static VALUE rogl_glTexCoord2fColor4fNormal3fVertex3fSUN(VALUE _obj_, VALUE _arg
     float y = (float)NUM2DBL(_arg11_);
     float z = (float)NUM2DBL(_arg12_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord2fColor4fNormal3fVertex3fSUN, "glTexCoord2fColor4fNormal3fVertex3fSUN");
     rogl_pfn_glTexCoord2fColor4fNormal3fVertex3fSUN(s, t, r, g, b, a, nx, ny, nz, x, y, z);
 
     return Qnil;
@@ -22367,6 +24045,7 @@ static VALUE rogl_glTexCoord2fColor4fNormal3fVertex3fvSUN(VALUE _obj_, VALUE _ar
     void* n = (void*)val2ptr(_arg3_);
     void* v = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord2fColor4fNormal3fVertex3fvSUN, "glTexCoord2fColor4fNormal3fVertex3fvSUN");
     rogl_pfn_glTexCoord2fColor4fNormal3fVertex3fvSUN(tc, c, n, v);
 
     return Qnil;
@@ -22390,6 +24069,7 @@ static VALUE rogl_glTexCoord4fColor4fNormal3fVertex4fSUN(VALUE _obj_, VALUE _arg
     float z = (float)NUM2DBL(_arg14_);
     float w = (float)NUM2DBL(_arg15_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord4fColor4fNormal3fVertex4fSUN, "glTexCoord4fColor4fNormal3fVertex4fSUN");
     rogl_pfn_glTexCoord4fColor4fNormal3fVertex4fSUN(s, t, p, q, r, g, b, a, nx, ny, nz, x, y, z, w);
 
     return Qnil;
@@ -22402,6 +24082,7 @@ static VALUE rogl_glTexCoord4fColor4fNormal3fVertex4fvSUN(VALUE _obj_, VALUE _ar
     void* n = (void*)val2ptr(_arg3_);
     void* v = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glTexCoord4fColor4fNormal3fVertex4fvSUN, "glTexCoord4fColor4fNormal3fVertex4fvSUN");
     rogl_pfn_glTexCoord4fColor4fNormal3fVertex4fvSUN(tc, c, n, v);
 
     return Qnil;
@@ -22414,6 +24095,7 @@ static VALUE rogl_glReplacementCodeuiVertex3fSUN(VALUE _obj_, VALUE _arg1_, VALU
     float y = (float)NUM2DBL(_arg3_);
     float z = (float)NUM2DBL(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReplacementCodeuiVertex3fSUN, "glReplacementCodeuiVertex3fSUN");
     rogl_pfn_glReplacementCodeuiVertex3fSUN(rc, x, y, z);
 
     return Qnil;
@@ -22424,6 +24106,7 @@ static VALUE rogl_glReplacementCodeuiVertex3fvSUN(VALUE _obj_, VALUE _arg1_, VAL
     void* rc = (void*)val2ptr(_arg1_);
     void* v = (void*)val2ptr(_arg2_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReplacementCodeuiVertex3fvSUN, "glReplacementCodeuiVertex3fvSUN");
     rogl_pfn_glReplacementCodeuiVertex3fvSUN(rc, v);
 
     return Qnil;
@@ -22440,6 +24123,7 @@ static VALUE rogl_glReplacementCodeuiColor4ubVertex3fSUN(VALUE _obj_, VALUE _arg
     float y = (float)NUM2DBL(_arg7_);
     float z = (float)NUM2DBL(_arg8_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReplacementCodeuiColor4ubVertex3fSUN, "glReplacementCodeuiColor4ubVertex3fSUN");
     rogl_pfn_glReplacementCodeuiColor4ubVertex3fSUN(rc, r, g, b, a, x, y, z);
 
     return Qnil;
@@ -22451,6 +24135,7 @@ static VALUE rogl_glReplacementCodeuiColor4ubVertex3fvSUN(VALUE _obj_, VALUE _ar
     void* c = (void*)val2ptr(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReplacementCodeuiColor4ubVertex3fvSUN, "glReplacementCodeuiColor4ubVertex3fvSUN");
     rogl_pfn_glReplacementCodeuiColor4ubVertex3fvSUN(rc, c, v);
 
     return Qnil;
@@ -22466,6 +24151,7 @@ static VALUE rogl_glReplacementCodeuiColor3fVertex3fSUN(VALUE _obj_, VALUE _arg1
     float y = (float)NUM2DBL(_arg6_);
     float z = (float)NUM2DBL(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReplacementCodeuiColor3fVertex3fSUN, "glReplacementCodeuiColor3fVertex3fSUN");
     rogl_pfn_glReplacementCodeuiColor3fVertex3fSUN(rc, r, g, b, x, y, z);
 
     return Qnil;
@@ -22477,6 +24163,7 @@ static VALUE rogl_glReplacementCodeuiColor3fVertex3fvSUN(VALUE _obj_, VALUE _arg
     void* c = (void*)val2ptr(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReplacementCodeuiColor3fVertex3fvSUN, "glReplacementCodeuiColor3fVertex3fvSUN");
     rogl_pfn_glReplacementCodeuiColor3fVertex3fvSUN(rc, c, v);
 
     return Qnil;
@@ -22492,6 +24179,7 @@ static VALUE rogl_glReplacementCodeuiNormal3fVertex3fSUN(VALUE _obj_, VALUE _arg
     float y = (float)NUM2DBL(_arg6_);
     float z = (float)NUM2DBL(_arg7_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReplacementCodeuiNormal3fVertex3fSUN, "glReplacementCodeuiNormal3fVertex3fSUN");
     rogl_pfn_glReplacementCodeuiNormal3fVertex3fSUN(rc, nx, ny, nz, x, y, z);
 
     return Qnil;
@@ -22503,6 +24191,7 @@ static VALUE rogl_glReplacementCodeuiNormal3fVertex3fvSUN(VALUE _obj_, VALUE _ar
     void* n = (void*)val2ptr(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReplacementCodeuiNormal3fVertex3fvSUN, "glReplacementCodeuiNormal3fVertex3fvSUN");
     rogl_pfn_glReplacementCodeuiNormal3fVertex3fvSUN(rc, n, v);
 
     return Qnil;
@@ -22522,6 +24211,7 @@ static VALUE rogl_glReplacementCodeuiColor4fNormal3fVertex3fSUN(VALUE _obj_, VAL
     float y = (float)NUM2DBL(_arg10_);
     float z = (float)NUM2DBL(_arg11_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReplacementCodeuiColor4fNormal3fVertex3fSUN, "glReplacementCodeuiColor4fNormal3fVertex3fSUN");
     rogl_pfn_glReplacementCodeuiColor4fNormal3fVertex3fSUN(rc, r, g, b, a, nx, ny, nz, x, y, z);
 
     return Qnil;
@@ -22534,6 +24224,7 @@ static VALUE rogl_glReplacementCodeuiColor4fNormal3fVertex3fvSUN(VALUE _obj_, VA
     void* n = (void*)val2ptr(_arg3_);
     void* v = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReplacementCodeuiColor4fNormal3fVertex3fvSUN, "glReplacementCodeuiColor4fNormal3fVertex3fvSUN");
     rogl_pfn_glReplacementCodeuiColor4fNormal3fVertex3fvSUN(rc, c, n, v);
 
     return Qnil;
@@ -22548,6 +24239,7 @@ static VALUE rogl_glReplacementCodeuiTexCoord2fVertex3fSUN(VALUE _obj_, VALUE _a
     float y = (float)NUM2DBL(_arg5_);
     float z = (float)NUM2DBL(_arg6_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReplacementCodeuiTexCoord2fVertex3fSUN, "glReplacementCodeuiTexCoord2fVertex3fSUN");
     rogl_pfn_glReplacementCodeuiTexCoord2fVertex3fSUN(rc, s, t, x, y, z);
 
     return Qnil;
@@ -22559,6 +24251,7 @@ static VALUE rogl_glReplacementCodeuiTexCoord2fVertex3fvSUN(VALUE _obj_, VALUE _
     void* tc = (void*)val2ptr(_arg2_);
     void* v = (void*)val2ptr(_arg3_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReplacementCodeuiTexCoord2fVertex3fvSUN, "glReplacementCodeuiTexCoord2fVertex3fvSUN");
     rogl_pfn_glReplacementCodeuiTexCoord2fVertex3fvSUN(rc, tc, v);
 
     return Qnil;
@@ -22576,6 +24269,7 @@ static VALUE rogl_glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN(VALUE _obj_, 
     float y = (float)NUM2DBL(_arg8_);
     float z = (float)NUM2DBL(_arg9_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN, "glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN");
     rogl_pfn_glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN(rc, s, t, nx, ny, nz, x, y, z);
 
     return Qnil;
@@ -22588,6 +24282,7 @@ static VALUE rogl_glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN(VALUE _obj_,
     void* n = (void*)val2ptr(_arg3_);
     void* v = (void*)val2ptr(_arg4_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN, "glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN");
     rogl_pfn_glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN(rc, tc, n, v);
 
     return Qnil;
@@ -22609,6 +24304,7 @@ static VALUE rogl_glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN(VALUE 
     float y = (float)NUM2DBL(_arg12_);
     float z = (float)NUM2DBL(_arg13_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN, "glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN");
     rogl_pfn_glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN(rc, s, t, r, g, b, a, nx, ny, nz, x, y, z);
 
     return Qnil;
@@ -22622,6 +24318,7 @@ static VALUE rogl_glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN(VALUE
     void* n = (void*)val2ptr(_arg4_);
     void* v = (void*)val2ptr(_arg5_);
 
+    CHECK_PROC_ADDRESS(rogl_pfn_glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN, "glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN");
     rogl_pfn_glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN(rc, tc, c, n, v);
 
     return Qnil;

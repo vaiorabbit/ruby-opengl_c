@@ -10,6 +10,8 @@
 #define CPOINTER_AS_VALUE(ptr) rb_funcall(s_mFiddlePointer, rb_intern("new"), 1, (ULONG2NUM((unsigned long)(ptr))))
 #endif
 
+#define CHECK_PROC_ADDRESS(pfn, name) if ((pfn) == NULL) { (pfn) = rogl_GetProcAddress((name)); }
+
 static VALUE s_mFiddlePointer;
 
 static void* val2ptr(VALUE obj)
@@ -86,9 +88,15 @@ static VALUE rogl_method_LoadLib(int argc, VALUE argv[], VALUE self)
         return Qfalse;
     }
 
+    /* TODO remove CHECK_PROC_ADDRESS and use methods below for batch setup
+       NOTE : On Windows, rogl_SetupXXX() must be called AFTER OpenGL context has been created.
+              This restriction may cause incompatibility with pure-ruby version.
+     */
     /* TODO handle core/compatible */
+    /*
     rogl_SetupFeature(0);
     rogl_SetupExtFeature(0);
+     */
 
     /* TODO call rogl_TermProcAddressSystem at exit? */
 
