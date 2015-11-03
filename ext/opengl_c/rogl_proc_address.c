@@ -69,11 +69,9 @@ void* rogl_GetProcAddress(const char* name)
        (p == (void*)0x1) || (p == (void*)0x2) || (p == (void*)0x3) ||
        (p == (void*)-1) )
     {
-		printf("wglGetProcAddress failed (0x%p). Try to get from ::GetProcAddress...\t", p);
         p = (void *)GetProcAddress(g_DLLImage, name);
     }
 
-	printf("%s = 0x%p\n", name, p);
     return p;
 }
 

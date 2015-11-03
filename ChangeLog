@@ -2,6 +2,7 @@
 
 	* ext/opengl_c/rogl.c (CHECK_PROC_ADDRESS): Added for initialization order issue.
 	* sample/DebugOutput: Added.
+	* generator/c_generate_command.rb, c_generate_ext_command.rb: Changed naming rule of arguments (glAlphaFragmentOp1ATI, etc. caused conflicts)
 
 2015-10-26  vaiorabbit  <http://twitter.com/vaiorabbit>
 
