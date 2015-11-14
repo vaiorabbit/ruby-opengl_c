@@ -1,38 +1,10 @@
 #include <stddef.h>
 #include <ruby.h>
 #include "rogl_proc_address.h"
-
-#if SIZEOF_VOIDP == SIZEOF_LONG_LONG
-#define VALUE_AS_CPOINTER(obj) ((void*)(NUM2ULL(obj)))
-#define CPOINTER_AS_VALUE(ptr) rb_funcall(s_mFiddlePointer, rb_intern("new"), 1, (ULL2NUM((unsigned long long)(ptr))))
-#else
-#define VALUE_AS_CPOINTER(obj) ((void*)(NUM2ULONG(obj)))
-#define CPOINTER_AS_VALUE(ptr) rb_funcall(s_mFiddlePointer, rb_intern("new"), 1, (ULONG2NUM((unsigned long)(ptr))))
-#endif
+#include "rogl_platform.h"
+#include "rogl_pointer.h"
 
 #define CHECK_PROC_ADDRESS(pfn, name) if ((pfn) == NULL) { (pfn) = rogl_GetProcAddress((name)); }
-
-static VALUE s_mFiddlePointer;
-
-static void* val2ptr(VALUE obj)
-{
-    /* Ref.:
-       Ruby Strings vs. C strings
-         http://stackoverflow.com/questions/7050800/ruby-c-extensions-api-questions
-     */
-    if (NIL_P(obj))
-    {
-        return NULL;
-    }
-    else if (RB_TYPE_P(obj, T_STRING))
-    {
-        return RSTRING_PTR(obj);
-    }
-    else
-    {
-        return VALUE_AS_CPOINTER(obj);
-    }
-}
 
 #include "rogl_commands.c.inc"
 #include "rogl_ext_commands.c.inc"
@@ -46,13 +18,6 @@ static VALUE rogl_method_InitSystem( VALUE self, VALUE lib )
 static VALUE rogl_method_TermSystem( VALUE self )
 {
     rogl_TermProcAddressSystem();
-    return Qnil;
-}
-
-static VALUE rogl_method_SetFiddlePointerModule( VALUE self, VALUE mFiddlePointer )
-{
-    s_mFiddlePointer = mFiddlePointer;
-
     return Qnil;
 }
 
@@ -112,12 +77,12 @@ void Init_opengl_c_impl()
     rb_define_singleton_method( mROGL, "init_system", rogl_method_InitSystem, 1 );
     rb_define_singleton_method( mROGL, "term_system", rogl_method_TermSystem, 0 );
 
-    rb_define_singleton_method( mROGL, "set_fiddle_pointer_module", rogl_method_SetFiddlePointerModule, 1 );
-
+    rogl_InitPointerCommand( &mROGL );
     rogl_InitRubyCommand( &mROGL );
     rogl_InitRubyExtCommand( &mROGL );
     rogl_InitRubyEnum( &mROGL );
     rogl_InitRubyExtEnum( &mROGL );
+    rogl_InitPlatformCommand( &mROGL );
 }
 
 /*
