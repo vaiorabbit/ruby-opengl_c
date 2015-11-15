@@ -4,14 +4,11 @@
 # Ref.: /glfw-3.0.1/examples/simple.c
 #
 require 'fiddle'
-#require 'opengl_c' # For C Version
-#require 'opengl' # For Pure Ruby Version
 require 'opengl'
 require 'glfw'
 
-#OpenGL.init_system("/System/Library/Frameworks/OpenGL.framework/Libraries/libGL.dylib") # For C Version
 OpenGL.load_lib()
-GLFW.load_lib('libglfw.dylib', Dir.pwd)
+GLFW.load_lib()
 
 include OpenGL
 include GLFW

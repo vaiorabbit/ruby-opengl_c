@@ -28,8 +28,27 @@ void rogl_InitPlatformCommand( VALUE* pmROGL )
 
 #elif defined(_WIN32)
 
+#define WIN32_LEAN_AND_MEAN 1
+#include <windows.h>
+
+static VALUE rogl_method_wglGetCurrentContext( VALUE self )
+{
+    HGLRC ctxobj = wglGetCurrentContext();
+
+    return CPOINTER_AS_VALUE(ctxobj);
+}
+
+static VALUE rogl_method_wglGetCurrentDC( VALUE self )
+{
+    HDC dc = wglGetCurrentDC();
+
+    return CPOINTER_AS_VALUE(dc);
+}
+
 void rogl_InitPlatformCommand( VALUE* pmROGL )
 {
+    rb_define_method(*pmROGL, "wglGetCurrentContext", rogl_method_wglGetCurrentContext, 0);
+    rb_define_method(*pmROGL, "wglGetCurrentDC", rogl_method_wglGetCurrentDC, 0);
 }
 
 #elif defined(__linux__)

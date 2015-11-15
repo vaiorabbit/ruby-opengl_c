@@ -2,6 +2,7 @@
 
 	* ext/opengl_c/rogl_pointer.c|h : Added.
 	* ext/opengl_c/rogl_platform.c|h (glXGetCurrentContext, glXGetCurrentDisplay): Added.
+	* ext/opengl_c/rogl_platform.c|h (wglGetCurrentContext, wglGetCurrentDC): Added.
 
 2015-11-14  vaiorabbit  <http://twitter.com/vaiorabbit>
 
