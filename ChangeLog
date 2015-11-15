@@ -3,6 +3,7 @@
 	* ext/opengl_c/rogl_pointer.c|h : Added.
 	* ext/opengl_c/rogl_platform.c|h (glXGetCurrentContext, glXGetCurrentDisplay): Added.
 	* ext/opengl_c/rogl_platform.c|h (wglGetCurrentContext, wglGetCurrentDC): Added.
+	* generator/c_generate_command.rb, c_generate_ext_command.rb: Modified to avoid C90 warnings.
 
 2015-11-14  vaiorabbit  <http://twitter.com/vaiorabbit>
 

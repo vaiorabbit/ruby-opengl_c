@@ -95,12 +95,19 @@ module GLCCommandCodeGenerator
       out.puts "{\n"
       # Begin implementation
 
-      # Cast VALUE to C type
+      # Variables
       if arg_names.length > 0
+        # Declaration
+        arg_names.each_with_index do |a, i|
+          out.puts "    #{a} #{map_entry.var_names[i]}__;"
+        end
+        out.puts ""
+
+        # Cast VALUE to C type
         arg_names.each_with_index do |a, i|
           arg_conv = get_value_to_ctype_converter(a)
           arg_cast = "(#{a})#{arg_conv}(_arg#{i+1}_)"
-          out.puts "    #{a} #{map_entry.var_names[i]}__ = #{arg_cast};"
+          out.puts "    #{map_entry.var_names[i]}__ = #{arg_cast};"
         end
         out.puts ""
       end
