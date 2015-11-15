@@ -34,8 +34,26 @@ void rogl_InitPlatformCommand( VALUE* pmROGL )
 
 #elif defined(__linux__)
 
+#include <GL/glx.h>
+
+static VALUE rogl_method_glXGetCurrentContext( VALUE self )
+{
+    GLXContext ctxobj = glXGetCurrentContext();
+
+    return CPOINTER_AS_VALUE(ctxobj);
+}
+
+static VALUE rogl_method_glXGetCurrentDisplay( VALUE self )
+{
+    Display* disp = glXGetCurrentDisplay();
+
+    return CPOINTER_AS_VALUE(disp);
+}
+
 void rogl_InitPlatformCommand( VALUE* pmROGL )
 {
+    rb_define_method(*pmROGL, "glXGetCurrentContext", rogl_method_glXGetCurrentContext, 0);
+    rb_define_method(*pmROGL, "glXGetCurrentDisplay", rogl_method_glXGetCurrentDisplay, 0);
 }
 
 #else

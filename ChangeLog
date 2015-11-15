@@ -1,6 +1,7 @@
 2015-11-15  vaiorabbit  <http://twitter.com/vaiorabbit>
 
 	* ext/opengl_c/rogl_pointer.c|h : Added.
+	* ext/opengl_c/rogl_platform.c|h (glXGetCurrentContext, glXGetCurrentDisplay): Added.
 
 2015-11-14  vaiorabbit  <http://twitter.com/vaiorabbit>
 
