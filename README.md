@@ -5,7 +5,7 @@
 Replaces pure-ruby OpenGL API calls in opengl-bindings ( https://github.com/vaiorabbit/ruby-opengl ) with native C function calls.
 
 *   Created : 2015-10-11
-*   Last modified : 2016-01-03
+*   Last modified : 2016-01-09
 
 ## Features ##
 

@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name          = "opengl-bindings_c"
-  gem.version       = "0.5.2.pre"
+  gem.version       = "0.5.3.pre"
   gem.authors       = ["vaiorabbit"]
   gem.email         = ["vaiorabbit@gmail.com"]
   gem.summary       = %q{Ruby OpenGL Bindings (C Edition)}
