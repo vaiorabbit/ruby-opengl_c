@@ -917,6 +917,7 @@ typedef void (* ROGL_PFNGLGETLOCALCONSTANTFLOATVEXTPROC) (unsigned int id, unsig
 typedef void (* ROGL_PFNGLVERTEXWEIGHTFEXTPROC) (float weight);
 typedef void (* ROGL_PFNGLVERTEXWEIGHTFVEXTPROC) (void* weight);
 typedef void (* ROGL_PFNGLVERTEXWEIGHTPOINTEREXTPROC) (int size, unsigned int type, int stride, void* pointer);
+typedef void (* ROGL_PFNGLWINDOWRECTANGLESEXTPROC) (unsigned int mode, int count, void* box);
 typedef void* (* ROGL_PFNGLIMPORTSYNCEXTPROC) (unsigned int external_sync_type, ptrdiff_t external_sync, unsigned int flags);
 typedef void (* ROGL_PFNGLFRAMETERMINATORGREMEDYPROC) (void);
 typedef void (* ROGL_PFNGLSTRINGMARKERGREMEDYPROC) (int len, void* string);
@@ -1019,6 +1020,7 @@ typedef unsigned char (* ROGL_PFNGLISTEXTUREHANDLERESIDENTNVPROC) (unsigned long
 typedef unsigned char (* ROGL_PFNGLISIMAGEHANDLERESIDENTNVPROC) (unsigned long long handle);
 typedef void (* ROGL_PFNGLBLENDPARAMETERINVPROC) (unsigned int pname, int value);
 typedef void (* ROGL_PFNGLBLENDBARRIERNVPROC) (void);
+typedef void (* ROGL_PFNGLVIEWPORTPOSITIONWSCALENVPROC) (unsigned int index, float xcoeff, float ycoeff);
 typedef void (* ROGL_PFNGLCREATESTATESNVPROC) (int n, void* states);
 typedef void (* ROGL_PFNGLDELETESTATESNVPROC) (int n, void* states);
 typedef unsigned char (* ROGL_PFNGLISSTATENVPROC) (unsigned int state);
@@ -1040,6 +1042,7 @@ typedef void (* ROGL_PFNGLBEGINCONDITIONALRENDERNVPROC) (unsigned int id, unsign
 typedef void (* ROGL_PFNGLENDCONDITIONALRENDERNVPROC) (void);
 typedef void (* ROGL_PFNGLSUBPIXELPRECISIONBIASNVPROC) (unsigned int xbits, unsigned int ybits);
 typedef void (* ROGL_PFNGLCONSERVATIVERASTERPARAMETERFNVPROC) (unsigned int pname, float value);
+typedef void (* ROGL_PFNGLCONSERVATIVERASTERPARAMETERINVPROC) (unsigned int pname, int param);
 typedef void (* ROGL_PFNGLCOPYIMAGESUBDATANVPROC) (unsigned int srcName, unsigned int srcTarget, int srcLevel, int srcX, int srcY, int srcZ, unsigned int dstName, unsigned int dstTarget, int dstLevel, int dstX, int dstY, int dstZ, int width, int height, int depth);
 typedef void (* ROGL_PFNGLDEPTHRANGEDNVPROC) (double zNear, double zFar);
 typedef void (* ROGL_PFNGLCLEARDEPTHDNVPROC) (double depth);
@@ -1428,6 +1431,7 @@ typedef unsigned int (* ROGL_PFNGLVIDEOCAPTURENVPROC) (unsigned int video_captur
 typedef void (* ROGL_PFNGLVIDEOCAPTURESTREAMPARAMETERIVNVPROC) (unsigned int video_capture_slot, unsigned int stream, unsigned int pname, void* params);
 typedef void (* ROGL_PFNGLVIDEOCAPTURESTREAMPARAMETERFVNVPROC) (unsigned int video_capture_slot, unsigned int stream, unsigned int pname, void* params);
 typedef void (* ROGL_PFNGLVIDEOCAPTURESTREAMPARAMETERDVNVPROC) (unsigned int video_capture_slot, unsigned int stream, unsigned int pname, void* params);
+typedef void (* ROGL_PFNGLVIEWPORTSWIZZLENVPROC) (unsigned int index, unsigned int swizzlex, unsigned int swizzley, unsigned int swizzlez, unsigned int swizzlew);
 typedef void (* ROGL_PFNGLMULTITEXCOORD1BOESPROC) (unsigned int texture, char s);
 typedef void (* ROGL_PFNGLMULTITEXCOORD1BVOESPROC) (unsigned int texture, void* coords);
 typedef void (* ROGL_PFNGLMULTITEXCOORD2BOESPROC) (unsigned int texture, char s, char t);
@@ -2615,6 +2619,7 @@ static ROGL_PFNGLGETLOCALCONSTANTFLOATVEXTPROC rogl_pfn_glGetLocalConstantFloatv
 static ROGL_PFNGLVERTEXWEIGHTFEXTPROC rogl_pfn_glVertexWeightfEXT = NULL;
 static ROGL_PFNGLVERTEXWEIGHTFVEXTPROC rogl_pfn_glVertexWeightfvEXT = NULL;
 static ROGL_PFNGLVERTEXWEIGHTPOINTEREXTPROC rogl_pfn_glVertexWeightPointerEXT = NULL;
+static ROGL_PFNGLWINDOWRECTANGLESEXTPROC rogl_pfn_glWindowRectanglesEXT = NULL;
 static ROGL_PFNGLIMPORTSYNCEXTPROC rogl_pfn_glImportSyncEXT = NULL;
 static ROGL_PFNGLFRAMETERMINATORGREMEDYPROC rogl_pfn_glFrameTerminatorGREMEDY = NULL;
 static ROGL_PFNGLSTRINGMARKERGREMEDYPROC rogl_pfn_glStringMarkerGREMEDY = NULL;
@@ -2717,6 +2722,7 @@ static ROGL_PFNGLISTEXTUREHANDLERESIDENTNVPROC rogl_pfn_glIsTextureHandleResiden
 static ROGL_PFNGLISIMAGEHANDLERESIDENTNVPROC rogl_pfn_glIsImageHandleResidentNV = NULL;
 static ROGL_PFNGLBLENDPARAMETERINVPROC rogl_pfn_glBlendParameteriNV = NULL;
 static ROGL_PFNGLBLENDBARRIERNVPROC rogl_pfn_glBlendBarrierNV = NULL;
+static ROGL_PFNGLVIEWPORTPOSITIONWSCALENVPROC rogl_pfn_glViewportPositionWScaleNV = NULL;
 static ROGL_PFNGLCREATESTATESNVPROC rogl_pfn_glCreateStatesNV = NULL;
 static ROGL_PFNGLDELETESTATESNVPROC rogl_pfn_glDeleteStatesNV = NULL;
 static ROGL_PFNGLISSTATENVPROC rogl_pfn_glIsStateNV = NULL;
@@ -2738,6 +2744,7 @@ static ROGL_PFNGLBEGINCONDITIONALRENDERNVPROC rogl_pfn_glBeginConditionalRenderN
 static ROGL_PFNGLENDCONDITIONALRENDERNVPROC rogl_pfn_glEndConditionalRenderNV = NULL;
 static ROGL_PFNGLSUBPIXELPRECISIONBIASNVPROC rogl_pfn_glSubpixelPrecisionBiasNV = NULL;
 static ROGL_PFNGLCONSERVATIVERASTERPARAMETERFNVPROC rogl_pfn_glConservativeRasterParameterfNV = NULL;
+static ROGL_PFNGLCONSERVATIVERASTERPARAMETERINVPROC rogl_pfn_glConservativeRasterParameteriNV = NULL;
 static ROGL_PFNGLCOPYIMAGESUBDATANVPROC rogl_pfn_glCopyImageSubDataNV = NULL;
 static ROGL_PFNGLDEPTHRANGEDNVPROC rogl_pfn_glDepthRangedNV = NULL;
 static ROGL_PFNGLCLEARDEPTHDNVPROC rogl_pfn_glClearDepthdNV = NULL;
@@ -3126,6 +3133,7 @@ static ROGL_PFNGLVIDEOCAPTURENVPROC rogl_pfn_glVideoCaptureNV = NULL;
 static ROGL_PFNGLVIDEOCAPTURESTREAMPARAMETERIVNVPROC rogl_pfn_glVideoCaptureStreamParameterivNV = NULL;
 static ROGL_PFNGLVIDEOCAPTURESTREAMPARAMETERFVNVPROC rogl_pfn_glVideoCaptureStreamParameterfvNV = NULL;
 static ROGL_PFNGLVIDEOCAPTURESTREAMPARAMETERDVNVPROC rogl_pfn_glVideoCaptureStreamParameterdvNV = NULL;
+static ROGL_PFNGLVIEWPORTSWIZZLENVPROC rogl_pfn_glViewportSwizzleNV = NULL;
 static ROGL_PFNGLMULTITEXCOORD1BOESPROC rogl_pfn_glMultiTexCoord1bOES = NULL;
 static ROGL_PFNGLMULTITEXCOORD1BVOESPROC rogl_pfn_glMultiTexCoord1bvOES = NULL;
 static ROGL_PFNGLMULTITEXCOORD2BOESPROC rogl_pfn_glMultiTexCoord2bOES = NULL;
@@ -19040,6 +19048,22 @@ static VALUE rogl_glVertexWeightPointerEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg
     return Qnil;
 }
 
+static VALUE rogl_glWindowRectanglesEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
+{
+    unsigned int mode__;
+    int count__;
+    void* box__;
+
+    mode__ = (unsigned int)NUM2UINT(_arg1_);
+    count__ = (int)NUM2INT(_arg2_);
+    box__ = (void*)val2ptr(_arg3_);
+
+    CHECK_PROC_ADDRESS(rogl_pfn_glWindowRectanglesEXT, "glWindowRectanglesEXT");
+    rogl_pfn_glWindowRectanglesEXT(mode__, count__, box__);
+
+    return Qnil;
+}
+
 static VALUE rogl_glImportSyncEXT(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
 {
     unsigned int external_sync_type__;
@@ -20628,6 +20652,22 @@ static VALUE rogl_glBlendBarrierNV(VALUE _obj_)
     return Qnil;
 }
 
+static VALUE rogl_glViewportPositionWScaleNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_)
+{
+    unsigned int index__;
+    float xcoeff__;
+    float ycoeff__;
+
+    index__ = (unsigned int)NUM2UINT(_arg1_);
+    xcoeff__ = (float)NUM2DBL(_arg2_);
+    ycoeff__ = (float)NUM2DBL(_arg3_);
+
+    CHECK_PROC_ADDRESS(rogl_pfn_glViewportPositionWScaleNV, "glViewportPositionWScaleNV");
+    rogl_pfn_glViewportPositionWScaleNV(index__, xcoeff__, ycoeff__);
+
+    return Qnil;
+}
+
 static VALUE rogl_glCreateStatesNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
     int n__;
@@ -20936,6 +20976,20 @@ static VALUE rogl_glConservativeRasterParameterfNV(VALUE _obj_, VALUE _arg1_, VA
 
     CHECK_PROC_ADDRESS(rogl_pfn_glConservativeRasterParameterfNV, "glConservativeRasterParameterfNV");
     rogl_pfn_glConservativeRasterParameterfNV(pname__, value__);
+
+    return Qnil;
+}
+
+static VALUE rogl_glConservativeRasterParameteriNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
+{
+    unsigned int pname__;
+    int param__;
+
+    pname__ = (unsigned int)NUM2UINT(_arg1_);
+    param__ = (int)NUM2INT(_arg2_);
+
+    CHECK_PROC_ADDRESS(rogl_pfn_glConservativeRasterParameteriNV, "glConservativeRasterParameteriNV");
+    rogl_pfn_glConservativeRasterParameteriNV(pname__, param__);
 
     return Qnil;
 }
@@ -27334,6 +27388,26 @@ static VALUE rogl_glVideoCaptureStreamParameterdvNV(VALUE _obj_, VALUE _arg1_, V
     return Qnil;
 }
 
+static VALUE rogl_glViewportSwizzleNV(VALUE _obj_, VALUE _arg1_, VALUE _arg2_, VALUE _arg3_, VALUE _arg4_, VALUE _arg5_)
+{
+    unsigned int index__;
+    unsigned int swizzlex__;
+    unsigned int swizzley__;
+    unsigned int swizzlez__;
+    unsigned int swizzlew__;
+
+    index__ = (unsigned int)NUM2UINT(_arg1_);
+    swizzlex__ = (unsigned int)NUM2UINT(_arg2_);
+    swizzley__ = (unsigned int)NUM2UINT(_arg3_);
+    swizzlez__ = (unsigned int)NUM2UINT(_arg4_);
+    swizzlew__ = (unsigned int)NUM2UINT(_arg5_);
+
+    CHECK_PROC_ADDRESS(rogl_pfn_glViewportSwizzleNV, "glViewportSwizzleNV");
+    rogl_pfn_glViewportSwizzleNV(index__, swizzlex__, swizzley__, swizzlez__, swizzlew__);
+
+    return Qnil;
+}
+
 static VALUE rogl_glMultiTexCoord1bOES(VALUE _obj_, VALUE _arg1_, VALUE _arg2_)
 {
     unsigned int texture__;
@@ -32588,6 +32662,7 @@ static void rogl_InitRubyExtCommand( VALUE* pmROGL )
     rb_define_method(*pmROGL, "glVertexWeightfEXT", rogl_glVertexWeightfEXT, 1);
     rb_define_method(*pmROGL, "glVertexWeightfvEXT", rogl_glVertexWeightfvEXT, 1);
     rb_define_method(*pmROGL, "glVertexWeightPointerEXT", rogl_glVertexWeightPointerEXT, 4);
+    rb_define_method(*pmROGL, "glWindowRectanglesEXT", rogl_glWindowRectanglesEXT, 3);
     rb_define_method(*pmROGL, "glImportSyncEXT", rogl_glImportSyncEXT, 3);
     rb_define_method(*pmROGL, "glFrameTerminatorGREMEDY", rogl_glFrameTerminatorGREMEDY, 0);
     rb_define_method(*pmROGL, "glStringMarkerGREMEDY", rogl_glStringMarkerGREMEDY, 2);
@@ -32690,6 +32765,7 @@ static void rogl_InitRubyExtCommand( VALUE* pmROGL )
     rb_define_method(*pmROGL, "glIsImageHandleResidentNV", rogl_glIsImageHandleResidentNV, 1);
     rb_define_method(*pmROGL, "glBlendParameteriNV", rogl_glBlendParameteriNV, 2);
     rb_define_method(*pmROGL, "glBlendBarrierNV", rogl_glBlendBarrierNV, 0);
+    rb_define_method(*pmROGL, "glViewportPositionWScaleNV", rogl_glViewportPositionWScaleNV, 3);
     rb_define_method(*pmROGL, "glCreateStatesNV", rogl_glCreateStatesNV, 2);
     rb_define_method(*pmROGL, "glDeleteStatesNV", rogl_glDeleteStatesNV, 2);
     rb_define_method(*pmROGL, "glIsStateNV", rogl_glIsStateNV, 1);
@@ -32711,6 +32787,7 @@ static void rogl_InitRubyExtCommand( VALUE* pmROGL )
     rb_define_method(*pmROGL, "glEndConditionalRenderNV", rogl_glEndConditionalRenderNV, 0);
     rb_define_method(*pmROGL, "glSubpixelPrecisionBiasNV", rogl_glSubpixelPrecisionBiasNV, 2);
     rb_define_method(*pmROGL, "glConservativeRasterParameterfNV", rogl_glConservativeRasterParameterfNV, 2);
+    rb_define_method(*pmROGL, "glConservativeRasterParameteriNV", rogl_glConservativeRasterParameteriNV, 2);
     rb_define_method(*pmROGL, "glCopyImageSubDataNV", rogl_glCopyImageSubDataNV, 15);
     rb_define_method(*pmROGL, "glDepthRangedNV", rogl_glDepthRangedNV, 2);
     rb_define_method(*pmROGL, "glClearDepthdNV", rogl_glClearDepthdNV, 1);
@@ -33099,6 +33176,7 @@ static void rogl_InitRubyExtCommand( VALUE* pmROGL )
     rb_define_method(*pmROGL, "glVideoCaptureStreamParameterivNV", rogl_glVideoCaptureStreamParameterivNV, 4);
     rb_define_method(*pmROGL, "glVideoCaptureStreamParameterfvNV", rogl_glVideoCaptureStreamParameterfvNV, 4);
     rb_define_method(*pmROGL, "glVideoCaptureStreamParameterdvNV", rogl_glVideoCaptureStreamParameterdvNV, 4);
+    rb_define_method(*pmROGL, "glViewportSwizzleNV", rogl_glViewportSwizzleNV, 5);
     rb_define_method(*pmROGL, "glMultiTexCoord1bOES", rogl_glMultiTexCoord1bOES, 2);
     rb_define_method(*pmROGL, "glMultiTexCoord1bvOES", rogl_glMultiTexCoord1bvOES, 2);
     rb_define_method(*pmROGL, "glMultiTexCoord2bOES", rogl_glMultiTexCoord2bOES, 3);
@@ -33400,6 +33478,15 @@ static void rogl_InitRubyExtEnum( VALUE* pmROGL )
     rb_define_const(*pmROGL, "GL_DEBUG_CATEGORY_OTHER_AMD", UINT2NUM(0x9150));
     rb_define_const(*pmROGL, "GL_DEPTH_CLAMP_NEAR_AMD", UINT2NUM(0x901E));
     rb_define_const(*pmROGL, "GL_DEPTH_CLAMP_FAR_AMD", UINT2NUM(0x901F));
+    rb_define_const(*pmROGL, "GL_FLOAT16_MAT2_AMD", UINT2NUM(0x91C5));
+    rb_define_const(*pmROGL, "GL_FLOAT16_MAT3_AMD", UINT2NUM(0x91C6));
+    rb_define_const(*pmROGL, "GL_FLOAT16_MAT4_AMD", UINT2NUM(0x91C7));
+    rb_define_const(*pmROGL, "GL_FLOAT16_MAT2x3_AMD", UINT2NUM(0x91C8));
+    rb_define_const(*pmROGL, "GL_FLOAT16_MAT2x4_AMD", UINT2NUM(0x91C9));
+    rb_define_const(*pmROGL, "GL_FLOAT16_MAT3x2_AMD", UINT2NUM(0x91CA));
+    rb_define_const(*pmROGL, "GL_FLOAT16_MAT3x4_AMD", UINT2NUM(0x91CB));
+    rb_define_const(*pmROGL, "GL_FLOAT16_MAT4x2_AMD", UINT2NUM(0x91CC));
+    rb_define_const(*pmROGL, "GL_FLOAT16_MAT4x3_AMD", UINT2NUM(0x91CD));
     rb_define_const(*pmROGL, "GL_VERTEX_ELEMENT_SWIZZLE_AMD", UINT2NUM(0x91A4));
     rb_define_const(*pmROGL, "GL_VERTEX_ID_SWIZZLE_AMD", UINT2NUM(0x91A5));
     rb_define_const(*pmROGL, "GL_DATA_BUFFER_AMD", UINT2NUM(0x9151));
@@ -34954,6 +35041,12 @@ static void rogl_InitRubyExtEnum( VALUE* pmROGL )
     rb_define_const(*pmROGL, "GL_VERTEX_WEIGHT_ARRAY_TYPE_EXT", UINT2NUM(0x850E));
     rb_define_const(*pmROGL, "GL_VERTEX_WEIGHT_ARRAY_STRIDE_EXT", UINT2NUM(0x850F));
     rb_define_const(*pmROGL, "GL_VERTEX_WEIGHT_ARRAY_POINTER_EXT", UINT2NUM(0x8510));
+    rb_define_const(*pmROGL, "GL_INCLUSIVE_EXT", UINT2NUM(0x8F10));
+    rb_define_const(*pmROGL, "GL_EXCLUSIVE_EXT", UINT2NUM(0x8F11));
+    rb_define_const(*pmROGL, "GL_WINDOW_RECTANGLE_EXT", UINT2NUM(0x8F12));
+    rb_define_const(*pmROGL, "GL_WINDOW_RECTANGLE_MODE_EXT", UINT2NUM(0x8F13));
+    rb_define_const(*pmROGL, "GL_MAX_WINDOW_RECTANGLES_EXT", UINT2NUM(0x8F14));
+    rb_define_const(*pmROGL, "GL_NUM_WINDOW_RECTANGLES_EXT", UINT2NUM(0x8F15));
     rb_define_const(*pmROGL, "GL_SYNC_X11_FENCE_EXT", UINT2NUM(0x90E1));
     rb_define_const(*pmROGL, "GL_IGNORE_BORDER_HP", UINT2NUM(0x8150));
     rb_define_const(*pmROGL, "GL_CONSTANT_BORDER_HP", UINT2NUM(0x8151));
@@ -35009,6 +35102,7 @@ static void rogl_InitRubyExtEnum( VALUE* pmROGL )
     rb_define_const(*pmROGL, "GL_BLUE_MAX_CLAMP_INGR", UINT2NUM(0x8566));
     rb_define_const(*pmROGL, "GL_ALPHA_MAX_CLAMP_INGR", UINT2NUM(0x8567));
     rb_define_const(*pmROGL, "GL_INTERLACE_READ_INGR", UINT2NUM(0x8568));
+    rb_define_const(*pmROGL, "GL_CONSERVATIVE_RASTERIZATION_INTEL", UINT2NUM(0x83FE));
     rb_define_const(*pmROGL, "GL_TEXTURE_MEMORY_LAYOUT_INTEL", UINT2NUM(0x83FF));
     rb_define_const(*pmROGL, "GL_LAYOUT_DEFAULT_INTEL", UINT2NUM(0));
     rb_define_const(*pmROGL, "GL_LAYOUT_LINEAR_INTEL", UINT2NUM(1));
@@ -35171,6 +35265,9 @@ static void rogl_InitRubyExtEnum( VALUE* pmROGL )
     rb_define_const(*pmROGL, "GL_VIVIDLIGHT_NV", UINT2NUM(0x92A6));
     rb_define_const(*pmROGL, "GL_XOR_NV", UINT2NUM(0x1506));
     rb_define_const(*pmROGL, "GL_BLEND_ADVANCED_COHERENT_NV", UINT2NUM(0x9285));
+    rb_define_const(*pmROGL, "GL_VIEWPORT_POSITION_W_SCALE_NV", UINT2NUM(0x937C));
+    rb_define_const(*pmROGL, "GL_VIEWPORT_POSITION_W_SCALE_X_COEFF_NV", UINT2NUM(0x937D));
+    rb_define_const(*pmROGL, "GL_VIEWPORT_POSITION_W_SCALE_Y_COEFF_NV", UINT2NUM(0x937E));
     rb_define_const(*pmROGL, "GL_TERMINATE_SEQUENCE_COMMAND_NV", UINT2NUM(0x0000));
     rb_define_const(*pmROGL, "GL_NOP_COMMAND_NV", UINT2NUM(0x0001));
     rb_define_const(*pmROGL, "GL_DRAW_ELEMENTS_COMMAND_NV", UINT2NUM(0x0002));
@@ -35203,6 +35300,8 @@ static void rogl_InitRubyExtEnum( VALUE* pmROGL )
     rb_define_const(*pmROGL, "GL_CONSERVATIVE_RASTER_DILATE_NV", UINT2NUM(0x9379));
     rb_define_const(*pmROGL, "GL_CONSERVATIVE_RASTER_DILATE_RANGE_NV", UINT2NUM(0x937A));
     rb_define_const(*pmROGL, "GL_CONSERVATIVE_RASTER_DILATE_GRANULARITY_NV", UINT2NUM(0x937B));
+    rb_define_const(*pmROGL, "GL_CONSERVATIVE_RASTER_MODE_POST_SNAP_NV", UINT2NUM(0x954E));
+    rb_define_const(*pmROGL, "GL_CONSERVATIVE_RASTER_MODE_PRE_SNAP_TRIANGLES_NV", UINT2NUM(0x954F));
     rb_define_const(*pmROGL, "GL_DEPTH_STENCIL_TO_RGBA_NV", UINT2NUM(0x886E));
     rb_define_const(*pmROGL, "GL_DEPTH_STENCIL_TO_BGRA_NV", UINT2NUM(0x886F));
     rb_define_const(*pmROGL, "GL_MAX_DEEP_3D_TEXTURE_WIDTH_HEIGHT_NV", UINT2NUM(0x90D0));
@@ -35557,6 +35656,7 @@ static void rogl_InitRubyExtEnum( VALUE* pmROGL )
     rb_define_const(*pmROGL, "GL_COMBINER6_NV", UINT2NUM(0x8556));
     rb_define_const(*pmROGL, "GL_COMBINER7_NV", UINT2NUM(0x8557));
     rb_define_const(*pmROGL, "GL_PER_STAGE_CONSTANTS_NV", UINT2NUM(0x8535));
+    rb_define_const(*pmROGL, "GL_PURGED_CONTEXT_RESET_NV", UINT2NUM(0x92BB));
     rb_define_const(*pmROGL, "GL_SAMPLE_LOCATION_SUBPIXEL_BITS_NV", UINT2NUM(0x933D));
     rb_define_const(*pmROGL, "GL_SAMPLE_LOCATION_PIXEL_GRID_WIDTH_NV", UINT2NUM(0x933E));
     rb_define_const(*pmROGL, "GL_SAMPLE_LOCATION_PIXEL_GRID_HEIGHT_NV", UINT2NUM(0x933F));
@@ -35871,6 +35971,18 @@ static void rogl_InitRubyExtEnum( VALUE* pmROGL )
     rb_define_const(*pmROGL, "GL_VIDEO_CAPTURE_FIELD_UPPER_HEIGHT_NV", UINT2NUM(0x903A));
     rb_define_const(*pmROGL, "GL_VIDEO_CAPTURE_FIELD_LOWER_HEIGHT_NV", UINT2NUM(0x903B));
     rb_define_const(*pmROGL, "GL_VIDEO_CAPTURE_SURFACE_ORIGIN_NV", UINT2NUM(0x903C));
+    rb_define_const(*pmROGL, "GL_VIEWPORT_SWIZZLE_POSITIVE_X_NV", UINT2NUM(0x9350));
+    rb_define_const(*pmROGL, "GL_VIEWPORT_SWIZZLE_NEGATIVE_X_NV", UINT2NUM(0x9351));
+    rb_define_const(*pmROGL, "GL_VIEWPORT_SWIZZLE_POSITIVE_Y_NV", UINT2NUM(0x9352));
+    rb_define_const(*pmROGL, "GL_VIEWPORT_SWIZZLE_NEGATIVE_Y_NV", UINT2NUM(0x9353));
+    rb_define_const(*pmROGL, "GL_VIEWPORT_SWIZZLE_POSITIVE_Z_NV", UINT2NUM(0x9354));
+    rb_define_const(*pmROGL, "GL_VIEWPORT_SWIZZLE_NEGATIVE_Z_NV", UINT2NUM(0x9355));
+    rb_define_const(*pmROGL, "GL_VIEWPORT_SWIZZLE_POSITIVE_W_NV", UINT2NUM(0x9356));
+    rb_define_const(*pmROGL, "GL_VIEWPORT_SWIZZLE_NEGATIVE_W_NV", UINT2NUM(0x9357));
+    rb_define_const(*pmROGL, "GL_VIEWPORT_SWIZZLE_X_NV", UINT2NUM(0x9358));
+    rb_define_const(*pmROGL, "GL_VIEWPORT_SWIZZLE_Y_NV", UINT2NUM(0x9359));
+    rb_define_const(*pmROGL, "GL_VIEWPORT_SWIZZLE_Z_NV", UINT2NUM(0x935A));
+    rb_define_const(*pmROGL, "GL_VIEWPORT_SWIZZLE_W_NV", UINT2NUM(0x935B));
     rb_define_const(*pmROGL, "GL_PALETTE4_RGB8_OES", UINT2NUM(0x8B90));
     rb_define_const(*pmROGL, "GL_PALETTE4_RGBA8_OES", UINT2NUM(0x8B91));
     rb_define_const(*pmROGL, "GL_PALETTE4_R5_G6_B5_OES", UINT2NUM(0x8B92));
@@ -37128,6 +37240,7 @@ static void rogl_SetupExtFeature( int load_core )
     rogl_pfn_glVertexWeightfEXT = rogl_GetProcAddress("glVertexWeightfEXT");
     rogl_pfn_glVertexWeightfvEXT = rogl_GetProcAddress("glVertexWeightfvEXT");
     rogl_pfn_glVertexWeightPointerEXT = rogl_GetProcAddress("glVertexWeightPointerEXT");
+    rogl_pfn_glWindowRectanglesEXT = rogl_GetProcAddress("glWindowRectanglesEXT");
     rogl_pfn_glImportSyncEXT = rogl_GetProcAddress("glImportSyncEXT");
     rogl_pfn_glFrameTerminatorGREMEDY = rogl_GetProcAddress("glFrameTerminatorGREMEDY");
     rogl_pfn_glStringMarkerGREMEDY = rogl_GetProcAddress("glStringMarkerGREMEDY");
@@ -37230,6 +37343,7 @@ static void rogl_SetupExtFeature( int load_core )
     rogl_pfn_glIsImageHandleResidentNV = rogl_GetProcAddress("glIsImageHandleResidentNV");
     rogl_pfn_glBlendParameteriNV = rogl_GetProcAddress("glBlendParameteriNV");
     rogl_pfn_glBlendBarrierNV = rogl_GetProcAddress("glBlendBarrierNV");
+    rogl_pfn_glViewportPositionWScaleNV = rogl_GetProcAddress("glViewportPositionWScaleNV");
     rogl_pfn_glCreateStatesNV = rogl_GetProcAddress("glCreateStatesNV");
     rogl_pfn_glDeleteStatesNV = rogl_GetProcAddress("glDeleteStatesNV");
     rogl_pfn_glIsStateNV = rogl_GetProcAddress("glIsStateNV");
@@ -37251,6 +37365,7 @@ static void rogl_SetupExtFeature( int load_core )
     rogl_pfn_glEndConditionalRenderNV = rogl_GetProcAddress("glEndConditionalRenderNV");
     rogl_pfn_glSubpixelPrecisionBiasNV = rogl_GetProcAddress("glSubpixelPrecisionBiasNV");
     rogl_pfn_glConservativeRasterParameterfNV = rogl_GetProcAddress("glConservativeRasterParameterfNV");
+    rogl_pfn_glConservativeRasterParameteriNV = rogl_GetProcAddress("glConservativeRasterParameteriNV");
     rogl_pfn_glCopyImageSubDataNV = rogl_GetProcAddress("glCopyImageSubDataNV");
     rogl_pfn_glDepthRangedNV = rogl_GetProcAddress("glDepthRangedNV");
     rogl_pfn_glClearDepthdNV = rogl_GetProcAddress("glClearDepthdNV");
@@ -37639,6 +37754,7 @@ static void rogl_SetupExtFeature( int load_core )
     rogl_pfn_glVideoCaptureStreamParameterivNV = rogl_GetProcAddress("glVideoCaptureStreamParameterivNV");
     rogl_pfn_glVideoCaptureStreamParameterfvNV = rogl_GetProcAddress("glVideoCaptureStreamParameterfvNV");
     rogl_pfn_glVideoCaptureStreamParameterdvNV = rogl_GetProcAddress("glVideoCaptureStreamParameterdvNV");
+    rogl_pfn_glViewportSwizzleNV = rogl_GetProcAddress("glViewportSwizzleNV");
     rogl_pfn_glMultiTexCoord1bOES = rogl_GetProcAddress("glMultiTexCoord1bOES");
     rogl_pfn_glMultiTexCoord1bvOES = rogl_GetProcAddress("glMultiTexCoord1bvOES");
     rogl_pfn_glMultiTexCoord2bOES = rogl_GetProcAddress("glMultiTexCoord2bOES");

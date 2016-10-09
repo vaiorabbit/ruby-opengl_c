@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name          = "opengl-bindings_c"
-  gem.version       = "0.5.3.pre"
+  gem.version       = "0.6.1.pre"
   gem.authors       = ["vaiorabbit"]
   gem.email         = ["vaiorabbit@gmail.com"]
   gem.summary       = %q{Ruby OpenGL Bindings (C Edition)}
   gem.homepage      = "https://github.com/vaiorabbit/ruby-opengl_c"
   gem.require_paths = ["lib"]
-  gem.license       = "zlib/libpng"
+  gem.license       = "Zlib"
 
   gem.extensions    = ['ext/opengl_c/extconf.rb']
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
@@ -22,7 +22,7 @@ Notice: This library provides native extension. You must setup development envir
 
   gem.required_ruby_version = '>= 2.2.0'
 
-  gem.add_runtime_dependency 'opengl-bindings', '~> 1.5', '>= 1.5.1'
+  gem.add_runtime_dependency 'opengl-bindings', '~> 1.6', '>= 1.6.1'
 
   gem.files = Dir.glob("lib/*.rb") +
               Dir.glob("ext/opengl_c/*.{c,h,inc,rb}") +

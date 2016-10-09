@@ -5,7 +5,7 @@
 Replaces pure-ruby OpenGL API calls in opengl-bindings ( https://github.com/vaiorabbit/ruby-opengl ) with native C function calls.
 
 *   Created : 2015-10-11
-*   Last modified : 2016-01-09
+*   Last modified : 2016-10-09
 
 ## Features ##
 
@@ -48,7 +48,7 @@ Replaces pure-ruby OpenGL API calls in opengl-bindings ( https://github.com/vaio
 
 The zlib/libpng License ( http://opensource.org/licenses/Zlib ).
 
-    Copyright (c) 2013-2015 vaiorabbit <http://twitter.com/vaiorabbit>
+    Copyright (c) 2013-2016 vaiorabbit <http://twitter.com/vaiorabbit>
 
     This software is provided 'as-is', without any express or implied
     warranty. In no event will the authors be held liable for any damages
